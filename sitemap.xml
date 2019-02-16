@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://k-kaz-git.github.io/post/hello2/</loc>
+    <lastmod>2019-02-16T17:31:37+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://k-kaz-git.github.io/post/hello/</loc>
     <lastmod>2019-02-16T16:52:50+09:00</lastmod>
   </url>
@@ -14,7 +19,7 @@
   
   <url>
     <loc>https://k-kaz-git.github.io/post/</loc>
-    <lastmod>2019-02-16T16:52:50+09:00</lastmod>
+    <lastmod>2019-02-16T17:31:37+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -25,7 +30,7 @@
   
   <url>
     <loc>https://k-kaz-git.github.io/</loc>
-    <lastmod>2019-02-16T16:52:50+09:00</lastmod>
+    <lastmod>2019-02-16T17:31:37+09:00</lastmod>
     <priority>0</priority>
   </url>
   
