@@ -33,12 +33,6 @@
   </url>
   
   <url>
-    <loc>https://k-kaz-git.github.io/tags/hugo/</loc>
-    <lastmod>2019-02-17T04:50:58+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://k-kaz-git.github.io/post/</loc>
     <lastmod>2019-02-17T04:50:58+09:00</lastmod>
     <priority>0</priority>
@@ -46,7 +40,6 @@
   
   <url>
     <loc>https://k-kaz-git.github.io/tags/</loc>
-    <lastmod>2019-02-17T04:50:58+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -58,12 +51,6 @@
   
   <url>
     <loc>https://k-kaz-git.github.io/categories/%E3%83%9B%E3%83%BC%E3%83%A0%E3%83%9A%E3%83%BC%E3%82%B8/</loc>
-    <lastmod>2019-02-17T04:50:58+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://k-kaz-git.github.io/tags/%E8%A8%AD%E5%AE%9A/</loc>
     <lastmod>2019-02-17T04:50:58+09:00</lastmod>
     <priority>0</priority>
   </url>
