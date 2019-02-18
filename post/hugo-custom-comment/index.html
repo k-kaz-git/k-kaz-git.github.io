@@ -4,8 +4,8 @@
   <meta charset="utf-8" />
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Hugo 安定してきたかな &middot; k-kaz</title>
-  <meta name="description" content="そろそろいい感じかな" />
+  <title>コメント欄を削除 &middot; k-kaz</title>
+  <meta name="description" content="使わないので、コメント欄を消しました。" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
   <link rel="stylesheet" href="https://k-kaz-git.github.io/css/main.min.css" />
@@ -46,53 +46,50 @@ if (!doNotTrack) {
     <main class="content side-text-padding">
       <article class="post ">
         <header class="post-header">
-        	<h1 class="post-title">Hugo 安定してきたかな</h1>
-          <p class="post-date">Posted <time datetime="2019-02-17">Feb 17, 2019</time></p>
+        	<h1 class="post-title">コメント欄を削除</h1>
+          <p class="post-date">Posted <time datetime="2019-02-18">Feb 18, 2019</time></p>
         </header>
         
         <picture class="post-figure">
-            <source srcset="https://k-kaz-git.github.io/images/sky-stable-hugo_640.webp" type="image/webp">
-            <source srcset="https://k-kaz-git.github.io/images/sky-stable-hugo_640.webp">
-          <img src="https://k-kaz-git.github.io/images/sky-stable-hugo_640.webp" alt="安心だ">
+            <source srcset="https://k-kaz-git.github.io/images/speech-bubbles_640.webp" type="image/webp">
+            <source srcset="https://k-kaz-git.github.io/images/speech-bubbles_640.webp">
+          <img src="https://k-kaz-git.github.io/images/speech-bubbles_640.webp" alt="会話のイメージ">
         </picture>
         
         
 
-<h2 id="安定した-気がする">安定した・・・気がする</h2>
+<h2 id="コメント欄を削除">コメント欄を削除</h2>
 
-<p>いくつかのエラーもネットで調べながら、地道に解決していって、GitHub の使い方も勉強し、ようやく安定した感じがする。</p>
+<p>使わないので、コメント欄は削除しました。<br />
+テーマ内の single.html にタグにあった <code>{{ template &quot;_internal/disqus.html&quot; . }}</code> を、ばっさり削除。</p>
 
-<h2 id="カテゴリーとタグ">カテゴリーとタグ</h2>
+<h2 id="テーマはコピーしてから修正">テーマはコピーしてから修正</h2>
 
-<p>こちらについても設定してみる。
-このテーマの場合は、カテゴリーしか対応していないみたい。
-デフォルトの項目に入っていなくて、付け足しても出てこない。</p>
-
-<h2 id="使用テーマ-2019-02-17-5-44-現在">使用テーマ（2019/02/17  5:44 現在）</h2>
-
-<p><a href="https://themes.gohugo.io/aether/">aether</a></p>
+<p>念の為、テーマはコピーしてから、そのコピー先を修正しました。
+テーマ内の theme.toml を開いて、name を適当なものに変更。
+config.toml でテーマを選択しているので、そこのテーマ名も同じものにしました。</p>
 
       </article>
     </main>
     <nav class="end-nav side-padding">
       
       <a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
-  href="https://k-kaz-git.github.io/post/hello4/" class="card blog-card" rel="bookmark" >
+  href="https://k-kaz-git.github.io/post/hugo-custom/" class="card blog-card" rel="bookmark" >
     
     <div class="card-img-container">
       <p class="card-img-overlay">Next Article</p>
       <picture>
-        <source srcset="https://k-kaz-git.github.io/images/lighthouse-sea_640.webp" type="image/webp">
-        <source srcset="https://k-kaz-git.github.io/images/lighthouse-sea_640.webp">
-        <img src="https://k-kaz-git.github.io/images/lighthouse-sea_640.webp" class="card-img" alt="灯台下暗し">
+        <source srcset="https://k-kaz-git.github.io/images/people-custom_640.webp" type="image/webp">
+        <source srcset="https://k-kaz-git.github.io/images/people-custom_640.webp">
+        <img src="https://k-kaz-git.github.io/images/people-custom_640.webp" class="card-img" alt="溶接している人">
       </picture>
     </div>
     
   <article class="card-body">
-    <h2 class="card-title">Hello4</h2>
-    <p class="card-text">次はスクリプトで更新だ</p>
+    <h2 class="card-title">カスタマイズしてみたいな</h2>
+    <p class="card-text">欲が出てきて、ホームページのカスタマイズをしたくなってきた。</p>
     <div class="card-subtext muted-text">
-      <p>Posted <time datetime="2019-02-16 216:00">Feb 16, 2019</time></p>
+      <p>Posted <time datetime="2019-02-17 217:00">Feb 17, 2019</time></p>
       <p>#ホームページ </p>
     </div>
   </article>

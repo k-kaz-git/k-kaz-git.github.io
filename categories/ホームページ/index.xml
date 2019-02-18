@@ -6,11 +6,18 @@
     <description>Recent content in ホームページ on k-kaz</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Sun, 17 Feb 2019 20:14:15 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 18 Feb 2019 12:23:37 +0900</lastBuildDate>
     
         <atom:link href="https://k-kaz-git.github.io/categories/%E3%83%9B%E3%83%BC%E3%83%A0%E3%83%9A%E3%83%BC%E3%82%B8/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>コメント欄を削除</title>
+      <link>https://k-kaz-git.github.io/post/hugo-custom-comment/</link>
+      <pubDate>Mon, 18 Feb 2019 12:23:37 +0900</pubDate>
+      
+      <guid>https://k-kaz-git.github.io/post/hugo-custom-comment/</guid>
+      <description>使わないので、コメント欄を消しました。</description>
+    </item><item>
       <title>カスタマイズしてみたいな</title>
       <link>https://k-kaz-git.github.io/post/hugo-custom/</link>
       <pubDate>Sun, 17 Feb 2019 20:14:15 +0900</pubDate>
