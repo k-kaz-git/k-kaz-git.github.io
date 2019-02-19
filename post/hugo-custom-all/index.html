@@ -61,7 +61,7 @@ if (!doNotTrack) {
 
 <h2 id="aether-のカスタマイズをこちらにまとめます">aether のカスタマイズをこちらにまとめます。</h2>
 
-<p>念の為、テーマを丸ごとコピーして、そちらを弄ることにします。<br />
+<p><strong>念の為、テーマを丸ごとコピーして、そちらを弄ることにします。</strong><br />
 その際、以下の修正が必要です。</p>
 
 <p><code>/サイト名/themes/新しいテーマ名/theme.toml</code><br />
@@ -70,7 +70,11 @@ if (!doNotTrack) {
 <p><code>/サイト名/config.toml</code><br />
 <code>theme = &quot;新しいテーマ名&quot;</code></p>
 
+<hr />
+
 <h3 id="標準機能内">標準機能内</h3>
+
+<hr />
 
 <h4 id="ホームボタンの設定">ホームボタンの設定</h4>
 
@@ -80,13 +84,17 @@ if (!doNotTrack) {
     <img src="https://k-kaz-git.github.io/images/aether-custom-home-btn_400.webp" alt="ホームボタンの設置" class="small-img " style="width: 400px;"/>
 </picture>
 個別記事を開いた時に、一番下に真っ白なスペースがあります。<br />
-ここは、ホーム（トップページ）に戻るためのボタンになっており、実際は Home という白文字が入っています。<br />
-<code>homeimg</code> に少し暗めの画像を入れてあげると、文字がハッキリして見やすいと思います。</p>
+ここは、ホーム（トップページ）に戻るためのボタンになっており、Home という白文字が入っています。実際は白白同士で見えないんですけど。<br />
+<code>homeimg</code> に少し暗めの画像を指定すると、文字がハッキリして見やすいと思います。</p>
 
 <p><code>/サイト名/config.toml</code>
 <script src="https://gist.github.com/k-kaz-git/2df71ae7a4d133f118cf424e6d48476b.js"></script></p>
 
+<hr />
+
 <h3 id="標準機能外">標準機能外</h3>
+
+<hr />
 
 <h4 id="コメント用の外部サービスを外す">コメント用の外部サービスを外す</h4>
 
