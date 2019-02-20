@@ -63,7 +63,10 @@ if (!doNotTrack) {
 <ul>
 <li>
 <ul>
-<li><a href="#aether-のカスタマイズをこちらにまとめます">aether のカスタマイズをこちらにまとめます。</a></li>
+<li><a href="#aether-のカスタマイズをこちらにまとめます">aether のカスタマイズをこちらにまとめます。</a>
+<ul>
+<li><a href="#追記-2019-02-20-12-45">追記［2019/02/20 12:45］</a></li>
+</ul></li>
 <li><a href="#標準機能内">標準機能内</a>
 <ul>
 <li><a href="#ホームボタンの設定">ホームボタンの設定</a></li>
@@ -77,6 +80,7 @@ if (!doNotTrack) {
 <li><a href="#カスタマイズファイルを用意">カスタマイズファイルを用意</a></li>
 <li><a href="#スタイルシートの読み込み">スタイルシートの読み込み</a></li>
 </ul></li>
+<li><a href="#目次を追加する">目次を追加する</a></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -88,15 +92,23 @@ if (!doNotTrack) {
 
 <hr />
 
-<p><strong>念の為、テーマを丸ごとコピーして、そちらを弄ることにします。</strong></p>
+<p><del>念の為、テーマを丸ごとコピーして、そちらを弄ることにします。</del>
+<del>その際、以下の修正が必要です。</del></p>
 
-<p>その際、以下の修正が必要です。</p>
+<p><del><code>/サイト名/themes/新しいテーマ名/theme.toml</code></del><br />
+<del><code>name = &quot;新しいテーマ名&quot;</code></del></p>
 
-<p><code>/サイト名/themes/新しいテーマ名/theme.toml</code><br />
-<code>name = &quot;新しいテーマ名&quot;</code></p>
+<p><del><code>/サイト名/config.toml</code></del><br />
+<del><code>theme = &quot;新しいテーマ名&quot;</code></del></p>
 
-<p><code>/サイト名/config.toml</code><br />
-<code>theme = &quot;新しいテーマ名&quot;</code></p>
+<h3 id="追記-2019-02-20-12-45">追記［2019/02/20 12:45］</h3>
+
+<p>今頃ですが・・・。<br />
+わざわざテーマ内を弄らずに、root に用意されているフォルダ（static とか layout とか）にファイルを置いて弄れば良いような気がしてきた。<br />
+それが可能なら、テーマの丸ごとコピーも要らないしね。<br />
+なんか、すごく無駄なことをしていたかもしれない。</p>
+
+<p>ということで、このページも修正していこう。</p>
 
 <hr />
 
@@ -127,9 +139,10 @@ if (!doNotTrack) {
 
 <h3 id="コメント用の外部サービスを外す">コメント用の外部サービスを外す</h3>
 
-<p>テーマには、個別記事に disqus のサービスが組み込まれていますが、これも使いませんので外します。</p>
+<p>テーマには、個別記事に disqus のサービスが組み込まれていますが、これも使いませんので外します。<br />
+下記フォルダが無い場合は作成し、該当ファイルをテーマから持ってきましょう。</p>
 
-<p><code>/サイト名/themes/新しいテーマ名/layouts/_default/single.html</code>
+<p><code>/サイト名/layouts/_default/single.html</code>
 <script src="https://gist.github.com/k-kaz-git/6fbc59bd45e57c5086e3d4e7a87ac63b.js"></script></p>
 
 <h3 id="テンプレートに外部リンクを仕込む">テンプレートに外部リンクを仕込む</h3>
@@ -142,7 +155,7 @@ if (!doNotTrack) {
 表示させる場所によって、編集するファイルは変わりますが、今回は最下部（フッター）に入れることにしました。普通に HTML を修正します。<br />
 footer.html は、<code>&lt;footer&gt;&lt;/footer&gt;</code> と、空っぽなので、その間にタグを入れます。</p>
 
-<p><code>/サイト名/themes/新しいテーマ名/layouts/footer.html</code>
+<p><code>/サイト名/layouts/partials/footer.html</code>
 <script src="https://gist.github.com/k-kaz-git/2dd802712a513a5017593a9d77536aa3.js"></script></p>
 
 <h3 id="スタイルシートを適用する">スタイルシートを適用する</h3>
@@ -157,9 +170,31 @@ css というフォルダも自分で作成し、その中にスタイルシー�
 
 <h4 id="スタイルシートの読み込み">スタイルシートの読み込み</h4>
 
-<p><code>/サイト名/themes/新しいテーマ名/layouts/partials/head.html</code><br />
+<p><code>/サイト名/layouts/partials/head.html</code><br />
 スタイルシートの読み込み行が続いているので、一番下に <code>/css/hoge.css</code> を追加します。<br />
 <script src="https://gist.github.com/k-kaz-git/be3470f0ad5ab3538adcc7df1bb6182e.js"></script></p>
+
+<h3 id="目次を追加する">目次を追加する</h3>
+
+<p>手動で目次を作ることもできますが、後から構成が変更になると、追加修正が大変なことになりますので、自動的に目次を生成するようにします。<br />
+これは、Hugo に元々組み込まれている関数 <code>{{.TableOfContents}}</code> を使用することで実現可能です。</p>
+
+<p>公式ドキュメントでは、<strong>本文が 400文字以上の記事のみ目次を付ける</strong> というものが紹介されていました。</p>
+
+<script src="https://gist.github.com/k-kaz-git/078e749b2dcf0bf59192c871049ccc98.js"></script>
+
+<p>しかし、<strong>私の英語力と、Hugo知識ではまだ乗り越えられない壁</strong> のようです。</p>
+
+<p>結局、一番簡単な、下記方法で妥協しております。</p>
+
+<p><code>/サイト名/layouts/_default/single.html</code></p>
+
+<script src="https://gist.github.com/k-kaz-git/cd2030eb11278acb7172621f18a3e7f8.js"></script>
+
+<p>こうすることで、＜目次＞という文字列の下に、自動で目次を生成してくれます。<br />
+条件としては、<code>H2</code> 以下の <code>Hタグ</code> が目次としての構成要素になるようです。</p>
+
+<p>但し、このやり方だと、400文字以上とか無視して、<strong>どのページにも出現します</strong> ので注意。</p>
 
 <hr />
 
