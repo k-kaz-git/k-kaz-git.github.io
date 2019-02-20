@@ -65,11 +65,14 @@ if (!doNotTrack) {
 <ul>
 <li><a href="#aether-のカスタマイズをこちらにまとめます">aether のカスタマイズをこちらにまとめます。</a>
 <ul>
+<li><a href="#注意事項">注意事項</a></li>
 <li><a href="#追記-2019-02-20-12-45">追記［2019/02/20 12:45］</a></li>
 </ul></li>
 <li><a href="#標準機能内">標準機能内</a>
 <ul>
 <li><a href="#ホームボタンの設定">ホームボタンの設定</a></li>
+<li><a href="#イメージデータの入れ方">イメージデータの入れ方</a></li>
+<li><a href="#google-analytics">Google Analytics</a></li>
 </ul></li>
 <li><a href="#標準機能外">標準機能外</a>
 <ul>
@@ -101,6 +104,12 @@ if (!doNotTrack) {
 <p><del><code>/サイト名/config.toml</code></del><br />
 <del><code>theme = &quot;新しいテーマ名&quot;</code></del></p>
 
+<h3 id="注意事項">注意事項</h3>
+
+<p>素人が遊びながら行っているカスタマイズです。<br />
+違っている部分など <strong>多々</strong> あるかもしれません。<br />
+そのあたりは、十分にお気を付けください。</p>
+
 <h3 id="追記-2019-02-20-12-45">追記［2019/02/20 12:45］</h3>
 
 <p>今頃ですが・・・。<br />
@@ -108,7 +117,7 @@ if (!doNotTrack) {
 それが可能なら、テーマの丸ごとコピーも要らないしね。<br />
 なんか、すごく無駄なことをしていたかもしれない。</p>
 
-<p>ということで、このページも修正していこう。</p>
+<p>ということで、このページも修正しました。</p>
 
 <hr />
 
@@ -130,6 +139,28 @@ if (!doNotTrack) {
 
 <p><code>/サイト名/config.toml</code>
 <script src="https://gist.github.com/k-kaz-git/2df71ae7a4d133f118cf424e6d48476b.js"></script></p>
+
+<h3 id="イメージデータの入れ方">イメージデータの入れ方</h3>
+
+<p>テーマの <code>readme</code> にも書いてありますが、普通のコマンドで挿入すると、エリア内いっぱいに広がります。</p>
+
+<p>普通の入れ方</p>
+
+<pre><code class="language-md">![イメージタイトル](/images/hoge.webp)
+</code></pre>
+
+<script src="https://gist.github.com/k-kaz-git/d27e935f5404952ae5419250516ebe1e.js"></script>
+
+<h3 id="google-analytics">Google Analytics</h3>
+
+<p>テーマが元々対応してくれているので、設定ファイルにトラッキングコードを記入するだけで、各ページに展開してくれます。</p>
+
+<p><code>/サイト名/config.toml</code></p>
+
+<pre><code class="language-toml">googleAnalytics = &quot;トラッキングコード&quot;
+</code></pre>
+
+<p><code>&lt;head&gt;&lt;/head&gt;</code> の間に長いタグを入れる必要もありません。楽ちんだ。</p>
 
 <hr />
 
