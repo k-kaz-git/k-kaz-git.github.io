@@ -240,13 +240,17 @@ css というフォルダも自分で作成し、その中にスタイルシー�
 <p><code>&lt;header&gt;</code> だけ抜き出しました。<br />
 上が元のコードで、下が修正したコードです。</p>
 
-<pre><code class="language-html">&lt;header class=&quot;post-header&quot;&gt;
+<pre><code class="language-html">[single.html 修正前]
+
+&lt;header class=&quot;post-header&quot;&gt;
     &lt;h1 class=&quot;post-title&quot;&gt;{{ .Title }}&lt;/h1&gt;
     &lt;p class=&quot;post-date&quot;&gt;Posted &lt;time datetime=&quot;{{ .Date.Format &quot;2006-01-02&quot; }}&quot;&gt;{{ .Date.Format &quot;Jan 2, 2006&quot; }}&lt;/time&gt;&lt;/p&gt;
 &lt;/header&gt;
 </code></pre>
 
-<pre><code class="language-html">&lt;header class=&quot;post-header&quot;&gt;
+<pre><code class="language-html">[single.html 修正後]
+
+&lt;header class=&quot;post-header&quot;&gt;
     &lt;h1 class=&quot;post-title&quot;&gt;{{ .Title }}&lt;/h1&gt;
     &lt;p class=&quot;post-date&quot;&gt;
         Posted &lt;time datetime=&quot;{{ .Date.Format &quot;2006-01-02&quot; }}&quot;&gt;{{ .Date.Format &quot;2006-01-02&quot; }}&lt;/time&gt;
@@ -254,7 +258,7 @@ css というフォルダも自分で作成し、その中にスタイルシー�
 &lt;/header&gt;
 </code></pre>
 
-<p><code>.Lastmod</code> だけだと、時間まで表示されて大げさなので、<code>.Format &quot;2006-01-02&quot;</code> で書式を設定しました。<br />
+<p><code>.Lastmod</code> だけだと、時間まで表示されて大げさなので、<code>.Format &quot;2006-01-02&quot;</code> で書式を設定しました。
 ついでに初回投稿のほうも、同じ書式に変更しています。</p>
 
 <hr />
