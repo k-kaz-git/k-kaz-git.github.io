@@ -48,7 +48,9 @@ if (!doNotTrack) {
       <article class="post ">
         <header class="post-header">
         	<h1 class="post-title">テーマ aether のカスタマイズ</h1>
-          <p class="post-date">Posted <time datetime="2019-02-18">Feb 18, 2019</time></p>
+          <p class="post-date">
+            Posted <time datetime="2019-02-18">2019-02-18</time>
+             / Update 2019-02-18</p>
         </header>
         
         <picture class="post-figure">
@@ -84,6 +86,7 @@ if (!doNotTrack) {
 <li><a href="#スタイルシートの読み込み">スタイルシートの読み込み</a></li>
 </ul></li>
 <li><a href="#目次を追加する">目次を追加する</a></li>
+<li><a href="#更新日を追加する">更新日を追加する</a></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -225,6 +228,38 @@ css というフォルダも自分で作成し、その中にスタイルシー�
 条件としては、<code>H2</code> 以下の <code>Hタグ</code> が目次としての構成要素になるようです。</p>
 
 <p>但し、このやり方だと、400文字以上とか無視して、<strong>どのページにも出現します</strong> ので注意。</p>
+
+<h3 id="更新日を追加する">更新日を追加する</h3>
+
+<p>Hugo に用意されている関数 <code>.Lastmod</code> を利用します。<br />
+下準備として、<code>config.toml</code> に関数を有効にするための記述を追加します。</p>
+
+<p><code>/サイト名/config.toml</code><br />
+<code>enableGitInfo = true</code> ← これで有効化されます。</p>
+
+<p>続いて、更新日を出力したい場所に <code>.Lastmod</code> を入れます。</p>
+
+<p><code>/サイト名/layouts/_default/single.html</code></p>
+
+<p><code>&lt;header&gt;</code> だけ抜き出しました。<br />
+上が元のコードで、下が修正したコードです。</p>
+
+<pre><code class="language-html">&lt;header class=&quot;post-header&quot;&gt;
+    &lt;h1 class=&quot;post-title&quot;&gt;{{ .Title }}&lt;/h1&gt;
+    &lt;p class=&quot;post-date&quot;&gt;Posted &lt;time datetime=&quot;{{ .Date.Format &quot;2006-01-02&quot; }}&quot;&gt;{{ .Date.Format &quot;Jan 2, 2006&quot; }}&lt;/time&gt;&lt;/p&gt;
+&lt;/header&gt;
+</code></pre>
+
+<pre><code class="language-html">&lt;header class=&quot;post-header&quot;&gt;
+    &lt;h1 class=&quot;post-title&quot;&gt;{{ .Title }}&lt;/h1&gt;
+    &lt;p class=&quot;post-date&quot;&gt;
+        Posted &lt;time datetime=&quot;{{ .Date.Format &quot;2006-01-02&quot; }}&quot;&gt;{{ .Date.Format &quot;2006-01-02&quot; }}&lt;/time&gt;
+         / Update {{ .Lastmod.Format &quot;2006-01-02&quot; }}&lt;/p&gt;
+&lt;/header&gt;
+</code></pre>
+
+<p><code>.Lastmod</code> だけだと、時間まで表示されて大げさなので、<code>.Format &quot;2006-01-02&quot;</code> で書式を設定しました。<br />
+ついでに初回投稿のほうも、同じ書式に変更しています。</p>
 
 <hr />
 

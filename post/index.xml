@@ -12,17 +12,17 @@
     
     <item>
       <title>Hugo の使い方</title>
-      <link>https://k-kaz-git.github.io/post/hugo-tips/</link>
+      <link>https://k-kaz-git.github.io/post/hugo-how-to-use/</link>
       <pubDate>Wed, 20 Feb 2019 16:15:13 +0900</pubDate>
       
-      <guid>https://k-kaz-git.github.io/post/hugo-tips/</guid>
+      <guid>https://k-kaz-git.github.io/post/hugo-how-to-use/</guid>
       <description>Hugo の Tips 的なものをこちらにまとめます。</description>
     </item><item>
       <title>テーマ aether のカスタマイズ</title>
-      <link>https://k-kaz-git.github.io/post/hugo-custom-all/</link>
+      <link>https://k-kaz-git.github.io/post/hugo-custom-theme-aether/</link>
       <pubDate>Mon, 18 Feb 2019 21:30:02 +0900</pubDate>
       
-      <guid>https://k-kaz-git.github.io/post/hugo-custom-all/</guid>
+      <guid>https://k-kaz-git.github.io/post/hugo-custom-theme-aether/</guid>
       <description>テーマ aether のカスタマイズをこちらにまとめます。</description>
     </item><item>
       <title>コメント欄を削除</title>
