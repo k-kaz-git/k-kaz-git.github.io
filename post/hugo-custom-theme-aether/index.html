@@ -129,12 +129,9 @@ if (!doNotTrack) {
 
 <h3 id="ホームボタンの設定">ホームボタンの設定</h3>
 
-<p><picture>
-    <source srcset="https://k-kaz-git.github.io/images/aether-custom-home-btn_400.webp" type="image/webp">
-    <source srcset="https://k-kaz-git.github.io/images/aether-custom-home-btn_400.webp">
-    <img src="https://k-kaz-git.github.io/images/aether-custom-home-btn_400.webp" alt="ホームボタンの設置" class="small-img " style="width: 400px;"/>
-</picture>
-個別記事を開いた時に、一番下に真っ白なスペースがあります。<br />
+<p><img src="/images/aether-custom-home-btn_400.webp" alt="ホームボタンの設置" style="width:400px;"></p>
+
+<p>個別記事を開いた時に、一番下に真っ白なスペースがあります。<br />
 ここは、ホーム（トップページ）に戻るためのボタンになっており、Home という白文字が入っています。<strong>実際は白同士で見えないんですけど。</strong></p>
 
 <p><code>homeimg</code> に少し暗めの画像を指定すると、文字がハッキリして見やすいと思います。</p>
@@ -180,12 +177,9 @@ if (!doNotTrack) {
 
 <h3 id="テンプレートに外部リンクを仕込む">テンプレートに外部リンクを仕込む</h3>
 
-<p><picture>
-    <source srcset="https://k-kaz-git.github.io/images/aether-custom-link-btn_175.webp" type="image/webp">
-    <source srcset="https://k-kaz-git.github.io/images/aether-custom-link-btn_175.webp">
-    <img src="https://k-kaz-git.github.io/images/aether-custom-link-btn_175.webp" alt="外部リンクボタンの設置" class="small-img " style="width: 175px;"/>
-</picture>
-表示させる場所によって、編集するファイルは変わりますが、今回は最下部（フッター）に入れることにしました。普通に HTML を修正します。<br />
+<p><img src="/images/aether-custom-link-btn_175.webp" alt="外部リンクボタンの設置" style="width:175px;"></p>
+
+<p>表示させる場所によって、編集するファイルは変わりますが、今回は最下部（フッター）に入れることにしました。普通に HTML を修正します。<br />
 footer.html は、<code>&lt;footer&gt;&lt;/footer&gt;</code> と、空っぽなので、その間にタグを入れます。</p>
 
 <p><code>/サイト名/layouts/partials/footer.html</code>
@@ -230,6 +224,8 @@ css というフォルダも自分で作成し、その中にスタイルシー�
 <p>但し、このやり方だと、400文字以上とか無視して、<strong>どのページにも出現します</strong> ので注意。</p>
 
 <h3 id="更新日を追加する">更新日を追加する</h3>
+
+<p><img src="/images/aether-custom-update_284.webp" style="width:284px;" alt="更新日を追加する"></p>
 
 <p>Hugo に用意されている関数 <code>.Lastmod</code> を利用します。<br />
 下準備として、<code>config.toml</code> に関数を有効にするための記述を追加します。</p>
