@@ -24,11 +24,7 @@ if (!doNotTrack) {
 }
 </script>
 
-  <style>
-    body {
-      background: #ecedef url("https://k-kaz-git.github.io/URL%20to%20the%20image%20used%20for%20the%20page%20background%20-%20optional") repeat;
-    }
-  </style>
+  
 </head>
   <body class="single-body">
     <nav class="nav-bar side-padding">
@@ -85,6 +81,10 @@ if (!doNotTrack) {
 <li><a href="#hugo-で使っているローカルリポジトリの場所を変更">Hugo で使っているローカルリポジトリの場所を変更</a>
 <ul>
 <li><a href="#やり方-1">やり方</a></li>
+</ul></li>
+<li><a href="#プッシュしたけど-1つ前の内容に戻したい-2019-02-25">プッシュしたけど、1つ前の内容に戻したい［2019-02-25］</a>
+<ul>
+<li><a href="#やり方-2">やり方</a></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -188,6 +188,22 @@ Win10 の PowerShell では、直接 <code>mklink</code> が実行できない�
 <p>特に Hugo の設定ファイルを弄るとか必要はありませんでした。</p>
 
 <p>結果から見れば、超簡単な作業でした。</p>
+
+<h2 id="プッシュしたけど-1つ前の内容に戻したい-2019-02-25">プッシュしたけど、1つ前の内容に戻したい［2019-02-25］</h2>
+
+<p>リモートリポジトリにプッシュしたあと、「あっ、やっぱり前のほうが良かった」と思ったときの手順です。<br />
+ネットで調べたら、間違えたものも履歴として残す方法もありましたが、個人で使う分にはゴミになるだろうと思いまして、シンプルに「先程プッシュしたものは、無かったことにする」という方法を採用します。</p>
+
+<h3 id="やり方-2">やり方</h3>
+
+<p>プッシュしたディレクトリに移動して、</p>
+
+<p><code>git reset --hard HEAD^</code> をして、<br />
+<code>git push -f origin master</code> です。</p>
+
+<p>上記は、あくまでも個人ユースの場合に使うコマンドのようです。<br />
+<strong>チームで管理しているときは、別の方法をとってください。</strong><br />
+（未熟な私にはまだ分からないけど）</p>
 
       </article>
     </main>
