@@ -86,7 +86,8 @@ if (!doNotTrack) {
 <li><a href="#スタイルシートの読み込み">スタイルシートの読み込み</a></li>
 </ul></li>
 <li><a href="#目次を追加する">目次を追加する</a></li>
-<li><a href="#更新日を追加する">更新日を追加する</a>
+<li><a href="#更新日を追加する-記事個別">更新日を追加する（記事個別）</a></li>
+<li><a href="#更新日を追加する-トップページのカード-2019-02-25">更新日を追加する（トップページのカード）［2019-02-25］</a>
 <ul>
 <li><a href="#更新日がうまく入らない-2019-02-25">更新日がうまく入らない ［2019-02-25］</a></li>
 </ul></li>
@@ -226,7 +227,7 @@ css というフォルダも自分で作成し、その中にスタイルシー�
 
 <p>但し、このやり方だと、400文字以上とか無視して、<strong>どのページにも出現します</strong> ので注意。</p>
 
-<h3 id="更新日を追加する">更新日を追加する</h3>
+<h3 id="更新日を追加する-記事個別">更新日を追加する（記事個別）</h3>
 
 <p><img src="/images/aether-custom-update_284.webp" style="width:284px;" alt="更新日を追加する"></p>
 
@@ -263,6 +264,35 @@ css というフォルダも自分で作成し、その中にスタイルシー�
 
 <p><code>.Lastmod</code> だけだと、時間まで表示されて大げさなので、<code>.Format &quot;2006-01-02&quot;</code> で書式を設定しました。
 ついでに初回投稿のほうも、同じ書式に変更しています。</p>
+
+<h3 id="更新日を追加する-トップページのカード-2019-02-25">更新日を追加する（トップページのカード）［2019-02-25］</h3>
+
+<p><img src="/images/aether-custom-card-update_640.webp" alt="トップにも更新日を入れる" style="max-width:640px;"></p>
+
+<p>やり方は個別記事と同じで、編集するファイルが変わるだけです。</p>
+
+<p><code>/サイト名/layouts/_default/li.html</code><br />
+※theme の中にあるのでコピーして持ってきます。</p>
+
+<p>ついでに、ポストされた日のフォーマットも合わせておきます。<br />
+<code>&lt;div&gt;</code> のすぐ下にある <code>&lt;p&gt;&lt;/p&gt;</code> の中を修正しています。</p>
+
+<pre><code class="language-html">[li.html 修正前]
+
+&lt;div class=&quot;card-subtext muted-text&quot;&gt;
+  &lt;p&gt;Posted &lt;time datetime=&quot;{{ .Date.Format &quot;2006-01-02&quot; }}&quot;&gt;{{ .Date.Format &quot;Jan 2, 2006&quot; }}&lt;/time&gt;&lt;/p&gt;
+  {{ if (isset .Params &quot;categories&quot;) }}&lt;p&gt;{{ range .Params.categories }}#{{ . }} {{ end }}&lt;/p&gt;{{ end }}
+&lt;/div&gt;
+</code></pre>
+
+<pre><code class="language-html">[li.html 修正後]
+
+&lt;div class=&quot;card-subtext muted-text&quot;&gt;
+  &lt;p&gt;Posted &lt;time datetime=&quot;{{ .Date.Format &quot;2006-01-02&quot; }}&quot;&gt;{{ .Date.Format &quot;2006-01-02&quot; }}&lt;/time&gt;
+     / Update {{ .Lastmod.Format &quot;2006-01-02&quot; }}&lt;/p&gt;
+  {{ if (isset .Params &quot;categories&quot;) }}&lt;p&gt;{{ range .Params.categories }}#{{ . }} {{ end }}&lt;/p&gt;{{ end }}
+&lt;/div&gt;
+</code></pre>
 
 <h4 id="更新日がうまく入らない-2019-02-25">更新日がうまく入らない ［2019-02-25］</h4>
 
