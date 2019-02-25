@@ -91,6 +91,8 @@ if (!doNotTrack) {
 <ul>
 <li><a href="#更新日がうまく入らない-2019-02-25">更新日がうまく入らない ［2019-02-25］</a></li>
 </ul></li>
+<li><a href="#webフォントを使う-2019-02-25">Webフォントを使う［2019-02-25］</a></li>
+<li><a href="#ローカルフォントを指定する-2019-02-25">ローカルフォントを指定する［2019-02-25］</a></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -133,7 +135,7 @@ if (!doNotTrack) {
 
 <h3 id="ホームボタンの設定">ホームボタンの設定</h3>
 
-<p><img src="/images/aether-custom-home-btn_400.webp" alt="ホームボタンの設置" style="width:400px;"></p>
+<p><img src="/images/aether-custom-home-btn_400.webp" alt="ホームボタンの設置" style="max-width:400px;"></p>
 
 <p>個別記事を開いた時に、一番下に真っ白なスペースがあります。<br />
 ここは、ホーム（トップページ）に戻るためのボタンになっており、Home という白文字が入っています。<strong>実際は白同士で見えないんですけど。</strong></p>
@@ -329,6 +331,57 @@ git push origin master
 </code></pre>
 
 <p>手動で同じことをやっていくと反映するんですけど、これを実行したときってうまく反映されないような。気のせいかな。手動とスクリプトで何か違うのかな。</p>
+
+<h3 id="webフォントを使う-2019-02-25">Webフォントを使う［2019-02-25］</h3>
+
+<p>フォントが汚いので、Webフォントで有名な <a href="https://fonts.google.com" title="Google Fonts">Google Fonts</a> を使ってみました。（本家でも使っている）<br />
+PageSpeed Insights のモバイルの点数が <strong>15点落ちました</strong> ので、一瞬で戻しました（笑）<br />
+Webフォントじゃなくてもきれいに表示することはできるのかしら。調べてみよう。</p>
+
+<p>尚、使うときは、以下のファイルを修正します。</p>
+
+<p><code>/サイト名/layouts/partials/head.html</code><br />
+<code>/サイト名/static/css/hoge.css</code></p>
+
+<p>尚、この後に書いている内容は、うちの本家で使っているものを若干修正したサンプルです。<br />
+使うフォントによってタグの内容も変わりますので、<a href="https://fonts.google.com" title="Google Fonts">Google Fonts</a> で好きなフォントを選んで、それ用のタグを入手してください。</p>
+
+<pre><code class="language-html">［head.html に下記を貼り付ける］
+
+&lt;!-- webfontloader --&gt;
+&lt;script&gt;
+window.WebFontConfig = {
+  google: { families: ['Roboto:400,700', 'Noto+Sans+JP:400,700'] },
+  active: function() {
+    sessionStorage.fonts = true;
+  }
+};
+(function() {
+  var wf = document.createElement('script');
+  wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js';
+  wf.type = 'text/javascript';
+  wf.async = 'true';
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(wf, s);
+})();
+&lt;/script&gt;
+&lt;!-- webfontloader ここまで--&gt;
+</code></pre>
+
+<pre><code class="language-css">［hoge.css に下記を貼り付ける］
+
+body * {font-family: 'Roboto', 'Noto Sans CJK JP', 'Noto Sans JP', sans-serif !important;}
+</code></pre>
+
+<p>スタイルシートのほうは、かなり乱暴な書き方をしていますけど、テストということで許してください（笑）</p>
+
+<h3 id="ローカルフォントを指定する-2019-02-25">ローカルフォントを指定する［2019-02-25］</h3>
+
+<p>とりあえず、最近は <strong>游ゴシック体</strong> が良いみたいなので、下記のように指定しました。<br />
+游ゴシックに Medium が入っているのは、<strong>標準の太さだとかすれちゃう問題</strong> が発生するからだそうです。</p>
+
+<pre><code class="language-css">font-family: &quot;游ゴシック Medium&quot;, &quot;Yu Gothic Medium&quot;, &quot;游ゴシック体&quot;, &quot;YuGothic&quot;, &quot;ヒラギノ角ゴ ProN W3&quot;, &quot;Hiragino Kaku Gothic ProN&quot;, &quot;メイリオ&quot;, &quot;Meiryo&quot;, &quot;verdana&quot;, sans-serif;
+</code></pre>
 
 <hr />
 
