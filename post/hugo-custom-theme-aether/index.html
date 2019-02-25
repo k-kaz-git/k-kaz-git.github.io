@@ -82,10 +82,15 @@ if (!doNotTrack) {
 <li><a href="#スタイルシートの読み込み">スタイルシートの読み込み</a></li>
 </ul></li>
 <li><a href="#目次を追加する">目次を追加する</a></li>
-<li><a href="#更新日を追加する-記事個別">更新日を追加する（記事個別）</a></li>
-<li><a href="#更新日を追加する-トップページのカード-2019-02-25">更新日を追加する（トップページのカード）［2019-02-25］</a>
+<li><a href="#更新日を追加する">更新日を追加する</a>
+<ul>
+<li><a href="#更新日を追加する-個別記事">更新日を追加する（個別記事）</a></li>
+<li><a href="#更新日を追加する-トップページ-2019-02-25">更新日を追加する（トップページ）［2019-02-25］</a></li>
+</ul></li>
+<li><a href="#更新日がうまく取得できずに悩む-解決したっぽい-2019-02-25">更新日がうまく取得できずに悩む → 解決したっぽい［2019-02-25］</a>
 <ul>
 <li><a href="#更新日がうまく入らない">更新日がうまく入らない</a></li>
+<li><a href="#更新日がうまく入らない-解決したっぽい">更新日がうまく入らない（解決したっぽい）</a></li>
 </ul></li>
 <li><a href="#フォントを指定する-2019-02-25">フォントを指定する［2019-02-25］</a>
 <ul>
@@ -228,7 +233,14 @@ css というフォルダも自分で作成し、その中にスタイルシー�
 
 <p>但し、このやり方だと、400文字以上とか無視して、<strong>どのページにも出現します</strong> ので注意。</p>
 
-<h3 id="更新日を追加する-記事個別">更新日を追加する（記事個別）</h3>
+<h3 id="更新日を追加する">更新日を追加する</h3>
+
+<p>こちらのサイトは、日記的な <a href="https://k-kaz.net" title="姉妹サイト（本家）">姉妹サイト（本家）</a> とは違って、同じ記事を後から何度も加筆修正します。<br />
+そうなると、投稿日だけではなく、最終更新日もあると嬉しい。</p>
+
+<p>さぁ、やってみましょう。</p>
+
+<h4 id="更新日を追加する-個別記事">更新日を追加する（個別記事）</h4>
 
 <p><img src="/images/aether-custom-update_284.webp" style="width:284px;" alt="更新日を追加する"></p>
 
@@ -266,7 +278,7 @@ css というフォルダも自分で作成し、その中にスタイルシー�
 <p><code>.Lastmod</code> だけだと、時間まで表示されて大げさなので、<code>.Format &quot;2006-01-02&quot;</code> で書式を設定しました。
 ついでに初回投稿のほうも、同じ書式に変更しています。</p>
 
-<h3 id="更新日を追加する-トップページのカード-2019-02-25">更新日を追加する（トップページのカード）［2019-02-25］</h3>
+<h4 id="更新日を追加する-トップページ-2019-02-25">更新日を追加する（トップページ）［2019-02-25］</h4>
 
 <p><img src="/images/aether-custom-card-update_640.webp" alt="トップにも更新日を入れる" style="max-width:640px;"></p>
 
@@ -294,6 +306,11 @@ css というフォルダも自分で作成し、その中にスタイルシー�
   {{ if (isset .Params &quot;categories&quot;) }}&lt;p&gt;{{ range .Params.categories }}#{{ . }} {{ end }}&lt;/p&gt;{{ end }}
 &lt;/div&gt;
 </code></pre>
+
+<h3 id="更新日がうまく取得できずに悩む-解決したっぽい-2019-02-25">更新日がうまく取得できずに悩む → 解決したっぽい［2019-02-25］</h3>
+
+<p>手動でコミットしてプッシュするといけるけど、スクリプトでやるとダメっぽいぞ・・・。<br />
+うーん、何が悪いんだ。</p>
 
 <h4 id="更新日がうまく入らない">更新日がうまく入らない</h4>
 
@@ -329,7 +346,29 @@ git commit -m &quot;$msg&quot;
 git push origin master
 </code></pre>
 
-<p>手動で同じことをやっていくと反映するんですけど、これを実行したときってうまく反映されないような。気のせいかな。手動とスクリプトで何か違うのかな。</p>
+<p>手動で同じことをやっていくと反映するんですけど、これを実行したときってうまく反映されないような。<br />
+気のせいかな。</p>
+
+<p>手動とスクリプトで何か違うのかな。</p>
+
+<h4 id="更新日がうまく入らない-解決したっぽい">更新日がうまく入らない（解決したっぽい）</h4>
+
+<p><code>config.toml</code> に追記することで解決したっぽい。</p>
+
+<pre><code class="language-toml">[frontmatter]
+date = [&quot;date&quot;, &quot;publishDate&quot;, &quot;lastmod&quot;]
+lastmod = [&quot;:git&quot;, &quot;lastmod&quot;, &quot;date&quot;, &quot;publishDate&quot;]
+publishDate = [&quot;publishDate&quot;, &quot;date&quot;]
+expiryDate = [&quot;expiryDate&quot;]
+</code></pre>
+
+<p><code>[frontmatter]</code> というセクションを追加し、その下に日付的な設定を追加しました。<br />
+参考にしたのは <a href="https://gohugo.io/getting-started/configuration/#configure-front-matter" title="Configure Hugo">Configure Hugo</a> です。</p>
+
+<p>もしかしたら、<code>lastmod</code> の行だけでもいいかもしれない。<br />
+どの段階を最終更新と見るかという設定で、左から優先？みたい。<br />
+デフォルトがこの設定なので、本来は書かなくても良さそうなんだけど・・・。<br />
+まぁ、動いたから良しとする。</p>
 
 <h3 id="フォントを指定する-2019-02-25">フォントを指定する［2019-02-25］</h3>
 
@@ -338,7 +377,7 @@ git push origin master
 
 <h4 id="webフォントを使う">Webフォントを使う</h4>
 
-<p>フォントが汚いので、Webフォントで有名な <a href="https://fonts.google.com" title="Google Fonts">Google Fonts</a> を使ってみました。（本家でも使っている）<br />
+<p>フォントが汚いので、Webフォントで有名な <a href="https://fonts.google.com" title="Google Fonts">Google Fonts</a> を使ってみました。（<a href="https://k-kaz.net" title="姉妹サイト（本家）">姉妹サイト（本家）</a> でも使っている）<br />
 PageSpeed Insights のモバイルの点数が <strong>15点落ちました</strong> ので、一瞬で戻しました（笑）<br />
 パソコンのほうは相変わらず100点でしたけどね。モバイル、厳しいなぁ。</p>
 
@@ -350,7 +389,7 @@ PageSpeed Insights のモバイルの点数が <strong>15点落ちました</str
 <p><code>/サイト名/layouts/partials/head.html</code><br />
 <code>/サイト名/static/css/hoge.css</code></p>
 
-<p>尚、この後に書いている内容は、うちの本家で使っているものを若干修正したサンプルです。<br />
+<p>尚、この後に書いている内容は、<a href="https://k-kaz.net" title="姉妹サイト（本家）">姉妹サイト（本家）</a> で使っているものを若干修正したサンプルです。<br />
 使うフォントによってタグの内容も変わりますので、<a href="https://fonts.google.com" title="Google Fonts">Google Fonts</a> で好きなフォントを選んで、それ用のタグを入手してください。</p>
 
 <pre><code class="language-html">［head.html に下記を貼り付ける］
