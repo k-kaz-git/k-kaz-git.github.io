@@ -86,7 +86,10 @@ if (!doNotTrack) {
 <li><a href="#スタイルシートの読み込み">スタイルシートの読み込み</a></li>
 </ul></li>
 <li><a href="#目次を追加する">目次を追加する</a></li>
-<li><a href="#更新日を追加する">更新日を追加する</a></li>
+<li><a href="#更新日を追加する">更新日を追加する</a>
+<ul>
+<li><a href="#更新日がうまく入らない">更新日がうまく入らない</a></li>
+</ul></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -260,6 +263,42 @@ css というフォルダも自分で作成し、その中にスタイルシー�
 
 <p><code>.Lastmod</code> だけだと、時間まで表示されて大げさなので、<code>.Format &quot;2006-01-02&quot;</code> で書式を設定しました。
 ついでに初回投稿のほうも、同じ書式に変更しています。</p>
+
+<h4 id="更新日がうまく入らない">更新日がうまく入らない</h4>
+
+<p>プッシュするのにコマンドをいくつも入れるのが面倒なので、ネットで調べて下記のスクリプトを組んであります。</p>
+
+<pre><code class="language-sh">#!/bin/bash
+echo -e &quot;\033[0;33mDeploying updates to GitHub...\033[0m&quot;
+# Build the project.
+hugo
+# Go to public folder
+cd public
+# Add changes to git.
+git add .
+# Commit changes.
+msg=&quot;rebuilding site `date`&quot;
+if [ $# -eq 1 ]
+  then msg=&quot;$1&quot;
+fi
+git commit -m &quot;$msg&quot;
+# Push source and build repos.
+git push origin master
+# Come back
+cd ..
+# Add changes to git.
+git add .
+# Commit changes.
+msg=&quot;rebuilding site `date`&quot;
+if [ $# -eq 1 ]
+  then msg=&quot;$1&quot;
+fi
+git commit -m &quot;$msg&quot;
+# Push source and build repos.
+git push origin master
+</code></pre>
+
+<p>手動で同じことをやっていくと反映するんですけど、これを実行したときってうまく反映されないような。手動とスクリプトで何か違うのかな。</p>
 
 <hr />
 
