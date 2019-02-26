@@ -86,6 +86,14 @@ if (!doNotTrack) {
 <ul>
 <li><a href="#やり方-2">やり方</a></li>
 </ul></li>
+<li><a href="#リポジトリから除外したいファイルやフォルダがある-2019-02-26">リポジトリから除外したいファイルやフォルダがある［2019-02-26］</a>
+<ul>
+<li><a href="#やり方-3">やり方</a>
+<ul>
+<li><a href="#gitignore-に除外するものを書きますよ">.gitignore に除外するものを書きますよ</a></li>
+<li><a href="#すでにリポジトリが出来上がっている場合">すでにリポジトリが出来上がっている場合</a></li>
+</ul></li>
+</ul></li>
 </ul></li>
 </ul>
 </nav>
@@ -204,6 +212,43 @@ Win10 の PowerShell では、直接 <code>mklink</code> が実行できない�
 <p>上記は、あくまでも個人ユースの場合に使うコマンドのようです。<br />
 <strong>チームで管理しているときは、別の方法をとってください。</strong><br />
 （未熟な私にはまだ分からないけど）</p>
+
+<h2 id="リポジトリから除外したいファイルやフォルダがある-2019-02-26">リポジトリから除外したいファイルやフォルダがある［2019-02-26］</h2>
+
+<p>VSCode の設定ファイルをリポジトリに入れて共通使用としたんですけど、不要なファイルもあるんですよね。<br />
+タブの状態（何のファイルを開いているか）は要らないし、というか、ファイルの置き場や所有しているファイルも違うし・・・。</p>
+
+<h3 id="やり方-3">やり方</h3>
+
+<h4 id="gitignore-に除外するものを書きますよ">.gitignore に除外するものを書きますよ</h4>
+
+<p><code>git</code> を実行するディレクトリに <code>.gitignore</code> というテキストファイルを用意します。<br />
+この中にリポジトリから除外するファイルやフォルダを書き込むと、そのあたりを考慮してリポジトリを作成してくれます。</p>
+
+<p>VSCode で不要なディレクトリを書き込みました。</p>
+
+<pre><code class="language-.gitignore">[.gitignore]
+
+VSCode/User/globalStorage/
+VSCode/User/workspaceStorage/
+</code></pre>
+
+<h4 id="すでにリポジトリが出来上がっている場合">すでにリポジトリが出来上がっている場合</h4>
+
+<p>git から情報を消し、改めて add → commit → push します。</p>
+
+<p><code>git rm -r --cached .</code><br />
+<code>git add .</code><br />
+<code>git commit -m &quot;コメント&quot;</code><br />
+<code>git push origin master</code></p>
+
+<p>相手側はどうすればいいのかな。</p>
+
+<p>普通に <code>git pull</code> でやっても怒られたので、ディレクトリ毎、まっさらにして</p>
+
+<p><code>git clone git@github:ユーザー名/リポジトリ名.git</code></p>
+
+<p>で、解決したことにしちゃった（笑）</p>
 
       </article>
     </main>
