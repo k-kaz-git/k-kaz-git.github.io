@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Aether - k-kaz</title>
+    <link>https://k-kaz-git.github.io/tags/aether/</link>
+    <description>Recent content in Aether on k-kaz</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Mon, 18 Feb 2019 21:30:02 +0900</lastBuildDate>
+    
+        <atom:link href="https://k-kaz-git.github.io/tags/aether/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>テーマ aether のカスタマイズ</title>
+      <link>https://k-kaz-git.github.io/post/hugo-custom-theme-aether/</link>
+      <pubDate>Mon, 18 Feb 2019 21:30:02 +0900</pubDate>
+      
+      <guid>https://k-kaz-git.github.io/post/hugo-custom-theme-aether/</guid>
+      <description>テーマ aether のカスタマイズをこちらにまとめます。</description>
+    </item>
+  </channel>
+</rss>
