@@ -387,6 +387,19 @@ expiryDate = [&quot;expiryDate&quot;]
 そして、カテゴリーとタグを付け直したら、<strong>全ページの最終更新日が 2019-02-27 になってもうた。</strong><br />
 本文中の修正でなくても反映するのね。そりゃそうか。</p>
 
+<p>どうも気持ち悪いので、ファイルのタイムスタンプから更新日を取得するように変更しました。</p>
+
+<p>参考にしたのは公式のドキュメント<br />
+<a href="https://gohugo.io/getting-started/configuration/#configure-dates">Configure Dates</a></p>
+
+<p><code>:fileModTime</code> というのが、ファイルのタイムスタンプを見てくれるようなので、<code>config.toml</code> を下記のように変更です。</p>
+
+<p><code>lastmod = [&quot;:fileModTime&quot;, &quot;:git&quot;, &quot;lastmod&quot;, &quot;date&quot;, &quot;publishDate&quot;]</code></p>
+
+<p><code>lastmod</code> のところで、一番左側に追加しました。</p>
+
+<p>尚、ファイルはすべて 2019-02-27 のタイムスタンプになっているので、別途アプリで弄っています。</p>
+
 <h3 id="フォントを指定する-2019-02-25">フォントを指定する［2019-02-25］</h3>
 
 <p>やっぱり見た目は大事ですよね。<br />
