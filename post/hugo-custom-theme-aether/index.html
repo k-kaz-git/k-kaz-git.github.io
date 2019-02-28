@@ -106,6 +106,21 @@ if (!doNotTrack) {
 <li><a href="#ローカルフォントを指定する">ローカルフォントを指定する</a></li>
 </ul></li>
 </ul></li>
+<li><a href="#タグ問題を解決する">タグ問題を解決する</a>
+<ul>
+<li><a href="#タグを使えるようにする">タグを使えるようにする</a>
+<ul>
+<li><a href="#設定ファイルの修正">設定ファイルの修正</a></li>
+<li><a href="#記事テンプレートの修正">記事テンプレートの修正</a></li>
+</ul></li>
+<li><a href="#タグを表示する">タグを表示する</a>
+<ul>
+<li><a href="#トップページ">トップページ</a></li>
+<li><a href="#個別記事">個別記事</a></li>
+<li><a href="#次の記事">次の記事</a></li>
+<li><a href="#メニューボタン">メニューボタン</a></li>
+</ul></li>
+</ul></li>
 </ul></li>
 </ul>
 </nav>
@@ -458,6 +473,198 @@ body * {font-family: 'Roboto', 'Noto Sans CJK JP', 'Noto Sans JP', sans-serif !i
 
 <pre><code class="language-css">font-family: &quot;游ゴシック Medium&quot;, &quot;Yu Gothic Medium&quot;, &quot;游ゴシック体&quot;, &quot;YuGothic&quot;, &quot;ヒラギノ角ゴ ProN W3&quot;, &quot;Hiragino Kaku Gothic ProN&quot;, &quot;メイリオ&quot;, &quot;Meiryo&quot;, &quot;verdana&quot;, sans-serif;
 </code></pre>
+
+<h2 id="タグ問題を解決する">タグ問題を解決する</h2>
+
+<p>aether は、カテゴリーのみの運用で、タグの使用は意図されていません。<br />
+タグを使いたい場合は、自力で頑張ることになります。</p>
+
+<h3 id="タグを使えるようにする">タグを使えるようにする</h3>
+
+<p>2つのファイルを修正してあげます。</p>
+
+<h4 id="設定ファイルの修正">設定ファイルの修正</h4>
+
+<p>設定ファイル <code>config.toml</code> に <code>tag = &quot;tags&quot;</code> を追加します。<br />
+カテゴリーとまとめて書いておくと見やすいかと思います。</p>
+
+<pre><code class="language-toml">[taxonomies]
+category = &quot;categories&quot;
+tag = &quot;tags&quot;
+</code></pre>
+
+<h4 id="記事テンプレートの修正">記事テンプレートの修正</h4>
+
+<p>もう1つ。<br />
+記事データに <code>tags: [&quot;&quot;]</code> を追加しますが、毎回手動で入れるのは大変なので、テンプレートの方を直しておきます。<br />
+投稿の仕方によって変わりますが、私は <code>post</code> というフォルダの中に記事を入れているので、下記のファイルを修正します。</p>
+
+<p><code>サイト名\archetypes\post.md</code></p>
+
+<p>私のファイルはこんな感じになっています。</p>
+
+<pre><code class="language-post.md">---
+title: &quot;{{ replace .TranslationBaseName &quot;-&quot; &quot; &quot; | title }}&quot;
+date: {{ .Date }}
+description: &quot;&quot;
+categories: [&quot;&quot;]
+tags: [&quot;&quot;]
+featuredImage: &quot;&quot;
+featuredImageDescription: &quot;&quot;
+dropCap: false
+displayInMenu: false
+displayInList: true
+draft: true
+---
+</code></pre>
+
+<p>こうしておけば、<code>hugo new post/hoge.md</code> としたときに <code>post</code> に属する記事ということで、この <code>post.md</code> をテンプレートとして読み込んでくれ、ちょっとだけ楽になるのと、タグの付け忘れがなくなります。</p>
+
+<p>尚、記事のほうで <code>tag</code> が複数ある時は <code>tags: [&quot;aaa&quot;,&quot;bbb&quot;,&quot;ccc&quot;]</code> と書いてください。</p>
+
+<h3 id="タグを表示する">タグを表示する</h3>
+
+<p>ここまでの作業で、記事にタグ付けが出来ています。<br />
+ただ、残念なことにそのタグを表示する術がありません。<br />
+ここから HTML のテンプレートを修正し、好きな場所にタグを表示させるようにします。</p>
+
+<h4 id="トップページ">トップページ</h4>
+
+<p><code>サイト名\layouts\_default\li.html</code></p>
+
+<p>一部分だけ抜き出しています。</p>
+
+<pre><code class="language-html">&lt;article class=&quot;card-body&quot;&gt;
+  &lt;h2 class=&quot;card-title&quot;&gt;{{ .Title }}&lt;/h2&gt;
+  &lt;p class=&quot;card-text&quot;&gt;{{ if (isset .Params &quot;description&quot;) }}{{ index .Params &quot;description&quot; }}{{ else }}{{ .Summary }}{{ end }}&lt;/p&gt;
+  &lt;div class=&quot;card-subtext muted-text&quot;&gt;
+    &lt;p&gt;Posted &lt;time datetime=&quot;{{ .Date.Format &quot;2006-01-02&quot; }}&quot;&gt;{{ .Date.Format &quot;2006-01-02&quot; }}&lt;/time&gt;
+      / Updated {{ .Lastmod.Format &quot;2006-01-02&quot; }}&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;card-subtext muted-text li-line&quot;&gt;
+      {{ if (isset .Params &quot;categories&quot;) }}{{ range .Params.categories }}&lt;span class=&quot;box-gray&quot;&gt;{{ . }}&lt;/span&gt; {{ end }}{{ end }}
+      {{ if (isset .Params &quot;tags&quot;) }} {{ range .Params.tags }}&lt;span class=&quot;box-gray&quot;&gt;# {{ . }}&lt;/span&gt; {{ end }}{{ end }}
+  &lt;/div&gt;
+&lt;/article&gt;
+</code></pre>
+
+<p>先日、更新日を追加した修正のとき、カテゴリーも同じ <code>&lt;div&gt;&lt;/div&gt;</code> の中に入っていましたが、外側に出しています。<br />
+もう1つ <code>&lt;div&gt;&lt;/div&gt;</code> を用意して、その中にカテゴリーと、今回追加のタグを入れています。</p>
+
+<p><strong>よく分かっていませんが、<code>categories</code> を <code>tags</code> にしたら動くだろう</strong>と思ってやったら、その通り動きました。<br />
+私が凄いのではなくて、感覚的にできちゃうという分かりやすい設計の Hugo が凄いのでしょう。</p>
+
+<p>ついでに、カテゴリーに <code>#</code> が付いていましたが、タグのほうに持ってきました。<br />
+あと、<code>class</code> を入れていますが、これは見た目の装飾だけで、動きには影響していません。</p>
+
+<h4 id="個別記事">個別記事</h4>
+
+<p><code>サイト名\layouts\_default\single.html</code></p>
+
+<p>一部分だけ抜き出しています。</p>
+
+<pre><code class="language-html">&lt;header class=&quot;post-header&quot;&gt;
+    &lt;h1 class=&quot;post-title&quot;&gt;{{ .Title }}&lt;/h1&gt;
+    &lt;p class=&quot;post-date&quot;&gt;
+      Posted &lt;time datetime=&quot;{{ .Date.Format &quot;2006-01-02&quot; }}&quot;&gt;{{ .Date.Format &quot;2006-01-02&quot; }}&lt;/time&gt;
+      / Update {{ .Lastmod.Format &quot;2006-01-02&quot; }}&lt;/p&gt;
+    &lt;div class=&quot;card-subtext muted-text li-line&quot;&gt;
+      {{ if (isset .Params &quot;categories&quot;) }}{{ range .Params.categories }} &lt;a class=&quot;cat&quot; href=&quot;/categories/{{ . }}&quot;&gt;{{ . }}&lt;/a&gt;{{ end }}{{ end }}
+      {{ if (isset .Params &quot;tags&quot;) }}{{ range .Params.tags }} &lt;a class=&quot;tag&quot; href=&quot;/tags/{{ . }}&quot;&gt;# {{ . }}&lt;/a&gt; {{ end }}{{ end }}
+    &lt;/div&gt;
+&lt;/header&gt;
+</code></pre>
+
+<p>こちらもトップとほぼ同じですが、リンクの設定をしてあります。<br />
+表示されたカテゴリーやタグをクリックすると、同一グループが一覧表示されるようになります。<br />
+アドレスだけ気を付けてあげれば、一覧表示はテーマ側が自動でやってくれます。</p>
+
+<p>if文の中で、該当する文字列が見付かれば、リンクに展開するって感じかな。（知らんけど）<br />
+複数見付かれば、その回数分、リンクを展開してくれます。</p>
+
+<p>カテゴリーのアドレス指定<br />
+<code>&lt;a class=&quot;cat&quot; href=&quot;/categories/{{ . }}&quot;&gt;{{ . }}&lt;/a&gt;</code></p>
+
+<p>タグのアドレス指定<br />
+<code>&lt;a class=&quot;tag&quot; href=&quot;/tags/{{ . }}&quot;&gt;# {{ . }}&lt;/a&gt;</code></p>
+
+<p>それぞれ <code>{{ . }}</code> の中に、読み込まれたカテゴリーやタグが自動で入力されます。<br />
+カテゴリーが <code>homepage</code> なら <code>/categories/homepage</code> と展開されます。</p>
+
+<p>私のサイトでは、このタグを上部と下部の2ヶ所に入れてみました。</p>
+
+<h4 id="次の記事">次の記事</h4>
+
+<p>個別記事の最下部に次の記事が表示されます。<br />
+そこにも入れておきます。</p>
+
+<p><code>サイト名\layouts\_default\li-next.html</code></p>
+
+<p>一部分だけ抜き出しています。</p>
+
+<pre><code class="language-html">&lt;article class=&quot;card-body&quot;&gt;
+  &lt;h2 class=&quot;card-title&quot;&gt;{{ .Title }}&lt;/h2&gt;
+  &lt;p class=&quot;card-text&quot;&gt;{{ if (isset .Params &quot;description&quot;) }}{{ index .Params &quot;description&quot; }}{{ else }}{{ .Summary }}{{ end }}&lt;/p&gt;
+  &lt;div class=&quot;card-subtext muted-text&quot;&gt;
+    &lt;p&gt;Posted &lt;time datetime=&quot;{{ .PublishDate.Format &quot;2006-01-02&quot; }}&quot;&gt;{{ .PublishDate.Format &quot;2006-01-02&quot; }}&lt;/time&gt;
+    / Updated {{ .Lastmod.Format &quot;2006-01-02&quot; }}&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;card-subtext muted-text li-line&quot;&gt;
+    {{ if (isset .Params &quot;categories&quot;) }}{{ range .Params.categories }}&lt;span class=&quot;box-gray&quot;&gt;{{ . }}&lt;/span&gt; {{ end }}{{ end }}
+    {{ if (isset .Params &quot;tags&quot;) }}{{ range .Params.tags }}&lt;span class=&quot;box-gray&quot;&gt;# {{ . }}&lt;/span&gt; {{ end }}{{ end }}
+  &lt;/div&gt;
+&lt;/article&gt;
+</code></pre>
+
+<p>トップページと同じかな。</p>
+
+<h4 id="メニューボタン">メニューボタン</h4>
+
+<p>右上にある 三 みたいなボタンですけど、これを押すとカテゴリーを表示することができます。<br />
+ここはもう趣味なんですけど、この中にタグまで表示したい場合は下記を修正します。</p>
+
+<p><code>サイト名\layouts\partials\nav-bar.html</code></p>
+
+<p>一部分だけ抜き出しています。</p>
+
+<pre><code class="language-html">&lt;div class=&quot;hamburger-menu&quot;&gt;
+  &lt;button onclick=&quot;hamburgerMenuPressed.call(this)&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;false&quot; aria-controls=&quot;menu&quot; aria-label=&quot;Menu&quot;&gt;
+    &lt;span&gt;&lt;/span&gt;
+    &lt;span&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul id=&quot;menu&quot; class=&quot;hamburger-menu-overlay&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;{{ .Site.BaseURL }}&quot; class=&quot;hamburger-menu-overlay-link&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+    {{ range where .Site.Pages &quot;Params.displayinmenu&quot; true -}}
+      &lt;li&gt;&lt;a href=&quot;{{ .Permalink }}&quot; class=&quot;hamburger-menu-overlay-link&quot;&gt;{{ .Title }}&lt;/a&gt;&lt;/li&gt;
+    {{ end -}}
+    &lt;li class=&quot;navi-menu&quot;&gt;- Categories -&lt;/li&gt;
+    {{ range $key, $value := .Site.Taxonomies.categories -}}
+    &lt;li style=&quot;font-size: 0.7em;&quot;&gt;&lt;a href=&quot;{{ (printf &quot;%s%s&quot; &quot;categories/&quot; ($key | urlize)) | absURL }}&quot; class=&quot;hamburger-menu-overlay-link&quot;&gt;{{ $key | humanize }}&lt;/a&gt;&lt;/li&gt;
+    {{- end }}
+    &lt;li class=&quot;navi-menu&quot;&gt;- Tags -&lt;/li&gt;
+    {{ range $key, $value := .Site.Taxonomies.tags -}}
+    &lt;li style=&quot;font-size: 0.5em;&quot;&gt;&lt;a href=&quot;{{ (printf &quot;%s%s&quot; &quot;tags/&quot; ($key | urlize)) | absURL }}&quot; class=&quot;hamburger-menu-overlay-link&quot;&gt;{{ $key | humanize }}&lt;/a&gt;&lt;/li&gt;
+    {{- end }}
+  &lt;/ul&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p>すでにカテゴリーは記載済みですので、そこをコピペしてタグ用の行を追加しています。<br />
+<code>categories</code> = <code>tags</code> で置換してあげれば良いです。</p>
+
+<p>ついでにカテゴリーとタグの区切りを入れたかったので、<code>&lt;li class=&quot;navi-menu&quot;&gt;- Categories -&lt;/li&gt;</code> と <code>&lt;li class=&quot;navi-menu&quot;&gt;- Tags -&lt;/li&gt;</code> を追加しました。</p>
+
+<p><code>class</code> は例のごとく見栄えだけです。</p>
+
+<p>メニューボタンの隣に並べることも考えたんですが、モバイルでレイアウトが崩れたので、メニューに入れてしまうという安易なやり方にしております。数が増えたらえらいことになるんだろうなと思いつつ（笑）</p>
+
+<p>最近は、ブラウザの検証機能を使って、パソコンとモバイルの両方で表示して確認するというクセがついてきました。（良いことです）</p>
+
+<p>トップページと次の記事のカテゴリー、タグも数が増えると表示が崩れます。<br />
+（縦に伸びて文字全てを表示するようになるので、格好悪い）</p>
+
+<p>ここもとりあえず <code>@media screen</code> で、幅の小さい端末の場合は、フォントサイズを小さくして誤魔化していますが、
+数が増えてレイアウトが崩れるまえに改行表示するように、根本的な修正をしたいんですけどね。それはまた・・・。</p>
 
 <hr />
 
