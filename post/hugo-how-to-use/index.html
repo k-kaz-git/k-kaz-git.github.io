@@ -9,7 +9,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
   <link rel="stylesheet" href="https://k-kaz-git.github.io/css/main.min.css" />
-  <link rel="stylesheet" href="/css/k-kaz.css" />
+  
+  <link rel="stylesheet" href="https://k-kaz-git.github.io/sass/main.min.a3f5a767c335c76efd479b2827e4372a087191d8a47ba0ac2ebfd5158dc4b2fb.css">
   
   
 <script type="application/javascript">
@@ -50,7 +51,7 @@ if (!doNotTrack) {
         	<h1 class="post-title">Hugo の使い方</h1>
           <p class="post-date">
             Posted <time datetime="2019-02-20">2019-02-20</time>
-             / Update 2019-02-20</p>
+             / Update 2019-03-02</p>
              <div class="card-subtext muted-text li-line">
                <a class="cat" href="/categories/homepage">homepage</a>
                <a class="tag" href="/tags/hugo">#hugo</a> 
@@ -105,20 +106,20 @@ if (!doNotTrack) {
 <p>サイト作成をすると下記のようなフォルダ構成が作られる。<br />
 （me）と書いたところは、必要になったら自分で作成するフォルダなので、サイト名直下のフォルダまでが自動生成かな。</p>
 
-<pre><code>サイト名/
-    ├ archetypes/   記事のテンプレートを入れるところ
-    ├ content/      記事を入れるところ
-    │   └ post/     （me）
-    │   └ blog/     （me）
-    ├ layouts/      テンプレートとなる HTML を入れるところ
-    │   └ _default  （me）
-    │   └ partials  （me）
-    ├ public/       自動生成された公開ファイルが入るところ
-    ├ static/       素材関係を入れるところ
-    │   └ css/      スタイルシートを入れるところ（me）
-    │   └ images/   画像ファイルを入れるところ（me）
-    ├ theme/        テーマファイルを入れるところ
-    │   └ aether/   aether というテーマのフォルダ（me）
+<pre><code class="language-txt">    サイト名/
+        ├ archetypes/   記事のテンプレートを入れるところ
+        ├ content/      記事を入れるところ
+        │   └ post/     （me）
+        │   └ blog/     （me）
+        ├ layouts/      テンプレートとなる HTML を入れるところ
+        │   └ _default  （me）
+        │   └ partials  （me）
+        ├ public/       自動生成された公開ファイルが入るところ
+        ├ static/       素材関係を入れるところ
+        │   └ css/      スタイルシートを入れるところ（me）
+        │   └ images/   画像ファイルを入れるところ（me）
+        ├ theme/        テーマファイルを入れるところ
+        │   └ aether/   aether というテーマのフォルダ（me）
 </code></pre>
 
 <h2 id="記事作成">記事作成</h2>
@@ -151,10 +152,10 @@ Markdown 記法となるため、対応したエディタを使うと良い。</
 それらファイルはテーマ内のものよりも優先される。<br />
 どこに置くかは、テーマ内を確認する。</p>
 
-<pre><code>HTML    → layout/_default/
-HTML    → layout/partials/
-CSS     → static/css/
-IMAGE   → static/images/
+<pre><code class="language-txt">    HTML    → layout/_default/
+    HTML    → layout/partials/
+    CSS     → static/css/
+    IMAGE   → static/images/
 </code></pre>
 
 <h2 id="記事の公開">記事の公開</h2>
@@ -207,7 +208,7 @@ IMAGE   → static/images/
       <hr>
       <p class="post-date">
         Posted <time datetime="2019-02-20">2019-02-20</time>
-         / Update 2019-02-20</p>
+         / Update 2019-03-02</p>
          <div class="card-subtext muted-text li-line">
            <a class="cat" href="/categories/homepage">homepage</a>
            <a class="tag" href="/tags/hugo">#hugo</a> 
