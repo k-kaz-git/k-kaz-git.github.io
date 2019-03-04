@@ -87,6 +87,7 @@ if (!doNotTrack) {
 <ul>
 <li><a href="#スニペットの複数登録">スニペットの複数登録</a></li>
 <li><a href="#ダブルクォーテーション-の使用">ダブルクォーテーション（ &ldquo;）の使用</a></li>
+<li><a href="#body-が複数行になる場合-タブを入れたい場合">body が複数行になる場合 ＆ タブを入れたい場合</a></li>
 </ul></li>
 </ul></li>
 </ul></li>
@@ -296,6 +297,25 @@ img と打った時点（もしくは i を入れた時点）で、上記のス�
 <p>HTML の中で使いたい場合は <code>&quot;</code> の前に <code>\</code> を付けて下さい。そうすることで、特殊な意味を持ったものではないと否定できます。</p>
 
 <p>実際に書くと <code>class=\&quot;\&quot;</code> みたいな感じです。</p>
+
+<h4 id="body-が複数行になる場合-タブを入れたい場合">body が複数行になる場合 ＆ タブを入れたい場合</h4>
+
+<p>複数行の場合は、1行ごと最後に <code>,</code> を入れます。<br />
+但し、最終行は不要で、<code>]</code> の後に <code>,</code> を入れます。</p>
+
+<pre><code class="language-json">&quot;comment&quot;:{
+    &quot;prefix&quot;: &quot;comment&quot;,
+    &quot;body&quot;:[
+        &quot;/* ========================================&quot;,
+        &quot;\t\t${1:comment}&quot;,
+        &quot;======================================== */&quot;
+    ],
+    &quot;description&quot;: &quot;コメントアウト タイトル&quot;
+}
+</code></pre>
+
+<p>また、タブは <code>\t</code> で表します。<br />
+上記例の場合は、タブが2つ入る形です。</p>
 
       </article>
       <hr>
