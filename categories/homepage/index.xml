@@ -11,12 +11,12 @@
         <atom:link href="https://k-kaz-git.github.io/categories/homepage/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Hugo Netlify</title>
+      <title>Hugo を Netlify で動かすよ。</title>
       <link>https://k-kaz-git.github.io/post/hugo-netlify/</link>
       <pubDate>Thu, 07 Mar 2019 14:44:55 +0900</pubDate>
       
       <guid>https://k-kaz-git.github.io/post/hugo-netlify/</guid>
-      <description>Hugo を Netlify で動かしてみる</description>
+      <description>Hugo を Netlify で動かしてみたときの記録です。</description>
     </item><item>
       <title>Hugo で Sass を使ってみる</title>
       <link>https://k-kaz-git.github.io/post/hugo-stylesheet-sass/</link>
