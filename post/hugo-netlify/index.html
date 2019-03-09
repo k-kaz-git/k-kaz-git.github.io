@@ -6,6 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Hugo を Netlify で動かすよ。 &middot; k-kaz</title>
   <meta name="description" content="Hugo を Netlify で動かしてみたときの記録です。" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
   <link rel="stylesheet" href="https://k-kaz-git.github.io/css/main.min.css" />
@@ -81,7 +86,10 @@ if (!doNotTrack) {
 <li><a href="#サイトの雛形を展開する">サイトの雛形を展開する</a></li>
 <li><a href="#テーマの準備">テーマの準備</a>
 <ul>
-<li><a href="#テーマ内の-git-を削除">テーマ内の .git を削除</a></li>
+<li><a href="#テーマ内の-git-を削除">テーマ内の .git を削除</a>
+<ul>
+<li><a href="#補足-2019-03-10">補足［2019-03-10］</a></li>
+</ul></li>
 </ul></li>
 <li><a href="#設定ファイルの修正">設定ファイルの修正</a></li>
 </ul></li>
@@ -172,6 +180,17 @@ Windows の場合は、環境変数のところを弄ります。</p>
 
 <p>テーマの中に .git というフォルダがあります。<br />
 あとで面倒なので、削除します。</p>
+
+<h5 id="補足-2019-03-10">補足［2019-03-10］</h5>
+
+<p>他のテーマを使ったときに気付いたんですが、サブモジュール化すれば削除しなくて良いみたいです。<br />
+というか、そのほうが良いみたいですね。テーマのアップデートできるし。</p>
+
+<p>別テーマですけど、こんな感じです。</p>
+
+<pre><code class="language-git">git submodule add https://github.com/zwbetz-gh/cupper-hugo-theme.git themes/cupper-hugo-theme
+git submodule update --remote --merge
+</code></pre>
 
 <h3 id="設定ファイルの修正">設定ファイルの修正</h3>
 
