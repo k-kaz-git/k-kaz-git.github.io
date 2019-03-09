@@ -4,8 +4,8 @@
   <meta charset="utf-8" />
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>コメント欄を削除 &middot; k-kaz</title>
-  <meta name="description" content="使わないので、コメント欄を消しました。" />
+  <title>ファビコンを作るよ。 &middot; k-kaz</title>
+  <meta name="description" content="Favicon Generator を使って、ファビコンを作りましょう。" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -53,20 +53,20 @@ if (!doNotTrack) {
     <main class="content side-text-padding">
       <article class="post ">
         <header class="post-header">
-        	<h1 class="post-title">コメント欄を削除</h1>
+        	<h1 class="post-title">ファビコンを作るよ。</h1>
           <p class="post-date">
-            Posted <time datetime="2019-02-18">2019-02-18</time>
-             / Update 2019-02-27</p>
+            Posted <time datetime="2019-03-10">2019-03-10</time>
+             / Update 2019-03-10</p>
              <div class="card-subtext muted-text li-line">
                <a class="cat" href="/categories/homepage">homepage</a>
-               <a class="tag" href="/tags/hugo">#hugo</a> 
+               <a class="tag" href="/tags/favicon">#favicon</a> 
              </div>
         </header>
         
         <picture class="post-figure">
-            <source srcset="https://k-kaz-git.github.io/images/speech-bubbles_640.webp" type="image/webp">
-            <source srcset="https://k-kaz-git.github.io/images/speech-bubbles_640.webp">
-          <img src="https://k-kaz-git.github.io/images/speech-bubbles_640.webp" alt="会話のイメージ">
+            <source srcset="https://k-kaz-git.github.io/images/icon-sns_640.webp" type="image/webp">
+            <source srcset="https://k-kaz-git.github.io/images/icon-sns_640.webp">
+          <img src="https://k-kaz-git.github.io/images/icon-sns_640.webp" alt="ファビコンを作ります。">
         </picture>
         
         <aside>
@@ -75,59 +75,85 @@ if (!doNotTrack) {
 <ul>
 <li>
 <ul>
-<li><a href="#コメント欄を削除">コメント欄を削除</a></li>
-<li><a href="#テーマはコピーしてから修正">テーマはコピーしてから修正</a></li>
+<li><a href="#ファビコンって">ファビコンって？</a></li>
+<li><a href="#ファビコンを作るサービスを使いましょう">ファビコンを作るサービスを使いましょう</a>
+<ul>
+<li><a href="#作成手順">作成手順</a></li>
+</ul></li>
 </ul></li>
 </ul>
 </nav>
         </aside>
         
 
-<h2 id="コメント欄を削除">コメント欄を削除</h2>
+<h2 id="ファビコンって">ファビコンって？</h2>
 
-<p>使わないので、コメント欄は削除しました。<br />
-テーマ内の single.html にタグにあった <code>{{ template &quot;_internal/disqus.html&quot; . }}</code> を、ばっさり削除。</p>
+<p>ブラウザでサイトを開いた時に、タブに表示される小さなアイコンです。<br />
+他にもブックマークとして保存したり、デスクトップにショートカットを作ったりするときにも使用されます。</p>
 
-<h2 id="テーマはコピーしてから修正">テーマはコピーしてから修正</h2>
+<p>うちのサイトだとこういうの。<br />
+<img src="/images/favicon-k-kaz.webp" alt="faviconイメージ画像" style="width:128px;"></p>
 
-<p>念の為、テーマはコピーしてから、そのコピー先を修正しました。<br />
-テーマ内の theme.toml を開いて、name を適当なものに変更。<br />
-config.toml でテーマを選択しているので、そこのテーマ名も同じものにしました。</p>
+<p>昔は、1個だけ用意しておけば良かったんですけどね。<br />
+今は、Windows、Mac、Android、ブラウザの違い等で、複数サイズや種類を用意する必要があります。</p>
+
+<p>正直、どんなサイズや種類を用意すれば良いのか分からなくなっています（笑）<br />
+そして、いくつも準備するのって面倒ですよね。</p>
+
+<h2 id="ファビコンを作るサービスを使いましょう">ファビコンを作るサービスを使いましょう</h2>
+
+<p>ありがたいことに、基本となる画像ファイル1個だけあれば、あとはほぼお任せでファビコンを作ってくれるサイトがあります。</p>
+
+<p><a href="https://realfavicongenerator.net/">Favicon Generator. For all platforms</a></p>
+
+<h3 id="作成手順">作成手順</h3>
+
+<ul>
+<li><a href="https://realfavicongenerator.net/">Favicon Generator. For all platforms</a> に行きます。</li>
+<li>「Select your Favicon picture」というボタンをクリックします。</li>
+<li>ファビコンとした画像を選択してアップします。</li>
+<li>OS や ブラウザごとにいくつか設定がありますので、自分好みにします。</li>
+<li>「Generate your Favicons and HTML code」というボタンをクリックします。</li>
+<li>作成されたファビコン（zip形式）をダウンロードして完了です。</li>
+</ul>
+
+<p>zip を解凍すると各種ファビコンがありますので、あとはうまいことお使い下さい。<br />
+また、リンク指定の仕方などもサイトに表示されていますので、参考に。</p>
 
       </article>
       <hr>
       <p class="post-date">
-        Posted <time datetime="2019-02-18">2019-02-18</time>
-         / Update 2019-02-27</p>
+        Posted <time datetime="2019-03-10">2019-03-10</time>
+         / Update 2019-03-10</p>
          <div class="card-subtext muted-text li-line">
            <a class="cat" href="/categories/homepage">homepage</a>
-           <a class="tag" href="/tags/hugo">#hugo</a> 
+           <a class="tag" href="/tags/favicon">#favicon</a> 
          </div>
     </main>
     <nav class="end-nav side-padding">
       
       <a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
-  href="https://k-kaz-git.github.io/post/hugo-custom/" class="card blog-card" rel="bookmark" >
+  href="https://k-kaz-git.github.io/post/hugo-netlify/" class="card blog-card" rel="bookmark" >
     
     <div class="card-img-container">
       <p class="card-img-overlay">Next Article</p>
       <picture>
-        <source srcset="https://k-kaz-git.github.io/images/people-custom_640.webp" type="image/webp">
-        <source srcset="https://k-kaz-git.github.io/images/people-custom_640.webp">
-        <img src="https://k-kaz-git.github.io/images/people-custom_640.webp" class="card-img" alt="溶接している人">
+        <source srcset="https://k-kaz-git.github.io/images/hugo-netlify-network_640.webp" type="image/webp">
+        <source srcset="https://k-kaz-git.github.io/images/hugo-netlify-network_640.webp">
+        <img src="https://k-kaz-git.github.io/images/hugo-netlify-network_640.webp" class="card-img" alt="地球とネットワークのイメージ画像">
       </picture>
     </div>
     
   <article class="card-body">
-    <h2 class="card-title">カスタマイズしてみたいな</h2>
-    <p class="card-text">欲が出てきて、ホームページのカスタマイズをしたくなってきた。</p>
+    <h2 class="card-title">Hugo を Netlify で動かすよ。</h2>
+    <p class="card-text">Hugo を Netlify で動かしてみたときの記録です。</p>
     <div class="card-subtext muted-text">
-      <p>Posted <time datetime="2019-02-17">2019-02-17</time>
-      / Updated 2019-02-27</p>
+      <p>Posted <time datetime="2019-03-07">2019-03-07</time>
+      / Updated 2019-03-10</p>
     </div>
     <div class="card-subtext muted-text li-line">
       <span class="box-gray">homepage</span> 
-      <span class="box-gray">#hugo</span> 
+      <span class="box-gray">#hugo</span> <span class="box-gray">#netlify</span> 
     </div>
   </article>
 </a>
