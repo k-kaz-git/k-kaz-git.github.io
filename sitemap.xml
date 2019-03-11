@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://k-kaz-git.github.io/post/hugo-shortcodes/</loc>
+    <lastmod>2019-03-11T17:40:19+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://k-kaz-git.github.io/post/favicon-generator/</loc>
     <lastmod>2019-03-10T15:47:03+09:00</lastmod>
   </url>
@@ -114,13 +119,13 @@
   
   <url>
     <loc>https://k-kaz-git.github.io/categories/homepage/</loc>
-    <lastmod>2019-03-10T15:47:03+09:00</lastmod>
+    <lastmod>2019-03-11T17:40:19+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://k-kaz-git.github.io/tags/hugo/</loc>
-    <lastmod>2019-03-10T05:53:20+09:00</lastmod>
+    <lastmod>2019-03-11T17:40:19+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -138,13 +143,19 @@
   
   <url>
     <loc>https://k-kaz-git.github.io/post/</loc>
-    <lastmod>2019-03-10T15:47:03+09:00</lastmod>
+    <lastmod>2019-03-11T17:40:19+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://k-kaz-git.github.io/tags/sass/</loc>
     <lastmod>2019-03-04T12:50:33+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://k-kaz-git.github.io/tags/shortcodes/</loc>
+    <lastmod>2019-03-11T17:40:19+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -180,7 +191,7 @@
   
   <url>
     <loc>https://k-kaz-git.github.io/</loc>
-    <lastmod>2019-03-10T15:47:03+09:00</lastmod>
+    <lastmod>2019-03-11T17:40:19+09:00</lastmod>
     <priority>0</priority>
   </url>
   
