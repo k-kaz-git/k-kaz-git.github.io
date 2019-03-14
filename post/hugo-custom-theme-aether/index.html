@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
   <link rel="stylesheet" href="https://k-kaz-git.github.io/css/main.min.css" />
   
-  <link rel="stylesheet" href="https://k-kaz-git.github.io/sass/main.min.02dc618c29a1da1c601298ca1f9cdede19a0102beac69381caf2da92e92d874c.css">
+  <link rel="stylesheet" href="https://k-kaz-git.github.io/sass/main.min.81e3cb6eaf8e7842c49301a526fce2d55acfc43d366a32f6b20e3b3730ebc78e.css">
 
   
 <script type="application/javascript">
@@ -112,6 +112,10 @@ if (!doNotTrack) {
 <ul>
 <li><a href="#webフォントを使う">Webフォントを使う</a></li>
 <li><a href="#ローカルフォントを指定する">ローカルフォントを指定する</a></li>
+</ul></li>
+<li><a href="#コード表示にサイズ制限を設ける-2019-03-14">コード表示にサイズ制限を設ける ［2019-03-14］</a>
+<ul>
+<li><a href="#スタイルシートを修正する">スタイルシートを修正する</a></li>
 </ul></li>
 </ul></li>
 <li><a href="#タグ問題を解決する-2019-02-28">タグ問題を解決する［2019-02-28］</a>
@@ -484,6 +488,25 @@ body * {font-family: 'Roboto', 'Noto Sans CJK JP', 'Noto Sans JP', sans-serif !i
 
 <pre><code class="language-css">font-family: &quot;游ゴシック Medium&quot;, &quot;Yu Gothic Medium&quot;, &quot;游ゴシック体&quot;, &quot;YuGothic&quot;, &quot;ヒラギノ角ゴ ProN W3&quot;, &quot;Hiragino Kaku Gothic ProN&quot;, &quot;メイリオ&quot;, &quot;Meiryo&quot;, &quot;verdana&quot;, sans-serif;
 </code></pre>
+
+<h3 id="コード表示にサイズ制限を設ける-2019-03-14">コード表示にサイズ制限を設ける ［2019-03-14］</h3>
+
+<p>こちらのサイトでは、よくコードの紹介をしています。（このページもそうですね）<br />
+コードが長くなった場合に記事がえらく間延びしてしまうので、その対策をしたいと思います。<br />
+尚、gist などを使えば自動的にサイズ調整はしてくれますので、ここでは素でコード記述をする場合の内容です。</p>
+
+<h4 id="スタイルシートを修正する">スタイルシートを修正する</h4>
+
+<pre><code class="language-css">code {
+  max-width: 100vw;
+  max-height: 20vw;
+}
+</code></pre>
+
+<p>最大の幅、高さを設定しました。
+スクロールバーを出すには <code>overflow</code> を入れてあげるのが正しいようですが、それをするとスクロールする必要のないコードまでスクロールバーが表示されて、格好悪かったです。OS やブラウザによるみたいですけど。</p>
+
+<p>で、それを抜いてあげたら、Hugo か、このテーマ内でうまいこと処理をしてくれましたので、めでたしめでたし。</p>
 
 <h2 id="タグ問題を解決する-2019-02-28">タグ問題を解決する［2019-02-28］</h2>
 
