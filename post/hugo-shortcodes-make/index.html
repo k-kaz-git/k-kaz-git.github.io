@@ -4,8 +4,8 @@
   <meta charset="utf-8" />
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Hello4 &middot; k-kaz</title>
-  <meta name="description" content="次はスクリプトで更新だ" />
+  <title>自作の Hugo用 Shortcodese &middot; k-kaz</title>
+  <meta name="description" content="自作の Shortcodes をテストしたり、思い出すための場所" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -53,20 +53,20 @@ if (!doNotTrack) {
     <main class="content side-text-padding">
       <article class="post ">
         <header class="post-header">
-        	<h1 class="post-title">Hello4</h1>
+        	<h1 class="post-title">自作の Hugo用 Shortcodese</h1>
           <p class="post-date">
-            Posted <time datetime="2019-02-16">2019-02-16</time>
-             / Update 2019-02-27</p>
+            Posted <time datetime="2019-03-14">2019-03-14</time>
+             / Update 2019-03-14</p>
              <div class="card-subtext muted-text li-line">
                <a class="cat" href="/categories/homepage">homepage</a>
-               <a class="tag" href="/tags/hugo">#hugo</a> 
+               <a class="tag" href="/tags/hugo">#hugo</a>  <a class="tag" href="/tags/shortcodes">#shortcodes</a> 
              </div>
         </header>
         
         <picture class="post-figure">
-            <source srcset="https://k-kaz-git.github.io/images/lighthouse-sea_640.webp" type="image/webp">
-            <source srcset="https://k-kaz-git.github.io/images/lighthouse-sea_640.webp">
-          <img src="https://k-kaz-git.github.io/images/lighthouse-sea_640.webp" alt="灯台下暗し">
+            <source srcset="https://k-kaz-git.github.io/images/shortcodes-vegetables-make_640.webp" type="image/webp">
+            <source srcset="https://k-kaz-git.github.io/images/shortcodes-vegetables-make_640.webp">
+          <img src="https://k-kaz-git.github.io/images/shortcodes-vegetables-make_640.webp" alt="収穫したものをいただきましょう">
         </picture>
         
         <aside>
@@ -75,9 +75,17 @@ if (!doNotTrack) {
 <ul>
 <li>
 <ul>
-<li><a href="#スクリプトによる更新">スクリプトによる更新</a>
+<li><a href="#shortcodes-を作りましょう">Shortcodes を作りましょう</a></li>
+<li><a href="#メモを挿入する">メモを挿入する</a>
 <ul>
-<li><a href="#追記">追記</a></li>
+<li><a href="#完成形">完成形</a></li>
+<li><a href="#中身">中身</a>
+<ul>
+<li><a href="#記述例">記述例</a></li>
+<li><a href="#memo-html">memo.html</a></li>
+<li><a href="#hoge-scss">hoge.scss</a></li>
+</ul></li>
+<li><a href="#vscode-にスニペット登録">VSCode にスニペット登録</a></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -85,49 +93,119 @@ if (!doNotTrack) {
         </aside>
         
 
-<h2 id="スクリプトによる更新">スクリプトによる更新</h2>
+<h2 id="shortcodes-を作りましょう">Shortcodes を作りましょう</h2>
 
-<p>毎回手作業でいくつものコマンドを実行するのが大変なので、スクリプトを組んであります。（ネットでコピペしたんだけど）<br />
-もしかしたら、これが怪しいかも。</p>
+<p>少し前に勉強しましたので、実際に作ってみましょう。</p>
 
-<h3 id="追記">追記</h3>
+<p><a href="../hugo-shortcodes/">Hugo の Shortcodes を使ってみる。</a></p>
 
-<p>結局、スクリプトは関係ありませんでした（笑）</p>
+<h2 id="メモを挿入する">メモを挿入する</h2>
+
+<h3 id="完成形">完成形</h3>
+
+<div class="memo">
+    <span class="memo-title">メモ</span>
+    <p><p>メモ書きを記事内に挿入するためのショートコードです。<br />
+うまく出来ているでしょうか。</p>
+</p>
+</div>
+
+
+<p>基本形はいつもの <a href="https://saruwakakun.com/html-css/reference/css-sample">サルワカさん</a> から頂戴しています。</p>
+
+<h3 id="中身">中身</h3>
+
+<h4 id="記述例">記述例</h4>
+
+<script type="application/javascript" src="//gist.github.com/k-kaz-git/954ff77860dcbc29782ebd7ac44f4d16.js"></script>
+
+<div class="memo">
+    <span class="memo-title">これを直したい</span>
+    <p><p>通常のコード入力だと Shortcodes が展開されちゃうので、毎回 gist に頼っています。それをなんとかしたい今日このごろ。</p>
+</p>
+</div>
+
+
+<h4 id="memo-html">memo.html</h4>
+
+<pre><code class="language-html">&lt;div class=&quot;memo&quot;&gt;
+    &lt;span class=&quot;memo-title&quot;&gt;{{.Get 0}}&lt;/span&gt;
+    &lt;p&gt;{{.Inner}}&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+
+<h4 id="hoge-scss">hoge.scss</h4>
+
+<pre><code class="language-css">.memo {
+  position: relative;
+  margin: 2em 2em;
+  padding: 0.5em 1em;
+  border: solid 1px #a9a9a9;
+  background: #f5f5f5;
+  max-width: 70%;
+
+  .memo-title {
+    position: absolute;
+    display: inline-block;
+    top: -26px;
+    left: -1px;
+    padding: 0 9px;
+    height: 25px;
+    line-height: 25px;
+    vertical-align: middle;
+    font-size: 0.8em;
+    background: #a9a9a9;
+    color: #ffffff;
+    font-weight: bold;
+    border-radius: 5px 5px 0 0;
+  }
+
+  p {
+    margin: 0;
+    padding: 0;
+    font-size: 0.8em;
+  }
+}
+</code></pre>
+
+<h3 id="vscode-にスニペット登録">VSCode にスニペット登録</h3>
+
+<script type="application/javascript" src="//gist.github.com/k-kaz-git/fdf4888a89f20ee6238ea56de99e8524.js"></script>
 
       </article>
       <hr>
       <p class="post-date">
-        Posted <time datetime="2019-02-16">2019-02-16</time>
-         / Update 2019-02-27</p>
+        Posted <time datetime="2019-03-14">2019-03-14</time>
+         / Update 2019-03-14</p>
          <div class="card-subtext muted-text li-line">
            <a class="cat" href="/categories/homepage">homepage</a>
-           <a class="tag" href="/tags/hugo">#hugo</a> 
+           <a class="tag" href="/tags/hugo">#hugo</a>  <a class="tag" href="/tags/shortcodes">#shortcodes</a> 
          </div>
     </main>
     <nav class="end-nav side-padding">
       
       <a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
-  href="https://k-kaz-git.github.io/post/hello3/" class="card blog-card" rel="bookmark" >
+  href="https://k-kaz-git.github.io/post/hugo-custom-theme-cupper/" class="card blog-card" rel="bookmark" >
     
     <div class="card-img-container">
       <p class="card-img-overlay">Next Article</p>
       <picture>
-        <source srcset="https://k-kaz-git.github.io/images/tea-pot_640.webp" type="image/webp">
-        <source srcset="https://k-kaz-git.github.io/images/tea-pot_640.webp">
-        <img src="https://k-kaz-git.github.io/images/tea-pot_640.webp" class="card-img" alt="紅茶で休憩">
+        
+        <source srcset="https://k-kaz-git.github.io/images/cupper-org-logo.png">
+        <img src="https://k-kaz-git.github.io/images/cupper-org-logo.png" class="card-img" alt="cupper のオリジナルロゴ画像">
       </picture>
     </div>
     
   <article class="card-body">
-    <h2 class="card-title">タイトルに日本語を入れてみる</h2>
-    <p class="card-text">ちょっとずつ、いくつか検証するのです。</p>
+    <h2 class="card-title">テーマ Cupper のカスタマイズ</h2>
+    <p class="card-text">テーマ Cupper のカスタマイズをこちらにまとめます。</p>
     <div class="card-subtext muted-text">
-      <p>Posted <time datetime="2019-02-16">2019-02-16</time>
-      / Updated 2019-02-27</p>
+      <p>Posted <time datetime="2019-03-12">2019-03-12</time>
+      / Updated 2019-03-13</p>
     </div>
     <div class="card-subtext muted-text li-line">
       <span class="box-gray">homepage</span> 
-      <span class="box-gray">#hugo</span> 
+      <span class="box-gray">#hugo</span> <span class="box-gray">#theme</span> <span class="box-gray">#cupper</span> 
     </div>
   </article>
 </a>

@@ -6,11 +6,18 @@
     <description>Recent content in Hugo on k-kaz</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Tue, 12 Mar 2019 16:02:29 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 14 Mar 2019 12:42:21 +0900</lastBuildDate>
     
         <atom:link href="https://k-kaz-git.github.io/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>自作の Hugo用 Shortcodese</title>
+      <link>https://k-kaz-git.github.io/post/hugo-shortcodes-make/</link>
+      <pubDate>Thu, 14 Mar 2019 12:42:21 +0900</pubDate>
+      
+      <guid>https://k-kaz-git.github.io/post/hugo-shortcodes-make/</guid>
+      <description>自作の Shortcodes をテストしたり、思い出すための場所</description>
+    </item><item>
       <title>テーマ Cupper のカスタマイズ</title>
       <link>https://k-kaz-git.github.io/post/hugo-custom-theme-cupper/</link>
       <pubDate>Tue, 12 Mar 2019 16:02:29 +0900</pubDate>
@@ -73,13 +80,6 @@
       
       <guid>https://k-kaz-git.github.io/post/hugo-stable/</guid>
       <description>そろそろいい感じかな</description>
-    </item><item>
-      <title>Hello4</title>
-      <link>https://k-kaz-git.github.io/post/hello4/</link>
-      <pubDate>Sat, 16 Feb 2019 19:41:01 +0900</pubDate>
-      
-      <guid>https://k-kaz-git.github.io/post/hello4/</guid>
-      <description>次はスクリプトで更新だ</description>
     </item>
   </channel>
 </rss>
