@@ -6,21 +6,21 @@
     <description>Recent content in Tags on k-kaz</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Mon, 18 Feb 2019 21:30:02 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 14 Mar 2019 17:44:58 +0900</lastBuildDate>
     
         <atom:link href="https://k-kaz-git.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Aether</title>
       <link>https://k-kaz-git.github.io/tags/aether/</link>
-      <pubDate>Mon, 18 Feb 2019 21:30:02 +0900</pubDate>
+      <pubDate>Thu, 14 Mar 2019 17:44:58 +0900</pubDate>
       
       <guid>https://k-kaz-git.github.io/tags/aether/</guid>
       <description></description>
     </item><item>
       <title>Css</title>
       <link>https://k-kaz-git.github.io/tags/css/</link>
-      <pubDate>Mon, 04 Mar 2019 10:05:17 +0900</pubDate>
+      <pubDate>Thu, 14 Mar 2019 17:44:58 +0900</pubDate>
       
       <guid>https://k-kaz-git.github.io/tags/css/</guid>
       <description></description>
@@ -67,18 +67,18 @@
       <guid>https://k-kaz-git.github.io/tags/netlify/</guid>
       <description></description>
     </item><item>
+      <title>Saas</title>
+      <link>https://k-kaz-git.github.io/tags/saas/</link>
+      <pubDate>Thu, 14 Mar 2019 17:44:58 +0900</pubDate>
+      
+      <guid>https://k-kaz-git.github.io/tags/saas/</guid>
+      <description></description>
+    </item><item>
       <title>Sass</title>
       <link>https://k-kaz-git.github.io/tags/sass/</link>
       <pubDate>Mon, 04 Mar 2019 10:05:17 +0900</pubDate>
       
       <guid>https://k-kaz-git.github.io/tags/sass/</guid>
-      <description></description>
-    </item><item>
-      <title>Shortcodes</title>
-      <link>https://k-kaz-git.github.io/tags/shortcodes/</link>
-      <pubDate>Thu, 14 Mar 2019 12:42:21 +0900</pubDate>
-      
-      <guid>https://k-kaz-git.github.io/tags/shortcodes/</guid>
       <description></description>
     </item>
   </channel>

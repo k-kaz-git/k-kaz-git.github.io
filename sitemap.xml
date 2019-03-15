@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://k-kaz-git.github.io/post/code-highlight/</loc>
+    <lastmod>2019-03-15T15:57:17+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://k-kaz-git.github.io/post/hugo-shortcodes-make/</loc>
     <lastmod>2019-03-15T12:44:54+09:00</lastmod>
   </url>
@@ -94,7 +99,7 @@
   
   <url>
     <loc>https://k-kaz-git.github.io/tags/aether/</loc>
-    <lastmod>2019-03-14T16:23:05+09:00</lastmod>
+    <lastmod>2019-03-15T15:57:17+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -111,7 +116,7 @@
   
   <url>
     <loc>https://k-kaz-git.github.io/tags/css/</loc>
-    <lastmod>2019-03-04T12:50:33+09:00</lastmod>
+    <lastmod>2019-03-15T15:57:17+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -135,7 +140,7 @@
   
   <url>
     <loc>https://k-kaz-git.github.io/categories/homepage/</loc>
-    <lastmod>2019-03-15T12:44:54+09:00</lastmod>
+    <lastmod>2019-03-15T15:57:17+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -159,7 +164,13 @@
   
   <url>
     <loc>https://k-kaz-git.github.io/post/</loc>
-    <lastmod>2019-03-15T12:44:54+09:00</lastmod>
+    <lastmod>2019-03-15T15:57:17+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://k-kaz-git.github.io/tags/saas/</loc>
+    <lastmod>2019-03-15T15:57:17+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -189,7 +200,7 @@
   
   <url>
     <loc>https://k-kaz-git.github.io/tags/</loc>
-    <lastmod>2019-03-14T16:23:05+09:00</lastmod>
+    <lastmod>2019-03-15T15:57:17+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -207,7 +218,7 @@
   
   <url>
     <loc>https://k-kaz-git.github.io/</loc>
-    <lastmod>2019-03-15T12:44:54+09:00</lastmod>
+    <lastmod>2019-03-15T15:57:17+09:00</lastmod>
     <priority>0</priority>
   </url>
   

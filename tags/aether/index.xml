@@ -6,11 +6,18 @@
     <description>Recent content in Aether on k-kaz</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Mon, 18 Feb 2019 21:30:02 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 14 Mar 2019 17:44:58 +0900</lastBuildDate>
     
         <atom:link href="https://k-kaz-git.github.io/tags/aether/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>シンタックスハイライトを自分好みの色にする</title>
+      <link>https://k-kaz-git.github.io/post/code-highlight/</link>
+      <pubDate>Thu, 14 Mar 2019 17:44:58 +0900</pubDate>
+      
+      <guid>https://k-kaz-git.github.io/post/code-highlight/</guid>
+      <description>シンタックスハイライトの色をスタイルシートで変更してみます。</description>
+    </item><item>
       <title>テーマ aether のカスタマイズ</title>
       <link>https://k-kaz-git.github.io/post/hugo-custom-theme-aether/</link>
       <pubDate>Mon, 18 Feb 2019 21:30:02 +0900</pubDate>

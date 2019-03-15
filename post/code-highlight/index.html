@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>シンタックスハイライトを自分好みの色にする &middot; k-kaz</title>
+  <meta name="description" content="シンタックスハイライトの色をスタイルシートで変更してみます。" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://k-kaz-git.github.io/css/main.min.css" />
+  
+  <link rel="stylesheet" href="https://k-kaz-git.github.io/sass/main.min.d833e204e0e7d4b756c8c4f1881e334e88cee3834a9ad3fec350728743125259.css">
+
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-134722453-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+  
+</head>
+  <body class="single-body">
+    <nav class="nav-bar side-padding">
+  <h1 class="nav-header"><a href="https://k-kaz-git.github.io/" class="nav-text">k-kaz が Hugo で遊ぶサイト</a></h1>
+  <div class="hamburger-menu">
+    <button onclick="hamburgerMenuPressed.call(this)" aria-haspopup="true" aria-expanded="false" aria-controls="menu" aria-label="Menu">
+      <span></span>
+      <span></span>
+    </button>
+    <ul id="menu" class="hamburger-menu-overlay">
+      <li><a href="https://k-kaz-git.github.io/" class="hamburger-menu-overlay-link">Home</a></li>
+      <li class="navi-menu">- Categories -</li>
+      <li style="font-size: 0.7em;"><a href="https://k-kaz-git.github.io/categories/coding" class="hamburger-menu-overlay-link">Coding</a></li><li style="font-size: 0.7em;"><a href="https://k-kaz-git.github.io/categories/homepage" class="hamburger-menu-overlay-link">Homepage</a></li>
+      <li class="navi-menu">- Tags -</li>
+      <li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/aether" class="hamburger-menu-overlay-link">Aether</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/css" class="hamburger-menu-overlay-link">Css</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/cupper" class="hamburger-menu-overlay-link">Cupper</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/favicon" class="hamburger-menu-overlay-link">Favicon</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/github" class="hamburger-menu-overlay-link">Github</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/hugo" class="hamburger-menu-overlay-link">Hugo</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/markdown" class="hamburger-menu-overlay-link">Markdown</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/netlify" class="hamburger-menu-overlay-link">Netlify</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/saas" class="hamburger-menu-overlay-link">Saas</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/sass" class="hamburger-menu-overlay-link">Sass</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/shortcodes" class="hamburger-menu-overlay-link">Shortcodes</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/snippet" class="hamburger-menu-overlay-link">Snippet</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/stylesheet" class="hamburger-menu-overlay-link">Stylesheet</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/theme" class="hamburger-menu-overlay-link">Theme</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/vscode" class="hamburger-menu-overlay-link">Vscode</a></li>
+    </ul>
+  </div>
+</nav>
+    <main class="content side-text-padding">
+      <article class="post ">
+        <header class="post-header">
+        	<h1 class="post-title">シンタックスハイライトを自分好みの色にする</h1>
+          <p class="post-date">
+            Posted <time datetime="2019-03-14">2019-03-14</time>
+             / Update 2019-03-15</p>
+             <div class="card-subtext muted-text li-line">
+               <a class="cat" href="/categories/homepage">homepage</a>
+               <a class="tag" href="/tags/css">#css</a>  <a class="tag" href="/tags/saas">#saas</a>  <a class="tag" href="/tags/aether">#aether</a> 
+             </div>
+        </header>
+        
+        <picture class="post-figure">
+            <source srcset="https://k-kaz-git.github.io/images/colorful-balloons-640.webp" type="image/webp">
+            <source srcset="https://k-kaz-git.github.io/images/colorful-balloons-640.webp">
+          <img src="https://k-kaz-git.github.io/images/colorful-balloons-640.webp" alt="カラフルな風船">
+        </picture>
+        
+        <aside>
+          <h2>目次</h2>
+            <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#シンタックスハイライトの色を変更したい">シンタックスハイライトの色を変更したい</a>
+<ul>
+<li><a href="#シンタックスハイライトって何">シンタックスハイライトって何？</a></li>
+</ul></li>
+<li><a href="#結果からお見せすると-こんな感じです">結果からお見せすると、こんな感じです</a>
+<ul>
+<li><a href="#変更前">変更前</a></li>
+<li><a href="#変更後">変更後</a></li>
+</ul></li>
+<li><a href="#hugo-におけるシンタックスハイライト">Hugo におけるシンタックスハイライト</a></li>
+<li><a href="#私のやり方はイレギュラーかも">私のやり方はイレギュラーかも・・・</a>
+<ul>
+<li><a href="#ということで-k-kaz-のやり方">ということで k-kaz のやり方</a></li>
+<li><a href="#いまのスタイルはこんな感じ">いまのスタイルはこんな感じ</a></li>
+</ul></li>
+<li><a href="#せっかくなので-正しいやり方も紹介">せっかくなので、正しいやり方も紹介</a>
+<ul>
+<li><a href="#go-機能を使う場合">Go 機能を使う場合</a>
+<ul>
+<li><a href="#config-toml-で有効化">config.toml で有効化</a></li>
+<li><a href="#スタイルの選択">スタイルの選択</a></li>
+</ul></li>
+<li><a href="#highlight-js-を使う場合">highlight.js を使う場合</a>
+<ul>
+<li><a href="#スタイルの選択-1">スタイルの選択</a></li>
+<li><a href="#設定の仕方">設定の仕方</a></li>
+<li><a href="#aether-の場合">aether の場合</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+        </aside>
+        
+
+<h2 id="シンタックスハイライトの色を変更したい">シンタックスハイライトの色を変更したい</h2>
+
+<p>グレーの背景でやさしい表現も良いんですが、<strong>やっぱり背景は黒</strong> ですよね。<br />
+どうも、黒好き星人です。</p>
+
+<p>黒になったらどんな感じになるんだろうと、ワクワクしながらブラウザのデベロッパーツールで黒くしてみたら、<strong>文字が見にくい。</strong></p>
+
+<p>そりゃそうです。<br />
+やさしいグレーの背景に合わせた文字の色ですから。</p>
+
+<p>さぁ、文字色も含めてカスタマイズです。</p>
+
+<h3 id="シンタックスハイライトって何">シンタックスハイライトって何？</h3>
+
+<blockquote>
+    <p><p>シンタックスハイライト (英: syntax highlighting, 構文強調) とは、テキストエディタの機能であり、テキスト中の一部分をその分類ごとに異なる色やフォントで表示するものである。シンタックスカラーリング (syntax coloring) とも。
+この機能により、プログラミング言語やマークアップ言語といった構造化された言語において、その構造や構文上のエラーが視覚的に区別しやすくなるため、ソースコードの記述が容易となる。</p>
+</p><br>
+    <cite><a class="author" href="https://ja.wikipedia.org/wiki/%e3%82%b7%e3%83%b3%e3%82%bf%e3%83%83%e3%82%af%e3%82%b9%e3%83%8f%e3%82%a4%e3%83%a9%e3%82%a4%e3%83%88">wikipedia</a></cite>
+</blockquote>
+
+
+<h2 id="結果からお見せすると-こんな感じです">結果からお見せすると、こんな感じです</h2>
+
+<h3 id="変更前">変更前</h3>
+
+<p><img src="/images/css-code-highlight-before.webp" alt="コードのハイライト 修正前" style="width:auto;"></p>
+
+<h3 id="変更後">変更後</h3>
+
+<p><img src="/images/css-code-highlight-after.webp" alt="コードのハイライト 修正後" style="width:auto;"></p>
+
+<h2 id="hugo-におけるシンタックスハイライト">Hugo におけるシンタックスハイライト</h2>
+
+<p>Go の機能を使う方法と、highlight.js を使う方法の2種類が主流のようです。<br />
+私は aether で採用されていることもあり、後者で行うことにしました。</p>
+
+<h2 id="私のやり方はイレギュラーかも">私のやり方はイレギュラーかも・・・</h2>
+
+<p>私のやり方はちょっとイレギュラーな形かもしれません。<br />
+highlight.js のテーマを変更してみたものの、一部しか反映されなかったんです・・・。</p>
+
+<h3 id="ということで-k-kaz-のやり方">ということで k-kaz のやり方</h3>
+
+<p>aether の中を覗いていたら、シンタックスハイライト用と思われるスタイルシートを発見しました。</p>
+
+<p><code>themes/aether/static/css/xcode.css</code></p>
+
+<p>もしかしたら、この影響でうまく反映されなかったのかもしれません。</p>
+
+<p><strong>というか、絶対そうだ。</strong></p>
+
+<p><strong>よく見付けた、私！！</strong></p>
+
+<p>ここで指定されているスタイルを自分好みに変えていきます。<br />
+基本的には色だけ変えていけば良いのですが、スタイルの組み合わせもご自由に。</p>
+
+<p><code>xcode.css</code> みたいに、スタイルシート専用のファイルを用意しても良いし、既存のファイルに追記する形でも良いです。</p>
+
+<p>私は <code>assets/sass/hoge.scss</code> に追記しましたが、新規で用意する場合は <code>static/css/hoge.css</code> として <code>&lt;head&gt;～&lt;/head&gt;</code> で読み込むなり、CSS内で読み込むなりして反映させましょう。</p>
+
+<h3 id="いまのスタイルはこんな感じ">いまのスタイルはこんな感じ</h3>
+
+<div class="memo">
+    <span class="memo-title">メモ</span>
+    <p><p>2019-03-15 時点でのスタイルです。<br />
+気分でチョコチョコ変えていきますので、「今と違うじゃんか！」と怒らないでください。</p>
+</p>
+</div>
+
+
+<pre><code class="language-css">/* プログラム毎に class が変わるのでワイルドカードで */
+code[class*=&quot;language-&quot;] {
+  background: #000 !important;
+  color: #fffaf0;
+}
+
+/* ここから下がコード用のスタイル */
+.hljs-comment,
+.hljs-quote {
+  color: #90ee90;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-literal {
+  color: #ffff00;
+}
+
+.hljs-name {
+  color: #4682b4;
+}
+
+.hljs-variable,
+.hljs-template-variable {
+  color: #660;
+}
+
+.hljs-string {
+  color: #ff7f50;
+}
+
+.hljs-regexp,
+.hljs-link {
+  color: #080;
+}
+
+.hljs-title,
+.hljs-tag,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-meta {
+  color: #c0c0c0;
+}
+
+.hljs-number {
+  color: #7cfc00;
+}
+
+.hljs-section,
+.hljs-class .hljs-title,
+.hljs-type,
+.hljs-attr,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-params {
+  color: #87ceeb;
+}
+
+.hljs-attribute,
+.hljs-subst {
+  color: #87ceeb;
+}
+
+.hljs-formula {
+  background-color: #eee;
+  font-style: italic;
+}
+
+.hljs-addition {
+  background-color: #baeeba;
+}
+
+.hljs-deletion {
+  background-color: #ffc8bd;
+}
+
+.hljs-selector-id,
+.hljs-selector-class {
+  color: #ff8c00;
+}
+
+.hljs-doctag,
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+</code></pre>
+
+<hr />
+
+<h2 id="せっかくなので-正しいやり方も紹介">せっかくなので、正しいやり方も紹介</h2>
+
+<p>いつか、自分が使うことになるかもしれないしね。</p>
+
+<h3 id="go-機能を使う場合">Go 機能を使う場合</h3>
+
+<p>今は、Go に搭載されている機能で、シンタックスハイライトが可能になっています。</p>
+
+<h4 id="config-toml-で有効化">config.toml で有効化</h4>
+
+<pre><code class="language-toml">pygmentsCodefences = true
+pygmentsUseClasses = true
+</code></pre>
+
+<h4 id="スタイルの選択">スタイルの選択</h4>
+
+<p><code>hugo gen chromastyles --style=hoge &gt; syntax.css</code></p>
+
+<p><code>hoge</code> のところを好きなテーマにしてあげると、そのスタイルシートが <code>syntax.css</code> に出力され、これを <code>&lt;head&gt;～&lt;/head&gt;</code> の中で読み込んであげれば良いです。</p>
+
+<p>テーマは下記を参考にしてください。<br />
+<a href="URLhttps://help.farbox.com/pygments.html">Pygments style gallery!</a></p>
+
+<p>monokai って結構有名ですよね。<br />
+いろんなエディタのテーマで紹介されます。</p>
+
+<h3 id="highlight-js-を使う場合">highlight.js を使う場合</h3>
+
+<p>私が使っている aether ではこちらを採用しています。</p>
+
+<h4 id="スタイルの選択-1">スタイルの選択</h4>
+
+<p>こちらにもテーマが沢山あって、下記から選ぶことができます。<br />
+<a href="URLhttps://highlightjs.org/static/demo/">highlight.js demo</a></p>
+
+<h4 id="設定の仕方">設定の仕方</h4>
+
+<p>下記を <code>&lt;head&gt;～&lt;/head&gt;</code> に入れてあげましょう。</p>
+
+<pre><code class="language-html">&lt;link rel=&quot;stylesheet&quot; href=&quot;//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/default.min.css&quot;&gt;
+&lt;script src=&quot;//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;hljs.initHighlightingOnLoad();&lt;/script&gt;
+</code></pre>
+
+<p><code>9.15.6</code> は現在の最新バージョンです。ここは値が変わるので、使用する場合は公式サイトで確認をお願いします。<br />
+尚、一番上にあるファイル名 <code>default.min.css</code> を好きなテーマに変えてあげると、スタイルが反映されます。</p>
+
+<h4 id="aether-の場合">aether の場合</h4>
+
+<p><code>themes/aether/layouts/partials/scripts.html</code> で、上記を読み込んでいるので、そこを変えてあげれば良いはずなんですけど、1行目（テーマ）が見当たらず。もしかしたら、そこを省略して、自前のスタイルシートを使っていたのかなと思えてきました。</p>
+
+<p>ということで、最初に紹介した <strong>スタイルシートで調整</strong> という方法をとったんですが、aether の場合はそれが正解っぽいですね。</p>
+
+<p>他のテーマならこの手順で良いかと思います。</p>
+
+      </article>
+      <hr>
+      <p class="post-date">
+        Posted <time datetime="2019-03-14">2019-03-14</time>
+         / Update 2019-03-15</p>
+         <div class="card-subtext muted-text li-line">
+           <a class="cat" href="/categories/homepage">homepage</a>
+           <a class="tag" href="/tags/css">#css</a>  <a class="tag" href="/tags/saas">#saas</a>  <a class="tag" href="/tags/aether">#aether</a> 
+         </div>
+    </main>
+    <nav class="end-nav side-padding">
+      
+      <a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
+  href="https://k-kaz-git.github.io/post/hugo-shortcodes-make/" class="card blog-card" rel="bookmark" >
+    
+    <div class="card-img-container">
+      <p class="card-img-overlay">Next Article</p>
+      <picture>
+        <source srcset="https://k-kaz-git.github.io/images/shortcodes-vegetables-make_640.webp" type="image/webp">
+        <source srcset="https://k-kaz-git.github.io/images/shortcodes-vegetables-make_640.webp">
+        <img src="https://k-kaz-git.github.io/images/shortcodes-vegetables-make_640.webp" class="card-img" alt="収穫したものをいただきましょう">
+      </picture>
+    </div>
+    
+  <article class="card-body">
+    <h2 class="card-title">自作の Hugo用 Shortcodes</h2>
+    <p class="card-text">自作の Shortcodes をテストしたり、思い出すための場所</p>
+    <div class="card-subtext muted-text">
+      <p>Posted <time datetime="2019-03-14">2019-03-14</time>
+      / Updated 2019-03-15</p>
+    </div>
+    <div class="card-subtext muted-text li-line">
+      <span class="box-gray">homepage</span> 
+      <span class="box-gray">#hugo</span> <span class="box-gray">#shortcodes</span> 
+    </div>
+  </article>
+</a>
+      
+      <a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
+  href="https://k-kaz-git.github.io/" class="card home-card" style="background-image: url( https://k-kaz-git.github.io/images/home_640.webp )" rel="bookmark" >
+  Home
+</a>
+    </nav>
+    <footer>
+    <p style="text-align: center">姉妹サイト<br><a class="btn-link" href="https://k-kaz.net/" target="_blank">k-kaz ブログ</a></p>
+</footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script>
+<script src="https://k-kaz-git.github.io/js/core.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+  </body>
+</html>
