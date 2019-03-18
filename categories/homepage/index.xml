@@ -6,11 +6,18 @@
     <description>Recent content in Homepage on k-kaz</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Thu, 14 Mar 2019 17:44:58 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 18 Mar 2019 12:31:49 +0900</lastBuildDate>
     
         <atom:link href="https://k-kaz-git.github.io/categories/homepage/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Hugo のテーマを作ったよ。</title>
+      <link>https://k-kaz-git.github.io/post/hugo-k-kaz-theme/</link>
+      <pubDate>Mon, 18 Mar 2019 12:31:49 +0900</pubDate>
+      
+      <guid>https://k-kaz-git.github.io/post/hugo-k-kaz-theme/</guid>
+      <description>Hugo のテーマを自作してみました。</description>
+    </item><item>
       <title>シンタックスハイライトを自分好みの色にする</title>
       <link>https://k-kaz-git.github.io/post/code-highlight/</link>
       <pubDate>Thu, 14 Mar 2019 17:44:58 +0900</pubDate>
@@ -73,13 +80,6 @@
       
       <guid>https://k-kaz-git.github.io/post/hugo-custom-theme-aether/</guid>
       <description>テーマ aether のカスタマイズをこちらにまとめます。</description>
-    </item><item>
-      <title>コメント欄を削除</title>
-      <link>https://k-kaz-git.github.io/post/hugo-custom-comment/</link>
-      <pubDate>Mon, 18 Feb 2019 12:23:37 +0900</pubDate>
-      
-      <guid>https://k-kaz-git.github.io/post/hugo-custom-comment/</guid>
-      <description>使わないので、コメント欄を消しました。</description>
     </item>
   </channel>
 </rss>

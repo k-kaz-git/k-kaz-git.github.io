@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Hugo のテーマを作ったよ。 &middot; k-kaz</title>
+  <meta name="description" content="Hugo のテーマを自作してみました。" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://k-kaz-git.github.io/css/main.min.css" />
+  
+  <link rel="stylesheet" href="https://k-kaz-git.github.io/sass/main.min.d833e204e0e7d4b756c8c4f1881e334e88cee3834a9ad3fec350728743125259.css">
+
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-134722453-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+  
+</head>
+  <body class="single-body">
+    <nav class="nav-bar side-padding">
+  <h1 class="nav-header"><a href="https://k-kaz-git.github.io/" class="nav-text">k-kaz が Hugo で遊ぶサイト</a></h1>
+  <div class="hamburger-menu">
+    <button onclick="hamburgerMenuPressed.call(this)" aria-haspopup="true" aria-expanded="false" aria-controls="menu" aria-label="Menu">
+      <span></span>
+      <span></span>
+    </button>
+    <ul id="menu" class="hamburger-menu-overlay">
+      <li><a href="https://k-kaz-git.github.io/" class="hamburger-menu-overlay-link">Home</a></li>
+      <li class="navi-menu">- Categories -</li>
+      <li style="font-size: 0.7em;"><a href="https://k-kaz-git.github.io/categories/coding" class="hamburger-menu-overlay-link">Coding</a></li><li style="font-size: 0.7em;"><a href="https://k-kaz-git.github.io/categories/homepage" class="hamburger-menu-overlay-link">Homepage</a></li>
+      <li class="navi-menu">- Tags -</li>
+      <li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/aether" class="hamburger-menu-overlay-link">Aether</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/css" class="hamburger-menu-overlay-link">Css</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/cupper" class="hamburger-menu-overlay-link">Cupper</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/favicon" class="hamburger-menu-overlay-link">Favicon</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/github" class="hamburger-menu-overlay-link">Github</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/hugo" class="hamburger-menu-overlay-link">Hugo</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/markdown" class="hamburger-menu-overlay-link">Markdown</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/netlify" class="hamburger-menu-overlay-link">Netlify</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/saas" class="hamburger-menu-overlay-link">Saas</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/sass" class="hamburger-menu-overlay-link">Sass</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/shortcodes" class="hamburger-menu-overlay-link">Shortcodes</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/snippet" class="hamburger-menu-overlay-link">Snippet</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/stylesheet" class="hamburger-menu-overlay-link">Stylesheet</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/theme" class="hamburger-menu-overlay-link">Theme</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/vscode" class="hamburger-menu-overlay-link">Vscode</a></li>
+    </ul>
+  </div>
+</nav>
+    <main class="content side-text-padding">
+      <article class="post ">
+        <header class="post-header">
+        	<h1 class="post-title">Hugo のテーマを作ったよ。</h1>
+          <p class="post-date">
+            Posted <time datetime="2019-03-18">2019-03-18</time>
+             / Update 2019-03-18</p>
+             <div class="card-subtext muted-text li-line">
+               <a class="cat" href="/categories/homepage">homepage</a>
+               <a class="tag" href="/tags/hugo">#hugo</a>  <a class="tag" href="/tags/theme">#theme</a>  <a class="tag" href="/tags/aether">#aether</a>  <a class="tag" href="/tags/cupper">#cupper</a> 
+             </div>
+        </header>
+        
+        <picture class="post-figure">
+            <source srcset="https://k-kaz-git.github.io/images/horse-colorful_640.webp" type="image/webp">
+            <source srcset="https://k-kaz-git.github.io/images/horse-colorful_640.webp">
+          <img src="https://k-kaz-git.github.io/images/horse-colorful_640.webp" alt="カラフルな馬">
+        </picture>
+        
+        <aside>
+          <h2>目次</h2>
+            <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#hugo-のテーマを自作する">Hugo のテーマを自作する</a>
+<ul>
+<li><a href="#一から作って-こんな感じのところまで出来ました">一から作って、こんな感じのところまで出来ました</a>
+<ul>
+<li><a href="#トップ">トップ</a></li>
+<li><a href="#投稿記事">投稿記事</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#覚書を残す">覚書を残す</a>
+<ul>
+<li><a href="#ローカルサイトと空テーマの準備">ローカルサイトと空テーマの準備</a></li>
+<li><a href="#テーマ内で最低限必要なもの">テーマ内で最低限必要なもの</a></li>
+<li><a href="#簡単に構成を書く">簡単に構成を書く</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+        </aside>
+        
+
+<h2 id="hugo-のテーマを自作する">Hugo のテーマを自作する</h2>
+
+<p><a href="https://k-kaz.net/2019/03/16/あずさ2号と-hugo-の-theme/">本家のほうでも書きました</a> けど、Hugo のテーマを弄っていたら、次は自作かなと思って、手を付けてみました。</p>
+
+<p><strong>結果として、途中でやめました。</strong></p>
+
+<p>だって、今使っているこのテーマ aether に段々と似てきたんですもの。<br />
+スタイルシートをコピペしたりしてたから、当然だけど。</p>
+
+<p>まぁ、このテーマを気に入っているということですよ。</p>
+
+<h3 id="一から作って-こんな感じのところまで出来ました">一から作って、こんな感じのところまで出来ました</h3>
+
+<p>素人のわりには、それっぽくなっているでしょ。</p>
+
+<h4 id="トップ">トップ</h4>
+
+<p><img src="/images/k-kaz-theme-top.webp" alt="k-kazのテーマ トップページ" /></p>
+
+<h4 id="投稿記事">投稿記事</h4>
+
+<p><img src="/images/k-kaz-theme-single.webp" alt="k-kazのテーマ シングルページ" /></p>
+
+<h2 id="覚書を残す">覚書を残す</h2>
+
+<p>テーマ作りは途中でやめましたが、やり方をこちらに残しておきましょう。<br />
+またいつか暇な時に続きをしたくなるかもしれないし。</p>
+
+<h3 id="ローカルサイトと空テーマの準備">ローカルサイトと空テーマの準備</h3>
+
+<pre><code class="language-css">$ hugo new site hoge            /* サイト hoge 作成 */
+$ cd hoge
+$ hugo new theme hoge-theme     /* 空テーマ hoge-theme 作成 */
+</code></pre>
+
+<h3 id="テーマ内で最低限必要なもの">テーマ内で最低限必要なもの</h3>
+
+<p>最低限って書くと、ヘッダーもフッターも要らないけど・・・一応書いておく（笑）<br />
+<code>line-hight</code> の関係で、線がブツブツ切れていますが、許してください。</p>
+
+<pre><code class="language-html">hoge-theme  
+│  theme.toml  
+├──layouts  
+│   │  
+│   ├──partials  
+│   │      footer.html  &lt;!-- フッター（ページ最下層）のパーツ --&gt;
+│   │      head.html  &lt;!--ヘッダー（ページ最上層）のパーツ --&gt;
+│   │  
+│   └──_default  
+│           baseof.html  &lt;!-- ページの元で各種パーツを読み込む --&gt;
+│           list.html  &lt;!-- 記事一覧出力 --&gt;
+│           single.html  &lt;!-- 投稿記事出力 --&gt;
+</code></pre>
+
+<h3 id="簡単に構成を書く">簡単に構成を書く</h3>
+
+<p><code>baseof.html</code> が、すべての <code>html</code> の親玉で、その中身はこんな感じになっています。</p>
+
+<p>頭 <code>head.html</code><br />
+体 <code>list.html</code> or <code>single.html</code><br />
+足 <code>footer.html</code></p>
+
+<p>バラバラで作ってあるパーツを、必要なときに、必要な場所で読み込むことで、1枚のページを作り上げています。</p>
+
+<p><code>baseof.html</code> の例</p>
+
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  {{ block &quot;head&quot; . }}
+  {{ end }}
+  &lt;title&gt;{{ block &quot;title&quot; . }}
+    {{ .Site.Title }}
+    {{ end }}&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+  {{ block &quot;main&quot; . }}
+  {{ end }}
+  {{ block &quot;footer&quot; . }}
+  {{ end }}
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+
+<p>各パーツに機能を持たせて、それを呼び出しているため、非常にシンプルな構成となります。</p>
+
+<p>各パーツに書いておくコマンド → <code>{{ define &quot;hoge&quot; }}...{{ end }}</code></p>
+
+<p>呼び出し用コマンド → <code>{{ block &quot;hoge&quot; . }}{{ end }}</code></p>
+
+<p>呼び出されると、各パーツに書かれている <code>...</code> の部分がすべて展開される形。<br />
+大体、<code>{{ block &quot;main&quot; . }}{{ end }}</code> のところにコンテンツも含まれているので、ここで記事が出力されると思ってください。
+普通、<code>single.html</code> の中に <code>{{ .Content }}</code> と書いてあります。</p>
+
+<p>あとは好きなようにスタイルシートで装飾をしたり、メニューを作ったり。</p>
+
+<hr />
+
+<p>とりあえず、今回はここまで。</p>
+
+      </article>
+      <hr>
+      <p class="post-date">
+        Posted <time datetime="2019-03-18">2019-03-18</time>
+         / Update 2019-03-18</p>
+         <div class="card-subtext muted-text li-line">
+           <a class="cat" href="/categories/homepage">homepage</a>
+           <a class="tag" href="/tags/hugo">#hugo</a>  <a class="tag" href="/tags/theme">#theme</a>  <a class="tag" href="/tags/aether">#aether</a>  <a class="tag" href="/tags/cupper">#cupper</a> 
+         </div>
+    </main>
+    <nav class="end-nav side-padding">
+      
+      <a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
+  href="https://k-kaz-git.github.io/post/code-highlight/" class="card blog-card" rel="bookmark" >
+    
+    <div class="card-img-container">
+      <p class="card-img-overlay">Next Article</p>
+      <picture>
+        <source srcset="https://k-kaz-git.github.io/images/colorful-balloons-640.webp" type="image/webp">
+        <source srcset="https://k-kaz-git.github.io/images/colorful-balloons-640.webp">
+        <img src="https://k-kaz-git.github.io/images/colorful-balloons-640.webp" class="card-img" alt="カラフルな風船">
+      </picture>
+    </div>
+    
+  <article class="card-body">
+    <h2 class="card-title">シンタックスハイライトを自分好みの色にする</h2>
+    <p class="card-text">シンタックスハイライトの色をスタイルシートで変更してみます。</p>
+    <div class="card-subtext muted-text">
+      <p>Posted <time datetime="2019-03-14">2019-03-14</time>
+      / Updated 2019-03-16</p>
+    </div>
+    <div class="card-subtext muted-text li-line">
+      <span class="box-gray">homepage</span> 
+      <span class="box-gray">#css</span> <span class="box-gray">#saas</span> <span class="box-gray">#aether</span> 
+    </div>
+  </article>
+</a>
+      
+      <a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
+  href="https://k-kaz-git.github.io/" class="card home-card" style="background-image: url( https://k-kaz-git.github.io/images/home_640.webp )" rel="bookmark" >
+  Home
+</a>
+    </nav>
+    <footer>
+    <p style="text-align: center">姉妹サイト<br><a class="btn-link" href="https://k-kaz.net/" target="_blank">k-kaz ブログ</a></p>
+</footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script>
+<script src="https://k-kaz-git.github.io/js/core.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+  </body>
+</html>
