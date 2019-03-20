@@ -103,7 +103,7 @@ if (!doNotTrack) {
 <li><a href="#記事に概要を書く-下準備">記事に概要を書く（下準備）</a></li>
 <li><a href="#記事一覧に概要を追加">記事一覧に概要を追加</a></li>
 </ul></li>
-<li><a href="#トップページを記事一覧ページにする">トップページを記事一覧ページにする</a></li>
+<li><a href="#トップページを記事一覧ページにする-2019-03-19">トップページを記事一覧ページにする［2019-03-19］</a></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -311,7 +311,7 @@ Post: {{ .PublishDate.Format $dateFormat }}
 <pre><code class="language-html">{{ if (isset .Params &quot;description&quot;) }}{{ index .Params &quot;description&quot; }}{{ else }}{{ .Summary }}{{ end }}
 </code></pre>
 
-<h3 id="トップページを記事一覧ページにする">トップページを記事一覧ページにする</h3>
+<h3 id="トップページを記事一覧ページにする-2019-03-19">トップページを記事一覧ページにする［2019-03-19］</h3>
 
 <p>テーマ内にある <code>_index.html</code> を削除すると、次に見に行くのが <code>list.html</code> になるので、それで完了・・・のはずが、うまくいかず。<br />
 最終的には <strong>姑息な手段</strong> で、<code>layouts\_default\list.html</code> をコピーして <code>layouts\_index.html</code> としました。<br />
