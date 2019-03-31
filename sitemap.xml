@@ -3,8 +3,13 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://k-kaz-git.github.io/post/mozc-ut2-install/</loc>
+    <lastmod>2019-03-31T17:45:32+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://k-kaz-git.github.io/post/hugo-k-kaz-theme/</loc>
-    <lastmod>2019-03-18T17:45:52+09:00</lastmod>
+    <lastmod>2019-03-27T15:30:27+09:00</lastmod>
   </url>
   
   <url>
@@ -104,7 +109,7 @@
   
   <url>
     <loc>https://k-kaz-git.github.io/tags/aether/</loc>
-    <lastmod>2019-03-18T17:45:52+09:00</lastmod>
+    <lastmod>2019-03-27T15:30:27+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -127,7 +132,7 @@
   
   <url>
     <loc>https://k-kaz-git.github.io/tags/cupper/</loc>
-    <lastmod>2019-03-18T17:45:52+09:00</lastmod>
+    <lastmod>2019-03-27T15:30:27+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -145,19 +150,31 @@
   
   <url>
     <loc>https://k-kaz-git.github.io/categories/homepage/</loc>
-    <lastmod>2019-03-18T17:45:52+09:00</lastmod>
+    <lastmod>2019-03-27T15:30:27+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://k-kaz-git.github.io/tags/hugo/</loc>
-    <lastmod>2019-03-18T17:45:52+09:00</lastmod>
+    <lastmod>2019-03-27T15:30:27+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://k-kaz-git.github.io/categories/linux/</loc>
+    <lastmod>2019-03-31T17:45:32+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://k-kaz-git.github.io/tags/markdown/</loc>
     <lastmod>2019-03-06T14:17:39+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://k-kaz-git.github.io/tags/mozc/</loc>
+    <lastmod>2019-03-31T17:45:32+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -169,7 +186,7 @@
   
   <url>
     <loc>https://k-kaz-git.github.io/post/</loc>
-    <lastmod>2019-03-18T17:45:52+09:00</lastmod>
+    <lastmod>2019-03-31T17:45:32+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -205,13 +222,13 @@
   
   <url>
     <loc>https://k-kaz-git.github.io/tags/</loc>
-    <lastmod>2019-03-18T17:45:52+09:00</lastmod>
+    <lastmod>2019-03-27T15:30:27+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://k-kaz-git.github.io/tags/theme/</loc>
-    <lastmod>2019-03-18T17:45:52+09:00</lastmod>
+    <lastmod>2019-03-27T15:30:27+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -223,7 +240,7 @@
   
   <url>
     <loc>https://k-kaz-git.github.io/</loc>
-    <lastmod>2019-03-18T17:45:52+09:00</lastmod>
+    <lastmod>2019-03-31T17:45:32+09:00</lastmod>
     <priority>0</priority>
   </url>
   
