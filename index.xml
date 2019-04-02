@@ -6,11 +6,18 @@
     <description>Recent content on k-kaz</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Sun, 31 Mar 2019 17:45:32 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 02 Apr 2019 19:26:27 +0900</lastBuildDate>
     
         <atom:link href="https://k-kaz-git.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Hugo の目次について考える</title>
+      <link>https://k-kaz-git.github.io/post/hugo-custom-tableofcontents/</link>
+      <pubDate>Tue, 02 Apr 2019 19:26:27 +0900</pubDate>
+      
+      <guid>https://k-kaz-git.github.io/post/hugo-custom-tableofcontents/</guid>
+      <description>Hugo に目次を入れようと思ったのです。</description>
+    </item><item>
       <title>Mozc Ut2 を Install したよ。</title>
       <link>https://k-kaz-git.github.io/post/mozc-ut2-install/</link>
       <pubDate>Sun, 31 Mar 2019 17:45:32 +0900</pubDate>
@@ -73,13 +80,6 @@
       
       <guid>https://k-kaz-git.github.io/post/hugo-stylesheet-sass/</guid>
       <description>Hugo で Sass を利用するのに少し設定が必要ですので、こちらにまとめます。</description>
-    </item><item>
-      <title>GitHub を使ってみる</title>
-      <link>https://k-kaz-git.github.io/post/github-how-to-use/</link>
-      <pubDate>Fri, 22 Feb 2019 15:49:24 +0900</pubDate>
-      
-      <guid>https://k-kaz-git.github.io/post/github-how-to-use/</guid>
-      <description>GitHub を有効活用しようと思います。</description>
     </item>
   </channel>
 </rss>
