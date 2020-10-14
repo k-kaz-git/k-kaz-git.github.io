@@ -6,11 +6,18 @@
     <description>Recent content in Homepage on k-kaz</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Tue, 02 Apr 2019 19:26:27 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 14 Oct 2020 14:51:11 +0900</lastBuildDate>
     
         <atom:link href="https://k-kaz-git.github.io/categories/homepage/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Deploy でエラーが出たんですけど。</title>
+      <link>https://k-kaz-git.github.io/post/hugo-deploy-error/</link>
+      <pubDate>Wed, 14 Oct 2020 14:51:11 +0900</pubDate>
+      
+      <guid>https://k-kaz-git.github.io/post/hugo-deploy-error/</guid>
+      <description>1年半振りの Deploy で・・・。</description>
+    </item><item>
       <title>Hugo の目次について考える</title>
       <link>https://k-kaz-git.github.io/post/hugo-custom-tableofcontents/</link>
       <pubDate>Tue, 02 Apr 2019 19:26:27 +0900</pubDate>
@@ -73,13 +80,6 @@
       
       <guid>https://k-kaz-git.github.io/post/hugo-stylesheet-sass/</guid>
       <description>Hugo で Sass を利用するのに少し設定が必要ですので、こちらにまとめます。</description>
-    </item><item>
-      <title>Hugo の使い方</title>
-      <link>https://k-kaz-git.github.io/post/hugo-how-to-use/</link>
-      <pubDate>Wed, 20 Feb 2019 16:15:13 +0900</pubDate>
-      
-      <guid>https://k-kaz-git.github.io/post/hugo-how-to-use/</guid>
-      <description>Hugo の Tips 的なものをこちらにまとめます。</description>
     </item>
   </channel>
 </rss>

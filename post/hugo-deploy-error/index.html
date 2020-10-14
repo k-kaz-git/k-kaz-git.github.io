@@ -4,8 +4,8 @@
   <meta charset="utf-8" />
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Categories &middot; k-kaz</title>
-  <meta name="description" content="" />
+  <title>Deploy でエラーが出たんですけど。 &middot; k-kaz</title>
+  <meta name="description" content="1年半振りの Deploy で・・・。" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -17,7 +17,6 @@
   
   <link rel="stylesheet" href="https://k-kaz-git.github.io/sass/main.min.47ca362481462191544ac57b2ec98c2b4be0630230c3d2edd85073dad5b96a26.css">
 
-  <link rel="alternate" type="application/rss+xml" href="https://k-kaz-git.github.io/categories/index.xml" title="k-kaz" />
   
 <script type="application/javascript">
 var doNotTrack = false;
@@ -34,7 +33,7 @@ if (!doNotTrack) {
 
   
 </head>
-  <body class="list-body">
+  <body class="single-body">
     <nav class="nav-bar side-padding">
   <h1 class="nav-header"><a href="https://k-kaz-git.github.io/" class="nav-text">k-kaz が Hugo で遊ぶサイト</a></h1>
   <div class="hamburger-menu">
@@ -51,58 +50,109 @@ if (!doNotTrack) {
     </ul>
   </div>
 </nav>
-    <main class="card-container side-gutter">
-      <header class="list-header">
-        <p class="list-header-subtext"></p>
-        <h1 class="list-header-title">Categories</h1>
-      </header>
+    <main class="content side-text-padding">
+      <article class="post ">
+        <header class="post-header">
+        	<h1 class="post-title">Deploy でエラーが出たんですけど。</h1>
+          <p class="post-date">
+            Posted <time datetime="2020-10-14">2020-10-14</time>
+             / Update 2020-10-14</p>
+             <div class="card-subtext muted-text li-line">
+               <a class="cat" href="/categories/homepage">homepage</a>
+               <a class="tag" href="/tags/hugo">#hugo</a>  <a class="tag" href="/tags/github">#github</a>  <a class="tag" href="/tags/Netlify">#Netlify</a> 
+             </div>
+        </header>
+        
+        <picture class="post-figure">
+            <source srcset="https://k-kaz-git.github.io/images/hugo-deploy-error.webp" type="image/webp">
+            <source srcset="https://k-kaz-git.github.io/images/hugo-deploy-error.webp">
+          <img src="https://k-kaz-git.github.io/images/hugo-deploy-error.webp" alt="厳重な扉">
+        </picture>
+        
+        <aside>
+          <h2>目次</h2>
+            <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#1年半振りの-deploy-で">1年半振りの Deploy で・・・</a></li>
+</ul></li>
+</ul>
+</nav>
+        </aside>
+        
+
+<h2 id="1年半振りの-deploy-で">1年半振りの Deploy で・・・</h2>
+
+<p>Netlify に記事を上げようと思って、<code>./deploy.sh</code> （※スクリプトを組んである）とやってみたけど、うまくいかず。<br />
+うっかりやってしまう <code>draft: false</code> もちゃんとなっているし、なんだろうと思って、ひとつずつチェックしてみました。</p>
+
+<p>ひっかかったのが、ssh 認証のところ。</p>
+
+<p><code>ssh -T git@github.com</code> で、ssh が通るか試してみたら、<code>git@github.com: Permission denied (publickey).</code> って怒られました。</p>
+
+<pre><code>$ ssh -T git@github.com     /* ssh が通るか試すコマンド */
+$ git@github.com: Permission denied (publickey).
+</code></pre>
+
+<p>ネットで調べてみたところ、 <strong>「Github に公開鍵（publickey）を登録しましょう」</strong> と書いてあったので、1年半振りの Github ログイン。</p>
+
+<p><strong>お前、本当に k-kaz か？</strong><br />
+<strong>メール送ったから、そこに書かれた6桁のコードを入れてみろよ！</strong></p>
+
+<p>って、疑われ、言われた通りに6桁のコードを入れてログイン。</p>
+
+<p><a href="https://github.com/settings/ssh">ssh の項目</a> を覗くと公開鍵がありません。<br />
+PC に保存していた公開鍵の中身を登録して、再度 <code>ssh -T git@github.com</code> を実行すると、うまく繋がりました。</p>
+
+<p>1年半の間に仕様が変わったのか、削除されちゃったのかよく分かりませんが、再登録した形ですね。覚えていないけど、たぶん。</p>
+
+<p>で、Netlify にもログインする必要がありました。
+こちらは疑われることなくできましたが、ここまでやらないと記事の反映ができなかったです。</p>
+
+      </article>
+      <hr>
+      <p class="post-date">
+        Posted <time datetime="2020-10-14">2020-10-14</time>
+         / Update 2020-10-14</p>
+         <div class="card-subtext muted-text li-line">
+           <a class="cat" href="/categories/homepage">homepage</a>
+           <a class="tag" href="/tags/hugo">#hugo</a>  <a class="tag" href="/tags/github">#github</a>  <a class="tag" href="/tags/Netlify">#Netlify</a> 
+         </div>
+    </main>
+    <nav class="end-nav side-padding">
+      
       <a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
-  href="https://k-kaz-git.github.io/categories/coding/" class="card blog-card" rel="bookmark" >
+  href="https://k-kaz-git.github.io/post/hugo-custom-tableofcontents/" class="card blog-card" rel="bookmark" >
+    
+    <div class="card-img-container">
+      <p class="card-img-overlay">Next Article</p>
+      <picture>
+        <source srcset="https://k-kaz-git.github.io/images/hugo-tableofcontents-menu.webp" type="image/webp">
+        <source srcset="https://k-kaz-git.github.io/images/hugo-tableofcontents-menu.webp">
+        <img src="https://k-kaz-git.github.io/images/hugo-tableofcontents-menu.webp" class="card-img" alt="メニュー、目次のイメージ画像">
+      </picture>
+    </div>
     
   <article class="card-body">
-    <h2 class="card-title">Coding</h2>
-    <p class="card-text"></p>
+    <h2 class="card-title">Hugo の目次について考える</h2>
+    <p class="card-text">Hugo に目次を入れようと思ったのです。</p>
     <div class="card-subtext muted-text">
-      <p>Posted <time datetime="2019-02-22">2019-02-22</time>
-        / Updated 2019-03-06</p>
+      <p>Posted <time datetime="2019-04-02">2019-04-02</time>
+      / Updated 2019-04-03</p>
     </div>
     <div class="card-subtext muted-text li-line">
-        
-        
-    </div>
-  </article>
-</a><a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
-  href="https://k-kaz-git.github.io/categories/homepage/" class="card blog-card" rel="bookmark" >
-    
-  <article class="card-body">
-    <h2 class="card-title">Homepage</h2>
-    <p class="card-text"></p>
-    <div class="card-subtext muted-text">
-      <p>Posted <time datetime="2020-10-14">2020-10-14</time>
-        / Updated 2020-10-14</p>
-    </div>
-    <div class="card-subtext muted-text li-line">
-        
-        
-    </div>
-  </article>
-</a><a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
-  href="https://k-kaz-git.github.io/categories/linux/" class="card blog-card" rel="bookmark" >
-    
-  <article class="card-body">
-    <h2 class="card-title">Linux</h2>
-    <p class="card-text"></p>
-    <div class="card-subtext muted-text">
-      <p>Posted <time datetime="2019-03-31">2019-03-31</time>
-        / Updated 2019-03-31</p>
-    </div>
-    <div class="card-subtext muted-text li-line">
-        
-        
+      <span class="box-gray">homepage</span> 
+      <span class="box-gray">#hugo</span> <span class="box-gray">#tableofcontents</span> 
     </div>
   </article>
 </a>
-    </main>
+      
+      <a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
+  href="https://k-kaz-git.github.io/" class="card home-card" style="background-image: url( https://k-kaz-git.github.io/images/home_640.webp )" rel="bookmark" >
+  Home
+</a>
+    </nav>
     <footer>
     <p style="text-align: center">姉妹サイト<br><a class="btn-link" href="https://k-kaz.net/" target="_blank">k-kaz ブログ</a></p>
 </footer>
