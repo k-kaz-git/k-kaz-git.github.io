@@ -72,643 +72,421 @@ if (!doNotTrack) {
         <aside>
           <h2>目次</h2>
             <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#aether-のカスタマイズをこちらにまとめます">aether のカスタマイズをこちらにまとめます。</a>
-<ul>
-<li><a href="#追記-注意事項-2019-02-20-12-50">追記：注意事項 ［2019/02/20 12:50］</a></li>
-<li><a href="#追記-今更ですが-2019-02-20-12-45">追記：今更ですが・・・［2019/02/20 12:45］</a></li>
-</ul></li>
-<li><a href="#標準機能内">標準機能内</a>
-<ul>
-<li><a href="#ホームボタンの設定">ホームボタンの設定</a></li>
-<li><a href="#イメージデータの入れ方">イメージデータの入れ方</a></li>
-<li><a href="#google-analytics">Google Analytics</a></li>
-</ul></li>
-<li><a href="#標準機能外">標準機能外</a>
-<ul>
-<li><a href="#コメント用の外部サービスを外す">コメント用の外部サービスを外す</a></li>
-<li><a href="#テンプレートに外部リンクを仕込む">テンプレートに外部リンクを仕込む</a></li>
-<li><a href="#スタイルシートを適用する">スタイルシートを適用する</a>
-<ul>
-<li><a href="#カスタマイズファイルを用意">カスタマイズファイルを用意</a></li>
-<li><a href="#スタイルシートの読み込み">スタイルシートの読み込み</a></li>
-</ul></li>
-<li><a href="#目次を追加する">目次を追加する</a></li>
-<li><a href="#更新日を追加する">更新日を追加する</a>
-<ul>
-<li><a href="#更新日を追加する-個別記事">更新日を追加する（個別記事）</a></li>
-<li><a href="#更新日を追加する-トップページ-2019-02-25">更新日を追加する（トップページ）［2019-02-25］</a></li>
-</ul></li>
-<li><a href="#更新日がうまく取得できずに悩む-解決したっぽい-2019-02-25">更新日がうまく取得できずに悩む → 解決したっぽい［2019-02-25］</a>
-<ul>
-<li><a href="#更新日がうまく入らない">更新日がうまく入らない</a></li>
-<li><a href="#更新日がうまく入らない-解決したっぽい">更新日がうまく入らない（解決したっぽい）</a></li>
-<li><a href="#更新日の件-2019-02-28">更新日の件［2019-02-28］</a></li>
-<li><a href="#更新日の件-2019-03-04">更新日の件［2019-03-04］</a></li>
-</ul></li>
-<li><a href="#フォントを指定する-2019-02-25">フォントを指定する［2019-02-25］</a>
-<ul>
-<li><a href="#webフォントを使う">Webフォントを使う</a></li>
-<li><a href="#ローカルフォントを指定する">ローカルフォントを指定する</a></li>
-</ul></li>
-<li><a href="#コード表示にサイズ制限を設ける-2019-03-14">コード表示にサイズ制限を設ける ［2019-03-14］</a>
-<ul>
-<li><a href="#スタイルシートを修正する">スタイルシートを修正する</a></li>
-</ul></li>
-</ul></li>
-<li><a href="#タグ問題を解決する-2019-02-28">タグ問題を解決する［2019-02-28］</a>
-<ul>
-<li><a href="#タグを使えるようにする">タグを使えるようにする</a>
-<ul>
-<li><a href="#設定ファイルの修正">設定ファイルの修正</a></li>
-<li><a href="#記事テンプレートの修正">記事テンプレートの修正</a></li>
-</ul></li>
-<li><a href="#タグを表示する">タグを表示する</a>
-<ul>
-<li><a href="#トップページ">トップページ</a></li>
-<li><a href="#個別記事">個別記事</a></li>
-<li><a href="#次の記事">次の記事</a></li>
-<li><a href="#メニューボタン">メニューボタン</a></li>
-</ul></li>
-<li><a href="#カテゴリーとタグの表示調整">カテゴリーとタグの表示調整</a>
-<ul>
-<li><a href="#その後">その後</a></li>
-</ul></li>
-</ul></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#aether-のカスタマイズをこちらにまとめます">aether のカスタマイズをこちらにまとめます。</a>
+      <ul>
+        <li><a href="#追記注意事項-20190220-1250">追記：注意事項 ［2019/02/20 12:50］</a></li>
+        <li><a href="#追記今更ですが20190220-1245">追記：今更ですが・・・［2019/02/20 12:45］</a></li>
+      </ul>
+    </li>
+    <li><a href="#標準機能内">標準機能内</a>
+      <ul>
+        <li><a href="#ホームボタンの設定">ホームボタンの設定</a></li>
+        <li><a href="#イメージデータの入れ方">イメージデータの入れ方</a></li>
+        <li><a href="#google-analytics">Google Analytics</a></li>
+      </ul>
+    </li>
+    <li><a href="#標準機能外">標準機能外</a>
+      <ul>
+        <li><a href="#コメント用の外部サービスを外す">コメント用の外部サービスを外す</a></li>
+        <li><a href="#テンプレートに外部リンクを仕込む">テンプレートに外部リンクを仕込む</a></li>
+        <li><a href="#スタイルシートを適用する">スタイルシートを適用する</a></li>
+        <li><a href="#目次を追加する">目次を追加する</a></li>
+        <li><a href="#更新日を追加する">更新日を追加する</a></li>
+        <li><a href="#更新日がうまく取得できずに悩む--解決したっぽい2019-02-25">更新日がうまく取得できずに悩む → 解決したっぽい［2019-02-25］</a></li>
+        <li><a href="#フォントを指定する2019-02-25">フォントを指定する［2019-02-25］</a></li>
+        <li><a href="#コード表示にサイズ制限を設ける-2019-03-14">コード表示にサイズ制限を設ける ［2019-03-14］</a></li>
+      </ul>
+    </li>
+    <li><a href="#タグ問題を解決する2019-02-28">タグ問題を解決する［2019-02-28］</a>
+      <ul>
+        <li><a href="#タグを使えるようにする">タグを使えるようにする</a></li>
+        <li><a href="#タグを表示する">タグを表示する</a></li>
+        <li><a href="#カテゴリーとタグの表示調整">カテゴリーとタグの表示調整</a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
         </aside>
-        
-
-<h2 id="aether-のカスタマイズをこちらにまとめます">aether のカスタマイズをこちらにまとめます。</h2>
-
-<hr />
-
+        <h2 id="aether-のカスタマイズをこちらにまとめます">aether のカスタマイズをこちらにまとめます。</h2>
+<hr>
 <p><del>念の為、テーマを丸ごとコピーして、そちらを弄ることにします。</del>
 <del>その際、以下の修正が必要です。</del></p>
-
-<p><del><code>/サイト名/themes/新しいテーマ名/theme.toml</code></del><br />
+<p><del><code>/サイト名/themes/新しいテーマ名/theme.toml</code></del><br>
 <del><code>name = &quot;新しいテーマ名&quot;</code></del></p>
-
-<p><del><code>/サイト名/config.toml</code></del><br />
+<p><del><code>/サイト名/config.toml</code></del><br>
 <del><code>theme = &quot;新しいテーマ名&quot;</code></del></p>
-
-<h3 id="追記-注意事項-2019-02-20-12-50">追記：注意事項 ［2019/02/20 12:50］</h3>
-
-<p>素人が遊びながら行っているカスタマイズです。<br />
-違っている部分など <strong>多々</strong> あるかもしれません。<br />
+<h3 id="追記注意事項-20190220-1250">追記：注意事項 ［2019/02/20 12:50］</h3>
+<p>素人が遊びながら行っているカスタマイズです。<br>
+違っている部分など <strong>多々</strong> あるかもしれません。<br>
 そのあたりは、十分にお気を付けください。</p>
-
-<h3 id="追記-今更ですが-2019-02-20-12-45">追記：今更ですが・・・［2019/02/20 12:45］</h3>
-
-<p>わざわざテーマ内を弄らずに、root に用意されているフォルダ（static とか layout とか）にファイルを置いて弄れば良いような気がしてきた。<br />
-それが可能なら、テーマの丸ごとコピーも要らないしね。<br />
+<h3 id="追記今更ですが20190220-1245">追記：今更ですが・・・［2019/02/20 12:45］</h3>
+<p>わざわざテーマ内を弄らずに、root に用意されているフォルダ（static とか layout とか）にファイルを置いて弄れば良いような気がしてきた。<br>
+それが可能なら、テーマの丸ごとコピーも要らないしね。<br>
 なんか、すごく無駄なことをしていたかもしれない。</p>
-
 <p>ということで、このページも修正しました。</p>
-
 <h2 id="標準機能内">標準機能内</h2>
-
 <h3 id="ホームボタンの設定">ホームボタンの設定</h3>
-
-<p><img src="/images/aether-custom-home-btn_400.webp" alt="ホームボタンの設置" style="max-width:400px;"></p>
-
-<p>個別記事を開いた時に、一番下に真っ白なスペースがあります。<br />
+<img src="/images/aether-custom-home-btn_400.webp" alt="ホームボタンの設置" style="max-width:400px;">
+<p>個別記事を開いた時に、一番下に真っ白なスペースがあります。<br>
 ここは、ホーム（トップページ）に戻るためのボタンになっており、Home という白文字が入っています。<strong>実際は白同士で見えないんですけど。</strong></p>
-
 <p><code>homeimg</code> に少し暗めの画像を指定すると、文字がハッキリして見やすいと思います。</p>
-
-<p><code>/サイト名/config.toml</code>
-<script src="https://gist.github.com/k-kaz-git/2df71ae7a4d133f118cf424e6d48476b.js"></script></p>
-
-<h3 id="イメージデータの入れ方">イメージデータの入れ方</h3>
-
-<p>テーマの <code>readme</code> にも書いてありますが、普通のコマンドで挿入すると、エリア内いっぱいに広がります。</p>
-
-<p>普通の入れ方</p>
-
-<pre><code class="language-md">![イメージタイトル](/images/hoge.webp)
-</code></pre>
-
-<script src="https://gist.github.com/k-kaz-git/d27e935f5404952ae5419250516ebe1e.js"></script>
-
-<h3 id="google-analytics">Google Analytics</h3>
-
-<p>テーマが元々対応してくれているので、設定ファイルにトラッキングコードを記入するだけで、各ページに展開してくれます。</p>
-
 <p><code>/サイト名/config.toml</code></p>
-
-<pre><code class="language-toml">googleAnalytics = &quot;トラッキングコード&quot;
-</code></pre>
-
-<p><code>&lt;head&gt;&lt;/head&gt;</code> の間に長いタグを入れる必要もありません。楽ちんだ。</p>
-
+<script src="https://gist.github.com/k-kaz-git/2df71ae7a4d133f118cf424e6d48476b.js"></script>
+<h3 id="イメージデータの入れ方">イメージデータの入れ方</h3>
+<p>テーマの <code>readme</code> にも書いてありますが、普通のコマンドで挿入すると、エリア内いっぱいに広がります。</p>
+<p>普通の入れ方</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">![<span style="color:#f92672">イメージタイトル</span>](<span style="color:#a6e22e">/images/hoge.webp</span>)
+</code></pre></div><script src="https://gist.github.com/k-kaz-git/d27e935f5404952ae5419250516ebe1e.js"></script>
+<h3 id="google-analytics">Google Analytics</h3>
+<p>テーマが元々対応してくれているので、設定ファイルにトラッキングコードを記入するだけで、各ページに展開してくれます。</p>
+<p><code>/サイト名/config.toml</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="color:#a6e22e">googleAnalytics</span> = <span style="color:#e6db74">&#34;トラッキングコード&#34;</span>
+</code></pre></div><p><code>&lt;head&gt;&lt;/head&gt;</code> の間に長いタグを入れる必要もありません。楽ちんだ。</p>
 <h2 id="標準機能外">標準機能外</h2>
-
 <h3 id="コメント用の外部サービスを外す">コメント用の外部サービスを外す</h3>
-
-<p>テーマには、個別記事に disqus のサービスが組み込まれていますが、これも使いませんので外します。<br />
+<p>テーマには、個別記事に disqus のサービスが組み込まれていますが、これも使いませんので外します。<br>
 下記フォルダが無い場合は作成し、該当ファイルをテーマから持ってきましょう。</p>
-
-<p><code>/サイト名/layouts/_default/single.html</code>
-<script src="https://gist.github.com/k-kaz-git/6fbc59bd45e57c5086e3d4e7a87ac63b.js"></script></p>
-
+<p><code>/サイト名/layouts/_default/single.html</code></p>
+<script src="https://gist.github.com/k-kaz-git/6fbc59bd45e57c5086e3d4e7a87ac63b.js"></script>
 <h3 id="テンプレートに外部リンクを仕込む">テンプレートに外部リンクを仕込む</h3>
-
-<p><img src="/images/aether-custom-link-btn_175.webp" alt="外部リンクボタンの設置" style="width:175px;"></p>
-
-<p>表示させる場所によって、編集するファイルは変わりますが、今回は最下部（フッター）に入れることにしました。普通に HTML を修正します。<br />
+<img src="/images/aether-custom-link-btn_175.webp" alt="外部リンクボタンの設置" style="width:175px;">
+<p>表示させる場所によって、編集するファイルは変わりますが、今回は最下部（フッター）に入れることにしました。普通に HTML を修正します。<br>
 footer.html は、<code>&lt;footer&gt;&lt;/footer&gt;</code> と、空っぽなので、その間にタグを入れます。</p>
-
-<p><code>/サイト名/layouts/partials/footer.html</code>
-<script src="https://gist.github.com/k-kaz-git/2dd802712a513a5017593a9d77536aa3.js"></script></p>
-
+<p><code>/サイト名/layouts/partials/footer.html</code></p>
+<script src="https://gist.github.com/k-kaz-git/2dd802712a513a5017593a9d77536aa3.js"></script>
 <h3 id="スタイルシートを適用する">スタイルシートを適用する</h3>
-
-<p>テーマ内のスタイルシートではなく、別途カスタマイズ用のファイルを用意します。<br />
+<p>テーマ内のスタイルシートではなく、別途カスタマイズ用のファイルを用意します。<br>
 また、そのファイルを読み込むよう、HTML の修正をします。</p>
-
 <h4 id="カスタマイズファイルを用意">カスタマイズファイルを用意</h4>
-
-<p><code>/サイト名/static/css/hoge.css</code><br />
+<p><code>/サイト名/static/css/hoge.css</code><br>
 css というフォルダも自分で作成し、その中にスタイルシート用のファイルを作ります。</p>
-
 <h4 id="スタイルシートの読み込み">スタイルシートの読み込み</h4>
-
-<p><code>/サイト名/layouts/partials/head.html</code><br />
-スタイルシートの読み込み行が続いているので、一番下に <code>/css/hoge.css</code> を追加します。<br />
-<script src="https://gist.github.com/k-kaz-git/be3470f0ad5ab3538adcc7df1bb6182e.js"></script></p>
-
+<p><code>/サイト名/layouts/partials/head.html</code><br>
+スタイルシートの読み込み行が続いているので、一番下に <code>/css/hoge.css</code> を追加します。</p>
+<script src="https://gist.github.com/k-kaz-git/be3470f0ad5ab3538adcc7df1bb6182e.js"></script>
 <h3 id="目次を追加する">目次を追加する</h3>
-
-<p>手動で目次を作ることもできますが、後から構成が変更になると、追加修正が大変なことになりますので、自動的に目次を生成するようにします。<br />
+<p>手動で目次を作ることもできますが、後から構成が変更になると、追加修正が大変なことになりますので、自動的に目次を生成するようにします。<br>
 これは、Hugo に元々組み込まれている関数 <code>{{.TableOfContents}}</code> を使用することで実現可能です。</p>
-
 <p>公式ドキュメントでは、<strong>本文が 400文字以上の記事のみ目次を付ける</strong> というものが紹介されていました。</p>
-
 <script src="https://gist.github.com/k-kaz-git/078e749b2dcf0bf59192c871049ccc98.js"></script>
-
 <p>しかし、<strong>私の英語力と、Hugo知識ではまだ乗り越えられない壁</strong> のようです。</p>
-
 <p>結局、一番簡単な、下記方法で妥協しております。</p>
-
 <p><code>/サイト名/layouts/_default/single.html</code></p>
-
 <script src="https://gist.github.com/k-kaz-git/cd2030eb11278acb7172621f18a3e7f8.js"></script>
-
-<p>こうすることで、＜目次＞という文字列の下に、自動で目次を生成してくれます。<br />
+<p>こうすることで、＜目次＞という文字列の下に、自動で目次を生成してくれます。<br>
 条件としては、<code>H2</code> 以下の <code>Hタグ</code> が目次としての構成要素になるようです。</p>
-
 <p>但し、このやり方だと、400文字以上とか無視して、<strong>どのページにも出現します</strong> ので注意。</p>
-
 <h3 id="更新日を追加する">更新日を追加する</h3>
-
-<p>こちらのサイトは、日記的な <a href="https://k-kaz.net" title="姉妹サイト（本家）">姉妹サイト（本家）</a> とは違って、同じ記事を後から何度も加筆修正します。<br />
+<p>こちらのサイトは、日記的な <a href="https://k-kaz.net" title="姉妹サイト（本家）">姉妹サイト（本家）</a> とは違って、同じ記事を後から何度も加筆修正します。<br>
 そうなると、投稿日だけではなく、最終更新日もあると嬉しい。</p>
-
 <p>さぁ、やってみましょう。</p>
-
-<h4 id="更新日を追加する-個別記事">更新日を追加する（個別記事）</h4>
-
-<p><img src="/images/aether-custom-update_284.webp" style="width:284px;" alt="更新日を追加する"></p>
-
-<p>Hugo に用意されている関数 <code>.Lastmod</code> を利用します。<br />
+<h4 id="更新日を追加する個別記事">更新日を追加する（個別記事）</h4>
+<img src="/images/aether-custom-update_284.webp" style="width:284px;" alt="更新日を追加する">  
+<p>Hugo に用意されている関数 <code>.Lastmod</code> を利用します。<br>
 下準備として、<code>config.toml</code> に関数を有効にするための記述を追加します。</p>
-
-<p><code>/サイト名/config.toml</code><br />
+<p><code>/サイト名/config.toml</code><br>
 <code>enableGitInfo = true</code> ← これで有効化されます。</p>
-
 <p>続いて、更新日を出力したい場所に <code>.Lastmod</code> を入れます。</p>
-
 <p><code>/サイト名/layouts/_default/single.html</code></p>
-
-<p><code>&lt;header&gt;</code> だけ抜き出しました。<br />
+<p><code>&lt;header&gt;</code> だけ抜き出しました。<br>
 上が元のコードで、下が修正したコードです。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">[single.html 修正前]
 
-<pre><code class="language-html">[single.html 修正前]
+&lt;<span style="color:#f92672">header</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;post-header&#34;</span>&gt;
+   	&lt;<span style="color:#f92672">h1</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;post-title&#34;</span>&gt;{{ .Title }}&lt;/<span style="color:#f92672">h1</span>&gt;
+    &lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;post-date&#34;</span>&gt;Posted &lt;<span style="color:#f92672">time</span> <span style="color:#a6e22e">datetime</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Date.Format &#34;</span><span style="color:#a6e22e">2006-01-02</span><span style="color:#960050;background-color:#1e0010">&#34;</span> <span style="color:#960050;background-color:#1e0010">}}&#34;</span>&gt;{{ .Date.Format &#34;Jan 2, 2006&#34; }}&lt;/<span style="color:#f92672">time</span>&gt;&lt;/<span style="color:#f92672">p</span>&gt;
+&lt;/<span style="color:#f92672">header</span>&gt;
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">[single.html 修正後]
 
-&lt;header class=&quot;post-header&quot;&gt;
-    &lt;h1 class=&quot;post-title&quot;&gt;{{ .Title }}&lt;/h1&gt;
-    &lt;p class=&quot;post-date&quot;&gt;Posted &lt;time datetime=&quot;{{ .Date.Format &quot;2006-01-02&quot; }}&quot;&gt;{{ .Date.Format &quot;Jan 2, 2006&quot; }}&lt;/time&gt;&lt;/p&gt;
-&lt;/header&gt;
-</code></pre>
-
-<pre><code class="language-html">[single.html 修正後]
-
-&lt;header class=&quot;post-header&quot;&gt;
-    &lt;h1 class=&quot;post-title&quot;&gt;{{ .Title }}&lt;/h1&gt;
-    &lt;p class=&quot;post-date&quot;&gt;
-        Posted &lt;time datetime=&quot;{{ .Date.Format &quot;2006-01-02&quot; }}&quot;&gt;{{ .Date.Format &quot;2006-01-02&quot; }}&lt;/time&gt;
-         / Update {{ .Lastmod.Format &quot;2006-01-02&quot; }}&lt;/p&gt;
-&lt;/header&gt;
-</code></pre>
-
-<p><code>.Lastmod</code> だけだと、時間まで表示されて大げさなので、<code>.Format &quot;2006-01-02&quot;</code> で書式を設定しました。
+&lt;<span style="color:#f92672">header</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;post-header&#34;</span>&gt;
+   	&lt;<span style="color:#f92672">h1</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;post-title&#34;</span>&gt;{{ .Title }}&lt;/<span style="color:#f92672">h1</span>&gt;
+    &lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;post-date&#34;</span>&gt;
+        Posted &lt;<span style="color:#f92672">time</span> <span style="color:#a6e22e">datetime</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Date.Format &#34;</span><span style="color:#a6e22e">2006-01-02</span><span style="color:#960050;background-color:#1e0010">&#34;</span> <span style="color:#960050;background-color:#1e0010">}}&#34;</span>&gt;{{ .Date.Format &#34;2006-01-02&#34; }}&lt;/<span style="color:#f92672">time</span>&gt;
+         / Update {{ .Lastmod.Format &#34;2006-01-02&#34; }}&lt;/<span style="color:#f92672">p</span>&gt;
+&lt;/<span style="color:#f92672">header</span>&gt;
+</code></pre></div><p><code>.Lastmod</code> だけだと、時間まで表示されて大げさなので、<code>.Format &quot;2006-01-02&quot;</code> で書式を設定しました。
 ついでに初回投稿のほうも、同じ書式に変更しています。</p>
-
-<h4 id="更新日を追加する-トップページ-2019-02-25">更新日を追加する（トップページ）［2019-02-25］</h4>
-
-<p><img src="/images/aether-custom-card-update_640.webp" alt="トップにも更新日を入れる" style="max-width:640px;"></p>
-
+<h4 id="更新日を追加するトップページ2019-02-25">更新日を追加する（トップページ）［2019-02-25］</h4>
+<img src="/images/aether-custom-card-update_640.webp" alt="トップにも更新日を入れる" style="max-width:640px;">
 <p>やり方は個別記事と同じで、編集するファイルが変わるだけです。</p>
-
-<p><code>/サイト名/layouts/_default/li.html</code><br />
+<p><code>/サイト名/layouts/_default/li.html</code><br>
 ※theme の中にあるのでコピーして持ってきます。</p>
-
-<p>ついでに、ポストされた日のフォーマットも合わせておきます。<br />
+<p>ついでに、ポストされた日のフォーマットも合わせておきます。<br>
 <code>&lt;div&gt;</code> のすぐ下にある <code>&lt;p&gt;&lt;/p&gt;</code> の中を修正しています。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">[li.html 修正前]
 
-<pre><code class="language-html">[li.html 修正前]
+&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;card-subtext muted-text&#34;</span>&gt;
+  &lt;<span style="color:#f92672">p</span>&gt;Posted &lt;<span style="color:#f92672">time</span> <span style="color:#a6e22e">datetime</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Date.Format &#34;</span><span style="color:#a6e22e">2006-01-02</span><span style="color:#960050;background-color:#1e0010">&#34;</span> <span style="color:#960050;background-color:#1e0010">}}&#34;</span>&gt;{{ .Date.Format &#34;Jan 2, 2006&#34; }}&lt;/<span style="color:#f92672">time</span>&gt;&lt;/<span style="color:#f92672">p</span>&gt;
+  {{ if (isset .Params &#34;categories&#34;) }}&lt;<span style="color:#f92672">p</span>&gt;{{ range .Params.categories }}#{{ . }} {{ end }}&lt;/<span style="color:#f92672">p</span>&gt;{{ end }}
+&lt;/<span style="color:#f92672">div</span>&gt;
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">[li.html 修正後]
 
-&lt;div class=&quot;card-subtext muted-text&quot;&gt;
-  &lt;p&gt;Posted &lt;time datetime=&quot;{{ .Date.Format &quot;2006-01-02&quot; }}&quot;&gt;{{ .Date.Format &quot;Jan 2, 2006&quot; }}&lt;/time&gt;&lt;/p&gt;
-  {{ if (isset .Params &quot;categories&quot;) }}&lt;p&gt;{{ range .Params.categories }}#{{ . }} {{ end }}&lt;/p&gt;{{ end }}
-&lt;/div&gt;
-</code></pre>
-
-<pre><code class="language-html">[li.html 修正後]
-
-&lt;div class=&quot;card-subtext muted-text&quot;&gt;
-  &lt;p&gt;Posted &lt;time datetime=&quot;{{ .Date.Format &quot;2006-01-02&quot; }}&quot;&gt;{{ .Date.Format &quot;2006-01-02&quot; }}&lt;/time&gt;
-     / Update {{ .Lastmod.Format &quot;2006-01-02&quot; }}&lt;/p&gt;
-  {{ if (isset .Params &quot;categories&quot;) }}&lt;p&gt;{{ range .Params.categories }}#{{ . }} {{ end }}&lt;/p&gt;{{ end }}
-&lt;/div&gt;
-</code></pre>
-
-<h3 id="更新日がうまく取得できずに悩む-解決したっぽい-2019-02-25">更新日がうまく取得できずに悩む → 解決したっぽい［2019-02-25］</h3>
-
-<p>手動でコミットしてプッシュするといけるけど、スクリプトでやるとダメっぽいぞ・・・。<br />
+&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;card-subtext muted-text&#34;</span>&gt;
+  &lt;<span style="color:#f92672">p</span>&gt;Posted &lt;<span style="color:#f92672">time</span> <span style="color:#a6e22e">datetime</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Date.Format &#34;</span><span style="color:#a6e22e">2006-01-02</span><span style="color:#960050;background-color:#1e0010">&#34;</span> <span style="color:#960050;background-color:#1e0010">}}&#34;</span>&gt;{{ .Date.Format &#34;2006-01-02&#34; }}&lt;/<span style="color:#f92672">time</span>&gt;
+     / Update {{ .Lastmod.Format &#34;2006-01-02&#34; }}&lt;/<span style="color:#f92672">p</span>&gt;
+  {{ if (isset .Params &#34;categories&#34;) }}&lt;<span style="color:#f92672">p</span>&gt;{{ range .Params.categories }}#{{ . }} {{ end }}&lt;/<span style="color:#f92672">p</span>&gt;{{ end }}
+&lt;/<span style="color:#f92672">div</span>&gt;
+</code></pre></div><h3 id="更新日がうまく取得できずに悩む--解決したっぽい2019-02-25">更新日がうまく取得できずに悩む → 解決したっぽい［2019-02-25］</h3>
+<p>手動でコミットしてプッシュするといけるけど、スクリプトでやるとダメっぽいぞ・・・。<br>
 うーん、何が悪いんだ。</p>
-
-<p><strong>［2019-02-28］</strong><br />
+<p><strong>［2019-02-28］</strong><br>
 <strong>サーバー側で反映されるのに、ちょびっとだけ時間がかかるだけだった疑惑発生！！</strong></p>
-
 <h4 id="更新日がうまく入らない">更新日がうまく入らない</h4>
-
 <p>プッシュするのにコマンドをいくつも入れるのが面倒なので、ネットで調べて下記のスクリプトを組んであります。</p>
-
-<pre><code class="language-sh">#!/bin/bash
-echo -e &quot;\033[0;33mDeploying updates to GitHub...\033[0m&quot;
-# Build the project.
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#75715e">#!/bin/bash
+</span><span style="color:#75715e"></span>echo -e <span style="color:#e6db74">&#34;\033[0;33mDeploying updates to GitHub...\033[0m&#34;</span>
+<span style="color:#75715e"># Build the project.</span>
 hugo
-# Go to public folder
+<span style="color:#75715e"># Go to public folder</span>
 cd public
-# Add changes to git.
+<span style="color:#75715e"># Add changes to git.</span>
 git add .
-# Commit changes.
-msg=&quot;rebuilding site `date`&quot;
-if [ $# -eq 1 ]
-  then msg=&quot;$1&quot;
-fi
-git commit -m &quot;$msg&quot;
-# Push source and build repos.
+<span style="color:#75715e"># Commit changes.</span>
+msg<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;rebuilding site `date`&#34;</span>
+<span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> $# -eq <span style="color:#ae81ff">1</span> <span style="color:#f92672">]</span>
+  <span style="color:#66d9ef">then</span> msg<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span>$1<span style="color:#e6db74">&#34;</span>
+<span style="color:#66d9ef">fi</span>
+git commit -m <span style="color:#e6db74">&#34;</span>$msg<span style="color:#e6db74">&#34;</span>
+<span style="color:#75715e"># Push source and build repos.</span>
 git push origin master
-# Come back
+<span style="color:#75715e"># Come back</span>
 cd ..
-# Add changes to git.
+<span style="color:#75715e"># Add changes to git.</span>
 git add .
-# Commit changes.
-msg=&quot;rebuilding site `date`&quot;
-if [ $# -eq 1 ]
-  then msg=&quot;$1&quot;
-fi
-git commit -m &quot;$msg&quot;
-# Push source and build repos.
+<span style="color:#75715e"># Commit changes.</span>
+msg<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;rebuilding site `date`&#34;</span>
+<span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> $# -eq <span style="color:#ae81ff">1</span> <span style="color:#f92672">]</span>
+  <span style="color:#66d9ef">then</span> msg<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span>$1<span style="color:#e6db74">&#34;</span>
+<span style="color:#66d9ef">fi</span>
+git commit -m <span style="color:#e6db74">&#34;</span>$msg<span style="color:#e6db74">&#34;</span>
+<span style="color:#75715e"># Push source and build repos.</span>
 git push origin master
-</code></pre>
-
-<p>手動で同じことをやっていくと反映するんですけど、これを実行したときってうまく反映されないような。<br />
+</code></pre></div><p>手動で同じことをやっていくと反映するんですけど、これを実行したときってうまく反映されないような。<br>
 気のせいかな。</p>
-
 <p>手動とスクリプトで何か違うのかな。</p>
-
-<h4 id="更新日がうまく入らない-解決したっぽい">更新日がうまく入らない（解決したっぽい）</h4>
-
+<h4 id="更新日がうまく入らない解決したっぽい">更新日がうまく入らない（解決したっぽい）</h4>
 <p><code>config.toml</code> に追記することで解決したっぽい。</p>
-
-<pre><code class="language-toml">[frontmatter]
-date = [&quot;date&quot;, &quot;publishDate&quot;, &quot;lastmod&quot;]
-lastmod = [&quot;:git&quot;, &quot;lastmod&quot;, &quot;date&quot;, &quot;publishDate&quot;]
-publishDate = [&quot;publishDate&quot;, &quot;date&quot;]
-expiryDate = [&quot;expiryDate&quot;]
-</code></pre>
-
-<p><code>[frontmatter]</code> というセクションを追加し、その下に日付的な設定を追加しました。<br />
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[<span style="color:#a6e22e">frontmatter</span>]
+<span style="color:#a6e22e">date</span> = [<span style="color:#e6db74">&#34;date&#34;</span>, <span style="color:#e6db74">&#34;publishDate&#34;</span>, <span style="color:#e6db74">&#34;lastmod&#34;</span>]
+<span style="color:#a6e22e">lastmod</span> = [<span style="color:#e6db74">&#34;:git&#34;</span>, <span style="color:#e6db74">&#34;lastmod&#34;</span>, <span style="color:#e6db74">&#34;date&#34;</span>, <span style="color:#e6db74">&#34;publishDate&#34;</span>]
+<span style="color:#a6e22e">publishDate</span> = [<span style="color:#e6db74">&#34;publishDate&#34;</span>, <span style="color:#e6db74">&#34;date&#34;</span>]
+<span style="color:#a6e22e">expiryDate</span> = [<span style="color:#e6db74">&#34;expiryDate&#34;</span>]
+</code></pre></div><p><code>[frontmatter]</code> というセクションを追加し、その下に日付的な設定を追加しました。<br>
 参考にしたのは <a href="https://gohugo.io/getting-started/configuration/#configure-front-matter" title="Configure Hugo">Configure Hugo</a> です。</p>
-
-<p>もしかしたら、<code>lastmod</code> の行だけでもいいかもしれない。<br />
-どの段階を最終更新と見るかという設定で、左から優先？みたい。<br />
-デフォルトがこの設定なので、本来は書かなくても良さそうなんだけど・・・。<br />
+<p>もしかしたら、<code>lastmod</code> の行だけでもいいかもしれない。<br>
+どの段階を最終更新と見るかという設定で、左から優先？みたい。<br>
+デフォルトがこの設定なので、本来は書かなくても良さそうなんだけど・・・。<br>
 まぁ、動いたから良しとする。</p>
-
-<h4 id="更新日の件-2019-02-28">更新日の件［2019-02-28］</h4>
-
-<p>サーバー側で反映されるのに時間がちょびっとかかるだけで、元々出来ていたような気がしてきた。<br />
-そして、カテゴリーとタグを付け直したら、<strong>全ページの最終更新日が 2019-02-27 になってもうた。</strong><br />
+<h4 id="更新日の件2019-02-28">更新日の件［2019-02-28］</h4>
+<p>サーバー側で反映されるのに時間がちょびっとかかるだけで、元々出来ていたような気がしてきた。<br>
+そして、カテゴリーとタグを付け直したら、<strong>全ページの最終更新日が 2019-02-27 になってもうた。</strong><br>
 本文中の修正でなくても反映するのね。そりゃそうか。</p>
-
 <p>どうも気持ち悪いので、ファイルのタイムスタンプから更新日を取得するように変更しました。</p>
-
-<p>参考にしたのは公式のドキュメント<br />
+<p>参考にしたのは公式のドキュメント<br>
 <a href="https://gohugo.io/getting-started/configuration/#configure-dates">Configure Dates</a></p>
-
 <p><code>:fileModTime</code> というのが、ファイルのタイムスタンプを見てくれるようなので、<code>config.toml</code> を下記のように変更です。</p>
-
 <p><code>lastmod = [&quot;:fileModTime&quot;, &quot;:git&quot;, &quot;lastmod&quot;, &quot;date&quot;, &quot;publishDate&quot;]</code></p>
-
 <p><code>lastmod</code> のところで、一番左側に追加しました。</p>
-
 <p>尚、ファイルはすべて 2019-02-27 のタイムスタンプになっているので、別途アプリで弄っています。</p>
-
-<h4 id="更新日の件-2019-03-04">更新日の件［2019-03-04］</h4>
-
-<p>ファイルのタイムスタンプだと、git-pull で落としてきたときの日付が入っちゃって、やっぱり意図したものと違う。<br />
+<h4 id="更新日の件2019-03-04">更新日の件［2019-03-04］</h4>
+<p>ファイルのタイムスタンプだと、git-pull で落としてきたときの日付が入っちゃって、やっぱり意図したものと違う。<br>
 結局、元の設定に戻しました（苦笑）</p>
-
 <p><code>lastmod = [&quot;:git&quot;, &quot;lastmod&quot;, &quot;date&quot;, &quot;publishDate&quot;]</code></p>
-
-<h3 id="フォントを指定する-2019-02-25">フォントを指定する［2019-02-25］</h3>
-
-<p>やっぱり見た目は大事ですよね。<br />
+<h3 id="フォントを指定する2019-02-25">フォントを指定する［2019-02-25］</h3>
+<p>やっぱり見た目は大事ですよね。<br>
 ということで、フォントを変えてみようと思います。</p>
-
 <h4 id="webフォントを使う">Webフォントを使う</h4>
-
-<p>フォントが汚いので、Webフォントで有名な <a href="https://fonts.google.com" title="Google Fonts">Google Fonts</a> を使ってみました。（<a href="https://k-kaz.net" title="姉妹サイト（本家）">姉妹サイト（本家）</a> でも使っている）<br />
-PageSpeed Insights のモバイルの点数が <strong>15点落ちました</strong> ので、一瞬で戻しました（笑）<br />
+<p>フォントが汚いので、Webフォントで有名な <a href="https://fonts.google.com" title="Google Fonts">Google Fonts</a> を使ってみました。（<a href="https://k-kaz.net" title="姉妹サイト（本家）">姉妹サイト（本家）</a> でも使っている）<br>
+PageSpeed Insights のモバイルの点数が <strong>15点落ちました</strong> ので、一瞬で戻しました（笑）<br>
 パソコンのほうは相変わらず100点でしたけどね。モバイル、厳しいなぁ。</p>
-
 <p>Webフォントじゃなくてもきれいに表示することはできるのかしら。調べてみよう。</p>
-
-<p>尚、使うときは、<code>&lt;head&gt;</code> での読み込みと、<code>css</code> での指定が必要となります。<br />
+<p>尚、使うときは、<code>&lt;head&gt;</code> での読み込みと、<code>css</code> での指定が必要となります。<br>
 以下のファイルを修正します。</p>
-
-<p><code>/サイト名/layouts/partials/head.html</code><br />
+<p><code>/サイト名/layouts/partials/head.html</code><br>
 <code>/サイト名/static/css/hoge.css</code></p>
-
-<p>尚、この後に書いている内容は、<a href="https://k-kaz.net" title="姉妹サイト（本家）">姉妹サイト（本家）</a> で使っているものを若干修正したサンプルです。<br />
+<p>尚、この後に書いている内容は、<a href="https://k-kaz.net" title="姉妹サイト（本家）">姉妹サイト（本家）</a> で使っているものを若干修正したサンプルです。<br>
 使うフォントによってタグの内容も変わりますので、<a href="https://fonts.google.com" title="Google Fonts">Google Fonts</a> で好きなフォントを選んで、それ用のタグを入手してください。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">［head.html に下記を貼り付ける］
 
-<pre><code class="language-html">［head.html に下記を貼り付ける］
-
-&lt;!-- webfontloader --&gt;
-&lt;script&gt;
-window.WebFontConfig = {
-  google: { families: ['Roboto:400,700', 'Noto+Sans+JP:400,700'] },
-  active: function() {
-    sessionStorage.fonts = true;
+<span style="color:#75715e">&lt;!-- webfontloader --&gt;</span>
+&lt;<span style="color:#f92672">script</span>&gt;
+window.<span style="color:#a6e22e">WebFontConfig</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">google</span><span style="color:#f92672">:</span> { <span style="color:#a6e22e">families</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#39;Roboto:400,700&#39;</span>, <span style="color:#e6db74">&#39;Noto+Sans+JP:400,700&#39;</span>] },
+  <span style="color:#a6e22e">active</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span>() {
+    <span style="color:#a6e22e">sessionStorage</span>.<span style="color:#a6e22e">fonts</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
   }
 };
-(function() {
-  var wf = document.createElement('script');
-  wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js';
-  wf.type = 'text/javascript';
-  wf.async = 'true';
-  var s = document.getElementsByTagName('script')[0];
-  s.parentNode.insertBefore(wf, s);
+(<span style="color:#66d9ef">function</span>() {
+  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">wf</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">createElement</span>(<span style="color:#e6db74">&#39;script&#39;</span>);
+  <span style="color:#a6e22e">wf</span>.<span style="color:#a6e22e">src</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js&#39;</span>;
+  <span style="color:#a6e22e">wf</span>.<span style="color:#a6e22e">type</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;text/javascript&#39;</span>;
+  <span style="color:#a6e22e">wf</span>.<span style="color:#66d9ef">async</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;true&#39;</span>;
+  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">s</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementsByTagName</span>(<span style="color:#e6db74">&#39;script&#39;</span>)[<span style="color:#ae81ff">0</span>];
+  <span style="color:#a6e22e">s</span>.<span style="color:#a6e22e">parentNode</span>.<span style="color:#a6e22e">insertBefore</span>(<span style="color:#a6e22e">wf</span>, <span style="color:#a6e22e">s</span>);
 })();
-&lt;/script&gt;
-&lt;!-- webfontloader ここまで--&gt;
-</code></pre>
+&lt;/<span style="color:#f92672">script</span>&gt;
+<span style="color:#75715e">&lt;!-- webfontloader ここまで--&gt;</span>
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#960050;background-color:#1e0010">［</span><span style="color:#f92672">hoge</span>.<span style="color:#a6e22e">css</span> <span style="color:#f92672">に下記を貼り付ける</span><span style="color:#960050;background-color:#1e0010">］</span>
 
-<pre><code class="language-css">［hoge.css に下記を貼り付ける］
-
-body * {font-family: 'Roboto', 'Noto Sans CJK JP', 'Noto Sans JP', sans-serif !important;}
-</code></pre>
-
-<p>スタイルシートのほうは、かなり乱暴な書き方をしていますけど、テストということで許してください（笑）</p>
-
+<span style="color:#f92672">body</span> <span style="color:#f92672">*</span> {<span style="color:#66d9ef">font-family</span>: <span style="color:#e6db74">&#39;Roboto&#39;</span>, <span style="color:#e6db74">&#39;Noto Sans CJK JP&#39;</span>, <span style="color:#e6db74">&#39;Noto Sans JP&#39;</span>, <span style="color:#66d9ef">sans-serif</span> <span style="color:#75715e">!important</span>;}
+</code></pre></div><p>スタイルシートのほうは、かなり乱暴な書き方をしていますけど、テストということで許してください（笑）</p>
 <h4 id="ローカルフォントを指定する">ローカルフォントを指定する</h4>
-
-<p>とりあえず、最近は <strong>游ゴシック体</strong> が良いみたいなので、下記のように指定しました。<br />
+<p>とりあえず、最近は <strong>游ゴシック体</strong> が良いみたいなので、下記のように指定しました。<br>
 游ゴシックに Medium が入っているのは、<strong>標準の太さだとかすれちゃう問題</strong> が発生するからだそうです。</p>
-
-<pre><code class="language-css">font-family: &quot;游ゴシック Medium&quot;, &quot;Yu Gothic Medium&quot;, &quot;游ゴシック体&quot;, &quot;YuGothic&quot;, &quot;ヒラギノ角ゴ ProN W3&quot;, &quot;Hiragino Kaku Gothic ProN&quot;, &quot;メイリオ&quot;, &quot;Meiryo&quot;, &quot;verdana&quot;, sans-serif;
-</code></pre>
-
-<h3 id="コード表示にサイズ制限を設ける-2019-03-14">コード表示にサイズ制限を設ける ［2019-03-14］</h3>
-
-<p>こちらのサイトでは、よくコードの紹介をしています。（このページもそうですね）<br />
-コードが長くなった場合に記事がえらく間延びしてしまうので、その対策をしたいと思います。<br />
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">font-family</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;游ゴシック Medium&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;Yu Gothic Medium&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;游ゴシック体&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;YuGothic&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;ヒラギノ角ゴ ProN W3&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;Hiragino Kaku Gothic ProN&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;メイリオ&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;Meiryo&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;verdana&#34;</span><span style="color:#f92672">,</span> <span style="color:#f92672">sans-serif</span><span style="color:#f92672">;</span>
+</code></pre></div><h3 id="コード表示にサイズ制限を設ける-2019-03-14">コード表示にサイズ制限を設ける ［2019-03-14］</h3>
+<p>こちらのサイトでは、よくコードの紹介をしています。（このページもそうですね）<br>
+コードが長くなった場合に記事がえらく間延びしてしまうので、その対策をしたいと思います。<br>
 尚、gist などを使えば自動的にサイズ調整はしてくれますので、ここでは素でコード記述をする場合の内容です。</p>
-
 <h4 id="スタイルシートを修正する">スタイルシートを修正する</h4>
-
-<pre><code class="language-css">code {
-  max-width: 100vw;
-  max-height: 20vw;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">code</span> {
+  <span style="color:#66d9ef">max-width</span>: <span style="color:#ae81ff">100</span><span style="color:#66d9ef">vw</span>;
+  <span style="color:#66d9ef">max-height</span>: <span style="color:#ae81ff">20</span><span style="color:#66d9ef">vw</span>;
 }
-</code></pre>
-
-<p>最大の幅、高さを設定しました。
+</code></pre></div><p>最大の幅、高さを設定しました。
 スクロールバーを出すには <code>overflow</code> を入れてあげるのが正しいようですが、それをするとスクロールする必要のないコードまでスクロールバーが表示されて、格好悪かったです。OS やブラウザによるみたいですけど。</p>
-
 <p>で、それを抜いてあげたら、Hugo か、このテーマ内でうまいこと処理をしてくれましたので、めでたしめでたし。</p>
-
-<h2 id="タグ問題を解決する-2019-02-28">タグ問題を解決する［2019-02-28］</h2>
-
-<p>aether は、カテゴリーのみの運用で、タグの使用は意図されていません。<br />
+<h2 id="タグ問題を解決する2019-02-28">タグ問題を解決する［2019-02-28］</h2>
+<p>aether は、カテゴリーのみの運用で、タグの使用は意図されていません。<br>
 タグを使いたい場合は、自力で頑張ることになります。</p>
-
 <h3 id="タグを使えるようにする">タグを使えるようにする</h3>
-
 <p>2つのファイルを修正してあげます。</p>
-
 <h4 id="設定ファイルの修正">設定ファイルの修正</h4>
-
-<p>設定ファイル <code>config.toml</code> に <code>tag = &quot;tags&quot;</code> を追加します。<br />
+<p>設定ファイル <code>config.toml</code> に <code>tag = &quot;tags&quot;</code> を追加します。<br>
 カテゴリーとまとめて書いておくと見やすいかと思います。</p>
-
-<pre><code class="language-toml">[taxonomies]
-category = &quot;categories&quot;
-tag = &quot;tags&quot;
-</code></pre>
-
-<h4 id="記事テンプレートの修正">記事テンプレートの修正</h4>
-
-<p>もう1つ。<br />
-記事データに <code>tags: [&quot;&quot;]</code> を追加しますが、毎回手動で入れるのは大変なので、テンプレートの方を直しておきます。<br />
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[<span style="color:#a6e22e">taxonomies</span>]
+<span style="color:#a6e22e">category</span> = <span style="color:#e6db74">&#34;categories&#34;</span>
+<span style="color:#a6e22e">tag</span> = <span style="color:#e6db74">&#34;tags&#34;</span>
+</code></pre></div><h4 id="記事テンプレートの修正">記事テンプレートの修正</h4>
+<p>もう1つ。<br>
+記事データに <code>tags: [&quot;&quot;]</code> を追加しますが、毎回手動で入れるのは大変なので、テンプレートの方を直しておきます。<br>
 投稿の仕方によって変わりますが、私は <code>post</code> というフォルダの中に記事を入れているので、下記のファイルを修正します。</p>
-
 <p><code>サイト名\archetypes\post.md</code></p>
-
 <p>私のファイルはこんな感じになっています。</p>
-
-<pre><code class="language-post.md">---
-title: &quot;{{ replace .TranslationBaseName &quot;-&quot; &quot; &quot; | title }}&quot;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-post.md" data-lang="post.md">---
+title: &#34;{{ replace .TranslationBaseName &#34;-&#34; &#34; &#34; | title }}&#34;
 date: {{ .Date }}
-description: &quot;&quot;
-categories: [&quot;&quot;]
-tags: [&quot;&quot;]
-featuredImage: &quot;&quot;
-featuredImageDescription: &quot;&quot;
+description: &#34;&#34;
+categories: [&#34;&#34;]
+tags: [&#34;&#34;]
+featuredImage: &#34;&#34;
+featuredImageDescription: &#34;&#34;
 dropCap: false
 displayInMenu: false
 displayInList: true
 draft: true
 ---
-</code></pre>
-
-<p>こうしておけば、<code>hugo new post/hoge.md</code> としたときに <code>post</code> に属する記事ということで、この <code>post.md</code> をテンプレートとして読み込んでくれ、ちょっとだけ楽になるのと、タグの付け忘れがなくなります。</p>
-
+</code></pre></div><p>こうしておけば、<code>hugo new post/hoge.md</code> としたときに <code>post</code> に属する記事ということで、この <code>post.md</code> をテンプレートとして読み込んでくれ、ちょっとだけ楽になるのと、タグの付け忘れがなくなります。</p>
 <p>尚、記事のほうで <code>tag</code> が複数ある時は <code>tags: [&quot;aaa&quot;,&quot;bbb&quot;,&quot;ccc&quot;]</code> と書いてください。</p>
-
 <h3 id="タグを表示する">タグを表示する</h3>
-
-<p>ここまでの作業で、記事にタグ付けが出来ています。<br />
-ただ、残念なことにそのタグを表示する術がありません。<br />
+<p>ここまでの作業で、記事にタグ付けが出来ています。<br>
+ただ、残念なことにそのタグを表示する術がありません。<br>
 ここから HTML のテンプレートを修正し、好きな場所にタグを表示させるようにします。</p>
-
 <h4 id="トップページ">トップページ</h4>
-
 <p><code>サイト名\layouts\_default\li.html</code></p>
-
 <p>一部分だけ抜き出しています。</p>
-
-<pre><code class="language-html">&lt;article class=&quot;card-body&quot;&gt;
-  &lt;h2 class=&quot;card-title&quot;&gt;{{ .Title }}&lt;/h2&gt;
-  &lt;p class=&quot;card-text&quot;&gt;{{ if (isset .Params &quot;description&quot;) }}{{ index .Params &quot;description&quot; }}{{ else }}{{ .Summary }}{{ end }}&lt;/p&gt;
-  &lt;div class=&quot;card-subtext muted-text&quot;&gt;
-    &lt;p&gt;Posted &lt;time datetime=&quot;{{ .Date.Format &quot;2006-01-02&quot; }}&quot;&gt;{{ .Date.Format &quot;2006-01-02&quot; }}&lt;/time&gt;
-      / Updated {{ .Lastmod.Format &quot;2006-01-02&quot; }}&lt;/p&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;card-subtext muted-text li-line&quot;&gt;
-      {{ if (isset .Params &quot;categories&quot;) }}{{ range .Params.categories }}&lt;span class=&quot;box-gray&quot;&gt;{{ . }}&lt;/span&gt; {{ end }}{{ end }}
-      {{ if (isset .Params &quot;tags&quot;) }} {{ range .Params.tags }}&lt;span class=&quot;box-gray&quot;&gt;# {{ . }}&lt;/span&gt; {{ end }}{{ end }}
-  &lt;/div&gt;
-&lt;/article&gt;
-</code></pre>
-
-<p>先日、更新日を追加した修正のとき、カテゴリーも同じ <code>&lt;div&gt;&lt;/div&gt;</code> の中に入っていましたが、外側に出しています。<br />
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">article</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;card-body&#34;</span>&gt;
+  &lt;<span style="color:#f92672">h2</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;card-title&#34;</span>&gt;{{ .Title }}&lt;/<span style="color:#f92672">h2</span>&gt;
+  &lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;card-text&#34;</span>&gt;{{ if (isset .Params &#34;description&#34;) }}{{ index .Params &#34;description&#34; }}{{ else }}{{ .Summary }}{{ end }}&lt;/<span style="color:#f92672">p</span>&gt;
+  &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;card-subtext muted-text&#34;</span>&gt;
+    &lt;<span style="color:#f92672">p</span>&gt;Posted &lt;<span style="color:#f92672">time</span> <span style="color:#a6e22e">datetime</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Date.Format &#34;</span><span style="color:#a6e22e">2006-01-02</span><span style="color:#960050;background-color:#1e0010">&#34;</span> <span style="color:#960050;background-color:#1e0010">}}&#34;</span>&gt;{{ .Date.Format &#34;2006-01-02&#34; }}&lt;/<span style="color:#f92672">time</span>&gt;
+      / Updated {{ .Lastmod.Format &#34;2006-01-02&#34; }}&lt;/<span style="color:#f92672">p</span>&gt;
+  &lt;/<span style="color:#f92672">div</span>&gt;
+  &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;card-subtext muted-text li-line&#34;</span>&gt;
+      {{ if (isset .Params &#34;categories&#34;) }}{{ range .Params.categories }}&lt;<span style="color:#f92672">span</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;box-gray&#34;</span>&gt;{{ . }}&lt;/<span style="color:#f92672">span</span>&gt; {{ end }}{{ end }}
+      {{ if (isset .Params &#34;tags&#34;) }} {{ range .Params.tags }}&lt;<span style="color:#f92672">span</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;box-gray&#34;</span>&gt;# {{ . }}&lt;/<span style="color:#f92672">span</span>&gt; {{ end }}{{ end }}
+  &lt;/<span style="color:#f92672">div</span>&gt;
+&lt;/<span style="color:#f92672">article</span>&gt;
+</code></pre></div><p>先日、更新日を追加した修正のとき、カテゴリーも同じ <code>&lt;div&gt;&lt;/div&gt;</code> の中に入っていましたが、外側に出しています。<br>
 もう1つ <code>&lt;div&gt;&lt;/div&gt;</code> を用意して、その中にカテゴリーと、今回追加のタグを入れています。</p>
-
-<p><strong>よく分かっていませんが、<code>categories</code> を <code>tags</code> にしたら動くだろう</strong>と思ってやったら、その通り動きました。<br />
+<p><strong>よく分かっていませんが、<code>categories</code> を <code>tags</code> にしたら動くだろう</strong>と思ってやったら、その通り動きました。<br>
 私が凄いのではなくて、感覚的にできちゃうという分かりやすい設計の Hugo が凄いのでしょう。</p>
-
-<p>ついでに、カテゴリーに <code>#</code> が付いていましたが、タグのほうに持ってきました。<br />
+<p>ついでに、カテゴリーに <code>#</code> が付いていましたが、タグのほうに持ってきました。<br>
 あと、<code>class</code> を入れていますが、これは見た目の装飾だけで、動きには影響していません。</p>
-
 <h4 id="個別記事">個別記事</h4>
-
 <p><code>サイト名\layouts\_default\single.html</code></p>
-
 <p>一部分だけ抜き出しています。</p>
-
-<pre><code class="language-html">&lt;header class=&quot;post-header&quot;&gt;
-    &lt;h1 class=&quot;post-title&quot;&gt;{{ .Title }}&lt;/h1&gt;
-    &lt;p class=&quot;post-date&quot;&gt;
-      Posted &lt;time datetime=&quot;{{ .Date.Format &quot;2006-01-02&quot; }}&quot;&gt;{{ .Date.Format &quot;2006-01-02&quot; }}&lt;/time&gt;
-      / Update {{ .Lastmod.Format &quot;2006-01-02&quot; }}&lt;/p&gt;
-    &lt;div class=&quot;card-subtext muted-text li-line&quot;&gt;
-      {{ if (isset .Params &quot;categories&quot;) }}{{ range .Params.categories }} &lt;a class=&quot;cat&quot; href=&quot;/categories/{{ . }}&quot;&gt;{{ . }}&lt;/a&gt;{{ end }}{{ end }}
-      {{ if (isset .Params &quot;tags&quot;) }}{{ range .Params.tags }} &lt;a class=&quot;tag&quot; href=&quot;/tags/{{ . }}&quot;&gt;# {{ . }}&lt;/a&gt; {{ end }}{{ end }}
-    &lt;/div&gt;
-&lt;/header&gt;
-</code></pre>
-
-<p>こちらもトップとほぼ同じですが、リンクの設定をしてあります。<br />
-表示されたカテゴリーやタグをクリックすると、同一グループが一覧表示されるようになります。<br />
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">header</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;post-header&#34;</span>&gt;
+ 	&lt;<span style="color:#f92672">h1</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;post-title&#34;</span>&gt;{{ .Title }}&lt;/<span style="color:#f92672">h1</span>&gt;
+    &lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;post-date&#34;</span>&gt;
+      Posted &lt;<span style="color:#f92672">time</span> <span style="color:#a6e22e">datetime</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Date.Format &#34;</span><span style="color:#a6e22e">2006-01-02</span><span style="color:#960050;background-color:#1e0010">&#34;</span> <span style="color:#960050;background-color:#1e0010">}}&#34;</span>&gt;{{ .Date.Format &#34;2006-01-02&#34; }}&lt;/<span style="color:#f92672">time</span>&gt;
+      / Update {{ .Lastmod.Format &#34;2006-01-02&#34; }}&lt;/<span style="color:#f92672">p</span>&gt;
+    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;card-subtext muted-text li-line&#34;</span>&gt;
+      {{ if (isset .Params &#34;categories&#34;) }}{{ range .Params.categories }} &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;cat&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/categories/{{ . }}&#34;</span>&gt;{{ . }}&lt;/<span style="color:#f92672">a</span>&gt;{{ end }}{{ end }}
+      {{ if (isset .Params &#34;tags&#34;) }}{{ range .Params.tags }} &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;tag&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/tags/{{ . }}&#34;</span>&gt;# {{ . }}&lt;/<span style="color:#f92672">a</span>&gt; {{ end }}{{ end }}
+    &lt;/<span style="color:#f92672">div</span>&gt;
+&lt;/<span style="color:#f92672">header</span>&gt;
+</code></pre></div><p>こちらもトップとほぼ同じですが、リンクの設定をしてあります。<br>
+表示されたカテゴリーやタグをクリックすると、同一グループが一覧表示されるようになります。<br>
 アドレスだけ気を付けてあげれば、一覧表示はテーマ側が自動でやってくれます。</p>
-
-<p>if文の中で、該当する文字列が見付かれば、リンクに展開するって感じかな。（知らんけど）<br />
+<p>if文の中で、該当する文字列が見付かれば、リンクに展開するって感じかな。（知らんけど）<br>
 複数見付かれば、その回数分、リンクを展開してくれます。</p>
-
-<p>カテゴリーのアドレス指定<br />
+<p>カテゴリーのアドレス指定<br>
 <code>&lt;a class=&quot;cat&quot; href=&quot;/categories/{{ . }}&quot;&gt;{{ . }}&lt;/a&gt;</code></p>
-
-<p>タグのアドレス指定<br />
+<p>タグのアドレス指定<br>
 <code>&lt;a class=&quot;tag&quot; href=&quot;/tags/{{ . }}&quot;&gt;# {{ . }}&lt;/a&gt;</code></p>
-
-<p>それぞれ <code>{{ . }}</code> の中に、読み込まれたカテゴリーやタグが自動で入力されます。<br />
+<p>それぞれ <code>{{ . }}</code> の中に、読み込まれたカテゴリーやタグが自動で入力されます。<br>
 カテゴリーが <code>homepage</code> なら <code>/categories/homepage</code> と展開されます。</p>
-
 <p>私のサイトでは、このタグを上部と下部の2ヶ所に入れてみました。</p>
-
 <h4 id="次の記事">次の記事</h4>
-
-<p>個別記事の最下部に次の記事が表示されます。<br />
+<p>個別記事の最下部に次の記事が表示されます。<br>
 そこにも入れておきます。</p>
-
 <p><code>サイト名\layouts\_default\li-next.html</code></p>
-
 <p>一部分だけ抜き出しています。</p>
-
-<pre><code class="language-html">&lt;article class=&quot;card-body&quot;&gt;
-  &lt;h2 class=&quot;card-title&quot;&gt;{{ .Title }}&lt;/h2&gt;
-  &lt;p class=&quot;card-text&quot;&gt;{{ if (isset .Params &quot;description&quot;) }}{{ index .Params &quot;description&quot; }}{{ else }}{{ .Summary }}{{ end }}&lt;/p&gt;
-  &lt;div class=&quot;card-subtext muted-text&quot;&gt;
-    &lt;p&gt;Posted &lt;time datetime=&quot;{{ .PublishDate.Format &quot;2006-01-02&quot; }}&quot;&gt;{{ .PublishDate.Format &quot;2006-01-02&quot; }}&lt;/time&gt;
-    / Updated {{ .Lastmod.Format &quot;2006-01-02&quot; }}&lt;/p&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;card-subtext muted-text li-line&quot;&gt;
-    {{ if (isset .Params &quot;categories&quot;) }}{{ range .Params.categories }}&lt;span class=&quot;box-gray&quot;&gt;{{ . }}&lt;/span&gt; {{ end }}{{ end }}
-    {{ if (isset .Params &quot;tags&quot;) }}{{ range .Params.tags }}&lt;span class=&quot;box-gray&quot;&gt;# {{ . }}&lt;/span&gt; {{ end }}{{ end }}
-  &lt;/div&gt;
-&lt;/article&gt;
-</code></pre>
-
-<p>トップページと同じかな。</p>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">article</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;card-body&#34;</span>&gt;
+  &lt;<span style="color:#f92672">h2</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;card-title&#34;</span>&gt;{{ .Title }}&lt;/<span style="color:#f92672">h2</span>&gt;
+  &lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;card-text&#34;</span>&gt;{{ if (isset .Params &#34;description&#34;) }}{{ index .Params &#34;description&#34; }}{{ else }}{{ .Summary }}{{ end }}&lt;/<span style="color:#f92672">p</span>&gt;
+  &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;card-subtext muted-text&#34;</span>&gt;
+    &lt;<span style="color:#f92672">p</span>&gt;Posted &lt;<span style="color:#f92672">time</span> <span style="color:#a6e22e">datetime</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .PublishDate.Format &#34;</span><span style="color:#a6e22e">2006-01-02</span><span style="color:#960050;background-color:#1e0010">&#34;</span> <span style="color:#960050;background-color:#1e0010">}}&#34;</span>&gt;{{ .PublishDate.Format &#34;2006-01-02&#34; }}&lt;/<span style="color:#f92672">time</span>&gt;
+    / Updated {{ .Lastmod.Format &#34;2006-01-02&#34; }}&lt;/<span style="color:#f92672">p</span>&gt;
+  &lt;/<span style="color:#f92672">div</span>&gt;
+  &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;card-subtext muted-text li-line&#34;</span>&gt;
+    {{ if (isset .Params &#34;categories&#34;) }}{{ range .Params.categories }}&lt;<span style="color:#f92672">span</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;box-gray&#34;</span>&gt;{{ . }}&lt;/<span style="color:#f92672">span</span>&gt; {{ end }}{{ end }}
+    {{ if (isset .Params &#34;tags&#34;) }}{{ range .Params.tags }}&lt;<span style="color:#f92672">span</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;box-gray&#34;</span>&gt;# {{ . }}&lt;/<span style="color:#f92672">span</span>&gt; {{ end }}{{ end }}
+  &lt;/<span style="color:#f92672">div</span>&gt;
+&lt;/<span style="color:#f92672">article</span>&gt;
+</code></pre></div><p>トップページと同じかな。</p>
 <h4 id="メニューボタン">メニューボタン</h4>
-
-<p>右上にある 三 みたいなボタンですけど、これを押すとカテゴリーを表示することができます。<br />
+<p>右上にある 三 みたいなボタンですけど、これを押すとカテゴリーを表示することができます。<br>
 ここはもう趣味なんですけど、この中にタグまで表示したい場合は下記を修正します。</p>
-
 <p><code>サイト名\layouts\partials\nav-bar.html</code></p>
-
 <p>一部分だけ抜き出しています。</p>
-
-<pre><code class="language-html">&lt;div class=&quot;hamburger-menu&quot;&gt;
-  &lt;button onclick=&quot;hamburgerMenuPressed.call(this)&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;false&quot; aria-controls=&quot;menu&quot; aria-label=&quot;Menu&quot;&gt;
-    &lt;span&gt;&lt;/span&gt;
-    &lt;span&gt;&lt;/span&gt;
-  &lt;/button&gt;
-  &lt;ul id=&quot;menu&quot; class=&quot;hamburger-menu-overlay&quot;&gt;
-    &lt;li&gt;&lt;a href=&quot;{{ .Site.BaseURL }}&quot; class=&quot;hamburger-menu-overlay-link&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
-    {{ range where .Site.Pages &quot;Params.displayinmenu&quot; true -}}
-      &lt;li&gt;&lt;a href=&quot;{{ .Permalink }}&quot; class=&quot;hamburger-menu-overlay-link&quot;&gt;{{ .Title }}&lt;/a&gt;&lt;/li&gt;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;hamburger-menu&#34;</span>&gt;
+  &lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">onclick</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;hamburgerMenuPressed.call(this)&#34;</span> <span style="color:#a6e22e">aria-haspopup</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;true&#34;</span> <span style="color:#a6e22e">aria-expanded</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;false&#34;</span> <span style="color:#a6e22e">aria-controls</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;menu&#34;</span> <span style="color:#a6e22e">aria-label</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Menu&#34;</span>&gt;
+    &lt;<span style="color:#f92672">span</span>&gt;&lt;/<span style="color:#f92672">span</span>&gt;
+    &lt;<span style="color:#f92672">span</span>&gt;&lt;/<span style="color:#f92672">span</span>&gt;
+  &lt;/<span style="color:#f92672">button</span>&gt;
+  &lt;<span style="color:#f92672">ul</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;menu&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;hamburger-menu-overlay&#34;</span>&gt;
+    &lt;<span style="color:#f92672">li</span>&gt;&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Site.BaseURL }}&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;hamburger-menu-overlay-link&#34;</span>&gt;Home&lt;/<span style="color:#f92672">a</span>&gt;&lt;/<span style="color:#f92672">li</span>&gt;
+    {{ range where .Site.Pages &#34;Params.displayinmenu&#34; true -}}
+      &lt;<span style="color:#f92672">li</span>&gt;&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Permalink }}&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;hamburger-menu-overlay-link&#34;</span>&gt;{{ .Title }}&lt;/<span style="color:#f92672">a</span>&gt;&lt;/<span style="color:#f92672">li</span>&gt;
     {{ end -}}
-    &lt;li class=&quot;navi-menu&quot;&gt;- Categories -&lt;/li&gt;
+    &lt;<span style="color:#f92672">li</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;navi-menu&#34;</span>&gt;- Categories -&lt;/<span style="color:#f92672">li</span>&gt;
     {{ range $key, $value := .Site.Taxonomies.categories -}}
-    &lt;li style=&quot;font-size: 0.7em;&quot;&gt;&lt;a href=&quot;{{ (printf &quot;%s%s&quot; &quot;categories/&quot; ($key | urlize)) | absURL }}&quot; class=&quot;hamburger-menu-overlay-link&quot;&gt;{{ $key | humanize }}&lt;/a&gt;&lt;/li&gt;
+    &lt;<span style="color:#f92672">li</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;font-size: 0.7em;&#34;</span>&gt;&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ (printf &#34;</span><span style="color:#960050;background-color:#1e0010">%</span><span style="color:#a6e22e">s</span><span style="color:#960050;background-color:#1e0010">%</span><span style="color:#a6e22e">s</span><span style="color:#960050;background-color:#1e0010">&#34;</span> <span style="color:#960050;background-color:#1e0010">&#34;</span><span style="color:#a6e22e">categories</span><span style="color:#960050;background-color:#1e0010">/&#34;</span> <span style="color:#960050;background-color:#1e0010">($</span><span style="color:#a6e22e">key</span> <span style="color:#960050;background-color:#1e0010">|</span> <span style="color:#a6e22e">urlize</span><span style="color:#960050;background-color:#1e0010">))</span> <span style="color:#960050;background-color:#1e0010">|</span> <span style="color:#a6e22e">absURL</span> <span style="color:#960050;background-color:#1e0010">}}&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;hamburger-menu-overlay-link&#34;</span>&gt;{{ $key | humanize }}&lt;/<span style="color:#f92672">a</span>&gt;&lt;/<span style="color:#f92672">li</span>&gt;
     {{- end }}
-    &lt;li class=&quot;navi-menu&quot;&gt;- Tags -&lt;/li&gt;
+    &lt;<span style="color:#f92672">li</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;navi-menu&#34;</span>&gt;- Tags -&lt;/<span style="color:#f92672">li</span>&gt;
     {{ range $key, $value := .Site.Taxonomies.tags -}}
-    &lt;li style=&quot;font-size: 0.5em;&quot;&gt;&lt;a href=&quot;{{ (printf &quot;%s%s&quot; &quot;tags/&quot; ($key | urlize)) | absURL }}&quot; class=&quot;hamburger-menu-overlay-link&quot;&gt;{{ $key | humanize }}&lt;/a&gt;&lt;/li&gt;
+    &lt;<span style="color:#f92672">li</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;font-size: 0.5em;&#34;</span>&gt;&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ (printf &#34;</span><span style="color:#960050;background-color:#1e0010">%</span><span style="color:#a6e22e">s</span><span style="color:#960050;background-color:#1e0010">%</span><span style="color:#a6e22e">s</span><span style="color:#960050;background-color:#1e0010">&#34;</span> <span style="color:#960050;background-color:#1e0010">&#34;</span><span style="color:#a6e22e">tags</span><span style="color:#960050;background-color:#1e0010">/&#34;</span> <span style="color:#960050;background-color:#1e0010">($</span><span style="color:#a6e22e">key</span> <span style="color:#960050;background-color:#1e0010">|</span> <span style="color:#a6e22e">urlize</span><span style="color:#960050;background-color:#1e0010">))</span> <span style="color:#960050;background-color:#1e0010">|</span> <span style="color:#a6e22e">absURL</span> <span style="color:#960050;background-color:#1e0010">}}&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;hamburger-menu-overlay-link&#34;</span>&gt;{{ $key | humanize }}&lt;/<span style="color:#f92672">a</span>&gt;&lt;/<span style="color:#f92672">li</span>&gt;
     {{- end }}
-  &lt;/ul&gt;
-&lt;/div&gt;
-</code></pre>
-
-<p>すでにカテゴリーは記載済みですので、そこをコピペしてタグ用の行を追加しています。<br />
+  &lt;/<span style="color:#f92672">ul</span>&gt;
+&lt;/<span style="color:#f92672">div</span>&gt;
+</code></pre></div><p>すでにカテゴリーは記載済みですので、そこをコピペしてタグ用の行を追加しています。<br>
 <code>categories</code> = <code>tags</code> で置換してあげれば良いです。</p>
-
 <p>ついでにカテゴリーとタグの区切りを入れたかったので、<code>&lt;li class=&quot;navi-menu&quot;&gt;- Categories -&lt;/li&gt;</code> と <code>&lt;li class=&quot;navi-menu&quot;&gt;- Tags -&lt;/li&gt;</code> を追加しました。</p>
-
 <p><code>class</code> は例のごとく見栄えだけです。</p>
-
 <p>メニューボタンの隣に並べることも考えたんですが、モバイルでレイアウトが崩れたので、メニューに入れてしまうという安易なやり方にしております。数が増えたらえらいことになるんだろうなと思いつつ（笑）</p>
-
 <p>最近は、ブラウザの検証機能を使って、パソコンとモバイルの両方で表示して確認するというクセがついてきました。（良いことです）</p>
-
 <h3 id="カテゴリーとタグの表示調整">カテゴリーとタグの表示調整</h3>
-
-<p>カテゴリーやタグの数が増えると表示が崩れます。<br />
+<p>カテゴリーやタグの数が増えると表示が崩れます。<br>
 （縦に伸びて文字全てを表示するようになるので、格好悪い）</p>
-
 <p>ここもとりあえず <code>@media screen</code> で、幅の小さい端末の場合は、フォントサイズを小さくして誤魔化していますが、
 数が増えてレイアウトが崩れるまえに改行表示するように、根本的な修正をしたいんですけどね。それはまた・・・。</p>
-
 <h4 id="その後">その後</h4>
-
 <p>インライン要素のために改行が出来ていなかったので、モバイルのときはブロック要素に変更するようスタイルシートを調整しました。これでウダウダと書いた上の問題は解消したと思います。</p>
-
-<hr />
-
-<p>また何かあれば、随時追加します。<br />
+<hr>
+<p>また何かあれば、随時追加します。<br>
 Markdown 記法も覚えなきゃね。</p>
 
       </article>

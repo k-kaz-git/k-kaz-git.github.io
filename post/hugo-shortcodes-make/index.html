@@ -72,170 +72,125 @@ if (!doNotTrack) {
         <aside>
           <h2>目次</h2>
             <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#shortcodes-を作りましょう">Shortcodes を作りましょう</a></li>
-<li><a href="#メモを挿入する">メモを挿入する</a>
-<ul>
-<li><a href="#完成形">完成形</a></li>
-<li><a href="#中身">中身</a>
-<ul>
-<li><a href="#記述例">記述例</a></li>
-<li><a href="#memo-html">memo.html</a></li>
-<li><a href="#hoge-css">hoge.css</a></li>
-</ul></li>
-<li><a href="#vscode-にスニペット登録">VSCode にスニペット登録</a></li>
-</ul></li>
-<li><a href="#引用を挿入する-2019-03-15">引用を挿入する ［2019-03-15］</a>
-<ul>
-<li><a href="#完成形-1">完成形</a></li>
-<li><a href="#中身-1">中身</a>
-<ul>
-<li><a href="#記述例-1">記述例</a></li>
-<li><a href="#blockquote-html">blockquote.html</a></li>
-<li><a href="#hoge-css-1">hoge.css</a></li>
-</ul></li>
-</ul></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#shortcodes-を作りましょう">Shortcodes を作りましょう</a></li>
+    <li><a href="#メモを挿入する">メモを挿入する</a>
+      <ul>
+        <li><a href="#完成形">完成形</a></li>
+        <li><a href="#中身">中身</a></li>
+        <li><a href="#vscode-にスニペット登録">VSCode にスニペット登録</a></li>
+      </ul>
+    </li>
+    <li><a href="#引用を挿入する-2019-03-15">引用を挿入する ［2019-03-15］</a>
+      <ul>
+        <li><a href="#完成形-1">完成形</a></li>
+        <li><a href="#中身-1">中身</a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
         </aside>
-        
-
-<h2 id="shortcodes-を作りましょう">Shortcodes を作りましょう</h2>
-
+        <h2 id="shortcodes-を作りましょう">Shortcodes を作りましょう</h2>
 <p>少し前に勉強しましたので、実際に作ってみましょう。</p>
-
 <p><a href="../hugo-shortcodes/">Hugo の Shortcodes を使ってみる。</a></p>
-
-<hr />
-
+<hr>
 <div class="memo">
     <span class="memo-title">注意</span>
-    <p><p>こちらのサイトでは、スタイルシートを <code>scss</code> で書いています。<br />
-そこからコピペしてきたものを <code>css</code> に手直ししながら掲載しているので、もしかしたら記述ミスがあるかもしれません。その際はご容赦ください。<br />
-また、おかしな部分は、こっそり教えていただけると助かります。</p>
+    <p>
+こちらのサイトでは、スタイルシートを `scss` で書いています。  
+そこからコピペしてきたものを `css` に手直ししながら掲載しているので、もしかしたら記述ミスがあるかもしれません。その際はご容赦ください。  
+また、おかしな部分は、こっそり教えていただけると助かります。
 </p>
 </div>
-
-
 <h2 id="メモを挿入する">メモを挿入する</h2>
-
 <h3 id="完成形">完成形</h3>
-
 <div class="memo">
     <span class="memo-title">メモ</span>
-    <p><p>メモ書きを記事内に挿入するためのショートコードです。<br />
-うまく出来ているでしょうか。</p>
+    <p>
+メモ書きを記事内に挿入するためのショートコードです。  
+うまく出来ているでしょうか。
 </p>
 </div>
-
-
 <p>基本形はいつもの <a href="https://saruwakakun.com/html-css/reference/css-sample">サルワカさん</a> から頂戴しています。</p>
-
 <h3 id="中身">中身</h3>
-
 <h4 id="記述例">記述例</h4>
-
-<script type="application/javascript" src="//gist.github.com/k-kaz-git/954ff77860dcbc29782ebd7ac44f4d16.js"></script>
-
+<script type="application/javascript" src="https://gist.github.com/k-kaz-git/954ff77860dcbc29782ebd7ac44f4d16.js"></script>
 <div class="memo">
     <span class="memo-title">これを直したい</span>
-    <p><p>通常のコード入力だと Shortcodes が展開されちゃうので、毎回 gist に頼っています。それをなんとかしたい今日このごろ。</p>
+    <p>
+通常のコード入力だと Shortcodes が展開されちゃうので、毎回 gist に頼っています。それをなんとかしたい今日このごろ。
 </p>
 </div>
-
-
-<h4 id="memo-html">memo.html</h4>
-
-<pre><code class="language-html">&lt;div class=&quot;memo&quot;&gt;
-    &lt;span class=&quot;memo-title&quot;&gt;{{.Get 0}}&lt;/span&gt;
-    &lt;p&gt;{{.Inner}}&lt;/p&gt;
-&lt;/div&gt;
-</code></pre>
-
-<h4 id="hoge-css">hoge.css</h4>
-
-<pre><code class="language-css">.memo {
-  position: relative;
-  margin: 2em 2em;
-  padding: 0.5em 1em;
-  border: solid 1px #a9a9a9;
-  background: #f5f5f5;
-  max-width: 70%;
+<h4 id="memohtml">memo.html</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;memo&#34;</span>&gt;
+    &lt;<span style="color:#f92672">span</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;memo-title&#34;</span>&gt;{{.Get 0}}&lt;/<span style="color:#f92672">span</span>&gt;
+    &lt;<span style="color:#f92672">p</span>&gt;{{.Inner}}&lt;/<span style="color:#f92672">p</span>&gt;
+&lt;/<span style="color:#f92672">div</span>&gt;
+</code></pre></div><h4 id="hogecss">hoge.css</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#a6e22e">memo</span> {
+  <span style="color:#66d9ef">position</span>: <span style="color:#66d9ef">relative</span>;
+  <span style="color:#66d9ef">margin</span>: <span style="color:#ae81ff">2</span><span style="color:#66d9ef">em</span> <span style="color:#ae81ff">2</span><span style="color:#66d9ef">em</span>;
+  <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">0.5</span><span style="color:#66d9ef">em</span> <span style="color:#ae81ff">1</span><span style="color:#66d9ef">em</span>;
+  <span style="color:#66d9ef">border</span>: <span style="color:#66d9ef">solid</span> <span style="color:#ae81ff">1</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">#a9a9a9</span>;
+  <span style="color:#66d9ef">background</span>: <span style="color:#ae81ff">#f5f5f5</span>;
+  <span style="color:#66d9ef">max-width</span>: <span style="color:#ae81ff">70</span><span style="color:#66d9ef">%</span>;
 }
-.memo .memo-title {
-    position: absolute;
-    display: inline-block;
-    top: -26px;
-    left: -1px;
-    padding: 0 9px;
-    height: 25px;
-    line-height: 25px;
-    vertical-align: middle;
-    font-size: 0.8em;
-    background: #a9a9a9;
-    color: #ffffff;
-    font-weight: bold;
-    border-radius: 5px 5px 0 0;
+.<span style="color:#a6e22e">memo</span> .<span style="color:#a6e22e">memo-title</span> {
+    <span style="color:#66d9ef">position</span>: <span style="color:#66d9ef">absolute</span>;
+    <span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">inline</span><span style="color:#f92672">-</span><span style="color:#66d9ef">block</span>;
+    <span style="color:#66d9ef">top</span>: <span style="color:#ae81ff">-26</span><span style="color:#66d9ef">px</span>;
+    <span style="color:#66d9ef">left</span>: <span style="color:#ae81ff">-1</span><span style="color:#66d9ef">px</span>;
+    <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">9</span><span style="color:#66d9ef">px</span>;
+    <span style="color:#66d9ef">height</span>: <span style="color:#ae81ff">25</span><span style="color:#66d9ef">px</span>;
+    <span style="color:#66d9ef">line-height</span>: <span style="color:#ae81ff">25</span><span style="color:#66d9ef">px</span>;
+    <span style="color:#66d9ef">vertical-align</span>: <span style="color:#66d9ef">middle</span>;
+    <span style="color:#66d9ef">font-size</span>: <span style="color:#ae81ff">0.8</span><span style="color:#66d9ef">em</span>;
+    <span style="color:#66d9ef">background</span>: <span style="color:#ae81ff">#a9a9a9</span>;
+    <span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#ffffff</span>;
+    <span style="color:#66d9ef">font-weight</span>: <span style="color:#66d9ef">bold</span>;
+    <span style="color:#66d9ef">border-radius</span>: <span style="color:#ae81ff">5</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">5</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span>;
 }
-.memo p {
-    margin: 0;
-    padding: 0;
-    font-size: 0.8em;
+.<span style="color:#a6e22e">memo</span> <span style="color:#f92672">p</span> {
+    <span style="color:#66d9ef">margin</span>: <span style="color:#ae81ff">0</span>;
+    <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">0</span>;
+    <span style="color:#66d9ef">font-size</span>: <span style="color:#ae81ff">0.8</span><span style="color:#66d9ef">em</span>;
 }
 
-</code></pre>
-
-<h3 id="vscode-にスニペット登録">VSCode にスニペット登録</h3>
-
-<script type="application/javascript" src="//gist.github.com/k-kaz-git/fdf4888a89f20ee6238ea56de99e8524.js"></script>
-
+</code></pre></div><h3 id="vscode-にスニペット登録">VSCode にスニペット登録</h3>
+<script type="application/javascript" src="https://gist.github.com/k-kaz-git/fdf4888a89f20ee6238ea56de99e8524.js"></script>
 <h2 id="引用を挿入する-2019-03-15">引用を挿入する ［2019-03-15］</h2>
-
 <h3 id="完成形-1">完成形</h3>
-
 <blockquote>
-    <p><p>引用（いんよう、英語：citation, quotation）とは、広義には、自己のオリジナル作品のなかで他人の著作を副次的に紹介する行為、先人の芸術作品やその要素を副次的に自己の作品に取り入れること。</p>
+    <p>
+引用（いんよう、英語：citation, quotation）とは、広義には、自己のオリジナル作品のなかで他人の著作を副次的に紹介する行為、先人の芸術作品やその要素を副次的に自己の作品に取り入れること。
 </p><br>
     <cite><a class="author" href="https://ja.wikipedia.org/wiki/%e5%bc%95%e7%94%a8">Wikipedia</a></cite>
 </blockquote>
-
-
 <h3 id="中身-1">中身</h3>
-
 <h4 id="記述例-1">記述例</h4>
-
-<script type="application/javascript" src="//gist.github.com/k-kaz-git/9345ab4fab29cd73b3a202cdce34792b.js"></script>
-
-<h4 id="blockquote-html">blockquote.html</h4>
-
-<pre><code class="language-html">&lt;blockquote&gt;
-    &lt;p&gt;{{.Inner}}&lt;/p&gt;&lt;br&gt;
-    &lt;cite&gt;&lt;a class=&quot;author&quot; href=&quot;{{.Get &quot;link&quot;}}&quot;&gt;{{.Get &quot;author&quot;}}&lt;/a&gt;&lt;/cite&gt;
-&lt;/blockquote&gt;
-</code></pre>
-
-<h4 id="hoge-css-1">hoge.css</h4>
-
-<pre><code class="language-css">blockquote {
-  font-size: 0.8em;
-  padding-bottom: 0;
+<script type="application/javascript" src="https://gist.github.com/k-kaz-git/9345ab4fab29cd73b3a202cdce34792b.js"></script>
+<h4 id="blockquotehtml">blockquote.html</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">blockquote</span>&gt;
+    &lt;<span style="color:#f92672">p</span>&gt;{{.Inner}}&lt;/<span style="color:#f92672">p</span>&gt;&lt;<span style="color:#f92672">br</span>&gt;
+    &lt;<span style="color:#f92672">cite</span>&gt;&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;author&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{.Get &#34;</span><span style="color:#a6e22e">link</span><span style="color:#960050;background-color:#1e0010">&#34;}}&#34;</span>&gt;{{.Get &#34;author&#34;}}&lt;/<span style="color:#f92672">a</span>&gt;&lt;/<span style="color:#f92672">cite</span>&gt;
+&lt;/<span style="color:#f92672">blockquote</span>&gt;
+</code></pre></div><h4 id="hogecss-1">hoge.css</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">blockquote</span> {
+  <span style="color:#66d9ef">font-size</span>: <span style="color:#ae81ff">0.8</span><span style="color:#66d9ef">em</span>;
+  <span style="color:#66d9ef">padding-bottom</span>: <span style="color:#ae81ff">0</span>;
 }
-blockquote a.author {
-    font-size: 1em;
-    line-height: 3em;
-    font-style: normal;
-    text-decoration: none;
-    border-bottom: 1px dashed;
+<span style="color:#f92672">blockquote</span> <span style="color:#f92672">a</span>.<span style="color:#a6e22e">author</span> {
+    <span style="color:#66d9ef">font-size</span>: <span style="color:#ae81ff">1</span><span style="color:#66d9ef">em</span>;
+    <span style="color:#66d9ef">line-height</span>: <span style="color:#ae81ff">3</span><span style="color:#66d9ef">em</span>;
+    <span style="color:#66d9ef">font-style</span>: <span style="color:#66d9ef">normal</span>;
+    <span style="color:#66d9ef">text-decoration</span>: <span style="color:#66d9ef">none</span>;
+    <span style="color:#66d9ef">border-bottom</span>: <span style="color:#ae81ff">1</span><span style="color:#66d9ef">px</span> <span style="color:#66d9ef">dashed</span>;
 }
-blockquote a.author:hover {
-      font-weight: bold;
-      border-bottom: 2px dashed;
+<span style="color:#f92672">blockquote</span> <span style="color:#f92672">a</span>.<span style="color:#a6e22e">author</span>:<span style="color:#a6e22e">hover</span> {
+      <span style="color:#66d9ef">font-weight</span>: <span style="color:#66d9ef">bold</span>;
+      <span style="color:#66d9ef">border-bottom</span>: <span style="color:#ae81ff">2</span><span style="color:#66d9ef">px</span> <span style="color:#66d9ef">dashed</span>;
 }
-</code></pre>
-
+</code></pre></div>
       </article>
       <hr>
       <p class="post-date">

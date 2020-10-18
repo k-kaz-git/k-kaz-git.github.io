@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>k-kaz</title>
@@ -6,80 +5,17 @@
     <description>Recent content on k-kaz</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Wed, 14 Oct 2020 18:51:11 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 18 Oct 2020 20:00:29 +0900</lastBuildDate>
     
         <atom:link href="https://k-kaz-git.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Deploy でエラーが出たんですけど。</title>
-      <link>https://k-kaz-git.github.io/post/hugo-deploy-error/</link>
-      <pubDate>Wed, 14 Oct 2020 18:51:11 +0900</pubDate>
+      <title>Posts</title>
+      <link>https://k-kaz-git.github.io/post/</link>
+      <pubDate>Sun, 18 Oct 2020 20:00:29 +0900</pubDate>
       
-      <guid>https://k-kaz-git.github.io/post/hugo-deploy-error/</guid>
-      <description>1年半振りの Deploy で・・・。</description>
-    </item><item>
-      <title>Hugo の目次について考える</title>
-      <link>https://k-kaz-git.github.io/post/hugo-custom-tableofcontents/</link>
-      <pubDate>Tue, 02 Apr 2019 19:26:27 +0900</pubDate>
-      
-      <guid>https://k-kaz-git.github.io/post/hugo-custom-tableofcontents/</guid>
-      <description>Hugo に目次を入れようと思ったのです。</description>
-    </item><item>
-      <title>Mozc Ut2 を Install したよ。</title>
-      <link>https://k-kaz-git.github.io/post/mozc-ut2-install/</link>
-      <pubDate>Sun, 31 Mar 2019 17:45:32 +0900</pubDate>
-      
-      <guid>https://k-kaz-git.github.io/post/mozc-ut2-install/</guid>
-      <description>Linux Mint に Mozc Ut2 をインストールしました。</description>
-    </item><item>
-      <title>Hugo のテーマを作ったよ。</title>
-      <link>https://k-kaz-git.github.io/post/hugo-k-kaz-theme/</link>
-      <pubDate>Mon, 18 Mar 2019 12:31:49 +0900</pubDate>
-      
-      <guid>https://k-kaz-git.github.io/post/hugo-k-kaz-theme/</guid>
-      <description>Hugo のテーマを自作してみました。途中で放り投げたけど（笑）</description>
-    </item><item>
-      <title>シンタックスハイライトを自分好みの色にする</title>
-      <link>https://k-kaz-git.github.io/post/code-highlight/</link>
-      <pubDate>Thu, 14 Mar 2019 17:44:58 +0900</pubDate>
-      
-      <guid>https://k-kaz-git.github.io/post/code-highlight/</guid>
-      <description>シンタックスハイライトの色をスタイルシートで変更してみます。</description>
-    </item><item>
-      <title>自作の Hugo用 Shortcodes</title>
-      <link>https://k-kaz-git.github.io/post/hugo-shortcodes-make/</link>
-      <pubDate>Thu, 14 Mar 2019 12:42:21 +0900</pubDate>
-      
-      <guid>https://k-kaz-git.github.io/post/hugo-shortcodes-make/</guid>
-      <description>自作の Shortcodes をテストしたり、思い出すための場所</description>
-    </item><item>
-      <title>テーマ Cupper のカスタマイズ</title>
-      <link>https://k-kaz-git.github.io/post/hugo-custom-theme-cupper/</link>
-      <pubDate>Tue, 12 Mar 2019 16:02:29 +0900</pubDate>
-      
-      <guid>https://k-kaz-git.github.io/post/hugo-custom-theme-cupper/</guid>
-      <description>テーマ Cupper のカスタマイズをこちらにまとめます。</description>
-    </item><item>
-      <title>Hugo の Shortcodes を使ってみる。</title>
-      <link>https://k-kaz-git.github.io/post/hugo-shortcodes/</link>
-      <pubDate>Mon, 11 Mar 2019 17:40:19 +0900</pubDate>
-      
-      <guid>https://k-kaz-git.github.io/post/hugo-shortcodes/</guid>
-      <description>Shortcodes を使うと便利そうなので、ちょっと勉強します。</description>
-    </item><item>
-      <title>ファビコンを作るよ。</title>
-      <link>https://k-kaz-git.github.io/post/favicon-generator/</link>
-      <pubDate>Sun, 10 Mar 2019 06:37:26 +0900</pubDate>
-      
-      <guid>https://k-kaz-git.github.io/post/favicon-generator/</guid>
-      <description>Favicon Generator を使って、ファビコンを作りましょう。</description>
-    </item><item>
-      <title>Hugo を Netlify で動かすよ。</title>
-      <link>https://k-kaz-git.github.io/post/hugo-netlify/</link>
-      <pubDate>Thu, 07 Mar 2019 14:44:55 +0900</pubDate>
-      
-      <guid>https://k-kaz-git.github.io/post/hugo-netlify/</guid>
-      <description>Hugo を Netlify で動かしてみたときの記録です。</description>
+      <guid>https://k-kaz-git.github.io/post/</guid>
+      <description></description>
     </item>
   </channel>
 </rss>

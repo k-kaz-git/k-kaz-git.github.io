@@ -72,161 +72,108 @@ if (!doNotTrack) {
         <aside>
           <h2>目次</h2>
             <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#はじめに">はじめに</a></li>
-<li><a href="#hugo-で使える-markdown-記法">Hugo で使える Markdown 記法</a>
-<ul>
-<li><a href="#見出し-h">見出し（h）</a></li>
-<li><a href="#改行-br">改行（br）</a></li>
-<li><a href="#強調-strong">強調（strong）</a></li>
-<li><a href="#画像挿入-img">画像挿入（img）</a></li>
-<li><a href="#リンク-a-href">リンク（a href）</a>
-<ul>
-<li><a href="#テキストリンク">テキストリンク</a></li>
-<li><a href="#画像リンク">画像リンク</a></li>
-</ul></li>
-<li><a href="#コード-code">コード（code）</a></li>
-<li><a href="#整形済みテキスト-pre">整形済みテキスト（pre）</a></li>
-<li><a href="#水平線-hr">水平線（hr）</a></li>
-<li><a href="#取り消し線-s">取り消し線（s）</a></li>
-</ul></li>
-<li><a href="#wordpress-でも使えるよ-2019-03-06">WordPress でも使えるよ［2019-03-06］</a>
-<ul>
-<li><a href="#注意点">注意点</a></li>
-</ul></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#はじめに">はじめに</a></li>
+    <li><a href="#hugo-で使える-markdown-記法">Hugo で使える Markdown 記法</a>
+      <ul>
+        <li><a href="#見出しh">見出し（h）</a></li>
+        <li><a href="#改行br">改行（br）</a></li>
+        <li><a href="#強調strong">強調（strong）</a></li>
+        <li><a href="#画像挿入img">画像挿入（img）</a></li>
+        <li><a href="#リンクa-href">リンク（a href）</a></li>
+        <li><a href="#コードcode">コード（code）</a></li>
+        <li><a href="#整形済みテキストpre">整形済みテキスト（pre）</a></li>
+        <li><a href="#水平線hr">水平線（hr）</a></li>
+        <li><a href="#取り消し線s">取り消し線（s）</a></li>
+      </ul>
+    </li>
+    <li><a href="#wordpress-でも使えるよ2019-03-06">WordPress でも使えるよ［2019-03-06］</a>
+      <ul>
+        <li><a href="#注意点">注意点</a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
         </aside>
-        
-
-<h2 id="はじめに">はじめに</h2>
-
-<p>Markdown には、基本となるものから、機能拡張されたものまであり、使用する環境によって微妙に使えるコマンド、使えないコマンドがあるようです。<br />
+        <h2 id="はじめに">はじめに</h2>
+<p>Markdown には、基本となるものから、機能拡張されたものまであり、使用する環境によって微妙に使えるコマンド、使えないコマンドがあるようです。<br>
 この前、外部リンクを開くための記述をネットで探して入れてみましたが、残念ながらココでは動かず・・・。</p>
-
 <p>ということで、<strong>Hugo で使える Markdown を、自分のためにまとめておきます。</strong></p>
-
 <p>Markdown の中で HTML を書いちゃえばなんとでもなりますが（笑）</p>
-
 <h2 id="hugo-で使える-markdown-記法">Hugo で使える Markdown 記法</h2>
-
-<p>普段、よく使うものだけ。<br />
+<p>普段、よく使うものだけ。<br>
 正式な記法であったり、もっと辞書的なものをお求めの方は、<a href="https://www.google.co.jp">Google先生</a>にお尋ねください。m(_ _)m</p>
-
-<h3 id="見出し-h">見出し（h）</h3>
-
+<h3 id="見出しh">見出し（h）</h3>
 <p><code>#</code> の数で <code>h1 ～ h5</code> を表し、その右に見出しの文字列。</p>
-
-<pre><code class="language-txt"># 見出し（h1）
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt"># 見出し（h1）
 ## 見出し（h2）
 ### 見出し（h3）
 #### 見出し（h4）
 ##### 見出し（h5）
-</code></pre>
-
-<h3 id="改行-br">改行（br）</h3>
-
-<p>行末にスペースを2つ付けます。<br />
-見えませんけど、想像してください（笑）<br />
+</code></pre></div><h3 id="改行br">改行（br）</h3>
+<p>行末にスペースを2つ付けます。<br>
+見えませんけど、想像してください（笑）<br>
 実際に改行していなくても、スペース2つが間に入っていれば、続けて書いていてもそこで改行されます。まぁ、<code>&lt;br&gt;</code> と同じです。</p>
-
 <pre><code>改行前の文章  
 改行後の文章
 </code></pre>
-
-<h3 id="強調-strong">強調（strong）</h3>
-
+<h3 id="強調strong">強調（strong）</h3>
 <p><code>**</code> で文字列を挟む。</p>
-
 <pre><code>** hoge **
 </code></pre>
-
-<h3 id="画像挿入-img">画像挿入（img）</h3>
-
+<h3 id="画像挿入img">画像挿入（img）</h3>
 <p>タイトルは省略可能。</p>
-
 <pre><code>![代替えテキスト](/iamges/hoge.webp)
 ![代替えテキスト](/iamges/hoge.webp &quot;タイトル&quot;)
 </code></pre>
-
-<h3 id="リンク-a-href">リンク（a href）</h3>
-
-<p>残念ながら、<code>target</code> は指定できない。<br />
+<h3 id="リンクa-href">リンク（a href）</h3>
+<p>残念ながら、<code>target</code> は指定できない。<br>
 どうしてもやりたい場合は、HTML で書く。</p>
-
 <h4 id="テキストリンク">テキストリンク</h4>
-
 <p>タイトルは省略可能。</p>
-
 <pre><code>[hoge](https://hoge.com)
 [hoge](https://hoge.com &quot;タイトル&quot;)
 </code></pre>
-
 <h4 id="画像リンク">画像リンク</h4>
-
 <p>タイトルは省略可能。</p>
-
 <pre><code>[![代替えテキスト](/iamges/hoge.webp &quot;タイトル&quot;)](https://hoge.com)
 [![代替えテキスト](/iamges/hoge.webp)](https://hoge.com)
 </code></pre>
-
-<h3 id="コード-code">コード（code）</h3>
-
+<h3 id="コードcode">コード（code）</h3>
 <p>文中に差し込むコードは ` （バッククォート）で挟む。</p>
-
 <pre><code>文字列 `コード` 文字列
 </code></pre>
-
-<h3 id="整形済みテキスト-pre">整形済みテキスト（pre）</h3>
-
-<p>単純にコードを記述する場合は、タブで行頭を開ける。<br />
-コードの前後にあたる行は空行でないとうまく読み取れないことあり。<br />
-また、特定のフォーマットでシンタックスハイライトを付ける場合は、```html とかにする。<br />
+<h3 id="整形済みテキストpre">整形済みテキスト（pre）</h3>
+<p>単純にコードを記述する場合は、タブで行頭を開ける。<br>
+コードの前後にあたる行は空行でないとうまく読み取れないことあり。<br>
+また、特定のフォーマットでシンタックスハイライトを付ける場合は、```html とかにする。<br>
 htmlの部分は、php、md・・・いろいろ入れられるので、ケースに合わせて使用する。</p>
-
 <pre><code>[hoge](https://hoge.com)
 [hoge](https://hoge.com)
 </code></pre>
-
-<h3 id="水平線-hr">水平線（hr）</h3>
-
-<p><code>***</code> もしくは <code>---</code> で水平線が書けます。<br />
+<h3 id="水平線hr">水平線（hr）</h3>
+<p><code>***</code> もしくは <code>---</code> で水平線が書けます。<br>
 前後に文字列が入ってはいけません。</p>
-
 <pre><code>***
 </code></pre>
-
-<h3 id="取り消し線-s">取り消し線（s）</h3>
-
+<h3 id="取り消し線s">取り消し線（s）</h3>
 <p><code>~~</code> で取り消す文字列を挟みます。</p>
-
 <pre><code>~~取り消す文字列~~
 </code></pre>
-
-<h2 id="wordpress-でも使えるよ-2019-03-06">WordPress でも使えるよ［2019-03-06］</h2>
-
-<p>余談ですが・・・。<br />
+<h2 id="wordpress-でも使えるよ2019-03-06">WordPress でも使えるよ［2019-03-06］</h2>
+<p>余談ですが・・・。<br>
 WordPress 5.0 でお目見えしたブロックエディタ（旧呼称 Gutenberg）は、Markdown に対応しています。
 エディタで書いてから、ブロックエディタに貼り付けるとうまい具合に変換してくれました。</p>
-
 <h3 id="注意点">注意点</h3>
-
-<p>VSCode のように、Markdown の書式にあわせて文字色を変えてくれる優秀なエディタの場合、コピーした際にその情報まで持っていってしまい、うまく反映ができません。<br />
+<p>VSCode のように、Markdown の書式にあわせて文字色を変えてくれる優秀なエディタの場合、コピーした際にその情報まで持っていってしまい、うまく反映ができません。<br>
 面倒ですが、以下のような方法をとってください。</p>
-
 <ul>
 <li>Markdownモードで作成 → テキストモード or メモ帳 に貼り付け＆コピー → ブロックエディタに貼り付け</li>
 <li>最初からテキストモード or メモ帳みたいなシンプル機能のエディタを使う</li>
 </ul>
-
-<hr />
-
+<hr>
 <p>またよく使うものが出てきたら追記します。</p>
-
-<p>ここに分かりやすく書いてあった。<br />
+<p>ここに分かりやすく書いてあった。<br>
 <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet" title="Markdown Cheatsheet">Markdown Cheatsheet</a></p>
 
       </article>

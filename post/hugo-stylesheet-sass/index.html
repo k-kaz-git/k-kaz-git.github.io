@@ -72,175 +72,114 @@ if (!doNotTrack) {
         <aside>
           <h2>目次</h2>
             <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#余談ですが-いつもお世話になっているサイト様">余談ですが、いつもお世話になっているサイト様</a></li>
-<li><a href="#hugo-で-sass-を使ってみる">Hugo で Sass を使ってみる。</a>
-<ul>
-<li><a href="#hugo-のバージョンを確認する">Hugo のバージョンを確認する。</a></li>
-<li><a href="#hugo-の-extended版-をダウンロードする-必要あれば">Hugo の extended版 をダウンロードする。（必要あれば）</a></li>
-<li><a href="#sass-のファイルを用意する">Sass のファイルを用意する。</a></li>
-<li><a href="#スタイルシートを読み込む-html-の編集をする">スタイルシートを読み込む html の編集をする。</a></li>
-<li><a href="#あとはお好きにスタイルシートを弄ってください">あとはお好きにスタイルシートを弄ってください。</a></li>
-</ul></li>
-<li><a href="#怒られたのは-main-scss-の中身">怒られたのは、main.scss の中身</a>
-<ul>
-<li><a href="#何か問題でも">何か問題でも？</a></li>
-<li><a href="#その前に-色の指定について">その前に、色の指定について</a></li>
-<li><a href="#今回の間違いは">今回の間違いは・・・</a></li>
-</ul></li>
-<li><a href="#同じ-sass-だけど-sass-か-scss-か">同じ Sass だけど .sass か .scss か</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#余談ですがいつもお世話になっているサイト様">余談ですが、いつもお世話になっているサイト様</a></li>
+    <li><a href="#hugo-で-sass-を使ってみる">Hugo で Sass を使ってみる。</a>
+      <ul>
+        <li><a href="#hugo-のバージョンを確認する">Hugo のバージョンを確認する。</a></li>
+        <li><a href="#hugo-の-extended版-をダウンロードする必要あれば">Hugo の extended版 をダウンロードする。（必要あれば）</a></li>
+        <li><a href="#sass-のファイルを用意する">Sass のファイルを用意する。</a></li>
+        <li><a href="#スタイルシートを読み込む-html-の編集をする">スタイルシートを読み込む html の編集をする。</a></li>
+        <li><a href="#あとはお好きにスタイルシートを弄ってください">あとはお好きにスタイルシートを弄ってください。</a></li>
+      </ul>
+    </li>
+    <li><a href="#怒られたのはmainscss-の中身">怒られたのは、main.scss の中身</a>
+      <ul>
+        <li><a href="#何か問題でも">何か問題でも？</a></li>
+        <li><a href="#その前に色の指定について">その前に、色の指定について</a></li>
+        <li><a href="#今回の間違いは">今回の間違いは・・・</a></li>
+      </ul>
+    </li>
+    <li><a href="#同じ-sass-だけど-sass-か-scss-か">同じ Sass だけど .sass か .scss か</a></li>
+  </ul>
 </nav>
         </aside>
-        
-
-<h2 id="余談ですが-いつもお世話になっているサイト様">余談ですが、いつもお世話になっているサイト様</h2>
-
-<p>スタイルシートの記述で迷ったとき、こちらのサイトを参考にすることが多いです。<br />
+        <h2 id="余談ですがいつもお世話になっているサイト様">余談ですが、いつもお世話になっているサイト様</h2>
+<p>スタイルシートの記述で迷ったとき、こちらのサイトを参考にすることが多いです。<br>
 いつもお世話になっております。</p>
-
-<p><a href="https://saruwakakun.com/html-css">サルワカ: HTML&amp;CSS</a><br />
+<p><a href="https://saruwakakun.com/html-css">サルワカ: HTML&amp;CSS</a><br>
 <a href="https://developer.mozilla.org/ja/docs/Web/CSS">MDN: CSS リファレンス</a></p>
-
 <h2 id="hugo-で-sass-を使ってみる">Hugo で Sass を使ってみる。</h2>
-
-<p>本題へ。<br />
+<p>本題へ。<br>
 昨年、Hugo も Sass に対応したようですが、標準のモジュールでは使えず、extended版 が必要になります。</p>
-
 <h3 id="hugo-のバージョンを確認する">Hugo のバージョンを確認する。</h3>
-
 <p><code>hugo version</code> で現在のバージョンが確認できます。</p>
-
-<pre><code class="language-html">hugo version
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">hugo version
 Hugo Static Site Generator v0.54.0/extended hogehoge...
-</code></pre>
-
-<p><code>extended</code> の文字があった方はおめでとうございます。
+</code></pre></div><p><code>extended</code> の文字があった方はおめでとうございます。
 無かった方はダウロードを行ってください。</p>
-
-<h3 id="hugo-の-extended版-をダウンロードする-必要あれば">Hugo の extended版 をダウンロードする。（必要あれば）</h3>
-
-<p>extended版 では無かった方。<br />
-こちらから、extended ってファイル名に付与されているものをダウンロードしてください。<br />
+<h3 id="hugo-の-extended版-をダウンロードする必要あれば">Hugo の extended版 をダウンロードする。（必要あれば）</h3>
+<p>extended版 では無かった方。<br>
+こちらから、extended ってファイル名に付与されているものをダウンロードしてください。<br>
 下のほうにあるはず。</p>
-
 <p><a href="https://github.com/gohugoio/hugo/releases">Releases · gohugoio/hugo</a></p>
-
 <p>ダウンロード後、入れ替えをします。</p>
-
 <h3 id="sass-のファイルを用意する">Sass のファイルを用意する。</h3>
-
-<p>現在使っているスタイルシートで良いので、下記に配置します。<br />
+<p>現在使っているスタイルシートで良いので、下記に配置します。<br>
 また、この後の作業をスムーズにするため、ファイル名も変更しています。</p>
-
 <p><code>サイト名\assets\sass\main.scss</code></p>
-
-<p><code>assets\sass</code> がない場合は作っちゃってください。<br />
+<p><code>assets\sass</code> がない場合は作っちゃってください。<br>
 また、<code>Sass</code> には <code>.sass</code> と <code>.scss</code> の2種類が存在しますが、元の <code>css</code> と互換性のある <code>.scss</code> としています。ここは好きな方にして良いですが、<code>.sass</code> の場合は、中身の編集もあわせてお願いします。</p>
-
 <h3 id="スタイルシートを読み込む-html-の編集をする">スタイルシートを読み込む html の編集をする。</h3>
-
 <p>テーマによってファイルが異なると思いますが、ここでは aether の場合で書いていきます。</p>
-
-<p><code>サイト名\layouts\partials\head.html</code> を開きます。<br />
+<p><code>サイト名\layouts\partials\head.html</code> を開きます。<br>
 ファイルが無い方は、テーマの中 <code>テーマ名\themes\aether\layouts\partials\head.html</code> から、コピーして持ってきてください。</p>
-
-<pre><code class="language-html">&lt;link rel=&quot;stylesheet&quot; href=&quot;{{ &quot;css/main.min.css&quot; | absURL}}&quot; /&gt;
-{{ $style := resources.Get &quot;sass/main.scss&quot; | toCSS | minify | fingerprint }}
-&lt;link rel=&quot;stylesheet&quot; href=&quot;{{ $style.Permalink }}&quot;&gt;
-</code></pre>
-
-<p>1行目が元々入っている全体のスタイルシートの読み込み部分です。<br />
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ &#34;</span><span style="color:#a6e22e">css</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#a6e22e">main</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#a6e22e">min</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#a6e22e">css</span><span style="color:#960050;background-color:#1e0010">&#34;</span> <span style="color:#960050;background-color:#1e0010">|</span> <span style="color:#a6e22e">absURL</span><span style="color:#960050;background-color:#1e0010">}}&#34;</span> /&gt;
+{{ $style := resources.Get &#34;sass/main.scss&#34; | toCSS | minify | fingerprint }}
+&lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ $style.Permalink }}&#34;</span>&gt;
+</code></pre></div><p>1行目が元々入っている全体のスタイルシートの読み込み部分です。<br>
 今回は2行目と3行目を追加します。</p>
-
-<p>2行目<br />
-先程用意した <code>main.scss</code> を読み込み、パイプ <code>|</code> を使って、CSS 形式に変更したり、圧縮したりしています。<br />
+<p>2行目<br>
+先程用意した <code>main.scss</code> を読み込み、パイプ <code>|</code> を使って、CSS 形式に変更したり、圧縮したりしています。<br>
 パイプを使うと、どんどん右の作業工程へ材料を渡していけますので、1行だけでいくつかの加工が可能です。</p>
-
-<p>3行目<br />
+<p>3行目<br>
 2行目で加工したスタイルシートが <code>$style</code> に入っているので、それを通常通りの書式でスタイルシートとして読み込みます。</p>
-
 <p>※別途、スタイルシートを用意して読み込んでいた場合、置き換えるのであれば、その行を消してください。</p>
-
 <h3 id="あとはお好きにスタイルシートを弄ってください">あとはお好きにスタイルシートを弄ってください。</h3>
-
-<p>以上で、<code>Sass</code> を使うための準備は完了です。<br />
-ミスっていると、<code>hugo server</code> でローカルサーバーを立ち上げたときに怒られます。<br />
+<p>以上で、<code>Sass</code> を使うための準備は完了です。<br>
+ミスっていると、<code>hugo server</code> でローカルサーバーを立ち上げたときに怒られます。<br>
 ちなみに私は、事前準備は出来ていましたが、スタイルシートの中身で怒られました。</p>
-
 <p>それは次の項で。</p>
-
-<h2 id="怒られたのは-main-scss-の中身">怒られたのは、main.scss の中身</h2>
-
-<p>ローカルサーバーを立ち上げたときに、エラーが出て起動しませんでした。<br />
+<h2 id="怒られたのはmainscss-の中身">怒られたのは、main.scss の中身</h2>
+<p>ローカルサーバーを立ち上げたときに、エラーが出て起動しませんでした。<br>
 メッセージには、ご丁寧に</p>
-
 <ul>
 <li>スタイルシートの読み込みでエラーがあった</li>
-<li>何行目の何文字目がおかしい<br /></li>
+<li>何行目の何文字目がおかしい</li>
 </ul>
-
 <p>と書かれています。</p>
-
 <h3 id="何か問題でも">何か問題でも？</h3>
-
 <p>該当する箇所の確認をすると、背景色の指定をしているところでした。</p>
-
-<pre><code class="language-css">background: rgb(230, 90, 90, 0.2);
-</code></pre>
-
-<p><strong>何か問題でも？</strong></p>
-
-<p>しばらく気付かなかったんですけど、落ち着いて見たらようやく答えが分かりました。<br />
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">background</span><span style="color:#f92672">:</span> <span style="color:#f92672">rgb</span><span style="color:#f92672">(</span><span style="color:#f92672">230</span><span style="color:#f92672">,</span> <span style="color:#f92672">90</span><span style="color:#f92672">,</span> <span style="color:#f92672">90</span><span style="color:#f92672">,</span> <span style="color:#f92672">0</span>.<span style="color:#a6e22e">2</span><span style="color:#f92672">);</span>
+</code></pre></div><p><strong>何か問題でも？</strong></p>
+<p>しばらく気付かなかったんですけど、落ち着いて見たらようやく答えが分かりました。<br>
 というか、そもそもこの透過処理のことを私がよく分かっていなかったのが問題です。</p>
-
-<h3 id="その前に-色の指定について">その前に、色の指定について</h3>
-
-<p>色の指定については、いくつかの方法があります。<br />
+<h3 id="その前に色の指定について">その前に、色の指定について</h3>
+<p>色の指定については、いくつかの方法があります。<br>
 ”赤” という色を表す場合、</p>
-
 <ul>
-<li>red<br /></li>
-<li>#ff0000<br /></li>
-<li>rgb（255,0,0）<br /></li>
+<li>red</li>
+<li>#ff0000</li>
+<li>rgb（255,0,0）</li>
 </ul>
-
 <p>こんな風に、何通りか指定方法があります。（実はまだ他にも・・・）</p>
-
 <h3 id="今回の間違いは">今回の間違いは・・・</h3>
-
 <p>で、今回の件なんですけど、<strong>背景色を透過させたい</strong>ということで指定をしています。</p>
-
-<p>透過させるときは、色指定に <code>rgb</code> を使ってあげるんです。<br />
+<p>透過させるときは、色指定に <code>rgb</code> を使ってあげるんです。<br>
 通常は、<code>rgb(red,green,blue)</code> の三原色で指定するんですが、そのあとに <code>alpha</code> というチャネルが入り、ここで透過具合を数値で入れると反映されます。</p>
-
 <p>私もそこまでは知っていたんですけど、<code>alpha</code> が入るときに <code>rgb</code> が <code>rgba</code> になることを知らなかったんですね。</p>
-
 <p>ということで、私の知識不足により、元々の <code>.css</code> からおかしかったというオチでした。</p>
-
 <p>下記のように書き直したところ、きちんとスタイルシートの変換がされ、サーバーが起動しました。</p>
-
-<pre><code class="language-css">background: rgba(230, 90, 90, 0.2);
-</code></pre>
-
-<h2 id="同じ-sass-だけど-sass-か-scss-か">同じ Sass だけど .sass か .scss か</h2>
-
-<p>Sass と言っても、記述方式が2通りあり、好きなほうを使えます。<br />
-<code>.sass</code> は、<code>{}</code> や <code>;</code> が不要なので、すっきり、そして少ない文字数でコーディングが可能。<br />
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">background</span><span style="color:#f92672">:</span> <span style="color:#f92672">rgba</span><span style="color:#f92672">(</span><span style="color:#f92672">230</span><span style="color:#f92672">,</span> <span style="color:#f92672">90</span><span style="color:#f92672">,</span> <span style="color:#f92672">90</span><span style="color:#f92672">,</span> <span style="color:#f92672">0</span>.<span style="color:#a6e22e">2</span><span style="color:#f92672">);</span>
+</code></pre></div><h2 id="同じ-sass-だけど-sass-か-scss-か">同じ Sass だけど .sass か .scss か</h2>
+<p>Sass と言っても、記述方式が2通りあり、好きなほうを使えます。<br>
+<code>.sass</code> は、<code>{}</code> や <code>;</code> が不要なので、すっきり、そして少ない文字数でコーディングが可能。<br>
 <code>.css</code> から拡張されている、いくつかの機能はどちらも同様に使えます。</p>
-
 <p><code>.sass</code> と <code>.scss</code> のどちらが良いのかというのは、ネット上でも議論されていますが、私の結論としては <strong>「好きな方をどうぞ」</strong> です。</p>
-
 <p>ちなみに私は、<code>.scss</code> にしました。</p>
-
 <p>最初は <code>.sass</code> のほうが絶対に良いだろうと思って、<code>.css</code> を書き直していたんですけど、<code>{}</code> が無いと、どこからどこまでが今書いている範囲なのか、パッと分かりませんでした。</p>
-
-<p>ということで、<strong>私の頭の都合で <code>.scss</code> を選んだ次第です。</strong><br />
+<p>ということで、<strong>私の頭の都合で <code>.scss</code> を選んだ次第です。</strong><br>
 そのような制限がなければ <code>.sass</code> を選んでいたかな。</p>
-
 <p>まぁ、最終的にはどちらも <code>.css</code> に変換されますので、サイトの表示速度に有利なのはこちらだとか無いはず。（私の理解では・・・）</p>
 
       </article>

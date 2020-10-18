@@ -1,0 +1,84 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts - k-kaz</title>
+    <link>https://k-kaz-git.github.io/post/</link>
+    <description>Recent content in Posts on k-kaz</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Sun, 18 Oct 2020 20:00:29 +0900</lastBuildDate>
+    
+        <atom:link href="https://k-kaz-git.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Hugo を Netlify で動かすよ。</title>
+      <link>https://k-kaz-git.github.io/post/hugo-netlify/</link>
+      <pubDate>Thu, 07 Mar 2019 14:44:55 +0900</pubDate>
+      
+      <guid>https://k-kaz-git.github.io/post/hugo-netlify/</guid>
+      <description>Hugo を Netlify で動かしてみたときの記録です。</description>
+    </item><item>
+      <title>Hugo で Sass を使ってみる</title>
+      <link>https://k-kaz-git.github.io/post/hugo-stylesheet-sass/</link>
+      <pubDate>Mon, 04 Mar 2019 10:05:17 +0900</pubDate>
+      
+      <guid>https://k-kaz-git.github.io/post/hugo-stylesheet-sass/</guid>
+      <description>Hugo で Sass を利用するのに少し設定が必要ですので、こちらにまとめます。</description>
+    </item><item>
+      <title>GitHub を使ってみる</title>
+      <link>https://k-kaz-git.github.io/post/github-how-to-use/</link>
+      <pubDate>Fri, 22 Feb 2019 15:49:24 +0900</pubDate>
+      
+      <guid>https://k-kaz-git.github.io/post/github-how-to-use/</guid>
+      <description>GitHub を有効活用しようと思います。</description>
+    </item><item>
+      <title>VSCode のスニペットを使ってみる</title>
+      <link>https://k-kaz-git.github.io/post/vscode-snippet/</link>
+      <pubDate>Fri, 22 Feb 2019 08:44:41 +0900</pubDate>
+      
+      <guid>https://k-kaz-git.github.io/post/vscode-snippet/</guid>
+      <description>スニペットを使って、入力速度を劇的にアップするのと、覚えきれない Markdown を調べずに使う。</description>
+    </item><item>
+      <title>Hugo で使える Markdown の記法</title>
+      <link>https://k-kaz-git.github.io/post/hugo-markdown/</link>
+      <pubDate>Thu, 21 Feb 2019 11:43:14 +0900</pubDate>
+      
+      <guid>https://k-kaz-git.github.io/post/hugo-markdown/</guid>
+      <description>自分用によく使う Markdown をまとめます。</description>
+    </item><item>
+      <title>Hugo の使い方</title>
+      <link>https://k-kaz-git.github.io/post/hugo-how-to-use/</link>
+      <pubDate>Wed, 20 Feb 2019 16:15:13 +0900</pubDate>
+      
+      <guid>https://k-kaz-git.github.io/post/hugo-how-to-use/</guid>
+      <description>Hugo の Tips 的なものをこちらにまとめます。</description>
+    </item><item>
+      <title>テーマ aether のカスタマイズ</title>
+      <link>https://k-kaz-git.github.io/post/hugo-custom-theme-aether/</link>
+      <pubDate>Mon, 18 Feb 2019 21:30:02 +0900</pubDate>
+      
+      <guid>https://k-kaz-git.github.io/post/hugo-custom-theme-aether/</guid>
+      <description>テーマ aether のカスタマイズをこちらにまとめます。</description>
+    </item><item>
+      <title>コメント欄を削除</title>
+      <link>https://k-kaz-git.github.io/post/hugo-custom-comment/</link>
+      <pubDate>Mon, 18 Feb 2019 12:23:37 +0900</pubDate>
+      
+      <guid>https://k-kaz-git.github.io/post/hugo-custom-comment/</guid>
+      <description>使わないので、コメント欄を消しました。</description>
+    </item><item>
+      <title>カスタマイズしてみたいな</title>
+      <link>https://k-kaz-git.github.io/post/hugo-custom/</link>
+      <pubDate>Sun, 17 Feb 2019 20:14:15 +0900</pubDate>
+      
+      <guid>https://k-kaz-git.github.io/post/hugo-custom/</guid>
+      <description>欲が出てきて、ホームページのカスタマイズをしたくなってきた。</description>
+    </item><item>
+      <title>Hugo 安定してきたかな</title>
+      <link>https://k-kaz-git.github.io/post/hugo-stable/</link>
+      <pubDate>Sun, 17 Feb 2019 04:50:58 +0900</pubDate>
+      
+      <guid>https://k-kaz-git.github.io/post/hugo-stable/</guid>
+      <description>そろそろいい感じかな</description>
+    </item>
+  </channel>
+</rss>

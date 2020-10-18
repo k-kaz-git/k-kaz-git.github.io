@@ -72,249 +72,152 @@ if (!doNotTrack) {
         <aside>
           <h2>目次</h2>
             <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#cupper-のカスタマイズをこちらにまとめます">Cupper のカスタマイズをこちらにまとめます。</a>
-<ul>
-<li><a href="#全然スタイルが適用されないんですけど-泣">全然スタイルが適用されないんですけど（泣）</a></li>
-</ul></li>
-<li><a href="#標準機能内">標準機能内</a>
-<ul>
-<li><a href="#ロゴ画像を差し替える">ロゴ画像を差し替える</a></li>
-</ul></li>
-<li><a href="#標準機能外">標準機能外</a>
-<ul>
-<li><a href="#h2-に付くリンクアイコンを消す">h2 に付くリンクアイコンを消す</a></li>
-<li><a href="#カテゴリーを追加する">カテゴリーを追加する</a>
-<ul>
-<li><a href="#設定ファイルに追加">設定ファイルに追加</a></li>
-<li><a href="#メニューに追加">メニューに追加</a></li>
-<li><a href="#記事のタイトル下に追加">記事のタイトル下に追加</a></li>
-</ul></li>
-<li><a href="#更新日を追加する">更新日を追加する</a>
-<ul>
-<li><a href="#設定の有効化">設定の有効化</a></li>
-<li><a href="#記事一覧に追加">記事一覧に追加</a></li>
-<li><a href="#記事のタイトル下に追加-1">記事のタイトル下に追加</a></li>
-</ul></li>
-<li><a href="#記事の概要を表示する">記事の概要を表示する</a>
-<ul>
-<li><a href="#記事に概要を書く-下準備">記事に概要を書く（下準備）</a></li>
-<li><a href="#記事一覧に概要を追加">記事一覧に概要を追加</a></li>
-</ul></li>
-<li><a href="#トップページを記事一覧ページにする-2019-03-19">トップページを記事一覧ページにする［2019-03-19］</a></li>
-</ul></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#cupper-のカスタマイズをこちらにまとめます">Cupper のカスタマイズをこちらにまとめます。</a>
+      <ul>
+        <li><a href="#全然スタイルが適用されないんですけど泣">全然スタイルが適用されないんですけど（泣）</a></li>
+      </ul>
+    </li>
+    <li><a href="#標準機能内">標準機能内</a>
+      <ul>
+        <li><a href="#ロゴ画像を差し替える">ロゴ画像を差し替える</a></li>
+      </ul>
+    </li>
+    <li><a href="#標準機能外">標準機能外</a>
+      <ul>
+        <li><a href="#h2-に付くリンクアイコンを消す">h2 に付くリンクアイコンを消す</a></li>
+        <li><a href="#カテゴリーを追加する">カテゴリーを追加する</a></li>
+        <li><a href="#更新日を追加する">更新日を追加する</a></li>
+        <li><a href="#記事の概要を表示する">記事の概要を表示する</a></li>
+        <li><a href="#トップページを記事一覧ページにする2019-03-19">トップページを記事一覧ページにする［2019-03-19］</a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
         </aside>
-        
-
-<h2 id="cupper-のカスタマイズをこちらにまとめます">Cupper のカスタマイズをこちらにまとめます。</h2>
-
-<h3 id="全然スタイルが適用されないんですけど-泣">全然スタイルが適用されないんですけど（泣）</h3>
-
-<p>aether は、簡単にスタイルの変更が出来たんですけど、Cupper は全然適用されない。<br />
+        <h2 id="cupper-のカスタマイズをこちらにまとめます">Cupper のカスタマイズをこちらにまとめます。</h2>
+<h3 id="全然スタイルが適用されないんですけど泣">全然スタイルが適用されないんですけど（泣）</h3>
+<p>aether は、簡単にスタイルの変更が出来たんですけど、Cupper は全然適用されない。<br>
 何でだろうと調べていたら、テーマによっては <code>config.toml</code> に手を入れなければいけないものがあることを知ったおじさんです。</p>
-
-<pre><code class="language-toml">[params]
-  customCSS = [&quot;/css/hoge.css&quot;]
-</code></pre>
-
-<p>こうすることで、<code>static/css/hoge.css</code> が元のスタイルシートの上に被さるようになるんだって。<br />
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[<span style="color:#a6e22e">params</span>]
+  <span style="color:#a6e22e">customCSS</span> = [<span style="color:#e6db74">&#34;/css/hoge.css&#34;</span>]
+</code></pre></div><p>こうすることで、<code>static/css/hoge.css</code> が元のスタイルシートの上に被さるようになるんだって。<br>
 もちろん <code>&lt;head&gt;&lt;/head&gt;</code> に読み込み用の追記が必要です。</p>
-
-<pre><code class="language-html">&lt;head&gt;
-    &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;/css/hoge.css&quot;&gt;
-&lt;/head&gt;
-</code></pre>
-
-<p>スタイルを弄る前段階で躓きましたよ・・・。</p>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">head</span>&gt;
+    &lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/css&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/css/hoge.css&#34;</span>&gt;
+&lt;/<span style="color:#f92672">head</span>&gt;
+</code></pre></div><p>スタイルを弄る前段階で躓きましたよ・・・。</p>
 <h2 id="標準機能内">標準機能内</h2>
-
 <h3 id="ロゴ画像を差し替える">ロゴ画像を差し替える</h3>
-
-<p>SVG形式のロゴ画像が必要になります。<br />
+<p>SVG形式のロゴ画像が必要になります。<br>
 私は <a href="https://inkscape.org/ja/">Inkscape</a> で作りました。</p>
-
-<p><img src="/images/cupper-custom-logo.svg" alt="cupper のロゴ画像" style="width:auto;"></p>
-
+<img src="/images/cupper-custom-logo.svg" alt="cupper のロゴ画像" style="width:auto;">
 <p>logo.svg というファイル名で保存して、下記に保存すると適用されます。</p>
-
 <p><code>static/images/logo.svg</code></p>
-
 <h2 id="標準機能外">標準機能外</h2>
-
 <h3 id="h2-に付くリンクアイコンを消す">h2 に付くリンクアイコンを消す</h3>
-
 <p>before: <img src="/images/cupper-custom-h2-icon-before.webp" alt="h2アイコンにリンクが付いちゃう" style="width:auto;" >
 after: <img src="/images/cupper-custom-h2-icon-after.webp" alt="h2アイコンにリンクが付いちゃう" style="width:auto;" ></p>
-
 <p>WordPress では、<a href="https://fontawesome.com">Font Awesome</a>  を使って、スタイルシートで設定していたので、これも同じかと思いきや、完全に外していました（笑）</p>
-
 <p>画像ファイルで指定していましたので、そのファイルを修正します。</p>
-
 <p><code>themes\cupper-hugo-theme\layouts\partials\svg.html</code></p>
-
 <p>↓ にコピーします。</p>
-
 <p><code>layouts\partials\svg.html</code></p>
-
 <p>この中にある <code>&lt;symbol id=&quot;link&quot;&gt; ～ &lt;/symbol&gt;</code> というのが、<code>h2</code> のところで使われているリンクアイコンなので、該当行を丸ごと削除すれば、きれいに消えます。</p>
-
-<pre><code class="language-html">&lt;symbol id=&quot;link&quot; viewBox=&quot;0 0 50 50&quot;&gt;
-  &lt;g transform=&quot;translate(0 -1002.4)&quot;&gt;
-   &lt;g transform=&quot;matrix(.095670 0 0 .095670 2.3233 1004.9)&quot;&gt;
-    &lt;g&gt;
-     &lt;path style=&quot;stroke-width:0;fill:currentColor&quot; d=&quot;m452.84 192.9-128.65 128.65c-35.535 35.54-93.108 35.54-128.65 0l-42.881-42.886 42.881-42.876 42.884 42.876c11.845 11.822 31.064 11.846 42.886 0l128.64-128.64c11.816-11.831 11.816-31.066 0-42.9l-42.881-42.881c-11.822-11.814-31.064-11.814-42.887 0l-45.928 45.936c-21.292-12.531-45.491-17.905-69.449-16.291l72.501-72.526c35.535-35.521 93.136-35.521 128.64 0l42.886 42.881c35.535 35.523 35.535 93.141-.001 128.66zm-254.28 168.51-45.903 45.9c-11.845 11.846-31.064 11.817-42.881 0l-42.884-42.881c-11.845-11.821-11.845-31.041 0-42.886l128.65-128.65c11.819-11.814 31.069-11.814 42.884 0l42.886 42.886 42.876-42.886-42.876-42.881c-35.54-35.521-93.113-35.521-128.65 0l-128.65 128.64c-35.538 35.545-35.538 93.146 0 128.65l42.883 42.882c35.51 35.54 93.11 35.54 128.65 0l72.496-72.499c-23.956 1.597-48.092-3.784-69.474-16.283z&quot;/&gt;
-    &lt;/g&gt;
-   &lt;/g&gt;
-  &lt;/g&gt;
-&lt;/symbol&gt;
-</code></pre>
-
-<h3 id="カテゴリーを追加する">カテゴリーを追加する</h3>
-
-<p>本テーマでは、タグは自動で出てきますが、カテゴリーは出てきません。<br />
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">symbol</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;link&#34;</span> <span style="color:#a6e22e">viewBox</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;0 0 50 50&#34;</span>&gt;
+  &lt;<span style="color:#f92672">g</span> <span style="color:#a6e22e">transform</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;translate(0 -1002.4)&#34;</span>&gt;
+   &lt;<span style="color:#f92672">g</span> <span style="color:#a6e22e">transform</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;matrix(.095670 0 0 .095670 2.3233 1004.9)&#34;</span>&gt;
+    &lt;<span style="color:#f92672">g</span>&gt;
+     &lt;<span style="color:#f92672">path</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stroke-width:0;fill:currentColor&#34;</span> <span style="color:#a6e22e">d</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;m452.84 192.9-128.65 128.65c-35.535 35.54-93.108 35.54-128.65 0l-42.881-42.886 42.881-42.876 42.884 42.876c11.845 11.822 31.064 11.846 42.886 0l128.64-128.64c11.816-11.831 11.816-31.066 0-42.9l-42.881-42.881c-11.822-11.814-31.064-11.814-42.887 0l-45.928 45.936c-21.292-12.531-45.491-17.905-69.449-16.291l72.501-72.526c35.535-35.521 93.136-35.521 128.64 0l42.886 42.881c35.535 35.523 35.535 93.141-.001 128.66zm-254.28 168.51-45.903 45.9c-11.845 11.846-31.064 11.817-42.881 0l-42.884-42.881c-11.845-11.821-11.845-31.041 0-42.886l128.65-128.65c11.819-11.814 31.069-11.814 42.884 0l42.886 42.886 42.876-42.886-42.876-42.881c-35.54-35.521-93.113-35.521-128.65 0l-128.65 128.64c-35.538 35.545-35.538 93.146 0 128.65l42.883 42.882c35.51 35.54 93.11 35.54 128.65 0l72.496-72.499c-23.956 1.597-48.092-3.784-69.474-16.283z&#34;</span>/&gt;
+    &lt;/<span style="color:#f92672">g</span>&gt;
+   &lt;/<span style="color:#f92672">g</span>&gt;
+  &lt;/<span style="color:#f92672">g</span>&gt;
+&lt;/<span style="color:#f92672">symbol</span>&gt;
+</code></pre></div><h3 id="カテゴリーを追加する">カテゴリーを追加する</h3>
+<p>本テーマでは、タグは自動で出てきますが、カテゴリーは出てきません。<br>
 必要があれば下記の設定をしていきます。</p>
-
 <h4 id="設定ファイルに追加">設定ファイルに追加</h4>
-
-<p><code>config.toml</code> に <code>tag</code> の行があるので、その前後に <code>category</code> を入れます。<br />
+<p><code>config.toml</code> に <code>tag</code> の行があるので、その前後に <code>category</code> を入れます。<br>
 右側に入るのは複数形になるので注意！！</p>
-
-<pre><code class="language-toml">[taxonomies]
-  tag = &quot;tags&quot;
-  category = &quot;categories&quot;   # ここに追加しました
-</code></pre>
-
-<h4 id="メニューに追加">メニューに追加</h4>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[<span style="color:#a6e22e">taxonomies</span>]
+  <span style="color:#a6e22e">tag</span> = <span style="color:#e6db74">&#34;tags&#34;</span>
+  <span style="color:#a6e22e">category</span> = <span style="color:#e6db74">&#34;categories&#34;</span>   <span style="color:#75715e"># ここに追加しました</span>
+</code></pre></div><h4 id="メニューに追加">メニューに追加</h4>
 <p>before: <img src="/images/cupper-custom-menu-before.webp" alt="メニューにカテゴリーが無い" style="width:auto;" ></p>
-
 <p>after: <img src="/images/cupper-custom-menu-after.webp" alt="メニューにカテゴリーを追加" style="width:auto;" ></p>
-
-<p>これも設定ファイル <code>config.toml</code> の中です。<br />
+<p>これも設定ファイル <code>config.toml</code> の中です。<br>
 <code>[menu]</code> というセクションがありますので、表示したい位置に入れてあげます。</p>
-
-<pre><code class="language-toml">[menu]
-  ＜中略＞
-  [[menu.nav]]
-    name = &quot;Categories&quot;   # 表示される名称
-    url = &quot;/categories/&quot;    # 参照するアドレス
-    weight = 3                  # 表示する順番？
-  ＜中略＞
-</code></pre>
-
-<p>ついでに about も要らないので消しました。</p>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[<span style="color:#a6e22e">menu</span>]
+  <span style="color:#960050;background-color:#1e0010">＜</span><span style="color:#a6e22e">中略</span><span style="color:#960050;background-color:#1e0010">＞</span>
+  [[<span style="color:#a6e22e">menu</span>.<span style="color:#a6e22e">nav</span>]]
+    <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;Categories&#34;</span>   <span style="color:#75715e"># 表示される名称</span>
+    <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;/categories/&#34;</span>    <span style="color:#75715e"># 参照するアドレス</span>
+    <span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">3</span>                  <span style="color:#75715e"># 表示する順番？</span>
+  <span style="color:#960050;background-color:#1e0010">＜</span><span style="color:#a6e22e">中略</span><span style="color:#960050;background-color:#1e0010">＞</span>
+</code></pre></div><p>ついでに about も要らないので消しました。</p>
 <h4 id="記事のタイトル下に追加">記事のタイトル下に追加</h4>
-
 <p>before: <img src="/images/cupper-custom-post-title-before.webp" alt="記事にカテゴリーが無い" style="width:auto;" ></p>
-
 <p>after: <img src="/images/cupper-custom-post-title-after.webp" alt="記事にカテゴリーを追加" style="width:auto;" ></p>
-
 <p>記事を表示するテンプレートを修正します。</p>
-
 <p><code>themes\cupper-hugo-theme\layouts\post\single.html</code></p>
-
 <p>↓ にコピーします。</p>
-
 <p><code>layouts\post\single.html</code></p>
-
-<p>ファイルを開くと、<code>{{ with .Params.tags }} ～ {{ end }}</code> という、タグ情報を表示する部分があります。<br />
-丸ごとコピーして、<code>tags</code> を <code>categories</code> に変更して貼り付ければおしまい。<br />
+<p>ファイルを開くと、<code>{{ with .Params.tags }} ～ {{ end }}</code> という、タグ情報を表示する部分があります。<br>
+丸ごとコピーして、<code>tags</code> を <code>categories</code> に変更して貼り付ければおしまい。<br>
 スタイルは同じで良いかなと思ったので、手を抜いてそのままにしました。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;date&#34;</span>&gt;
+  {{ $dateFormat := $.Site.Params.dateFormat | default &#34;2006-01-02&#34; }}
+  &lt;<span style="color:#f92672">strong</span> <span style="color:#a6e22e">aria-hidden</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;true&#34;</span>&gt;Post: &lt;/<span style="color:#f92672">strong</span>&gt;{{ .PublishDate.Format $dateFormat }}
+&lt;/<span style="color:#f92672">div</span>&gt;
 
-<pre><code class="language-html">&lt;div class=&quot;date&quot;&gt;
-  {{ $dateFormat := $.Site.Params.dateFormat | default &quot;2006-01-02&quot; }}
-  &lt;strong aria-hidden=&quot;true&quot;&gt;Post: &lt;/strong&gt;{{ .PublishDate.Format $dateFormat }}
-&lt;/div&gt;
-
-&lt;!-- ここから下を追加 --&gt;
+<span style="color:#75715e">&lt;!-- ここから下を追加 --&gt;</span>
 {{ with .Params.categories }}
-&lt;div class=&quot;tags&quot;&gt;
-  &lt;strong aria-hidden=&quot;true&quot;&gt;Categories: &lt;/strong&gt;
-  &lt;ul aria-label=&quot;tags&quot;&gt;
+&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;tags&#34;</span>&gt;
+  &lt;<span style="color:#f92672">strong</span> <span style="color:#a6e22e">aria-hidden</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;true&#34;</span>&gt;Categories: &lt;/<span style="color:#f92672">strong</span>&gt;
+  &lt;<span style="color:#f92672">ul</span> <span style="color:#a6e22e">aria-label</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;tags&#34;</span>&gt;
     {{ range . }}
-      &lt;li&gt;
-        {{ $href := print (&quot;categories/&quot; | absLangURL) (. | urlize) &quot;/&quot; }}
-        &lt;a href=&quot;{{ $href }}&quot;&gt;{{ . }}&lt;/a&gt;
-      &lt;/li&gt;
+      &lt;<span style="color:#f92672">li</span>&gt;
+        {{ $href := print (&#34;categories/&#34; | absLangURL) (. | urlize) &#34;/&#34; }}
+        &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ $href }}&#34;</span>&gt;{{ . }}&lt;/<span style="color:#f92672">a</span>&gt;
+      &lt;/<span style="color:#f92672">li</span>&gt;
     {{ end }}
-  &lt;/ul&gt;
-&lt;/div&gt;
+  &lt;/<span style="color:#f92672">ul</span>&gt;
+&lt;/<span style="color:#f92672">div</span>&gt;
 {{ end }}
-&lt;!-- ここまで --&gt;
-</code></pre>
-
-<h3 id="更新日を追加する">更新日を追加する</h3>
-
+<span style="color:#75715e">&lt;!-- ここまで --&gt;</span>
+</code></pre></div><h3 id="更新日を追加する">更新日を追加する</h3>
 <p>このテーマも更新日がないので追加します。</p>
-
 <h4 id="設定の有効化">設定の有効化</h4>
-
 <p><code>config.toml</code> に以下を追加します。</p>
-
-<pre><code class="language-toml">enableGitInfo = true
-</code></pre>
-
-<h4 id="記事一覧に追加">記事一覧に追加</h4>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="color:#a6e22e">enableGitInfo</span> = <span style="color:#66d9ef">true</span>
+</code></pre></div><h4 id="記事一覧に追加">記事一覧に追加</h4>
 <p>before: <img src="/images/cupper-custom-list-before.webp" alt="記事一覧にカテゴリーが無い" style="width:auto;" ></p>
-
 <p>after: <img src="/images/cupper-custom-list-after.webp" alt="記事一覧にカテゴリーを追加" style="width:auto;" ></p>
-
 <p>記事一覧を表示するテンプレートを修正します。</p>
-
 <p><code>themes\cupper-hugo-theme\layouts\_default\list.html</code></p>
-
 <p>↓ にコピーします。</p>
-
 <p><code>layouts\_default\list.html</code></p>
-
-<p>公開日の下に <code>/ Up: {{ .Lastmod.Format &quot;2006-01-02&quot; }}</code> を追加します。<br />
+<p>公開日の下に <code>/ Up: {{ .Lastmod.Format &quot;2006-01-02&quot; }}</code> を追加します。<br>
 日付のフォーマットも自分好みに変えておきました。</p>
-
-<pre><code class="language-html">{{ $dateFormat := $.Site.Params.dateFormat | default &quot;2006-01-02&quot; }}
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{ $dateFormat := $.Site.Params.dateFormat | default &#34;2006-01-02&#34; }}
 Post: {{ .PublishDate.Format $dateFormat }}
-/ Up: {{ .Lastmod.Format &quot;2006-01-02&quot; }}    &lt;!-- ここに追加 --&gt;
-</code></pre>
-
-<h4 id="記事のタイトル下に追加-1">記事のタイトル下に追加</h4>
-
+/ Up: {{ .Lastmod.Format &#34;2006-01-02&#34; }}    <span style="color:#75715e">&lt;!-- ここに追加 --&gt;</span>
+</code></pre></div><h4 id="記事のタイトル下に追加-1">記事のタイトル下に追加</h4>
 <p><code>layouts\post\single.html</code> を修正しますが、上とまったく同じなので省略。</p>
-
 <h3 id="記事の概要を表示する">記事の概要を表示する</h3>
-
 <p>日付の下に書いてある文章が概要です。</p>
-
 <p>after: <img src="/images/cupper-custom-list-after.webp" alt="記事一覧にカテゴリーを追加" style="width:auto;" ></p>
-
-<h4 id="記事に概要を書く-下準備">記事に概要を書く（下準備）</h4>
-
+<h4 id="記事に概要を書く下準備">記事に概要を書く（下準備）</h4>
 <p>記事 <code>hoge.md</code> に以下を追加します。</p>
-
-<pre><code class="language-md">description: &quot;ここに記事の概要を書きます。&quot;
-</code></pre>
-
-<p>テンプレート（例えば <code>archetypes\post.md</code> ）に予め <code>description: &quot;&quot;</code> を追加しておくと、毎回書かなくて良いので楽です。</p>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">description: &#34;ここに記事の概要を書きます。&#34;
+</code></pre></div><p>テンプレート（例えば <code>archetypes\post.md</code> ）に予め <code>description: &quot;&quot;</code> を追加しておくと、毎回書かなくて良いので楽です。</p>
 <h4 id="記事一覧に概要を追加">記事一覧に概要を追加</h4>
-
 <p><code>layouts\_default\list.html</code></p>
-
 <p>表示したい場所に下記を追加します。</p>
-
-<pre><code class="language-html">{{ if (isset .Params &quot;description&quot;) }}{{ index .Params &quot;description&quot; }}{{ else }}{{ .Summary }}{{ end }}
-</code></pre>
-
-<h3 id="トップページを記事一覧ページにする-2019-03-19">トップページを記事一覧ページにする［2019-03-19］</h3>
-
-<p>テーマ内にある <code>_index.html</code> を削除すると、次に見に行くのが <code>list.html</code> になるので、それで完了・・・のはずが、うまくいかず。<br />
-最終的には <strong>姑息な手段</strong> で、<code>layouts\_default\list.html</code> をコピーして <code>layouts\_index.html</code> としました。<br />
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{ if (isset .Params &#34;description&#34;) }}{{ index .Params &#34;description&#34; }}{{ else }}{{ .Summary }}{{ end }}
+</code></pre></div><h3 id="トップページを記事一覧ページにする2019-03-19">トップページを記事一覧ページにする［2019-03-19］</h3>
+<p>テーマ内にある <code>_index.html</code> を削除すると、次に見に行くのが <code>list.html</code> になるので、それで完了・・・のはずが、うまくいかず。<br>
+最終的には <strong>姑息な手段</strong> で、<code>layouts\_default\list.html</code> をコピーして <code>layouts\_index.html</code> としました。<br>
 たぶん、どっか見落としているんだろうけど、とりあえず出来た（笑）</p>
 
       </article>

@@ -1,9 +1,8 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Css - k-kaz</title>
+    <title>css - k-kaz</title>
     <link>https://k-kaz-git.github.io/tags/css/</link>
-    <description>Recent content in Css on k-kaz</description>
+    <description>Recent content in css on k-kaz</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <lastBuildDate>Thu, 14 Mar 2019 17:44:58 +0900</lastBuildDate>

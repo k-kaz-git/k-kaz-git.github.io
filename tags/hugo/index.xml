@@ -1,16 +1,22 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Hugo - k-kaz</title>
+    <title>hugo - k-kaz</title>
     <link>https://k-kaz-git.github.io/tags/hugo/</link>
-    <description>Recent content in Hugo on k-kaz</description>
+    <description>Recent content in hugo on k-kaz</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Wed, 14 Oct 2020 18:51:11 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 18 Oct 2020 20:00:29 +0900</lastBuildDate>
     
         <atom:link href="https://k-kaz-git.github.io/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>そうだ Hugo の最新版を使おう！</title>
+      <link>https://k-kaz-git.github.io/post/hugo-new-version/</link>
+      <pubDate>Sun, 18 Oct 2020 20:00:29 +0900</pubDate>
+      
+      <guid>https://k-kaz-git.github.io/post/hugo-new-version/</guid>
+      <description>そんなときは大体ハマる。</description>
+    </item><item>
       <title>Deploy でエラーが出たんですけど。</title>
       <link>https://k-kaz-git.github.io/post/hugo-deploy-error/</link>
       <pubDate>Wed, 14 Oct 2020 18:51:11 +0900</pubDate>
@@ -73,13 +79,6 @@
       
       <guid>https://k-kaz-git.github.io/post/hugo-how-to-use/</guid>
       <description>Hugo の Tips 的なものをこちらにまとめます。</description>
-    </item><item>
-      <title>テーマ aether のカスタマイズ</title>
-      <link>https://k-kaz-git.github.io/post/hugo-custom-theme-aether/</link>
-      <pubDate>Mon, 18 Feb 2019 21:30:02 +0900</pubDate>
-      
-      <guid>https://k-kaz-git.github.io/post/hugo-custom-theme-aether/</guid>
-      <description>テーマ aether のカスタマイズをこちらにまとめます。</description>
     </item>
   </channel>
 </rss>

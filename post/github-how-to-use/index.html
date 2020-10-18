@@ -72,216 +72,136 @@ if (!doNotTrack) {
         <aside>
           <h2>目次</h2>
             <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#せっかくなので">せっかくなので</a></li>
-<li><a href="#git-コマンドのチートシート-2019-03-06">Git コマンドのチートシート［2019-03-06］</a></li>
-<li><a href="#ssh接続-github">ssh接続【GitHub】</a>
-<ul>
-<li><a href="#https-接続から-ssh-接続に切り替える">https 接続から、ssh 接続に切り替える</a></li>
-</ul></li>
-<li><a href="#各種設定ファイルの共通化">各種設定ファイルの共通化</a>
-<ul>
-<li><a href="#そこで-github">そこで GitHub</a></li>
-<li><a href="#やり方">やり方</a>
-<ul>
-<li><a href="#シンボリックリンクの作成">シンボリックリンクの作成</a></li>
-<li><a href="#リモートリポジトリの作成">リモートリポジトリの作成</a></li>
-<li><a href="#ローカルリポジトリの作成">ローカルリポジトリの作成</a></li>
-<li><a href="#リモートリポジトリへプッシュ">リモートリポジトリへプッシュ</a></li>
-<li><a href="#相手側で-リモートリポジトリからのデータ取得">相手側で、リモートリポジトリからのデータ取得</a></li>
-</ul></li>
-</ul></li>
-<li><a href="#hugo-で使っているローカルリポジトリの場所を変更">Hugo で使っているローカルリポジトリの場所を変更</a>
-<ul>
-<li><a href="#やり方-1">やり方</a></li>
-</ul></li>
-<li><a href="#プッシュしたけど-1つ前の内容に戻したい-2019-02-25">プッシュしたけど、1つ前の内容に戻したい［2019-02-25］</a>
-<ul>
-<li><a href="#やり方-2">やり方</a></li>
-</ul></li>
-<li><a href="#リポジトリから除外したいファイルやフォルダがある-2019-02-26">リポジトリから除外したいファイルやフォルダがある［2019-02-26］</a>
-<ul>
-<li><a href="#やり方-3">やり方</a>
-<ul>
-<li><a href="#gitignore-に除外するものを書きますよ">.gitignore に除外するものを書きますよ</a></li>
-<li><a href="#すでにリポジトリが出来上がっている場合">すでにリポジトリが出来上がっている場合</a></li>
-</ul></li>
-</ul></li>
-<li><a href="#vscode-の設定ファイルを共通で使う-2019-02-28">VSCode の設定ファイルを共通で使う［2019-02-28］</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#せっかくなので">せっかくなので</a></li>
+    <li><a href="#git-コマンドのチートシート2019-03-06">Git コマンドのチートシート［2019-03-06］</a></li>
+    <li><a href="#ssh接続github">ssh接続【GitHub】</a>
+      <ul>
+        <li><a href="#https-接続からssh-接続に切り替える">https 接続から、ssh 接続に切り替える</a></li>
+      </ul>
+    </li>
+    <li><a href="#各種設定ファイルの共通化">各種設定ファイルの共通化</a>
+      <ul>
+        <li><a href="#そこで-github">そこで GitHub</a></li>
+        <li><a href="#やり方">やり方</a></li>
+      </ul>
+    </li>
+    <li><a href="#hugo-で使っているローカルリポジトリの場所を変更">Hugo で使っているローカルリポジトリの場所を変更</a>
+      <ul>
+        <li><a href="#やり方-1">やり方</a></li>
+      </ul>
+    </li>
+    <li><a href="#プッシュしたけど1つ前の内容に戻したい2019-02-25">プッシュしたけど、1つ前の内容に戻したい［2019-02-25］</a>
+      <ul>
+        <li><a href="#やり方-2">やり方</a></li>
+      </ul>
+    </li>
+    <li><a href="#リポジトリから除外したいファイルやフォルダがある2019-02-26">リポジトリから除外したいファイルやフォルダがある［2019-02-26］</a>
+      <ul>
+        <li><a href="#やり方-3">やり方</a></li>
+      </ul>
+    </li>
+    <li><a href="#vscode-の設定ファイルを共通で使う2019-02-28">VSCode の設定ファイルを共通で使う［2019-02-28］</a></li>
+  </ul>
 </nav>
         </aside>
-        
-
-<h2 id="せっかくなので">せっかくなので</h2>
-
+        <h2 id="せっかくなので">せっかくなので</h2>
 <p>GitHub をもう少し活用できないかなと思いまして、こちらにやってみたことを書いていこうと思います。</p>
-
 <p>後日、同じことをやるときに <strong>絶対忘れている</strong> という自信があるので、備忘録的に。</p>
-
-<h2 id="git-コマンドのチートシート-2019-03-06">Git コマンドのチートシート［2019-03-06］</h2>
-
+<h2 id="git-コマンドのチートシート2019-03-06">Git コマンドのチートシート［2019-03-06］</h2>
 <p>良いものを発見！！</p>
-
-<p>Git コマンドを、イラスト入りで分かりやすく作ってくださった方がいらっしゃいます。<br />
+<p>Git コマンドを、イラスト入りで分かりやすく作ってくださった方がいらっしゃいます。<br>
 Git そのものが分かっていない初心者の私には、とてもありがたいです。</p>
-
 <p><a href="https://qiita.com/kozzy/items/b42ba59a8bac190a16ab">Git でよく使われるコマンドにイラストによる説明を加えて1枚のチートシートにまとめてみた</a></p>
-
-<p>注意書きに「表現上、簡略化している部分がある」、「誤記による損害発生の責任は負いません」とあります。<br />
+<p>注意書きに「表現上、簡略化している部分がある」、「誤記による損害発生の責任は負いません」とあります。<br>
 その点をご理解の上で、皆さんもご覧ください。</p>
-
-<h2 id="ssh接続-github">ssh接続【GitHub】</h2>
-
-<p>ssh接続用に、公開鍵と秘密鍵を作成します。<br />
+<h2 id="ssh接続github">ssh接続【GitHub】</h2>
+<p>ssh接続用に、公開鍵と秘密鍵を作成します。<br>
 出来上がった公開鍵の中身を GitHub に登録しておきます。</p>
-
 <p>参考：<a href="https://qiita.com/shizuma/items/2b2f873a0034839e47ce">GitHubでssh接続する手順~公開鍵・秘密鍵の生成から~</a></p>
-
-<h3 id="https-接続から-ssh-接続に切り替える">https 接続から、ssh 接続に切り替える</h3>
-
+<h3 id="https-接続からssh-接続に切り替える">https 接続から、ssh 接続に切り替える</h3>
 <p><code>$ git remote -v</code> で表示されたアドレスが <code>https://github.com/</code> の場合は、<code>git@github.com:</code> に変えることで ssh 接続にできます。これで、毎回、ユーザー名とパスワードを聞かれなくなります。</p>
-
-<p>切替用コマンド <code>$ git remote set-url origin git@github.com:hogehoge.git</code><br />
+<p>切替用コマンド <code>$ git remote set-url origin git@github.com:hogehoge.git</code><br>
 確認用コマンド <code>$ ssh -T github</code></p>
-
 <h2 id="各種設定ファイルの共通化">各種設定ファイルの共通化</h2>
-
 <p>Linux と Windows で共通して使うアプリが多く、その設定をそれぞれで行うのも面倒だし、間違えることもあるので、設定ファイルを使い回すようにしたいのです。</p>
-
 <p>GoogleDrive、DropBox、OneDrive 等々に、コピーした設定ファイルを保存して、相手先で取り出して上書きするっていうのがこれまでのやり方なんですが、何度も設定変更を行うようなものだと、嫌になります。</p>
-
 <h3 id="そこで-github">そこで GitHub</h3>
-
-<p>GitHub を使えば、push と pull するだけでファイルの行き来ができる。<br />
+<p>GitHub を使えば、push と pull するだけでファイルの行き来ができる。<br>
 さらにバージョン管理まで出来ちゃうじゃないか。</p>
-
 <h3 id="やり方">やり方</h3>
-
 <p>いくつか作業が続きます。</p>
-
 <h4 id="シンボリックリンクの作成">シンボリックリンクの作成</h4>
-
-<p>フォルダ及びファイルの置き場所を、本来ある場所から、GitHub で管理する場所に変更します。<br />
-これを Linux と Windows 両方やっておけば、いつでも最新で同じ内容の設定ファイルが使えます。<br />
+<p>フォルダ及びファイルの置き場所を、本来ある場所から、GitHub で管理する場所に変更します。<br>
+これを Linux と Windows 両方やっておけば、いつでも最新で同じ内容の設定ファイルが使えます。<br>
 ※<code>push</code> と <code>pull</code> を忘れないように。</p>
-
-<p>Linux なら <code>ln</code> コマンドで。<br />
+<p>Linux なら <code>ln</code> コマンドで。<br>
 Windows なら <code>mklink</code> コマンドで。</p>
-
-<p>Windows でちょっとハマった。<br />
-Win10 の PowerShell では、直接 <code>mklink</code> が実行できないんです。<br />
-<code>cmd /c mklink</code> というようにすると動きます。<br />
+<p>Windows でちょっとハマった。<br>
+Win10 の PowerShell では、直接 <code>mklink</code> が実行できないんです。<br>
+<code>cmd /c mklink</code> というようにすると動きます。<br>
 ※mklink は、cmd の中にあるコマンドのため</p>
-
 <h4 id="リモートリポジトリの作成">リモートリポジトリの作成</h4>
-
 <p>GitHub でリモートリポジトリを作成します。
 私は web で行い、Private モードとしておきました。（最近、無料ユーザーでも Private を使えるようになった）</p>
-
 <h4 id="ローカルリポジトリの作成">ローカルリポジトリの作成</h4>
-
-<p>ここから先は、私が苦手な（よく分かっていない）ところです。<br />
+<p>ここから先は、私が苦手な（よく分かっていない）ところです。<br>
 まず、リポジトリとするディレクトリに移動しておきます。</p>
-
-<p><code>git init</code><br />
-<code>git add .</code><br />
+<p><code>git init</code><br>
+<code>git add .</code><br>
 <code>git commit -m &quot;コメント&quot;</code></p>
-
 <h4 id="リモートリポジトリへプッシュ">リモートリポジトリへプッシュ</h4>
-
 <p><code>git remote add origin git@github.com:ユーザー名/リモートリポジトリ名.git</code></p>
-
-<p>※最後の <code>.git</code> を忘れがちなので注意<br />
+<p>※最後の <code>.git</code> を忘れがちなので注意<br>
 ※git@github.com にしているのは ssh で接続するため
 <code>git push -u origin master</code></p>
-
-<h4 id="相手側で-リモートリポジトリからのデータ取得">相手側で、リモートリポジトリからのデータ取得</h4>
-
+<h4 id="相手側でリモートリポジトリからのデータ取得">相手側で、リモートリポジトリからのデータ取得</h4>
 <p>初回のみ、クローンで丸々ゲットしてきます。</p>
-
 <p><code>git clone git@github.com:ユーザー名/リモートリポジトリ名.git 展開するディレクトリ</code></p>
-
 <p>それ以降は、<code>git pull</code> でOKです。</p>
-
 <p>よし、いろいろなデータをバージョン管理してみようではないか。</p>
-
 <h2 id="hugo-で使っているローカルリポジトリの場所を変更">Hugo で使っているローカルリポジトリの場所を変更</h2>
-
 <p>設定ファイルを1ヶ所にまとめていくうちに、Hugo で作ったサイトのリポジトリも同じところに移動したくなったので、心配もあるけどやってみます。</p>
-
 <h3 id="やり方-1">やり方</h3>
-
 <p>リポジトリを起きたい場所に移動して、</p>
-
 <p><code>git clone git@github.com:ユーザー名/リポジトリ名 変更先ディレクトリ</code></p>
-
 <p><code>hugo server</code> を実行したときに元の場所を見に行かないか心配しましたが、<code>変更先ディレクトリ</code> の中で実行すれば、Hugo はその中を見に行くようです。</p>
-
 <p>特に Hugo の設定ファイルを弄るとか必要はありませんでした。</p>
-
 <p>結果から見れば、超簡単な作業でした。</p>
-
-<h2 id="プッシュしたけど-1つ前の内容に戻したい-2019-02-25">プッシュしたけど、1つ前の内容に戻したい［2019-02-25］</h2>
-
-<p>リモートリポジトリにプッシュしたあと、「あっ、やっぱり前のほうが良かった」と思ったときの手順です。<br />
+<h2 id="プッシュしたけど1つ前の内容に戻したい2019-02-25">プッシュしたけど、1つ前の内容に戻したい［2019-02-25］</h2>
+<p>リモートリポジトリにプッシュしたあと、「あっ、やっぱり前のほうが良かった」と思ったときの手順です。<br>
 ネットで調べたら、間違えたものも履歴として残す方法もありましたが、個人で使う分にはゴミになるだろうと思いまして、シンプルに「先程プッシュしたものは、無かったことにする」という方法を採用します。</p>
-
 <h3 id="やり方-2">やり方</h3>
-
 <p>プッシュしたディレクトリに移動して、</p>
-
-<p><code>git reset --hard HEAD^</code> をして、<br />
+<p><code>git reset --hard HEAD^</code> をして、<br>
 <code>git push -f origin master</code> です。</p>
-
-<p>上記は、あくまでも個人ユースの場合に使うコマンドのようです。<br />
-<strong>チームで管理しているときは、別の方法をとってください。</strong><br />
+<p>上記は、あくまでも個人ユースの場合に使うコマンドのようです。<br>
+<strong>チームで管理しているときは、別の方法をとってください。</strong><br>
 （未熟な私にはまだ分からないけど）</p>
-
-<h2 id="リポジトリから除外したいファイルやフォルダがある-2019-02-26">リポジトリから除外したいファイルやフォルダがある［2019-02-26］</h2>
-
-<p>VSCode の設定ファイルをリポジトリに入れて共通使用としたんですけど、不要なファイルもあるんですよね。<br />
+<h2 id="リポジトリから除外したいファイルやフォルダがある2019-02-26">リポジトリから除外したいファイルやフォルダがある［2019-02-26］</h2>
+<p>VSCode の設定ファイルをリポジトリに入れて共通使用としたんですけど、不要なファイルもあるんですよね。<br>
 タブの状態（何のファイルを開いているか）は要らないし、というか、ファイルの置き場や所有しているファイルも違うし・・・。</p>
-
 <h3 id="やり方-3">やり方</h3>
-
 <h4 id="gitignore-に除外するものを書きますよ">.gitignore に除外するものを書きますよ</h4>
-
-<p><code>git</code> を実行するディレクトリに <code>.gitignore</code> というテキストファイルを用意します。<br />
+<p><code>git</code> を実行するディレクトリに <code>.gitignore</code> というテキストファイルを用意します。<br>
 この中にリポジトリから除外するファイルやフォルダを書き込むと、そのあたりを考慮してリポジトリを作成してくれます。</p>
-
 <p>VSCode で不要なディレクトリを書き込みました。</p>
-
-<pre><code class="language-html">[.gitignore]
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">[.gitignore]
 
 VSCode/User/globalStorage/
 VSCode/User/workspaceStorage/
-</code></pre>
-
-<h4 id="すでにリポジトリが出来上がっている場合">すでにリポジトリが出来上がっている場合</h4>
-
+</code></pre></div><h4 id="すでにリポジトリが出来上がっている場合">すでにリポジトリが出来上がっている場合</h4>
 <p>git から情報を消し、改めて add → commit → push します。</p>
-
-<p><code>git rm -r --cached .</code><br />
-<code>git add .</code><br />
-<code>git commit -m &quot;コメント&quot;</code><br />
+<p><code>git rm -r --cached .</code><br>
+<code>git add .</code><br>
+<code>git commit -m &quot;コメント&quot;</code><br>
 <code>git push origin master</code></p>
-
 <p>相手側はどうすればいいのかな。</p>
-
 <p>普通に <code>git pull</code> でやっても怒られたので、ディレクトリ毎、まっさらにして</p>
-
 <p><code>git clone git@github:ユーザー名/リポジトリ名.git</code></p>
-
 <p>で、解決したことにしちゃった（笑）</p>
-
-<h2 id="vscode-の設定ファイルを共通で使う-2019-02-28">VSCode の設定ファイルを共通で使う［2019-02-28］</h2>
-
+<h2 id="vscode-の設定ファイルを共通で使う2019-02-28">VSCode の設定ファイルを共通で使う［2019-02-28］</h2>
 <p>上のほうにやり方を長々と書きましたけど、プラグインがあるらしいぞ。</p>
-
 <p><a href="https://www.karelie.net/vscode-setting-sync/">VSCode(Visual Studio Code)の設定を同期させる拡張機能「Setting Sync」が便利</a></p>
 
       </article>

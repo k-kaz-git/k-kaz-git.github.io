@@ -1,9 +1,8 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Homepage - k-kaz</title>
+    <title>homepage - k-kaz</title>
     <link>https://k-kaz-git.github.io/categories/homepage/</link>
-    <description>Recent content in Homepage on k-kaz</description>
+    <description>Recent content in homepage on k-kaz</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <lastBuildDate>Wed, 14 Oct 2020 18:51:11 +0900</lastBuildDate>

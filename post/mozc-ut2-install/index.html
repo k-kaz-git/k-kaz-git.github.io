@@ -72,110 +72,62 @@ if (!doNotTrack) {
         <aside>
           <h2>目次</h2>
             <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#これまでと急に内容変わりますが">これまでと急に内容変わりますが・・・</a>
-<ul>
-<li><a href="#そもそも-mozc-って何">そもそも Mozc って何？</a></li>
-<li><a href="#最新版-mozc-のインストール">最新版 Mozc のインストール</a>
-<ul>
-<li><a href="#ソースをゲット">ソースをゲット</a></li>
-<li><a href="#ビルド">ビルド</a></li>
-<li><a href="#事後処理">事後処理</a></li>
-<li><a href="#参考サイト">参考サイト</a></li>
-</ul></li>
-</ul></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#これまでと急に内容変わりますが">これまでと急に内容変わりますが・・・</a>
+      <ul>
+        <li><a href="#そもそも-mozc-って何">そもそも Mozc って何？</a></li>
+        <li><a href="#最新版-mozc-のインストール">最新版 Mozc のインストール</a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
         </aside>
-        
-
-<h2 id="これまでと急に内容変わりますが">これまでと急に内容変わりますが・・・</h2>
-
+        <h2 id="これまでと急に内容変わりますが">これまでと急に内容変わりますが・・・</h2>
 <p>Hugo に関連しませんけど、技術的な話ということでこちらに書いていきます。</p>
-
 <h3 id="そもそも-mozc-って何">そもそも Mozc って何？</h3>
-
 <blockquote>
-    <p><p>Mozcとは、Google 日本語入力のオープンソース版である。これは2010年5月11日にGoogle日本語入力をGoogle Chrome OSに移植するために必要な部分をオープンソースしたものである。</p>
+    <p>
+Mozcとは、Google 日本語入力のオープンソース版である。これは2010年5月11日にGoogle日本語入力をGoogle Chrome OSに移植するために必要な部分をオープンソースしたものである。
 </p><br>
     <cite><a class="author" href="https://ja.wikipedia.org/wiki/Google_%e6%97%a5%e6%9c%ac%e8%aa%9e%e5%85%a5%e5%8a%9b">Wikipedia</a></cite>
 </blockquote>
-
-
-<p>まぁ、簡単に言うと Linux で使える Google 日本語入力 です。<br />
+<p>まぁ、簡単に言うと Linux で使える Google 日本語入力 です。<br>
 この便利な Mozc ですが、Linux で普通にインストールされるものって、バージョンが古かったり、カタカナ辞書が付いていなかったりするんですよ。</p>
-
 <p>元々インストールされていたのは、Ver.2.20 で、新たに入れるのは Ver.2.23 です。そして、追加辞書も付いています。</p>
-
 <p>自分で、カタカナ辞書を用意してユーザー辞書に追加もしていましたが、変換時はユーザー辞書が優先されるので、普通にカタカナを入れたいのに、いちいち英語になったりして、面倒だったりね。</p>
-
 <p>なんか、Windows に比べて変換効率も悪いので、なんとかならないかとネットで調べていたところ、最新の Mozc を Linux にインストールする方法が見付かったので、やってみました。</p>
-
 <p>ちなみに、昔は KAKASI（KAnji KAna Simple Inverter）とか使っていましたよ。</p>
-
 <h3 id="最新版-mozc-のインストール">最新版 Mozc のインストール</h3>
-
 <p>先程書きました通り、普通にインストールするとバージョンが古いので、「ソフトウェアの管理」（Linux Mint）は使いません。</p>
-
 <p><strong>ソースを持ってきまして、それをビルドして使えるようにします。</strong></p>
-
 <p><strong>いきなり難しそうだ（笑）</strong></p>
-
 <h4 id="ソースをゲット">ソースをゲット</h4>
-
-<p>ソースはこちらにありますよ。<br />
+<p>ソースはこちらにありますよ。<br>
 <a href="https://ja.osdn.net/users/sicklylife/pf/mozc_ut_for_ubuntu/wiki/FrontPage">mozc ut for ubuntu</a></p>
-
 <p>今回は <code>mozc-2.23.2815.102+dfsg~ut2-20171008d+20181201.tar.xz</code> を利用しました。</p>
-
 <p>ダウンロード後、解凍しておきます。</p>
-
 <h4 id="ビルド">ビルド</h4>
-
-<p>解凍したところに <code>build_mozc_plus_utdict</code> というファイルができますので、これを実行します。<br />
+<p>解凍したところに <code>build_mozc_plus_utdict</code> というファイルができますので、これを実行します。<br>
 でも、足りないパッケージなどがあるので、事前に入れておきます。</p>
-
-<pre><code class="language-cmd">$ sudo apt update
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmd" data-lang="cmd">$ sudo apt update
 $ sudo apt upgrade -y
 $ sudo apt install -y devscripts debhelper libibus-1.0-dev pkg-config libxcb-xfixes0-dev libgtk2.0-dev python-dev gyp protobuf-compiler libprotobuf-dev qtbase5-dev libqwt-qt5-dev libgwengui-qt5-dev libuim-dev libzinnia-dev fcitx-libs-dev gettext desktop-file-utils ninja-build
-</code></pre>
-
-<p>入れ終わったら、ビルドします。</p>
-
-<pre><code class="language-cmd">$ sudo ./build_mozc_plus_utdict
-</code></pre>
-
-<p>しばらく、ハードディスクがカリカリと頑張ってくれます。</p>
-
+</code></pre></div><p>入れ終わったら、ビルドします。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmd" data-lang="cmd">$ sudo ./build_mozc_plus_utdict
+</code></pre></div><p>しばらく、ハードディスクがカリカリと頑張ってくれます。</p>
 <p>運悪くビルドに失敗したら、ログに理由が書いてあると思いますので、<strong>ネットで頑張って調べます（笑）</strong></p>
-
 <h4 id="事後処理">事後処理</h4>
-
 <p>無事にビルドが終了したら、インストール済みのパッケージを削除します。</p>
-
-<pre><code class="language-cmd">$ sudo apt-get remove mozc-server mozc-utils-gui
-</code></pre>
-
-<p>fcitx-mozc を使っているので、関連ファイルをインストール。</p>
-
-<pre><code class="language-cmd">$ sudo dpkg -i mozc*.deb fcitx-mozc*.deb
-</code></pre>
-
-<p>結果、こうなります。
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmd" data-lang="cmd">$ sudo apt-get remove mozc-server mozc-utils-gui
+</code></pre></div><p>fcitx-mozc を使っているので、関連ファイルをインストール。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmd" data-lang="cmd">$ sudo dpkg -i mozc*.deb fcitx-mozc*.deb
+</code></pre></div><p>結果、こうなります。
 <img src="/images/mozc-ver223.webp" alt="Mozc について" style="width:auto;"></p>
-
 <p>以上です。</p>
-
 <h4 id="参考サイト">参考サイト</h4>
-
-<p>今回の作業は、下記、2サイト様を参考にさせていただきました。<br />
+<p>今回の作業は、下記、2サイト様を参考にさせていただきました。<br>
 ありがとうございます。</p>
-
 <p><a href="http://baker-street.jugem.jp/?day=20170407">Linux Mint 18 : 「Mozc UT2 Dictionary」「郵便番号」「ニコニコ大百科」「顔文字」で辞書を強化する</a></p>
-
 <p><a href="https://sicklylife.jp/ubuntu/1804/mozc_ut2.html">Mozc UT2をインストールする - Ubuntu 18.04編</a></p>
 
       </article>

@@ -72,262 +72,197 @@ if (!doNotTrack) {
         <aside>
           <h2>目次</h2>
             <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#シンタックスハイライトの色を変更したい">シンタックスハイライトの色を変更したい</a>
-<ul>
-<li><a href="#シンタックスハイライトって何">シンタックスハイライトって何？</a></li>
-</ul></li>
-<li><a href="#結果からお見せすると-こんな感じです">結果からお見せすると、こんな感じです</a>
-<ul>
-<li><a href="#変更前">変更前</a></li>
-<li><a href="#変更後">変更後</a></li>
-</ul></li>
-<li><a href="#hugo-におけるシンタックスハイライト">Hugo におけるシンタックスハイライト</a></li>
-<li><a href="#私のやり方はイレギュラーかも">私のやり方はイレギュラーかも・・・</a>
-<ul>
-<li><a href="#ということで-k-kaz-のやり方">ということで k-kaz のやり方</a></li>
-<li><a href="#いまのスタイルシートはこんな感じ">いまのスタイルシートはこんな感じ</a></li>
-</ul></li>
-<li><a href="#せっかくなので-正しいやり方も紹介">せっかくなので、正しいやり方も紹介</a>
-<ul>
-<li><a href="#go-機能を使う場合">Go 機能を使う場合</a>
-<ul>
-<li><a href="#config-toml-で有効化">config.toml で有効化</a></li>
-<li><a href="#スタイルの選択">スタイルの選択</a></li>
-</ul></li>
-<li><a href="#highlight-js-を使う場合">highlight.js を使う場合</a>
-<ul>
-<li><a href="#スタイルの選択-1">スタイルの選択</a></li>
-<li><a href="#設定の仕方">設定の仕方</a></li>
-<li><a href="#aether-の場合">aether の場合</a></li>
-</ul></li>
-</ul></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#シンタックスハイライトの色を変更したい">シンタックスハイライトの色を変更したい</a>
+      <ul>
+        <li><a href="#シンタックスハイライトって何">シンタックスハイライトって何？</a></li>
+      </ul>
+    </li>
+    <li><a href="#結果からお見せするとこんな感じです">結果からお見せすると、こんな感じです</a>
+      <ul>
+        <li><a href="#変更前">変更前</a></li>
+      </ul>
+    </li>
+    <li><a href="#hugo-におけるシンタックスハイライト">Hugo におけるシンタックスハイライト</a></li>
+    <li><a href="#私のやり方はイレギュラーかも">私のやり方はイレギュラーかも・・・</a>
+      <ul>
+        <li><a href="#ということで-k-kaz-のやり方">ということで k-kaz のやり方</a></li>
+        <li><a href="#いまのスタイルシートはこんな感じ">いまのスタイルシートはこんな感じ</a></li>
+      </ul>
+    </li>
+    <li><a href="#せっかくなので正しいやり方も紹介">せっかくなので、正しいやり方も紹介</a>
+      <ul>
+        <li><a href="#go-機能を使う場合">Go 機能を使う場合</a></li>
+        <li><a href="#highlightjs-を使う場合">highlight.js を使う場合</a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
         </aside>
-        
-
-<h2 id="シンタックスハイライトの色を変更したい">シンタックスハイライトの色を変更したい</h2>
-
-<p>グレーの背景でやさしい表現も良いんですが、<strong>やっぱり背景は黒</strong> ですよね。<br />
+        <h2 id="シンタックスハイライトの色を変更したい">シンタックスハイライトの色を変更したい</h2>
+<p>グレーの背景でやさしい表現も良いんですが、<strong>やっぱり背景は黒</strong> ですよね。<br>
 どうも、黒好き星人です。</p>
-
 <p>黒になったらどんな感じになるんだろうと、ワクワクしながらブラウザのデベロッパーツールで黒くしてみたら、<strong>文字が見にくい。</strong></p>
-
-<p>そりゃそうです。<br />
+<p>そりゃそうです。<br>
 やさしいグレーの背景に合わせた文字の色ですから。</p>
-
 <p>さぁ、文字色も含めてカスタマイズです。</p>
-
 <h3 id="シンタックスハイライトって何">シンタックスハイライトって何？</h3>
-
 <blockquote>
-    <p><p>シンタックスハイライト (英: syntax highlighting, 構文強調) とは、テキストエディタの機能であり、テキスト中の一部分をその分類ごとに異なる色やフォントで表示するものである。シンタックスカラーリング (syntax coloring) とも。
-この機能により、プログラミング言語やマークアップ言語といった構造化された言語において、その構造や構文上のエラーが視覚的に区別しやすくなるため、ソースコードの記述が容易となる。</p>
+    <p>
+シンタックスハイライト (英: syntax highlighting, 構文強調) とは、テキストエディタの機能であり、テキスト中の一部分をその分類ごとに異なる色やフォントで表示するものである。シンタックスカラーリング (syntax coloring) とも。
+この機能により、プログラミング言語やマークアップ言語といった構造化された言語において、その構造や構文上のエラーが視覚的に区別しやすくなるため、ソースコードの記述が容易となる。
 </p><br>
     <cite><a class="author" href="https://ja.wikipedia.org/wiki/%e3%82%b7%e3%83%b3%e3%82%bf%e3%83%83%e3%82%af%e3%82%b9%e3%83%8f%e3%82%a4%e3%83%a9%e3%82%a4%e3%83%88">wikipedia</a></cite>
 </blockquote>
-
-
-<h2 id="結果からお見せすると-こんな感じです">結果からお見せすると、こんな感じです</h2>
-
+<h2 id="結果からお見せするとこんな感じです">結果からお見せすると、こんな感じです</h2>
 <h3 id="変更前">変更前</h3>
-
-<p><img src="/images/css-code-highlight-before.webp" alt="コードのハイライト 修正前" style="width:auto;"></p>
-
-<h3 id="変更後">変更後</h3>
-
-<p><img src="/images/css-code-highlight-after.webp" alt="コードのハイライト 修正後" style="width:auto;"></p>
-
+<img src="/images/css-code-highlight-before.webp" alt="コードのハイライト 修正前" style="width:auto;">
+### 変更後
+<img src="/images/css-code-highlight-after.webp" alt="コードのハイライト 修正後" style="width:auto;">
 <h2 id="hugo-におけるシンタックスハイライト">Hugo におけるシンタックスハイライト</h2>
-
-<p>Go の機能を使う方法と、highlight.js を使う方法の2種類が主流のようです。<br />
+<p>Go の機能を使う方法と、highlight.js を使う方法の2種類が主流のようです。<br>
 私は aether で採用されていることもあり、後者で行うことにしました。</p>
-
 <h2 id="私のやり方はイレギュラーかも">私のやり方はイレギュラーかも・・・</h2>
-
-<p>私のやり方はちょっとイレギュラーな形かもしれません。<br />
+<p>私のやり方はちょっとイレギュラーな形かもしれません。<br>
 highlight.js のテーマを変更してみたものの、一部しか反映されなかったんです・・・。</p>
-
 <h3 id="ということで-k-kaz-のやり方">ということで k-kaz のやり方</h3>
-
 <p>aether の中を覗いていたら、シンタックスハイライト用と思われるスタイルシートを発見しました。</p>
-
 <p><code>themes/aether/static/css/xcode.css</code></p>
-
 <p>もしかしたら、この影響でうまく反映されなかったのかもしれません。</p>
-
 <p><strong>というか、絶対そうだ。</strong></p>
-
 <p><strong>よく見付けた、私！！</strong></p>
-
-<p>ここで指定されているスタイルを自分好みに変えていきます。<br />
+<p>ここで指定されているスタイルを自分好みに変えていきます。<br>
 基本的には色だけ変えていけば良いのですが、スタイルの組み合わせもご自由に。</p>
-
 <p><code>xcode.css</code> みたいに、スタイルシート専用のファイルを用意しても良いし、既存のファイルに追記する形でも良いです。</p>
-
 <p>私は <code>assets/sass/hoge.scss</code> に追記しましたが、新規で用意する場合は <code>static/css/hoge.css</code> として <code>&lt;head&gt;～&lt;/head&gt;</code> で読み込むなり、CSS内で読み込むなりして反映させましょう。</p>
-
 <h3 id="いまのスタイルシートはこんな感じ">いまのスタイルシートはこんな感じ</h3>
-
 <div class="memo">
     <span class="memo-title">メモ</span>
-    <p><p>2019-03-15 時点でのスタイルです。<br />
-気分でチョコチョコ変えていきますので、「今と違うじゃんか！」と怒らないでください。</p>
+    <p>
+2019-03-15 時点でのスタイルです。  
+気分でチョコチョコ変えていきますので、「今と違うじゃんか！」と怒らないでください。
 </p>
 </div>
-
-
-<pre><code class="language-css">/* 背景真っ黒！！
-   プログラム毎に class が変わるのでワイルドカードで */
-code[class*=&quot;language-&quot;] {
-  background: #000 !important;
-  color: #fffaf0;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#75715e">/* 背景真っ黒！！
+</span><span style="color:#75715e">   プログラム毎に class が変わるのでワイルドカードで */</span>
+<span style="color:#f92672">code</span><span style="color:#f92672">[</span><span style="color:#f92672">class</span><span style="color:#f92672">*=</span><span style="color:#e6db74">&#34;language-&#34;</span><span style="color:#f92672">]</span> {
+  <span style="color:#66d9ef">background</span>: <span style="color:#ae81ff">#000</span> <span style="color:#75715e">!important</span>;
+  <span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#fffaf0</span>;
 }
 
-/* ここから下がコード用のスタイル */
-.hljs-comment,
-.hljs-quote {
-  color: #90ee90;
+<span style="color:#75715e">/* ここから下がコード用のスタイル */</span>
+.<span style="color:#a6e22e">hljs-comment</span><span style="color:#f92672">,</span>
+.<span style="color:#a6e22e">hljs-quote</span> {
+  <span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#90ee90</span>;
 }
 
-.hljs-keyword,
-.hljs-selector-tag,
-.hljs-literal {
-  color: #ffff00;
+.<span style="color:#a6e22e">hljs-keyword</span><span style="color:#f92672">,</span>
+.<span style="color:#a6e22e">hljs-selector-tag</span><span style="color:#f92672">,</span>
+.<span style="color:#a6e22e">hljs-literal</span> {
+  <span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#ffff00</span>;
 }
 
-.hljs-name {
-  color: #4682b4;
+.<span style="color:#a6e22e">hljs-name</span> {
+  <span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#4682b4</span>;
 }
 
-.hljs-variable,
-.hljs-template-variable {
-  color: #660;
+.<span style="color:#a6e22e">hljs-variable</span><span style="color:#f92672">,</span>
+.<span style="color:#a6e22e">hljs-template-variable</span> {
+  <span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#660</span>;
 }
 
-.hljs-string {
-  color: #ff7f50;
+.<span style="color:#a6e22e">hljs-string</span> {
+  <span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#ff7f50</span>;
 }
 
-.hljs-regexp,
-.hljs-link {
-  color: #080;
+.<span style="color:#a6e22e">hljs-regexp</span><span style="color:#f92672">,</span>
+.<span style="color:#a6e22e">hljs-link</span> {
+  <span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#080</span>;
 }
 
-.hljs-title,
-.hljs-tag,
-.hljs-symbol,
-.hljs-bullet,
-.hljs-meta {
-  color: #c0c0c0;
+.<span style="color:#a6e22e">hljs-title</span><span style="color:#f92672">,</span>
+.<span style="color:#a6e22e">hljs-tag</span><span style="color:#f92672">,</span>
+.<span style="color:#a6e22e">hljs-symbol</span><span style="color:#f92672">,</span>
+.<span style="color:#a6e22e">hljs-bullet</span><span style="color:#f92672">,</span>
+.<span style="color:#a6e22e">hljs-meta</span> {
+  <span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#c0c0c0</span>;
 }
 
-.hljs-number {
-  color: #7cfc00;
+.<span style="color:#a6e22e">hljs-number</span> {
+  <span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#7cfc00</span>;
 }
 
-.hljs-section,
-.hljs-class .hljs-title,
-.hljs-type,
-.hljs-attr,
-.hljs-built_in,
-.hljs-builtin-name,
-.hljs-params {
-  color: #87ceeb;
+.<span style="color:#a6e22e">hljs-section</span><span style="color:#f92672">,</span>
+.<span style="color:#a6e22e">hljs-class</span> .<span style="color:#a6e22e">hljs-title</span><span style="color:#f92672">,</span>
+.<span style="color:#a6e22e">hljs-type</span><span style="color:#f92672">,</span>
+.<span style="color:#a6e22e">hljs-attr</span><span style="color:#f92672">,</span>
+.<span style="color:#a6e22e">hljs-built_in</span><span style="color:#f92672">,</span>
+.<span style="color:#a6e22e">hljs-builtin-name</span><span style="color:#f92672">,</span>
+.<span style="color:#a6e22e">hljs-params</span> {
+  <span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#87ceeb</span>;
 }
 
-.hljs-attribute,
-.hljs-subst {
-  color: #87ceeb;
+.<span style="color:#a6e22e">hljs-attribute</span><span style="color:#f92672">,</span>
+.<span style="color:#a6e22e">hljs-subst</span> {
+  <span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#87ceeb</span>;
 }
 
-.hljs-formula {
-  background-color: #eee;
-  font-style: italic;
+.<span style="color:#a6e22e">hljs-formula</span> {
+  <span style="color:#66d9ef">background-color</span>: <span style="color:#ae81ff">#eee</span>;
+  <span style="color:#66d9ef">font-style</span>: <span style="color:#66d9ef">italic</span>;
 }
 
-.hljs-addition {
-  background-color: #baeeba;
+.<span style="color:#a6e22e">hljs-addition</span> {
+  <span style="color:#66d9ef">background-color</span>: <span style="color:#ae81ff">#baeeba</span>;
 }
 
-.hljs-deletion {
-  background-color: #ffc8bd;
+.<span style="color:#a6e22e">hljs-deletion</span> {
+  <span style="color:#66d9ef">background-color</span>: <span style="color:#ae81ff">#ffc8bd</span>;
 }
 
-.hljs-selector-id,
-.hljs-selector-class {
-  color: #ff8c00;
+.<span style="color:#a6e22e">hljs-selector-id</span><span style="color:#f92672">,</span>
+.<span style="color:#a6e22e">hljs-selector-class</span> {
+  <span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#ff8c00</span>;
 }
 
-.hljs-doctag,
-.hljs-strong {
-  font-weight: bold;
+.<span style="color:#a6e22e">hljs-doctag</span><span style="color:#f92672">,</span>
+.<span style="color:#a6e22e">hljs-strong</span> {
+  <span style="color:#66d9ef">font-weight</span>: <span style="color:#66d9ef">bold</span>;
 }
 
-.hljs-emphasis {
-  font-style: italic;
+.<span style="color:#a6e22e">hljs-emphasis</span> {
+  <span style="color:#66d9ef">font-style</span>: <span style="color:#66d9ef">italic</span>;
 }
-</code></pre>
-
-<hr />
-
-<h2 id="せっかくなので-正しいやり方も紹介">せっかくなので、正しいやり方も紹介</h2>
-
+</code></pre></div><hr>
+<h2 id="せっかくなので正しいやり方も紹介">せっかくなので、正しいやり方も紹介</h2>
 <p>いつか、自分が使うことになるかもしれないしね。</p>
-
 <h3 id="go-機能を使う場合">Go 機能を使う場合</h3>
-
 <p>今は、Go に搭載されている機能で、シンタックスハイライトが可能になっています。</p>
-
-<h4 id="config-toml-で有効化">config.toml で有効化</h4>
-
-<pre><code class="language-toml">pygmentsCodefences = true
-pygmentsUseClasses = true
-</code></pre>
-
-<h4 id="スタイルの選択">スタイルの選択</h4>
-
+<h4 id="configtoml-で有効化">config.toml で有効化</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="color:#a6e22e">pygmentsCodefences</span> = <span style="color:#66d9ef">true</span>
+<span style="color:#a6e22e">pygmentsUseClasses</span> = <span style="color:#66d9ef">true</span>
+</code></pre></div><h4 id="スタイルの選択">スタイルの選択</h4>
 <p><code>hugo gen chromastyles --style=hoge &gt; syntax.css</code></p>
-
 <p><code>hoge</code> のところを好きなテーマにしてあげると、そのスタイルシートが <code>syntax.css</code> に出力され、これを <code>&lt;head&gt;～&lt;/head&gt;</code> の中で読み込んであげれば良いです。</p>
-
-<p>テーマは下記を参考にしてください。<br />
+<p>テーマは下記を参考にしてください。<br>
 <a href="URLhttps://help.farbox.com/pygments.html">Pygments style gallery!</a></p>
-
-<p>monokai って結構有名ですよね。<br />
+<p>monokai って結構有名ですよね。<br>
 いろんなエディタのテーマで紹介されます。</p>
-
-<h3 id="highlight-js-を使う場合">highlight.js を使う場合</h3>
-
+<h3 id="highlightjs-を使う場合">highlight.js を使う場合</h3>
 <p>私が使っている aether ではこちらを採用しています。</p>
-
 <h4 id="スタイルの選択-1">スタイルの選択</h4>
-
-<p>こちらにもテーマが沢山あって、下記から選ぶことができます。<br />
+<p>こちらにもテーマが沢山あって、下記から選ぶことができます。<br>
 <a href="URLhttps://highlightjs.org/static/demo/">highlight.js demo</a></p>
-
 <h4 id="設定の仕方">設定の仕方</h4>
-
 <p>下記を <code>&lt;head&gt;～&lt;/head&gt;</code> に入れてあげましょう。</p>
-
-<pre><code class="language-html">&lt;link rel=&quot;stylesheet&quot; href=&quot;//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/default.min.css&quot;&gt;
-&lt;script src=&quot;//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js&quot;&gt;&lt;/script&gt;
-&lt;script&gt;hljs.initHighlightingOnLoad();&lt;/script&gt;
-</code></pre>
-
-<p><code>9.15.6</code> は現在の最新バージョンです。ここは値が変わるので、使用する場合は公式サイトで確認をお願いします。<br />
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/default.min.css&#34;</span>&gt;
+&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+&lt;<span style="color:#f92672">script</span>&gt;<span style="color:#a6e22e">hljs</span>.<span style="color:#a6e22e">initHighlightingOnLoad</span>();&lt;/<span style="color:#f92672">script</span>&gt;
+</code></pre></div><p><code>9.15.6</code> は現在の最新バージョンです。ここは値が変わるので、使用する場合は公式サイトで確認をお願いします。<br>
 尚、一番上にあるファイル名 <code>default.min.css</code> を好きなテーマに変えてあげると、スタイルが反映されます。</p>
-
 <h4 id="aether-の場合">aether の場合</h4>
-
 <p><code>themes/aether/layouts/partials/scripts.html</code> で、上記を読み込んでいるので、そこを変えてあげれば良いはずなんですけど、1行目（テーマ）が見当たらず。もしかしたら、そこを省略して、自前のスタイルシートを使っていたのかなと思えてきました。</p>
-
 <p>ということで、最初に紹介した <strong>スタイルシートで調整</strong> という方法をとったんですが、aether の場合はそれが正解っぽいですね。</p>
-
 <p>他のテーマならこの手順で良いかと思います。</p>
 
       </article>
