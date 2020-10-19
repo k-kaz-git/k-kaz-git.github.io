@@ -178,7 +178,8 @@ css というフォルダも自分で作成し、その中にスタイルシー�
 条件としては、<code>H2</code> 以下の <code>Hタグ</code> が目次としての構成要素になるようです。</p>
 <p>但し、このやり方だと、400文字以上とか無視して、<strong>どのページにも出現します</strong> ので注意。</p>
 <h3 id="更新日を追加する">更新日を追加する</h3>
-<p>こちらのサイトは、日記的な <a href="https://k-kaz.net" title="姉妹サイト（本家）">姉妹サイト（本家）</a> とは違って、同じ記事を後から何度も加筆修正します。<br>
+<p>こちらのサイトは、日記的な <a href="https://k-kaz.net" title="姉妹サイト（本家）" target="_blank">姉妹サイト（本家）</a>
+ とは違って、同じ記事を後から何度も加筆修正します。<br>
 そうなると、投稿日だけではなく、最終更新日もあると嬉しい。</p>
 <p>さぁ、やってみましょう。</p>
 <h4 id="更新日を追加する個別記事">更新日を追加する（個別記事）</h4>
@@ -273,7 +274,8 @@ git push origin master
 <span style="color:#a6e22e">publishDate</span> = [<span style="color:#e6db74">&#34;publishDate&#34;</span>, <span style="color:#e6db74">&#34;date&#34;</span>]
 <span style="color:#a6e22e">expiryDate</span> = [<span style="color:#e6db74">&#34;expiryDate&#34;</span>]
 </code></pre></div><p><code>[frontmatter]</code> というセクションを追加し、その下に日付的な設定を追加しました。<br>
-参考にしたのは <a href="https://gohugo.io/getting-started/configuration/#configure-front-matter" title="Configure Hugo">Configure Hugo</a> です。</p>
+参考にしたのは <a href="https://gohugo.io/getting-started/configuration/#configure-front-matter" title="Configure Hugo" target="_blank">Configure Hugo</a>
+ です。</p>
 <p>もしかしたら、<code>lastmod</code> の行だけでもいいかもしれない。<br>
 どの段階を最終更新と見るかという設定で、左から優先？みたい。<br>
 デフォルトがこの設定なので、本来は書かなくても良さそうなんだけど・・・。<br>
@@ -284,7 +286,8 @@ git push origin master
 本文中の修正でなくても反映するのね。そりゃそうか。</p>
 <p>どうも気持ち悪いので、ファイルのタイムスタンプから更新日を取得するように変更しました。</p>
 <p>参考にしたのは公式のドキュメント<br>
-<a href="https://gohugo.io/getting-started/configuration/#configure-dates">Configure Dates</a></p>
+<a href="https://gohugo.io/getting-started/configuration/#configure-dates" target="_blank">Configure Dates</a>
+</p>
 <p><code>:fileModTime</code> というのが、ファイルのタイムスタンプを見てくれるようなので、<code>config.toml</code> を下記のように変更です。</p>
 <p><code>lastmod = [&quot;:fileModTime&quot;, &quot;:git&quot;, &quot;lastmod&quot;, &quot;date&quot;, &quot;publishDate&quot;]</code></p>
 <p><code>lastmod</code> のところで、一番左側に追加しました。</p>
@@ -297,7 +300,9 @@ git push origin master
 <p>やっぱり見た目は大事ですよね。<br>
 ということで、フォントを変えてみようと思います。</p>
 <h4 id="webフォントを使う">Webフォントを使う</h4>
-<p>フォントが汚いので、Webフォントで有名な <a href="https://fonts.google.com" title="Google Fonts">Google Fonts</a> を使ってみました。（<a href="https://k-kaz.net" title="姉妹サイト（本家）">姉妹サイト（本家）</a> でも使っている）<br>
+<p>フォントが汚いので、Webフォントで有名な <a href="https://fonts.google.com" title="Google Fonts" target="_blank">Google Fonts</a>
+ を使ってみました。（<a href="https://k-kaz.net" title="姉妹サイト（本家）" target="_blank">姉妹サイト（本家）</a>
+ でも使っている）<br>
 PageSpeed Insights のモバイルの点数が <strong>15点落ちました</strong> ので、一瞬で戻しました（笑）<br>
 パソコンのほうは相変わらず100点でしたけどね。モバイル、厳しいなぁ。</p>
 <p>Webフォントじゃなくてもきれいに表示することはできるのかしら。調べてみよう。</p>
@@ -305,8 +310,10 @@ PageSpeed Insights のモバイルの点数が <strong>15点落ちました</str
 以下のファイルを修正します。</p>
 <p><code>/サイト名/layouts/partials/head.html</code><br>
 <code>/サイト名/static/css/hoge.css</code></p>
-<p>尚、この後に書いている内容は、<a href="https://k-kaz.net" title="姉妹サイト（本家）">姉妹サイト（本家）</a> で使っているものを若干修正したサンプルです。<br>
-使うフォントによってタグの内容も変わりますので、<a href="https://fonts.google.com" title="Google Fonts">Google Fonts</a> で好きなフォントを選んで、それ用のタグを入手してください。</p>
+<p>尚、この後に書いている内容は、<a href="https://k-kaz.net" title="姉妹サイト（本家）" target="_blank">姉妹サイト（本家）</a>
+ で使っているものを若干修正したサンプルです。<br>
+使うフォントによってタグの内容も変わりますので、<a href="https://fonts.google.com" title="Google Fonts" target="_blank">Google Fonts</a>
+ で好きなフォントを選んで、それ用のタグを入手してください。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">［head.html に下記を貼り付ける］
 
 <span style="color:#75715e">&lt;!-- webfontloader --&gt;</span>

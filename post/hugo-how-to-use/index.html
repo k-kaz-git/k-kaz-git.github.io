@@ -95,7 +95,8 @@ if (!doNotTrack) {
 </nav>
         </aside>
         <h2 id="参考サイト">参考サイト</h2>
-<p><a href="https://www.google.co.jp/">Google先生</a><br>
+<p><a href="https://www.google.co.jp/" target="_blank">Google先生</a>
+<br>
 もう、検索し過ぎて、どこのサイトを参考にしたのか分からなくなりました。</p>
 <h2 id="サイト作成">サイト作成</h2>
 <p>$ <code>hugo new site サイト名</code></p>
@@ -122,7 +123,9 @@ if (!doNotTrack) {
 <p><code>new</code> のあとにフォルダを指定することで、<code>content</code> 以下に自動でフォルダが作成され、その中に記事用のファイルが作られる。</p>
 <p>記事は、テンプレートからタイトル、作成時間等は自動で代入されるが、記事本文や下書き状態から公開状態への切り替えなどは自身で行う。
 Markdown 記法となるため、対応したエディタを使うと良い。</p>
-<p>ちなみに <a href="https://k-kaz.net" title="k-kaz.net">k-kaz</a> は <a href="https://code.visualstudio.com/" title="Visual Studio Code">VSCode</a> で編集している。</p>
+<p>ちなみに <a href="https://k-kaz.net" title="k-kaz.net" target="_blank">k-kaz</a>
+ は <a href="https://code.visualstudio.com/" title="Visual Studio Code" target="_blank">VSCode</a>
+ で編集している。</p>
 <h2 id="テーマインストール">テーマインストール</h2>
 <p>テーマサイトの中から、好きなタイプのものを選択する。
 選択後、テーマの詳細が表示されるので、自分が使いたい機能が搭載されているか、事前にチェックする。（最悪、テーマを使わず、自力で機能搭載）</p>
@@ -161,7 +164,8 @@ Markdown 記法となるため、対応したエディタを使うと良い。</
 <h2 id="ssh接続github">ssh接続【GitHub】</h2>
 <p>ssh接続用に、公開鍵と秘密鍵を作成する。<br>
 公開鍵の中身を GitHub に登録しておく。</p>
-<p>参考：<a href="https://qiita.com/shizuma/items/2b2f873a0034839e47ce">GitHubでssh接続する手順~公開鍵・秘密鍵の生成から~</a></p>
+<p>参考：<a href="https://qiita.com/shizuma/items/2b2f873a0034839e47ce" target="_blank">GitHubでssh接続する手順~公開鍵・秘密鍵の生成から~</a>
+</p>
 <h3 id="https-接続からssh-接続に切り替える">https 接続から、ssh 接続に切り替える</h3>
 <p><code>$ git remote -v</code> で表示されたアドレスが <code>https://github.com/</code> の場合は、<code>git@github.com:</code> に変えることで ssh 接続にできる。</p>
 <p>切替用コマンド <code>$ git remote set-url origin git@github.com:hogehoge.git</code><br>
