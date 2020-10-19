@@ -82,9 +82,9 @@ if (!doNotTrack) {
 うっかりやってしまう <code>draft: false</code> もちゃんとなっているし、なんだろうと思って、ひとつずつチェックしてみました。</p>
 <p>ひっかかったのが、ssh 認証のところ。</p>
 <p><code>ssh -T git@github.com</code> で、ssh が通るか試してみたら、<code>git@github.com: Permission denied (publickey).</code> って怒られました。</p>
-<pre><code>$ ssh -T git@github.com     /* ssh が通るか試すコマンド */
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">$ ssh -T git@github.com     /* ssh が通るか試すコマンド */
 $ git@github.com: Permission denied (publickey).
-</code></pre><p>ネットで調べてみたところ、 <strong>「Github に公開鍵（publickey）を登録しましょう」</strong> と書いてあったので、1年半振りの Github ログイン。</p>
+</code></pre></div><p>ネットで調べてみたところ、 <strong>「Github に公開鍵（publickey）を登録しましょう」</strong> と書いてあったので、1年半振りの Github ログイン。</p>
 <p><strong>お前、本当に k-kaz か？</strong><br>
 <strong>メール送ったから、そこに書かれた6桁のコードを入れてみろよ！</strong></p>
 <p>って、疑われ、言われた通りに6桁のコードを入れてログイン。</p>
