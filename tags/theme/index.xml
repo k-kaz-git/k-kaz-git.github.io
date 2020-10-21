@@ -5,11 +5,18 @@
     <description>Recent content in theme on k-kaz</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Mon, 18 Mar 2019 12:31:49 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 21 Oct 2020 12:45:27 +0900</lastBuildDate>
     
         <atom:link href="https://k-kaz-git.github.io/tags/theme/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>コンテンツ（画像とか）を同一フォルダにする場合</title>
+      <link>https://k-kaz-git.github.io/post/hugo-contents/</link>
+      <pubDate>Wed, 21 Oct 2020 12:45:27 +0900</pubDate>
+      
+      <guid>https://k-kaz-git.github.io/post/hugo-contents/</guid>
+      <description>それ用のルールがあるのね。</description>
+    </item><item>
       <title>Hugo のテーマを作ったよ。</title>
       <link>https://k-kaz-git.github.io/post/hugo-k-kaz-theme/</link>
       <pubDate>Mon, 18 Mar 2019 12:31:49 +0900</pubDate>

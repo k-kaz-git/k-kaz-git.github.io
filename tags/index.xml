@@ -5,16 +5,23 @@
     <description>Recent content in Tags on k-kaz</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Sun, 18 Oct 2020 20:00:29 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 21 Oct 2020 12:45:27 +0900</lastBuildDate>
     
         <atom:link href="https://k-kaz-git.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>hugo</title>
       <link>https://k-kaz-git.github.io/tags/hugo/</link>
-      <pubDate>Sun, 18 Oct 2020 20:00:29 +0900</pubDate>
+      <pubDate>Wed, 21 Oct 2020 12:45:27 +0900</pubDate>
       
       <guid>https://k-kaz-git.github.io/tags/hugo/</guid>
+      <description></description>
+    </item><item>
+      <title>theme</title>
+      <link>https://k-kaz-git.github.io/tags/theme/</link>
+      <pubDate>Wed, 21 Oct 2020 12:45:27 +0900</pubDate>
+      
+      <guid>https://k-kaz-git.github.io/tags/theme/</guid>
       <description></description>
     </item><item>
       <title>github</title>
@@ -57,13 +64,6 @@
       <pubDate>Mon, 18 Mar 2019 12:31:49 +0900</pubDate>
       
       <guid>https://k-kaz-git.github.io/tags/cupper/</guid>
-      <description></description>
-    </item><item>
-      <title>theme</title>
-      <link>https://k-kaz-git.github.io/tags/theme/</link>
-      <pubDate>Mon, 18 Mar 2019 12:31:49 +0900</pubDate>
-      
-      <guid>https://k-kaz-git.github.io/tags/theme/</guid>
       <description></description>
     </item><item>
       <title>css</title>
