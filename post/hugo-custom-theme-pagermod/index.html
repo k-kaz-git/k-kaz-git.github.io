@@ -85,6 +85,7 @@ if (!doNotTrack) {
       <ul>
         <li><a href="#アイコンを消したい">アイコンを消したい。</a></li>
         <li><a href="#トップページのソーシャル系アイコンを消す">トップページのソーシャル系アイコンを消す。</a></li>
+        <li><a href="#右上のメニューをカスタマイズしたい">右上のメニューをカスタマイズしたい。</a></li>
       </ul>
     </li>
   </ul>
@@ -197,7 +198,38 @@ if (!doNotTrack) {
 </span><span style="color:#75715e">--&gt;</span>
 &lt;/<span style="color:#f92672">article</span>&gt;
 {{- end}}
-</code></pre></div>
+</code></pre></div><h3 id="右上のメニューをカスタマイズしたい">右上のメニューをカスタマイズしたい。</h3>
+<p>2段階の修正が必要です。<br>
+まずはメニューの文字列を表示する。<br>
+次にその内容を表示する。</p>
+<h4 id="メニューの文字列を表示する">メニューの文字列を表示する。</h4>
+<p><code>config.yml</code> を開いて、表示したい文字列、優先順位等を記述します。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#f92672">menu</span>:
+  <span style="color:#f92672">main</span>:
+    - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Archives   </span> <span style="color:#75715e"># 表示される文字列</span>
+      <span style="color:#f92672">url</span>: <span style="color:#ae81ff">/archives/  </span> <span style="color:#75715e"># url</span>
+      <span style="color:#f92672">weight</span>: <span style="color:#ae81ff">5</span>         <span style="color:#75715e"># 表示順（小さいほど先に表示）</span>
+    - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Tags</span>
+      <span style="color:#f92672">url</span>: <span style="color:#ae81ff">/tags/</span>
+      <span style="color:#f92672">weight</span>: <span style="color:#ae81ff">10</span>
+    - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Link       </span> <span style="color:#75715e"># 今回追加</span>
+      <span style="color:#f92672">url</span>: <span style="color:#ae81ff">/links/     </span> <span style="color:#75715e"># 今回追加</span>
+      <span style="color:#f92672">weight</span>: <span style="color:#ae81ff">12</span>        <span style="color:#75715e"># 今回追加</span>
+</code></pre></div><p>今回は <code>Link</code> というメニューを追加してみました。</p>
+<h4 id="link-の中身を作ります">Link の中身を作ります。</h4>
+<p>下記の場所に <code>links.md</code> を設置します。<br>
+<code>サイト名\content\links.md</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ hugo new links.md
+</code></pre></div><p>ファイルを作ったら、その中身を編集します。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">---
+title: &#34;Link&#34;
+url: &#34;/links&#34;
+summary: &#34;links&#34;
+---
+[<span style="color:#f92672">k-kaz ブログ</span>](<span style="color:#a6e22e">https://k-kaz.net</span>)  
+[<span style="color:#f92672">k-kaz が Hugo で遊ぶサイト</span>](<span style="color:#a6e22e">https://k-kaz-git.github.io</span>)
+</code></pre></div><p>これで画面右上に <code>Archives</code> <code>Tags</code> <code>Link</code> が並び、クリックするとその中身が表示されます。</p>
+
       </article>
       <hr>
       <p class="post-date">
