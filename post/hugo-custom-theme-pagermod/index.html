@@ -145,7 +145,7 @@ if (!doNotTrack) {
 </code></pre></div><p>長くなるので途中の行とか割愛しましたが、こんな感じです。</p>
 <p>定義したものを使うには、</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">a</span> {
-    <span style="color:#66d9ef">color</span>: <span style="color:#a6e22e">var</span>(<span style="color:#f92672">--</span>entry); <span style="color:#960050;background-color:#1e0010">//リンクの色を定義</span>
+    <span style="color:#66d9ef">color</span>: <span style="color:#a6e22e">var</span>(<span style="color:#f92672">--</span>entry);    <span style="color:#75715e">/* リンクの色を定義 */</span>
 }
 </code></pre></div><p>とします。<br>
 すると、ライトモードのときは <code>#fff</code> が、ダークモードのときは <code>#2e2e33</code> が入るというわけ。
@@ -166,7 +166,7 @@ if (!doNotTrack) {
 <p>こちらは簡単。<br>
 サイト全体の構成を司る <code>config.yml</code> or <code>config.toml</code> の記述を1箇所変えるだけ。</p>
 <p>ちなみにこのテーマの初期値は <code>config.yml</code> なので、以下こちらで統一します。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml">  <span style="color:#f92672">ShowShareButtons</span>: <span style="color:#66d9ef">false</span> <span style="color:#75715e"># True にすれば表示するよ。</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml">  <span style="color:#f92672">ShowShareButtons</span>: <span style="color:#66d9ef">false</span>     <span style="color:#75715e"># True にすれば表示するよ。</span>
 </code></pre></div><h4 id="トップページのソーシャル系アイコンを消す">トップページのソーシャル系アイコンを消す。</h4>
 <p>これも簡単ですが、ファイルを持ってくる必要があります。</p>
 <p>これを → <code>サイト名\themes\hugo-PaperMod\layouts\partials\home_info.html</code><br>
