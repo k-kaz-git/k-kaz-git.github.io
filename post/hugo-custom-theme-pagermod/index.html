@@ -86,6 +86,7 @@ if (!doNotTrack) {
         <li><a href="#アイコンを消したい">アイコンを消したい。</a></li>
         <li><a href="#トップページのソーシャル系アイコンを消す">トップページのソーシャル系アイコンを消す。</a></li>
         <li><a href="#右上のメニューをカスタマイズしたい">右上のメニューをカスタマイズしたい。</a></li>
+        <li><a href="#html-を表示する">html を表示する。</a></li>
       </ul>
     </li>
   </ul>
@@ -229,6 +230,19 @@ summary: &#34;links&#34;
 [<span style="color:#f92672">k-kaz ブログ</span>](<span style="color:#a6e22e">https://k-kaz.net</span>)  
 [<span style="color:#f92672">k-kaz が Hugo で遊ぶサイト</span>](<span style="color:#a6e22e">https://k-kaz-git.github.io</span>)
 </code></pre></div><p>これで画面右上に <code>Archives</code> <code>Tags</code> <code>Link</code> が並び、クリックするとその中身が表示されます。</p>
+<h3 id="html-を表示する">html を表示する。</h3>
+<p>Hugo v0.60.0 からの仕様で、記事に直接書いた html が表示されなくなった問題への対応です。<br>
+ちなみに表示されない部分は <code>&lt;!-- raw HTML omitted --&gt;</code> と置き換わっています。</p>
+<h4 id="configtoml">config.toml</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[<span style="color:#a6e22e">markup</span>.<span style="color:#a6e22e">goldmark</span>.<span style="color:#a6e22e">renderer</span>]
+<span style="color:#a6e22e">unsafe</span>= <span style="color:#66d9ef">true</span>
+</code></pre></div><h4 id="configyml">config.yml</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#f92672">markup</span>:
+  <span style="color:#f92672">goldmark</span>:
+    <span style="color:#f92672">renderer</span>:
+      <span style="color:#f92672">unsafe</span>: <span style="color:#66d9ef">true</span>
+</code></pre></div><p>参考 → <a href="https://gohugo.io/getting-started/configuration-markup/" target="_blank">Link WordsConfigure Markup | Hugo</a>
+</p>
 
       </article>
       <hr>
