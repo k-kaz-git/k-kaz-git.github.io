@@ -5,11 +5,18 @@
     <description>Recent content in hugo on k-kaz</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Wed, 21 Oct 2020 12:45:27 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 28 Oct 2020 12:32:55 +0900</lastBuildDate>
     
         <atom:link href="https://k-kaz-git.github.io/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Hugo を Netlify で動かすよ。</title>
+      <link>https://k-kaz-git.github.io/post/hugo-netlify/</link>
+      <pubDate>Thu, 07 Mar 2019 14:44:55 +0900</pubDate>
+      
+      <guid>https://k-kaz-git.github.io/post/hugo-netlify/</guid>
+      <description>Hugo を Netlify で動かしてみたときの記録です。</description>
+    </item><item>
       <title>Hugo で使える Markdown の記法</title>
       <link>https://k-kaz-git.github.io/post/hugo-markdown/</link>
       <pubDate>Thu, 21 Feb 2019 11:43:14 +0900</pubDate>
@@ -72,13 +79,6 @@
       
       <guid>https://k-kaz-git.github.io/post/hello2/</guid>
       <description>とりあえず、いくつか記事をアップする練習</description>
-    </item><item>
-      <title>Hello</title>
-      <link>https://k-kaz-git.github.io/post/hello/</link>
-      <pubDate>Sat, 16 Feb 2019 16:52:50 +0900</pubDate>
-      
-      <guid>https://k-kaz-git.github.io/post/hello/</guid>
-      <description>1日中、テストを頑張っている私。</description>
     </item>
   </channel>
 </rss>

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>テーマ Pagermod のカスタマイズ &middot; k-kaz</title>
+  <meta name="description" content="Pagermod を自分好みにしていくよ。" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://k-kaz-git.github.io/css/main.min.css" />
+  
+  <link rel="stylesheet" href="https://k-kaz-git.github.io/sass/main.min.47ca362481462191544ac57b2ec98c2b4be0630230c3d2edd85073dad5b96a26.css">
+
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-134722453-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+  
+</head>
+  <body class="single-body">
+    <nav class="nav-bar side-padding">
+  <h1 class="nav-header"><a href="https://k-kaz-git.github.io/" class="nav-text">k-kaz が Hugo で遊ぶサイト</a></h1>
+  <div class="hamburger-menu">
+    <button onclick="hamburgerMenuPressed.call(this)" aria-haspopup="true" aria-expanded="false" aria-controls="menu" aria-label="Menu">
+      <span></span>
+      <span></span>
+    </button>
+    <ul id="menu" class="hamburger-menu-overlay">
+      <li><a href="https://k-kaz-git.github.io/" class="hamburger-menu-overlay-link">Home</a></li>
+      <li class="navi-menu">- Categories -</li>
+      <li style="font-size: 0.7em;"><a href="https://k-kaz-git.github.io/categories/coding" class="hamburger-menu-overlay-link">Coding</a></li><li style="font-size: 0.7em;"><a href="https://k-kaz-git.github.io/categories/homepage" class="hamburger-menu-overlay-link">Homepage</a></li><li style="font-size: 0.7em;"><a href="https://k-kaz-git.github.io/categories/linux" class="hamburger-menu-overlay-link">Linux</a></li>
+      <li class="navi-menu">- Tags -</li>
+      <li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/aether" class="hamburger-menu-overlay-link">Aether</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/css" class="hamburger-menu-overlay-link">Css</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/cupper" class="hamburger-menu-overlay-link">Cupper</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/favicon" class="hamburger-menu-overlay-link">Favicon</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/github" class="hamburger-menu-overlay-link">Github</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/hugo" class="hamburger-menu-overlay-link">Hugo</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/markdown" class="hamburger-menu-overlay-link">Markdown</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/mozc" class="hamburger-menu-overlay-link">Mozc</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/netlify" class="hamburger-menu-overlay-link">Netlify</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/pagermod" class="hamburger-menu-overlay-link">Pagermod</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/saas" class="hamburger-menu-overlay-link">Saas</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/sass" class="hamburger-menu-overlay-link">Sass</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/shortcodes" class="hamburger-menu-overlay-link">Shortcodes</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/snippet" class="hamburger-menu-overlay-link">Snippet</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/stylesheet" class="hamburger-menu-overlay-link">Stylesheet</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/tableofcontents" class="hamburger-menu-overlay-link">Tableofcontents</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/theme" class="hamburger-menu-overlay-link">Theme</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/vscode" class="hamburger-menu-overlay-link">Vscode</a></li>
+    </ul>
+  </div>
+</nav>
+    <main class="content side-text-padding">
+      <article class="post ">
+        <header class="post-header">
+        	<h1 class="post-title">テーマ Pagermod のカスタマイズ</h1>
+          <p class="post-date">
+            Posted <time datetime="2020-10-28">2020-10-28</time>
+             / Update 2020-10-28</p>
+             <div class="card-subtext muted-text li-line">
+               <a class="cat" href="/categories/homepage">homepage</a>
+               <a class="tag" href="/tags/hugo">#hugo</a>  <a class="tag" href="/tags/theme">#theme</a>  <a class="tag" href="/tags/pagermod">#pagermod</a> 
+             </div>
+        </header>
+        
+        <picture class="post-figure">
+            <source srcset="https://k-kaz-git.github.io/images/hugo-custom-theme-pagermod.webp" type="image/webp">
+            <source srcset="https://k-kaz-git.github.io/images/hugo-custom-theme-pagermod.webp">
+          <img src="https://k-kaz-git.github.io/images/hugo-custom-theme-pagermod.webp" alt="雑誌とコーヒー">
+        </picture>
+        
+        <aside>
+          <h2>目次</h2>
+            <nav id="TableOfContents">
+  <ul>
+    <li><a href="#次に目を付けたテーマは-pagermod-です">次に目を付けたテーマは Pagermod です。</a></li>
+    <li><a href="#テーマを弄る前に">テーマを弄る前に。</a></li>
+    <li><a href="#このテーマで気付いたこと">このテーマで気付いたこと。</a>
+      <ul>
+        <li><a href="#モード選択">モード選択。</a></li>
+        <li><a href="#フォントサイズについて">フォントサイズについて。</a></li>
+      </ul>
+    </li>
+    <li><a href="#それではカスタマイズしていきます">それではカスタマイズしていきます。</a>
+      <ul>
+        <li><a href="#アイコンを消したい">アイコンを消したい。</a></li>
+        <li><a href="#トップページのソーシャル系アイコンを消す">トップページのソーシャル系アイコンを消す。</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+        </aside>
+        <h2 id="次に目を付けたテーマは-pagermod-です">次に目を付けたテーマは Pagermod です。</h2>
+<p>不定期でお送りしているテーマのカスタマイズコーナー。<br>
+今回は Pagermod というテーマをカスタマイズしていきます。</p>
+<p><a href="https://themes.gohugo.io/hugo-papermod/" target="_blank">PaperMod | Hugo Themes</a>
+</p>
+<p>とはいえ、かなりシンプルなテーマであり、選んだ時点である程度、自分好みの状態ですから、あまり記事にはならないかも。<br>
+こちらの記事はカスタマイズを加える度に、ちょこちょこと更新していきます。</p>
+<h2 id="テーマを弄る前に">テーマを弄る前に。</h2>
+<p>テーマファイルを弄る方には当たり前の話かと思いますので、ご存知の方は読み飛ばしてください。</p>
+<p>Hugo のテーマは下記にあります。</p>
+<p><code>サイト名\themes\</code></p>
+<p>Pagermod の場合は <code>サイト名\themes\Pagermod\</code> です。</p>
+<p>修正するときは、<strong>この中のファイルを直接直しません。</strong><br>
+修正したいファイルをコピーして、しかるべき場所に置いてから、そちらを修正します。<br>
+その場所が、テーマ読み込み時に優先される仕組みになっているため、<strong>テーマの更新などがあっても影響を受けない</strong> ようになっています。</p>
+<p>例えば、<code>サイト名\themes\hugo-PaperMod\layouts\partials\home_info.html</code> というファイルを弄りたい場合、<code>サイト名\layouts\partials\</code> というフォルダを用意して、そこに <code>home_info.html</code> を持ってきて修正するわけです。<br>
+フォルダ構成はまったく一緒です。単純に <code>\themes\hugo-Pagermod\</code> が外れるだけだと考えて良いかと思います。</p>
+<h2 id="このテーマで気付いたこと">このテーマで気付いたこと。</h2>
+<h3 id="モード選択">モード選択。</h3>
+<p>流行りのライトモードとダークモードの切り替え機能が搭載されています。<br>
+ライトモードは背景が白っぽく、文字は黒っぽく。<br>
+ダークモードは背景が黒っぽく、文字は白っぽく。<br>
+スイッチ1つでどうやって切り替えているのかなと思ったら、スタイルシート内に秘密がありました。</p>
+<h4 id="var関数">var()関数。</h4>
+<p>初めて見た、この関数。<br>
+予め <strong>定義しておいた内容を呼び出す関数</strong> だそうです。<br>
+中身が呼び出すことで変わるので <strong>CSS変数</strong> と呼んだりもするそう。</p>
+<p>Pagermod の場合、<code>theme-vars.css</code> の中で、ライトモードが <code>.root</code> ダークモードが <code>.dark</code> で定義されています。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">:<span style="color:#a6e22e">root</span> {
+    --theme: <span style="color:#ae81ff">#fff</span>;
+    --entry: <span style="color:#ae81ff">#fff</span>;
+    --primary: rgba(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0.88</span>);
+    --secondary: rgba(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0.56</span>);
+    --tertiary: rgba(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0.16</span>);
+    --content: rgba(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0.88</span>);
+}
+.<span style="color:#a6e22e">dark</span> {
+    --theme: <span style="color:#ae81ff">#1d1e20</span>;
+    --entry: <span style="color:#ae81ff">#2e2e33</span>;
+    --primary: rgba(<span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">0.84</span>);
+    --secondary: rgba(<span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">0.56</span>);
+    --tertiary: rgba(<span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">0.16</span>);
+    --content: rgba(<span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">0.64</span>);
+}
+
+</code></pre></div><p>長くなるので途中の行とか割愛しましたが、こんな感じです。</p>
+<p>定義したものを使うには、</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">a</span> {
+    <span style="color:#66d9ef">color</span>: <span style="color:#a6e22e">var</span>(<span style="color:#f92672">--</span>entry); <span style="color:#960050;background-color:#1e0010">//リンクの色を定義</span>
+}
+</code></pre></div><p>とします。<br>
+すると、ライトモードのときは <code>#fff</code> が、ダークモードのときは <code>#2e2e33</code> が入るというわけ。
+なんだこれ、超便利じゃないか。<br>
+もちろん、色だけではなく、フォントのサイズとかでも同様に使えます。</p>
+<h3 id="フォントサイズについて">フォントサイズについて。</h3>
+<p>これまで出会ったテーマは、レスポンシブデザインの対応として、フォントサイズを可変にしていました。横幅（width）のサイズから算出するとかね。</p>
+<p>Pagermod では画面サイズに関係無く、<strong>フォントサイズは決め打ち</strong> です。<br>
+つまり、パソコンで見ようが、スマホで見ようが、文字サイズは常に同じ。</p>
+<p>これってどうなんでしょうね。<br>
+タイトルタグとか、かなり文字サイズが大きいので、スマホで見ると見やすいんだけど文字数が溢れて改行しちゃうのよね。<br>
+やっぱりここは手を入れて可変にしようかなと悩んでいます。</p>
+<h2 id="それではカスタマイズしていきます">それではカスタマイズしていきます。</h2>
+<h3 id="アイコンを消したい">アイコンを消したい。</h3>
+<p>記事内に共有アイコン、トップページにソーシャル系アイコンが搭載されています。<br>
+私は基本それらを使わないので、消し去ります。</p>
+<h4 id="記事内の共有アイコンを消す">記事内の共有アイコンを消す。</h4>
+<p>こちらは簡単。<br>
+サイト全体の構成を司る <code>config.yml</code> or <code>config.toml</code> の記述を1箇所変えるだけ。</p>
+<p>ちなみにこのテーマの初期値は <code>config.yml</code> なので、以下こちらで統一します。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml">  <span style="color:#f92672">ShowShareButtons</span>: <span style="color:#66d9ef">false</span> <span style="color:#75715e"># True にすれば表示するよ。</span>
+</code></pre></div><h3 id="トップページのソーシャル系アイコンを消す">トップページのソーシャル系アイコンを消す。</h3>
+<p>これも簡単ですが、ファイルを持ってくる必要があります。</p>
+<p>これを → <code>サイト名\themes\hugo-PaperMod\layouts\partials\home_info.html</code><br>
+ここへ → <code>サイト名\layouts\partials\home_info.html</code></p>
+<h4 id="修正します">修正します。</h4>
+<p>ソーシャル系アイコンは <code>social_icons.html</code> を使って表示していますので、その部分を消します。<br>
+コメントアウトか、削除はお好みで。（私は削除）</p>
+<p>元ファイル（<code>サイト名\themes\hugo-PaperMod\layouts\partials\home_info.html</code> ）</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{- with $.Site.Params.homeInfoParams }}
+&lt;<span style="color:#f92672">article</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;first-entry home-info&#34;</span>&gt;
+    &lt;<span style="color:#f92672">header</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;entry-header&#34;</span>&gt;
+        &lt;<span style="color:#f92672">h2</span>&gt;{{- .Title | markdownify }}&lt;/<span style="color:#f92672">h2</span>&gt;
+    &lt;/<span style="color:#f92672">header</span>&gt;
+    &lt;<span style="color:#f92672">section</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;entry-content&#34;</span>&gt;
+        &lt;<span style="color:#f92672">p</span>&gt;{{- .Content | markdownify }}&lt;/<span style="color:#f92672">p</span>&gt;
+    &lt;/<span style="color:#f92672">section</span>&gt;
+    &lt;<span style="color:#f92672">footer</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;entry-footer&#34;</span>&gt;
+        {{- partial &#34;social_icons.html&#34; $.Site.Params.socialIcons -}}
+    &lt;/<span style="color:#f92672">footer</span>&gt;
+&lt;/<span style="color:#f92672">article</span>&gt;
+{{- end}}
+</code></pre></div><p>コピペしたファイル（<code>サイト名\layouts\partials\home_info.html</code>）</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{- with $.Site.Params.homeInfoParams }}
+&lt;<span style="color:#f92672">article</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;first-entry home-info&#34;</span>&gt;
+    &lt;<span style="color:#f92672">header</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;entry-header&#34;</span>&gt;
+        &lt;<span style="color:#f92672">h2</span>&gt;{{- .Title | markdownify }}&lt;/<span style="color:#f92672">h2</span>&gt;
+    &lt;/<span style="color:#f92672">header</span>&gt;
+    &lt;<span style="color:#f92672">section</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;entry-content&#34;</span>&gt;
+        &lt;<span style="color:#f92672">p</span>&gt;{{- .Content | markdownify }}&lt;/<span style="color:#f92672">p</span>&gt;
+    &lt;/<span style="color:#f92672">section</span>&gt;
+<span style="color:#75715e">&lt;!-- ここをコメントアウト or バッサリ削除
+</span><span style="color:#75715e">    &lt;footer class=&#34;entry-footer&#34;&gt;
+</span><span style="color:#75715e">        {{- partial &#34;social_icons.html&#34; $.Site.Params.socialIcons -}}
+</span><span style="color:#75715e">    &lt;/footer&gt;
+</span><span style="color:#75715e">--&gt;</span>
+&lt;/<span style="color:#f92672">article</span>&gt;
+{{- end}}
+</code></pre></div>
+      </article>
+      <hr>
+      <p class="post-date">
+        Posted <time datetime="2020-10-28">2020-10-28</time>
+         / Update 2020-10-28</p>
+         <div class="card-subtext muted-text li-line">
+           <a class="cat" href="/categories/homepage">homepage</a>
+           <a class="tag" href="/tags/hugo">#hugo</a>  <a class="tag" href="/tags/theme">#theme</a>  <a class="tag" href="/tags/pagermod">#pagermod</a> 
+         </div>
+    </main>
+    <nav class="end-nav side-padding">
+      
+      <a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
+  href="https://k-kaz-git.github.io/post/hugo-contents/" class="card blog-card" rel="bookmark" >
+    
+    <div class="card-img-container">
+      <p class="card-img-overlay">Next Article</p>
+      <picture>
+        <source srcset="https://k-kaz-git.github.io/images/hugo-contents.webp" type="image/webp">
+        <source srcset="https://k-kaz-git.github.io/images/hugo-contents.webp">
+        <img src="https://k-kaz-git.github.io/images/hugo-contents.webp" class="card-img" alt="絵を描くよ！">
+      </picture>
+    </div>
+    
+  <article class="card-body">
+    <h2 class="card-title">コンテンツ（画像とか）を同一フォルダにする場合</h2>
+    <p class="card-text">それ用のルールがあるのね。</p>
+    <div class="card-subtext muted-text">
+      <p>Posted <time datetime="2020-10-21">2020-10-21</time>
+      / Updated 2020-10-21</p>
+    </div>
+    <div class="card-subtext muted-text li-line">
+      <span class="box-gray">coding</span> 
+      <span class="box-gray">#hugo</span> <span class="box-gray">#theme</span> 
+    </div>
+  </article>
+</a>
+      
+      <a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
+  href="https://k-kaz-git.github.io/" class="card home-card" style="background-image: url( https://k-kaz-git.github.io/images/home_640.webp )" rel="bookmark" >
+  Home
+</a>
+    </nav>
+    <footer>
+    <p style="text-align: center">姉妹サイト<br><a class="btn-link" href="https://k-kaz.net/" target="_blank">k-kaz ブログ</a></p>
+</footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script>
+<script src="https://k-kaz-git.github.io/js/core.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+  </body>
+</html>

@@ -5,23 +5,23 @@
     <description>Recent content in Categories on k-kaz</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Wed, 21 Oct 2020 12:45:27 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 28 Oct 2020 12:32:55 +0900</lastBuildDate>
     
         <atom:link href="https://k-kaz-git.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>homepage</title>
+      <link>https://k-kaz-git.github.io/categories/homepage/</link>
+      <pubDate>Wed, 28 Oct 2020 12:32:55 +0900</pubDate>
+      
+      <guid>https://k-kaz-git.github.io/categories/homepage/</guid>
+      <description></description>
+    </item><item>
       <title>coding</title>
       <link>https://k-kaz-git.github.io/categories/coding/</link>
       <pubDate>Wed, 21 Oct 2020 12:45:27 +0900</pubDate>
       
       <guid>https://k-kaz-git.github.io/categories/coding/</guid>
-      <description></description>
-    </item><item>
-      <title>homepage</title>
-      <link>https://k-kaz-git.github.io/categories/homepage/</link>
-      <pubDate>Wed, 14 Oct 2020 18:51:11 +0900</pubDate>
-      
-      <guid>https://k-kaz-git.github.io/categories/homepage/</guid>
       <description></description>
     </item><item>
       <title>linux</title>
