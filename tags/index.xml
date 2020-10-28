@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags - k-kaz</title>
@@ -6,79 +5,79 @@
     <description>Recent content in Tags on k-kaz</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Mon, 18 Mar 2019 12:31:49 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 28 Oct 2020 12:32:55 +0900</lastBuildDate>
     
         <atom:link href="https://k-kaz-git.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Aether</title>
-      <link>https://k-kaz-git.github.io/tags/aether/</link>
-      <pubDate>Mon, 18 Mar 2019 12:31:49 +0900</pubDate>
-      
-      <guid>https://k-kaz-git.github.io/tags/aether/</guid>
-      <description></description>
-    </item><item>
-      <title>Css</title>
-      <link>https://k-kaz-git.github.io/tags/css/</link>
-      <pubDate>Thu, 14 Mar 2019 17:44:58 +0900</pubDate>
-      
-      <guid>https://k-kaz-git.github.io/tags/css/</guid>
-      <description></description>
-    </item><item>
-      <title>Cupper</title>
-      <link>https://k-kaz-git.github.io/tags/cupper/</link>
-      <pubDate>Mon, 18 Mar 2019 12:31:49 +0900</pubDate>
-      
-      <guid>https://k-kaz-git.github.io/tags/cupper/</guid>
-      <description></description>
-    </item><item>
-      <title>Favicon</title>
-      <link>https://k-kaz-git.github.io/tags/favicon/</link>
-      <pubDate>Sun, 10 Mar 2019 06:37:26 +0900</pubDate>
-      
-      <guid>https://k-kaz-git.github.io/tags/favicon/</guid>
-      <description></description>
-    </item><item>
-      <title>Github</title>
-      <link>https://k-kaz-git.github.io/tags/github/</link>
-      <pubDate>Fri, 22 Feb 2019 15:49:24 +0900</pubDate>
-      
-      <guid>https://k-kaz-git.github.io/tags/github/</guid>
-      <description></description>
-    </item><item>
-      <title>Hugo</title>
+      <title>hugo</title>
       <link>https://k-kaz-git.github.io/tags/hugo/</link>
-      <pubDate>Tue, 02 Apr 2019 19:26:27 +0900</pubDate>
+      <pubDate>Wed, 28 Oct 2020 12:32:55 +0900</pubDate>
       
       <guid>https://k-kaz-git.github.io/tags/hugo/</guid>
       <description></description>
     </item><item>
-      <title>Markdown</title>
-      <link>https://k-kaz-git.github.io/tags/markdown/</link>
-      <pubDate>Thu, 21 Feb 2019 11:43:14 +0900</pubDate>
+      <title>pagermod</title>
+      <link>https://k-kaz-git.github.io/tags/pagermod/</link>
+      <pubDate>Wed, 28 Oct 2020 12:32:55 +0900</pubDate>
       
-      <guid>https://k-kaz-git.github.io/tags/markdown/</guid>
+      <guid>https://k-kaz-git.github.io/tags/pagermod/</guid>
       <description></description>
     </item><item>
-      <title>Mozc</title>
+      <title>theme</title>
+      <link>https://k-kaz-git.github.io/tags/theme/</link>
+      <pubDate>Wed, 28 Oct 2020 12:32:55 +0900</pubDate>
+      
+      <guid>https://k-kaz-git.github.io/tags/theme/</guid>
+      <description></description>
+    </item><item>
+      <title>github</title>
+      <link>https://k-kaz-git.github.io/tags/github/</link>
+      <pubDate>Wed, 14 Oct 2020 18:51:11 +0900</pubDate>
+      
+      <guid>https://k-kaz-git.github.io/tags/github/</guid>
+      <description></description>
+    </item><item>
+      <title>Netlify</title>
+      <link>https://k-kaz-git.github.io/tags/netlify/</link>
+      <pubDate>Wed, 14 Oct 2020 18:51:11 +0900</pubDate>
+      
+      <guid>https://k-kaz-git.github.io/tags/netlify/</guid>
+      <description></description>
+    </item><item>
+      <title>tableofcontents</title>
+      <link>https://k-kaz-git.github.io/tags/tableofcontents/</link>
+      <pubDate>Tue, 02 Apr 2019 19:26:27 +0900</pubDate>
+      
+      <guid>https://k-kaz-git.github.io/tags/tableofcontents/</guid>
+      <description></description>
+    </item><item>
+      <title>mozc</title>
       <link>https://k-kaz-git.github.io/tags/mozc/</link>
       <pubDate>Sun, 31 Mar 2019 17:45:32 +0900</pubDate>
       
       <guid>https://k-kaz-git.github.io/tags/mozc/</guid>
       <description></description>
     </item><item>
-      <title>Netlify</title>
-      <link>https://k-kaz-git.github.io/tags/netlify/</link>
-      <pubDate>Thu, 07 Mar 2019 14:44:55 +0900</pubDate>
+      <title>aether</title>
+      <link>https://k-kaz-git.github.io/tags/aether/</link>
+      <pubDate>Mon, 18 Mar 2019 12:31:49 +0900</pubDate>
       
-      <guid>https://k-kaz-git.github.io/tags/netlify/</guid>
+      <guid>https://k-kaz-git.github.io/tags/aether/</guid>
       <description></description>
     </item><item>
-      <title>Saas</title>
-      <link>https://k-kaz-git.github.io/tags/saas/</link>
+      <title>cupper</title>
+      <link>https://k-kaz-git.github.io/tags/cupper/</link>
+      <pubDate>Mon, 18 Mar 2019 12:31:49 +0900</pubDate>
+      
+      <guid>https://k-kaz-git.github.io/tags/cupper/</guid>
+      <description></description>
+    </item><item>
+      <title>css</title>
+      <link>https://k-kaz-git.github.io/tags/css/</link>
       <pubDate>Thu, 14 Mar 2019 17:44:58 +0900</pubDate>
       
-      <guid>https://k-kaz-git.github.io/tags/saas/</guid>
+      <guid>https://k-kaz-git.github.io/tags/css/</guid>
       <description></description>
     </item>
   </channel>

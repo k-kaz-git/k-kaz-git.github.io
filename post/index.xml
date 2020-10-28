@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts - k-kaz</title>
@@ -6,11 +5,46 @@
     <description>Recent content in Posts on k-kaz</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Tue, 02 Apr 2019 19:26:27 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 28 Oct 2020 12:32:55 +0900</lastBuildDate>
     
         <atom:link href="https://k-kaz-git.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>テーマ Pagermod のカスタマイズ</title>
+      <link>https://k-kaz-git.github.io/post/hugo-custom-theme-pagermod/</link>
+      <pubDate>Wed, 28 Oct 2020 12:32:55 +0900</pubDate>
+      
+      <guid>https://k-kaz-git.github.io/post/hugo-custom-theme-pagermod/</guid>
+      <description>Pagermod を自分好みにしていくよ。</description>
+    </item><item>
+      <title>コンテンツ（画像とか）を同一フォルダにする場合</title>
+      <link>https://k-kaz-git.github.io/post/hugo-contents/</link>
+      <pubDate>Wed, 21 Oct 2020 12:45:27 +0900</pubDate>
+      
+      <guid>https://k-kaz-git.github.io/post/hugo-contents/</guid>
+      <description>それ用のルールがあるのね。</description>
+    </item><item>
+      <title>Hugo で外部サイトを新しいタブで開きたい。</title>
+      <link>https://k-kaz-git.github.io/post/hugo-alink/</link>
+      <pubDate>Mon, 19 Oct 2020 12:28:18 +0900</pubDate>
+      
+      <guid>https://k-kaz-git.github.io/post/hugo-alink/</guid>
+      <description>さっと出来ちゃうよ。</description>
+    </item><item>
+      <title>そうだ Hugo の最新版を使おう！</title>
+      <link>https://k-kaz-git.github.io/post/hugo-new-version/</link>
+      <pubDate>Sun, 18 Oct 2020 20:00:29 +0900</pubDate>
+      
+      <guid>https://k-kaz-git.github.io/post/hugo-new-version/</guid>
+      <description>そんなときは大体ハマる。</description>
+    </item><item>
+      <title>Deploy でエラーが出たんですけど。</title>
+      <link>https://k-kaz-git.github.io/post/hugo-deploy-error/</link>
+      <pubDate>Wed, 14 Oct 2020 18:51:11 +0900</pubDate>
+      
+      <guid>https://k-kaz-git.github.io/post/hugo-deploy-error/</guid>
+      <description>1年半振りの Deploy で・・・。</description>
+    </item><item>
       <title>Hugo の目次について考える</title>
       <link>https://k-kaz-git.github.io/post/hugo-custom-tableofcontents/</link>
       <pubDate>Tue, 02 Apr 2019 19:26:27 +0900</pubDate>
@@ -45,41 +79,6 @@
       
       <guid>https://k-kaz-git.github.io/post/hugo-shortcodes-make/</guid>
       <description>自作の Shortcodes をテストしたり、思い出すための場所</description>
-    </item><item>
-      <title>テーマ Cupper のカスタマイズ</title>
-      <link>https://k-kaz-git.github.io/post/hugo-custom-theme-cupper/</link>
-      <pubDate>Tue, 12 Mar 2019 16:02:29 +0900</pubDate>
-      
-      <guid>https://k-kaz-git.github.io/post/hugo-custom-theme-cupper/</guid>
-      <description>テーマ Cupper のカスタマイズをこちらにまとめます。</description>
-    </item><item>
-      <title>Hugo の Shortcodes を使ってみる。</title>
-      <link>https://k-kaz-git.github.io/post/hugo-shortcodes/</link>
-      <pubDate>Mon, 11 Mar 2019 17:40:19 +0900</pubDate>
-      
-      <guid>https://k-kaz-git.github.io/post/hugo-shortcodes/</guid>
-      <description>Shortcodes を使うと便利そうなので、ちょっと勉強します。</description>
-    </item><item>
-      <title>ファビコンを作るよ。</title>
-      <link>https://k-kaz-git.github.io/post/favicon-generator/</link>
-      <pubDate>Sun, 10 Mar 2019 06:37:26 +0900</pubDate>
-      
-      <guid>https://k-kaz-git.github.io/post/favicon-generator/</guid>
-      <description>Favicon Generator を使って、ファビコンを作りましょう。</description>
-    </item><item>
-      <title>Hugo を Netlify で動かすよ。</title>
-      <link>https://k-kaz-git.github.io/post/hugo-netlify/</link>
-      <pubDate>Thu, 07 Mar 2019 14:44:55 +0900</pubDate>
-      
-      <guid>https://k-kaz-git.github.io/post/hugo-netlify/</guid>
-      <description>Hugo を Netlify で動かしてみたときの記録です。</description>
-    </item><item>
-      <title>Hugo で Sass を使ってみる</title>
-      <link>https://k-kaz-git.github.io/post/hugo-stylesheet-sass/</link>
-      <pubDate>Mon, 04 Mar 2019 10:05:17 +0900</pubDate>
-      
-      <guid>https://k-kaz-git.github.io/post/hugo-stylesheet-sass/</guid>
-      <description>Hugo で Sass を利用するのに少し設定が必要ですので、こちらにまとめます。</description>
     </item>
   </channel>
 </rss>
