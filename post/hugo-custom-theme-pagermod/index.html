@@ -81,13 +81,17 @@ if (!doNotTrack) {
         <li><a href="#フォントサイズについて">フォントサイズについて。</a></li>
       </ul>
     </li>
-    <li><a href="#それではカスタマイズしていきます">それではカスタマイズしていきます。</a>
+    <li><a href="#pagermod-のカスタマイズをしていきます">Pagermod のカスタマイズをしていきます。</a>
       <ul>
         <li><a href="#アイコンを消したい">アイコンを消したい。</a></li>
-        <li><a href="#トップページのソーシャル系アイコンを消す">トップページのソーシャル系アイコンを消す。</a></li>
         <li><a href="#右上のメニューをカスタマイズしたい">右上のメニューをカスタマイズしたい。</a></li>
-        <li><a href="#html-を表示する">html を表示する。</a></li>
         <li><a href="#トップページに記事のサマリーを表示する">トップページに記事のサマリーを表示する。</a></li>
+      </ul>
+    </li>
+    <li><a href="#hugo-のカスタマイズをします他テーマでも共通">Hugo のカスタマイズをします。（他テーマでも共通）</a>
+      <ul>
+        <li><a href="#外部サイトを新しいタブで開く">外部サイトを新しいタブで開く</a></li>
+        <li><a href="#記事内の-html-を表示する">記事内の html を表示する。</a></li>
       </ul>
     </li>
   </ul>
@@ -109,7 +113,7 @@ if (!doNotTrack) {
 修正したいファイルをコピーして、しかるべき場所に置いてから、そちらを修正します。<br>
 その場所が、テーマ読み込み時に優先される仕組みになっているため、<strong>テーマの更新などがあっても影響を受けない</strong> ようになっています。</p>
 <p>例えば、<code>サイト名\themes\hugo-PaperMod\layouts\partials\home_info.html</code> というファイルを弄りたい場合、<code>サイト名\layouts\partials\</code> というフォルダを用意して、そこに <code>home_info.html</code> を持ってきて修正するわけです。<br>
-フォルダ構成はまったく一緒です。単純に <code>\themes\hugo-Pagermod\</code> が外れるだけだと考えて良いかと思います。</p>
+フォルダ構成はまったく一緒です。単純に <code>\themes\hugo-Pagermod\</code> が外れるだけと考えて良いかと思います。</p>
 <h2 id="このテーマで気付いたこと">このテーマで気付いたこと。</h2>
 <h3 id="モード選択">モード選択。</h3>
 <p>流行りのライトモードとダークモードの切り替え機能が搭載されています。<br>
@@ -154,7 +158,7 @@ if (!doNotTrack) {
 <p>これってどうなんでしょうね。<br>
 タイトルタグとか、かなり文字サイズが大きいので、スマホで見ると見やすいんだけど文字数が溢れて改行しちゃうのよね。<br>
 やっぱりここは手を入れて可変にしようかなと悩んでいます。</p>
-<h2 id="それではカスタマイズしていきます">それではカスタマイズしていきます。</h2>
+<h2 id="pagermod-のカスタマイズをしていきます">Pagermod のカスタマイズをしていきます。</h2>
 <h3 id="アイコンを消したい">アイコンを消したい。</h3>
 <p>記事内に共有アイコン、トップページにソーシャル系アイコンが搭載されています。<br>
 私は基本それらを使わないので、消し去ります。</p>
@@ -163,11 +167,11 @@ if (!doNotTrack) {
 サイト全体の構成を司る <code>config.yml</code> or <code>config.toml</code> の記述を1箇所変えるだけ。</p>
 <p>ちなみにこのテーマの初期値は <code>config.yml</code> なので、以下こちらで統一します。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml">  <span style="color:#f92672">ShowShareButtons</span>: <span style="color:#66d9ef">false</span> <span style="color:#75715e"># True にすれば表示するよ。</span>
-</code></pre></div><h3 id="トップページのソーシャル系アイコンを消す">トップページのソーシャル系アイコンを消す。</h3>
+</code></pre></div><h4 id="トップページのソーシャル系アイコンを消す">トップページのソーシャル系アイコンを消す。</h4>
 <p>これも簡単ですが、ファイルを持ってくる必要があります。</p>
 <p>これを → <code>サイト名\themes\hugo-PaperMod\layouts\partials\home_info.html</code><br>
 ここへ → <code>サイト名\layouts\partials\home_info.html</code></p>
-<h4 id="修正します">修正します。</h4>
+<h5 id="修正します">修正します。</h5>
 <p>ソーシャル系アイコンは <code>social_icons.html</code> を使って表示していますので、その部分を消します。<br>
 コメントアウトか、削除はお好みで。（私は削除）</p>
 <p>元ファイル（<code>サイト名\themes\hugo-PaperMod\layouts\partials\home_info.html</code> ）</p>
@@ -231,7 +235,16 @@ summary: &#34;links&#34;
 [<span style="color:#f92672">k-kaz ブログ</span>](<span style="color:#a6e22e">https://k-kaz.net</span>)  
 [<span style="color:#f92672">k-kaz が Hugo で遊ぶサイト</span>](<span style="color:#a6e22e">https://k-kaz-git.github.io</span>)
 </code></pre></div><p>これで画面右上に <code>Archives</code> <code>Tags</code> <code>Link</code> が並び、クリックするとその中身が表示されます。</p>
-<h3 id="html-を表示する">html を表示する。</h3>
+<h3 id="トップページに記事のサマリーを表示する">トップページに記事のサマリーを表示する。</h3>
+<p>何も設定しない場合は、記事本文の先頭から何文字かがサマリーとして表示されます。
+意図的に表示したい文言があるときは記事上部の設定部分に <code>summary</code> を入れます。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">summary: &#34;意図的に表示したい文言を書く。&#34;
+</code></pre></div><h2 id="hugo-のカスタマイズをします他テーマでも共通">Hugo のカスタマイズをします。（他テーマでも共通）</h2>
+<p>この記事に載せなくても良いのですが、せっかくなので一緒に書いておきましょう。</p>
+<h3 id="外部サイトを新しいタブで開く">外部サイトを新しいタブで開く</h3>
+<p><a href="https://k-kaz-git.github.io/post/hugo-alink/" target="_blank">Hugo で外部サイトを新しいタブで開きたい。</a>
+ を参照あれ。</p>
+<h3 id="記事内の-html-を表示する">記事内の html を表示する。</h3>
 <p>Hugo v0.60.0 からの仕様で、記事に直接書いた html が表示されなくなった問題への対応です。<br>
 ちなみに表示されない部分は <code>&lt;!-- raw HTML omitted --&gt;</code> と置き換わっています。</p>
 <h4 id="configtoml">config.toml</h4>
@@ -243,12 +256,10 @@ summary: &#34;links&#34;
     <span style="color:#f92672">renderer</span>:
       <span style="color:#f92672">unsafe</span>: <span style="color:#66d9ef">true</span>
 </code></pre></div><p>参考 → <a href="https://gohugo.io/getting-started/configuration-markup/" target="_blank">Link WordsConfigure Markup | Hugo</a>
+<br>
+参考 → <a href="https://k-kaz-git.github.io/post/hugo-new-version/#%E3%81%82%E3%82%8C%E5%BC%95%E7%94%A8%E3%81%8C%E3%81%94%E3%81%A3%E3%81%9D%E3%82%8A%E6%B6%88%E3%81%88%E3%81%A6%E3%81%84%E3%82%8B" target="_blank">あれ、引用がごっそり消えている</a>
 </p>
-<h3 id="トップページに記事のサマリーを表示する">トップページに記事のサマリーを表示する。</h3>
-<p>何も設定しない場合は、記事本文の先頭から何文字かがサマリーとして表示されます。
-意図的に表示したい文言があるときは記事上部の設定部分に <code>summary</code> を入れます。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">summary: &#34;意図的に表示したい文言を書く。&#34;
-</code></pre></div>
+
       </article>
       <hr>
       <p class="post-date">
