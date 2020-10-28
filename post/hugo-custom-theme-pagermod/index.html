@@ -87,6 +87,7 @@ if (!doNotTrack) {
         <li><a href="#トップページのソーシャル系アイコンを消す">トップページのソーシャル系アイコンを消す。</a></li>
         <li><a href="#右上のメニューをカスタマイズしたい">右上のメニューをカスタマイズしたい。</a></li>
         <li><a href="#html-を表示する">html を表示する。</a></li>
+        <li><a href="#トップページに記事のサマリーを表示する">トップページに記事のサマリーを表示する。</a></li>
       </ul>
     </li>
   </ul>
@@ -243,7 +244,11 @@ summary: &#34;links&#34;
       <span style="color:#f92672">unsafe</span>: <span style="color:#66d9ef">true</span>
 </code></pre></div><p>参考 → <a href="https://gohugo.io/getting-started/configuration-markup/" target="_blank">Link WordsConfigure Markup | Hugo</a>
 </p>
-
+<h3 id="トップページに記事のサマリーを表示する">トップページに記事のサマリーを表示する。</h3>
+<p>何も設定しない場合は、記事本文の先頭から何文字かがサマリーとして表示されます。
+意図的に表示したい文言があるときは記事上部の設定部分に <code>summary</code> を入れます。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">summary: &#34;意図的に表示したい文言を書く。&#34;
+</code></pre></div>
       </article>
       <hr>
       <p class="post-date">
