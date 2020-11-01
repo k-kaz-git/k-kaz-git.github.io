@@ -56,7 +56,7 @@ if (!doNotTrack) {
         	<h1 class="post-title">そうだ Hugo の最新版を使おう！</h1>
           <p class="post-date">
             Posted <time datetime="2020-10-18">2020-10-18</time>
-             / Update 2020-10-19</p>
+             / Update 2020-10-28</p>
              <div class="card-subtext muted-text li-line">
                <a class="cat" href="/categories/coding">coding</a>
                <a class="tag" href="/tags/hugo">#hugo</a> 
@@ -148,7 +148,7 @@ home.Pagesはトップレベルセクションのページのみを返すよう�
     <cite><a class="author" href="https://github.com/gohugoio/hugo/releases/tag/v0.57.0">GitHub</a></cite>
 </blockquote>
 <p>これだ。</p>
-<p><code>\themes\xxxx\layouts\_default\list.html</code> の中に <code>.Pages</code> を使っていたので、そこを <code>Site.RegularPages</code> に直すことで解決しました。</p>
+<p><code>\themes\xxxx\layouts\_default\list.html</code> の中に <code>.Pages</code> を使っていたので、そこを <code>.Site.RegularPages</code> に直すことで解決しました。</p>
 <p>半日近くかかったよ。</p>
 <h3 id="あれ引用がごっそり消えている">あれ、引用がごっそり消えている</h3>
 <p>たまたま気付いたんですが、引用した部分がごっそり消えていたんですよ。</p>
@@ -167,7 +167,7 @@ home.Pagesはトップレベルセクションのページのみを返すよう�
       <hr>
       <p class="post-date">
         Posted <time datetime="2020-10-18">2020-10-18</time>
-         / Update 2020-10-19</p>
+         / Update 2020-10-28</p>
          <div class="card-subtext muted-text li-line">
            <a class="cat" href="/categories/coding">coding</a>
            <a class="tag" href="/tags/hugo">#hugo</a> 

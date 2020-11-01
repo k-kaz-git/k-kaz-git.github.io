@@ -56,7 +56,7 @@ if (!doNotTrack) {
         	<h1 class="post-title">テーマ Pagermod のカスタマイズ</h1>
           <p class="post-date">
             Posted <time datetime="2020-10-28">2020-10-28</time>
-             / Update 2020-10-28</p>
+             / Update 2020-11-01</p>
              <div class="card-subtext muted-text li-line">
                <a class="cat" href="/categories/homepage">homepage</a>
                <a class="tag" href="/tags/hugo">#hugo</a>  <a class="tag" href="/tags/theme">#theme</a>  <a class="tag" href="/tags/pagermod">#pagermod</a> 
@@ -92,6 +92,7 @@ if (!doNotTrack) {
       <ul>
         <li><a href="#外部サイトを新しいタブで開く">外部サイトを新しいタブで開く</a></li>
         <li><a href="#記事内の-html-を表示する">記事内の html を表示する。</a></li>
+        <li><a href="#日本語化">日本語化</a></li>
       </ul>
     </li>
   </ul>
@@ -145,7 +146,7 @@ if (!doNotTrack) {
 </code></pre></div><p>長くなるので途中の行とか割愛しましたが、こんな感じです。</p>
 <p>定義したものを使うには、</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">a</span> {
-    <span style="color:#66d9ef">color</span>: <span style="color:#a6e22e">var</span>(<span style="color:#f92672">--</span>entry); <span style="color:#960050;background-color:#1e0010">//リンクの色を定義</span>
+    <span style="color:#66d9ef">color</span>: <span style="color:#a6e22e">var</span>(<span style="color:#f92672">--</span>entry);    <span style="color:#75715e">/* リンクの色を定義 */</span>
 }
 </code></pre></div><p>とします。<br>
 すると、ライトモードのときは <code>#fff</code> が、ダークモードのときは <code>#2e2e33</code> が入るというわけ。
@@ -166,7 +167,7 @@ if (!doNotTrack) {
 <p>こちらは簡単。<br>
 サイト全体の構成を司る <code>config.yml</code> or <code>config.toml</code> の記述を1箇所変えるだけ。</p>
 <p>ちなみにこのテーマの初期値は <code>config.yml</code> なので、以下こちらで統一します。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml">  <span style="color:#f92672">ShowShareButtons</span>: <span style="color:#66d9ef">false</span> <span style="color:#75715e"># True にすれば表示するよ。</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml">  <span style="color:#f92672">ShowShareButtons</span>: <span style="color:#66d9ef">false</span>     <span style="color:#75715e"># True にすれば表示するよ。</span>
 </code></pre></div><h4 id="トップページのソーシャル系アイコンを消す">トップページのソーシャル系アイコンを消す。</h4>
 <p>これも簡単ですが、ファイルを持ってくる必要があります。</p>
 <p>これを → <code>サイト名\themes\hugo-PaperMod\layouts\partials\home_info.html</code><br>
@@ -259,12 +260,44 @@ summary: &#34;links&#34;
 <br>
 参考 → <a href="https://k-kaz-git.github.io/post/hugo-new-version/#%E3%81%82%E3%82%8C%E5%BC%95%E7%94%A8%E3%81%8C%E3%81%94%E3%81%A3%E3%81%9D%E3%82%8A%E6%B6%88%E3%81%88%E3%81%A6%E3%81%84%E3%82%8B" target="_blank">あれ、引用がごっそり消えている</a>
 </p>
+<h3 id="日本語化">日本語化</h3>
+<p>i18n 対応ですので、言語ファイルが用意されています。<br>
+いつものごとく、テーマ内のファイルは直接触らず、コピペします。</p>
+<p><code>/home/k-kaz/data/git/k/themes/hugo-PaperMod/i18n</code> → <code>/home/k-kaz/data/git/k/i18n</code></p>
+<p>今回、日本語用のファイルを直したかったので、<code>ja.yaml</code> というものをコピペしました。</p>
+<p>元のファイル（こんだけしか無い)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml">- <span style="color:#f92672">id</span>: <span style="color:#ae81ff">prev_page</span>
+  <span style="color:#f92672">translation</span>: <span style="color:#e6db74">&#34;前のページ&#34;</span>
 
+- <span style="color:#f92672">id</span>: <span style="color:#ae81ff">next_page</span>
+  <span style="color:#f92672">translation</span>: <span style="color:#e6db74">&#34;次のページ&#34;</span>
+</code></pre></div><p>こう直しました。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml">- <span style="color:#f92672">id</span>: <span style="color:#ae81ff">prev_page</span>
+  <span style="color:#f92672">translation</span>: <span style="color:#e6db74">&#34;前のページ&#34;</span>
+
+- <span style="color:#f92672">id</span>: <span style="color:#ae81ff">next_page</span>
+  <span style="color:#f92672">translation</span>: <span style="color:#e6db74">&#34;次のページ&#34;</span>
+
+- <span style="color:#f92672">id</span>: <span style="color:#ae81ff">read_time              </span> <span style="color:#75715e"># ここから下を追記しました。</span>
+  <span style="color:#f92672">translation</span>:
+    <span style="color:#f92672">one </span>: <span style="color:#e6db74">&#34;1 分&#34;</span>
+    <span style="color:#f92672">other</span>: <span style="color:#e6db74">&#34;{{ .Count }} 分&#34;</span>
+
+- <span style="color:#f92672">id</span>: <span style="color:#ae81ff">toc</span>
+  <span style="color:#f92672">translation</span>: <span style="color:#e6db74">&#34;目次&#34;</span>
+
+- <span style="color:#f92672">id</span>: <span style="color:#ae81ff">translations</span>
+  <span style="color:#f92672">translation</span>: <span style="color:#e6db74">&#34;Translations&#34;</span>
+</code></pre></div><p>参考にしたのは、<code>en.yaml</code> のファイルです。</p>
+<p>実際に言語切り替えするときは、<a href="https://adityatelange.github.io/hugo-PaperMod/" target="_blank">exampleSite</a>
+ のようにサイト上にスイッチを付けるのが良いのでしょうが、<strong>うちのサイトに日本語を読めない人は来ない</strong> という決め付けで、横着して <code>config.yml</code> で日本語を直指定しました。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#f92672">defaultContentLanguage </span>: <span style="color:#ae81ff">ja  </span> <span style="color:#75715e"># この行を追加です。</span>
+</code></pre></div>
       </article>
       <hr>
       <p class="post-date">
         Posted <time datetime="2020-10-28">2020-10-28</time>
-         / Update 2020-10-28</p>
+         / Update 2020-11-01</p>
          <div class="card-subtext muted-text li-line">
            <a class="cat" href="/categories/homepage">homepage</a>
            <a class="tag" href="/tags/hugo">#hugo</a>  <a class="tag" href="/tags/theme">#theme</a>  <a class="tag" href="/tags/pagermod">#pagermod</a> 
