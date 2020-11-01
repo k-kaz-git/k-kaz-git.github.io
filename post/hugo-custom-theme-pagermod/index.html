@@ -92,6 +92,7 @@ if (!doNotTrack) {
       <ul>
         <li><a href="#外部サイトを新しいタブで開く">外部サイトを新しいタブで開く</a></li>
         <li><a href="#記事内の-html-を表示する">記事内の html を表示する。</a></li>
+        <li><a href="#日本語化">日本語化</a></li>
       </ul>
     </li>
   </ul>
@@ -259,7 +260,39 @@ summary: &#34;links&#34;
 <br>
 参考 → <a href="https://k-kaz-git.github.io/post/hugo-new-version/#%E3%81%82%E3%82%8C%E5%BC%95%E7%94%A8%E3%81%8C%E3%81%94%E3%81%A3%E3%81%9D%E3%82%8A%E6%B6%88%E3%81%88%E3%81%A6%E3%81%84%E3%82%8B" target="_blank">あれ、引用がごっそり消えている</a>
 </p>
+<h3 id="日本語化">日本語化</h3>
+<p>i18n 対応ですので、言語ファイルが用意されています。<br>
+いつものごとく、テーマ内のファイルは直接触らず、コピペします。</p>
+<p><code>/home/k-kaz/data/git/k/themes/hugo-PaperMod/i18n</code> → <code>/home/k-kaz/data/git/k/i18n</code></p>
+<p>今回、日本語用のファイルを直したかったので、<code>ja.yaml</code> というものをコピペしました。</p>
+<p>元のファイル（こんだけしか無い)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml">- <span style="color:#f92672">id</span>: <span style="color:#ae81ff">prev_page</span>
+  <span style="color:#f92672">translation</span>: <span style="color:#e6db74">&#34;前のページ&#34;</span>
 
+- <span style="color:#f92672">id</span>: <span style="color:#ae81ff">next_page</span>
+  <span style="color:#f92672">translation</span>: <span style="color:#e6db74">&#34;次のページ&#34;</span>
+</code></pre></div><p>こう直しました。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml">- <span style="color:#f92672">id</span>: <span style="color:#ae81ff">prev_page</span>
+  <span style="color:#f92672">translation</span>: <span style="color:#e6db74">&#34;前のページ&#34;</span>
+
+- <span style="color:#f92672">id</span>: <span style="color:#ae81ff">next_page</span>
+  <span style="color:#f92672">translation</span>: <span style="color:#e6db74">&#34;次のページ&#34;</span>
+
+- <span style="color:#f92672">id</span>: <span style="color:#ae81ff">read_time              </span> <span style="color:#75715e"># ここから下を追記しました。</span>
+  <span style="color:#f92672">translation</span>:
+    <span style="color:#f92672">one </span>: <span style="color:#e6db74">&#34;1 分&#34;</span>
+    <span style="color:#f92672">other</span>: <span style="color:#e6db74">&#34;{{ .Count }} 分&#34;</span>
+
+- <span style="color:#f92672">id</span>: <span style="color:#ae81ff">toc</span>
+  <span style="color:#f92672">translation</span>: <span style="color:#e6db74">&#34;目次&#34;</span>
+
+- <span style="color:#f92672">id</span>: <span style="color:#ae81ff">translations</span>
+  <span style="color:#f92672">translation</span>: <span style="color:#e6db74">&#34;Translations&#34;</span>
+</code></pre></div><p>参考にしたのは、<code>en.yaml</code> のファイルです。</p>
+<p>実際に言語切り替えするときは、<a href="https://adityatelange.github.io/hugo-PaperMod/" target="_blank">exampleSite</a>
+ のようにサイト上にスイッチを付けるのが良いのでしょうが、<strong>うちのサイトに日本語を読めない人は来ない</strong> という決め付けで、横着して <code>config.yml</code> で日本語を直指定しました。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#f92672">defaultContentLanguage </span>: <span style="color:#ae81ff">ja  </span> <span style="color:#75715e"># この行を追加です。</span>
+</code></pre></div>
       </article>
       <hr>
       <p class="post-date">
