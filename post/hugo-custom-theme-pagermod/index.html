@@ -56,7 +56,7 @@ if (!doNotTrack) {
         	<h1 class="post-title">テーマ Pagermod のカスタマイズ</h1>
           <p class="post-date">
             Posted <time datetime="2020-10-28">2020-10-28</time>
-             / Update 2020-10-28</p>
+             / Update 2020-11-02</p>
              <div class="card-subtext muted-text li-line">
                <a class="cat" href="/categories/homepage">homepage</a>
                <a class="tag" href="/tags/hugo">#hugo</a>  <a class="tag" href="/tags/theme">#theme</a>  <a class="tag" href="/tags/pagermod">#pagermod</a> 
@@ -81,18 +81,20 @@ if (!doNotTrack) {
         <li><a href="#フォントサイズについて">フォントサイズについて。</a></li>
       </ul>
     </li>
+    <li><a href="#現在の-pagespeed-insights-はこんな感じ">現在の PageSpeed Insights はこんな感じ。</a></li>
     <li><a href="#pagermod-のカスタマイズをしていきます">Pagermod のカスタマイズをしていきます。</a>
       <ul>
         <li><a href="#アイコンを消したい">アイコンを消したい。</a></li>
         <li><a href="#右上のメニューをカスタマイズしたい">右上のメニューをカスタマイズしたい。</a></li>
         <li><a href="#トップページに記事のサマリーを表示する">トップページに記事のサマリーを表示する。</a></li>
+        <li><a href="#日本語化">日本語化</a></li>
+        <li><a href="#投稿日と更新日を表示したい">投稿日と更新日を表示したい。</a></li>
       </ul>
     </li>
     <li><a href="#hugo-のカスタマイズをします他テーマでも共通">Hugo のカスタマイズをします。（他テーマでも共通）</a>
       <ul>
         <li><a href="#外部サイトを新しいタブで開く">外部サイトを新しいタブで開く</a></li>
         <li><a href="#記事内の-html-を表示する">記事内の html を表示する。</a></li>
-        <li><a href="#日本語化">日本語化</a></li>
       </ul>
     </li>
   </ul>
@@ -159,6 +161,13 @@ if (!doNotTrack) {
 <p>これってどうなんでしょうね。<br>
 タイトルタグとか、かなり文字サイズが大きいので、スマホで見ると見やすいんだけど文字数が溢れて改行しちゃうのよね。<br>
 やっぱりここは手を入れて可変にしようかなと悩んでいます。</p>
+<h2 id="現在の-pagespeed-insights-はこんな感じ">現在の PageSpeed Insights はこんな感じ。</h2>
+<p><img src="/images/pagermod-pagespeed-insights.webp" alt="PageSpeed Insights の結果"></p>
+<p><strong>100点は気持ち良いね！！</strong></p>
+<p>現状、99点～100点のところで、ほぼ安定しています。<br>
+100点で安定させるには、記事のカバー画像をやめることかな。（データ量を減らす）</p>
+<p>でも、トップページが寂しくなっちゃうので、カバー画像ありで運用します。<br>
+90点台後半が出ていれば十分でしょうしね。</p>
 <h2 id="pagermod-のカスタマイズをしていきます">Pagermod のカスタマイズをしていきます。</h2>
 <h3 id="アイコンを消したい">アイコンを消したい。</h3>
 <p>記事内に共有アイコン、トップページにソーシャル系アイコンが搭載されています。<br>
@@ -240,27 +249,7 @@ summary: &#34;links&#34;
 <p>何も設定しない場合は、記事本文の先頭から何文字かがサマリーとして表示されます。
 意図的に表示したい文言があるときは記事上部の設定部分に <code>summary</code> を入れます。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">summary: &#34;意図的に表示したい文言を書く。&#34;
-</code></pre></div><h2 id="hugo-のカスタマイズをします他テーマでも共通">Hugo のカスタマイズをします。（他テーマでも共通）</h2>
-<p>この記事に載せなくても良いのですが、せっかくなので一緒に書いておきましょう。</p>
-<h3 id="外部サイトを新しいタブで開く">外部サイトを新しいタブで開く</h3>
-<p><a href="https://k-kaz-git.github.io/post/hugo-alink/" target="_blank">Hugo で外部サイトを新しいタブで開きたい。</a>
- を参照あれ。</p>
-<h3 id="記事内の-html-を表示する">記事内の html を表示する。</h3>
-<p>Hugo v0.60.0 からの仕様で、記事に直接書いた html が表示されなくなった問題への対応です。<br>
-ちなみに表示されない部分は <code>&lt;!-- raw HTML omitted --&gt;</code> と置き換わっています。</p>
-<h4 id="configtoml">config.toml</h4>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[<span style="color:#a6e22e">markup</span>.<span style="color:#a6e22e">goldmark</span>.<span style="color:#a6e22e">renderer</span>]
-<span style="color:#a6e22e">unsafe</span>= <span style="color:#66d9ef">true</span>
-</code></pre></div><h4 id="configyml">config.yml</h4>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#f92672">markup</span>:
-  <span style="color:#f92672">goldmark</span>:
-    <span style="color:#f92672">renderer</span>:
-      <span style="color:#f92672">unsafe</span>: <span style="color:#66d9ef">true</span>
-</code></pre></div><p>参考 → <a href="https://gohugo.io/getting-started/configuration-markup/" target="_blank">Link WordsConfigure Markup | Hugo</a>
-<br>
-参考 → <a href="https://k-kaz-git.github.io/post/hugo-new-version/#%E3%81%82%E3%82%8C%E5%BC%95%E7%94%A8%E3%81%8C%E3%81%94%E3%81%A3%E3%81%9D%E3%82%8A%E6%B6%88%E3%81%88%E3%81%A6%E3%81%84%E3%82%8B" target="_blank">あれ、引用がごっそり消えている</a>
-</p>
-<h3 id="日本語化">日本語化</h3>
+</code></pre></div><h3 id="日本語化">日本語化</h3>
 <p>i18n 対応ですので、言語ファイルが用意されています。<br>
 いつものごとく、テーマ内のファイルは直接触らず、コピペします。</p>
 <p><code>/home/k-kaz/data/git/k/themes/hugo-PaperMod/i18n</code> → <code>/home/k-kaz/data/git/k/i18n</code></p>
@@ -281,7 +270,7 @@ summary: &#34;links&#34;
 - <span style="color:#f92672">id</span>: <span style="color:#ae81ff">read_time              </span> <span style="color:#75715e"># ここから下を追記しました。</span>
   <span style="color:#f92672">translation</span>:
     <span style="color:#f92672">one </span>: <span style="color:#e6db74">&#34;1 分&#34;</span>
-    <span style="color:#f92672">other</span>: <span style="color:#e6db74">&#34;{{ .Count }} 分&#34;</span>
+    <span style="color:#f92672">other</span>: <span style="color:#e6db74">&#34;約 {{ .Count }} 分&#34;</span>
 
 - <span style="color:#f92672">id</span>: <span style="color:#ae81ff">toc</span>
   <span style="color:#f92672">translation</span>: <span style="color:#e6db74">&#34;目次&#34;</span>
@@ -292,12 +281,56 @@ summary: &#34;links&#34;
 <p>実際に言語切り替えするときは、<a href="https://adityatelange.github.io/hugo-PaperMod/" target="_blank">exampleSite</a>
  のようにサイト上にスイッチを付けるのが良いのでしょうが、<strong>うちのサイトに日本語を読めない人は来ない</strong> という決め付けで、横着して <code>config.yml</code> で日本語を直指定しました。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#f92672">defaultContentLanguage </span>: <span style="color:#ae81ff">ja  </span> <span style="color:#75715e"># この行を追加です。</span>
-</code></pre></div>
+</code></pre></div><h3 id="投稿日と更新日を表示したい">投稿日と更新日を表示したい。</h3>
+<p>初期状態だと投稿日のみが表示されています。<br>
+また、並びが「月、日、年」と、日本人の私には馴染みのないものなので一緒に直しましょう。</p>
+<h4 id="テンプレートファイルをコピペします">テンプレートファイルをコピペします。</h4>
+<p>いつものようにテンプレート内から該当ファイルをコピペします。</p>
+<p><code>サイト名\themes\hugo-PaperMod\layouts\partials\post_meta.html</code> → <code>&quot;サイト名\layouts\partials\post_meta.html</code></p>
+<p>元のファイル（該当部分だけ抜き出し）</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{- if not .Date.IsZero -}}
+{{- $scratch.Add &#34;meta&#34; (slice (.Date.Format (default &#34;January 2, 2006&#34; .Site.Params.DateFormat))) }}
+{{- end -}}
+</code></pre></div><p>修正後のファイル（2行目を修正しています）</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{- if not .Date.IsZero -}}
+{{- $scratch.Add &#34;meta&#34; (slice &#34;Posted&#34; (.Date.Format (default &#34;2006-01-02&#34; .Site.Params.DateFormat)) &#34;Updated&#34; (.Lastmod.Format (default &#34;2006-01-02&#34;))) }}
+{{- end -}}
+</code></pre></div><p>2行目のところで、日付の表示方法 <code>default &quot;2006-01-02&quot;</code> を決めてあげ、さらに最終更新日を取得する <code>.Lastmod.Format</code> を追加しました。</p>
+<p>日時の前に書く言葉はお好みでどうぞ。<br>
+ここでは <code>Posted</code> と <code>Updated</code> にしてあります。<br>
+もちろん日本語でも良いですよ。</p>
+<p>ただ、これだけだと、更新日時は正しく反映されません。<br>
+もう1つ修正が必要です。</p>
+<h4 id="configyml-も直します">config.yml も直します。</h4>
+<p>最終更新日時を Git の履歴から自動取得するには、<code>config.yml</code> に、1行追記が必要です。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#f92672">enableGitInfo</span>: <span style="color:#66d9ef">true</span>
+</code></pre></div><p>これで更新日時が正しく反映されるようになります。</p>
+<h2 id="hugo-のカスタマイズをします他テーマでも共通">Hugo のカスタマイズをします。（他テーマでも共通）</h2>
+<p>この記事に載せなくても良いのですが、せっかくなので一緒に書いておきましょう。</p>
+<h3 id="外部サイトを新しいタブで開く">外部サイトを新しいタブで開く</h3>
+<p><a href="https://k-kaz-git.github.io/post/hugo-alink/" target="_blank">Hugo で外部サイトを新しいタブで開きたい。</a>
+ を参照あれ。</p>
+<h3 id="記事内の-html-を表示する">記事内の html を表示する。</h3>
+<p>Hugo v0.60.0 からの仕様で、記事に直接書いた html が表示されなくなった問題への対応です。<br>
+ちなみに表示されない部分は <code>&lt;!-- raw HTML omitted --&gt;</code> と置き換わっています。</p>
+<h4 id="configtoml">config.toml</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[<span style="color:#a6e22e">markup</span>.<span style="color:#a6e22e">goldmark</span>.<span style="color:#a6e22e">renderer</span>]
+<span style="color:#a6e22e">unsafe</span>= <span style="color:#66d9ef">true</span>
+</code></pre></div><h4 id="configyml">config.yml</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#f92672">markup</span>:
+  <span style="color:#f92672">goldmark</span>:
+    <span style="color:#f92672">renderer</span>:
+      <span style="color:#f92672">unsafe</span>: <span style="color:#66d9ef">true</span>
+</code></pre></div><p>参考 → <a href="https://gohugo.io/getting-started/configuration-markup/" target="_blank">Link WordsConfigure Markup | Hugo</a>
+<br>
+参考 → <a href="https://k-kaz-git.github.io/post/hugo-new-version/#%E3%81%82%E3%82%8C%E5%BC%95%E7%94%A8%E3%81%8C%E3%81%94%E3%81%A3%E3%81%9D%E3%82%8A%E6%B6%88%E3%81%88%E3%81%A6%E3%81%84%E3%82%8B" target="_blank">あれ、引用がごっそり消えている</a>
+</p>
+
       </article>
       <hr>
       <p class="post-date">
         Posted <time datetime="2020-10-28">2020-10-28</time>
-         / Update 2020-10-28</p>
+         / Update 2020-11-02</p>
          <div class="card-subtext muted-text li-line">
            <a class="cat" href="/categories/homepage">homepage</a>
            <a class="tag" href="/tags/hugo">#hugo</a>  <a class="tag" href="/tags/theme">#theme</a>  <a class="tag" href="/tags/pagermod">#pagermod</a> 
