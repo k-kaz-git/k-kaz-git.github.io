@@ -93,6 +93,7 @@ if (!doNotTrack) {
         <li><a href="#外部サイトを新しいタブで開く">外部サイトを新しいタブで開く</a></li>
         <li><a href="#記事内の-html-を表示する">記事内の html を表示する。</a></li>
         <li><a href="#日本語化">日本語化</a></li>
+        <li><a href="#投稿日と更新日を表示したい">投稿日と更新日を表示したい。</a></li>
         <li><a href="#現在の-pagespeed-insights-はこんな感じ">現在の PageSpeed Insights はこんな感じ。</a></li>
       </ul>
     </li>
@@ -282,7 +283,7 @@ summary: &#34;links&#34;
 - <span style="color:#f92672">id</span>: <span style="color:#ae81ff">read_time              </span> <span style="color:#75715e"># ここから下を追記しました。</span>
   <span style="color:#f92672">translation</span>:
     <span style="color:#f92672">one </span>: <span style="color:#e6db74">&#34;1 分&#34;</span>
-    <span style="color:#f92672">other</span>: <span style="color:#e6db74">&#34;{{ .Count }} 分&#34;</span>
+    <span style="color:#f92672">other</span>: <span style="color:#e6db74">&#34;約 {{ .Count }} 分&#34;</span>
 
 - <span style="color:#f92672">id</span>: <span style="color:#ae81ff">toc</span>
   <span style="color:#f92672">translation</span>: <span style="color:#e6db74">&#34;目次&#34;</span>
@@ -293,7 +294,31 @@ summary: &#34;links&#34;
 <p>実際に言語切り替えするときは、<a href="https://adityatelange.github.io/hugo-PaperMod/" target="_blank">exampleSite</a>
  のようにサイト上にスイッチを付けるのが良いのでしょうが、<strong>うちのサイトに日本語を読めない人は来ない</strong> という決め付けで、横着して <code>config.yml</code> で日本語を直指定しました。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#f92672">defaultContentLanguage </span>: <span style="color:#ae81ff">ja  </span> <span style="color:#75715e"># この行を追加です。</span>
-</code></pre></div><h3 id="現在の-pagespeed-insights-はこんな感じ">現在の PageSpeed Insights はこんな感じ。</h3>
+</code></pre></div><h3 id="投稿日と更新日を表示したい">投稿日と更新日を表示したい。</h3>
+<p>初期状態だと投稿日のみが表示されています。<br>
+また、並びが「月、日、年」と、日本人の私には馴染みのないものなので一緒に直しましょう。</p>
+<h4 id="テンプレートファイルをコピペします">テンプレートファイルをコピペします。</h4>
+<p>いつものようにテンプレート内から該当ファイルをコピペします。</p>
+<p><code>サイト名\themes\hugo-PaperMod\layouts\partials\post_meta.html</code> → <code>&quot;サイト名\layouts\partials\post_meta.html</code></p>
+<p>元のファイル（該当部分だけ抜き出し）</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{- if not .Date.IsZero -}}
+{{- $scratch.Add &#34;meta&#34; (slice (.Date.Format (default &#34;January 2, 2006&#34; .Site.Params.DateFormat))) }}
+{{- end -}}
+</code></pre></div><p>修正後のファイル（2行目を修正しています）</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{- if not .Date.IsZero -}}
+{{- $scratch.Add &#34;meta&#34; (slice &#34;Posted&#34; (.Date.Format (default &#34;2006-01-02&#34; .Site.Params.DateFormat)) &#34;Updated&#34; (.Lastmod.Format (default &#34;2006-01-02&#34;))) }}
+{{- end -}}
+</code></pre></div><p>2行目のところで、日付の表示方法 <code>default &quot;2006-01-02&quot;</code> を決めてあげ、さらに最終更新日を取得する <code>.Lastmod.Format</code> を追加しました。</p>
+<p>日時の前に書く言葉はお好みでどうぞ。<br>
+ここでは <code>Posted</code> と <code>Updated</code> にしてあります。<br>
+もちろん日本語でも良いですよ。</p>
+<p>ただ、これだけだと、更新日時は正しく反映されません。<br>
+もう1つ修正が必要です。</p>
+<h4 id="configyml-も直します">config.yml も直します。</h4>
+<p>最終更新日時を Git の履歴から自動取得するには、<code>config.yml</code> に、1行追記が必要です。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#f92672">enableGitInfo</span>: <span style="color:#66d9ef">true</span>
+</code></pre></div><p>これで更新日時が正しく反映されるようになります。</p>
+<h3 id="現在の-pagespeed-insights-はこんな感じ">現在の PageSpeed Insights はこんな感じ。</h3>
 <p><img src="/images/pagermod-pagespeed-insights.webp" alt="PageSpeed Insights の結果"></p>
 <p><strong>100点は気持ち良いね！！</strong></p>
 <p>現状、99点～100点のところで、ほぼ安定しています。<br>
