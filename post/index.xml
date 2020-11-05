@@ -5,11 +5,18 @@
     <description>Recent content in Posts on k-kaz</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Wed, 28 Oct 2020 12:32:55 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 05 Nov 2020 12:57:30 +0900</lastBuildDate>
     
         <atom:link href="https://k-kaz-git.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Hugo のタグとかカテゴリとか</title>
+      <link>https://k-kaz-git.github.io/post/hugo-taxonomy/</link>
+      <pubDate>Thu, 05 Nov 2020 12:57:30 +0900</pubDate>
+      
+      <guid>https://k-kaz-git.github.io/post/hugo-taxonomy/</guid>
+      <description>タグとかカテゴリとかの一覧を表示したい</description>
+    </item><item>
       <title>テーマ Pagermod のカスタマイズ</title>
       <link>https://k-kaz-git.github.io/post/hugo-custom-theme-pagermod/</link>
       <pubDate>Wed, 28 Oct 2020 12:32:55 +0900</pubDate>
@@ -72,13 +79,6 @@
       
       <guid>https://k-kaz-git.github.io/post/code-highlight/</guid>
       <description>シンタックスハイライトの色をスタイルシートで変更してみます。</description>
-    </item><item>
-      <title>自作の Hugo用 Shortcodes</title>
-      <link>https://k-kaz-git.github.io/post/hugo-shortcodes-make/</link>
-      <pubDate>Thu, 14 Mar 2019 12:42:21 +0900</pubDate>
-      
-      <guid>https://k-kaz-git.github.io/post/hugo-shortcodes-make/</guid>
-      <description>自作の Shortcodes をテストしたり、思い出すための場所</description>
     </item>
   </channel>
 </rss>
