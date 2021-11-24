@@ -30,7 +30,6 @@ if (!doNotTrack) {
 	ga('send', 'pageview');
 }
 </script>
-
   
 </head>
   <body class="single-body">
@@ -88,10 +87,10 @@ if (!doNotTrack) {
 <p><strong>それすなわち、目次ですね。</strong></p>
 <h3 id="使い方">使い方</h3>
 <p><code>single.html</code> なんかの表示したい部分にこれを追記します。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{ .TableOfContents }}
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{ .TableOfContents }}
 </code></pre></div><p>たったこれだけです。</p>
 <h3 id="出力サンプル">出力サンプル</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">nav</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;TableOfContents&#34;</span>&gt;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">nav</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;TableOfContents&#34;</span>&gt;
   &lt;<span style="color:#f92672">ul</span>&gt;
     &lt;<span style="color:#f92672">li</span>&gt;
       &lt;<span style="color:#f92672">ul</span>&gt;
@@ -124,7 +123,7 @@ if (!doNotTrack) {
  に記述があります。<br>
 短い記事であれば目次は要らんでしょうという考え方かな。</p>
 <p>if文で文字数の判断をして、出す出さないを決めています。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{ if and (gt .WordCount 400 ) (.Params.toc) }}
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{ if and (gt .WordCount 400 ) (.Params.toc) }}
 &lt;<span style="color:#f92672">aside</span>&gt;
     &lt;<span style="color:#f92672">header</span>&gt;
     &lt;<span style="color:#f92672">h2</span>&gt;{{.Title}}&lt;/<span style="color:#f92672">h2</span>&gt;
@@ -136,13 +135,13 @@ if (!doNotTrack) {
 <p>自作テーマで立ち上げている Nerlify のほう <a href="https://k-kaz.netlify.com" target="_blank">k-kaz が好きなことを書くサイト</a>
  はコレを採用しています。</p>
 <p><code>single.html</code> にはこのように記述。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{ if eq .Params.toc true }}
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{ if eq .Params.toc true }}
   &lt;<span style="color:#f92672">aside</span>&gt;
   {{ .TableOfContents }}
   &lt;/<span style="color:#f92672">aside</span>&gt;
 {{ end }}
 </code></pre></div><p>記事 <code>hoge.md</code> のパラメータ部分に追加。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">toc: true
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">toc: true
 </code></pre></div><p>この2つをセットにして、記事の <code>toc</code> というパラメータが <code>true</code> なら、<code>{{ .TableOfContents }}</code> を実行するようにしています。実行したくなければ <code>false</code> としておきます。</p>
 <p>また、毎回書くのも面倒なので、<code>archetypes/post.md</code> という記事のテンプレートファイルに予め入れました。</p>
 <h4 id="ちなみにこのサイトでは">ちなみにこのサイトでは・・・</h4>
@@ -152,7 +151,7 @@ if (!doNotTrack) {
 <p>これまで html に直接書いていたんですが、<code>toc: false</code> にしても、”目次” だけ出てきちゃうんですよね。<br>
 <code>{{ .TableOfContents }}</code> のところを <code>{{ partial &quot;toc.html&quot; . }}</code> として、別途用意した <code>toc.html</code> の中で ”目次” と書いておけば、不要なときに呼びされずに済んでスマートです。</p>
 <p>私は別ファイルを用意するのが面倒だったので、スタイルシートの中で ”目次” を呼び出すようにして、良しとしました。（横着）</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">aside</span>::<span style="color:#a6e22e">before</span> {
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">aside</span>::<span style="color:#a6e22e">before</span> {
     <span style="color:#66d9ef">content</span>: <span style="color:#e6db74">&#34;目次&#34;</span>;
 }
 </code></pre></div>

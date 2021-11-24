@@ -30,7 +30,6 @@ if (!doNotTrack) {
 	ga('send', 'pageview');
 }
 </script>
-
   
 </head>
   <body class="single-body">
@@ -152,13 +151,13 @@ Windows の場合は、環境変数のところを弄ります。</p>
 <p>他のテーマを使ったときに気付いたんですが、サブモジュール化すれば削除しなくて良いみたいです。<br>
 というか、そのほうが良いみたいですね。テーマのアップデートできるし。</p>
 <p>別テーマですけど、こんな感じです。</p>
-<pre><code class="language-git" data-lang="git">git submodule add https://github.com/zwbetz-gh/cupper-hugo-theme.git themes/cupper-hugo-theme
+<pre tabindex="0"><code class="language-git" data-lang="git">git submodule add https://github.com/zwbetz-gh/cupper-hugo-theme.git themes/cupper-hugo-theme
 git submodule update --remote --merge
 </code></pre><h3 id="設定ファイルの修正">設定ファイルの修正</h3>
 <p>ルートにある <code>config.toml</code> が設定ファイルです。<br>
 エディタで開いて、最低限これらを書いてください。<br>
 baseURL はあとで、実際の公開アドレスに直せばよいです。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="color:#a6e22e">baseURL</span> = <span style="color:#e6db74">&#34;https://hoge/&#34;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="color:#a6e22e">baseURL</span> = <span style="color:#e6db74">&#34;https://hoge/&#34;</span>
 <span style="color:#a6e22e">languageCode</span> = <span style="color:#e6db74">&#34;ja&#34;</span>
 <span style="color:#a6e22e">title</span> = <span style="color:#e6db74">&#34;k-kaz&#34;</span>
 <span style="color:#a6e22e">theme</span> = <span style="color:#e6db74">&#34;aether&#34;</span>

@@ -30,7 +30,6 @@ if (!doNotTrack) {
 	ga('send', 'pageview');
 }
 </script>
-
   
 </head>
   <body class="single-body">
@@ -127,7 +126,7 @@ if (!doNotTrack) {
 <p>ということで、このページも修正しました。</p>
 <h2 id="標準機能内">標準機能内</h2>
 <h3 id="ホームボタンの設定">ホームボタンの設定</h3>
-<img src="/images/aether-custom-home-btn_400.webp" alt="ホームボタンの設置" style="max-width:400px;">
+<p><img src="/images/aether-custom-home-btn_400.webp" alt="ホームボタンの設置" style="max-width:400px;"></p>
 <p>個別記事を開いた時に、一番下に真っ白なスペースがあります。<br>
 ここは、ホーム（トップページ）に戻るためのボタンになっており、Home という白文字が入っています。<strong>実際は白同士で見えないんですけど。</strong></p>
 <p><code>homeimg</code> に少し暗めの画像を指定すると、文字がハッキリして見やすいと思います。</p>
@@ -136,12 +135,12 @@ if (!doNotTrack) {
 <h3 id="イメージデータの入れ方">イメージデータの入れ方</h3>
 <p>テーマの <code>readme</code> にも書いてありますが、普通のコマンドで挿入すると、エリア内いっぱいに広がります。</p>
 <p>普通の入れ方</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">![<span style="color:#f92672">イメージタイトル</span>](<span style="color:#a6e22e">/images/hoge.webp</span>)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">![<span style="color:#f92672">イメージタイトル</span>](<span style="color:#a6e22e">/images/hoge.webp</span>)
 </code></pre></div><script src="https://gist.github.com/k-kaz-git/d27e935f5404952ae5419250516ebe1e.js"></script>
 <h3 id="google-analytics">Google Analytics</h3>
 <p>テーマが元々対応してくれているので、設定ファイルにトラッキングコードを記入するだけで、各ページに展開してくれます。</p>
 <p><code>/サイト名/config.toml</code></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="color:#a6e22e">googleAnalytics</span> = <span style="color:#e6db74">&#34;トラッキングコード&#34;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="color:#a6e22e">googleAnalytics</span> = <span style="color:#e6db74">&#34;トラッキングコード&#34;</span>
 </code></pre></div><p><code>&lt;head&gt;&lt;/head&gt;</code> の間に長いタグを入れる必要もありません。楽ちんだ。</p>
 <h2 id="標準機能外">標準機能外</h2>
 <h3 id="コメント用の外部サービスを外す">コメント用の外部サービスを外す</h3>
@@ -150,7 +149,7 @@ if (!doNotTrack) {
 <p><code>/サイト名/layouts/_default/single.html</code></p>
 <script src="https://gist.github.com/k-kaz-git/6fbc59bd45e57c5086e3d4e7a87ac63b.js"></script>
 <h3 id="テンプレートに外部リンクを仕込む">テンプレートに外部リンクを仕込む</h3>
-<img src="/images/aether-custom-link-btn_175.webp" alt="外部リンクボタンの設置" style="width:175px;">
+<p><img src="/images/aether-custom-link-btn_175.webp" alt="外部リンクボタンの設置" style="width:175px;"></p>
 <p>表示させる場所によって、編集するファイルは変わりますが、今回は最下部（フッター）に入れることにしました。普通に HTML を修正します。<br>
 footer.html は、<code>&lt;footer&gt;&lt;/footer&gt;</code> と、空っぽなので、その間にタグを入れます。</p>
 <p><code>/サイト名/layouts/partials/footer.html</code></p>
@@ -183,7 +182,7 @@ css というフォルダも自分で作成し、その中にスタイルシー�
 そうなると、投稿日だけではなく、最終更新日もあると嬉しい。</p>
 <p>さぁ、やってみましょう。</p>
 <h4 id="更新日を追加する個別記事">更新日を追加する（個別記事）</h4>
-<img src="/images/aether-custom-update_284.webp" style="width:284px;" alt="更新日を追加する">  
+<p><img src="/images/aether-custom-update_284.webp" style="width:284px;" alt="更新日を追加する"></p>
 <p>Hugo に用意されている関数 <code>.Lastmod</code> を利用します。<br>
 下準備として、<code>config.toml</code> に関数を有効にするための記述を追加します。</p>
 <p><code>/サイト名/config.toml</code><br>
@@ -192,13 +191,13 @@ css というフォルダも自分で作成し、その中にスタイルシー�
 <p><code>/サイト名/layouts/_default/single.html</code></p>
 <p><code>&lt;header&gt;</code> だけ抜き出しました。<br>
 上が元のコードで、下が修正したコードです。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">[single.html 修正前]
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">[single.html 修正前]
 
 &lt;<span style="color:#f92672">header</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;post-header&#34;</span>&gt;
    	&lt;<span style="color:#f92672">h1</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;post-title&#34;</span>&gt;{{ .Title }}&lt;/<span style="color:#f92672">h1</span>&gt;
     &lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;post-date&#34;</span>&gt;Posted &lt;<span style="color:#f92672">time</span> <span style="color:#a6e22e">datetime</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Date.Format &#34;</span><span style="color:#a6e22e">2006-01-02</span><span style="color:#960050;background-color:#1e0010">&#34;</span> <span style="color:#960050;background-color:#1e0010">}}&#34;</span>&gt;{{ .Date.Format &#34;Jan 2, 2006&#34; }}&lt;/<span style="color:#f92672">time</span>&gt;&lt;/<span style="color:#f92672">p</span>&gt;
 &lt;/<span style="color:#f92672">header</span>&gt;
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">[single.html 修正後]
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">[single.html 修正後]
 
 &lt;<span style="color:#f92672">header</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;post-header&#34;</span>&gt;
    	&lt;<span style="color:#f92672">h1</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;post-title&#34;</span>&gt;{{ .Title }}&lt;/<span style="color:#f92672">h1</span>&gt;
@@ -209,19 +208,19 @@ css というフォルダも自分で作成し、その中にスタイルシー�
 </code></pre></div><p><code>.Lastmod</code> だけだと、時間まで表示されて大げさなので、<code>.Format &quot;2006-01-02&quot;</code> で書式を設定しました。
 ついでに初回投稿のほうも、同じ書式に変更しています。</p>
 <h4 id="更新日を追加するトップページ2019-02-25">更新日を追加する（トップページ）［2019-02-25］</h4>
-<img src="/images/aether-custom-card-update_640.webp" alt="トップにも更新日を入れる" style="max-width:640px;">
+<p><img src="/images/aether-custom-card-update_640.webp" alt="トップにも更新日を入れる" style="max-width:640px;"></p>
 <p>やり方は個別記事と同じで、編集するファイルが変わるだけです。</p>
 <p><code>/サイト名/layouts/_default/li.html</code><br>
 ※theme の中にあるのでコピーして持ってきます。</p>
 <p>ついでに、ポストされた日のフォーマットも合わせておきます。<br>
 <code>&lt;div&gt;</code> のすぐ下にある <code>&lt;p&gt;&lt;/p&gt;</code> の中を修正しています。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">[li.html 修正前]
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">[li.html 修正前]
 
 &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;card-subtext muted-text&#34;</span>&gt;
   &lt;<span style="color:#f92672">p</span>&gt;Posted &lt;<span style="color:#f92672">time</span> <span style="color:#a6e22e">datetime</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Date.Format &#34;</span><span style="color:#a6e22e">2006-01-02</span><span style="color:#960050;background-color:#1e0010">&#34;</span> <span style="color:#960050;background-color:#1e0010">}}&#34;</span>&gt;{{ .Date.Format &#34;Jan 2, 2006&#34; }}&lt;/<span style="color:#f92672">time</span>&gt;&lt;/<span style="color:#f92672">p</span>&gt;
   {{ if (isset .Params &#34;categories&#34;) }}&lt;<span style="color:#f92672">p</span>&gt;{{ range .Params.categories }}#{{ . }} {{ end }}&lt;/<span style="color:#f92672">p</span>&gt;{{ end }}
 &lt;/<span style="color:#f92672">div</span>&gt;
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">[li.html 修正後]
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">[li.html 修正後]
 
 &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;card-subtext muted-text&#34;</span>&gt;
   &lt;<span style="color:#f92672">p</span>&gt;Posted &lt;<span style="color:#f92672">time</span> <span style="color:#a6e22e">datetime</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Date.Format &#34;</span><span style="color:#a6e22e">2006-01-02</span><span style="color:#960050;background-color:#1e0010">&#34;</span> <span style="color:#960050;background-color:#1e0010">}}&#34;</span>&gt;{{ .Date.Format &#34;2006-01-02&#34; }}&lt;/<span style="color:#f92672">time</span>&gt;
@@ -235,7 +234,7 @@ css というフォルダも自分で作成し、その中にスタイルシー�
 <strong>サーバー側で反映されるのに、ちょびっとだけ時間がかかるだけだった疑惑発生！！</strong></p>
 <h4 id="更新日がうまく入らない">更新日がうまく入らない</h4>
 <p>プッシュするのにコマンドをいくつも入れるのが面倒なので、ネットで調べて下記のスクリプトを組んであります。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#75715e">#!/bin/bash
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#75715e">#!/bin/bash
 </span><span style="color:#75715e"></span>echo -e <span style="color:#e6db74">&#34;\033[0;33mDeploying updates to GitHub...\033[0m&#34;</span>
 <span style="color:#75715e"># Build the project.</span>
 hugo
@@ -268,7 +267,7 @@ git push origin master
 <p>手動とスクリプトで何か違うのかな。</p>
 <h4 id="更新日がうまく入らない解決したっぽい">更新日がうまく入らない（解決したっぽい）</h4>
 <p><code>config.toml</code> に追記することで解決したっぽい。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[<span style="color:#a6e22e">frontmatter</span>]
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[<span style="color:#a6e22e">frontmatter</span>]
 <span style="color:#a6e22e">date</span> = [<span style="color:#e6db74">&#34;date&#34;</span>, <span style="color:#e6db74">&#34;publishDate&#34;</span>, <span style="color:#e6db74">&#34;lastmod&#34;</span>]
 <span style="color:#a6e22e">lastmod</span> = [<span style="color:#e6db74">&#34;:git&#34;</span>, <span style="color:#e6db74">&#34;lastmod&#34;</span>, <span style="color:#e6db74">&#34;date&#34;</span>, <span style="color:#e6db74">&#34;publishDate&#34;</span>]
 <span style="color:#a6e22e">publishDate</span> = [<span style="color:#e6db74">&#34;publishDate&#34;</span>, <span style="color:#e6db74">&#34;date&#34;</span>]
@@ -314,7 +313,7 @@ PageSpeed Insights のモバイルの点数が <strong>15点落ちました</str
  で使っているものを若干修正したサンプルです。<br>
 使うフォントによってタグの内容も変わりますので、<a href="https://fonts.google.com" title="Google Fonts" target="_blank">Google Fonts</a>
  で好きなフォントを選んで、それ用のタグを入手してください。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">［head.html に下記を貼り付ける］
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">［head.html に下記を貼り付ける］
 
 <span style="color:#75715e">&lt;!-- webfontloader --&gt;</span>
 &lt;<span style="color:#f92672">script</span>&gt;
@@ -334,20 +333,20 @@ window.<span style="color:#a6e22e">WebFontConfig</span> <span style="color:#f926
 })();
 &lt;/<span style="color:#f92672">script</span>&gt;
 <span style="color:#75715e">&lt;!-- webfontloader ここまで--&gt;</span>
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#960050;background-color:#1e0010">［</span><span style="color:#f92672">hoge</span>.<span style="color:#a6e22e">css</span> <span style="color:#f92672">に下記を貼り付ける</span><span style="color:#960050;background-color:#1e0010">］</span>
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#960050;background-color:#1e0010">［</span><span style="color:#f92672">hoge</span>.<span style="color:#a6e22e">css</span> <span style="color:#f92672">に下記を貼り付ける</span><span style="color:#960050;background-color:#1e0010">］</span>
 
 <span style="color:#f92672">body</span> <span style="color:#f92672">*</span> {<span style="color:#66d9ef">font-family</span>: <span style="color:#e6db74">&#39;Roboto&#39;</span>, <span style="color:#e6db74">&#39;Noto Sans CJK JP&#39;</span>, <span style="color:#e6db74">&#39;Noto Sans JP&#39;</span>, <span style="color:#66d9ef">sans-serif</span> <span style="color:#75715e">!important</span>;}
 </code></pre></div><p>スタイルシートのほうは、かなり乱暴な書き方をしていますけど、テストということで許してください（笑）</p>
 <h4 id="ローカルフォントを指定する">ローカルフォントを指定する</h4>
 <p>とりあえず、最近は <strong>游ゴシック体</strong> が良いみたいなので、下記のように指定しました。<br>
 游ゴシックに Medium が入っているのは、<strong>標準の太さだとかすれちゃう問題</strong> が発生するからだそうです。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">font-family</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;游ゴシック Medium&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;Yu Gothic Medium&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;游ゴシック体&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;YuGothic&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;ヒラギノ角ゴ ProN W3&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;Hiragino Kaku Gothic ProN&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;メイリオ&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;Meiryo&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;verdana&#34;</span><span style="color:#f92672">,</span> <span style="color:#f92672">sans-serif</span><span style="color:#f92672">;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">font-family</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;游ゴシック Medium&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;Yu Gothic Medium&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;游ゴシック体&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;YuGothic&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;ヒラギノ角ゴ ProN W3&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;Hiragino Kaku Gothic ProN&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;メイリオ&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;Meiryo&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;verdana&#34;</span><span style="color:#f92672">,</span> <span style="color:#f92672">sans-serif</span><span style="color:#f92672">;</span>
 </code></pre></div><h3 id="コード表示にサイズ制限を設ける-2019-03-14">コード表示にサイズ制限を設ける ［2019-03-14］</h3>
 <p>こちらのサイトでは、よくコードの紹介をしています。（このページもそうですね）<br>
 コードが長くなった場合に記事がえらく間延びしてしまうので、その対策をしたいと思います。<br>
 尚、gist などを使えば自動的にサイズ調整はしてくれますので、ここでは素でコード記述をする場合の内容です。</p>
 <h4 id="スタイルシートを修正する">スタイルシートを修正する</h4>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">code</span> {
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">code</span> {
   <span style="color:#66d9ef">max-width</span>: <span style="color:#ae81ff">100</span><span style="color:#66d9ef">vw</span>;
   <span style="color:#66d9ef">max-height</span>: <span style="color:#ae81ff">20</span><span style="color:#66d9ef">vw</span>;
 }
@@ -362,7 +361,7 @@ window.<span style="color:#a6e22e">WebFontConfig</span> <span style="color:#f926
 <h4 id="設定ファイルの修正">設定ファイルの修正</h4>
 <p>設定ファイル <code>config.toml</code> に <code>tag = &quot;tags&quot;</code> を追加します。<br>
 カテゴリーとまとめて書いておくと見やすいかと思います。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[<span style="color:#a6e22e">taxonomies</span>]
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[<span style="color:#a6e22e">taxonomies</span>]
 <span style="color:#a6e22e">category</span> = <span style="color:#e6db74">&#34;categories&#34;</span>
 <span style="color:#a6e22e">tag</span> = <span style="color:#e6db74">&#34;tags&#34;</span>
 </code></pre></div><h4 id="記事テンプレートの修正">記事テンプレートの修正</h4>
@@ -371,7 +370,7 @@ window.<span style="color:#a6e22e">WebFontConfig</span> <span style="color:#f926
 投稿の仕方によって変わりますが、私は <code>post</code> というフォルダの中に記事を入れているので、下記のファイルを修正します。</p>
 <p><code>サイト名\archetypes\post.md</code></p>
 <p>私のファイルはこんな感じになっています。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-post.md" data-lang="post.md">---
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-post.md" data-lang="post.md">---
 title: &#34;{{ replace .TranslationBaseName &#34;-&#34; &#34; &#34; | title }}&#34;
 date: {{ .Date }}
 description: &#34;&#34;
@@ -393,7 +392,7 @@ draft: true
 <h4 id="トップページ">トップページ</h4>
 <p><code>サイト名\layouts\_default\li.html</code></p>
 <p>一部分だけ抜き出しています。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">article</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;card-body&#34;</span>&gt;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">article</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;card-body&#34;</span>&gt;
   &lt;<span style="color:#f92672">h2</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;card-title&#34;</span>&gt;{{ .Title }}&lt;/<span style="color:#f92672">h2</span>&gt;
   &lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;card-text&#34;</span>&gt;{{ if (isset .Params &#34;description&#34;) }}{{ index .Params &#34;description&#34; }}{{ else }}{{ .Summary }}{{ end }}&lt;/<span style="color:#f92672">p</span>&gt;
   &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;card-subtext muted-text&#34;</span>&gt;
@@ -414,7 +413,7 @@ draft: true
 <h4 id="個別記事">個別記事</h4>
 <p><code>サイト名\layouts\_default\single.html</code></p>
 <p>一部分だけ抜き出しています。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">header</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;post-header&#34;</span>&gt;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">header</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;post-header&#34;</span>&gt;
  	&lt;<span style="color:#f92672">h1</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;post-title&#34;</span>&gt;{{ .Title }}&lt;/<span style="color:#f92672">h1</span>&gt;
     &lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;post-date&#34;</span>&gt;
       Posted &lt;<span style="color:#f92672">time</span> <span style="color:#a6e22e">datetime</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Date.Format &#34;</span><span style="color:#a6e22e">2006-01-02</span><span style="color:#960050;background-color:#1e0010">&#34;</span> <span style="color:#960050;background-color:#1e0010">}}&#34;</span>&gt;{{ .Date.Format &#34;2006-01-02&#34; }}&lt;/<span style="color:#f92672">time</span>&gt;
@@ -441,7 +440,7 @@ draft: true
 そこにも入れておきます。</p>
 <p><code>サイト名\layouts\_default\li-next.html</code></p>
 <p>一部分だけ抜き出しています。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">article</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;card-body&#34;</span>&gt;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">article</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;card-body&#34;</span>&gt;
   &lt;<span style="color:#f92672">h2</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;card-title&#34;</span>&gt;{{ .Title }}&lt;/<span style="color:#f92672">h2</span>&gt;
   &lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;card-text&#34;</span>&gt;{{ if (isset .Params &#34;description&#34;) }}{{ index .Params &#34;description&#34; }}{{ else }}{{ .Summary }}{{ end }}&lt;/<span style="color:#f92672">p</span>&gt;
   &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;card-subtext muted-text&#34;</span>&gt;
@@ -459,7 +458,7 @@ draft: true
 ここはもう趣味なんですけど、この中にタグまで表示したい場合は下記を修正します。</p>
 <p><code>サイト名\layouts\partials\nav-bar.html</code></p>
 <p>一部分だけ抜き出しています。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;hamburger-menu&#34;</span>&gt;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;hamburger-menu&#34;</span>&gt;
   &lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">onclick</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;hamburgerMenuPressed.call(this)&#34;</span> <span style="color:#a6e22e">aria-haspopup</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;true&#34;</span> <span style="color:#a6e22e">aria-expanded</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;false&#34;</span> <span style="color:#a6e22e">aria-controls</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;menu&#34;</span> <span style="color:#a6e22e">aria-label</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Menu&#34;</span>&gt;
     &lt;<span style="color:#f92672">span</span>&gt;&lt;/<span style="color:#f92672">span</span>&gt;
     &lt;<span style="color:#f92672">span</span>&gt;&lt;/<span style="color:#f92672">span</span>&gt;

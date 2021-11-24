@@ -30,7 +30,6 @@ if (!doNotTrack) {
 	ga('send', 'pageview');
 }
 </script>
-
   
 </head>
   <body class="single-body">
@@ -90,7 +89,7 @@ if (!doNotTrack) {
         </aside>
         <h2 id="hugo-ってバージョンアップしてるの">Hugo ってバージョンアップしてるの？</h2>
 <p>まずは、私が使っている現在のバージョンを確認。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">$ hugo version
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">$ hugo version
 $ Hugo Static Site Generator v0.54.0/extended windows/amd64 BuildDate: unknown
 </code></pre></div><p>ふむ、0.54 を使っているらしい。</p>
 <p>公式サイトに行ってみると、0.76.5 が最新の様子。<br>
@@ -99,7 +98,7 @@ $ Hugo Static Site Generator v0.54.0/extended windows/amd64 BuildDate: unknown
 <p>Windows の場合は、GitHub から Zip を落としてきて、実行ファイルを入れ替えるだけで完了です。</p>
 <h2 id="チェックしましょう">チェックしましょう。</h2>
 <p>とりあえず今までの記事が正常に見られるかチェック。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">$ hugo server -D
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">$ hugo server -D
 Start building sites …
 WARN 2020/10/16 15:08:48 Page.RSSLink is deprecated and will be removed in a future release. Use the Output Format&#39;s link, e.g. something like:
     {{ with .OutputFormats.Get &#34;RSS&#34; }}{{ .RelPermalink }}{{ end }}
@@ -107,10 +106,10 @@ WARN 2020/10/16 15:08:48 Page.RSSLink is deprecated and will be removed in a fut
 <h2 id="修正します">修正します。</h2>
 <p>調べてみたら、<code>.RSSLink</code> っていうのが最新版では使えないっていうことらしい。</p>
 <p><code>head.html</code> で使っていたので修正しました。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{ if .RSSLink }}
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{ if .RSSLink }}
 &lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .RSSLink }}&#34;</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;alternate&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;application/rss+xml&#34;</span> <span style="color:#a6e22e">title</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Title }}&#34;</span> /&gt;{{ end }}
 </code></pre></div><p>↓ こんな風に。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{ with .OutputFormats.Get &#34;RSS&#34; }}
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{ with .OutputFormats.Get &#34;RSS&#34; }}
 &lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .RelPermalink }}&#34;</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;alternate&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;application/rss+xml&#34;</span> <span style="color:#a6e22e">title</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ $.Site.Title }}&#34;</span> /&gt;{{ end }}
 </code></pre></div><p>これでエラーは出なくなった。</p>
 <h2 id="あれ-レイアウトが">あれ？ レイアウトが・・・</h2>
@@ -153,12 +152,12 @@ home.Pagesはトップレベルセクションのページのみを返すよう�
 <h3 id="あれ引用がごっそり消えている">あれ、引用がごっそり消えている</h3>
 <p>たまたま気付いたんですが、引用した部分がごっそり消えていたんですよ。</p>
 <p>html のソースを見ると、その部分が</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!-- raw HTML omitted --&gt;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!-- raw HTML omitted --&gt;</span>
 </code></pre></div><p>となっていました。</p>
 <p>これは Google ですぐに見付けました。</p>
 <p>v0.60.0 から、記事ファイル（hoge.md）に書かれた html が表示されなくなったとのこと。（なんで？）</p>
 <p>解決策は <code>config.toml</code> にオプションを追加すればオッケー。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[<span style="color:#a6e22e">markup</span>.<span style="color:#a6e22e">goldmark</span>.<span style="color:#a6e22e">renderer</span>]
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[<span style="color:#a6e22e">markup</span>.<span style="color:#a6e22e">goldmark</span>.<span style="color:#a6e22e">renderer</span>]
 <span style="color:#a6e22e">unsafe</span>= <span style="color:#66d9ef">true</span>
 </code></pre></div><p>すぐ直って良かった。</p>
 <p>ということで、今回から最新版の Hugo を使っていきます。</p>

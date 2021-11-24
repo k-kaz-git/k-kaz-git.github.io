@@ -30,7 +30,6 @@ if (!doNotTrack) {
 	ga('send', 'pageview');
 }
 </script>
-
   
 </head>
   <body class="single-body">
@@ -121,13 +120,13 @@ if (!doNotTrack) {
 <p>テーマ作りは途中でやめましたが、やり方をこちらに残しておきましょう。<br>
 またいつか暇な時に続きをしたくなるかもしれないし。</p>
 <h3 id="ローカルサイトと空テーマの準備">ローカルサイトと空テーマの準備</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">$</span> <span style="color:#f92672">hugo</span> <span style="color:#f92672">new</span> <span style="color:#f92672">site</span> <span style="color:#f92672">hoge</span>            <span style="color:#75715e">/* サイト hoge 作成 */</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">$</span> <span style="color:#f92672">hugo</span> <span style="color:#f92672">new</span> <span style="color:#f92672">site</span> <span style="color:#f92672">hoge</span>            <span style="color:#75715e">/* サイト hoge 作成 */</span>
 <span style="color:#f92672">$</span> <span style="color:#f92672">cd</span> <span style="color:#f92672">hoge</span>
 <span style="color:#f92672">$</span> <span style="color:#f92672">hugo</span> <span style="color:#f92672">new</span> <span style="color:#f92672">theme</span> <span style="color:#f92672">hoge-theme</span>     <span style="color:#75715e">/* 空テーマ hoge-theme 作成 */</span>
 </code></pre></div><h3 id="テーマ内で最低限必要なもの">テーマ内で最低限必要なもの</h3>
 <p>最低限って書くと、ヘッダーもフッターも要らないけど・・・一応書いておく（笑）<br>
 <code>line-hight</code> の関係で、線がブツブツ切れていますが、許してください。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">hoge-theme  
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">hoge-theme  
 │  theme.toml  
 ├──layouts  
 │   │  
@@ -146,7 +145,7 @@ if (!doNotTrack) {
 足 <code>footer.html</code></p>
 <p>バラバラで作ってあるパーツを、必要なときに、必要な場所で読み込むことで、1枚のページを作り上げています。</p>
 <p><code>baseof.html</code> の例</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
 &lt;<span style="color:#f92672">html</span>&gt;
 
 &lt;<span style="color:#f92672">head</span>&gt;
@@ -191,7 +190,7 @@ if (!doNotTrack) {
 <p>新たにテーマを作り直しながら、気付いたことを書いておきます。</p>
 <h4 id="netlify-で-baseofhtml-を使う場合は注意">netlify で baseof.html を使う場合は注意</h4>
 <p>こうやって、<code>{{ define &quot;header&quot; }}</code> を入れた <code>header.html</code> を読み込んだんですけど、</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">head</span>&gt;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">head</span>&gt;
     {{ block &#34;header&#34; . }}{{ end }}
 &lt;/<span style="color:#f92672">head</span>&gt;
 </code></pre></div><p>ローカルサーバーではうまく表示されるのに、<strong>netlify だとうまく表示されない。</strong></p>
@@ -204,11 +203,11 @@ if (!doNotTrack) {
 それ以下については、基準に対して <code>rem</code> で指定することで調整すると。</p>
 <p>その中で、一番、理想的なのがこれかなと思いました。
 横幅全体を 32 で割ったサイズ。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">font-size</span><span style="color:#f92672">:</span> <span style="color:#f92672">calc</span><span style="color:#f92672">(</span><span style="color:#f92672">100vw</span> <span style="color:#f92672">/</span> <span style="color:#f92672">32</span><span style="color:#f92672">);</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">font-size</span><span style="color:#f92672">:</span> <span style="color:#f92672">calc</span><span style="color:#f92672">(</span><span style="color:#f92672">100vw</span> <span style="color:#f92672">/</span> <span style="color:#f92672">32</span><span style="color:#f92672">);</span>
 </code></pre></div><p>試したところ、モバイル系は良かったんですが、PC の大画面で見ると、フォントが大きくなり過ぎて困る。
 rem で調整するのも当時（昨日だけど）は面倒でした。</p>
 <p>その後、cupper でも使われていた下記にしました。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">font-size</span><span style="color:#f92672">:</span> <span style="color:#f92672">calc</span><span style="color:#f92672">(</span><span style="color:#f92672">1em</span> <span style="color:#f92672">+</span> <span style="color:#f92672">0</span>.<span style="color:#a6e22e">33vw</span><span style="color:#f92672">);</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">font-size</span><span style="color:#f92672">:</span> <span style="color:#f92672">calc</span><span style="color:#f92672">(</span><span style="color:#f92672">1em</span> <span style="color:#f92672">+</span> <span style="color:#f92672">0</span>.<span style="color:#a6e22e">33vw</span><span style="color:#f92672">);</span>
 </code></pre></div><p>基本となるサイズ（1em = 16px だっけ？）に対し、画面の大きさにあわせてプラスをしていく方法。
 こちらのほうが、個人的には微調整がしやすかったです。（<strong>昨日苦労したのが役に立っただけ疑惑あり</strong> ）</p>
 <p>px で直接指定するのが一番楽っていえば楽なんですけど、<strong>レスポンシブデザイン</strong> の呪いが。</p>
@@ -216,7 +215,7 @@ rem で調整するのも当時（昨日だけど）は面倒でした。</p>
 <p>PC用のスタイルを定義して、その後にモバイルの定義かと思っていましたが、逆でありました。
 先にモバイルです。今はモバイル優先で何事も考えたほうが良さそうです。</p>
 <p>モバイルのところは普通にスタイルシートを書いて、一通り終わったら PC の番です。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#75715e">/* 画面サイズ 481px 以上はこの中で設定 */</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#75715e">/* 画面サイズ 481px 以上はこの中で設定 */</span>
 @<span style="color:#66d9ef">media</span> <span style="color:#f92672">only</span> <span style="color:#f92672">screen</span> <span style="color:#f92672">and</span> <span style="color:#f92672">(</span><span style="color:#f92672">min-width</span><span style="color:#f92672">:</span> <span style="color:#f92672">481px</span><span style="color:#f92672">)</span> {
   <span style="color:#f92672">body</span> {}
   <span style="color:#f92672">h1</span> {}

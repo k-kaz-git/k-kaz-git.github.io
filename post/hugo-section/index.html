@@ -30,7 +30,6 @@ if (!doNotTrack) {
 	ga('send', 'pageview');
 }
 </script>
-
   
 </head>
   <body class="single-body">
@@ -89,7 +88,7 @@ if (!doNotTrack) {
 さらにその下の階層でサブディレクトリを作って、カテゴリ毎に記事を管理することも可能です。</p>
 <h3 id="k-kaz-が好きなことを書くサイト-の場合">k-kaz が好きなことを書くサイト の場合。</h3>
 <p>元々は、<code>content</code> 直下の2ファイルと、<code>post</code> というサブディレクトリで運用していました。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">content
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">content
     │  archives.md
     │  links.md
     │          
@@ -106,7 +105,7 @@ if (!doNotTrack) {
 </code></pre></div><p>この場合、トップページにリスト表示されるのは <code>post</code> 内の記事のみ。<br>
 <code>archives.md</code> <code>links.md</code> は上部メニューに割り当ててあります。</p>
 <p>今回、新たに <code>aaaaa</code> を加え、トップページに <code>post</code> と <code>aaaaa</code> の下にある記事を表示させようという考えです。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">content
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">content
     │  archives.md
     │  links.md
     │          
@@ -129,7 +128,7 @@ if (!doNotTrack) {
 </code></pre></div><h3 id="post-しか表示されんのだけど">post しか表示されんのだけど。</h3>
 <p><code>aaaaa</code> を配置したのになぜか無視されて、今まで通りリスト表示されるのは <code>post</code> 内の記事だけ。</p>
 <p>リスト表示のテンプレートファイル（<code>list.html</code>）を開いてみましたら、気になるところが。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{- if .IsHome }}
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{- if .IsHome }}
 {{- $pages = where site.RegularPages &#34;Type&#34; &#34;in&#34; site.Params.mainSections }}
 {{- end}}
 </code></pre></div><p><code>site.Params.mainSections</code> これが呼ばれているっぽい。<br>
@@ -137,7 +136,7 @@ if (!doNotTrack) {
 <h3 id="解決した">解決した。</h3>
 <p>メインセクションについて調べていたら、<code>config.yml</code> で設定できるみたい。
 ということで、下記を追加しました。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#f92672">params</span>:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#f92672">params</span>:
     <span style="color:#f92672">mainSections</span>: [<span style="color:#e6db74">&#34;post&#34;</span>, <span style="color:#e6db74">&#34;aaaaa&#34;</span>]
 </code></pre></div><p>toml の場合は <code>:</code> が <code>=</code> ですね。</p>
 <p>これで狙い通りの表示がされるようになりました。</p>

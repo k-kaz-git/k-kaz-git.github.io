@@ -30,7 +30,6 @@ if (!doNotTrack) {
 	ga('send', 'pageview');
 }
 </script>
-
   
 </head>
   <body class="single-body">
@@ -106,7 +105,7 @@ if (!doNotTrack) {
 昨年、Hugo も Sass に対応したようですが、標準のモジュールでは使えず、extended版 が必要になります。</p>
 <h3 id="hugo-のバージョンを確認する">Hugo のバージョンを確認する。</h3>
 <p><code>hugo version</code> で現在のバージョンが確認できます。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">hugo version
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">hugo version
 Hugo Static Site Generator v0.54.0/extended hogehoge...
 </code></pre></div><p><code>extended</code> の文字があった方はおめでとうございます。
 無かった方はダウロードを行ってください。</p>
@@ -127,7 +126,7 @@ Hugo Static Site Generator v0.54.0/extended hogehoge...
 <p>テーマによってファイルが異なると思いますが、ここでは aether の場合で書いていきます。</p>
 <p><code>サイト名\layouts\partials\head.html</code> を開きます。<br>
 ファイルが無い方は、テーマの中 <code>テーマ名\themes\aether\layouts\partials\head.html</code> から、コピーして持ってきてください。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ &#34;</span><span style="color:#a6e22e">css</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#a6e22e">main</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#a6e22e">min</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#a6e22e">css</span><span style="color:#960050;background-color:#1e0010">&#34;</span> <span style="color:#960050;background-color:#1e0010">|</span> <span style="color:#a6e22e">absURL</span><span style="color:#960050;background-color:#1e0010">}}&#34;</span> /&gt;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ &#34;</span><span style="color:#a6e22e">css</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#a6e22e">main</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#a6e22e">min</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#a6e22e">css</span><span style="color:#960050;background-color:#1e0010">&#34;</span> <span style="color:#960050;background-color:#1e0010">|</span> <span style="color:#a6e22e">absURL</span><span style="color:#960050;background-color:#1e0010">}}&#34;</span> /&gt;
 {{ $style := resources.Get &#34;sass/main.scss&#34; | toCSS | minify | fingerprint }}
 &lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ $style.Permalink }}&#34;</span>&gt;
 </code></pre></div><p>1行目が元々入っている全体のスタイルシートの読み込み部分です。<br>
@@ -153,7 +152,7 @@ Hugo Static Site Generator v0.54.0/extended hogehoge...
 <p>と書かれています。</p>
 <h3 id="何か問題でも">何か問題でも？</h3>
 <p>該当する箇所の確認をすると、背景色の指定をしているところでした。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">background</span><span style="color:#f92672">:</span> <span style="color:#f92672">rgb</span><span style="color:#f92672">(</span><span style="color:#f92672">230</span><span style="color:#f92672">,</span> <span style="color:#f92672">90</span><span style="color:#f92672">,</span> <span style="color:#f92672">90</span><span style="color:#f92672">,</span> <span style="color:#f92672">0</span>.<span style="color:#a6e22e">2</span><span style="color:#f92672">);</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">background</span><span style="color:#f92672">:</span> <span style="color:#f92672">rgb</span><span style="color:#f92672">(</span><span style="color:#f92672">230</span><span style="color:#f92672">,</span> <span style="color:#f92672">90</span><span style="color:#f92672">,</span> <span style="color:#f92672">90</span><span style="color:#f92672">,</span> <span style="color:#f92672">0</span>.<span style="color:#a6e22e">2</span><span style="color:#f92672">);</span>
 </code></pre></div><p><strong>何か問題でも？</strong></p>
 <p>しばらく気付かなかったんですけど、落ち着いて見たらようやく答えが分かりました。<br>
 というか、そもそもこの透過処理のことを私がよく分かっていなかったのが問題です。</p>
@@ -173,7 +172,7 @@ Hugo Static Site Generator v0.54.0/extended hogehoge...
 <p>私もそこまでは知っていたんですけど、<code>alpha</code> が入るときに <code>rgb</code> が <code>rgba</code> になることを知らなかったんですね。</p>
 <p>ということで、私の知識不足により、元々の <code>.css</code> からおかしかったというオチでした。</p>
 <p>下記のように書き直したところ、きちんとスタイルシートの変換がされ、サーバーが起動しました。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">background</span><span style="color:#f92672">:</span> <span style="color:#f92672">rgba</span><span style="color:#f92672">(</span><span style="color:#f92672">230</span><span style="color:#f92672">,</span> <span style="color:#f92672">90</span><span style="color:#f92672">,</span> <span style="color:#f92672">90</span><span style="color:#f92672">,</span> <span style="color:#f92672">0</span>.<span style="color:#a6e22e">2</span><span style="color:#f92672">);</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">background</span><span style="color:#f92672">:</span> <span style="color:#f92672">rgba</span><span style="color:#f92672">(</span><span style="color:#f92672">230</span><span style="color:#f92672">,</span> <span style="color:#f92672">90</span><span style="color:#f92672">,</span> <span style="color:#f92672">90</span><span style="color:#f92672">,</span> <span style="color:#f92672">0</span>.<span style="color:#a6e22e">2</span><span style="color:#f92672">);</span>
 </code></pre></div><h2 id="同じ-sass-だけど-sass-か-scss-か">同じ Sass だけど .sass か .scss か</h2>
 <p>Sass と言っても、記述方式が2通りあり、好きなほうを使えます。<br>
 <code>.sass</code> は、<code>{}</code> や <code>;</code> が不要なので、すっきり、そして少ない文字数でコーディングが可能。<br>

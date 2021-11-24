@@ -30,7 +30,6 @@ if (!doNotTrack) {
 	ga('send', 'pageview');
 }
 </script>
-
   
 </head>
   <body class="single-body">
@@ -124,12 +123,12 @@ if (!doNotTrack) {
 </p>
 </div>
 <h4 id="memohtml">memo.html</h4>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;memo&#34;</span>&gt;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;memo&#34;</span>&gt;
     &lt;<span style="color:#f92672">span</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;memo-title&#34;</span>&gt;{{.Get 0}}&lt;/<span style="color:#f92672">span</span>&gt;
     &lt;<span style="color:#f92672">p</span>&gt;{{.Inner}}&lt;/<span style="color:#f92672">p</span>&gt;
 &lt;/<span style="color:#f92672">div</span>&gt;
 </code></pre></div><h4 id="hogecss">hoge.css</h4>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#a6e22e">memo</span> {
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#a6e22e">memo</span> {
   <span style="color:#66d9ef">position</span>: <span style="color:#66d9ef">relative</span>;
   <span style="color:#66d9ef">margin</span>: <span style="color:#ae81ff">2</span><span style="color:#66d9ef">em</span> <span style="color:#ae81ff">2</span><span style="color:#66d9ef">em</span>;
   <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">0.5</span><span style="color:#66d9ef">em</span> <span style="color:#ae81ff">1</span><span style="color:#66d9ef">em</span>;
@@ -139,7 +138,7 @@ if (!doNotTrack) {
 }
 .<span style="color:#a6e22e">memo</span> .<span style="color:#a6e22e">memo-title</span> {
     <span style="color:#66d9ef">position</span>: <span style="color:#66d9ef">absolute</span>;
-    <span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">inline</span><span style="color:#f92672">-</span><span style="color:#66d9ef">block</span>;
+    <span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">inline-block</span>;
     <span style="color:#66d9ef">top</span>: <span style="color:#ae81ff">-26</span><span style="color:#66d9ef">px</span>;
     <span style="color:#66d9ef">left</span>: <span style="color:#ae81ff">-1</span><span style="color:#66d9ef">px</span>;
     <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">9</span><span style="color:#66d9ef">px</span>;
@@ -172,12 +171,12 @@ if (!doNotTrack) {
 <h4 id="記述例-1">記述例</h4>
 <script type="application/javascript" src="https://gist.github.com/k-kaz-git/9345ab4fab29cd73b3a202cdce34792b.js"></script>
 <h4 id="blockquotehtml">blockquote.html</h4>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">blockquote</span>&gt;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">blockquote</span>&gt;
     &lt;<span style="color:#f92672">p</span>&gt;{{.Inner}}&lt;/<span style="color:#f92672">p</span>&gt;&lt;<span style="color:#f92672">br</span>&gt;
     &lt;<span style="color:#f92672">cite</span>&gt;&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;author&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{.Get &#34;</span><span style="color:#a6e22e">link</span><span style="color:#960050;background-color:#1e0010">&#34;}}&#34;</span>&gt;{{.Get &#34;author&#34;}}&lt;/<span style="color:#f92672">a</span>&gt;&lt;/<span style="color:#f92672">cite</span>&gt;
 &lt;/<span style="color:#f92672">blockquote</span>&gt;
 </code></pre></div><h4 id="hogecss-1">hoge.css</h4>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">blockquote</span> {
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">blockquote</span> {
   <span style="color:#66d9ef">font-size</span>: <span style="color:#ae81ff">0.8</span><span style="color:#66d9ef">em</span>;
   <span style="color:#66d9ef">padding-bottom</span>: <span style="color:#ae81ff">0</span>;
 }

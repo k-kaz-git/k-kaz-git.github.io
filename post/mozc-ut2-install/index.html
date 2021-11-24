@@ -30,7 +30,6 @@ if (!doNotTrack) {
 	ga('send', 'pageview');
 }
 </script>
-
   
 </head>
   <body class="single-body">
@@ -110,18 +109,18 @@ Mozcとは、Google 日本語入力のオープンソース版である。これ
 <h4 id="ビルド">ビルド</h4>
 <p>解凍したところに <code>build_mozc_plus_utdict</code> というファイルができますので、これを実行します。<br>
 でも、足りないパッケージなどがあるので、事前に入れておきます。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmd" data-lang="cmd">$ sudo apt update
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmd" data-lang="cmd">$ sudo apt update
 $ sudo apt upgrade -y
 $ sudo apt install -y devscripts debhelper libibus-1.0-dev pkg-config libxcb-xfixes0-dev libgtk2.0-dev python-dev gyp protobuf-compiler libprotobuf-dev qtbase5-dev libqwt-qt5-dev libgwengui-qt5-dev libuim-dev libzinnia-dev fcitx-libs-dev gettext desktop-file-utils ninja-build
 </code></pre></div><p>入れ終わったら、ビルドします。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmd" data-lang="cmd">$ sudo ./build_mozc_plus_utdict
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmd" data-lang="cmd">$ sudo ./build_mozc_plus_utdict
 </code></pre></div><p>しばらく、ハードディスクがカリカリと頑張ってくれます。</p>
 <p>運悪くビルドに失敗したら、ログに理由が書いてあると思いますので、<strong>ネットで頑張って調べます（笑）</strong></p>
 <h4 id="事後処理">事後処理</h4>
 <p>無事にビルドが終了したら、インストール済みのパッケージを削除します。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmd" data-lang="cmd">$ sudo apt-get remove mozc-server mozc-utils-gui
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmd" data-lang="cmd">$ sudo apt-get remove mozc-server mozc-utils-gui
 </code></pre></div><p>fcitx-mozc を使っているので、関連ファイルをインストール。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmd" data-lang="cmd">$ sudo dpkg -i mozc*.deb fcitx-mozc*.deb
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmd" data-lang="cmd">$ sudo dpkg -i mozc*.deb fcitx-mozc*.deb
 </code></pre></div><p>結果、こうなります。
 <img src="/images/mozc-ver223.webp" alt="Mozc について" style="width:auto;"></p>
 <p>以上です。</p>

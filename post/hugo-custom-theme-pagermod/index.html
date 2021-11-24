@@ -30,7 +30,6 @@ if (!doNotTrack) {
 	ga('send', 'pageview');
 }
 </script>
-
   
 </head>
   <body class="single-body">
@@ -128,7 +127,7 @@ if (!doNotTrack) {
 予め <strong>定義しておいた内容を呼び出す関数</strong> だそうです。<br>
 中身が呼び出すことで変わるので <strong>CSS変数</strong> と呼んだりもするそう。</p>
 <p>Pagermod の場合、<code>theme-vars.css</code> の中で、ライトモードが <code>.root</code> ダークモードが <code>.dark</code> で定義されています。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">:<span style="color:#a6e22e">root</span> {
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">:<span style="color:#a6e22e">root</span> {
     --theme: <span style="color:#ae81ff">#fff</span>;
     --entry: <span style="color:#ae81ff">#fff</span>;
     --primary: rgba(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0.88</span>);
@@ -147,7 +146,7 @@ if (!doNotTrack) {
 
 </code></pre></div><p>長くなるので途中の行とか割愛しましたが、こんな感じです。</p>
 <p>定義したものを使うには、</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">a</span> {
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">a</span> {
     <span style="color:#66d9ef">color</span>: <span style="color:#a6e22e">var</span>(<span style="color:#f92672">--</span>entry);    <span style="color:#75715e">/* リンクの色を定義 */</span>
 }
 </code></pre></div><p>とします。<br>
@@ -169,7 +168,7 @@ if (!doNotTrack) {
 <p>こちらは簡単。<br>
 サイト全体の構成を司る <code>config.yml</code> or <code>config.toml</code> の記述を1箇所変えるだけ。</p>
 <p>ちなみにこのテーマの初期値は <code>config.yml</code> なので、以下こちらで統一します。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml">  <span style="color:#f92672">ShowShareButtons</span>: <span style="color:#66d9ef">false</span>     <span style="color:#75715e"># True にすれば表示するよ。</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml">  <span style="color:#f92672">ShowShareButtons</span>: <span style="color:#66d9ef">false</span>     <span style="color:#75715e"># True にすれば表示するよ。</span>
 </code></pre></div><h4 id="トップページのソーシャル系アイコンを消す">トップページのソーシャル系アイコンを消す。</h4>
 <p>これも簡単ですが、ファイルを持ってくる必要があります。</p>
 <p>これを → <code>サイト名\themes\hugo-PaperMod\layouts\partials\home_info.html</code><br>
@@ -178,7 +177,7 @@ if (!doNotTrack) {
 <p>ソーシャル系アイコンは <code>social_icons.html</code> を使って表示していますので、その部分を消します。<br>
 コメントアウトか、削除はお好みで。（私は削除）</p>
 <p>元ファイル（<code>サイト名\themes\hugo-PaperMod\layouts\partials\home_info.html</code> ）</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{- with $.Site.Params.homeInfoParams }}
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{- with $.Site.Params.homeInfoParams }}
 &lt;<span style="color:#f92672">article</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;first-entry home-info&#34;</span>&gt;
     &lt;<span style="color:#f92672">header</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;entry-header&#34;</span>&gt;
         &lt;<span style="color:#f92672">h2</span>&gt;{{- .Title | markdownify }}&lt;/<span style="color:#f92672">h2</span>&gt;
@@ -192,7 +191,7 @@ if (!doNotTrack) {
 &lt;/<span style="color:#f92672">article</span>&gt;
 {{- end}}
 </code></pre></div><p>コピペしたファイル（<code>サイト名\layouts\partials\home_info.html</code>）</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{- with $.Site.Params.homeInfoParams }}
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{- with $.Site.Params.homeInfoParams }}
 &lt;<span style="color:#f92672">article</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;first-entry home-info&#34;</span>&gt;
     &lt;<span style="color:#f92672">header</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;entry-header&#34;</span>&gt;
         &lt;<span style="color:#f92672">h2</span>&gt;{{- .Title | markdownify }}&lt;/<span style="color:#f92672">h2</span>&gt;
@@ -213,7 +212,7 @@ if (!doNotTrack) {
 次にその内容を表示する。</p>
 <h4 id="メニューの文字列を表示する">メニューの文字列を表示する。</h4>
 <p><code>config.yml</code> を開いて、表示したい文字列、優先順位等を記述します。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#f92672">menu</span>:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#f92672">menu</span>:
   <span style="color:#f92672">main</span>:
     - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Archives   </span> <span style="color:#75715e"># 表示される文字列</span>
       <span style="color:#f92672">url</span>: <span style="color:#ae81ff">/archives/  </span> <span style="color:#75715e"># url</span>
@@ -228,9 +227,9 @@ if (!doNotTrack) {
 <h4 id="link-の中身を作ります">Link の中身を作ります。</h4>
 <p>下記の場所に <code>links.md</code> を設置します。<br>
 <code>サイト名\content\links.md</code></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ hugo new links.md
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ hugo new links.md
 </code></pre></div><p>ファイルを作ったら、その中身を編集します。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">---
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">---
 title: &#34;Link&#34;
 url: &#34;/links&#34;
 summary: &#34;links&#34;
@@ -241,7 +240,7 @@ summary: &#34;links&#34;
 <h3 id="トップページに記事のサマリーを表示する">トップページに記事のサマリーを表示する。</h3>
 <p>何も設定しない場合は、記事本文の先頭から何文字かがサマリーとして表示されます。
 意図的に表示したい文言があるときは記事上部の設定部分に <code>summary</code> を入れます。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">summary: &#34;意図的に表示したい文言を書く。&#34;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">summary: &#34;意図的に表示したい文言を書く。&#34;
 </code></pre></div><h2 id="hugo-のカスタマイズをします他テーマでも共通">Hugo のカスタマイズをします。（他テーマでも共通）</h2>
 <p>この記事に載せなくても良いのですが、せっかくなので一緒に書いておきましょう。</p>
 <h3 id="外部サイトを新しいタブで開く">外部サイトを新しいタブで開く</h3>
@@ -251,10 +250,10 @@ summary: &#34;links&#34;
 <p>Hugo v0.60.0 からの仕様で、記事に直接書いた html が表示されなくなった問題への対応です。<br>
 ちなみに表示されない部分は <code>&lt;!-- raw HTML omitted --&gt;</code> と置き換わっています。</p>
 <h4 id="configtoml">config.toml</h4>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[<span style="color:#a6e22e">markup</span>.<span style="color:#a6e22e">goldmark</span>.<span style="color:#a6e22e">renderer</span>]
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[<span style="color:#a6e22e">markup</span>.<span style="color:#a6e22e">goldmark</span>.<span style="color:#a6e22e">renderer</span>]
 <span style="color:#a6e22e">unsafe</span>= <span style="color:#66d9ef">true</span>
 </code></pre></div><h4 id="configyml">config.yml</h4>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#f92672">markup</span>:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#f92672">markup</span>:
   <span style="color:#f92672">goldmark</span>:
     <span style="color:#f92672">renderer</span>:
       <span style="color:#f92672">unsafe</span>: <span style="color:#66d9ef">true</span>
@@ -268,13 +267,13 @@ summary: &#34;links&#34;
 <p><code>/home/k-kaz/data/git/k/themes/hugo-PaperMod/i18n</code> → <code>/home/k-kaz/data/git/k/i18n</code></p>
 <p>今回、日本語用のファイルを直したかったので、<code>ja.yaml</code> というものをコピペしました。</p>
 <p>元のファイル（こんだけしか無い)</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml">- <span style="color:#f92672">id</span>: <span style="color:#ae81ff">prev_page</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml">- <span style="color:#f92672">id</span>: <span style="color:#ae81ff">prev_page</span>
   <span style="color:#f92672">translation</span>: <span style="color:#e6db74">&#34;前のページ&#34;</span>
 
 - <span style="color:#f92672">id</span>: <span style="color:#ae81ff">next_page</span>
   <span style="color:#f92672">translation</span>: <span style="color:#e6db74">&#34;次のページ&#34;</span>
 </code></pre></div><p>こう直しました。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml">- <span style="color:#f92672">id</span>: <span style="color:#ae81ff">prev_page</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml">- <span style="color:#f92672">id</span>: <span style="color:#ae81ff">prev_page</span>
   <span style="color:#f92672">translation</span>: <span style="color:#e6db74">&#34;前のページ&#34;</span>
 
 - <span style="color:#f92672">id</span>: <span style="color:#ae81ff">next_page</span>
@@ -293,7 +292,7 @@ summary: &#34;links&#34;
 </code></pre></div><p>参考にしたのは、<code>en.yaml</code> のファイルです。</p>
 <p>実際に言語切り替えするときは、<a href="https://adityatelange.github.io/hugo-PaperMod/" target="_blank">exampleSite</a>
  のようにサイト上にスイッチを付けるのが良いのでしょうが、<strong>うちのサイトに日本語を読めない人は来ない</strong> という決め付けで、横着して <code>config.yml</code> で日本語を直指定しました。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#f92672">defaultContentLanguage </span>: <span style="color:#ae81ff">ja  </span> <span style="color:#75715e"># この行を追加です。</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#f92672">defaultContentLanguage </span>: <span style="color:#ae81ff">ja  </span> <span style="color:#75715e"># この行を追加です。</span>
 </code></pre></div><h3 id="投稿日と更新日を表示したい">投稿日と更新日を表示したい。</h3>
 <p>初期状態だと投稿日のみが表示されています。<br>
 また、並びが「月、日、年」と、日本人の私には馴染みのないものなので一緒に直しましょう。</p>
@@ -301,11 +300,11 @@ summary: &#34;links&#34;
 <p>いつものようにテンプレート内から該当ファイルをコピペします。</p>
 <p><code>サイト名\themes\hugo-PaperMod\layouts\partials\post_meta.html</code> → <code>&quot;サイト名\layouts\partials\post_meta.html</code></p>
 <p>元のファイル（該当部分だけ抜き出し）</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{- if not .Date.IsZero -}}
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{- if not .Date.IsZero -}}
 {{- $scratch.Add &#34;meta&#34; (slice (.Date.Format (default &#34;January 2, 2006&#34; .Site.Params.DateFormat))) }}
 {{- end -}}
 </code></pre></div><p>修正後のファイル（2行目を修正しています）</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{- if not .Date.IsZero -}}
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{- if not .Date.IsZero -}}
 {{- $scratch.Add &#34;meta&#34; (slice &#34;Posted&#34; (.Date.Format (default &#34;2006-01-02&#34; .Site.Params.DateFormat)) &#34;Updated&#34; (.Lastmod.Format (default &#34;2006-01-02&#34;))) }}
 {{- end -}}
 </code></pre></div><p>2行目のところで、日付の表示方法 <code>default &quot;2006-01-02&quot;</code> を決めてあげ、さらに最終更新日を取得する <code>.Lastmod.Format</code> を追加しました。</p>
@@ -316,7 +315,7 @@ summary: &#34;links&#34;
 もう1つ修正が必要です。</p>
 <h4 id="configyml-も直します">config.yml も直します。</h4>
 <p>最終更新日時を Git の履歴から自動取得するには、<code>config.yml</code> に、1行追記が必要です。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#f92672">enableGitInfo</span>: <span style="color:#66d9ef">true</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#f92672">enableGitInfo</span>: <span style="color:#66d9ef">true</span>
 </code></pre></div><p>これで更新日時が正しく反映されるようになります。</p>
 <h3 id="現在の-pagespeed-insights-はこんな感じ">現在の PageSpeed Insights はこんな感じ。</h3>
 <p><img src="/images/pagermod-pagespeed-insights.webp" alt="PageSpeed Insights の結果"></p>
