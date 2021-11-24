@@ -5,11 +5,18 @@
     <description>Recent content in homepage on k-kaz</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Wed, 11 Nov 2020 09:12:59 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 23 Nov 2021 19:07:07 +0900</lastBuildDate>
     
         <atom:link href="https://k-kaz-git.github.io/categories/homepage/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Hugo の Shortcodes を使ってみる。</title>
+      <link>https://k-kaz-git.github.io/post/hugo-shortcodes/</link>
+      <pubDate>Mon, 11 Mar 2019 17:40:19 +0900</pubDate>
+      
+      <guid>https://k-kaz-git.github.io/post/hugo-shortcodes/</guid>
+      <description>Shortcodes を使うと便利そうなので、ちょっと勉強します。</description>
+    </item><item>
       <title>ファビコンを作るよ。</title>
       <link>https://k-kaz-git.github.io/post/favicon-generator/</link>
       <pubDate>Sun, 10 Mar 2019 06:37:26 +0900</pubDate>
@@ -72,13 +79,6 @@
       
       <guid>https://k-kaz-git.github.io/post/hello4/</guid>
       <description>次はスクリプトで更新だ</description>
-    </item><item>
-      <title>タイトルに日本語を入れてみる</title>
-      <link>https://k-kaz-git.github.io/post/hello3/</link>
-      <pubDate>Sat, 16 Feb 2019 17:46:34 +0900</pubDate>
-      
-      <guid>https://k-kaz-git.github.io/post/hello3/</guid>
-      <description>ちょっとずつ、いくつか検証するのです。</description>
     </item>
   </channel>
 </rss>
