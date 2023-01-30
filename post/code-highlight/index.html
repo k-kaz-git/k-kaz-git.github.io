@@ -4,18 +4,22 @@
   <meta charset="utf-8" />
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>シンタックスハイライトを自分好みの色にする &middot; k-kaz</title>
+  <title>シンタックスハイライトを自分好みの色にする &middot; </title>
   <meta name="description" content="シンタックスハイライトの色をスタイルシートで変更してみます。" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="manifest" href="/site.webmanifest">
   <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://k-kaz-git.github.io/css/main.min.css" />
+  <link href="https://k-kaz-git.github.io/css/katex.css" rel="stylesheet">
   
-  <link rel="stylesheet" href="https://k-kaz-git.github.io/sass/main.min.47ca362481462191544ac57b2ec98c2b4be0630230c3d2edd85073dad5b96a26.css">
+  
+  
+  
+  <link href="https://k-kaz-git.github.io/css/concated.min.css" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="https://k-kaz-git.github.io/sass/main.fcdea0c4becd73f2e3b2312b85bcd7ba626d441c1cde1e1b8046a6afcc4e22b8.css">
 
   
 <script type="application/javascript">
@@ -142,105 +146,105 @@ highlight.js のテーマを変更してみたものの、一部しか反映さ�
 気分でチョコチョコ変えていきますので、「今と違うじゃんか！」と怒らないでください。
 </p>
 </div>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#75715e">/* 背景真っ黒！！
-</span><span style="color:#75715e">   プログラム毎に class が変わるのでワイルドカードで */</span>
-<span style="color:#f92672">code</span><span style="color:#f92672">[</span><span style="color:#f92672">class</span><span style="color:#f92672">*=</span><span style="color:#e6db74">&#34;language-&#34;</span><span style="color:#f92672">]</span> {
-  <span style="color:#66d9ef">background</span>: <span style="color:#ae81ff">#000</span> <span style="color:#75715e">!important</span>;
-  <span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#fffaf0</span>;
-}
-
-<span style="color:#75715e">/* ここから下がコード用のスタイル */</span>
-.<span style="color:#a6e22e">hljs-comment</span><span style="color:#f92672">,</span>
-.<span style="color:#a6e22e">hljs-quote</span> {
-  <span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#90ee90</span>;
-}
-
-.<span style="color:#a6e22e">hljs-keyword</span><span style="color:#f92672">,</span>
-.<span style="color:#a6e22e">hljs-selector-tag</span><span style="color:#f92672">,</span>
-.<span style="color:#a6e22e">hljs-literal</span> {
-  <span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#ffff00</span>;
-}
-
-.<span style="color:#a6e22e">hljs-name</span> {
-  <span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#4682b4</span>;
-}
-
-.<span style="color:#a6e22e">hljs-variable</span><span style="color:#f92672">,</span>
-.<span style="color:#a6e22e">hljs-template-variable</span> {
-  <span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#660</span>;
-}
-
-.<span style="color:#a6e22e">hljs-string</span> {
-  <span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#ff7f50</span>;
-}
-
-.<span style="color:#a6e22e">hljs-regexp</span><span style="color:#f92672">,</span>
-.<span style="color:#a6e22e">hljs-link</span> {
-  <span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#080</span>;
-}
-
-.<span style="color:#a6e22e">hljs-title</span><span style="color:#f92672">,</span>
-.<span style="color:#a6e22e">hljs-tag</span><span style="color:#f92672">,</span>
-.<span style="color:#a6e22e">hljs-symbol</span><span style="color:#f92672">,</span>
-.<span style="color:#a6e22e">hljs-bullet</span><span style="color:#f92672">,</span>
-.<span style="color:#a6e22e">hljs-meta</span> {
-  <span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#c0c0c0</span>;
-}
-
-.<span style="color:#a6e22e">hljs-number</span> {
-  <span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#7cfc00</span>;
-}
-
-.<span style="color:#a6e22e">hljs-section</span><span style="color:#f92672">,</span>
-.<span style="color:#a6e22e">hljs-class</span> .<span style="color:#a6e22e">hljs-title</span><span style="color:#f92672">,</span>
-.<span style="color:#a6e22e">hljs-type</span><span style="color:#f92672">,</span>
-.<span style="color:#a6e22e">hljs-attr</span><span style="color:#f92672">,</span>
-.<span style="color:#a6e22e">hljs-built_in</span><span style="color:#f92672">,</span>
-.<span style="color:#a6e22e">hljs-builtin-name</span><span style="color:#f92672">,</span>
-.<span style="color:#a6e22e">hljs-params</span> {
-  <span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#87ceeb</span>;
-}
-
-.<span style="color:#a6e22e">hljs-attribute</span><span style="color:#f92672">,</span>
-.<span style="color:#a6e22e">hljs-subst</span> {
-  <span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#87ceeb</span>;
-}
-
-.<span style="color:#a6e22e">hljs-formula</span> {
-  <span style="color:#66d9ef">background-color</span>: <span style="color:#ae81ff">#eee</span>;
-  <span style="color:#66d9ef">font-style</span>: <span style="color:#66d9ef">italic</span>;
-}
-
-.<span style="color:#a6e22e">hljs-addition</span> {
-  <span style="color:#66d9ef">background-color</span>: <span style="color:#ae81ff">#baeeba</span>;
-}
-
-.<span style="color:#a6e22e">hljs-deletion</span> {
-  <span style="color:#66d9ef">background-color</span>: <span style="color:#ae81ff">#ffc8bd</span>;
-}
-
-.<span style="color:#a6e22e">hljs-selector-id</span><span style="color:#f92672">,</span>
-.<span style="color:#a6e22e">hljs-selector-class</span> {
-  <span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#ff8c00</span>;
-}
-
-.<span style="color:#a6e22e">hljs-doctag</span><span style="color:#f92672">,</span>
-.<span style="color:#a6e22e">hljs-strong</span> {
-  <span style="color:#66d9ef">font-weight</span>: <span style="color:#66d9ef">bold</span>;
-}
-
-.<span style="color:#a6e22e">hljs-emphasis</span> {
-  <span style="color:#66d9ef">font-style</span>: <span style="color:#66d9ef">italic</span>;
-}
-</code></pre></div><hr>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#75715e">/* 背景真っ黒！！
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">   プログラム毎に class が変わるのでワイルドカードで */</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">code</span><span style="color:#f92672">[</span><span style="color:#f92672">class</span><span style="color:#f92672">*=</span><span style="color:#e6db74">&#34;language-&#34;</span><span style="color:#f92672">]</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">background</span>: <span style="color:#ae81ff">#000</span> <span style="color:#75715e">!important</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#fffaf0</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">/* ここから下がコード用のスタイル */</span>
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">hljs-comment</span><span style="color:#f92672">,</span>
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">hljs-quote</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#90ee90</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">hljs-keyword</span><span style="color:#f92672">,</span>
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">hljs-selector-tag</span><span style="color:#f92672">,</span>
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">hljs-literal</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#ffff00</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">hljs-name</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#4682b4</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">hljs-variable</span><span style="color:#f92672">,</span>
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">hljs-template-variable</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#660</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">hljs-string</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#ff7f50</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">hljs-regexp</span><span style="color:#f92672">,</span>
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">hljs-link</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#080</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">hljs-title</span><span style="color:#f92672">,</span>
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">hljs-tag</span><span style="color:#f92672">,</span>
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">hljs-symbol</span><span style="color:#f92672">,</span>
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">hljs-bullet</span><span style="color:#f92672">,</span>
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">hljs-meta</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#c0c0c0</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">hljs-number</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#7cfc00</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">hljs-section</span><span style="color:#f92672">,</span>
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">hljs-class</span> .<span style="color:#a6e22e">hljs-title</span><span style="color:#f92672">,</span>
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">hljs-type</span><span style="color:#f92672">,</span>
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">hljs-attr</span><span style="color:#f92672">,</span>
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">hljs-built_in</span><span style="color:#f92672">,</span>
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">hljs-builtin-name</span><span style="color:#f92672">,</span>
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">hljs-params</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#87ceeb</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">hljs-attribute</span><span style="color:#f92672">,</span>
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">hljs-subst</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#87ceeb</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">hljs-formula</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">background-color</span>: <span style="color:#ae81ff">#eee</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">font-style</span>: <span style="color:#66d9ef">italic</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">hljs-addition</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">background-color</span>: <span style="color:#ae81ff">#baeeba</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">hljs-deletion</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">background-color</span>: <span style="color:#ae81ff">#ffc8bd</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">hljs-selector-id</span><span style="color:#f92672">,</span>
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">hljs-selector-class</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#ff8c00</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">hljs-doctag</span><span style="color:#f92672">,</span>
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">hljs-strong</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">font-weight</span>: <span style="color:#66d9ef">bold</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">hljs-emphasis</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">font-style</span>: <span style="color:#66d9ef">italic</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><hr>
 <h2 id="せっかくなので正しいやり方も紹介">せっかくなので、正しいやり方も紹介</h2>
 <p>いつか、自分が使うことになるかもしれないしね。</p>
 <h3 id="go-機能を使う場合">Go 機能を使う場合</h3>
 <p>今は、Go に搭載されている機能で、シンタックスハイライトが可能になっています。</p>
 <h4 id="configtoml-で有効化">config.toml で有効化</h4>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="color:#a6e22e">pygmentsCodefences</span> = <span style="color:#66d9ef">true</span>
-<span style="color:#a6e22e">pygmentsUseClasses</span> = <span style="color:#66d9ef">true</span>
-</code></pre></div><h4 id="スタイルの選択">スタイルの選択</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span><span style="color:#a6e22e">pygmentsCodefences</span> = <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">pygmentsUseClasses</span> = <span style="color:#66d9ef">true</span>
+</span></span></code></pre></div><h4 id="スタイルの選択">スタイルの選択</h4>
 <p><code>hugo gen chromastyles --style=hoge &gt; syntax.css</code></p>
 <p><code>hoge</code> のところを好きなテーマにしてあげると、そのスタイルシートが <code>syntax.css</code> に出力され、これを <code>&lt;head&gt;～&lt;/head&gt;</code> の中で読み込んであげれば良いです。</p>
 <p>テーマは下記を参考にしてください。<br>
@@ -256,10 +260,10 @@ highlight.js のテーマを変更してみたものの、一部しか反映さ�
 </p>
 <h4 id="設定の仕方">設定の仕方</h4>
 <p>下記を <code>&lt;head&gt;～&lt;/head&gt;</code> に入れてあげましょう。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/default.min.css&#34;</span>&gt;
-&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
-&lt;<span style="color:#f92672">script</span>&gt;<span style="color:#a6e22e">hljs</span>.<span style="color:#a6e22e">initHighlightingOnLoad</span>();&lt;/<span style="color:#f92672">script</span>&gt;
-</code></pre></div><p><code>9.15.6</code> は現在の最新バージョンです。ここは値が変わるので、使用する場合は公式サイトで確認をお願いします。<br>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/default.min.css&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span>&gt;<span style="color:#a6e22e">hljs</span>.<span style="color:#a6e22e">initHighlightingOnLoad</span>();&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span></code></pre></div><p><code>9.15.6</code> は現在の最新バージョンです。ここは値が変わるので、使用する場合は公式サイトで確認をお願いします。<br>
 尚、一番上にあるファイル名 <code>default.min.css</code> を好きなテーマに変えてあげると、スタイルが反映されます。</p>
 <h4 id="aether-の場合">aether の場合</h4>
 <p><code>themes/aether/layouts/partials/scripts.html</code> で、上記を読み込んでいるので、そこを変えてあげれば良いはずなんですけど、1行目（テーマ）が見当たらず。もしかしたら、そこを省略して、自前のスタイルシートを使っていたのかなと思えてきました。</p>
@@ -305,20 +309,21 @@ highlight.js のテーマを変更してみたものの、一部しか反映さ�
 </a>
       
       <a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
-  href="https://k-kaz-git.github.io/" class="card home-card" style="background-image: url( https://k-kaz-git.github.io/images/home_640.webp )" rel="bookmark" >
+  href="https://k-kaz-git.github.io/" class="card home-card" style="background-image: url( https://k-kaz-git.github.io/img/grey-cloud.jpg )" rel="bookmark" >
   Home
 </a>
     </nav>
     <footer>
     <p style="text-align: center">姉妹サイト<br><a class="btn-link" href="https://k-kaz.net/" target="_blank">k-kaz ブログ</a></p>
 </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"
-    onload="renderMathInElement(document.body);"></script>
-<script src="https://k-kaz-git.github.io/js/core.js"></script>
-<script>
-  hljs.initHighlightingOnLoad();
-</script>
+    
+  <script defer src="https://k-kaz-git.github.io/js/katex.js"></script>
+
+
+  <script defer src="https://k-kaz-git.github.io/js/auto-render.js" onload="renderMathInElement(document.body);"></script>
+
+
+<script src="https://k-kaz-git.github.io/js/core.min.js"></script>
+
   </body>
 </html>

@@ -4,18 +4,22 @@
   <meta charset="utf-8" />
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Hugo Section &middot; k-kaz</title>
+  <title>Hugo Section &middot; </title>
   <meta name="description" content="いまいち分からんセクションの話" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="manifest" href="/site.webmanifest">
   <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://k-kaz-git.github.io/css/main.min.css" />
+  <link href="https://k-kaz-git.github.io/css/katex.css" rel="stylesheet">
   
-  <link rel="stylesheet" href="https://k-kaz-git.github.io/sass/main.min.47ca362481462191544ac57b2ec98c2b4be0630230c3d2edd85073dad5b96a26.css">
+  
+  
+  
+  <link href="https://k-kaz-git.github.io/css/concated.min.css" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="https://k-kaz-git.github.io/sass/main.fcdea0c4becd73f2e3b2312b85bcd7ba626d441c1cde1e1b8046a6afcc4e22b8.css">
 
   
 <script type="application/javascript">
@@ -88,57 +92,57 @@ if (!doNotTrack) {
 さらにその下の階層でサブディレクトリを作って、カテゴリ毎に記事を管理することも可能です。</p>
 <h3 id="k-kaz-が好きなことを書くサイト-の場合">k-kaz が好きなことを書くサイト の場合。</h3>
 <p>元々は、<code>content</code> 直下の2ファイルと、<code>post</code> というサブディレクトリで運用していました。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">content
-    │  archives.md
-    │  links.md
-    │          
-    └─post
-        │  _index.md
-        │  
-        ├─2020-10-25
-        │      index.md
-        │      
-        └─2020-10-25-02
-                coffee-5498486_300.webp
-                coffee-5498486_720.webp
-                index.md
-</code></pre></div><p>この場合、トップページにリスト表示されるのは <code>post</code> 内の記事のみ。<br>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>content
+</span></span><span style="display:flex;"><span>    │  archives.md
+</span></span><span style="display:flex;"><span>    │  links.md
+</span></span><span style="display:flex;"><span>    │          
+</span></span><span style="display:flex;"><span>    └─post
+</span></span><span style="display:flex;"><span>        │  _index.md
+</span></span><span style="display:flex;"><span>        │  
+</span></span><span style="display:flex;"><span>        ├─2020-10-25
+</span></span><span style="display:flex;"><span>        │      index.md
+</span></span><span style="display:flex;"><span>        │      
+</span></span><span style="display:flex;"><span>        └─2020-10-25-02
+</span></span><span style="display:flex;"><span>                coffee-5498486_300.webp
+</span></span><span style="display:flex;"><span>                coffee-5498486_720.webp
+</span></span><span style="display:flex;"><span>                index.md
+</span></span></code></pre></div><p>この場合、トップページにリスト表示されるのは <code>post</code> 内の記事のみ。<br>
 <code>archives.md</code> <code>links.md</code> は上部メニューに割り当ててあります。</p>
 <p>今回、新たに <code>aaaaa</code> を加え、トップページに <code>post</code> と <code>aaaaa</code> の下にある記事を表示させようという考えです。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">content
-    │  archives.md
-    │  links.md
-    │          
-    ├─aaaaa
-    │  │  _index.md
-    │  │  
-    │  └─2020-11-11
-    │          index.md
-    │          
-    └─post
-        │  _index.md
-        │  
-        ├─2020-10-25
-        │      index.md
-        │      
-        └─2020-10-25-02
-                coffee-5498486_300.webp
-                coffee-5498486_720.webp
-                index.md
-</code></pre></div><h3 id="post-しか表示されんのだけど">post しか表示されんのだけど。</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>content
+</span></span><span style="display:flex;"><span>    │  archives.md
+</span></span><span style="display:flex;"><span>    │  links.md
+</span></span><span style="display:flex;"><span>    │          
+</span></span><span style="display:flex;"><span>    ├─aaaaa
+</span></span><span style="display:flex;"><span>    │  │  _index.md
+</span></span><span style="display:flex;"><span>    │  │  
+</span></span><span style="display:flex;"><span>    │  └─2020-11-11
+</span></span><span style="display:flex;"><span>    │          index.md
+</span></span><span style="display:flex;"><span>    │          
+</span></span><span style="display:flex;"><span>    └─post
+</span></span><span style="display:flex;"><span>        │  _index.md
+</span></span><span style="display:flex;"><span>        │  
+</span></span><span style="display:flex;"><span>        ├─2020-10-25
+</span></span><span style="display:flex;"><span>        │      index.md
+</span></span><span style="display:flex;"><span>        │      
+</span></span><span style="display:flex;"><span>        └─2020-10-25-02
+</span></span><span style="display:flex;"><span>                coffee-5498486_300.webp
+</span></span><span style="display:flex;"><span>                coffee-5498486_720.webp
+</span></span><span style="display:flex;"><span>                index.md
+</span></span></code></pre></div><h3 id="post-しか表示されんのだけど">post しか表示されんのだけど。</h3>
 <p><code>aaaaa</code> を配置したのになぜか無視されて、今まで通りリスト表示されるのは <code>post</code> 内の記事だけ。</p>
 <p>リスト表示のテンプレートファイル（<code>list.html</code>）を開いてみましたら、気になるところが。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{- if .IsHome }}
-{{- $pages = where site.RegularPages &#34;Type&#34; &#34;in&#34; site.Params.mainSections }}
-{{- end}}
-</code></pre></div><p><code>site.Params.mainSections</code> これが呼ばれているっぽい。<br>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>{{- if .IsHome }}
+</span></span><span style="display:flex;"><span>{{- $pages = where site.RegularPages &#34;Type&#34; &#34;in&#34; site.Params.mainSections }}
+</span></span><span style="display:flex;"><span>{{- end}}
+</span></span></code></pre></div><p><code>site.Params.mainSections</code> これが呼ばれているっぽい。<br>
 ということは、<code>post</code> は該当するけど <code>aaaaa</code> はこれに該当しないということか。</p>
 <h3 id="解決した">解決した。</h3>
 <p>メインセクションについて調べていたら、<code>config.yml</code> で設定できるみたい。
 ということで、下記を追加しました。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#f92672">params</span>:
-    <span style="color:#f92672">mainSections</span>: [<span style="color:#e6db74">&#34;post&#34;</span>, <span style="color:#e6db74">&#34;aaaaa&#34;</span>]
-</code></pre></div><p>toml の場合は <code>:</code> が <code>=</code> ですね。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#f92672">params</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">mainSections</span>: [<span style="color:#e6db74">&#34;post&#34;</span>, <span style="color:#e6db74">&#34;aaaaa&#34;</span>]
+</span></span></code></pre></div><p>toml の場合は <code>:</code> が <code>=</code> ですね。</p>
 <p>これで狙い通りの表示がされるようになりました。</p>
 <h2 id="_indexmd-について">_index.md について。</h2>
 <p>各サブディレクトリ ← これをセクションというんですが、ここに <code>_index.md</code> を置くことで、そのセクションに直接アクセスされたときに、セクション一覧が表示されるようにできます。</p>
@@ -184,20 +188,21 @@ if (!doNotTrack) {
 </a>
       
       <a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
-  href="https://k-kaz-git.github.io/" class="card home-card" style="background-image: url( https://k-kaz-git.github.io/images/home_640.webp )" rel="bookmark" >
+  href="https://k-kaz-git.github.io/" class="card home-card" style="background-image: url( https://k-kaz-git.github.io/img/grey-cloud.jpg )" rel="bookmark" >
   Home
 </a>
     </nav>
     <footer>
     <p style="text-align: center">姉妹サイト<br><a class="btn-link" href="https://k-kaz.net/" target="_blank">k-kaz ブログ</a></p>
 </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"
-    onload="renderMathInElement(document.body);"></script>
-<script src="https://k-kaz-git.github.io/js/core.js"></script>
-<script>
-  hljs.initHighlightingOnLoad();
-</script>
+    
+  <script defer src="https://k-kaz-git.github.io/js/katex.js"></script>
+
+
+  <script defer src="https://k-kaz-git.github.io/js/auto-render.js" onload="renderMathInElement(document.body);"></script>
+
+
+<script src="https://k-kaz-git.github.io/js/core.min.js"></script>
+
   </body>
 </html>

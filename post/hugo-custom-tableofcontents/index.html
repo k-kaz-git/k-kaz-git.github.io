@@ -4,18 +4,22 @@
   <meta charset="utf-8" />
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Hugo の目次について考える &middot; k-kaz</title>
+  <title>Hugo の目次について考える &middot; </title>
   <meta name="description" content="Hugo に目次を入れようと思ったのです。" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="manifest" href="/site.webmanifest">
   <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://k-kaz-git.github.io/css/main.min.css" />
+  <link href="https://k-kaz-git.github.io/css/katex.css" rel="stylesheet">
   
-  <link rel="stylesheet" href="https://k-kaz-git.github.io/sass/main.min.47ca362481462191544ac57b2ec98c2b4be0630230c3d2edd85073dad5b96a26.css">
+  
+  
+  
+  <link href="https://k-kaz-git.github.io/css/concated.min.css" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="https://k-kaz-git.github.io/sass/main.fcdea0c4becd73f2e3b2312b85bcd7ba626d441c1cde1e1b8046a6afcc4e22b8.css">
 
   
 <script type="application/javascript">
@@ -87,32 +91,32 @@ if (!doNotTrack) {
 <p><strong>それすなわち、目次ですね。</strong></p>
 <h3 id="使い方">使い方</h3>
 <p><code>single.html</code> なんかの表示したい部分にこれを追記します。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{ .TableOfContents }}
-</code></pre></div><p>たったこれだけです。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>{{ .TableOfContents }}
+</span></span></code></pre></div><p>たったこれだけです。</p>
 <h3 id="出力サンプル">出力サンプル</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">nav</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;TableOfContents&#34;</span>&gt;
-  &lt;<span style="color:#f92672">ul</span>&gt;
-    &lt;<span style="color:#f92672">li</span>&gt;
-      &lt;<span style="color:#f92672">ul</span>&gt;
-        &lt;<span style="color:#f92672">li</span>&gt;&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;#h2-見出しタイトル-その１&#34;</span>&gt;H2 見出しタイトル その１&lt;/<span style="color:#f92672">a</span>&gt;&lt;/<span style="color:#f92672">li</span>&gt;
-        &lt;<span style="color:#f92672">li</span>&gt;&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;#h2-見出しタイトル-その２&#34;</span>&gt;H2 見出しタイトル その２&lt;/<span style="color:#f92672">a</span>&gt;
-          &lt;<span style="color:#f92672">ul</span>&gt;
-            &lt;<span style="color:#f92672">li</span>&gt;&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;#h3-見出しタイトル&#34;</span>&gt;H3 見出しタイトル&lt;/<span style="color:#f92672">a</span>&gt;
-              &lt;<span style="color:#f92672">ul</span>&gt;
-                &lt;<span style="color:#f92672">li</span>&gt;&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;#h4-見出しタイトル&#34;</span>&gt;H4 見出しタイトル&lt;/<span style="color:#f92672">a</span>&gt;
-                  &lt;<span style="color:#f92672">ul</span>&gt;
-                    &lt;<span style="color:#f92672">li</span>&gt;&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;#h5-見出しタイトル&#34;</span>&gt;H5 見出しタイトル&lt;/<span style="color:#f92672">a</span>&gt;&lt;/<span style="color:#f92672">li</span>&gt;
-                  &lt;/<span style="color:#f92672">ul</span>&gt;
-                &lt;/<span style="color:#f92672">li</span>&gt;
-              &lt;/<span style="color:#f92672">ul</span>&gt;
-            &lt;/<span style="color:#f92672">li</span>&gt;
-          &lt;/<span style="color:#f92672">ul</span>&gt;
-        &lt;/<span style="color:#f92672">li</span>&gt;
-      &lt;/<span style="color:#f92672">ul</span>&gt;
-    &lt;/<span style="color:#f92672">li</span>&gt;
-  &lt;/<span style="color:#f92672">ul</span>&gt;
-&lt;/<span style="color:#f92672">nav</span>&gt;
-</code></pre></div><p><code>&lt;nav id=&quot;TableOfContents&quot;&gt;</code> というタグで囲まれたリストが出来上がります。<br>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">nav</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;TableOfContents&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">ul</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">li</span>&gt;
+</span></span><span style="display:flex;"><span>      &lt;<span style="color:#f92672">ul</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">li</span>&gt;&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;#h2-見出しタイトル-その１&#34;</span>&gt;H2 見出しタイトル その１&lt;/<span style="color:#f92672">a</span>&gt;&lt;/<span style="color:#f92672">li</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">li</span>&gt;&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;#h2-見出しタイトル-その２&#34;</span>&gt;H2 見出しタイトル その２&lt;/<span style="color:#f92672">a</span>&gt;
+</span></span><span style="display:flex;"><span>          &lt;<span style="color:#f92672">ul</span>&gt;
+</span></span><span style="display:flex;"><span>            &lt;<span style="color:#f92672">li</span>&gt;&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;#h3-見出しタイトル&#34;</span>&gt;H3 見出しタイトル&lt;/<span style="color:#f92672">a</span>&gt;
+</span></span><span style="display:flex;"><span>              &lt;<span style="color:#f92672">ul</span>&gt;
+</span></span><span style="display:flex;"><span>                &lt;<span style="color:#f92672">li</span>&gt;&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;#h4-見出しタイトル&#34;</span>&gt;H4 見出しタイトル&lt;/<span style="color:#f92672">a</span>&gt;
+</span></span><span style="display:flex;"><span>                  &lt;<span style="color:#f92672">ul</span>&gt;
+</span></span><span style="display:flex;"><span>                    &lt;<span style="color:#f92672">li</span>&gt;&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;#h5-見出しタイトル&#34;</span>&gt;H5 見出しタイトル&lt;/<span style="color:#f92672">a</span>&gt;&lt;/<span style="color:#f92672">li</span>&gt;
+</span></span><span style="display:flex;"><span>                  &lt;/<span style="color:#f92672">ul</span>&gt;
+</span></span><span style="display:flex;"><span>                &lt;/<span style="color:#f92672">li</span>&gt;
+</span></span><span style="display:flex;"><span>              &lt;/<span style="color:#f92672">ul</span>&gt;
+</span></span><span style="display:flex;"><span>            &lt;/<span style="color:#f92672">li</span>&gt;
+</span></span><span style="display:flex;"><span>          &lt;/<span style="color:#f92672">ul</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;/<span style="color:#f92672">li</span>&gt;
+</span></span><span style="display:flex;"><span>      &lt;/<span style="color:#f92672">ul</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">li</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;/<span style="color:#f92672">ul</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">nav</span>&gt;
+</span></span></code></pre></div><p><code>&lt;nav id=&quot;TableOfContents&quot;&gt;</code> というタグで囲まれたリストが出来上がります。<br>
 あとはお好みのスタイルを適用してあげるだけ。</p>
 <h3 id="考慮すべき点">考慮すべき点</h3>
 <p>見出しタグが無い場合に、空っぽのリストが出てきちゃうので、対策が必要です。</p>
@@ -123,26 +127,26 @@ if (!doNotTrack) {
  に記述があります。<br>
 短い記事であれば目次は要らんでしょうという考え方かな。</p>
 <p>if文で文字数の判断をして、出す出さないを決めています。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{ if and (gt .WordCount 400 ) (.Params.toc) }}
-&lt;<span style="color:#f92672">aside</span>&gt;
-    &lt;<span style="color:#f92672">header</span>&gt;
-    &lt;<span style="color:#f92672">h2</span>&gt;{{.Title}}&lt;/<span style="color:#f92672">h2</span>&gt;
-    &lt;/<span style="color:#f92672">header</span>&gt;
-    {{.TableOfContents}}
-&lt;/<span style="color:#f92672">aside</span>&gt;
-{{ end }}
-</code></pre></div><h4 id="記事毎にフラグを立てる">記事毎にフラグを立てる</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>{{ if and (gt .WordCount 400 ) (.Params.toc) }}
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">aside</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">header</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">h2</span>&gt;{{.Title}}&lt;/<span style="color:#f92672">h2</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">header</span>&gt;
+</span></span><span style="display:flex;"><span>    {{.TableOfContents}}
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">aside</span>&gt;
+</span></span><span style="display:flex;"><span>{{ end }}
+</span></span></code></pre></div><h4 id="記事毎にフラグを立てる">記事毎にフラグを立てる</h4>
 <p>自作テーマで立ち上げている Nerlify のほう <a href="https://k-kaz.netlify.com" target="_blank">k-kaz が好きなことを書くサイト</a>
  はコレを採用しています。</p>
 <p><code>single.html</code> にはこのように記述。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{ if eq .Params.toc true }}
-  &lt;<span style="color:#f92672">aside</span>&gt;
-  {{ .TableOfContents }}
-  &lt;/<span style="color:#f92672">aside</span>&gt;
-{{ end }}
-</code></pre></div><p>記事 <code>hoge.md</code> のパラメータ部分に追加。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">toc: true
-</code></pre></div><p>この2つをセットにして、記事の <code>toc</code> というパラメータが <code>true</code> なら、<code>{{ .TableOfContents }}</code> を実行するようにしています。実行したくなければ <code>false</code> としておきます。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>{{ if eq .Params.toc true }}
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">aside</span>&gt;
+</span></span><span style="display:flex;"><span>  {{ .TableOfContents }}
+</span></span><span style="display:flex;"><span>  &lt;/<span style="color:#f92672">aside</span>&gt;
+</span></span><span style="display:flex;"><span>{{ end }}
+</span></span></code></pre></div><p>記事 <code>hoge.md</code> のパラメータ部分に追加。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>toc: true
+</span></span></code></pre></div><p>この2つをセットにして、記事の <code>toc</code> というパラメータが <code>true</code> なら、<code>{{ .TableOfContents }}</code> を実行するようにしています。実行したくなければ <code>false</code> としておきます。</p>
 <p>また、毎回書くのも面倒なので、<code>archetypes/post.md</code> という記事のテンプレートファイルに予め入れました。</p>
 <h4 id="ちなみにこのサイトでは">ちなみにこのサイトでは・・・</h4>
 <p><strong>必ず目次は表示する、そして、必ず見出しを書く</strong> という、己に厳しいルールが制定されているので大丈夫です（笑）<br>
@@ -151,10 +155,10 @@ if (!doNotTrack) {
 <p>これまで html に直接書いていたんですが、<code>toc: false</code> にしても、”目次” だけ出てきちゃうんですよね。<br>
 <code>{{ .TableOfContents }}</code> のところを <code>{{ partial &quot;toc.html&quot; . }}</code> として、別途用意した <code>toc.html</code> の中で ”目次” と書いておけば、不要なときに呼びされずに済んでスマートです。</p>
 <p>私は別ファイルを用意するのが面倒だったので、スタイルシートの中で ”目次” を呼び出すようにして、良しとしました。（横着）</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">aside</span>::<span style="color:#a6e22e">before</span> {
-    <span style="color:#66d9ef">content</span>: <span style="color:#e6db74">&#34;目次&#34;</span>;
-}
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#f92672">aside</span>::<span style="color:#a6e22e">before</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">content</span>: <span style="color:#e6db74">&#34;目次&#34;</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div>
       </article>
       <hr>
       <p class="post-date">
@@ -194,20 +198,21 @@ if (!doNotTrack) {
 </a>
       
       <a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
-  href="https://k-kaz-git.github.io/" class="card home-card" style="background-image: url( https://k-kaz-git.github.io/images/home_640.webp )" rel="bookmark" >
+  href="https://k-kaz-git.github.io/" class="card home-card" style="background-image: url( https://k-kaz-git.github.io/img/grey-cloud.jpg )" rel="bookmark" >
   Home
 </a>
     </nav>
     <footer>
     <p style="text-align: center">姉妹サイト<br><a class="btn-link" href="https://k-kaz.net/" target="_blank">k-kaz ブログ</a></p>
 </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"
-    onload="renderMathInElement(document.body);"></script>
-<script src="https://k-kaz-git.github.io/js/core.js"></script>
-<script>
-  hljs.initHighlightingOnLoad();
-</script>
+    
+  <script defer src="https://k-kaz-git.github.io/js/katex.js"></script>
+
+
+  <script defer src="https://k-kaz-git.github.io/js/auto-render.js" onload="renderMathInElement(document.body);"></script>
+
+
+<script src="https://k-kaz-git.github.io/js/core.min.js"></script>
+
   </body>
 </html>

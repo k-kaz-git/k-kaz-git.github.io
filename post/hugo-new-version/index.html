@@ -4,18 +4,22 @@
   <meta charset="utf-8" />
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>そうだ Hugo の最新版を使おう！ &middot; k-kaz</title>
+  <title>そうだ Hugo の最新版を使おう！ &middot; </title>
   <meta name="description" content="そんなときは大体ハマる。" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="manifest" href="/site.webmanifest">
   <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://k-kaz-git.github.io/css/main.min.css" />
+  <link href="https://k-kaz-git.github.io/css/katex.css" rel="stylesheet">
   
-  <link rel="stylesheet" href="https://k-kaz-git.github.io/sass/main.min.47ca362481462191544ac57b2ec98c2b4be0630230c3d2edd85073dad5b96a26.css">
+  
+  
+  
+  <link href="https://k-kaz-git.github.io/css/concated.min.css" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="https://k-kaz-git.github.io/sass/main.fcdea0c4becd73f2e3b2312b85bcd7ba626d441c1cde1e1b8046a6afcc4e22b8.css">
 
   
 <script type="application/javascript">
@@ -89,29 +93,29 @@ if (!doNotTrack) {
         </aside>
         <h2 id="hugo-ってバージョンアップしてるの">Hugo ってバージョンアップしてるの？</h2>
 <p>まずは、私が使っている現在のバージョンを確認。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">$ hugo version
-$ Hugo Static Site Generator v0.54.0/extended windows/amd64 BuildDate: unknown
-</code></pre></div><p>ふむ、0.54 を使っているらしい。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>$ hugo version
+</span></span><span style="display:flex;"><span>$ Hugo Static Site Generator v0.54.0/extended windows/amd64 BuildDate: unknown
+</span></span></code></pre></div><p>ふむ、0.54 を使っているらしい。</p>
 <p>公式サイトに行ってみると、0.76.5 が最新の様子。<br>
 <strong>すっかり時代に取り残されていました。</strong></p>
 <h2 id="最新版にするにはwindows">最新版にするには（Windows）</h2>
 <p>Windows の場合は、GitHub から Zip を落としてきて、実行ファイルを入れ替えるだけで完了です。</p>
 <h2 id="チェックしましょう">チェックしましょう。</h2>
 <p>とりあえず今までの記事が正常に見られるかチェック。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">$ hugo server -D
-Start building sites …
-WARN 2020/10/16 15:08:48 Page.RSSLink is deprecated and will be removed in a future release. Use the Output Format&#39;s link, e.g. something like:
-    {{ with .OutputFormats.Get &#34;RSS&#34; }}{{ .RelPermalink }}{{ end }}
-</code></pre></div><p>なんか怒られた。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>$ hugo server -D
+</span></span><span style="display:flex;"><span>Start building sites …
+</span></span><span style="display:flex;"><span>WARN 2020/10/16 15:08:48 Page.RSSLink is deprecated and will be removed in a future release. Use the Output Format&#39;s link, e.g. something like:
+</span></span><span style="display:flex;"><span>    {{ with .OutputFormats.Get &#34;RSS&#34; }}{{ .RelPermalink }}{{ end }}
+</span></span></code></pre></div><p>なんか怒られた。</p>
 <h2 id="修正します">修正します。</h2>
 <p>調べてみたら、<code>.RSSLink</code> っていうのが最新版では使えないっていうことらしい。</p>
 <p><code>head.html</code> で使っていたので修正しました。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{ if .RSSLink }}
-&lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .RSSLink }}&#34;</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;alternate&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;application/rss+xml&#34;</span> <span style="color:#a6e22e">title</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Title }}&#34;</span> /&gt;{{ end }}
-</code></pre></div><p>↓ こんな風に。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{ with .OutputFormats.Get &#34;RSS&#34; }}
-&lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .RelPermalink }}&#34;</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;alternate&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;application/rss+xml&#34;</span> <span style="color:#a6e22e">title</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ $.Site.Title }}&#34;</span> /&gt;{{ end }}
-</code></pre></div><p>これでエラーは出なくなった。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>{{ if .RSSLink }}
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .RSSLink }}&#34;</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;alternate&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;application/rss+xml&#34;</span> <span style="color:#a6e22e">title</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Title }}&#34;</span> /&gt;{{ end }}
+</span></span></code></pre></div><p>↓ こんな風に。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>{{ with .OutputFormats.Get &#34;RSS&#34; }}
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .RelPermalink }}&#34;</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;alternate&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;application/rss+xml&#34;</span> <span style="color:#a6e22e">title</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ $.Site.Title }}&#34;</span> /&gt;{{ end }}
+</span></span></code></pre></div><p>これでエラーは出なくなった。</p>
 <h2 id="あれ-レイアウトが">あれ？ レイアウトが・・・</h2>
 <p>トップページのレイアウトがおかしい。<br>
 今までは <code>content/post/</code> 以下の記事がずらっと並んでくれたんですが、<code>content</code> が表示されてるっぽい。</p>
@@ -152,14 +156,14 @@ home.Pagesはトップレベルセクションのページのみを返すよう�
 <h3 id="あれ引用がごっそり消えている">あれ、引用がごっそり消えている</h3>
 <p>たまたま気付いたんですが、引用した部分がごっそり消えていたんですよ。</p>
 <p>html のソースを見ると、その部分が</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!-- raw HTML omitted --&gt;</span>
-</code></pre></div><p>となっていました。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#75715e">&lt;!-- raw HTML omitted --&gt;</span>
+</span></span></code></pre></div><p>となっていました。</p>
 <p>これは Google ですぐに見付けました。</p>
 <p>v0.60.0 から、記事ファイル（hoge.md）に書かれた html が表示されなくなったとのこと。（なんで？）</p>
 <p>解決策は <code>config.toml</code> にオプションを追加すればオッケー。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[<span style="color:#a6e22e">markup</span>.<span style="color:#a6e22e">goldmark</span>.<span style="color:#a6e22e">renderer</span>]
-<span style="color:#a6e22e">unsafe</span>= <span style="color:#66d9ef">true</span>
-</code></pre></div><p>すぐ直って良かった。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span>[<span style="color:#a6e22e">markup</span>.<span style="color:#a6e22e">goldmark</span>.<span style="color:#a6e22e">renderer</span>]
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">unsafe</span>= <span style="color:#66d9ef">true</span>
+</span></span></code></pre></div><p>すぐ直って良かった。</p>
 <p>ということで、今回から最新版の Hugo を使っていきます。</p>
 
       </article>
@@ -201,20 +205,21 @@ home.Pagesはトップレベルセクションのページのみを返すよう�
 </a>
       
       <a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
-  href="https://k-kaz-git.github.io/" class="card home-card" style="background-image: url( https://k-kaz-git.github.io/images/home_640.webp )" rel="bookmark" >
+  href="https://k-kaz-git.github.io/" class="card home-card" style="background-image: url( https://k-kaz-git.github.io/img/grey-cloud.jpg )" rel="bookmark" >
   Home
 </a>
     </nav>
     <footer>
     <p style="text-align: center">姉妹サイト<br><a class="btn-link" href="https://k-kaz.net/" target="_blank">k-kaz ブログ</a></p>
 </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"
-    onload="renderMathInElement(document.body);"></script>
-<script src="https://k-kaz-git.github.io/js/core.js"></script>
-<script>
-  hljs.initHighlightingOnLoad();
-</script>
+    
+  <script defer src="https://k-kaz-git.github.io/js/katex.js"></script>
+
+
+  <script defer src="https://k-kaz-git.github.io/js/auto-render.js" onload="renderMathInElement(document.body);"></script>
+
+
+<script src="https://k-kaz-git.github.io/js/core.min.js"></script>
+
   </body>
 </html>

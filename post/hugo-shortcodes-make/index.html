@@ -4,18 +4,22 @@
   <meta charset="utf-8" />
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>自作の Hugo用 Shortcodes &middot; k-kaz</title>
+  <title>自作の Hugo用 Shortcodes &middot; </title>
   <meta name="description" content="自作の Shortcodes をテストしたり、思い出すための場所" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="manifest" href="/site.webmanifest">
   <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://k-kaz-git.github.io/css/main.min.css" />
+  <link href="https://k-kaz-git.github.io/css/katex.css" rel="stylesheet">
   
-  <link rel="stylesheet" href="https://k-kaz-git.github.io/sass/main.min.47ca362481462191544ac57b2ec98c2b4be0630230c3d2edd85073dad5b96a26.css">
+  
+  
+  
+  <link href="https://k-kaz-git.github.io/css/concated.min.css" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="https://k-kaz-git.github.io/sass/main.fcdea0c4becd73f2e3b2312b85bcd7ba626d441c1cde1e1b8046a6afcc4e22b8.css">
 
   
 <script type="application/javascript">
@@ -123,41 +127,40 @@ if (!doNotTrack) {
 </p>
 </div>
 <h4 id="memohtml">memo.html</h4>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;memo&#34;</span>&gt;
-    &lt;<span style="color:#f92672">span</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;memo-title&#34;</span>&gt;{{.Get 0}}&lt;/<span style="color:#f92672">span</span>&gt;
-    &lt;<span style="color:#f92672">p</span>&gt;{{.Inner}}&lt;/<span style="color:#f92672">p</span>&gt;
-&lt;/<span style="color:#f92672">div</span>&gt;
-</code></pre></div><h4 id="hogecss">hoge.css</h4>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#a6e22e">memo</span> {
-  <span style="color:#66d9ef">position</span>: <span style="color:#66d9ef">relative</span>;
-  <span style="color:#66d9ef">margin</span>: <span style="color:#ae81ff">2</span><span style="color:#66d9ef">em</span> <span style="color:#ae81ff">2</span><span style="color:#66d9ef">em</span>;
-  <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">0.5</span><span style="color:#66d9ef">em</span> <span style="color:#ae81ff">1</span><span style="color:#66d9ef">em</span>;
-  <span style="color:#66d9ef">border</span>: <span style="color:#66d9ef">solid</span> <span style="color:#ae81ff">1</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">#a9a9a9</span>;
-  <span style="color:#66d9ef">background</span>: <span style="color:#ae81ff">#f5f5f5</span>;
-  <span style="color:#66d9ef">max-width</span>: <span style="color:#ae81ff">70</span><span style="color:#66d9ef">%</span>;
-}
-.<span style="color:#a6e22e">memo</span> .<span style="color:#a6e22e">memo-title</span> {
-    <span style="color:#66d9ef">position</span>: <span style="color:#66d9ef">absolute</span>;
-    <span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">inline-block</span>;
-    <span style="color:#66d9ef">top</span>: <span style="color:#ae81ff">-26</span><span style="color:#66d9ef">px</span>;
-    <span style="color:#66d9ef">left</span>: <span style="color:#ae81ff">-1</span><span style="color:#66d9ef">px</span>;
-    <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">9</span><span style="color:#66d9ef">px</span>;
-    <span style="color:#66d9ef">height</span>: <span style="color:#ae81ff">25</span><span style="color:#66d9ef">px</span>;
-    <span style="color:#66d9ef">line-height</span>: <span style="color:#ae81ff">25</span><span style="color:#66d9ef">px</span>;
-    <span style="color:#66d9ef">vertical-align</span>: <span style="color:#66d9ef">middle</span>;
-    <span style="color:#66d9ef">font-size</span>: <span style="color:#ae81ff">0.8</span><span style="color:#66d9ef">em</span>;
-    <span style="color:#66d9ef">background</span>: <span style="color:#ae81ff">#a9a9a9</span>;
-    <span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#ffffff</span>;
-    <span style="color:#66d9ef">font-weight</span>: <span style="color:#66d9ef">bold</span>;
-    <span style="color:#66d9ef">border-radius</span>: <span style="color:#ae81ff">5</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">5</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span>;
-}
-.<span style="color:#a6e22e">memo</span> <span style="color:#f92672">p</span> {
-    <span style="color:#66d9ef">margin</span>: <span style="color:#ae81ff">0</span>;
-    <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">0</span>;
-    <span style="color:#66d9ef">font-size</span>: <span style="color:#ae81ff">0.8</span><span style="color:#66d9ef">em</span>;
-}
-
-</code></pre></div><h3 id="vscode-にスニペット登録">VSCode にスニペット登録</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;memo&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">span</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;memo-title&#34;</span>&gt;{{.Get 0}}&lt;/<span style="color:#f92672">span</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">p</span>&gt;{{.Inner}}&lt;/<span style="color:#f92672">p</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">div</span>&gt;
+</span></span></code></pre></div><h4 id="hogecss">hoge.css</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>.<span style="color:#a6e22e">memo</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">position</span>: <span style="color:#66d9ef">relative</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">margin</span>: <span style="color:#ae81ff">2</span><span style="color:#66d9ef">em</span> <span style="color:#ae81ff">2</span><span style="color:#66d9ef">em</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">0.5</span><span style="color:#66d9ef">em</span> <span style="color:#ae81ff">1</span><span style="color:#66d9ef">em</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">border</span>: <span style="color:#66d9ef">solid</span> <span style="color:#ae81ff">1</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">#a9a9a9</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">background</span>: <span style="color:#ae81ff">#f5f5f5</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">max-width</span>: <span style="color:#ae81ff">70</span><span style="color:#66d9ef">%</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">memo</span> .<span style="color:#a6e22e">memo-title</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">position</span>: <span style="color:#66d9ef">absolute</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">inline-block</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">top</span>: <span style="color:#ae81ff">-26</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">left</span>: <span style="color:#ae81ff">-1</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">9</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">height</span>: <span style="color:#ae81ff">25</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">line-height</span>: <span style="color:#ae81ff">25</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">vertical-align</span>: <span style="color:#66d9ef">middle</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">font-size</span>: <span style="color:#ae81ff">0.8</span><span style="color:#66d9ef">em</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">background</span>: <span style="color:#ae81ff">#a9a9a9</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#ffffff</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">font-weight</span>: <span style="color:#66d9ef">bold</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">border-radius</span>: <span style="color:#ae81ff">5</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">5</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">memo</span> <span style="color:#f92672">p</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">margin</span>: <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">font-size</span>: <span style="color:#ae81ff">0.8</span><span style="color:#66d9ef">em</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="vscode-にスニペット登録">VSCode にスニペット登録</h3>
 <script type="application/javascript" src="https://gist.github.com/k-kaz-git/fdf4888a89f20ee6238ea56de99e8524.js"></script>
 <h2 id="引用を挿入する-2019-03-15">引用を挿入する ［2019-03-15］</h2>
 <h3 id="完成形-1">完成形</h3>
@@ -171,27 +174,27 @@ if (!doNotTrack) {
 <h4 id="記述例-1">記述例</h4>
 <script type="application/javascript" src="https://gist.github.com/k-kaz-git/9345ab4fab29cd73b3a202cdce34792b.js"></script>
 <h4 id="blockquotehtml">blockquote.html</h4>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">blockquote</span>&gt;
-    &lt;<span style="color:#f92672">p</span>&gt;{{.Inner}}&lt;/<span style="color:#f92672">p</span>&gt;&lt;<span style="color:#f92672">br</span>&gt;
-    &lt;<span style="color:#f92672">cite</span>&gt;&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;author&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{.Get &#34;</span><span style="color:#a6e22e">link</span><span style="color:#960050;background-color:#1e0010">&#34;}}&#34;</span>&gt;{{.Get &#34;author&#34;}}&lt;/<span style="color:#f92672">a</span>&gt;&lt;/<span style="color:#f92672">cite</span>&gt;
-&lt;/<span style="color:#f92672">blockquote</span>&gt;
-</code></pre></div><h4 id="hogecss-1">hoge.css</h4>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">blockquote</span> {
-  <span style="color:#66d9ef">font-size</span>: <span style="color:#ae81ff">0.8</span><span style="color:#66d9ef">em</span>;
-  <span style="color:#66d9ef">padding-bottom</span>: <span style="color:#ae81ff">0</span>;
-}
-<span style="color:#f92672">blockquote</span> <span style="color:#f92672">a</span>.<span style="color:#a6e22e">author</span> {
-    <span style="color:#66d9ef">font-size</span>: <span style="color:#ae81ff">1</span><span style="color:#66d9ef">em</span>;
-    <span style="color:#66d9ef">line-height</span>: <span style="color:#ae81ff">3</span><span style="color:#66d9ef">em</span>;
-    <span style="color:#66d9ef">font-style</span>: <span style="color:#66d9ef">normal</span>;
-    <span style="color:#66d9ef">text-decoration</span>: <span style="color:#66d9ef">none</span>;
-    <span style="color:#66d9ef">border-bottom</span>: <span style="color:#ae81ff">1</span><span style="color:#66d9ef">px</span> <span style="color:#66d9ef">dashed</span>;
-}
-<span style="color:#f92672">blockquote</span> <span style="color:#f92672">a</span>.<span style="color:#a6e22e">author</span>:<span style="color:#a6e22e">hover</span> {
-      <span style="color:#66d9ef">font-weight</span>: <span style="color:#66d9ef">bold</span>;
-      <span style="color:#66d9ef">border-bottom</span>: <span style="color:#ae81ff">2</span><span style="color:#66d9ef">px</span> <span style="color:#66d9ef">dashed</span>;
-}
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">blockquote</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">p</span>&gt;{{.Inner}}&lt;/<span style="color:#f92672">p</span>&gt;&lt;<span style="color:#f92672">br</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">cite</span>&gt;&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;author&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{.Get &#34;</span><span style="color:#a6e22e">link</span><span style="color:#960050;background-color:#1e0010">&#34;}}&#34;</span>&gt;{{.Get &#34;author&#34;}}&lt;/<span style="color:#f92672">a</span>&gt;&lt;/<span style="color:#f92672">cite</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">blockquote</span>&gt;
+</span></span></code></pre></div><h4 id="hogecss-1">hoge.css</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#f92672">blockquote</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">font-size</span>: <span style="color:#ae81ff">0.8</span><span style="color:#66d9ef">em</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">padding-bottom</span>: <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#f92672">blockquote</span> <span style="color:#f92672">a</span>.<span style="color:#a6e22e">author</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">font-size</span>: <span style="color:#ae81ff">1</span><span style="color:#66d9ef">em</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">line-height</span>: <span style="color:#ae81ff">3</span><span style="color:#66d9ef">em</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">font-style</span>: <span style="color:#66d9ef">normal</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">text-decoration</span>: <span style="color:#66d9ef">none</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">border-bottom</span>: <span style="color:#ae81ff">1</span><span style="color:#66d9ef">px</span> <span style="color:#66d9ef">dashed</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#f92672">blockquote</span> <span style="color:#f92672">a</span>.<span style="color:#a6e22e">author</span>:<span style="color:#a6e22e">hover</span> {
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">font-weight</span>: <span style="color:#66d9ef">bold</span>;
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">border-bottom</span>: <span style="color:#ae81ff">2</span><span style="color:#66d9ef">px</span> <span style="color:#66d9ef">dashed</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div>
       </article>
       <hr>
       <p class="post-date">
@@ -231,20 +234,21 @@ if (!doNotTrack) {
 </a>
       
       <a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
-  href="https://k-kaz-git.github.io/" class="card home-card" style="background-image: url( https://k-kaz-git.github.io/images/home_640.webp )" rel="bookmark" >
+  href="https://k-kaz-git.github.io/" class="card home-card" style="background-image: url( https://k-kaz-git.github.io/img/grey-cloud.jpg )" rel="bookmark" >
   Home
 </a>
     </nav>
     <footer>
     <p style="text-align: center">姉妹サイト<br><a class="btn-link" href="https://k-kaz.net/" target="_blank">k-kaz ブログ</a></p>
 </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"
-    onload="renderMathInElement(document.body);"></script>
-<script src="https://k-kaz-git.github.io/js/core.js"></script>
-<script>
-  hljs.initHighlightingOnLoad();
-</script>
+    
+  <script defer src="https://k-kaz-git.github.io/js/katex.js"></script>
+
+
+  <script defer src="https://k-kaz-git.github.io/js/auto-render.js" onload="renderMathInElement(document.body);"></script>
+
+
+<script src="https://k-kaz-git.github.io/js/core.min.js"></script>
+
   </body>
 </html>

@@ -4,18 +4,22 @@
   <meta charset="utf-8" />
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Hugo で Sass を使ってみる &middot; k-kaz</title>
+  <title>Hugo で Sass を使ってみる &middot; </title>
   <meta name="description" content="Hugo で Sass を利用するのに少し設定が必要ですので、こちらにまとめます。" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="manifest" href="/site.webmanifest">
   <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://k-kaz-git.github.io/css/main.min.css" />
+  <link href="https://k-kaz-git.github.io/css/katex.css" rel="stylesheet">
   
-  <link rel="stylesheet" href="https://k-kaz-git.github.io/sass/main.min.47ca362481462191544ac57b2ec98c2b4be0630230c3d2edd85073dad5b96a26.css">
+  
+  
+  
+  <link href="https://k-kaz-git.github.io/css/concated.min.css" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="https://k-kaz-git.github.io/sass/main.fcdea0c4becd73f2e3b2312b85bcd7ba626d441c1cde1e1b8046a6afcc4e22b8.css">
 
   
 <script type="application/javascript">
@@ -105,9 +109,9 @@ if (!doNotTrack) {
 昨年、Hugo も Sass に対応したようですが、標準のモジュールでは使えず、extended版 が必要になります。</p>
 <h3 id="hugo-のバージョンを確認する">Hugo のバージョンを確認する。</h3>
 <p><code>hugo version</code> で現在のバージョンが確認できます。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">hugo version
-Hugo Static Site Generator v0.54.0/extended hogehoge...
-</code></pre></div><p><code>extended</code> の文字があった方はおめでとうございます。
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>hugo version
+</span></span><span style="display:flex;"><span>Hugo Static Site Generator v0.54.0/extended hogehoge...
+</span></span></code></pre></div><p><code>extended</code> の文字があった方はおめでとうございます。
 無かった方はダウロードを行ってください。</p>
 <h3 id="hugo-の-extended版-をダウンロードする必要あれば">Hugo の extended版 をダウンロードする。（必要あれば）</h3>
 <p>extended版 では無かった方。<br>
@@ -126,10 +130,10 @@ Hugo Static Site Generator v0.54.0/extended hogehoge...
 <p>テーマによってファイルが異なると思いますが、ここでは aether の場合で書いていきます。</p>
 <p><code>サイト名\layouts\partials\head.html</code> を開きます。<br>
 ファイルが無い方は、テーマの中 <code>テーマ名\themes\aether\layouts\partials\head.html</code> から、コピーして持ってきてください。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ &#34;</span><span style="color:#a6e22e">css</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#a6e22e">main</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#a6e22e">min</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#a6e22e">css</span><span style="color:#960050;background-color:#1e0010">&#34;</span> <span style="color:#960050;background-color:#1e0010">|</span> <span style="color:#a6e22e">absURL</span><span style="color:#960050;background-color:#1e0010">}}&#34;</span> /&gt;
-{{ $style := resources.Get &#34;sass/main.scss&#34; | toCSS | minify | fingerprint }}
-&lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ $style.Permalink }}&#34;</span>&gt;
-</code></pre></div><p>1行目が元々入っている全体のスタイルシートの読み込み部分です。<br>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ &#34;</span><span style="color:#a6e22e">css</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#a6e22e">main</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#a6e22e">min</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#a6e22e">css</span><span style="color:#960050;background-color:#1e0010">&#34;</span> <span style="color:#960050;background-color:#1e0010">|</span> <span style="color:#a6e22e">absURL</span><span style="color:#960050;background-color:#1e0010">}}&#34;</span> /&gt;
+</span></span><span style="display:flex;"><span>{{ $style := resources.Get &#34;sass/main.scss&#34; | toCSS | minify | fingerprint }}
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ $style.Permalink }}&#34;</span>&gt;
+</span></span></code></pre></div><p>1行目が元々入っている全体のスタイルシートの読み込み部分です。<br>
 今回は2行目と3行目を追加します。</p>
 <p>2行目<br>
 先程用意した <code>main.scss</code> を読み込み、パイプ <code>|</code> を使って、CSS 形式に変更したり、圧縮したりしています。<br>
@@ -152,8 +156,8 @@ Hugo Static Site Generator v0.54.0/extended hogehoge...
 <p>と書かれています。</p>
 <h3 id="何か問題でも">何か問題でも？</h3>
 <p>該当する箇所の確認をすると、背景色の指定をしているところでした。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">background</span><span style="color:#f92672">:</span> <span style="color:#f92672">rgb</span><span style="color:#f92672">(</span><span style="color:#f92672">230</span><span style="color:#f92672">,</span> <span style="color:#f92672">90</span><span style="color:#f92672">,</span> <span style="color:#f92672">90</span><span style="color:#f92672">,</span> <span style="color:#f92672">0</span>.<span style="color:#a6e22e">2</span><span style="color:#f92672">);</span>
-</code></pre></div><p><strong>何か問題でも？</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#f92672">background</span><span style="color:#f92672">:</span> <span style="color:#f92672">rgb</span><span style="color:#f92672">(</span><span style="color:#f92672">230</span><span style="color:#f92672">,</span> <span style="color:#f92672">90</span><span style="color:#f92672">,</span> <span style="color:#f92672">90</span><span style="color:#f92672">,</span> <span style="color:#f92672">0</span>.<span style="color:#a6e22e">2</span><span style="color:#f92672">);</span>
+</span></span></code></pre></div><p><strong>何か問題でも？</strong></p>
 <p>しばらく気付かなかったんですけど、落ち着いて見たらようやく答えが分かりました。<br>
 というか、そもそもこの透過処理のことを私がよく分かっていなかったのが問題です。</p>
 <h3 id="その前に色の指定について">その前に、色の指定について</h3>
@@ -172,8 +176,8 @@ Hugo Static Site Generator v0.54.0/extended hogehoge...
 <p>私もそこまでは知っていたんですけど、<code>alpha</code> が入るときに <code>rgb</code> が <code>rgba</code> になることを知らなかったんですね。</p>
 <p>ということで、私の知識不足により、元々の <code>.css</code> からおかしかったというオチでした。</p>
 <p>下記のように書き直したところ、きちんとスタイルシートの変換がされ、サーバーが起動しました。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">background</span><span style="color:#f92672">:</span> <span style="color:#f92672">rgba</span><span style="color:#f92672">(</span><span style="color:#f92672">230</span><span style="color:#f92672">,</span> <span style="color:#f92672">90</span><span style="color:#f92672">,</span> <span style="color:#f92672">90</span><span style="color:#f92672">,</span> <span style="color:#f92672">0</span>.<span style="color:#a6e22e">2</span><span style="color:#f92672">);</span>
-</code></pre></div><h2 id="同じ-sass-だけど-sass-か-scss-か">同じ Sass だけど .sass か .scss か</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#f92672">background</span><span style="color:#f92672">:</span> <span style="color:#f92672">rgba</span><span style="color:#f92672">(</span><span style="color:#f92672">230</span><span style="color:#f92672">,</span> <span style="color:#f92672">90</span><span style="color:#f92672">,</span> <span style="color:#f92672">90</span><span style="color:#f92672">,</span> <span style="color:#f92672">0</span>.<span style="color:#a6e22e">2</span><span style="color:#f92672">);</span>
+</span></span></code></pre></div><h2 id="同じ-sass-だけど-sass-か-scss-か">同じ Sass だけど .sass か .scss か</h2>
 <p>Sass と言っても、記述方式が2通りあり、好きなほうを使えます。<br>
 <code>.sass</code> は、<code>{}</code> や <code>;</code> が不要なので、すっきり、そして少ない文字数でコーディングが可能。<br>
 <code>.css</code> から拡張されている、いくつかの機能はどちらも同様に使えます。</p>
@@ -223,20 +227,21 @@ Hugo Static Site Generator v0.54.0/extended hogehoge...
 </a>
       
       <a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
-  href="https://k-kaz-git.github.io/" class="card home-card" style="background-image: url( https://k-kaz-git.github.io/images/home_640.webp )" rel="bookmark" >
+  href="https://k-kaz-git.github.io/" class="card home-card" style="background-image: url( https://k-kaz-git.github.io/img/grey-cloud.jpg )" rel="bookmark" >
   Home
 </a>
     </nav>
     <footer>
     <p style="text-align: center">姉妹サイト<br><a class="btn-link" href="https://k-kaz.net/" target="_blank">k-kaz ブログ</a></p>
 </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"
-    onload="renderMathInElement(document.body);"></script>
-<script src="https://k-kaz-git.github.io/js/core.js"></script>
-<script>
-  hljs.initHighlightingOnLoad();
-</script>
+    
+  <script defer src="https://k-kaz-git.github.io/js/katex.js"></script>
+
+
+  <script defer src="https://k-kaz-git.github.io/js/auto-render.js" onload="renderMathInElement(document.body);"></script>
+
+
+<script src="https://k-kaz-git.github.io/js/core.min.js"></script>
+
   </body>
 </html>

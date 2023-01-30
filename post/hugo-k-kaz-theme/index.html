@@ -4,18 +4,22 @@
   <meta charset="utf-8" />
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Hugo のテーマを作ったよ。 &middot; k-kaz</title>
+  <title>Hugo のテーマを作ったよ。 &middot; </title>
   <meta name="description" content="Hugo のテーマを自作してみました。途中で放り投げたけど（笑）" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="manifest" href="/site.webmanifest">
   <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://k-kaz-git.github.io/css/main.min.css" />
+  <link href="https://k-kaz-git.github.io/css/katex.css" rel="stylesheet">
   
-  <link rel="stylesheet" href="https://k-kaz-git.github.io/sass/main.min.47ca362481462191544ac57b2ec98c2b4be0630230c3d2edd85073dad5b96a26.css">
+  
+  
+  
+  <link href="https://k-kaz-git.github.io/css/concated.min.css" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="https://k-kaz-git.github.io/sass/main.fcdea0c4becd73f2e3b2312b85bcd7ba626d441c1cde1e1b8046a6afcc4e22b8.css">
 
   
 <script type="application/javascript">
@@ -120,52 +124,52 @@ if (!doNotTrack) {
 <p>テーマ作りは途中でやめましたが、やり方をこちらに残しておきましょう。<br>
 またいつか暇な時に続きをしたくなるかもしれないし。</p>
 <h3 id="ローカルサイトと空テーマの準備">ローカルサイトと空テーマの準備</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">$</span> <span style="color:#f92672">hugo</span> <span style="color:#f92672">new</span> <span style="color:#f92672">site</span> <span style="color:#f92672">hoge</span>            <span style="color:#75715e">/* サイト hoge 作成 */</span>
-<span style="color:#f92672">$</span> <span style="color:#f92672">cd</span> <span style="color:#f92672">hoge</span>
-<span style="color:#f92672">$</span> <span style="color:#f92672">hugo</span> <span style="color:#f92672">new</span> <span style="color:#f92672">theme</span> <span style="color:#f92672">hoge-theme</span>     <span style="color:#75715e">/* 空テーマ hoge-theme 作成 */</span>
-</code></pre></div><h3 id="テーマ内で最低限必要なもの">テーマ内で最低限必要なもの</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#f92672">$</span> <span style="color:#f92672">hugo</span> <span style="color:#f92672">new</span> <span style="color:#f92672">site</span> <span style="color:#f92672">hoge</span>            <span style="color:#75715e">/* サイト hoge 作成 */</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">$</span> <span style="color:#f92672">cd</span> <span style="color:#f92672">hoge</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">$</span> <span style="color:#f92672">hugo</span> <span style="color:#f92672">new</span> <span style="color:#f92672">theme</span> <span style="color:#f92672">hoge-theme</span>     <span style="color:#75715e">/* 空テーマ hoge-theme 作成 */</span>
+</span></span></code></pre></div><h3 id="テーマ内で最低限必要なもの">テーマ内で最低限必要なもの</h3>
 <p>最低限って書くと、ヘッダーもフッターも要らないけど・・・一応書いておく（笑）<br>
 <code>line-hight</code> の関係で、線がブツブツ切れていますが、許してください。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">hoge-theme  
-│  theme.toml  
-├──layouts  
-│   │  
-│   ├──partials  
-│   │      footer.html  <span style="color:#75715e">&lt;!-- フッター（ページ最下層）のパーツ --&gt;</span>
-│   │      head.html  <span style="color:#75715e">&lt;!--ヘッダー（ページ最上層）のパーツ --&gt;</span>
-│   │  
-│   └──_default  
-│           baseof.html  <span style="color:#75715e">&lt;!-- ページの元で各種パーツを読み込む --&gt;</span>
-│           list.html  <span style="color:#75715e">&lt;!-- 記事一覧出力 --&gt;</span>
-│           single.html  <span style="color:#75715e">&lt;!-- 投稿記事出力 --&gt;</span>
-</code></pre></div><h3 id="簡単に構成を書く">簡単に構成を書く</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>hoge-theme  
+</span></span><span style="display:flex;"><span>│  theme.toml  
+</span></span><span style="display:flex;"><span>├──layouts  
+</span></span><span style="display:flex;"><span>│   │  
+</span></span><span style="display:flex;"><span>│   ├──partials  
+</span></span><span style="display:flex;"><span>│   │      footer.html  <span style="color:#75715e">&lt;!-- フッター（ページ最下層）のパーツ --&gt;</span>
+</span></span><span style="display:flex;"><span>│   │      head.html  <span style="color:#75715e">&lt;!--ヘッダー（ページ最上層）のパーツ --&gt;</span>
+</span></span><span style="display:flex;"><span>│   │  
+</span></span><span style="display:flex;"><span>│   └──_default  
+</span></span><span style="display:flex;"><span>│           baseof.html  <span style="color:#75715e">&lt;!-- ページの元で各種パーツを読み込む --&gt;</span>
+</span></span><span style="display:flex;"><span>│           list.html  <span style="color:#75715e">&lt;!-- 記事一覧出力 --&gt;</span>
+</span></span><span style="display:flex;"><span>│           single.html  <span style="color:#75715e">&lt;!-- 投稿記事出力 --&gt;</span>
+</span></span></code></pre></div><h3 id="簡単に構成を書く">簡単に構成を書く</h3>
 <p><code>baseof.html</code> が、すべての <code>html</code> の親玉で、その中身はこんな感じになっています。</p>
 <p>頭 <code>head.html</code><br>
 体 <code>list.html</code> or <code>single.html</code><br>
 足 <code>footer.html</code></p>
 <p>バラバラで作ってあるパーツを、必要なときに、必要な場所で読み込むことで、1枚のページを作り上げています。</p>
 <p><code>baseof.html</code> の例</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
-&lt;<span style="color:#f92672">html</span>&gt;
-
-&lt;<span style="color:#f92672">head</span>&gt;
-  &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;utf-8&#34;</span>&gt;
-  {{ block &#34;head&#34; . }}
-  {{ end }}
-  &lt;<span style="color:#f92672">title</span>&gt;{{ block &#34;title&#34; . }}
-    {{ .Site.Title }}
-    {{ end }}&lt;/<span style="color:#f92672">title</span>&gt;
-&lt;/<span style="color:#f92672">head</span>&gt;
-
-&lt;<span style="color:#f92672">body</span>&gt;
-  {{ block &#34;main&#34; . }}
-  {{ end }}
-  {{ block &#34;footer&#34; . }}
-  {{ end }}
-&lt;/<span style="color:#f92672">body</span>&gt;
-
-&lt;/<span style="color:#f92672">html</span>&gt;
-</code></pre></div><p>各パーツに機能を持たせて、それを呼び出しているため、非常にシンプルな構成となります。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">html</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">head</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;utf-8&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  {{ block &#34;head&#34; . }}
+</span></span><span style="display:flex;"><span>  {{ end }}
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">title</span>&gt;{{ block &#34;title&#34; . }}
+</span></span><span style="display:flex;"><span>    {{ .Site.Title }}
+</span></span><span style="display:flex;"><span>    {{ end }}&lt;/<span style="color:#f92672">title</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">head</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">body</span>&gt;
+</span></span><span style="display:flex;"><span>  {{ block &#34;main&#34; . }}
+</span></span><span style="display:flex;"><span>  {{ end }}
+</span></span><span style="display:flex;"><span>  {{ block &#34;footer&#34; . }}
+</span></span><span style="display:flex;"><span>  {{ end }}
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">body</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">html</span>&gt;
+</span></span></code></pre></div><p>各パーツに機能を持たせて、それを呼び出しているため、非常にシンプルな構成となります。</p>
 <p>各パーツに書いておくコマンド → <code>{{ define &quot;hoge&quot; }}...{{ end }}</code></p>
 <p>呼び出し用コマンド → <code>{{ block &quot;hoge&quot; . }}{{ end }}</code></p>
 <p>呼び出されると、各パーツに書かれている <code>...</code> の部分がすべて展開される形。<br>
@@ -190,10 +194,10 @@ if (!doNotTrack) {
 <p>新たにテーマを作り直しながら、気付いたことを書いておきます。</p>
 <h4 id="netlify-で-baseofhtml-を使う場合は注意">netlify で baseof.html を使う場合は注意</h4>
 <p>こうやって、<code>{{ define &quot;header&quot; }}</code> を入れた <code>header.html</code> を読み込んだんですけど、</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">head</span>&gt;
-    {{ block &#34;header&#34; . }}{{ end }}
-&lt;/<span style="color:#f92672">head</span>&gt;
-</code></pre></div><p>ローカルサーバーではうまく表示されるのに、<strong>netlify だとうまく表示されない。</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">head</span>&gt;
+</span></span><span style="display:flex;"><span>    {{ block &#34;header&#34; . }}{{ end }}
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">head</span>&gt;
+</span></span></code></pre></div><p>ローカルサーバーではうまく表示されるのに、<strong>netlify だとうまく表示されない。</strong></p>
 <p>具体的には、ファイルを読み込めずに <code>&lt;head&gt;</code> の中身が空になります。
 正確に書くと、netlify で生成した際の Hugo バージョンがメタ情報として載るだけ。</p>
 <p>ということで、<code>header.html</code> の読み込みは諦め、中身をそのまま <code>baseof.html</code> に直書きして対処しました。美しくないけど。</p>
@@ -203,25 +207,25 @@ if (!doNotTrack) {
 それ以下については、基準に対して <code>rem</code> で指定することで調整すると。</p>
 <p>その中で、一番、理想的なのがこれかなと思いました。
 横幅全体を 32 で割ったサイズ。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">font-size</span><span style="color:#f92672">:</span> <span style="color:#f92672">calc</span><span style="color:#f92672">(</span><span style="color:#f92672">100vw</span> <span style="color:#f92672">/</span> <span style="color:#f92672">32</span><span style="color:#f92672">);</span>
-</code></pre></div><p>試したところ、モバイル系は良かったんですが、PC の大画面で見ると、フォントが大きくなり過ぎて困る。
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#f92672">font-size</span><span style="color:#f92672">:</span> <span style="color:#f92672">calc</span><span style="color:#f92672">(</span><span style="color:#f92672">100vw</span> <span style="color:#f92672">/</span> <span style="color:#f92672">32</span><span style="color:#f92672">);</span>
+</span></span></code></pre></div><p>試したところ、モバイル系は良かったんですが、PC の大画面で見ると、フォントが大きくなり過ぎて困る。
 rem で調整するのも当時（昨日だけど）は面倒でした。</p>
 <p>その後、cupper でも使われていた下記にしました。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">font-size</span><span style="color:#f92672">:</span> <span style="color:#f92672">calc</span><span style="color:#f92672">(</span><span style="color:#f92672">1em</span> <span style="color:#f92672">+</span> <span style="color:#f92672">0</span>.<span style="color:#a6e22e">33vw</span><span style="color:#f92672">);</span>
-</code></pre></div><p>基本となるサイズ（1em = 16px だっけ？）に対し、画面の大きさにあわせてプラスをしていく方法。
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#f92672">font-size</span><span style="color:#f92672">:</span> <span style="color:#f92672">calc</span><span style="color:#f92672">(</span><span style="color:#f92672">1em</span> <span style="color:#f92672">+</span> <span style="color:#f92672">0</span>.<span style="color:#a6e22e">33vw</span><span style="color:#f92672">);</span>
+</span></span></code></pre></div><p>基本となるサイズ（1em = 16px だっけ？）に対し、画面の大きさにあわせてプラスをしていく方法。
 こちらのほうが、個人的には微調整がしやすかったです。（<strong>昨日苦労したのが役に立っただけ疑惑あり</strong> ）</p>
 <p>px で直接指定するのが一番楽っていえば楽なんですけど、<strong>レスポンシブデザイン</strong> の呪いが。</p>
 <h4 id="スタイルシートの書き方">スタイルシートの書き方</h4>
 <p>PC用のスタイルを定義して、その後にモバイルの定義かと思っていましたが、逆でありました。
 先にモバイルです。今はモバイル優先で何事も考えたほうが良さそうです。</p>
 <p>モバイルのところは普通にスタイルシートを書いて、一通り終わったら PC の番です。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#75715e">/* 画面サイズ 481px 以上はこの中で設定 */</span>
-@<span style="color:#66d9ef">media</span> <span style="color:#f92672">only</span> <span style="color:#f92672">screen</span> <span style="color:#f92672">and</span> <span style="color:#f92672">(</span><span style="color:#f92672">min-width</span><span style="color:#f92672">:</span> <span style="color:#f92672">481px</span><span style="color:#f92672">)</span> {
-  <span style="color:#f92672">body</span> {}
-  <span style="color:#f92672">h1</span> {}
-  <span style="color:#f92672">h2</span> {}
-}
-</code></pre></div><p>面倒なので中身は空にしましたけど、モバイルの指定と変えたい部分（特にフォントサイズ）だけをここで定義していきます。
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#75715e">/* 画面サイズ 481px 以上はこの中で設定 */</span>
+</span></span><span style="display:flex;"><span>@<span style="color:#66d9ef">media</span> <span style="color:#f92672">only</span> <span style="color:#f92672">screen</span> <span style="color:#f92672">and</span> <span style="color:#f92672">(</span><span style="color:#f92672">min-width</span><span style="color:#f92672">:</span> <span style="color:#f92672">481px</span><span style="color:#f92672">)</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">body</span> {}
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">h1</span> {}
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">h2</span> {}
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>面倒なので中身は空にしましたけど、モバイルの指定と変えたい部分（特にフォントサイズ）だけをここで定義していきます。
 同じようなことをスタイルシートの上部と下部で書いていきます。だらだらと長くなります（笑）</p>
 <p>あと、同じ定義をした場合は下のほうが優先されるようです。<br>
 なんで反映されないのかと思ったことが何度もありました（恥）</p>
@@ -265,20 +269,21 @@ rem で調整するのも当時（昨日だけど）は面倒でした。</p>
 </a>
       
       <a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
-  href="https://k-kaz-git.github.io/" class="card home-card" style="background-image: url( https://k-kaz-git.github.io/images/home_640.webp )" rel="bookmark" >
+  href="https://k-kaz-git.github.io/" class="card home-card" style="background-image: url( https://k-kaz-git.github.io/img/grey-cloud.jpg )" rel="bookmark" >
   Home
 </a>
     </nav>
     <footer>
     <p style="text-align: center">姉妹サイト<br><a class="btn-link" href="https://k-kaz.net/" target="_blank">k-kaz ブログ</a></p>
 </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"
-    onload="renderMathInElement(document.body);"></script>
-<script src="https://k-kaz-git.github.io/js/core.js"></script>
-<script>
-  hljs.initHighlightingOnLoad();
-</script>
+    
+  <script defer src="https://k-kaz-git.github.io/js/katex.js"></script>
+
+
+  <script defer src="https://k-kaz-git.github.io/js/auto-render.js" onload="renderMathInElement(document.body);"></script>
+
+
+<script src="https://k-kaz-git.github.io/js/core.min.js"></script>
+
   </body>
 </html>
