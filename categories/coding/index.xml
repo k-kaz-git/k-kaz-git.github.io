@@ -1,15 +1,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>coding - </title>
+    <title>coding - k-kaz が Hugo で遊ぶサイト</title>
     <link>https://k-kaz-git.github.io/categories/coding/</link>
-    <description>Recent content in coding on </description>
+    <description>Recent content in coding on k-kaz が Hugo で遊ぶサイト</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Wed, 21 Oct 2020 12:45:27 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 07 Feb 2023 12:49:20 +0900</lastBuildDate>
     
         <atom:link href="https://k-kaz-git.github.io/categories/coding/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Hugoにコメント機能を付ける</title>
+      <link>https://k-kaz-git.github.io/post/hugo-comment/</link>
+      <pubDate>Tue, 07 Feb 2023 12:49:20 +0900</pubDate>
+      
+      <guid>https://k-kaz-git.github.io/post/hugo-comment/</guid>
+      <description></description>
+    </item><item>
       <title>コンテンツ（画像とか）を同一フォルダにする場合</title>
       <link>https://k-kaz-git.github.io/post/hugo-contents/</link>
       <pubDate>Wed, 21 Oct 2020 12:45:27 +0900</pubDate>

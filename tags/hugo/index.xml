@@ -1,15 +1,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>hugo - </title>
+    <title>hugo - k-kaz が Hugo で遊ぶサイト</title>
     <link>https://k-kaz-git.github.io/tags/hugo/</link>
-    <description>Recent content in hugo on </description>
+    <description>Recent content in hugo on k-kaz が Hugo で遊ぶサイト</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Wed, 11 Nov 2020 09:12:59 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 07 Feb 2023 12:49:20 +0900</lastBuildDate>
     
         <atom:link href="https://k-kaz-git.github.io/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Hugoにコメント機能を付ける</title>
+      <link>https://k-kaz-git.github.io/post/hugo-comment/</link>
+      <pubDate>Tue, 07 Feb 2023 12:49:20 +0900</pubDate>
+      
+      <guid>https://k-kaz-git.github.io/post/hugo-comment/</guid>
+      <description></description>
+    </item><item>
       <title>Hugo Section</title>
       <link>https://k-kaz-git.github.io/post/hugo-section/</link>
       <pubDate>Wed, 11 Nov 2020 09:12:59 +0900</pubDate>
@@ -72,13 +79,6 @@
       
       <guid>https://k-kaz-git.github.io/post/hugo-k-kaz-theme/</guid>
       <description>Hugo のテーマを自作してみました。途中で放り投げたけど（笑）</description>
-    </item><item>
-      <title>自作の Hugo用 Shortcodes</title>
-      <link>https://k-kaz-git.github.io/post/hugo-shortcodes-make/</link>
-      <pubDate>Thu, 14 Mar 2019 12:42:21 +0900</pubDate>
-      
-      <guid>https://k-kaz-git.github.io/post/hugo-shortcodes-make/</guid>
-      <description>自作の Shortcodes をテストしたり、思い出すための場所</description>
     </item>
   </channel>
 </rss>

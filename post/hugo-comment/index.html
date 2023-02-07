@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Hugoにコメント機能を付ける &middot; k-kaz が Hugo で遊ぶサイト</title>
+  <meta name="description" content="" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <link href="https://k-kaz-git.github.io/css/katex.css" rel="stylesheet">
+  
+  
+  
+  
+  <link href="https://k-kaz-git.github.io/css/concated.min.css" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="https://k-kaz-git.github.io/sass/main.fcdea0c4becd73f2e3b2312b85bcd7ba626d441c1cde1e1b8046a6afcc4e22b8.css">
+
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-134722453-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+  
+</head>
+  <body class="single-body">
+    <nav class="nav-bar side-padding">
+  <h1 class="nav-header"><a href="https://k-kaz-git.github.io/" class="nav-text">ようこそ</a></h1>
+  <div class="hamburger-menu">
+    <button onclick="hamburgerMenuPressed.call(this)" aria-haspopup="true" aria-expanded="false" aria-controls="menu" aria-label="Menu">
+      <span></span>
+      <span></span>
+    </button>
+    <ul id="menu" class="hamburger-menu-overlay">
+      <li><a href="https://k-kaz-git.github.io/" class="hamburger-menu-overlay-link">Home</a></li>
+      <li class="navi-menu">- Categories -</li>
+      <li style="font-size: 0.7em;"><a href="https://k-kaz-git.github.io/categories/coding" class="hamburger-menu-overlay-link">Coding</a></li><li style="font-size: 0.7em;"><a href="https://k-kaz-git.github.io/categories/homepage" class="hamburger-menu-overlay-link">Homepage</a></li><li style="font-size: 0.7em;"><a href="https://k-kaz-git.github.io/categories/linux" class="hamburger-menu-overlay-link">Linux</a></li>
+      <li class="navi-menu">- Tags -</li>
+      <li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/aether" class="hamburger-menu-overlay-link">Aether</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/categories" class="hamburger-menu-overlay-link">Categories</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/css" class="hamburger-menu-overlay-link">Css</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/cupper" class="hamburger-menu-overlay-link">Cupper</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/favicon" class="hamburger-menu-overlay-link">Favicon</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/github" class="hamburger-menu-overlay-link">Github</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/github-pages" class="hamburger-menu-overlay-link">Github pages</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/hugo" class="hamburger-menu-overlay-link">Hugo</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/markdown" class="hamburger-menu-overlay-link">Markdown</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/mozc" class="hamburger-menu-overlay-link">Mozc</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/netlify" class="hamburger-menu-overlay-link">Netlify</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/pagermod" class="hamburger-menu-overlay-link">Pagermod</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/saas" class="hamburger-menu-overlay-link">Saas</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/sass" class="hamburger-menu-overlay-link">Sass</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/shortcodes" class="hamburger-menu-overlay-link">Shortcodes</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/snippet" class="hamburger-menu-overlay-link">Snippet</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/stylesheet" class="hamburger-menu-overlay-link">Stylesheet</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/svg" class="hamburger-menu-overlay-link">Svg</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/tableofcontents" class="hamburger-menu-overlay-link">Tableofcontents</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/tags" class="hamburger-menu-overlay-link">Tags</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/theme" class="hamburger-menu-overlay-link">Theme</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/vscode" class="hamburger-menu-overlay-link">Vscode</a></li>
+    </ul>
+  </div>
+</nav>
+    <main class="content side-text-padding">
+      <article class="post ">
+        <header class="post-header">
+        	<h1 class="post-title">Hugoにコメント機能を付ける</h1>
+          <p class="post-date">
+            Posted <time datetime="2023-02-07">2023-02-07</time>
+             / Update 2023-02-07</p>
+             <div class="card-subtext muted-text li-line">
+               <a class="cat" href="/categories/homepage">homepage</a> <a class="cat" href="/categories/coding">coding</a>
+               <a class="tag" href="/tags/hugo">#hugo</a>  <a class="tag" href="/tags/theme">#theme</a> 
+             </div>
+        </header>
+        
+        <picture class="post-figure">
+            <source srcset="https://k-kaz-git.github.io/images/hugo-comment.webp" type="image/webp">
+            <source srcset="https://k-kaz-git.github.io/images/hugo-comment.webp">
+          <img src="https://k-kaz-git.github.io/images/hugo-comment.webp" alt="">
+        </picture>
+        
+        <aside>
+          <h2>目次</h2>
+            <nav id="TableOfContents">
+  <ul>
+    <li><a href="#hugoのコメント機能">Hugoのコメント機能</a></li>
+    <li><a href="#disqus">Disqus</a>
+      <ul>
+        <li><a href="#利用方法">利用方法</a></li>
+        <li><a href="#気になったこと">気になったこと</a></li>
+      </ul>
+    </li>
+    <li><a href="#utterances">utterances</a>
+      <ul>
+        <li><a href="#githubアカウントの取得">GitHubアカウントの取得</a></li>
+        <li><a href="#コメント格納用リポジトリを作成">コメント格納用リポジトリを作成</a></li>
+        <li><a href="#utterancesのインストール">utterancesのインストール</a></li>
+        <li><a href="#組み込み用コードの作成">組み込み用コードの作成</a></li>
+        <li><a href="#hugoへ組み込み">Hugoへ組み込み</a></li>
+        <li><a href="#コメント欄の表示非表示">コメント欄の表示、非表示</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+        </aside>
+        <h2 id="hugoのコメント機能">Hugoのコメント機能</h2>
+<p>Hugoって静的サイトジェネレーターなので、動的なコメント機能って付いていないんですよね。</p>
+<p>では、どうするかと言いますと、外部サービスを利用します。<br>
+テーマによるかもしれませんが、私がこれまで触ったことのあるテーマは、すべてDisqusに対応していまして、ConfigファイルにDisqusのショートネームをセットすれば完了みたいな感じでした。</p>
+<h2 id="disqus">Disqus</h2>
+<h3 id="利用方法">利用方法</h3>
+<p>今回、Disqusを使わなかったので詳細は不明ですが、たぶんこんな感じかと。</p>
+<ul>
+<li>Disqusでアカウントを作成する</li>
+<li>Configファイルに、ショートネームを記載する</li>
+</ul>
+<p>以上。</p>
+<p>なんて簡単なんでしょう。<br>
+アカウントは設置する人だけ取得すれば良いみたいで、コメントを投稿する方たちは必要ないみたい。</p>
+<h3 id="気になったこと">気になったこと</h3>
+<p>無料アカウントの制限が若干気になりました。<br>
+広告が表示されるらしいのと、表示回数の上限があるということ。</p>
+<p>たっぷり使う方は、有料版の契約をおすすめします。</p>
+<h2 id="utterances">utterances</h2>
+<p>utterancesは、GitHub内で動作するアプリ（GitHub App）です。<br>
+無料で広告が無いのと、テーマがシンプルだったのが決め手となり、こちらを採用しました。</p>
+<p>仕組みとしては、GitHubにコメント格納用のスペース（リポジトリ）を用意して、utterances経由で書き込んだり、読み込んで表示させる形です。</p>
+<p>以下、利用方法を記載します。</p>
+<h3 id="githubアカウントの取得">GitHubアカウントの取得</h3>
+<p>GitHubアカウントが無いと何もできませんので、まず取得します。<br>
+とはいえ、Hugoを使っている方でしたら、大体持っていらっしゃるかと思われます。</p>
+<p>アカウントはこちらで作成できます。<br>
+<a href="https://github.co.jp/" target="_blank">GitHub Japan | GitHub</a>
+</p>
+<h3 id="コメント格納用リポジトリを作成">コメント格納用リポジトリを作成</h3>
+<p>右上の「＋」から、「New repository」を選択します。</p>
+<p><img src="/images/hugo-comment-01.webp" alt="リポジトリ">
+<img src="/images/hugo-comment-02.webp" alt="リポジトリ2"></p>
+<p>名前は適当（ここでは comment ）で良いです。<br>
+あとPublicにしておいてください。</p>
+<h4 id="ラベル作成は任意">ラベル作成は任意</h4>
+<p>続いて、作成したリポジトリを開き、「issues」から、「Labels」を選択します。</p>
+<p><img src="/images/hugo-comment-03.webp" alt="リポジトリ3"></p>
+<p>適当な名前のラベル（commentとか）を作ります。</p>
+<h3 id="utterancesのインストール">utterancesのインストール</h3>
+<p><a href="https://utteranc.es/" target="_blank">utterances</a>
+に移動します。</p>
+<p>「configuration」というところからやっていきます。<br>
+1のリポジトリ作成は完了しているので、2から行います。</p>
+<p><a href="https://github.com/apps/utterances" target="_blank">utteranc app</a>
+ をクリックしてインストールします。<br>
+インストール先は先程作成したリポジトリです。</p>
+<h3 id="組み込み用コードの作成">組み込み用コードの作成</h3>
+<p>続いて3です。</p>
+<h4 id="リポジトリ名設定">リポジトリ名設定</h4>
+<p>repo: と書かれているところに「オーナー名／リポジトリ名」を入れます。</p>
+<h4 id="blog-post--issue-mapping">Blog Post ↔️ Issue Mapping</h4>
+<p>記事とIssueの接続設定をします。<br>
+お好きなもので結構ですが、私は「Issue title contains page title」にしています。<br>
+ページタイトルが、Issueのタイトルになるように。</p>
+<h4 id="issue-labels">Issue Labels</h4>
+<p>リポジトリ作成のときにラベルを作成していたら、ここに入れます。<br>
+オプションなのでなくても大丈夫です。</p>
+<h4 id="theme">theme</h4>
+<p>utterancのテーマを設定します。<br>
+リストから選択するとテーマに合わせて画面が変わるのでお好みのものをどうぞ。<br>
+ちなみに実際のコメントは、もう少し下にスクロールすると出てきます。</p>
+<h4 id="enable-utterances">Enable Utterances</h4>
+<p>これがコードになりますので、右下の「Copy」を押して、クリップボードに入れてください。</p>
+<h3 id="hugoへ組み込み">Hugoへ組み込み</h3>
+<p>コピーしたコードを表示したい場所に入れてもらえればオッケーです。</p>
+<p>私の場合、各記事の下に表示したかったので、こんな感じにしました。</p>
+<h4 id="テンプレート複製">テンプレート複製</h4>
+<p>記事表示用のテンプレートを修正しますが、オリジナルはそのまま残しておきたいので複製します。</p>
+<p>※テーマによって変わるかも<br>
+<code>/theme/hoge/layouts/_default/single.html</code> これを<br>
+↓<br>
+<code>/layouts/_default/single.html</code> ここに複製して、これを編集します。</p>
+<p>説明不要かもしれませんが、上のtheme内よりも、下の場所のほうが優先して使われるのです。</p>
+<h4 id="テンプレート編集">テンプレート編集</h4>
+<p>ここはお好みです。<br>
+好きな場所にコードを入れてください。</p>
+<p>Hugo Server でエラーせずにコメント欄が表示されれば大丈夫です。</p>
+<p>お疲れ様でした。</p>
+<h3 id="コメント欄の表示非表示">コメント欄の表示、非表示</h3>
+<p>私が使用したテーマは、記事内にコメント欄（Disqus）を表示するかしないか設定できるようになっていました。<br>
+「表示する」とした場合に読み込まれる部分がsingle.htmlにあるので、そこのDisqusを消して、utterancのコードを入れておきました。<br>
+これで記事ごとに表示、非表示の切り替えができました。</p>
+
+      </article>
+      <hr>
+      <p class="post-date">
+        Posted <time datetime="2023-02-07">2023-02-07</time>
+         / Update 2023-02-07</p>
+         <div class="card-subtext muted-text li-line">
+           <a class="cat" href="/categories/homepage">homepage</a> <a class="cat" href="/categories/coding">coding</a>
+           <a class="tag" href="/tags/hugo">#hugo</a>  <a class="tag" href="/tags/theme">#theme</a> 
+         </div>
+    </main>
+    <nav class="end-nav side-padding">
+      
+      <a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
+  href="https://k-kaz-git.github.io/post/githubpages/" class="card blog-card" rel="bookmark" >
+    
+    <div class="card-img-container">
+      <p class="card-img-overlay">Next Article</p>
+      <picture>
+        
+        <source srcset="https://k-kaz-git.github.io/images/k-kaz-black-w.svg">
+        <img src="https://k-kaz-git.github.io/images/k-kaz-black-w.svg" class="card-img" alt="k-kaz SVG">
+      </picture>
+    </div>
+    
+  <article class="card-body">
+    <h2 class="card-title">Github Pages 環境の復旧（ローカル）</h2>
+    <p class="card-text">自分用の備忘録として</p>
+    <div class="card-subtext muted-text">
+      <p>Posted <time datetime="2023-01-30">2023-01-30</time>
+      / Updated 2023-01-30</p>
+    </div>
+    <div class="card-subtext muted-text li-line">
+      <span class="box-gray">homepage</span> 
+      <span class="box-gray">#github pages</span> 
+    </div>
+  </article>
+</a>
+      
+      <a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
+  href="https://k-kaz-git.github.io/" class="card home-card" style="background-image: url( https://k-kaz-git.github.io/img/grey-cloud.jpg )" rel="bookmark" >
+  Home
+</a>
+    </nav>
+    <footer>
+    <p style="text-align: center">姉妹サイト<br><a class="btn-link" href="https://k-kaz.net/" target="_blank">k-kaz ブログ</a></p>
+</footer>
+    
+  <script defer src="https://k-kaz-git.github.io/js/katex.js"></script>
+
+
+  <script defer src="https://k-kaz-git.github.io/js/auto-render.js" onload="renderMathInElement(document.body);"></script>
+
+
+<script src="https://k-kaz-git.github.io/js/core.min.js"></script>
+
+  </body>
+</html>

@@ -1,15 +1,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts - </title>
+    <title>Posts - k-kaz が Hugo で遊ぶサイト</title>
     <link>https://k-kaz-git.github.io/post/</link>
-    <description>Recent content in Posts on </description>
+    <description>Recent content in Posts on k-kaz が Hugo で遊ぶサイト</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Mon, 30 Jan 2023 12:43:46 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 07 Feb 2023 12:49:20 +0900</lastBuildDate>
     
         <atom:link href="https://k-kaz-git.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Oh!</title>
+      <link>https://k-kaz-git.github.io/post/hello2/</link>
+      <pubDate>Sat, 16 Feb 2019 17:31:37 +0900</pubDate>
+      
+      <guid>https://k-kaz-git.github.io/post/hello2/</guid>
+      <description>とりあえず、いくつか記事をアップする練習</description>
+    </item><item>
       <title>Hello</title>
       <link>https://k-kaz-git.github.io/post/hello/</link>
       <pubDate>Sat, 16 Feb 2019 16:52:50 +0900</pubDate>

@@ -1,27 +1,27 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories - </title>
+    <title>Categories - k-kaz が Hugo で遊ぶサイト</title>
     <link>https://k-kaz-git.github.io/categories/</link>
-    <description>Recent content in Categories on </description>
+    <description>Recent content in Categories on k-kaz が Hugo で遊ぶサイト</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Mon, 30 Jan 2023 12:43:46 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 07 Feb 2023 12:49:20 +0900</lastBuildDate>
     
         <atom:link href="https://k-kaz-git.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>homepage</title>
-      <link>https://k-kaz-git.github.io/categories/homepage/</link>
-      <pubDate>Mon, 30 Jan 2023 12:43:46 +0900</pubDate>
-      
-      <guid>https://k-kaz-git.github.io/categories/homepage/</guid>
-      <description></description>
-    </item><item>
       <title>coding</title>
       <link>https://k-kaz-git.github.io/categories/coding/</link>
-      <pubDate>Wed, 21 Oct 2020 12:45:27 +0900</pubDate>
+      <pubDate>Tue, 07 Feb 2023 12:49:20 +0900</pubDate>
       
       <guid>https://k-kaz-git.github.io/categories/coding/</guid>
+      <description></description>
+    </item><item>
+      <title>homepage</title>
+      <link>https://k-kaz-git.github.io/categories/homepage/</link>
+      <pubDate>Tue, 07 Feb 2023 12:49:20 +0900</pubDate>
+      
+      <guid>https://k-kaz-git.github.io/categories/homepage/</guid>
       <description></description>
     </item><item>
       <title>linux</title>
