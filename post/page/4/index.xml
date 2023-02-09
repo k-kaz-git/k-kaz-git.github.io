@@ -5,11 +5,18 @@
     <description>Recent content in Posts on k-kaz が Hugo で遊ぶサイト</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Tue, 07 Feb 2023 12:49:20 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 09 Feb 2023 08:40:05 +0900</lastBuildDate>
     
         <atom:link href="https://k-kaz-git.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>タイトルに日本語を入れてみる</title>
+      <link>https://k-kaz-git.github.io/post/hello3/</link>
+      <pubDate>Sat, 16 Feb 2019 17:46:34 +0900</pubDate>
+      
+      <guid>https://k-kaz-git.github.io/post/hello3/</guid>
+      <description>ちょっとずつ、いくつか検証するのです。</description>
+    </item><item>
       <title>Oh!</title>
       <link>https://k-kaz-git.github.io/post/hello2/</link>
       <pubDate>Sat, 16 Feb 2019 17:31:37 +0900</pubDate>

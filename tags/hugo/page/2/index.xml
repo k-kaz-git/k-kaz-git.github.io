@@ -5,11 +5,18 @@
     <description>Recent content in hugo on k-kaz が Hugo で遊ぶサイト</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Tue, 07 Feb 2023 12:49:20 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 09 Feb 2023 08:40:05 +0900</lastBuildDate>
     
         <atom:link href="https://k-kaz-git.github.io/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Hugo のテーマを作ったよ。</title>
+      <link>https://k-kaz-git.github.io/post/hugo-k-kaz-theme/</link>
+      <pubDate>Mon, 18 Mar 2019 12:31:49 +0900</pubDate>
+      
+      <guid>https://k-kaz-git.github.io/post/hugo-k-kaz-theme/</guid>
+      <description>Hugo のテーマを自作してみました。途中で放り投げたけど（笑）</description>
+    </item><item>
       <title>自作の Hugo用 Shortcodes</title>
       <link>https://k-kaz-git.github.io/post/hugo-shortcodes-make/</link>
       <pubDate>Thu, 14 Mar 2019 12:42:21 +0900</pubDate>
@@ -72,13 +79,6 @@
       
       <guid>https://k-kaz-git.github.io/post/hugo-custom/</guid>
       <description>欲が出てきて、ホームページのカスタマイズをしたくなってきた。</description>
-    </item><item>
-      <title>Hugo 安定してきたかな</title>
-      <link>https://k-kaz-git.github.io/post/hugo-stable/</link>
-      <pubDate>Sun, 17 Feb 2019 04:50:58 +0900</pubDate>
-      
-      <guid>https://k-kaz-git.github.io/post/hugo-stable/</guid>
-      <description>そろそろいい感じかな</description>
     </item>
   </channel>
 </rss>

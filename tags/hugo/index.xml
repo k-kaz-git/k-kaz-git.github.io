@@ -5,11 +5,18 @@
     <description>Recent content in hugo on k-kaz が Hugo で遊ぶサイト</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Tue, 07 Feb 2023 12:49:20 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 09 Feb 2023 08:40:05 +0900</lastBuildDate>
     
         <atom:link href="https://k-kaz-git.github.io/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Hugoで絵文字を使えるようにする</title>
+      <link>https://k-kaz-git.github.io/post/hugo-emoji/</link>
+      <pubDate>Thu, 09 Feb 2023 08:40:05 +0900</pubDate>
+      
+      <guid>https://k-kaz-git.github.io/post/hugo-emoji/</guid>
+      <description>絵文字で雰囲気を柔らかく</description>
+    </item><item>
       <title>Hugoにコメント機能を付ける</title>
       <link>https://k-kaz-git.github.io/post/hugo-comment/</link>
       <pubDate>Tue, 07 Feb 2023 12:49:20 +0900</pubDate>
@@ -72,13 +79,6 @@
       
       <guid>https://k-kaz-git.github.io/post/hugo-custom-tableofcontents/</guid>
       <description>Hugo に目次を入れようと思ったのです。</description>
-    </item><item>
-      <title>Hugo のテーマを作ったよ。</title>
-      <link>https://k-kaz-git.github.io/post/hugo-k-kaz-theme/</link>
-      <pubDate>Mon, 18 Mar 2019 12:31:49 +0900</pubDate>
-      
-      <guid>https://k-kaz-git.github.io/post/hugo-k-kaz-theme/</guid>
-      <description>Hugo のテーマを自作してみました。途中で放り投げたけど（笑）</description>
     </item>
   </channel>
 </rss>
