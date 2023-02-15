@@ -4,8 +4,8 @@
   <meta charset="utf-8" />
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Hugo のタグとかカテゴリとか &middot; k-kaz が Hugo で遊ぶサイト</title>
-  <meta name="description" content="タグとかカテゴリとかの一覧を表示したい" />
+  <title>VSCode 小ネタ &middot; k-kaz が Hugo で遊ぶサイト</title>
+  <meta name="description" content="Vscodeの小ネタはここにまとめようかな" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -56,99 +56,120 @@ if (!doNotTrack) {
     <main class="content side-text-padding">
       <article class="post ">
         <header class="post-header">
-        	<h1 class="post-title">Hugo のタグとかカテゴリとか</h1>
+        	<h1 class="post-title">VSCode 小ネタ</h1>
           <p class="post-date">
-            Posted <time datetime="2020-11-05">2020-11-05</time>
-             / Update 2023-02-14</p>
+            Posted <time datetime="2023-02-15">2023-02-15</time>
+             / Update 2023-02-15</p>
              <div class="card-subtext muted-text li-line">
-               <a class="cat" href="/categories/Homepage">Homepage</a>
-               <a class="tag" href="/tags/Hugo">#Hugo</a>  <a class="tag" href="/tags/tags">#tags</a>  <a class="tag" href="/tags/categories">#categories</a> 
+               <a class="cat" href="/categories/coding">coding</a>
+               <a class="tag" href="/tags/vscode">#vscode</a> 
              </div>
         </header>
         
         <picture class="post-figure">
-            <source srcset="https://k-kaz-git.github.io/images/labels-4924676_800.webp" type="image/webp">
-            <source srcset="https://k-kaz-git.github.io/images/labels-4924676_800.webp">
-          <img src="https://k-kaz-git.github.io/images/labels-4924676_800.webp" alt="tags">
+            <source srcset="https://k-kaz-git.github.io/images/vscode.webp" type="image/webp">
+            <source srcset="https://k-kaz-git.github.io/images/vscode.webp">
+          <img src="https://k-kaz-git.github.io/images/vscode.webp" alt="vscode">
         </picture>
         
         <aside>
           <h2>目次</h2>
             <nav id="TableOfContents">
   <ul>
-    <li><a href="#hugo-のタグとかカテゴリとか">Hugo のタグとかカテゴリとか</a></li>
-    <li><a href="#ちょろっと調べた">ちょろっと調べた</a></li>
-    <li><a href="#2023-02-14-追記">2023-02-14 追記</a>
+    <li><a href="#スニペット">スニペット</a></li>
+    <li><a href="#ワークスペース">ワークスペース</a>
       <ul>
-        <li><a href="#やったこと">やったこと</a></li>
+        <li><a href="#作成">作成</a></li>
+        <li><a href="#呼び出し">呼び出し</a></li>
+      </ul>
+    </li>
+    <li><a href="#ターミナル">ターミナル</a>
+      <ul>
+        <li><a href="#表示">表示</a></li>
+      </ul>
+    </li>
+    <li><a href="#markdown">Markdown</a>
+      <ul>
+        <li><a href="#ワークスペース内のファイルが移動したらリンクを修正する173">ワークスペース内のファイルが移動したらリンクを修正する【1.73】</a></li>
+        <li><a href="#重複未使用のリンクをチェックする173">重複、未使用のリンクをチェックする【1.73】</a></li>
+        <li><a href="#ドラッグアンドドロップで画像ファイルを追加する173">ドラッグ・アンド・ドロップで画像ファイルを追加する【1.73】</a></li>
       </ul>
     </li>
   </ul>
 </nav>
         </aside>
-        <h2 id="hugo-のタグとかカテゴリとか">Hugo のタグとかカテゴリとか</h2>
-<p>この前、<a href="k-kaz-0.netlify.app">k-kaz が自作テーマで遊ぶサイト</a>
- に <a href="https://k-kaz-0.netlify.app/hugo-tag/" target="_blank">タグとかカテゴリとか</a>
- という記事を書きました。</p>
-<p>タグとかカテゴリのリンクををクリックしたときに、そのグループだけではなく、<strong>全記事が出てきちゃう！</strong> というものです。<br>
-自作テーマだから、うまく作り込めていないんだと思っていましたが、<strong>このサイトも同じじゃないか。</strong></p>
-<p>以前は正しく動作していたはずなので、Hugo のバージョンを上げたとき、仕様変更によって動作が変わったと思われます。</p>
-<h2 id="ちょろっと調べた">ちょろっと調べた</h2>
-<p><code>\layouts\_default</code> に <code>taxonomy.html</code> と <code>terms.html</code> を置くと、良いらしい。<br>
-中身の書き方はいまいち分かっていないので、ここには書きませんが、とりあえず <a href="k-kaz-0.netlify.app">k-kaz が自作テーマで遊ぶサイト</a>
- では、動作しました。</p>
-<p>ただのリンクが並ぶだけで、味も素っ気もないんですが。<br>
-本当はタグやカテゴリのタイトルを出したり、トップページと同じようなレイアウトにしたいんだけど。</p>
-<p>また時間のあるときに挑戦しよう。<br>
-あと、このサイトも直さなきゃ。（時間のあるときに）</p>
-<h2 id="2023-02-14-追記">2023-02-14 追記</h2>
-<p>やっと直した。<br>
-というか、完全に忘れていました・・・。</p>
-<p>別件でたまたまこちらのサイトを見ていて、タグをクリックしたのに絞り込みが出来ていないことを発見しました。<br>
-しばらく考えたり試したりしているうちに、この記事も発見。</p>
-<p>以前から出来ていなかったのね。</p>
-<h3 id="やったこと">やったこと</h3>
-<p>上に書いてある <code>taxonomy.html</code> や <code>terms.html</code> を置いてみてもうまく動作せず。<br>
-あちこち見てたら、本テーマ（aether）の場合はこれらファイルは必要ありませんでした。<br>
-<code>list.html</code> <code>li.html</code> <code>li-next.html</code> で動作させているみたい。</p>
-<p>結果、自分で編集した <code>list.html</code> がおかしかったという悲しい結末になりました。</p>
-<p>ということで、もともとThemeに入っていた <code>list.html</code> を持ってきて、希望する編集を加えたものを置き直しました。</p>
-<p>分かると、なぁ～んだって感じ。</p>
+        <h2 id="スニペット">スニペット</h2>
+<p>定形文を用意して簡単に呼び出す機能です。<br>
+こちらをご覧ください。</p>
+<p>🔗<a href="../vscode-snippet">VSCode のスニペットを使ってみる</a>
+</p>
+<h2 id="ワークスペース">ワークスペース</h2>
+<p>作業毎にフォルダを用意することが多いかと思いますが、そんなときはワークスペースの機能が便利です。<br>
+私はいくつかHugoで作ったサイトがあるので、サイト毎にワークスペース登録して、触りたいサイトをすぐに呼び出せるようにしています。</p>
+<h3 id="作成">作成</h3>
+<ol>
+<li>「ファイル」 → 「フォルダーを開く」で、該当フォルダーを開く</li>
+<li>「ファイル」 → 「名前を付けてワークスペースを保存」で、保存する</li>
+</ol>
+<h3 id="呼び出し">呼び出し</h3>
+<ol>
+<li>「ファイル」 → 「ファイルでワークスペースを開く」<br>
+「ファイル」 → 「最近使用した項目を開く」でもオッケーです。</li>
+</ol>
+<h2 id="ターミナル">ターミナル</h2>
+<p>これ、知ってました？<br>
+私、昨日知ったんですけど・・・。</p>
+<h3 id="表示">表示</h3>
+<ol>
+<li>「表示」 → 「ターミナル」を選択</li>
+</ol>
+<p>画面下にターミナルウィンドウが出てきます。</p>
+<p>毎回エクスプローラーから、Power Shell（Windowsの場合ね）を開いて、新しい記事の作成や、Hugoサーバーの起動、デプロイ等をやっていたんですが、VSCの中ですべて出来るんです。<br>
+これ、私にとってめっちゃ画期的です。</p>
+<h2 id="markdown">Markdown</h2>
+<p>バージョンに依存するものもあります。<br>
+version 1.73 でけっこう強化されました。</p>
+<h3 id="ワークスペース内のファイルが移動したらリンクを修正する173">ワークスペース内のファイルが移動したらリンクを修正する【1.73】</h3>
+<p><code>markdown.updateLinksOnFileMove.enabled</code> を有効にします。</p>
+<h3 id="重複未使用のリンクをチェックする173">重複、未使用のリンクをチェックする【1.73】</h3>
+<p><code>markdown.validate</code> を有効にします。</p>
+<h3 id="ドラッグアンドドロップで画像ファイルを追加する173">ドラッグ・アンド・ドロップで画像ファイルを追加する【1.73】</h3>
+<p>Shift キーを押しながらドラッグ・アンド・ドロップすると、Markdown記法で記述されます。</p>
 
       </article>
       <hr>
       <p class="post-date">
-        Posted <time datetime="2020-11-05">2020-11-05</time>
-         / Update 2023-02-14</p>
+        Posted <time datetime="2023-02-15">2023-02-15</time>
+         / Update 2023-02-15</p>
          <div class="card-subtext muted-text li-line">
-           <a class="cat" href="/categories/Homepage">Homepage</a>
-           <a class="tag" href="/tags/Hugo">#Hugo</a>  <a class="tag" href="/tags/tags">#tags</a>  <a class="tag" href="/tags/categories">#categories</a> 
+           <a class="cat" href="/categories/coding">coding</a>
+           <a class="tag" href="/tags/vscode">#vscode</a> 
          </div>
     </main>
     <nav class="end-nav side-padding">
       
       <a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
-  href="https://k-kaz-git.github.io/post/hugo-custom-theme-pagermod/" class="card blog-card" rel="bookmark" >
+  href="https://k-kaz-git.github.io/post/hugo-emoji/" class="card blog-card" rel="bookmark" >
     
     <div class="card-img-container">
       <p class="card-img-overlay">Next Article</p>
       <picture>
-        <source srcset="https://k-kaz-git.github.io/images/hugo-custom-theme-pagermod.webp" type="image/webp">
-        <source srcset="https://k-kaz-git.github.io/images/hugo-custom-theme-pagermod.webp">
-        <img src="https://k-kaz-git.github.io/images/hugo-custom-theme-pagermod.webp" class="card-img" alt="雑誌とコーヒー">
+        <source srcset="https://k-kaz-git.github.io/images/hugo-emoji.webp" type="image/webp">
+        <source srcset="https://k-kaz-git.github.io/images/hugo-emoji.webp">
+        <img src="https://k-kaz-git.github.io/images/hugo-emoji.webp" class="card-img" alt="emoji">
       </picture>
     </div>
     
   <article class="card-body">
-    <h2 class="card-title">テーマ Pagermod のカスタマイズ</h2>
-    <p class="card-text">Pagermod を自分好みにしていくよ。</p>
+    <h2 class="card-title">Hugoで絵文字を使えるようにする</h2>
+    <p class="card-text">絵文字で雰囲気を柔らかく</p>
     <div class="card-subtext muted-text">
-      <p>Posted <time datetime="2020-10-28">2020-10-28</time>
-      / Updated 2020-11-02</p>
+      <p>Posted <time datetime="2023-02-09">2023-02-09</time>
+      / Updated 2023-02-09</p>
     </div>
     <div class="card-subtext muted-text li-line">
-      <span class="box-gray">homepage</span> 
-      <span class="box-gray">#hugo</span> <span class="box-gray">#theme</span> <span class="box-gray">#pagermod</span> 
+      <span class="box-gray">homepage</span> <span class="box-gray">coding</span> 
+      <span class="box-gray">#hugo</span> <span class="box-gray">#theme</span> 
     </div>
   </article>
 </a>

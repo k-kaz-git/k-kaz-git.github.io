@@ -5,11 +5,18 @@
     <description>Recent content in Posts on k-kaz が Hugo で遊ぶサイト</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Thu, 09 Feb 2023 08:40:05 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 15 Feb 2023 12:43:28 +0900</lastBuildDate>
     
         <atom:link href="https://k-kaz-git.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>VSCode 小ネタ</title>
+      <link>https://k-kaz-git.github.io/post/vscode/</link>
+      <pubDate>Wed, 15 Feb 2023 12:43:28 +0900</pubDate>
+      
+      <guid>https://k-kaz-git.github.io/post/vscode/</guid>
+      <description>Vscodeの小ネタはここにまとめようかな</description>
+    </item><item>
       <title>Hugoで絵文字を使えるようにする</title>
       <link>https://k-kaz-git.github.io/post/hugo-emoji/</link>
       <pubDate>Thu, 09 Feb 2023 08:40:05 +0900</pubDate>
@@ -72,13 +79,6 @@
       
       <guid>https://k-kaz-git.github.io/post/hugo-alink/</guid>
       <description>さっと出来ちゃうよ。</description>
-    </item><item>
-      <title>そうだ Hugo の最新版を使おう！</title>
-      <link>https://k-kaz-git.github.io/post/hugo-new-version/</link>
-      <pubDate>Sun, 18 Oct 2020 20:00:29 +0900</pubDate>
-      
-      <guid>https://k-kaz-git.github.io/post/hugo-new-version/</guid>
-      <description>そんなときは大体ハマる。</description>
     </item>
   </channel>
 </rss>
