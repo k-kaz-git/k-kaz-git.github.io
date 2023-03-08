@@ -5,11 +5,18 @@
     <description>Recent content in theme on k-kaz が Hugo で遊ぶサイト</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Thu, 09 Feb 2023 08:40:05 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 08 Mar 2023 12:54:23 +0900</lastBuildDate>
     
         <atom:link href="https://k-kaz-git.github.io/tags/theme/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Hugoで関連記事を表示する</title>
+      <link>https://k-kaz-git.github.io/post/hugo-related/</link>
+      <pubDate>Wed, 08 Mar 2023 12:54:23 +0900</pubDate>
+      
+      <guid>https://k-kaz-git.github.io/post/hugo-related/</guid>
+      <description>Relatedって機能です</description>
+    </item><item>
       <title>Hugoで絵文字を使えるようにする</title>
       <link>https://k-kaz-git.github.io/post/hugo-emoji/</link>
       <pubDate>Thu, 09 Feb 2023 08:40:05 +0900</pubDate>
