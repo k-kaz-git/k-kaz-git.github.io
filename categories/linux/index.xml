@@ -5,11 +5,18 @@
     <description>Recent content in linux on k-kaz が Hugo で遊ぶサイト</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Sun, 31 Mar 2019 17:45:32 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 17 Apr 2023 15:58:50 +0900</lastBuildDate>
     
         <atom:link href="https://k-kaz-git.github.io/categories/linux/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Hugoの最新版を入れてみよう</title>
+      <link>https://k-kaz-git.github.io/post/hugo-new-version-basic/</link>
+      <pubDate>Mon, 17 Apr 2023 15:58:50 +0900</pubDate>
+      
+      <guid>https://k-kaz-git.github.io/post/hugo-new-version-basic/</guid>
+      <description>基本編</description>
+    </item><item>
       <title>Mozc Ut2 を Install したよ。</title>
       <link>https://k-kaz-git.github.io/post/mozc-ut2-install/</link>
       <pubDate>Sun, 31 Mar 2019 17:45:32 +0900</pubDate>
