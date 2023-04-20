@@ -4,8 +4,8 @@
   <meta charset="utf-8" />
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>GitHub を使ってみる &middot; k-kaz が Hugo で遊ぶサイト</title>
-  <meta name="description" content="GitHub を有効活用しようと思います。" />
+  <title>GitとGitHubを使ってみる &middot; k-kaz が Hugo で遊ぶサイト</title>
+  <meta name="description" content="GitとGitHubを有効活用しようと思います。" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -56,7 +56,7 @@ if (!doNotTrack) {
     <main class="content side-text-padding">
       <article class="post ">
         <header class="post-header">
-        	<h1 class="post-title">GitHub を使ってみる</h1>
+        	<h1 class="post-title">GitとGitHubを使ってみる</h1>
           <p class="post-date">
             Posted <time datetime="2019-02-22">2019-02-22</time>
              / Update 2019-03-06</p>
@@ -94,14 +94,19 @@ if (!doNotTrack) {
         <li><a href="#やり方-1">やり方</a></li>
       </ul>
     </li>
-    <li><a href="#プッシュしたけど1つ前の内容に戻したい2019-02-25">プッシュしたけど、1つ前の内容に戻したい［2019-02-25］</a>
+    <li><a href="#ローカルでいろいろ弄ったけど元の状態に戻したい2023-04-19">ローカルでいろいろ弄ったけど、元の状態に戻したい[2023-04-19]</a>
       <ul>
         <li><a href="#やり方-2">やり方</a></li>
       </ul>
     </li>
-    <li><a href="#リポジトリから除外したいファイルやフォルダがある2019-02-26">リポジトリから除外したいファイルやフォルダがある［2019-02-26］</a>
+    <li><a href="#プッシュしたけど1つ前の内容に戻したい2019-02-25">プッシュしたけど、1つ前の内容に戻したい［2019-02-25］</a>
       <ul>
         <li><a href="#やり方-3">やり方</a></li>
+      </ul>
+    </li>
+    <li><a href="#リポジトリから除外したいファイルやフォルダがある2019-02-26">リポジトリから除外したいファイルやフォルダがある［2019-02-26］</a>
+      <ul>
+        <li><a href="#やり方-4">やり方</a></li>
       </ul>
     </li>
     <li><a href="#vscode-の設定ファイルを共通で使う2019-02-28">VSCode の設定ファイルを共通で使う［2019-02-28］</a></li>
@@ -173,10 +178,15 @@ Win10 の PowerShell では、直接 <code>mklink</code> が実行できない�
 <p><code>hugo server</code> を実行したときに元の場所を見に行かないか心配しましたが、<code>変更先ディレクトリ</code> の中で実行すれば、Hugo はその中を見に行くようです。</p>
 <p>特に Hugo の設定ファイルを弄るとか必要はありませんでした。</p>
 <p>結果から見れば、超簡単な作業でした。</p>
+<h2 id="ローカルでいろいろ弄ったけど元の状態に戻したい2023-04-19">ローカルでいろいろ弄ったけど、元の状態に戻したい[2023-04-19]</h2>
+<p>あれこれ作業をしていたけれど、「これまでやった作業を元に戻したい・・・」と悲観したときの戻し方です。</p>
+<h3 id="やり方-2">やり方</h3>
+<p><code>git checkout .</code> で元通り！<br>
+特定のファイルだけ戻すなら<code>git checkout &lt;filename&gt;</code>です。</p>
 <h2 id="プッシュしたけど1つ前の内容に戻したい2019-02-25">プッシュしたけど、1つ前の内容に戻したい［2019-02-25］</h2>
 <p>リモートリポジトリにプッシュしたあと、「あっ、やっぱり前のほうが良かった」と思ったときの手順です。<br>
 ネットで調べたら、間違えたものも履歴として残す方法もありましたが、個人で使う分にはゴミになるだろうと思いまして、シンプルに「先程プッシュしたものは、無かったことにする」という方法を採用します。</p>
-<h3 id="やり方-2">やり方</h3>
+<h3 id="やり方-3">やり方</h3>
 <p>プッシュしたディレクトリに移動して、</p>
 <p><code>git reset --hard HEAD^</code> をして、<br>
 <code>git push -f origin master</code> です。</p>
@@ -186,7 +196,7 @@ Win10 の PowerShell では、直接 <code>mklink</code> が実行できない�
 <h2 id="リポジトリから除外したいファイルやフォルダがある2019-02-26">リポジトリから除外したいファイルやフォルダがある［2019-02-26］</h2>
 <p>VSCode の設定ファイルをリポジトリに入れて共通使用としたんですけど、不要なファイルもあるんですよね。<br>
 タブの状態（何のファイルを開いているか）は要らないし、というか、ファイルの置き場や所有しているファイルも違うし・・・。</p>
-<h3 id="やり方-3">やり方</h3>
+<h3 id="やり方-4">やり方</h3>
 <h4 id="gitignore-に除外するものを書きますよ">.gitignore に除外するものを書きますよ</h4>
 <p><code>git</code> を実行するディレクトリに <code>.gitignore</code> というテキストファイルを用意します。<br>
 この中にリポジトリから除外するファイルやフォルダを書き込むと、そのあたりを考慮してリポジトリを作成してくれます。</p>
