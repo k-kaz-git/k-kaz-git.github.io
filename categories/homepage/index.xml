@@ -5,11 +5,18 @@
     <description>Recent content in homepage on k-kaz が Hugo で遊ぶサイト</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Mon, 17 Apr 2023 12:55:42 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 27 Oct 2023 14:44:27 +0900</lastBuildDate>
     
         <atom:link href="https://k-kaz-git.github.io/categories/homepage/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>さくらインターネットでHugoを使いたい</title>
+      <link>https://k-kaz-git.github.io/post/hugo-sakura/</link>
+      <pubDate>Fri, 27 Oct 2023 14:44:27 +0900</pubDate>
+      
+      <guid>https://k-kaz-git.github.io/post/hugo-sakura/</guid>
+      <description>苦労したのよ</description>
+    </item><item>
       <title>HugoでMermaid記法を利用する</title>
       <link>https://k-kaz-git.github.io/post/hugo-mermaid/</link>
       <pubDate>Mon, 17 Apr 2023 12:55:42 +0900</pubDate>
@@ -72,13 +79,6 @@
       
       <guid>https://k-kaz-git.github.io/post/hugo-custom-theme-pagermod/</guid>
       <description>Pagermod を自分好みにしていくよ。</description>
-    </item><item>
-      <title>Deploy でエラーが出たんですけど。</title>
-      <link>https://k-kaz-git.github.io/post/hugo-deploy-error/</link>
-      <pubDate>Wed, 14 Oct 2020 18:51:11 +0900</pubDate>
-      
-      <guid>https://k-kaz-git.github.io/post/hugo-deploy-error/</guid>
-      <description>1年半振りの Deploy で・・・。</description>
     </item>
   </channel>
 </rss>

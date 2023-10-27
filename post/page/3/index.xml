@@ -5,11 +5,18 @@
     <description>Recent content in Posts on k-kaz が Hugo で遊ぶサイト</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Mon, 17 Apr 2023 12:58:50 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 27 Oct 2023 14:44:27 +0900</lastBuildDate>
     
         <atom:link href="https://k-kaz-git.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>自作の Hugo用 Shortcodes</title>
+      <link>https://k-kaz-git.github.io/post/hugo-shortcodes-make/</link>
+      <pubDate>Thu, 14 Mar 2019 12:42:21 +0900</pubDate>
+      
+      <guid>https://k-kaz-git.github.io/post/hugo-shortcodes-make/</guid>
+      <description>自作の Shortcodes をテストしたり、思い出すための場所</description>
+    </item><item>
       <title>テーマ Cupper のカスタマイズ</title>
       <link>https://k-kaz-git.github.io/post/hugo-custom-theme-cupper/</link>
       <pubDate>Tue, 12 Mar 2019 16:02:29 +0900</pubDate>
@@ -72,13 +79,6 @@
       
       <guid>https://k-kaz-git.github.io/post/hugo-how-to-use/</guid>
       <description>Hugo の Tips 的なものをこちらにまとめます。</description>
-    </item><item>
-      <title>テーマ aether のカスタマイズ</title>
-      <link>https://k-kaz-git.github.io/post/hugo-custom-theme-aether/</link>
-      <pubDate>Mon, 18 Feb 2019 21:30:02 +0900</pubDate>
-      
-      <guid>https://k-kaz-git.github.io/post/hugo-custom-theme-aether/</guid>
-      <description>テーマ aether のカスタマイズをこちらにまとめます。</description>
     </item>
   </channel>
 </rss>
