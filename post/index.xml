@@ -5,14 +5,14 @@
     <description>Recent content in Posts on k-kaz が Hugo で遊ぶサイト</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Fri, 27 Oct 2023 14:44:27 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 27 Oct 2023 12:44:27 +0900</lastBuildDate>
     
         <atom:link href="https://k-kaz-git.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>さくらインターネットでHugoを使いたい</title>
       <link>https://k-kaz-git.github.io/post/hugo-sakura/</link>
-      <pubDate>Fri, 27 Oct 2023 14:44:27 +0900</pubDate>
+      <pubDate>Fri, 27 Oct 2023 12:44:27 +0900</pubDate>
       
       <guid>https://k-kaz-git.github.io/post/hugo-sakura/</guid>
       <description>苦労したのよ</description>
