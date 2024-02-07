@@ -110,14 +110,14 @@
 <h2 id="使い方">使い方</h2>
 <h3 id="基本形">基本形</h3>
 <p>ごく標準的な書き方。</p>
-<script type="application/javascript" src="https://gist.github.com/k-kaz-git/83aa5e9919d9bab4fd3d83ee6532af6b.js"></script>
+<script src="https://gist.github.com/k-kaz-git/83aa5e9919d9bab4fd3d83ee6532af6b.js"></script>
 <p>※Markdown でショートコードを書くと、バッククォートで囲んでも実行しちゃう・・・。ということで、gist を利用。この gist 読み込みも Shortcodes で行っています。<br>
 ※<code>%</code> のところは、前を <code>&lt;</code> で、後ろを <code>&gt;</code> でも良いみたいです。</p>
 <p>ショートコード名は、別途用意している HTML のファイル名（拡張子の <code>.html</code> を除いたもの）になり、これを読み込み、実行します。</p>
 <p>例えば、red.html というファイルに下記が記述されていたとします。</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">span</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;color:red;&#34;</span>&gt;赤い字ですよ。&lt;/<span style="color:#f92672">span</span>&gt;
 </span></span></code></pre></div><p>Markdown の記事で、</p>
-<script type="application/javascript" src="https://gist.github.com/k-kaz-git/57c9a781cf43625d44270dd2e0c42494.js"></script>
+<script src="https://gist.github.com/k-kaz-git/57c9a781cf43625d44270dd2e0c42494.js"></script>
 <p>と書きますと、</p>
 <p><span style="color:red;">赤い字ですよ。</span></p>
 <p>が出力されます。</p>
@@ -126,7 +126,7 @@
 <p>color.html というファイルに下記が記述されていた場合、</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">span</span> <span style="color:#a6e22e">sytle</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;color:{{.Get 0}};&#34;</span>&gt;文字の色を変えます。&lt;/<span style="color:#f92672">span</span>&gt;
 </span></span></code></pre></div><p>Markdown の記事で、</p>
-<script type="application/javascript" src="https://gist.github.com/k-kaz-git/b2afd861241a83822fed711f581bcc9e.js"></script>
+<script src="https://gist.github.com/k-kaz-git/b2afd861241a83822fed711f581bcc9e.js"></script>
 <p>と書けば、<code>{{.Get 0}}</code> に <code>blue</code> が代入されて</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">span</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;color:blue;&#34;</span>&gt;文字の色を変えます。&lt;/<span style="color:#f92672">span</span>&gt;
 </span></span></code></pre></div><p><span style="color:blue;">文字の色を変えます。</span></p>
@@ -134,11 +134,11 @@
 <p>パラメーターは複数指定できますので、<code>{{.Get 0}}</code> <code>{{.Get 1}}</code> というように、数字を増やしていけばいくつでも対応できます。</p>
 <h3 id="変数を分かりやすく文字にする">変数を分かりやすく文字にする</h3>
 <p>数字だけだと数が増えた時にゴチャゴチャとしますので、分かりやすいように文字指定にするほうが良いかもしれません。</p>
-<script type="application/javascript" src="https://gist.github.com/k-kaz-git/61b0ee861abfe4fc7973975bbc3bc4aa.js"></script>
+<script src="https://gist.github.com/k-kaz-git/61b0ee861abfe4fc7973975bbc3bc4aa.js"></script>
 <p><code>{{.Get &quot;src&quot;}}</code> <code>{{.Get &quot;title&quot;}}</code> で、それぞれの値を取得することができます。</p>
 <h3 id="開始タグと終了タグを入れる">開始タグと終了タグを入れる</h3>
 <p>元となる文章「何かしらの文字列」の前後に開始タグと終了タグを入れる場合はこのようにします。</p>
-<script type="application/javascript" src="https://gist.github.com/k-kaz-git/59f1832bfd28998120c2935d5f5dc88a.js"></script>
+<script src="https://gist.github.com/k-kaz-git/59f1832bfd28998120c2935d5f5dc88a.js"></script>
 <p>html側では、「何かしらの文字列」を取得するため <code>{{.Inner}}</code> を使い、下記のように記述します。</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">span</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;color:red&#34;</span>&gt;{{.Inner}}&lt;/<span style="color:#f92672">span</span>&gt;
 </span></span></code></pre></div><h3 id="特定の文字列を置換する">特定の文字列を置換する</h3>
@@ -176,7 +176,7 @@
 </table>
 <h4 id="記事の書き方">記事の書き方</h4>
 <p>こんな感じで。</p>
-<script type="application/javascript" src="https://gist.github.com/k-kaz-git/469318917a46ba32a810e5cac8c96817.js"></script>
+<script src="https://gist.github.com/k-kaz-git/469318917a46ba32a810e5cac8c96817.js"></script>
 <h4 id="結果">結果</h4>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>何かしらの&lt;<span style="color:#f92672">span</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;highlight&#39;</span>&gt;文字列&lt;/<span style="color:#f92672">span</span>&gt;です。
 </span></span></code></pre></div><hr>
@@ -194,7 +194,7 @@
 <li>改行しないもの → 行内コンテナ（span）</li>
 </ul>
 <p>Shortcodes での記述はこちら。</p>
-<script type="application/javascript" src="https://gist.github.com/k-kaz-git/4bcefb1b31bf0e94de53a361846a887b.js"></script>
+<script src="https://gist.github.com/k-kaz-git/4bcefb1b31bf0e94de53a361846a887b.js"></script>
 <p>上の type=&ldquo;p&rdquo; が段落で、下の type=&ldquo;s&rdquo; が行内となります。</p>
 <p>fr という html ファイルを読み込んでいます。その中身はこちらです。</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>{{- $han := .Get &#34;type&#34; -}}
