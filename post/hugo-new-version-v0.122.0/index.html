@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>pagermod &middot; k-kaz が Hugo で遊ぶサイト</title>
+  <title>Hugo Update V0.122.0 &middot; k-kaz が Hugo で遊ぶサイト</title>
   
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -12,7 +12,7 @@
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-K8B8MR2Z');</script>
   
-  <meta name="description" content="" />
+  <meta name="description" content="Update後の修正" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -28,11 +28,10 @@
   
   <link rel="stylesheet" href="https://k-kaz-git.github.io/sass/main.fcdea0c4becd73f2e3b2312b85bcd7ba626d441c1cde1e1b8046a6afcc4e22b8.css">
 
-  <link rel="alternate" type="application/rss+xml" href="https://k-kaz-git.github.io/tags/pagermod/index.xml" title="k-kaz が Hugo で遊ぶサイト" />
   
   
 </head>
-  <body class="list-body">
+  <body class="single-body">
       
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8B8MR2Z"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -53,80 +52,111 @@
     </ul>
   </div>
 </nav>
-    <main class="card-container side-gutter">
-      <header class="list-header">
-        <h1 class="list-header-title">pagermod</h1>
+    <main class="content side-text-padding">
+      <article class="post ">
+        <header class="post-header">
+        	<h1 class="post-title">Hugo Update V0.122.0</h1>
+          <p class="post-date">
+            Posted <time datetime="2024-02-09">2024-02-09</time>
+             / Update 2024-02-13</p>
+             <div class="card-subtext muted-text li-line">
+               <a class="cat" href="/categories/homepage">homepage</a>
+               <a class="tag" href="/tags/hugo">#hugo</a>  <a class="tag" href="/tags/theme">#theme</a>  <a class="tag" href="/tags/pagermod">#pagermod</a> 
+             </div>
+        </header>
         
-      </header>
-      
-      
+        <picture class="post-figure">
+            
+            <source srcset="https://k-kaz-git.github.io/images/hugo-logo-wide.svg">
+          <img src="https://k-kaz-git.github.io/images/hugo-logo-wide.svg" alt="Hugoのイメージ画像">
+        </picture>
+        
+        <aside>
+          <h2>目次</h2>
+            <nav id="TableOfContents">
+  <ul>
+    <li><a href="#hugo-v01220">Hugo v0.122.0</a></li>
+    <li><a href="#記事の更新日とかがおかしい">記事の更新日とかがおかしい</a>
+      <ul>
+        <li><a href="#post_metahtml">post_meta.html</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+        </aside>
+        <h2 id="hugo-v01220">Hugo v0.122.0</h2>
+<p>1年振りくらいにHugo本体のアップデートを実施しました。<br>
+アップデート後、特別な問題は出ていないように思っていましたが、しばらくしておかしなところに気付きました。</p>
+<p><a href="https://github.com/gohugoio/hugo" target="_blank">gohugoio/hugo: The world’s fastest framework for building websites.</a>
+</p>
+<h2 id="記事の更新日とかがおかしい">記事の更新日とかがおかしい</h2>
+<p>Pagermod というテーマを使っています。<br>
+<a href="https://github.com/adityatelange/hugo-PaperMod/" target="_blank">adityatelange/hugo-PaperMod: A fast, clean, responsive Hugo theme.</a>
+</p>
+<p>記事タイトルの下に更新日、読むのにかかる時間等を入れていますが、ここで使っていたHTMLタグ <code>span</code> や、スペースを表示する <code>&amp;nbsp;</code> なんかがそのままページに表示されていました。<br>
+たぶん、この1年間の間に記述方法が変わったのでしょう。修正しました。</p>
+<h3 id="post_metahtml">post_meta.html</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#75715e">&lt;!-- 元々の内容 --&gt;</span>
+</span></span><span style="display:flex;"><span>{{- if not .Date.IsZero -}}
+</span></span><span style="display:flex;"><span>{{- $scratch.Add &#34;meta&#34; (slice (printf &#34;&lt;<span style="color:#f92672">span</span> <span style="color:#a6e22e">title</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;%s&#39;</span>&gt;Posted %s / Updated %s&lt;/<span style="color:#f92672">span</span>&gt;&#34; (.Date) (.Date | time.Format (default &#34;2006-01-02&#34; site.Params.DateFormat)) (.Lastmod.Format (default &#34;2006-01-02&#34;)))) }}
+</span></span><span style="display:flex;"><span>{{- end }}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>{{- with ($scratch.Get &#34;meta&#34;) }}
+</span></span><span style="display:flex;"><span>{{- delimit . &#34;&amp;nbsp;·&amp;nbsp;&#34; -}}
+</span></span><span style="display:flex;"><span>{{- end -}}
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#75715e">&lt;!-- 修正後の内容 --&gt;</span>
+</span></span><span style="display:flex;"><span>{{- if not .Date.IsZero -}}
+</span></span><span style="display:flex;"><span>{{- $scratch.Add &#34;meta&#34; (slice (printf &#34;Posted %s / Last %s&#34; (.Date | time.Format (default &#34;2006-01-02&#34;)) (.Lastmod.Format (default &#34;2006-01-02&#34;)))) }}
+</span></span><span style="display:flex;"><span>{{- end }}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>{{- with ($scratch.Get &#34;meta&#34;) }}
+</span></span><span style="display:flex;"><span>{{- delimit . &#34; &#34; -}}
+</span></span><span style="display:flex;"><span>{{- end -}}
+</span></span></code></pre></div><p>これで大丈夫そうです。</p>
+
+      </article>
+      <hr>
+      <p class="post-date">
+        Posted <time datetime="2024-02-09">2024-02-09</time>
+         / Update 2024-02-13</p>
+         <div class="card-subtext muted-text li-line">
+           <a class="cat" href="/categories/homepage">homepage</a>
+           <a class="tag" href="/tags/hugo">#hugo</a>  <a class="tag" href="/tags/theme">#theme</a>  <a class="tag" href="/tags/pagermod">#pagermod</a> 
+         </div>
+    </main>
+    <nav class="end-nav side-padding">
       
       <a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
-  href="https://k-kaz-git.github.io/post/hugo-new-version-v0.122.0/" class="card blog-card" rel="bookmark" >
+  href="https://k-kaz-git.github.io/post/hugo-sakura/" class="card blog-card" rel="bookmark" >
+    
     <div class="card-img-container">
+      <p class="card-img-overlay">Next Article</p>
       <picture>
-        
-        <source srcset="https://k-kaz-git.github.io/images/hugo-logo-wide.svg">
-        <img src="https://k-kaz-git.github.io/images/hugo-logo-wide.svg" class="card-img" alt="Hugoのイメージ画像">
+        <source srcset="https://k-kaz-git.github.io/images/hugo-sakura.webp" type="image/webp">
+        <source srcset="https://k-kaz-git.github.io/images/hugo-sakura.webp">
+        <img src="https://k-kaz-git.github.io/images/hugo-sakura.webp" class="card-img" alt="">
       </picture>
     </div>
+    
   <article class="card-body">
-    <h2 class="card-title">Hugo Update V0.122.0</h2>
-    <p class="card-text">Update後の修正</p>
+    <h2 class="card-title">さくらインターネットでHugoを使いたい</h2>
+    <p class="card-text">苦労したのよ</p>
     <div class="card-subtext muted-text">
-      <p>Posted <time datetime="2024-02-09">2024-02-09</time>
-        / Updated 2024-02-13</p>
+      <p>Posted <time datetime="2023-10-27">2023-10-27</time>
+      / Updated 2023-10-27</p>
     </div>
     <div class="card-subtext muted-text li-line">
-        <span class="box-gray">homepage</span> 
-         <span class="box-gray">#hugo</span> <span class="box-gray">#theme</span> <span class="box-gray">#pagermod</span> 
-    </div>
-  </article>
-</a><a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
-  href="https://k-kaz-git.github.io/post/hugo-section/" class="card blog-card" rel="bookmark" >
-    <div class="card-img-container">
-      <picture>
-        <source srcset="https://k-kaz-git.github.io/images/divider-800.webp" type="image/webp">
-        <source srcset="https://k-kaz-git.github.io/images/divider-800.webp">
-        <img src="https://k-kaz-git.github.io/images/divider-800.webp" class="card-img" alt="セクション">
-      </picture>
-    </div>
-  <article class="card-body">
-    <h2 class="card-title">Hugo Section</h2>
-    <p class="card-text">いまいち分からんセクションの話</p>
-    <div class="card-subtext muted-text">
-      <p>Posted <time datetime="2020-11-11">2020-11-11</time>
-        / Updated 2020-11-11</p>
-    </div>
-    <div class="card-subtext muted-text li-line">
-        <span class="box-gray">homepage</span> 
-         <span class="box-gray">#hugo</span> <span class="box-gray">#theme</span> <span class="box-gray">#pagermod</span> 
-    </div>
-  </article>
-</a><a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
-  href="https://k-kaz-git.github.io/post/hugo-custom-theme-pagermod/" class="card blog-card" rel="bookmark" >
-    <div class="card-img-container">
-      <picture>
-        <source srcset="https://k-kaz-git.github.io/images/hugo-custom-theme-pagermod.webp" type="image/webp">
-        <source srcset="https://k-kaz-git.github.io/images/hugo-custom-theme-pagermod.webp">
-        <img src="https://k-kaz-git.github.io/images/hugo-custom-theme-pagermod.webp" class="card-img" alt="雑誌とコーヒー">
-      </picture>
-    </div>
-  <article class="card-body">
-    <h2 class="card-title">テーマ Pagermod のカスタマイズ</h2>
-    <p class="card-text">Pagermod を自分好みにしていくよ。</p>
-    <div class="card-subtext muted-text">
-      <p>Posted <time datetime="2020-10-28">2020-10-28</time>
-        / Updated 2020-11-02</p>
-    </div>
-    <div class="card-subtext muted-text li-line">
-        <span class="box-gray">homepage</span> 
-         <span class="box-gray">#hugo</span> <span class="box-gray">#theme</span> <span class="box-gray">#pagermod</span> 
+      <span class="box-gray">homepage</span> 
+      <span class="box-gray">#hugo</span> 
     </div>
   </article>
 </a>
-    </main>
-    
+      
+      <a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
+  href="https://k-kaz-git.github.io/" class="card home-card" style="background-image: url( https://k-kaz-git.github.io/img/grey-cloud.jpg )" rel="bookmark" >
+  Home
+</a>
+    </nav>
     <footer>
     <p style="text-align: center">姉妹サイト<br><a class="btn-link" href="https://k-kaz.net/" target="_blank">k-kaz ブログ</a></p>
 </footer>

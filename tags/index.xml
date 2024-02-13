@@ -5,16 +5,30 @@
     <description>Recent content in Tags on k-kaz が Hugo で遊ぶサイト</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Fri, 27 Oct 2023 12:44:27 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 09 Feb 2024 21:22:29 +0900</lastBuildDate>
     
         <atom:link href="https://k-kaz-git.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>hugo</title>
       <link>https://k-kaz-git.github.io/tags/hugo/</link>
-      <pubDate>Fri, 27 Oct 2023 12:44:27 +0900</pubDate>
+      <pubDate>Fri, 09 Feb 2024 21:22:29 +0900</pubDate>
       
       <guid>https://k-kaz-git.github.io/tags/hugo/</guid>
+      <description></description>
+    </item><item>
+      <title>pagermod</title>
+      <link>https://k-kaz-git.github.io/tags/pagermod/</link>
+      <pubDate>Fri, 09 Feb 2024 21:22:29 +0900</pubDate>
+      
+      <guid>https://k-kaz-git.github.io/tags/pagermod/</guid>
+      <description></description>
+    </item><item>
+      <title>theme</title>
+      <link>https://k-kaz-git.github.io/tags/theme/</link>
+      <pubDate>Fri, 09 Feb 2024 21:22:29 +0900</pubDate>
+      
+      <guid>https://k-kaz-git.github.io/tags/theme/</guid>
       <description></description>
     </item><item>
       <title>mermaid</title>
@@ -22,13 +36,6 @@
       <pubDate>Mon, 17 Apr 2023 12:55:42 +0900</pubDate>
       
       <guid>https://k-kaz-git.github.io/tags/mermaid/</guid>
-      <description></description>
-    </item><item>
-      <title>theme</title>
-      <link>https://k-kaz-git.github.io/tags/theme/</link>
-      <pubDate>Mon, 17 Apr 2023 12:55:42 +0900</pubDate>
-      
-      <guid>https://k-kaz-git.github.io/tags/theme/</guid>
       <description></description>
     </item><item>
       <title>vscode</title>
@@ -50,13 +57,6 @@
       <pubDate>Tue, 23 Nov 2021 19:07:07 +0900</pubDate>
       
       <guid>https://k-kaz-git.github.io/tags/svg/</guid>
-      <description></description>
-    </item><item>
-      <title>pagermod</title>
-      <link>https://k-kaz-git.github.io/tags/pagermod/</link>
-      <pubDate>Wed, 11 Nov 2020 09:12:59 +0900</pubDate>
-      
-      <guid>https://k-kaz-git.github.io/tags/pagermod/</guid>
       <description></description>
     </item><item>
       <title>categories</title>

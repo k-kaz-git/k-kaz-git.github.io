@@ -5,11 +5,18 @@
     <description>Recent content in homepage on k-kaz が Hugo で遊ぶサイト</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Fri, 27 Oct 2023 12:44:27 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 09 Feb 2024 21:22:29 +0900</lastBuildDate>
     
         <atom:link href="https://k-kaz-git.github.io/categories/homepage/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Hugo Update V0.122.0</title>
+      <link>https://k-kaz-git.github.io/post/hugo-new-version-v0.122.0/</link>
+      <pubDate>Fri, 09 Feb 2024 21:22:29 +0900</pubDate>
+      
+      <guid>https://k-kaz-git.github.io/post/hugo-new-version-v0.122.0/</guid>
+      <description>Update後の修正</description>
+    </item><item>
       <title>さくらインターネットでHugoを使いたい</title>
       <link>https://k-kaz-git.github.io/post/hugo-sakura/</link>
       <pubDate>Fri, 27 Oct 2023 12:44:27 +0900</pubDate>
@@ -72,13 +79,6 @@
       
       <guid>https://k-kaz-git.github.io/post/hugo-taxonomy/</guid>
       <description>タグとかカテゴリとかの一覧を表示したい</description>
-    </item><item>
-      <title>テーマ Pagermod のカスタマイズ</title>
-      <link>https://k-kaz-git.github.io/post/hugo-custom-theme-pagermod/</link>
-      <pubDate>Wed, 28 Oct 2020 12:32:55 +0900</pubDate>
-      
-      <guid>https://k-kaz-git.github.io/post/hugo-custom-theme-pagermod/</guid>
-      <description>Pagermod を自分好みにしていくよ。</description>
     </item>
   </channel>
 </rss>
