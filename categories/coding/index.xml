@@ -5,11 +5,18 @@
     <description>Recent content in coding on k-kaz が Hugo で遊ぶサイト</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Wed, 15 Feb 2023 12:43:28 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 20 Feb 2024 08:43:46 +0900</lastBuildDate>
     
         <atom:link href="https://k-kaz-git.github.io/categories/coding/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Hugoにコメント機能を付ける（giscus編）</title>
+      <link>https://k-kaz-git.github.io/post/hugo-comment-giscus/</link>
+      <pubDate>Tue, 20 Feb 2024 08:43:46 +0900</pubDate>
+      
+      <guid>https://k-kaz-git.github.io/post/hugo-comment-giscus/</guid>
+      <description>giscusにしてみました。</description>
+    </item><item>
       <title>VSCode 小ネタ</title>
       <link>https://k-kaz-git.github.io/post/vscode/</link>
       <pubDate>Wed, 15 Feb 2023 12:43:28 +0900</pubDate>

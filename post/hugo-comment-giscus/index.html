@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Hugoにコメント機能を付ける（giscus編） &middot; k-kaz が Hugo で遊ぶサイト</title>
+  
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-K8B8MR2Z');</script>
+  
+  <meta name="description" content="giscusにしてみました。" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <link href="https://k-kaz-git.github.io/css/katex.css" rel="stylesheet">
+  
+  
+  
+  
+  <link href="https://k-kaz-git.github.io/css/concated.min.css" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="https://k-kaz-git.github.io/sass/main.fcdea0c4becd73f2e3b2312b85bcd7ba626d441c1cde1e1b8046a6afcc4e22b8.css">
+
+  
+  
+</head>
+  <body class="single-body">
+      
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8B8MR2Z"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  
+<nav class="nav-bar side-padding">
+  <h1 class="nav-header"><a href="https://k-kaz-git.github.io/" class="nav-text">k-kaz が Hugo で遊ぶサイト</a></h1>
+  <div class="hamburger-menu">
+    <button onclick="hamburgerMenuPressed.call(this)" aria-haspopup="true" aria-expanded="false" aria-controls="menu" aria-label="Menu">
+      <span></span>
+      <span></span>
+    </button>
+    <ul id="menu" class="hamburger-menu-overlay">
+      <li><a href="https://k-kaz-git.github.io/" class="hamburger-menu-overlay-link">Home</a></li>
+      <li class="navi-menu">- Categories -</li>
+      <li style="font-size: 0.7em;"><a href="https://k-kaz-git.github.io/categories/coding" class="hamburger-menu-overlay-link">Coding</a></li><li style="font-size: 0.7em;"><a href="https://k-kaz-git.github.io/categories/homepage" class="hamburger-menu-overlay-link">Homepage</a></li><li style="font-size: 0.7em;"><a href="https://k-kaz-git.github.io/categories/linux" class="hamburger-menu-overlay-link">Linux</a></li>
+      <li class="navi-menu">- Tags -</li>
+      <li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/aether" class="hamburger-menu-overlay-link">Aether</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/categories" class="hamburger-menu-overlay-link">Categories</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/css" class="hamburger-menu-overlay-link">Css</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/cupper" class="hamburger-menu-overlay-link">Cupper</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/favicon" class="hamburger-menu-overlay-link">Favicon</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/github" class="hamburger-menu-overlay-link">Github</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/github-pages" class="hamburger-menu-overlay-link">Github pages</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/hugo" class="hamburger-menu-overlay-link">Hugo</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/markdown" class="hamburger-menu-overlay-link">Markdown</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/mermaid" class="hamburger-menu-overlay-link">Mermaid</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/mozc" class="hamburger-menu-overlay-link">Mozc</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/netlify" class="hamburger-menu-overlay-link">Netlify</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/pagermod" class="hamburger-menu-overlay-link">Pagermod</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/saas" class="hamburger-menu-overlay-link">Saas</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/sass" class="hamburger-menu-overlay-link">Sass</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/shortcodes" class="hamburger-menu-overlay-link">Shortcodes</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/snippet" class="hamburger-menu-overlay-link">Snippet</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/stylesheet" class="hamburger-menu-overlay-link">Stylesheet</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/svg" class="hamburger-menu-overlay-link">Svg</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/tableofcontents" class="hamburger-menu-overlay-link">Tableofcontents</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/tags" class="hamburger-menu-overlay-link">Tags</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/theme" class="hamburger-menu-overlay-link">Theme</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/vscode" class="hamburger-menu-overlay-link">Vscode</a></li>
+    </ul>
+  </div>
+</nav>
+    <main class="content side-text-padding">
+      <article class="post ">
+        <header class="post-header">
+        	<h1 class="post-title">Hugoにコメント機能を付ける（giscus編）</h1>
+          <p class="post-date">
+            Posted <time datetime="2024-02-20">2024-02-20</time>
+             / Update 2024-02-20</p>
+             <div class="card-subtext muted-text li-line">
+               <a class="cat" href="/categories/homepage">homepage</a> <a class="cat" href="/categories/coding">coding</a>
+               <a class="tag" href="/tags/hugo">#hugo</a>  <a class="tag" href="/tags/theme">#theme</a> 
+             </div>
+        </header>
+        
+        <picture class="post-figure">
+            <source srcset="https://k-kaz-git.github.io/images/speech-bubbles_640.webp" type="image/webp">
+            <source srcset="https://k-kaz-git.github.io/images/speech-bubbles_640.webp">
+          <img src="https://k-kaz-git.github.io/images/speech-bubbles_640.webp" alt="">
+        </picture>
+        
+        <aside>
+          <h2>目次</h2>
+            <nav id="TableOfContents">
+  <ul>
+    <li><a href="#utterancesからgiscusへ">utterancesからgiscusへ</a></li>
+    <li><a href="#giscusって">giscusって？</a></li>
+    <li><a href="#giscus-設定手順">giscus 設定手順</a>
+      <ul>
+        <li><a href="#github">GitHub</a></li>
+        <li><a href="#giscusアプリ">giscusアプリ</a></li>
+        <li><a href="#hugo">Hugo</a></li>
+      </ul>
+    </li>
+    <li><a href="#所感">所感</a></li>
+  </ul>
+</nav>
+        </aside>
+        <h2 id="utterancesからgiscusへ">utterancesからgiscusへ</h2>
+<p>以前、コメント欄を付けるぞとこんな記事を書きました。</p>
+<p><a href="../hugo-comment">Hugoにコメント機能を付ける</a>
+</p>
+<p>その際、GitHubのIssuesにコメントを保管する <a href="https://utteranc.es/" target="_blank">utterances</a>
+ という機能を利用しました。</p>
+<p>今回、その <a href="https://utteranc.es/" target="_blank">utterances</a>
+ から着想を得たという <a href="https://giscus.app/ja" target="_blank">giscus</a>
+ を利用してみることにしました。<br>
+1年間で1件もコメントが来ていないのに変更するという・・・。</p>
+<h2 id="giscusって">giscusって？</h2>
+<p><a href="https://utteranc.es/" target="_blank">utterances</a>
+ とよく似ています。<br>
+giscusは、GitHubのDiscussions機能を使います。</p>
+<p>ということは、こちらもコメント投稿時にGitHubアカウントが必要となります。</p>
+<h2 id="giscus-設定手順">giscus 設定手順</h2>
+<h3 id="github">GitHub</h3>
+<h4 id="アカウント取得とリポジトリ作成">アカウント取得とリポジトリ作成</h4>
+<ul>
+<li>GitHubアカウントの取得</li>
+<li>コメント格納用リポジトリを作成</li>
+</ul>
+<p>これらは前回とまったく同じなので、下記参照ください。</p>
+<p><a href="https://k-kaz-git.github.io/post/hugo-comment/#github%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E3%81%AE%E5%8F%96%E5%BE%97" target="_blank">GitHubアカウントの取得｜Hugoにコメント機能を付ける</a>
+<br>
+<a href="https://k-kaz-git.github.io/post/hugo-comment/#%E3%82%B3%E3%83%A1%E3%83%B3%E3%83%88%E6%A0%BC%E7%B4%8D%E7%94%A8%E3%83%AA%E3%83%9D%E3%82%B8%E3%83%88%E3%83%AA%E3%82%92%E4%BD%9C%E6%88%90" target="_blank">コメント格納用リポジトリを作成｜Hugoにコメント機能を付ける</a>
+</p>
+<h4 id="補足">補足</h4>
+<ul>
+<li>リポジトリの方は、公開設定（Public）にしておくことをお忘れなく。</li>
+<li><a href="https://utteranc.es/" target="_blank">utterances</a>
+ 等ですでにリポジトリを作ってあれば流用可能です。</li>
+<li>Issuesに入っているコメントをDiscussionsへ移行する方法もあります。<br>
+<a href="https://docs.github.com/en/discussions/managing-discussions-for-your-community/moderating-discussions#converting-an-issue-to-a-discussion" target="_blank">Moderating discussions - GitHub Docs</a>
+</li>
+</ul>
+<h4 id="discussionsを有効にする">Discussionsを有効にする</h4>
+<p>コメント格納用リポジトリで、Discussionsの機能を有効にします。</p>
+<ol>
+<li>Settingsへ移動</li>
+<li>General内のFeaturesにあるDiscussionsを有効</li>
+</ol>
+<h3 id="giscusアプリ">giscusアプリ</h3>
+<h4 id="インストール">インストール</h4>
+<ol>
+<li><a href="https://github.com/apps/giscus" target="_blank">GitHub Apps - giscus</a>
+ へ移動</li>
+<li>インストール
+<ul>
+<li>インストール先は今回のリポジトリを選択</li>
+</ul>
+</li>
+</ol>
+<h4 id="設定コード取得">設定（コード取得）</h4>
+<ol>
+<li><a href="https://giscus.app/ja" target="_blank">giscus</a>
+ へ移動</li>
+<li>自分好みに設定</li>
+<li>出来上がったコードを控える</li>
+</ol>
+<h3 id="hugo">Hugo</h3>
+<h4 id="コード挿入">コード挿入</h4>
+<ol>
+<li>コメント機能を表示したい場所へ先程のコードを挿入</li>
+</ol>
+<p>私の場合は、記事の下に入れるため <code>single.html</code> の最後に入れました。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#75715e">// single.html
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>{{<span style="color:#f92672">-</span> <span style="color:#66d9ef">if</span> (.<span style="color:#a6e22e">Param</span> <span style="color:#e6db74">&#34;comments&#34;</span>) }}
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://giscus.app/client.js&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">data</span><span style="color:#f92672">-</span><span style="color:#a6e22e">repo</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;hoge/hoge-repo&#34;</span> <span style="color:#75715e">//ユーザー名と保管用リポジトリ名
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">data</span><span style="color:#f92672">-</span><span style="color:#a6e22e">repo</span><span style="color:#f92672">-</span><span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;hoge-ID&#34;</span> <span style="color:#75715e">//自動発行されるID
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">data</span><span style="color:#f92672">-</span><span style="color:#a6e22e">category</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Announcements&#34;</span> <span style="color:#75715e">//Discussions内でどのカテゴリに保管するか
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">data</span><span style="color:#f92672">-</span><span style="color:#a6e22e">category</span><span style="color:#f92672">-</span><span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;hoge-ID&#34;</span> <span style="color:#75715e">//カテゴリのID
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">data</span><span style="color:#f92672">-</span><span style="color:#a6e22e">mapping</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;title&#34;</span> <span style="color:#75715e">//保管時、表題となるもの（タイトル、URL等）
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">data</span><span style="color:#f92672">-</span><span style="color:#a6e22e">strict</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;0&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">data</span><span style="color:#f92672">-</span><span style="color:#a6e22e">reactions</span><span style="color:#f92672">-</span><span style="color:#a6e22e">enabled</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;1&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">data</span><span style="color:#f92672">-</span><span style="color:#a6e22e">emit</span><span style="color:#f92672">-</span><span style="color:#a6e22e">metadata</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;0&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">data</span><span style="color:#f92672">-</span><span style="color:#a6e22e">input</span><span style="color:#f92672">-</span><span style="color:#a6e22e">position</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;bottom&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">data</span><span style="color:#f92672">-</span><span style="color:#a6e22e">theme</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;preferred_color_scheme&#34;</span> <span style="color:#75715e">//テーマカラー
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">data</span><span style="color:#f92672">-</span><span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;ja&#34;</span> <span style="color:#75715e">//日本語
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">data</span><span style="color:#f92672">-</span><span style="color:#a6e22e">loading</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;lazy&#34;</span> <span style="color:#75715e">//遅延読み込み機能有効
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">crossorigin</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;anonymous&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">async</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/script&gt;</span>
+</span></span><span style="display:flex;"><span>{{<span style="color:#f92672">-</span> <span style="color:#a6e22e">end</span> }}
+</span></span></code></pre></div><p>コメントで説明を入れてみましたが、違っていたらすいません。</p>
+<p>先程取得したコードをそのまま使っています。<br>
+修正など不要で利用できています。ありがたや。</p>
+<h2 id="所感">所感</h2>
+<p>難しいことは何もなく、簡単にコメント機能の設置ができました。</p>
+<p>今回設置したのは下記サイトになります。<br>
+<a href="https://k-kaz.net/blog2/" target="_blank">k-kaz が好きなことを書く</a>
+</p>
+
+      </article>
+      <hr>
+      <p class="post-date">
+        Posted <time datetime="2024-02-20">2024-02-20</time>
+         / Update 2024-02-20</p>
+         <div class="card-subtext muted-text li-line">
+           <a class="cat" href="/categories/homepage">homepage</a> <a class="cat" href="/categories/coding">coding</a>
+           <a class="tag" href="/tags/hugo">#hugo</a>  <a class="tag" href="/tags/theme">#theme</a> 
+         </div>
+    </main>
+    <nav class="end-nav side-padding">
+      
+      <a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
+  href="https://k-kaz-git.github.io/post/hugo-new-version-v0.122.0/" class="card blog-card" rel="bookmark" >
+    
+    <div class="card-img-container">
+      <p class="card-img-overlay">Next Article</p>
+      <picture>
+        
+        <source srcset="https://k-kaz-git.github.io/images/hugo-logo-wide.svg">
+        <img src="https://k-kaz-git.github.io/images/hugo-logo-wide.svg" class="card-img" alt="Hugoのイメージ画像">
+      </picture>
+    </div>
+    
+  <article class="card-body">
+    <h2 class="card-title">Hugo Update V0.122.0</h2>
+    <p class="card-text">Update後の修正</p>
+    <div class="card-subtext muted-text">
+      <p>Posted <time datetime="2024-02-09">2024-02-09</time>
+      / Updated 2024-02-13</p>
+    </div>
+    <div class="card-subtext muted-text li-line">
+      <span class="box-gray">homepage</span> 
+      <span class="box-gray">#hugo</span> <span class="box-gray">#theme</span> <span class="box-gray">#pagermod</span> 
+    </div>
+  </article>
+</a>
+      
+      <a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
+  href="https://k-kaz-git.github.io/" class="card home-card" style="background-image: url( https://k-kaz-git.github.io/img/grey-cloud.jpg )" rel="bookmark" >
+  Home
+</a>
+    </nav>
+    <footer>
+    <p style="text-align: center">姉妹サイト<br><a class="btn-link" href="https://k-kaz.net/" target="_blank">k-kaz ブログ</a></p>
+</footer>
+    
+  <script defer src="https://k-kaz-git.github.io/js/katex.js"></script>
+
+
+  <script defer src="https://k-kaz-git.github.io/js/auto-render.js" onload="renderMathInElement(document.body);"></script>
+
+
+<script src="https://k-kaz-git.github.io/js/core.min.js"></script>
+
+  </body>
+</html>
