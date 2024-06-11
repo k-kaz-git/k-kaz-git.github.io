@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>リスト表示とシングル表示にタグを付ける &middot; k-kaz が Hugo で遊ぶサイト</title>
+  
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-K8B8MR2Z');</script>
+  
+  <meta name="description" content="" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <link href="http://localhost:1313/css/katex.css" rel="stylesheet">
+  
+  
+  
+  
+  <link href="http://localhost:1313/css/concated.min.css" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/sass/main.fcdea0c4becd73f2e3b2312b85bcd7ba626d441c1cde1e1b8046a6afcc4e22b8.css">
+
+  
+  
+
+
+  
+</head>
+  <body class="single-body">
+      
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8B8MR2Z"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  
+<nav class="nav-bar side-padding">
+  <h1 class="nav-header"><a href="http://localhost:1313/" class="nav-text">k-kaz が Hugo で遊ぶサイト</a></h1>
+  <div class="hamburger-menu">
+    <button onclick="hamburgerMenuPressed.call(this)" aria-haspopup="true" aria-expanded="false" aria-controls="menu" aria-label="Menu">
+      <span></span>
+      <span></span>
+    </button>
+    <ul id="menu" class="hamburger-menu-overlay">
+      <li><a href="http://localhost:1313/" class="hamburger-menu-overlay-link">Home</a></li>
+      <li class="navi-menu">- Categories -</li>
+      <li style="font-size: 0.7em;"><a href="http://localhost:1313/categories/coding" class="hamburger-menu-overlay-link">Coding</a></li><li style="font-size: 0.7em;"><a href="http://localhost:1313/categories/homepage" class="hamburger-menu-overlay-link">Homepage</a></li><li style="font-size: 0.7em;"><a href="http://localhost:1313/categories/linux" class="hamburger-menu-overlay-link">Linux</a></li>
+      <li class="navi-menu">- Tags -</li>
+      <li style="font-size: 0.5em;"><a href="http://localhost:1313/tags/aether" class="hamburger-menu-overlay-link">Aether</a></li><li style="font-size: 0.5em;"><a href="http://localhost:1313/tags/categories" class="hamburger-menu-overlay-link">Categories</a></li><li style="font-size: 0.5em;"><a href="http://localhost:1313/tags/css" class="hamburger-menu-overlay-link">Css</a></li><li style="font-size: 0.5em;"><a href="http://localhost:1313/tags/cupper" class="hamburger-menu-overlay-link">Cupper</a></li><li style="font-size: 0.5em;"><a href="http://localhost:1313/tags/favicon" class="hamburger-menu-overlay-link">Favicon</a></li><li style="font-size: 0.5em;"><a href="http://localhost:1313/tags/github" class="hamburger-menu-overlay-link">Github</a></li><li style="font-size: 0.5em;"><a href="http://localhost:1313/tags/github-pages" class="hamburger-menu-overlay-link">Github pages</a></li><li style="font-size: 0.5em;"><a href="http://localhost:1313/tags/hugo" class="hamburger-menu-overlay-link">Hugo</a></li><li style="font-size: 0.5em;"><a href="http://localhost:1313/tags/markdown" class="hamburger-menu-overlay-link">Markdown</a></li><li style="font-size: 0.5em;"><a href="http://localhost:1313/tags/mermaid" class="hamburger-menu-overlay-link">Mermaid</a></li><li style="font-size: 0.5em;"><a href="http://localhost:1313/tags/mozc" class="hamburger-menu-overlay-link">Mozc</a></li><li style="font-size: 0.5em;"><a href="http://localhost:1313/tags/netlify" class="hamburger-menu-overlay-link">Netlify</a></li><li style="font-size: 0.5em;"><a href="http://localhost:1313/tags/pagermod" class="hamburger-menu-overlay-link">Pagermod</a></li><li style="font-size: 0.5em;"><a href="http://localhost:1313/tags/saas" class="hamburger-menu-overlay-link">Saas</a></li><li style="font-size: 0.5em;"><a href="http://localhost:1313/tags/sass" class="hamburger-menu-overlay-link">Sass</a></li><li style="font-size: 0.5em;"><a href="http://localhost:1313/tags/shortcodes" class="hamburger-menu-overlay-link">Shortcodes</a></li><li style="font-size: 0.5em;"><a href="http://localhost:1313/tags/snippet" class="hamburger-menu-overlay-link">Snippet</a></li><li style="font-size: 0.5em;"><a href="http://localhost:1313/tags/stylesheet" class="hamburger-menu-overlay-link">Stylesheet</a></li><li style="font-size: 0.5em;"><a href="http://localhost:1313/tags/svg" class="hamburger-menu-overlay-link">Svg</a></li><li style="font-size: 0.5em;"><a href="http://localhost:1313/tags/tableofcontents" class="hamburger-menu-overlay-link">Tableofcontents</a></li><li style="font-size: 0.5em;"><a href="http://localhost:1313/tags/tags" class="hamburger-menu-overlay-link">Tags</a></li><li style="font-size: 0.5em;"><a href="http://localhost:1313/tags/theme" class="hamburger-menu-overlay-link">Theme</a></li><li style="font-size: 0.5em;"><a href="http://localhost:1313/tags/vscode" class="hamburger-menu-overlay-link">Vscode</a></li>
+    </ul>
+  </div>
+</nav>
+    <main class="content side-text-padding">
+      <article class="post ">
+        <header class="post-header">
+        	<h1 class="post-title">リスト表示とシングル表示にタグを付ける</h1>
+          <p class="post-date">
+            Posted <time datetime="2024-06-11">2024-06-11</time>
+             / Update 2024-06-11</p>
+             <div class="card-subtext muted-text li-line">
+               <a class="cat" href="/categories/homepage">homepage</a>
+               <a class="tag" href="/tags/hugo">#hugo</a>  <a class="tag" href="/tags/theme">#theme</a> 
+             </div>
+        </header>
+        
+        <picture class="post-figure">
+            <source srcset="http://localhost:1313/images/tag_720.webp" type="image/webp">
+            <source srcset="http://localhost:1313/images/tag_720.webp">
+          <img src="http://localhost:1313/images/tag_720.webp" alt="タグのイメージ">
+        </picture>
+        
+        <aside>
+          <h2>目次</h2>
+            <nav id="TableOfContents">
+  <ul>
+    <li><a href="#前提">前提</a></li>
+    <li><a href="#discussionsを見て">Discussionsを見て</a></li>
+    <li><a href="#完成形">完成形</a></li>
+    <li><a href="#やり方">やり方</a>
+      <ul>
+        <li><a href="#設定されたタグを抜き出す部品tagshtmlを用意する">設定されたタグを抜き出す部品（tags.html）を用意する</a></li>
+        <li><a href="#表示するための部品post_meta_cattaghtmlを用意する">表示するための部品（post_meta_cattag.html）を用意する</a></li>
+        <li><a href="#リスト表示listhtmlの画面に表示する">リスト表示（list.html）の画面に表示する</a></li>
+        <li><a href="#おまけでシングル表示singlehtmlの上部にも表示する">おまけでシングル表示（single.html）の上部にも表示する</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+        </aside>
+        <h2 id="前提">前提</h2>
+<p>テーマはPagerModです。<br>
+&#x1f517; <a href="https://github.com/adityatelange/hugo-PaperMod/" target="_blank">adityatelange/hugo-PaperMod: A fast, clean, responsive Hugo theme.</a>
+</p>
+<h2 id="discussionsを見て">Discussionsを見て</h2>
+<p>PagerModのDiscussionsを見たら、リスト表示（list.html）にタグを入れたいという投稿がありました。<br>
+シングル記事（single.html）の本文下には元から入っているんですが、それをリストにも出したいと。</p>
+<p>&#x1f517; <a href="https://github.com/adityatelange/hugo-PaperMod/discussions/606" target="_blank">How to display tags in the post list? · adityatelange/hugo-PaperMod · Discussion #606</a>
+</p>
+<p>投稿自体は2021年と古かったのですが、最近になって解決したようでトップに上がっていました。</p>
+<h2 id="完成形">完成形</h2>
+<p>実際に行ったサイトはこちら。<br>
+&#x1f517; <a href="https://k-kaz.net/blog2/" target="_blank">k-kaz が好きなことを書く</a>
+</p>
+<p><img src="/images/hugo-tags-001.webp" alt="リスト表示">
+<img src="/images/hugo-tags-002.webp" alt="シングル表示"></p>
+<p>シングル表示のほうはそれぞれのタグにリンクが付いていて、同タグ一覧を開くことが可能です。</p>
+<h2 id="やり方">やり方</h2>
+<p>スレッドに書いてあるとおりなんですけど、</p>
+<h3 id="設定されたタグを抜き出す部品tagshtmlを用意する">設定されたタグを抜き出す部品（tags.html）を用意する</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>{{- $tags := .Params.tags -}}
+</span></span><span style="display:flex;"><span>{{- if $tags -}}
+</span></span><span style="display:flex;"><span>  {{- $lastIndex := sub (len $tags) 1 -}}
+</span></span><span style="display:flex;"><span>  {{- range $index, $tag := $tags -}}
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/blog2/tags/{{ $tag | urlize }}&#34;</span>&gt; {{ $tag }}&lt;/<span style="color:#f92672">a</span>&gt;
+</span></span><span style="display:flex;"><span>    {{- if ne $index $lastIndex }} · {{ end -}}
+</span></span><span style="display:flex;"><span>  {{- end -}}
+</span></span><span style="display:flex;"><span>{{- end -}}
+</span></span></code></pre></div><p>ファイル名はなんでもオッケー。<br>
+urlize でURLを作成します。<br>
+/blog2/ は<a href="https://k-kaz.net/blog2/" target="_blank">うちのサイト用</a>
+に入れています。</p>
+<h3 id="表示するための部品post_meta_cattaghtmlを用意する">表示するための部品（post_meta_cattag.html）を用意する</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>{{- $scratch := newScratch }}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>{{- with (partial &#34;tags.html&#34; .) }}
+</span></span><span style="display:flex;"><span>{{- $scratch.Add &#34;meta&#34; (slice &#34; / ［&#34; . &#34;］&#34;)}}
+</span></span><span style="display:flex;"><span>{{- end}}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>{{- with ($scratch.Get &#34;meta&#34;) }}
+</span></span><span style="display:flex;"><span>{{- delimit . &#34; &#34; | safeHTML -}}
+</span></span><span style="display:flex;"><span>{{- end -}}
+</span></span></code></pre></div><p>こちらのファイル名もなんでもオッケー。<br>
+中ではさきほど作成したファイル名 <code>tags.html</code> を利用しています。</p>
+<h3 id="リスト表示listhtmlの画面に表示する">リスト表示（list.html）の画面に表示する</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>  {{- if not (.Param &#34;hideMeta&#34;) }}
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">footer</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;entry-footer&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    {{- partial &#34;post_meta.html&#34; . -}}
+</span></span><span style="display:flex;"><span>    {{- partial &#34;post_meta_cattag.html&#34; . -}}
+</span></span><span style="display:flex;"><span>  &lt;/<span style="color:#f92672">footer</span>&gt;
+</span></span><span style="display:flex;"><span>  {{- end }}
+</span></span></code></pre></div><p>一部分だけ抜き出しましたが、<code>{{- partial &quot;post_meta_cattag.html&quot; . -}}</code> を追加します。</p>
+<h3 id="おまけでシングル表示singlehtmlの上部にも表示する">おまけでシングル表示（single.html）の上部にも表示する</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;post-meta&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>      {{- partial &#34;post_meta.html&#34; . -}}
+</span></span><span style="display:flex;"><span>      {{- partial &#34;post_meta_cattag.html&#34; . -}}
+</span></span><span style="display:flex;"><span>      {{- partial &#34;translation_list.html&#34; . -}}
+</span></span><span style="display:flex;"><span>      {{- partial &#34;edit_post.html&#34; . -}}
+</span></span><span style="display:flex;"><span>      {{- partial &#34;post_canonical.html&#34; . -}}
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">div</span>&gt;
+</span></span></code></pre></div><p>こちらも一部分だけ抜き出し。<br>
+<code>{{- partial &quot;post_meta_cattag.html&quot; . -}}</code> を追加します。</p>
+
+      </article>
+      <hr>
+      <p class="post-date">
+        Posted <time datetime="2024-06-11">2024-06-11</time>
+         / Update 2024-06-11</p>
+         <div class="card-subtext muted-text li-line">
+           <a class="cat" href="/categories/homepage">homepage</a>
+           <a class="tag" href="/tags/hugo">#hugo</a>  <a class="tag" href="/tags/theme">#theme</a> 
+         </div>
+    </main>
+    <nav class="end-nav side-padding">
+      
+      <a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
+  href="http://localhost:1313/post/hugo-comment-giscus/" class="card blog-card" rel="bookmark" >
+    
+    <div class="card-img-container">
+      <p class="card-img-overlay">Next Article</p>
+      <picture>
+        <source srcset="http://localhost:1313/images/speech-bubbles_640.webp" type="image/webp">
+        <source srcset="http://localhost:1313/images/speech-bubbles_640.webp">
+        <img src="http://localhost:1313/images/speech-bubbles_640.webp" class="card-img" alt="">
+      </picture>
+    </div>
+    
+  <article class="card-body">
+    <h2 class="card-title">Hugoにコメント機能を付ける（giscus編）</h2>
+    <p class="card-text">giscusにしてみました。</p>
+    <div class="card-subtext muted-text">
+      <p>Posted <time datetime="2024-02-20">2024-02-20</time>
+      / Updated 2024-02-20</p>
+    </div>
+    <div class="card-subtext muted-text li-line">
+      <span class="box-gray">homepage</span> <span class="box-gray">coding</span> 
+      <span class="box-gray">#hugo</span> <span class="box-gray">#theme</span> 
+    </div>
+  </article>
+</a>
+      
+      <a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
+  href="http://localhost:1313/" class="card home-card" style="background-image: url( http://localhost:1313/img/grey-cloud.jpg )" rel="bookmark" >
+  Home
+</a>
+    </nav>
+    <footer>
+    <p style="text-align: center">姉妹サイト<br><a class="btn-link" href="https://k-kaz.net/" target="_blank">k-kaz ブログ</a></p>
+</footer>
+    
+  <script defer src="http://localhost:1313/js/katex.js"></script>
+
+
+  <script defer src="http://localhost:1313/js/auto-render.js" onload="renderMathInElement(document.body);"></script>
+
+
+<script src="http://localhost:1313/js/core.min.js"></script>
+
+  </body>
+</html>
