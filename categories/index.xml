@@ -5,23 +5,23 @@
     <description>Recent content in Categories on k-kaz が Hugo で遊ぶサイト</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Tue, 20 Feb 2024 08:43:46 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 10 Jun 2024 21:05:42 +0900</lastBuildDate>
     
         <atom:link href="https://k-kaz-git.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Homepage</title>
+      <link>https://k-kaz-git.github.io/categories/homepage/</link>
+      <pubDate>Mon, 10 Jun 2024 21:05:42 +0900</pubDate>
+      
+      <guid>https://k-kaz-git.github.io/categories/homepage/</guid>
+      <description></description>
+    </item><item>
       <title>Coding</title>
       <link>https://k-kaz-git.github.io/categories/coding/</link>
       <pubDate>Tue, 20 Feb 2024 08:43:46 +0900</pubDate>
       
       <guid>https://k-kaz-git.github.io/categories/coding/</guid>
-      <description></description>
-    </item><item>
-      <title>Homepage</title>
-      <link>https://k-kaz-git.github.io/categories/homepage/</link>
-      <pubDate>Tue, 20 Feb 2024 08:43:46 +0900</pubDate>
-      
-      <guid>https://k-kaz-git.github.io/categories/homepage/</guid>
       <description></description>
     </item><item>
       <title>Linux</title>

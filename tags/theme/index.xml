@@ -5,11 +5,18 @@
     <description>Recent content in Theme on k-kaz が Hugo で遊ぶサイト</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Tue, 20 Feb 2024 08:43:46 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 10 Jun 2024 21:05:42 +0900</lastBuildDate>
     
         <atom:link href="https://k-kaz-git.github.io/tags/theme/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>リスト表示とシングル表示にタグを付ける</title>
+      <link>https://k-kaz-git.github.io/post/hugo-tags/</link>
+      <pubDate>Mon, 10 Jun 2024 21:05:42 +0900</pubDate>
+      
+      <guid>https://k-kaz-git.github.io/post/hugo-tags/</guid>
+      <description></description>
+    </item><item>
       <title>Hugoにコメント機能を付ける（giscus編）</title>
       <link>https://k-kaz-git.github.io/post/hugo-comment-giscus/</link>
       <pubDate>Tue, 20 Feb 2024 08:43:46 +0900</pubDate>
@@ -72,13 +79,6 @@
       
       <guid>https://k-kaz-git.github.io/post/hugo-contents/</guid>
       <description>それ用のルールがあるのね。</description>
-    </item><item>
-      <title>Hugo のテーマを作ったよ。</title>
-      <link>https://k-kaz-git.github.io/post/hugo-k-kaz-theme/</link>
-      <pubDate>Mon, 18 Mar 2019 12:31:49 +0900</pubDate>
-      
-      <guid>https://k-kaz-git.github.io/post/hugo-k-kaz-theme/</guid>
-      <description>Hugo のテーマを自作してみました。途中で放り投げたけど（笑）</description>
     </item>
   </channel>
 </rss>
