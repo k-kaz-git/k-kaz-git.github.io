@@ -5,11 +5,18 @@
     <description>Recent content in Posts on k-kaz が Hugo で遊ぶサイト</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Wed, 26 Jun 2024 12:55:18 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 07 Aug 2024 08:44:45 +0900</lastBuildDate>
     
         <atom:link href="https://k-kaz-git.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Hugo Warning .Site.Social</title>
+      <link>https://k-kaz-git.github.io/post/hugo-warning-sitesocial/</link>
+      <pubDate>Wed, 07 Aug 2024 08:44:45 +0900</pubDate>
+      
+      <guid>https://k-kaz-git.github.io/post/hugo-warning-sitesocial/</guid>
+      <description>全然気付いていなかった・・・</description>
+    </item><item>
       <title>リスト表示とシングル表示にタグを付ける</title>
       <link>https://k-kaz-git.github.io/post/hugo-tags/</link>
       <pubDate>Mon, 10 Jun 2024 21:05:42 +0900</pubDate>
@@ -72,13 +79,6 @@
       
       <guid>https://k-kaz-git.github.io/post/hugo-emoji/</guid>
       <description>絵文字で雰囲気を柔らかく</description>
-    </item><item>
-      <title>Hugoにコメント機能を付ける</title>
-      <link>https://k-kaz-git.github.io/post/hugo-comment/</link>
-      <pubDate>Tue, 07 Feb 2023 12:49:20 +0900</pubDate>
-      
-      <guid>https://k-kaz-git.github.io/post/hugo-comment/</guid>
-      <description></description>
     </item>
   </channel>
 </rss>

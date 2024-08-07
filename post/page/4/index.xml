@@ -5,11 +5,18 @@
     <description>Recent content in Posts on k-kaz が Hugo で遊ぶサイト</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Wed, 26 Jun 2024 12:55:18 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 07 Aug 2024 08:44:45 +0900</lastBuildDate>
     
         <atom:link href="https://k-kaz-git.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>GitとGitHubを使ってみる</title>
+      <link>https://k-kaz-git.github.io/post/github-how-to-use/</link>
+      <pubDate>Fri, 22 Feb 2019 15:49:24 +0900</pubDate>
+      
+      <guid>https://k-kaz-git.github.io/post/github-how-to-use/</guid>
+      <description>GitとGitHubを有効活用しようと思います。</description>
+    </item><item>
       <title>VSCode のスニペットを使ってみる</title>
       <link>https://k-kaz-git.github.io/post/vscode-snippet/</link>
       <pubDate>Fri, 22 Feb 2019 08:44:41 +0900</pubDate>
@@ -72,13 +79,6 @@
       
       <guid>https://k-kaz-git.github.io/post/hello3/</guid>
       <description>ちょっとずつ、いくつか検証するのです。</description>
-    </item><item>
-      <title>Oh!</title>
-      <link>https://k-kaz-git.github.io/post/hello2/</link>
-      <pubDate>Sat, 16 Feb 2019 17:31:37 +0900</pubDate>
-      
-      <guid>https://k-kaz-git.github.io/post/hello2/</guid>
-      <description>とりあえず、いくつか記事をアップする練習</description>
     </item>
   </channel>
 </rss>
