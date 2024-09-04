@@ -1,21 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Favicon - k-kaz が Hugo で遊ぶサイト</title>
-    <link>https://k-kaz-git.github.io/tags/favicon/</link>
-    <description>Recent content in Favicon on k-kaz が Hugo で遊ぶサイト</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>ja</language>
-    <lastBuildDate>Sun, 10 Mar 2019 06:37:26 +0900</lastBuildDate>
-    
-        <atom:link href="https://k-kaz-git.github.io/tags/favicon/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>ファビコンを作るよ。</title>
-      <link>https://k-kaz-git.github.io/post/favicon-generator/</link>
-      <pubDate>Sun, 10 Mar 2019 06:37:26 +0900</pubDate>
-      
-      <guid>https://k-kaz-git.github.io/post/favicon-generator/</guid>
-      <description>Favicon Generator を使って、ファビコンを作りましょう。</description>
-    </item>
-  </channel>
+    <channel>
+        <title>Favicon on k-kaz が Hugo で遊ぶサイト</title>
+        <link>https://k-kaz-git.github.io/tags/favicon/</link>
+        <description>Recent content in Favicon on k-kaz が Hugo で遊ぶサイト</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>ja</language>
+        <copyright>k-kaz</copyright>
+        <lastBuildDate>Sun, 10 Mar 2019 06:37:26 +0900</lastBuildDate><atom:link href="https://k-kaz-git.github.io/tags/favicon/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>ファビコンを作るよ。</title>
+        <link>https://k-kaz-git.github.io/p/%E3%83%95%E3%82%A1%E3%83%93%E3%82%B3%E3%83%B3%E3%82%92%E4%BD%9C%E3%82%8B%E3%82%88/</link>
+        <pubDate>Sun, 10 Mar 2019 06:37:26 +0900</pubDate>
+        
+        <guid>https://k-kaz-git.github.io/p/%E3%83%95%E3%82%A1%E3%83%93%E3%82%B3%E3%83%B3%E3%82%92%E4%BD%9C%E3%82%8B%E3%82%88/</guid>
+        <description>&lt;img src="https://k-kaz-git.github.io/images/icon-sns_640.webp" alt="Featured image of post ファビコンを作るよ。" /&gt;&lt;h2 id=&#34;ファビコンって&#34;&gt;ファビコンって？
+&lt;/h2&gt;&lt;p&gt;ブラウザでサイトを開いた時に、タブに表示される小さなアイコンです。&lt;br&gt;
+他にもブックマークとして保存したり、デスクトップにショートカットを作ったりするときにも使用されます。&lt;/p&gt;
+&lt;p&gt;うちのサイトだとこういうの。&lt;br&gt;
+&lt;img src=&#34;https://k-kaz-git.github.io/images/favicon-k-kaz.webp&#34; alt=&#34;faviconイメージ画像&#34; style=&#34;width:128px;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;昔は、1個だけ用意しておけば良かったんですけどね。&lt;br&gt;
+今は、Windows、Mac、Android、ブラウザの違い等で、複数サイズや種類を用意する必要があります。&lt;/p&gt;
+&lt;p&gt;正直、どんなサイズや種類を用意すれば良いのか分からなくなっています（笑）&lt;br&gt;
+そして、いくつも準備するのって面倒ですよね。&lt;/p&gt;
+&lt;h2 id=&#34;ファビコンを作るサービスを使いましょう&#34;&gt;ファビコンを作るサービスを使いましょう
+&lt;/h2&gt;&lt;p&gt;ありがたいことに、基本となる画像ファイル1個だけあれば、あとはほぼお任せでファビコンを作ってくれるサイトがあります。&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://realfavicongenerator.net/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Favicon Generator. For all platforms&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;作成手順&#34;&gt;作成手順
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://realfavicongenerator.net/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Favicon Generator. For all platforms&lt;/a&gt; に行きます。&lt;/li&gt;
+&lt;li&gt;「Select your Favicon picture」というボタンをクリックします。&lt;/li&gt;
+&lt;li&gt;ファビコンとしたい画像を選択してアップします。&lt;/li&gt;
+&lt;li&gt;OS や ブラウザごとにいくつか設定がありますので、自分好みにします。&lt;/li&gt;
+&lt;li&gt;「Generate your Favicons and HTML code」というボタンをクリックします。&lt;/li&gt;
+&lt;li&gt;作成されたファビコン（zip形式）をダウンロードして完了です。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;zip を解凍すると各種ファビコンがありますので、あとはうまいことお使い下さい。&lt;br&gt;
+また、リンク指定の仕方などもサイトに表示されていますので、参考に。&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
 </rss>

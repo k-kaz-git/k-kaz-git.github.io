@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Hugo の Tips 的なものをこちらにまとめます。">
+<title>Hugo の使い方</title>
+
+<link rel='canonical' href='https://k-kaz-git.github.io/p/hugo-%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9/'>
+
+<link rel="stylesheet" href="/scss/style.min.43289f33a995fb4bc83e665a1a22504b7eecefd3dcf3f9ecc83ed51746ad75d3.css"><meta property='og:title' content="Hugo の使い方">
+<meta property='og:description' content="Hugo の Tips 的なものをこちらにまとめます。">
+<meta property='og:url' content='https://k-kaz-git.github.io/p/hugo-%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9/'>
+<meta property='og:site_name' content='k-kaz が Hugo で遊ぶサイト'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='hugo' /><meta property='article:published_time' content='2019-02-20T16:15:13&#43;09:00'/><meta property='article:modified_time' content='2019-02-20T16:15:13&#43;09:00'/><meta property='og:image' content='https://k-kaz-git.github.io/images/writing-memo-note-pen_640.webp' />
+<meta name="twitter:title" content="Hugo の使い方">
+<meta name="twitter:description" content="Hugo の Tips 的なものをこちらにまとめます。"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://k-kaz-git.github.io/images/writing-memo-note-pen_640.webp' />
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+  
+
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="メニューを開く・閉じる">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/images/android-chrome-192x192_hu5450162830773684134.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">k-kaz が Hugo で遊ぶサイト</a></h1>
+            <h2 class="site-description">Hugo関連の記事ですが、初心者なので参考になりませんよ。</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href=''
+                        target="_blank"
+                        
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>ダークモード</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目次</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#参考サイト">参考サイト</a></li>
+    <li><a href="#サイト作成">サイト作成</a></li>
+    <li><a href="#フォルダ構成例">フォルダ構成（例）</a></li>
+    <li><a href="#記事作成">記事作成</a></li>
+    <li><a href="#テーマインストール">テーマインストール</a></li>
+    <li><a href="#テーマの適用">テーマの適用</a></li>
+    <li><a href="#テーマ及びスタイルシート等の扱い">テーマ及びスタイルシート等の扱い</a></li>
+    <li><a href="#記事の公開">記事の公開</a>
+      <ol>
+        <li><a href="#記事内の修正">記事内の修正</a></li>
+        <li><a href="#github-pages-へアップgithub">GitHub Pages へアップ【GitHub】</a></li>
+      </ol>
+    </li>
+    <li><a href="#ssh接続github">ssh接続【GitHub】</a>
+      <ol>
+        <li><a href="#https-接続からssh-接続に切り替える">https 接続から、ssh 接続に切り替える</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/hugo-%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9/">
+                
+                    <img src="/images/writing-memo-note-pen_640.webp" loading="lazy" alt="Featured image of post Hugo の使い方" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/homepage/" >
+                Homepage
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/hugo-%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9/">Hugo の使い方</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            Hugo の Tips 的なものをこちらにまとめます。
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">2019/02/20</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    読了時間: 3分
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="参考サイト">参考サイト
+</h2><p><a class="link" href="https://www.google.co.jp/"  target="_blank" rel="noopener"
+    >Google先生</a><br>
+もう、検索し過ぎて、どこのサイトを参考にしたのか分からなくなりました。</p>
+<h2 id="サイト作成">サイト作成
+</h2><p>$ <code>hugo new site サイト名</code></p>
+<h2 id="フォルダ構成例">フォルダ構成（例）
+</h2><p>サイト作成をすると下記のようなフォルダ構成が作られる。<br>
+（me）と書いたところは、必要になったら自分で作成するフォルダなので、サイト名直下のフォルダまでが自動生成かな。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">    サイト名/
+</span></span><span class="line"><span class="cl">        ├ archetypes/   記事のテンプレートを入れるところ
+</span></span><span class="line"><span class="cl">        ├ content/      記事を入れるところ
+</span></span><span class="line"><span class="cl">        │   └ post/     （me）
+</span></span><span class="line"><span class="cl">        │   └ blog/     （me）
+</span></span><span class="line"><span class="cl">        ├ layouts/      テンプレートとなる HTML を入れるところ
+</span></span><span class="line"><span class="cl">        │   └ _default  （me）
+</span></span><span class="line"><span class="cl">        │   └ partials  （me）
+</span></span><span class="line"><span class="cl">        ├ public/       自動生成された公開ファイルが入るところ
+</span></span><span class="line"><span class="cl">        ├ static/       素材関係を入れるところ
+</span></span><span class="line"><span class="cl">        │   └ css/      スタイルシートを入れるところ（me）
+</span></span><span class="line"><span class="cl">        │   └ images/   画像ファイルを入れるところ（me）
+</span></span><span class="line"><span class="cl">        ├ theme/        テーマファイルを入れるところ
+</span></span><span class="line"><span class="cl">        │   └ aether/   aether というテーマのフォルダ（me）
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="記事作成">記事作成
+</h2><p>$ <code>cd サイト名</code><br>
+サイト名$ <code>hugo new post/hoge.md</code></p>
+<p><code>new</code> のあとにフォルダを指定することで、<code>content</code> 以下に自動でフォルダが作成され、その中に記事用のファイルが作られる。</p>
+<p>記事は、テンプレートからタイトル、作成時間等は自動で代入されるが、記事本文や下書き状態から公開状態への切り替えなどは自身で行う。
+Markdown 記法となるため、対応したエディタを使うと良い。</p>
+<p>ちなみに <a class="link" href="https://k-kaz.net"  title="k-kaz.net"
+     target="_blank" rel="noopener"
+    >k-kaz</a> は <a class="link" href="https://code.visualstudio.com/"  title="Visual Studio Code"
+     target="_blank" rel="noopener"
+    >VSCode</a> で編集している。</p>
+<h2 id="テーマインストール">テーマインストール
+</h2><p>テーマサイトの中から、好きなタイプのものを選択する。
+選択後、テーマの詳細が表示されるので、自分が使いたい機能が搭載されているか、事前にチェックする。（最悪、テーマを使わず、自力で機能搭載）</p>
+<p>そのページにはインストールの仕方も書いてあるが、<code>サイト名/theme/</code> の中にきちんと入れること。</p>
+<h2 id="テーマの適用">テーマの適用
+</h2><p>ルート（サイト名直下）にある <code>config.toml</code> を開き、<code>theme = &quot;&quot;</code> にインストールしたテーマ名を入れる。<br>
+今回の場合は <code>theme = &quot;aether-kaz&quot;</code> となる。</p>
+<h2 id="テーマ及びスタイルシート等の扱い">テーマ及びスタイルシート等の扱い
+</h2><p>テーマ内のファイルは直接修正をせず、ルートにある各フォルダにファイルをコピーして修正をする。<br>
+それらファイルはテーマ内のものよりも優先される。<br>
+どこに置くかは、テーマ内を確認する。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">    HTML    → layout/_default/
+</span></span><span class="line"><span class="cl">    HTML    → layout/partials/
+</span></span><span class="line"><span class="cl">    CSS     → static/css/
+</span></span><span class="line"><span class="cl">    IMAGE   → static/images/
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="記事の公開">記事の公開
+</h2><h3 id="記事内の修正">記事内の修正
+</h3><p><code>draft: true</code> を <code>draft: false</code> に変更する。<br>
+下書き → 公開 という感じ。</p>
+<h3 id="github-pages-へアップgithub">GitHub Pages へアップ【GitHub】
+</h3><p>サイト名$ <code>hugo</code><br>
+サイト名$ <code>git add -A</code><br>
+サイト名$ <code>git commit -m &quot;コミット内容&quot;</code><br>
+サイト名$ <code>git push origin master</code></p>
+<p>一番上で、<code>public</code> の中身を生成し、その後 <code>git</code> のコマンドでリポジトリサーバーへアップをしている。毎回行うのは面倒なので、スクリプトを組んでおくと楽。</p>
+<p>また、ここでは簡単に書いているが、現在のサイトについては下記のように公開用（<code>public</code>）とソース管理用で、2回に分けてアップしている。</p>
+<p>サイト名$ <code>hugo</code><br>
+サイト名$ <code>cd public</code><br>
+サイト名/public$ <code>git add -A</code><br>
+サイト名/public$ <code>git commit -m &quot;コミット内容&quot;</code><br>
+サイト名/public$ <code>git push origin master</code><br>
+サイト名/public$ <code>cd ..</code><br>
+サイト名$ <code>git add -A</code><br>
+サイト名$ <code>git commit -m &quot;コミット内容&quot;</code><br>
+サイト名$ <code>git push origin master</code></p>
+<h2 id="ssh接続github">ssh接続【GitHub】
+</h2><p>ssh接続用に、公開鍵と秘密鍵を作成する。<br>
+公開鍵の中身を GitHub に登録しておく。</p>
+<p>参考：<a class="link" href="https://qiita.com/shizuma/items/2b2f873a0034839e47ce"  target="_blank" rel="noopener"
+    >GitHubでssh接続する手順<del>公開鍵・秘密鍵の生成から</del></a></p>
+<h3 id="https-接続からssh-接続に切り替える">https 接続から、ssh 接続に切り替える
+</h3><p><code>$ git remote -v</code> で表示されたアドレスが <code>https://github.com/</code> の場合は、<code>git@github.com:</code> に変えることで ssh 接続にできる。</p>
+<p>切替用コマンド <code>$ git remote set-url origin git@github.com:hogehoge.git</code><br>
+確認用コマンド <code>$ ssh -T github</code></p>
+<hr>
+<p>こちらも随時更新していきます。</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/hugo/">Hugo</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">関連するコンテンツ</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/hugo-warning-.site.social/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/images/hugo-warning-sitesocial.webp" loading="lazy" data-key="" data-hash="/images/hugo-warning-sitesocial.webp"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Hugo Warning .Site.Social</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E3%83%AA%E3%82%B9%E3%83%88%E8%A1%A8%E7%A4%BA%E3%81%A8%E3%82%B7%E3%83%B3%E3%82%B0%E3%83%AB%E8%A1%A8%E7%A4%BA%E3%81%AB%E3%82%BF%E3%82%B0%E3%82%92%E4%BB%98%E3%81%91%E3%82%8B/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/images/tag_720.webp" loading="lazy" data-key="" data-hash="/images/tag_720.webp"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">リスト表示とシングル表示にタグを付ける</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/hugo%E3%81%AB%E3%82%B3%E3%83%A1%E3%83%B3%E3%83%88%E6%A9%9F%E8%83%BD%E3%82%92%E4%BB%98%E3%81%91%E3%82%8Bgiscus%E7%B7%A8/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/images/speech-bubbles_640.webp" loading="lazy" data-key="" data-hash="/images/speech-bubbles_640.webp"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Hugoにコメント機能を付ける（giscus編）</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/hugo-update-v0.122.0/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/images/hugo-logo-wide.svg" loading="lazy" data-key="" data-hash="/images/hugo-logo-wide.svg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Hugo Update V0.122.0</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E3%81%95%E3%81%8F%E3%82%89%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%8D%E3%83%83%E3%83%88%E3%81%A7hugo%E3%82%92%E4%BD%BF%E3%81%84%E3%81%9F%E3%81%84/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/images/hugo-sakura.webp" loading="lazy" data-key="" data-hash="/images/hugo-sakura.webp"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">さくらインターネットでHugoを使いたい</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "hugo-theme-stack" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (typeof DISQUS == 'object') {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2024 k-kaz
+    </section>
+    
+    <section class="powerby">
+        <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> で構築されています。 <br />
+        テーマ <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.26.0">Stack</a></b> は <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> によって設計されています。
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

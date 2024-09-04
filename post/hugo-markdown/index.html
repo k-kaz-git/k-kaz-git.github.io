@@ -1,177 +1,266 @@
 <!DOCTYPE html>
-<html lang="ja" dir="ltr">
-  <head>
-  <meta charset="utf-8" />
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Hugo で使える Markdown の記法 &middot; k-kaz が Hugo で遊ぶサイト</title>
-  
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-K8B8MR2Z');</script>
-  
-  <meta name="description" content="自分用によく使う Markdown をまとめます。" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
-  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-  <link href="https://k-kaz-git.github.io/css/katex.css" rel="stylesheet">
-  
-  
-  
-  
-  <link href="https://k-kaz-git.github.io/css/concated.min.css" rel="stylesheet">
+<html lang="ja-JP" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="自分用によく使う Markdown をまとめます。">
+<title>Hugo で使える Markdown の記法</title>
 
-  
-  <link rel="stylesheet" href="https://k-kaz-git.github.io/sass/main.fcdea0c4becd73f2e3b2312b85bcd7ba626d441c1cde1e1b8046a6afcc4e22b8.css">
+<link rel='canonical' href='http://localhost:1313/post/hugo-markdown/'>
 
-  
+<link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="Hugo で使える Markdown の記法">
+<meta property='og:description' content="自分用によく使う Markdown をまとめます。">
+<meta property='og:url' content='http://localhost:1313/post/hugo-markdown/'>
+<meta property='og:site_name' content='k-kaz が Hugo で遊ぶサイト'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='hugo' /><meta property='article:tag' content='markdown' /><meta property='article:published_time' content='2019-02-21T11:43:14&#43;09:00'/><meta property='article:modified_time' content='2019-02-21T11:43:14&#43;09:00'/><meta property='og:image' content='http://localhost:1313/images/computer-Programming_640.webp' />
+<meta name="twitter:title" content="Hugo で使える Markdown の記法">
+<meta name="twitter:description" content="自分用によく使う Markdown をまとめます。"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='http://localhost:1313/images/computer-Programming_640.webp' />
   
 
 
-  
-</head>
-  <body class="single-body">
-      
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8B8MR2Z"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  
-<nav class="nav-bar side-padding">
-  <h1 class="nav-header"><a href="https://k-kaz-git.github.io/" class="nav-text">k-kaz が Hugo で遊ぶサイト</a></h1>
-  <div class="hamburger-menu">
-    <button onclick="hamburgerMenuPressed.call(this)" aria-haspopup="true" aria-expanded="false" aria-controls="menu" aria-label="Menu">
-      <span></span>
-      <span></span>
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column compact"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="メニューを開く・閉じる">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
     </button>
-    <ul id="menu" class="hamburger-menu-overlay">
-      <li><a href="https://k-kaz-git.github.io/" class="hamburger-menu-overlay-link">Home</a></li>
-      <li class="navi-menu">- Categories -</li>
-      <li style="font-size: 0.7em;"><a href="https://k-kaz-git.github.io/categories/coding" class="hamburger-menu-overlay-link">Coding</a></li><li style="font-size: 0.7em;"><a href="https://k-kaz-git.github.io/categories/homepage" class="hamburger-menu-overlay-link">Homepage</a></li><li style="font-size: 0.7em;"><a href="https://k-kaz-git.github.io/categories/linux" class="hamburger-menu-overlay-link">Linux</a></li>
-      <li class="navi-menu">- Tags -</li>
-      <li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/aether" class="hamburger-menu-overlay-link">Aether</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/categories" class="hamburger-menu-overlay-link">Categories</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/css" class="hamburger-menu-overlay-link">Css</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/cupper" class="hamburger-menu-overlay-link">Cupper</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/favicon" class="hamburger-menu-overlay-link">Favicon</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/github" class="hamburger-menu-overlay-link">Github</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/github-pages" class="hamburger-menu-overlay-link">Github pages</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/hugo" class="hamburger-menu-overlay-link">Hugo</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/markdown" class="hamburger-menu-overlay-link">Markdown</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/mermaid" class="hamburger-menu-overlay-link">Mermaid</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/mozc" class="hamburger-menu-overlay-link">Mozc</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/netlify" class="hamburger-menu-overlay-link">Netlify</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/pagermod" class="hamburger-menu-overlay-link">Pagermod</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/saas" class="hamburger-menu-overlay-link">Saas</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/sass" class="hamburger-menu-overlay-link">Sass</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/shortcodes" class="hamburger-menu-overlay-link">Shortcodes</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/snippet" class="hamburger-menu-overlay-link">Snippet</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/stylesheet" class="hamburger-menu-overlay-link">Stylesheet</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/svg" class="hamburger-menu-overlay-link">Svg</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/tableofcontents" class="hamburger-menu-overlay-link">Tableofcontents</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/tags" class="hamburger-menu-overlay-link">Tags</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/theme" class="hamburger-menu-overlay-link">Theme</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/vscode" class="hamburger-menu-overlay-link">Vscode</a></li>
-    </ul>
-  </div>
-</nav>
-    <main class="content side-text-padding">
-      <article class="post ">
-        <header class="post-header">
-        	<h1 class="post-title">Hugo で使える Markdown の記法</h1>
-          <p class="post-date">
-            Posted <time datetime="2019-02-21">2019-02-21</time>
-             / Update 2019-03-06</p>
-             <div class="card-subtext muted-text li-line">
-               <a class="cat" href="/categories/coding">coding</a>
-               <a class="tag" href="/tags/hugo">#hugo</a>  <a class="tag" href="/tags/markdown">#markdown</a> 
-             </div>
-        </header>
+
+    <header>
         
-        <picture class="post-figure">
-            <source srcset="https://k-kaz-git.github.io/images/computer-Programming_640.webp" type="image/webp">
-            <source srcset="https://k-kaz-git.github.io/images/computer-Programming_640.webp">
-          <img src="https://k-kaz-git.github.io/images/computer-Programming_640.webp" alt="Programming Markdown">
-        </picture>
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu13739649187745961479.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
         
-        <aside>
-          <h2>目次</h2>
-            <nav id="TableOfContents">
-  <ul>
-    <li><a href="#はじめに">はじめに</a></li>
-    <li><a href="#hugo-で使える-markdown-記法">Hugo で使える Markdown 記法</a>
-      <ul>
-        <li><a href="#見出しh">見出し（h）</a></li>
-        <li><a href="#改行br">改行（br）</a></li>
-        <li><a href="#強調strong">強調（strong）</a></li>
-        <li><a href="#画像挿入img">画像挿入（img）</a></li>
-        <li><a href="#リンクa-href">リンク（a href）</a></li>
-        <li><a href="#コードcode">コード（code）</a></li>
-        <li><a href="#整形済みテキストpre">整形済みテキスト（pre）</a></li>
-        <li><a href="#水平線hr">水平線（hr）</a></li>
-        <li><a href="#取り消し線s">取り消し線（s）</a></li>
-      </ul>
-    </li>
-    <li><a href="#wordpress-でも使えるよ2019-03-06">WordPress でも使えるよ［2019-03-06］</a>
-      <ul>
-        <li><a href="#注意点">注意点</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
-        </aside>
-        <h2 id="はじめに">はじめに</h2>
-<p>Markdown には、基本となるものから、機能拡張されたものまであり、使用する環境によって微妙に使えるコマンド、使えないコマンドがあるようです。<br>
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">k-kaz が Hugo で遊ぶサイト</a></h1>
+            <h2 class="site-description"></h2>
+        </div>
+    </header><ol class="menu" id="main-menu">
+        
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>ダークモード</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/post/hugo-markdown/">
+                
+                    <img src="/images/computer-Programming_640.webp" loading="lazy" alt="Featured image of post Hugo で使える Markdown の記法" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/coding/" >
+                Coding
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/post/hugo-markdown/">Hugo で使える Markdown の記法</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            自分用によく使う Markdown をまとめます。
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Feb 21, 2019</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    読了時間: 1分
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="はじめに">はじめに
+</h2><p>Markdown には、基本となるものから、機能拡張されたものまであり、使用する環境によって微妙に使えるコマンド、使えないコマンドがあるようです。<br>
 この前、外部リンクを開くための記述をネットで探して入れてみましたが、残念ながらココでは動かず・・・。</p>
 <p>ということで、<strong>Hugo で使える Markdown を、自分のためにまとめておきます。</strong></p>
 <p>Markdown の中で HTML を書いちゃえばなんとでもなりますが（笑）</p>
-<h2 id="hugo-で使える-markdown-記法">Hugo で使える Markdown 記法</h2>
-<p>普段、よく使うものだけ。<br>
-正式な記法であったり、もっと辞書的なものをお求めの方は、<a href="https://www.google.co.jp" target="_blank">Google先生</a>
-にお尋ねください。m(_ _)m</p>
-<h3 id="見出しh">見出し（h）</h3>
-<p><code>#</code> の数で <code>h1 ～ h5</code> を表し、その右に見出しの文字列。</p>
+<h2 id="hugo-で使える-markdown-記法">Hugo で使える Markdown 記法
+</h2><p>普段、よく使うものだけ。<br>
+正式な記法であったり、もっと辞書的なものをお求めの方は、<a class="link" href="https://www.google.co.jp"  target="_blank" rel="noopener"
+    >Google先生</a>にお尋ねください。m(_ _)m</p>
+<h3 id="見出しh">見出し（h）
+</h3><p><code>#</code> の数で <code>h1 ～ h5</code> を表し、その右に見出しの文字列。</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-txt" data-lang="txt"><span style="display:flex;"><span># 見出し（h1）
 </span></span><span style="display:flex;"><span>## 見出し（h2）
 </span></span><span style="display:flex;"><span>### 見出し（h3）
 </span></span><span style="display:flex;"><span>#### 見出し（h4）
 </span></span><span style="display:flex;"><span>##### 見出し（h5）
-</span></span></code></pre></div><h3 id="改行br">改行（br）</h3>
-<p>行末にスペースを2つ付けます。<br>
+</span></span></code></pre></div><h3 id="改行br">改行（br）
+</h3><p>行末にスペースを2つ付けます。<br>
 見えませんけど、想像してください（笑）<br>
 実際に改行していなくても、スペース2つが間に入っていれば、続けて書いていてもそこで改行されます。まぁ、<code>&lt;br&gt;</code> と同じです。</p>
 <pre><code>改行前の文章  
 改行後の文章
 </code></pre>
-<h3 id="強調strong">強調（strong）</h3>
-<p><code>**</code> で文字列を挟む。</p>
+<h3 id="強調strong">強調（strong）
+</h3><p><code>**</code> で文字列を挟む。</p>
 <pre><code>** hoge **
 </code></pre>
-<h3 id="画像挿入img">画像挿入（img）</h3>
-<p>タイトルは省略可能。</p>
+<h3 id="画像挿入img">画像挿入（img）
+</h3><p>タイトルは省略可能。</p>
 <pre><code>![代替えテキスト](/iamges/hoge.webp)
 ![代替えテキスト](/iamges/hoge.webp &quot;タイトル&quot;)
 </code></pre>
-<h3 id="リンクa-href">リンク（a href）</h3>
-<p>残念ながら、<code>target</code> は指定できない。<br>
+<h3 id="リンクa-href">リンク（a href）
+</h3><p>残念ながら、<code>target</code> は指定できない。<br>
 どうしてもやりたい場合は、HTML で書く。</p>
-<h4 id="テキストリンク">テキストリンク</h4>
-<p>タイトルは省略可能。</p>
+<h4 id="テキストリンク">テキストリンク
+</h4><p>タイトルは省略可能。</p>
 <pre><code>[hoge](https://hoge.com)
 [hoge](https://hoge.com &quot;タイトル&quot;)
 </code></pre>
-<h4 id="画像リンク">画像リンク</h4>
-<p>タイトルは省略可能。</p>
+<h4 id="画像リンク">画像リンク
+</h4><p>タイトルは省略可能。</p>
 <pre><code>[![代替えテキスト](/iamges/hoge.webp &quot;タイトル&quot;)](https://hoge.com)
 [![代替えテキスト](/iamges/hoge.webp)](https://hoge.com)
 </code></pre>
-<h3 id="コードcode">コード（code）</h3>
-<p>文中に差し込むコードは ` （バッククォート）で挟む。</p>
+<h3 id="コードcode">コード（code）
+</h3><p>文中に差し込むコードは ` （バッククォート）で挟む。</p>
 <pre><code>文字列 `コード` 文字列
 </code></pre>
-<h3 id="整形済みテキストpre">整形済みテキスト（pre）</h3>
-<p>単純にコードを記述する場合は、タブで行頭を開ける。<br>
+<h3 id="整形済みテキストpre">整形済みテキスト（pre）
+</h3><p>単純にコードを記述する場合は、タブで行頭を開ける。<br>
 コードの前後にあたる行は空行でないとうまく読み取れないことあり。<br>
 また、特定のフォーマットでシンタックスハイライトを付ける場合は、```html とかにする。<br>
 htmlの部分は、php、md・・・いろいろ入れられるので、ケースに合わせて使用する。</p>
 <pre><code>[hoge](https://hoge.com)
 [hoge](https://hoge.com)
 </code></pre>
-<h3 id="水平線hr">水平線（hr）</h3>
-<p><code>***</code> もしくは <code>---</code> で水平線が書けます。<br>
+<h3 id="水平線hr">水平線（hr）
+</h3><p><code>***</code> もしくは <code>---</code> で水平線が書けます。<br>
 前後に文字列が入ってはいけません。</p>
 <pre><code>***
 </code></pre>
-<h3 id="取り消し線s">取り消し線（s）</h3>
-<p><code>~~</code> で取り消す文字列を挟みます。</p>
+<h3 id="取り消し線s">取り消し線（s）
+</h3><p><code>~~</code> で取り消す文字列を挟みます。</p>
 <pre><code>~~取り消す文字列~~
 </code></pre>
-<h2 id="wordpress-でも使えるよ2019-03-06">WordPress でも使えるよ［2019-03-06］</h2>
-<p>余談ですが・・・。<br>
+<h2 id="wordpress-でも使えるよ2019-03-06">WordPress でも使えるよ［2019-03-06］
+</h2><p>余談ですが・・・。<br>
 WordPress 5.0 でお目見えしたブロックエディタ（旧呼称 Gutenberg）は、Markdown に対応しています。
 エディタで書いてから、ブロックエディタに貼り付けるとうまい具合に変換してくれました。</p>
-<h3 id="注意点">注意点</h3>
-<p>VSCode のように、Markdown の書式にあわせて文字色を変えてくれる優秀なエディタの場合、コピーした際にその情報まで持っていってしまい、うまく反映ができません。<br>
+<h3 id="注意点">注意点
+</h3><p>VSCode のように、Markdown の書式にあわせて文字色を変えてくれる優秀なエディタの場合、コピーした際にその情報まで持っていってしまい、うまく反映ができません。<br>
 面倒ですが、以下のような方法をとってください。</p>
 <ul>
 <li>Markdownモードで作成 → テキストモード or メモ帳 に貼り付け＆コピー → ブロックエディタに貼り付け</li>
@@ -180,63 +269,253 @@ WordPress 5.0 でお目見えしたブロックエディタ（旧呼称 Gutenber
 <hr>
 <p>またよく使うものが出てきたら追記します。</p>
 <p>ここに分かりやすく書いてあった。<br>
-<a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet" title="Markdown Cheatsheet" target="_blank">Markdown Cheatsheet</a>
-</p>
+<a class="link" href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet"  title="Markdown Cheatsheet"
+     target="_blank" rel="noopener"
+    >Markdown Cheatsheet</a></p>
 
-      </article>
-      <hr>
-      <p class="post-date">
-        Posted <time datetime="2019-02-21">2019-02-21</time>
-         / Update 2019-03-06</p>
-         <div class="card-subtext muted-text li-line">
-           <a class="cat" href="/categories/coding">coding</a>
-           <a class="tag" href="/tags/hugo">#hugo</a>  <a class="tag" href="/tags/markdown">#markdown</a> 
-         </div>
-    </main>
-    <nav class="end-nav side-padding">
-      
-      <a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
-  href="https://k-kaz-git.github.io/post/hugo-how-to-use/" class="card blog-card" rel="bookmark" >
+</section>
+
+
+    <footer class="article-footer">
     
-    <div class="card-img-container">
-      <p class="card-img-overlay">Next Article</p>
-      <picture>
-        <source srcset="https://k-kaz-git.github.io/images/writing-memo-note-pen_640.webp" type="image/webp">
-        <source srcset="https://k-kaz-git.github.io/images/writing-memo-note-pen_640.webp">
-        <img src="https://k-kaz-git.github.io/images/writing-memo-note-pen_640.webp" class="card-img" alt="ノートにメモメモ">
-      </picture>
-    </div>
+    <section class="article-tags">
+        
+            <a href="/tags/hugo/">Hugo</a>
+        
+            <a href="/tags/markdown/">Markdown</a>
+        
+    </section>
+
+
+    </footer>
+
+
     
-  <article class="card-body">
-    <h2 class="card-title">Hugo の使い方</h2>
-    <p class="card-text">Hugo の Tips 的なものをこちらにまとめます。</p>
-    <div class="card-subtext muted-text">
-      <p>Posted <time datetime="2019-02-20">2019-02-20</time>
-      / Updated 2019-03-02</p>
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">関連するコンテンツ</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/post/hugo-how-to-use/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/images/writing-memo-note-pen_640.webp" loading="lazy" data-key="" data-hash="/images/writing-memo-note-pen_640.webp"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Hugo の使い方</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/post/hugo-custom-theme-aether/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/images/pair-love_640.webp" loading="lazy" data-key="" data-hash="/images/pair-love_640.webp"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">テーマ aether のカスタマイズ</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/post/hugo-custom-comment/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/images/speech-bubbles_640.webp" loading="lazy" data-key="" data-hash="/images/speech-bubbles_640.webp"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">コメント欄を削除</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/post/hugo-custom/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/images/people-custom_640.webp" loading="lazy" data-key="" data-hash="/images/people-custom_640.webp"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">カスタマイズしてみたいな</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/post/hugo-stable/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/images/sky-stable-hugo_640.webp" loading="lazy" data-key="" data-hash="/images/sky-stable-hugo_640.webp"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Hugo 安定してきたかな</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
     </div>
-    <div class="card-subtext muted-text li-line">
-      <span class="box-gray">homepage</span> 
-      <span class="box-gray">#hugo</span> 
-    </div>
-  </article>
-</a>
-      
-      <a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
-  href="https://k-kaz-git.github.io/" class="card home-card" style="background-image: url( https://k-kaz-git.github.io/img/grey-cloud.jpg )" rel="bookmark" >
-  Home
-</a>
-    </nav>
-    <footer>
-    <p style="text-align: center">姉妹サイト<br><a class="btn-link" href="https://k-kaz.net/" target="_blank">k-kaz ブログ</a></p>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2024 k-kaz が Hugo で遊ぶサイト
+    </section>
+    
+    <section class="powerby">
+        <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> で構築されています。 <br />
+        テーマ <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.26.0">Stack</a></b> は <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> によって設計されています。
+    </section>
 </footer>
+
+
     
-  <script defer src="https://k-kaz-git.github.io/js/katex.js"></script>
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
 
+    
+    <div class="pswp__bg"></div>
 
-  <script defer src="https://k-kaz-git.github.io/js/auto-render.js" onload="renderMathInElement(document.body);"></script>
+    
+    <div class="pswp__scroll-wrap">
 
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
 
-<script src="https://k-kaz-git.github.io/js/core.min.js"></script>
+        
+        <div class="pswp__ui pswp__ui--hidden">
 
-  </body>
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
 </html>

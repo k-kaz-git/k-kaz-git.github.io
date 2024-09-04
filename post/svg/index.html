@@ -1,172 +1,356 @@
 <!DOCTYPE html>
-<html lang="ja" dir="ltr">
-  <head>
-  <meta charset="utf-8" />
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>SVG、それは魔法の画像形式 &middot; k-kaz が Hugo で遊ぶサイト</title>
-  
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-K8B8MR2Z');</script>
-  
-  <meta name="description" content="便利な画像形式です。" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
-  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-  <link href="https://k-kaz-git.github.io/css/katex.css" rel="stylesheet">
-  
-  
-  
-  
-  <link href="https://k-kaz-git.github.io/css/concated.min.css" rel="stylesheet">
+<html lang="ja-JP" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="便利な画像形式です。">
+<title>SVG、それは魔法の画像形式</title>
 
-  
-  <link rel="stylesheet" href="https://k-kaz-git.github.io/sass/main.fcdea0c4becd73f2e3b2312b85bcd7ba626d441c1cde1e1b8046a6afcc4e22b8.css">
+<link rel='canonical' href='http://localhost:1313/post/svg/'>
 
-  
+<link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="SVG、それは魔法の画像形式">
+<meta property='og:description' content="便利な画像形式です。">
+<meta property='og:url' content='http://localhost:1313/post/svg/'>
+<meta property='og:site_name' content='k-kaz が Hugo で遊ぶサイト'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='svg' /><meta property='article:published_time' content='2021-11-23T19:07:07&#43;09:00'/><meta property='article:modified_time' content='2021-11-23T19:07:07&#43;09:00'/><meta property='og:image' content='http://localhost:1313/images/k-kaz-black-w.svg' />
+<meta name="twitter:title" content="SVG、それは魔法の画像形式">
+<meta name="twitter:description" content="便利な画像形式です。"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='http://localhost:1313/images/k-kaz-black-w.svg' />
   
 
 
-  
-</head>
-  <body class="single-body">
-      
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8B8MR2Z"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  
-<nav class="nav-bar side-padding">
-  <h1 class="nav-header"><a href="https://k-kaz-git.github.io/" class="nav-text">k-kaz が Hugo で遊ぶサイト</a></h1>
-  <div class="hamburger-menu">
-    <button onclick="hamburgerMenuPressed.call(this)" aria-haspopup="true" aria-expanded="false" aria-controls="menu" aria-label="Menu">
-      <span></span>
-      <span></span>
-    </button>
-    <ul id="menu" class="hamburger-menu-overlay">
-      <li><a href="https://k-kaz-git.github.io/" class="hamburger-menu-overlay-link">Home</a></li>
-      <li class="navi-menu">- Categories -</li>
-      <li style="font-size: 0.7em;"><a href="https://k-kaz-git.github.io/categories/coding" class="hamburger-menu-overlay-link">Coding</a></li><li style="font-size: 0.7em;"><a href="https://k-kaz-git.github.io/categories/homepage" class="hamburger-menu-overlay-link">Homepage</a></li><li style="font-size: 0.7em;"><a href="https://k-kaz-git.github.io/categories/linux" class="hamburger-menu-overlay-link">Linux</a></li>
-      <li class="navi-menu">- Tags -</li>
-      <li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/aether" class="hamburger-menu-overlay-link">Aether</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/categories" class="hamburger-menu-overlay-link">Categories</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/css" class="hamburger-menu-overlay-link">Css</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/cupper" class="hamburger-menu-overlay-link">Cupper</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/favicon" class="hamburger-menu-overlay-link">Favicon</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/github" class="hamburger-menu-overlay-link">Github</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/github-pages" class="hamburger-menu-overlay-link">Github pages</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/hugo" class="hamburger-menu-overlay-link">Hugo</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/markdown" class="hamburger-menu-overlay-link">Markdown</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/mermaid" class="hamburger-menu-overlay-link">Mermaid</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/mozc" class="hamburger-menu-overlay-link">Mozc</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/netlify" class="hamburger-menu-overlay-link">Netlify</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/pagermod" class="hamburger-menu-overlay-link">Pagermod</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/saas" class="hamburger-menu-overlay-link">Saas</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/sass" class="hamburger-menu-overlay-link">Sass</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/shortcodes" class="hamburger-menu-overlay-link">Shortcodes</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/snippet" class="hamburger-menu-overlay-link">Snippet</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/stylesheet" class="hamburger-menu-overlay-link">Stylesheet</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/svg" class="hamburger-menu-overlay-link">Svg</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/tableofcontents" class="hamburger-menu-overlay-link">Tableofcontents</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/tags" class="hamburger-menu-overlay-link">Tags</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/theme" class="hamburger-menu-overlay-link">Theme</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/vscode" class="hamburger-menu-overlay-link">Vscode</a></li>
-    </ul>
-  </div>
-</nav>
-    <main class="content side-text-padding">
-      <article class="post ">
-        <header class="post-header">
-        	<h1 class="post-title">SVG、それは魔法の画像形式</h1>
-          <p class="post-date">
-            Posted <time datetime="2021-11-23">2021-11-23</time>
-             / Update 2021-11-24</p>
-             <div class="card-subtext muted-text li-line">
-               <a class="cat" href="/categories/homepage">homepage</a>
-               <a class="tag" href="/tags/svg">#svg</a> 
-             </div>
-        </header>
-        
-        <picture class="post-figure">
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
             
-            <source srcset="https://k-kaz-git.github.io/images/k-kaz-black-w.svg">
-          <img src="https://k-kaz-git.github.io/images/k-kaz-black-w.svg" alt="k-kaz SVG">
-        </picture>
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column compact"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="メニューを開く・閉じる">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
         
-        <aside>
-          <h2>目次</h2>
-            <nav id="TableOfContents">
-  <ul>
-    <li><a href="#こんなに便利な物だったとは">こんなに便利な物だったとは！</a></li>
-    <li><a href="#調べて驚いた">調べて驚いた！</a></li>
-    <li><a href="#私は自由だ">私は自由だ！</a>
-      <ul>
-        <li><a href="#画像形式なんだけどテキスト形式のファイル">画像形式なんだけど、テキスト形式のファイル</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
-        </aside>
-        <h2 id="こんなに便利な物だったとは">こんなに便利な物だったとは！</h2>
-<p>SVGって、昔からある画像形式なんで、存在はもちろん知っていたんですけど、使うことは無かったんですよね。<br>
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu13739649187745961479.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">k-kaz が Hugo で遊ぶサイト</a></h1>
+            <h2 class="site-description"></h2>
+        </div>
+    </header><ol class="menu" id="main-menu">
+        
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>ダークモード</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/post/svg/">
+                
+                    <img src="/images/k-kaz-black-w.svg" loading="lazy" alt="Featured image of post SVG、それは魔法の画像形式" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/homepage/" >
+                Homepage
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/post/svg/">SVG、それは魔法の画像形式</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            便利な画像形式です。
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Nov 23, 2021</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    読了時間: 1分
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="こんなに便利な物だったとは">こんなに便利な物だったとは！
+</h2><p>SVGって、昔からある画像形式なんで、存在はもちろん知っていたんですけど、使うことは無かったんですよね。<br>
 写真系ならJPEG使うし、透過させるならPNG使うし。<br>
 ここ数年だと、より高圧縮なWebP（相手が対応していれば）を使ったりしています。</p>
-<p>ちょっと前に、<a href="https://k-kaz.netlify.com" target="_blank">k-kaz が好きなことを書くサイト</a>
-で、Hugoのロゴ画像を使う機会がありました。<br>
+<p>ちょっと前に、<a class="link" href="https://k-kaz.netlify.com"  target="_blank" rel="noopener"
+    >k-kaz が好きなことを書くサイト</a>で、Hugoのロゴ画像を使う機会がありました。<br>
 勝手にページの読み込み速度に拘っているので、画像サイズを適切なものにしようと思ったんです。<br>
 そのとき、公式ロゴがsvg形式だったことを知り、なんでsvgなんだろうと思ったわけです。</p>
-<h2 id="調べて驚いた">調べて驚いた！</h2>
-<p>SVGとは「Scalable Vector Graphics」の略で、「大きさを変えられるベクター画像」ということらしい。</p>
+<h2 id="調べて驚いた">調べて驚いた！
+</h2><p>SVGとは「Scalable Vector Graphics」の略で、「大きさを変えられるベクター画像」ということらしい。</p>
 <p><strong>なんてこった！</strong></p>
 <p>HTMLの中でサイズ指定すれば、勝手にその大きさに画像を変えてくれるなんて、夢見たいじゃない。<br>
 しかもベクター画像だから、拡大してぼやけるとか、縮小して潰れるみたいなことがなく、美しいままなのよ。<br>
 <strong>興奮して、ちょっとオネエになった。</strong></p>
 <p>JPEGやPNGのラスター画像だと、同じ画像でも、必要に応じて複数のサイズを用意することがあります。<br>
 それこそ、パソコン用だ、モバイル用だという、レスポンシブ対応です。</p>
-<h2 id="私は自由だ">私は自由だ！</h2>
-<p>ということで、今後は積極的にSVGを活用していこうと思います。<br>
+<h2 id="私は自由だ">私は自由だ！
+</h2><p>ということで、今後は積極的にSVGを活用していこうと思います。<br>
 写真系は弱いようなので、こちらはWebP（またはJPEG)で。</p>
-<h3 id="画像形式なんだけどテキスト形式のファイル">画像形式なんだけど、テキスト形式のファイル</h3>
-<p>ちょっと補足。<br>
+<h3 id="画像形式なんだけどテキスト形式のファイル">画像形式なんだけど、テキスト形式のファイル
+</h3><p>ちょっと補足。<br>
 SVGのファイルは、画像形式でありながらも、メモ帳とかで開けるテキストファイルです。<br>
 座標とか、色とかが文字列で表されているので、メモ帳とかでファイルを開いて、色を書き換えたりできます。<br>
 色を変えるだけなら、専用のアプリを使う必要がありません。楽ちん。</p>
 
-      </article>
-      <hr>
-      <p class="post-date">
-        Posted <time datetime="2021-11-23">2021-11-23</time>
-         / Update 2021-11-24</p>
-         <div class="card-subtext muted-text li-line">
-           <a class="cat" href="/categories/homepage">homepage</a>
-           <a class="tag" href="/tags/svg">#svg</a> 
-         </div>
-    </main>
-    <nav class="end-nav side-padding">
-      
-      <a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
-  href="https://k-kaz-git.github.io/post/hugo-section/" class="card blog-card" rel="bookmark" >
+</section>
+
+
+    <footer class="article-footer">
     
-    <div class="card-img-container">
-      <p class="card-img-overlay">Next Article</p>
-      <picture>
-        <source srcset="https://k-kaz-git.github.io/images/divider-800.webp" type="image/webp">
-        <source srcset="https://k-kaz-git.github.io/images/divider-800.webp">
-        <img src="https://k-kaz-git.github.io/images/divider-800.webp" class="card-img" alt="セクション">
-      </picture>
-    </div>
+    <section class="article-tags">
+        
+            <a href="/tags/svg/">Svg</a>
+        
+    </section>
+
+
+    </footer>
+
+
     
-  <article class="card-body">
-    <h2 class="card-title">Hugo Section</h2>
-    <p class="card-text">いまいち分からんセクションの話</p>
-    <div class="card-subtext muted-text">
-      <p>Posted <time datetime="2020-11-11">2020-11-11</time>
-      / Updated 2020-11-11</p>
-    </div>
-    <div class="card-subtext muted-text li-line">
-      <span class="box-gray">homepage</span> 
-      <span class="box-gray">#hugo</span> <span class="box-gray">#theme</span> <span class="box-gray">#pagermod</span> 
-    </div>
-  </article>
-</a>
-      
-      <a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
-  href="https://k-kaz-git.github.io/" class="card home-card" style="background-image: url( https://k-kaz-git.github.io/img/grey-cloud.jpg )" rel="bookmark" >
-  Home
-</a>
-    </nav>
-    <footer>
-    <p style="text-align: center">姉妹サイト<br><a class="btn-link" href="https://k-kaz.net/" target="_blank">k-kaz ブログ</a></p>
+</article>
+
+    
+
+    
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2024 k-kaz が Hugo で遊ぶサイト
+    </section>
+    
+    <section class="powerby">
+        <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> で構築されています。 <br />
+        テーマ <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.26.0">Stack</a></b> は <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> によって設計されています。
+    </section>
 </footer>
+
+
     
-  <script defer src="https://k-kaz-git.github.io/js/katex.js"></script>
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
 
+    
+    <div class="pswp__bg"></div>
 
-  <script defer src="https://k-kaz-git.github.io/js/auto-render.js" onload="renderMathInElement(document.body);"></script>
+    
+    <div class="pswp__scroll-wrap">
 
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
 
-<script src="https://k-kaz-git.github.io/js/core.min.js"></script>
+        
+        <div class="pswp__ui pswp__ui--hidden">
 
-  </body>
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
 </html>

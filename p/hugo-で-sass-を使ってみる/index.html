@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Hugo で Sass を利用するのに少し設定が必要ですので、こちらにまとめます。">
+<title>Hugo で Sass を使ってみる</title>
+
+<link rel='canonical' href='https://k-kaz-git.github.io/p/hugo-%E3%81%A7-sass-%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%A6%E3%81%BF%E3%82%8B/'>
+
+<link rel="stylesheet" href="/scss/style.min.43289f33a995fb4bc83e665a1a22504b7eecefd3dcf3f9ecc83ed51746ad75d3.css"><meta property='og:title' content="Hugo で Sass を使ってみる">
+<meta property='og:description' content="Hugo で Sass を利用するのに少し設定が必要ですので、こちらにまとめます。">
+<meta property='og:url' content='https://k-kaz-git.github.io/p/hugo-%E3%81%A7-sass-%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%A6%E3%81%BF%E3%82%8B/'>
+<meta property='og:site_name' content='k-kaz が Hugo で遊ぶサイト'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='stylesheet' /><meta property='article:tag' content='css' /><meta property='article:tag' content='sass' /><meta property='article:published_time' content='2019-03-04T10:05:17&#43;09:00'/><meta property='article:modified_time' content='2019-03-04T10:05:17&#43;09:00'/><meta property='og:image' content='https://k-kaz-git.github.io/images/computer-Programming_640.webp' />
+<meta name="twitter:title" content="Hugo で Sass を使ってみる">
+<meta name="twitter:description" content="Hugo で Sass を利用するのに少し設定が必要ですので、こちらにまとめます。"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://k-kaz-git.github.io/images/computer-Programming_640.webp' />
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+  
+
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="メニューを開く・閉じる">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/images/android-chrome-192x192_hu5450162830773684134.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">k-kaz が Hugo で遊ぶサイト</a></h1>
+            <h2 class="site-description">Hugo関連の記事ですが、初心者なので参考になりませんよ。</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href=''
+                        target="_blank"
+                        
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>ダークモード</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目次</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#余談ですがいつもお世話になっているサイト様">余談ですが、いつもお世話になっているサイト様</a></li>
+    <li><a href="#hugo-で-sass-を使ってみる">Hugo で Sass を使ってみる。</a>
+      <ol>
+        <li><a href="#hugo-のバージョンを確認する">Hugo のバージョンを確認する。</a></li>
+        <li><a href="#hugo-の-extended版-をダウンロードする必要あれば">Hugo の extended版 をダウンロードする。（必要あれば）</a></li>
+        <li><a href="#sass-のファイルを用意する">Sass のファイルを用意する。</a></li>
+        <li><a href="#スタイルシートを読み込む-html-の編集をする">スタイルシートを読み込む html の編集をする。</a></li>
+        <li><a href="#あとはお好きにスタイルシートを弄ってください">あとはお好きにスタイルシートを弄ってください。</a></li>
+      </ol>
+    </li>
+    <li><a href="#怒られたのはmainscss-の中身">怒られたのは、main.scss の中身</a>
+      <ol>
+        <li><a href="#何か問題でも">何か問題でも？</a></li>
+        <li><a href="#その前に色の指定について">その前に、色の指定について</a></li>
+        <li><a href="#今回の間違いは">今回の間違いは・・・</a></li>
+      </ol>
+    </li>
+    <li><a href="#同じ-sass-だけど-sass-か-scss-か">同じ Sass だけど .sass か .scss か</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/hugo-%E3%81%A7-sass-%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%A6%E3%81%BF%E3%82%8B/">
+                
+                    <img src="/images/computer-Programming_640.webp" loading="lazy" alt="Featured image of post Hugo で Sass を使ってみる" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/homepage/" >
+                Homepage
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/hugo-%E3%81%A7-sass-%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%A6%E3%81%BF%E3%82%8B/">Hugo で Sass を使ってみる</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            Hugo で Sass を利用するのに少し設定が必要ですので、こちらにまとめます。
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">2019/03/04</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    読了時間: 5分
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="余談ですがいつもお世話になっているサイト様">余談ですが、いつもお世話になっているサイト様
+</h2><p>スタイルシートの記述で迷ったとき、こちらのサイトを参考にすることが多いです。<br>
+いつもお世話になっております。</p>
+<p><a class="link" href="https://saruwakakun.com/html-css"  target="_blank" rel="noopener"
+    >サルワカ: HTML&amp;CSS</a><br>
+<a class="link" href="https://developer.mozilla.org/ja/docs/Web/CSS"  target="_blank" rel="noopener"
+    >MDN: CSS リファレンス</a></p>
+<h2 id="hugo-で-sass-を使ってみる">Hugo で Sass を使ってみる。
+</h2><p>本題へ。<br>
+昨年、Hugo も Sass に対応したようですが、標準のモジュールでは使えず、extended版 が必要になります。</p>
+<h3 id="hugo-のバージョンを確認する">Hugo のバージョンを確認する。
+</h3><p><code>hugo version</code> で現在のバージョンが確認できます。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">hugo version
+</span></span><span class="line"><span class="cl">Hugo Static Site Generator v0.54.0/extended hogehoge...
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><code>extended</code> の文字があった方はおめでとうございます。
+無かった方はダウロードを行ってください。</p>
+<h3 id="hugo-の-extended版-をダウンロードする必要あれば">Hugo の extended版 をダウンロードする。（必要あれば）
+</h3><p>extended版 では無かった方。<br>
+こちらから、extended ってファイル名に付与されているものをダウンロードしてください。<br>
+下のほうにあるはず。</p>
+<p><a class="link" href="https://github.com/gohugoio/hugo/releases"  target="_blank" rel="noopener"
+    >Releases · gohugoio/hugo</a></p>
+<p>ダウンロード後、入れ替えをします。</p>
+<h3 id="sass-のファイルを用意する">Sass のファイルを用意する。
+</h3><p>現在使っているスタイルシートで良いので、下記に配置します。<br>
+また、この後の作業をスムーズにするため、ファイル名も変更しています。</p>
+<p><code>サイト名\assets\sass\main.scss</code></p>
+<p><code>assets\sass</code> がない場合は作っちゃってください。<br>
+また、<code>Sass</code> には <code>.sass</code> と <code>.scss</code> の2種類が存在しますが、元の <code>css</code> と互換性のある <code>.scss</code> としています。ここは好きな方にして良いですが、<code>.sass</code> の場合は、中身の編集もあわせてお願いします。</p>
+<h3 id="スタイルシートを読み込む-html-の編集をする">スタイルシートを読み込む html の編集をする。
+</h3><p>テーマによってファイルが異なると思いますが、ここでは aether の場合で書いていきます。</p>
+<p><code>サイト名\layouts\partials\head.html</code> を開きます。<br>
+ファイルが無い方は、テーマの中 <code>テーマ名\themes\aether\layouts\partials\head.html</code> から、コピーして持ってきてください。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;{{ &#34;</span><span class="na">css</span><span class="err">/</span><span class="na">main</span><span class="err">.</span><span class="na">min</span><span class="err">.</span><span class="na">css</span><span class="err">&#34;</span> <span class="err">|</span> <span class="na">absURL</span><span class="err">}}&#34;</span> <span class="p">/&gt;</span>
+</span></span><span class="line"><span class="cl">{{ $style := resources.Get &#34;sass/main.scss&#34; | toCSS | minify | fingerprint }}
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;{{ $style.Permalink }}&#34;</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>1行目が元々入っている全体のスタイルシートの読み込み部分です。<br>
+今回は2行目と3行目を追加します。</p>
+<p>2行目<br>
+先程用意した <code>main.scss</code> を読み込み、パイプ <code>|</code> を使って、CSS 形式に変更したり、圧縮したりしています。<br>
+パイプを使うと、どんどん右の作業工程へ材料を渡していけますので、1行だけでいくつかの加工が可能です。</p>
+<p>3行目<br>
+2行目で加工したスタイルシートが <code>$style</code> に入っているので、それを通常通りの書式でスタイルシートとして読み込みます。</p>
+<p>※別途、スタイルシートを用意して読み込んでいた場合、置き換えるのであれば、その行を消してください。</p>
+<h3 id="あとはお好きにスタイルシートを弄ってください">あとはお好きにスタイルシートを弄ってください。
+</h3><p>以上で、<code>Sass</code> を使うための準備は完了です。<br>
+ミスっていると、<code>hugo server</code> でローカルサーバーを立ち上げたときに怒られます。<br>
+ちなみに私は、事前準備は出来ていましたが、スタイルシートの中身で怒られました。</p>
+<p>それは次の項で。</p>
+<h2 id="怒られたのはmainscss-の中身">怒られたのは、main.scss の中身
+</h2><p>ローカルサーバーを立ち上げたときに、エラーが出て起動しませんでした。<br>
+メッセージには、ご丁寧に</p>
+<ul>
+<li>スタイルシートの読み込みでエラーがあった</li>
+<li>何行目の何文字目がおかしい</li>
+</ul>
+<p>と書かれています。</p>
+<h3 id="何か問題でも">何か問題でも？
+</h3><p>該当する箇所の確認をすると、背景色の指定をしているところでした。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="nt">background</span><span class="o">:</span> <span class="nt">rgb</span><span class="o">(</span><span class="nt">230</span><span class="o">,</span> <span class="nt">90</span><span class="o">,</span> <span class="nt">90</span><span class="o">,</span> <span class="nt">0</span><span class="p">.</span><span class="nc">2</span><span class="o">);</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>何か問題でも？</strong></p>
+<p>しばらく気付かなかったんですけど、落ち着いて見たらようやく答えが分かりました。<br>
+というか、そもそもこの透過処理のことを私がよく分かっていなかったのが問題です。</p>
+<h3 id="その前に色の指定について">その前に、色の指定について
+</h3><p>色の指定については、いくつかの方法があります。<br>
+”赤” という色を表す場合、</p>
+<ul>
+<li>red</li>
+<li>#ff0000</li>
+<li>rgb（255,0,0）</li>
+</ul>
+<p>こんな風に、何通りか指定方法があります。（実はまだ他にも・・・）</p>
+<h3 id="今回の間違いは">今回の間違いは・・・
+</h3><p>で、今回の件なんですけど、<strong>背景色を透過させたい</strong>ということで指定をしています。</p>
+<p>透過させるときは、色指定に <code>rgb</code> を使ってあげるんです。<br>
+通常は、<code>rgb(red,green,blue)</code> の三原色で指定するんですが、そのあとに <code>alpha</code> というチャネルが入り、ここで透過具合を数値で入れると反映されます。</p>
+<p>私もそこまでは知っていたんですけど、<code>alpha</code> が入るときに <code>rgb</code> が <code>rgba</code> になることを知らなかったんですね。</p>
+<p>ということで、私の知識不足により、元々の <code>.css</code> からおかしかったというオチでした。</p>
+<p>下記のように書き直したところ、きちんとスタイルシートの変換がされ、サーバーが起動しました。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="nt">background</span><span class="o">:</span> <span class="nt">rgba</span><span class="o">(</span><span class="nt">230</span><span class="o">,</span> <span class="nt">90</span><span class="o">,</span> <span class="nt">90</span><span class="o">,</span> <span class="nt">0</span><span class="p">.</span><span class="nc">2</span><span class="o">);</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="同じ-sass-だけど-sass-か-scss-か">同じ Sass だけど .sass か .scss か
+</h2><p>Sass と言っても、記述方式が2通りあり、好きなほうを使えます。<br>
+<code>.sass</code> は、<code>{}</code> や <code>;</code> が不要なので、すっきり、そして少ない文字数でコーディングが可能。<br>
+<code>.css</code> から拡張されている、いくつかの機能はどちらも同様に使えます。</p>
+<p><code>.sass</code> と <code>.scss</code> のどちらが良いのかというのは、ネット上でも議論されていますが、私の結論としては <strong>「好きな方をどうぞ」</strong> です。</p>
+<p>ちなみに私は、<code>.scss</code> にしました。</p>
+<p>最初は <code>.sass</code> のほうが絶対に良いだろうと思って、<code>.css</code> を書き直していたんですけど、<code>{}</code> が無いと、どこからどこまでが今書いている範囲なのか、パッと分かりませんでした。</p>
+<p>ということで、<strong>私の頭の都合で <code>.scss</code> を選んだ次第です。</strong><br>
+そのような制限がなければ <code>.sass</code> を選んでいたかな。</p>
+<p>まぁ、最終的にはどちらも <code>.css</code> に変換されますので、サイトの表示速度に有利なのはこちらだとか無いはず。（私の理解では・・・）</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/stylesheet/">Stylesheet</a>
+        
+            <a href="/tags/css/">Css</a>
+        
+            <a href="/tags/sass/">Sass</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">関連するコンテンツ</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/%E3%82%B7%E3%83%B3%E3%82%BF%E3%83%83%E3%82%AF%E3%82%B9%E3%83%8F%E3%82%A4%E3%83%A9%E3%82%A4%E3%83%88%E3%82%92%E8%87%AA%E5%88%86%E5%A5%BD%E3%81%BF%E3%81%AE%E8%89%B2%E3%81%AB%E3%81%99%E3%82%8B/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/images/colorful-balloons-640.webp" loading="lazy" data-key="" data-hash="/images/colorful-balloons-640.webp"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">シンタックスハイライトを自分好みの色にする</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/hugo-warning-.site.social/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/images/hugo-warning-sitesocial.webp" loading="lazy" data-key="" data-hash="/images/hugo-warning-sitesocial.webp"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Hugo Warning .Site.Social</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E3%83%AA%E3%82%B9%E3%83%88%E8%A1%A8%E7%A4%BA%E3%81%A8%E3%82%B7%E3%83%B3%E3%82%B0%E3%83%AB%E8%A1%A8%E7%A4%BA%E3%81%AB%E3%82%BF%E3%82%B0%E3%82%92%E4%BB%98%E3%81%91%E3%82%8B/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/images/tag_720.webp" loading="lazy" data-key="" data-hash="/images/tag_720.webp"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">リスト表示とシングル表示にタグを付ける</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/hugo%E3%81%AB%E3%82%B3%E3%83%A1%E3%83%B3%E3%83%88%E6%A9%9F%E8%83%BD%E3%82%92%E4%BB%98%E3%81%91%E3%82%8Bgiscus%E7%B7%A8/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/images/speech-bubbles_640.webp" loading="lazy" data-key="" data-hash="/images/speech-bubbles_640.webp"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Hugoにコメント機能を付ける（giscus編）</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/hugo-update-v0.122.0/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/images/hugo-logo-wide.svg" loading="lazy" data-key="" data-hash="/images/hugo-logo-wide.svg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Hugo Update V0.122.0</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "hugo-theme-stack" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (typeof DISQUS == 'object') {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2024 k-kaz
+    </section>
+    
+    <section class="powerby">
+        <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> で構築されています。 <br />
+        テーマ <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.26.0">Stack</a></b> は <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> によって設計されています。
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

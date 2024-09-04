@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Shortcodes を使うと便利そうなので、ちょっと勉強します。">
+<title>Hugo の Shortcodes を使ってみる。</title>
+
+<link rel='canonical' href='https://k-kaz-git.github.io/p/hugo-%E3%81%AE-shortcodes-%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%A6%E3%81%BF%E3%82%8B/'>
+
+<link rel="stylesheet" href="/scss/style.min.43289f33a995fb4bc83e665a1a22504b7eecefd3dcf3f9ecc83ed51746ad75d3.css"><meta property='og:title' content="Hugo の Shortcodes を使ってみる。">
+<meta property='og:description' content="Shortcodes を使うと便利そうなので、ちょっと勉強します。">
+<meta property='og:url' content='https://k-kaz-git.github.io/p/hugo-%E3%81%AE-shortcodes-%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%A6%E3%81%BF%E3%82%8B/'>
+<meta property='og:site_name' content='k-kaz が Hugo で遊ぶサイト'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='hugo' /><meta property='article:tag' content='Shortcodes' /><meta property='article:published_time' content='2019-03-11T17:40:19&#43;09:00'/><meta property='article:modified_time' content='2019-03-11T17:40:19&#43;09:00'/><meta property='og:image' content='https://k-kaz-git.github.io/images/computer-Programming_640.webp' />
+<meta name="twitter:title" content="Hugo の Shortcodes を使ってみる。">
+<meta name="twitter:description" content="Shortcodes を使うと便利そうなので、ちょっと勉強します。"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://k-kaz-git.github.io/images/computer-Programming_640.webp' />
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+  
+
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="メニューを開く・閉じる">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/images/android-chrome-192x192_hu5450162830773684134.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">k-kaz が Hugo で遊ぶサイト</a></h1>
+            <h2 class="site-description">Hugo関連の記事ですが、初心者なので参考になりませんよ。</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href=''
+                        target="_blank"
+                        
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>ダークモード</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目次</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#shortcodes-って何">Shortcodes って何？</a></li>
+    <li><a href="#使い方">使い方</a>
+      <ol>
+        <li><a href="#基本形">基本形</a></li>
+        <li><a href="#変数を使う">変数を使う</a></li>
+        <li><a href="#変数を分かりやすく文字にする">変数を分かりやすく文字にする</a></li>
+        <li><a href="#開始タグと終了タグを入れる">開始タグと終了タグを入れる</a></li>
+        <li><a href="#特定の文字列を置換する">特定の文字列を置換する</a>
+          <ol>
+            <li><a href="#概要">概要</a></li>
+            <li><a href="#html-の書き方">html の書き方</a></li>
+            <li><a href="#記事の書き方">記事の書き方</a></li>
+            <li><a href="#結果">結果</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#shortcodes用のhtmlについて">Shortcodes用のHTMlについて</a>
+      <ol>
+        <li><a href="#if文条件分岐">if文（条件分岐）</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/hugo-%E3%81%AE-shortcodes-%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%A6%E3%81%BF%E3%82%8B/">
+                
+                    <img src="/images/computer-Programming_640.webp" loading="lazy" alt="Featured image of post Hugo の Shortcodes を使ってみる。" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/homepage/" >
+                Homepage
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/hugo-%E3%81%AE-shortcodes-%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%A6%E3%81%BF%E3%82%8B/">Hugo の Shortcodes を使ってみる。</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            Shortcodes を使うと便利そうなので、ちょっと勉強します。
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">2019/03/11</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    読了時間: 4分
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="shortcodes-って何">Shortcodes って何？
+</h2><p>Hugo では、簡潔に Markdown が書けるように、Shortcodes というものが用意されています。<br>
+記事中でよく使う表現なんかを、別ファイルとして HTML で用意しておき、必要に応じて呼び出す感じ。</p>
+<p><a class="link" href="https://gohugo.io/content-management/shortcodes/"  target="_blank" rel="noopener"
+    >Hugo 本体で用意されているもの</a>、各テーマの中に用意されているもの、自分で用意するもの（自作）の3つがあります。</p>
+<p>他のテーマで気に入った Shortcodes があれば、それを別テーマに移植するのも手。<br>
+スタイルシートが絡みますので、ちょっとした編集は必要になります。<br>
+たまに、画像も使っていたりするので、それも見落とさずに必要があれば持っていきましょう。</p>
+<p>テーマ内の Shortcodes はとても勉強になるので、よく眺めておきましょう（笑）<br>
+ちなみに置き場所は下記の通りです。</p>
+<p>テーマの Shortcodes<br>
+<code>/theme/hoge-theme/layouts/shortcodes/</code></p>
+<p>自作の Shortcodes<br>
+<code>/layouts/shortcodes</code></p>
+<h2 id="使い方">使い方
+</h2><h3 id="基本形">基本形
+</h3><p>ごく標準的な書き方。</p>
+<script src="https://gist.github.com/k-kaz-git/83aa5e9919d9bab4fd3d83ee6532af6b.js"></script>
+<p>※Markdown でショートコードを書くと、バッククォートで囲んでも実行しちゃう・・・。ということで、gist を利用。この gist 読み込みも Shortcodes で行っています。<br>
+※<code>%</code> のところは、前を <code>&lt;</code> で、後ろを <code>&gt;</code> でも良いみたいです。</p>
+<p>ショートコード名は、別途用意している HTML のファイル名（拡張子の <code>.html</code> を除いたもの）になり、これを読み込み、実行します。</p>
+<p>例えば、red.html というファイルに下記が記述されていたとします。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">span</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;color:red;&#34;</span><span class="p">&gt;</span>赤い字ですよ。<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Markdown の記事で、</p>
+<script src="https://gist.github.com/k-kaz-git/57c9a781cf43625d44270dd2e0c42494.js"></script>
+<p>と書きますと、</p>
+<p><span style="color:red;">赤い字ですよ。</span></p>
+<p>が出力されます。</p>
+<h3 id="変数を使う">変数を使う
+</h3><p>また、<code>{{.Get 0}}</code> という変数を使って、値の代入も可能です。</p>
+<p>color.html というファイルに下記が記述されていた場合、</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">span</span> <span class="na">sytle</span><span class="o">=</span><span class="s">&#34;color:{{.Get 0}};&#34;</span><span class="p">&gt;</span>文字の色を変えます。<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Markdown の記事で、</p>
+<script src="https://gist.github.com/k-kaz-git/b2afd861241a83822fed711f581bcc9e.js"></script>
+<p>と書けば、<code>{{.Get 0}}</code> に <code>blue</code> が代入されて</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">span</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;color:blue;&#34;</span><span class="p">&gt;</span>文字の色を変えます。<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><span style="color:blue;">文字の色を変えます。</span></p>
+<p>というように。</p>
+<p>パラメーターは複数指定できますので、<code>{{.Get 0}}</code> <code>{{.Get 1}}</code> というように、数字を増やしていけばいくつでも対応できます。</p>
+<h3 id="変数を分かりやすく文字にする">変数を分かりやすく文字にする
+</h3><p>数字だけだと数が増えた時にゴチャゴチャとしますので、分かりやすいように文字指定にするほうが良いかもしれません。</p>
+<script src="https://gist.github.com/k-kaz-git/61b0ee861abfe4fc7973975bbc3bc4aa.js"></script>
+<p><code>{{.Get &quot;src&quot;}}</code> <code>{{.Get &quot;title&quot;}}</code> で、それぞれの値を取得することができます。</p>
+<h3 id="開始タグと終了タグを入れる">開始タグと終了タグを入れる
+</h3><p>元となる文章「何かしらの文字列」の前後に開始タグと終了タグを入れる場合はこのようにします。</p>
+<script src="https://gist.github.com/k-kaz-git/59f1832bfd28998120c2935d5f5dc88a.js"></script>
+<p>html側では、「何かしらの文字列」を取得するため <code>{{.Inner}}</code> を使い、下記のように記述します。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">span</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;color:red&#34;</span><span class="p">&gt;</span>{{.Inner}}<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="特定の文字列を置換する">特定の文字列を置換する
+</h3><p>Netlify のほうで使っているテーマ Cupper の中に、特定の文字列を置換する Shortcodes がありました。<br>
+使う機会もありそうなので、こちらに書いておきます。</p>
+<h4 id="概要">概要
+</h4><p><code>[[[</code> と <code>]]]</code> で挟まれた文字列に対して、ハイライトを付けるという Shortcodes です。</p>
+<p><code>[[[</code> という文字列を <code>&lt;span class='highlight'&gt;</code> に置換し、<br>
+<code>]]]</code> という文字列を <code>&lt;/span&gt;</code> に置換します。</p>
+<h4 id="html-の書き方">html の書き方
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">{{ $code := .Inner | htmlEscape }}
+</span></span><span class="line"><span class="cl">{{ $code := replace $code &#34;[[[&#34; &#34;<span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#39;highlight&#39;</span><span class="p">&gt;</span>&#34; }}
+</span></span><span class="line"><span class="cl">{{ $code := replace $code &#34;]]]&#34; &#34;<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>&#34; }}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="table-wrapper"><table>
+<thead>
+<tr>
+<th style="text-align:center">行数</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1行目</td>
+<td><code>{{.Inner}}</code> で範囲指定した文字列を読み込んで、<code>$code</code> に代入します。</td>
+</tr>
+<tr>
+<td style="text-align:center">2行目</td>
+<td><code>$code</code> を読み込み、<code>[[[</code> という文字列があれば <code>&lt;span class='highlight'&gt;</code> に置換し、再度 <code>$code</code> に代入します。</td>
+</tr>
+<tr>
+<td style="text-align:center">3行目</td>
+<td><code>$code</code> を読み込み、<code>]]]</code> という文字列があれば <code>&lt;/span&gt;</code> に置換し、再度 <code>$code</code> に代入します。</td>
+</tr>
+</tbody>
+</table></div>
+<h4 id="記事の書き方">記事の書き方
+</h4><p>こんな感じで。</p>
+<script src="https://gist.github.com/k-kaz-git/469318917a46ba32a810e5cac8c96817.js"></script>
+<h4 id="結果">結果
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">何かしらの<span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#39;highlight&#39;</span><span class="p">&gt;</span>文字列<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>です。
+</span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
+<p>これくらい覚えておけば、ある程度自作も出来そうですね。<br>
+また何かあれば追記します。</p>
+<p>ちなみに、Youtube や Instagram の埋め込みについても、Hugo 標準の Shortcodes で、出来るようになっています。</p>
+<h2 id="shortcodes用のhtmlについて">Shortcodes用のHTMlについて
+</h2><p>Shortcodes で利用する html の記述方法は紹介しましたが、ちょっとアレンジしたものを紹介します。</p>
+<h3 id="if文条件分岐">if文（条件分岐）
+</h3><p>本文から受け取った値によって、1つの html 内で出力方法を変化させる方法です。</p>
+<p>実際に行ったケース。<br>
+テキストの文字色を変化させる Shortcodes で、内容によって改行するものと、改行しないものを用意したくなりました。</p>
+<ul>
+<li>改行するもの → 段落要素（p）</li>
+<li>改行しないもの → 行内コンテナ（span）</li>
+</ul>
+<p>Shortcodes での記述はこちら。</p>
+<script src="https://gist.github.com/k-kaz-git/4bcefb1b31bf0e94de53a361846a887b.js"></script>
+<p>上の type=&ldquo;p&rdquo; が段落で、下の type=&ldquo;s&rdquo; が行内となります。</p>
+<p>fr という html ファイルを読み込んでいます。その中身はこちらです。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">{{- $han := .Get &#34;type&#34; -}}
+</span></span><span class="line"><span class="cl">{{ if $han | eq &#34;p&#34;}}
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fr&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;font-size: {{.Get &#34;</span><span class="na">size</span><span class="err">&#34;}}%;&#34;</span><span class="p">&gt;</span>{{.Get &#34;text&#34;}}<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">{{ else if $han | eq &#34;s&#34;}}
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fr&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;font-size: {{.Get &#34;</span><span class="na">size</span><span class="err">&#34;}}%;&#34;</span><span class="p">&gt;</span>{{.Get &#34;text&#34;}}<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">{{ end }}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>ちょっと解説。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">{{- $han := .Get &#34;type&#34; -}}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>$han という変数に本文中から引っ張ってきた <code>type</code> の中身を代入します。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">{{ if $han | eq &#34;p&#34;}}
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fr&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;font-size: {{.Get &#34;</span><span class="na">size</span><span class="err">&#34;}}%;&#34;</span><span class="p">&gt;</span>{{.Get &#34;text&#34;}}<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">{{ else if $han | eq &#34;s&#34;}}
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fr&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;font-size: {{.Get &#34;</span><span class="na">size</span><span class="err">&#34;}}%;&#34;</span><span class="p">&gt;</span>{{.Get &#34;text&#34;}}<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">{{ end }}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>$han の中身が &ldquo;p&rdquo; だったら、<code>&lt;p class ...</code> の行を実行します。<br>
+$han の中身が &ldquo;s&rdquo; だったら、<code>&lt;span ...</code> の行を実行します。</p>
+<p><code>eq</code> というのは比較したものが <code>同じ</code> という意味です。</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/hugo/">Hugo</a>
+        
+            <a href="/tags/shortcodes/">Shortcodes</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">関連するコンテンツ</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/hugo-warning-.site.social/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/images/hugo-warning-sitesocial.webp" loading="lazy" data-key="" data-hash="/images/hugo-warning-sitesocial.webp"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Hugo Warning .Site.Social</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E3%83%AA%E3%82%B9%E3%83%88%E8%A1%A8%E7%A4%BA%E3%81%A8%E3%82%B7%E3%83%B3%E3%82%B0%E3%83%AB%E8%A1%A8%E7%A4%BA%E3%81%AB%E3%82%BF%E3%82%B0%E3%82%92%E4%BB%98%E3%81%91%E3%82%8B/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/images/tag_720.webp" loading="lazy" data-key="" data-hash="/images/tag_720.webp"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">リスト表示とシングル表示にタグを付ける</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/hugo%E3%81%AB%E3%82%B3%E3%83%A1%E3%83%B3%E3%83%88%E6%A9%9F%E8%83%BD%E3%82%92%E4%BB%98%E3%81%91%E3%82%8Bgiscus%E7%B7%A8/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/images/speech-bubbles_640.webp" loading="lazy" data-key="" data-hash="/images/speech-bubbles_640.webp"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Hugoにコメント機能を付ける（giscus編）</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/hugo-update-v0.122.0/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/images/hugo-logo-wide.svg" loading="lazy" data-key="" data-hash="/images/hugo-logo-wide.svg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Hugo Update V0.122.0</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E3%81%95%E3%81%8F%E3%82%89%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%8D%E3%83%83%E3%83%88%E3%81%A7hugo%E3%82%92%E4%BD%BF%E3%81%84%E3%81%9F%E3%81%84/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/images/hugo-sakura.webp" loading="lazy" data-key="" data-hash="/images/hugo-sakura.webp"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">さくらインターネットでHugoを使いたい</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "hugo-theme-stack" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (typeof DISQUS == 'object') {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2024 k-kaz
+    </section>
+    
+    <section class="powerby">
+        <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> で構築されています。 <br />
+        テーマ <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.26.0">Stack</a></b> は <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> によって設計されています。
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

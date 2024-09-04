@@ -1,0 +1,1363 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="テーマ aether のカスタマイズをこちらにまとめます。">
+<title>テーマ aether のカスタマイズ</title>
+
+<link rel='canonical' href='https://k-kaz-git.github.io/p/%E3%83%86%E3%83%BC%E3%83%9E-aether-%E3%81%AE%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA/'>
+
+<link rel="stylesheet" href="/scss/style.min.43289f33a995fb4bc83e665a1a22504b7eecefd3dcf3f9ecc83ed51746ad75d3.css"><meta property='og:title' content="テーマ aether のカスタマイズ">
+<meta property='og:description' content="テーマ aether のカスタマイズをこちらにまとめます。">
+<meta property='og:url' content='https://k-kaz-git.github.io/p/%E3%83%86%E3%83%BC%E3%83%9E-aether-%E3%81%AE%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA/'>
+<meta property='og:site_name' content='k-kaz が Hugo で遊ぶサイト'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='hugo' /><meta property='article:tag' content='theme' /><meta property='article:tag' content='aether' /><meta property='article:published_time' content='2019-02-18T21:30:02&#43;09:00'/><meta property='article:modified_time' content='2019-02-18T21:30:02&#43;09:00'/><meta property='og:image' content='https://k-kaz-git.github.io/images/pair-love_640.webp' />
+<meta name="twitter:title" content="テーマ aether のカスタマイズ">
+<meta name="twitter:description" content="テーマ aether のカスタマイズをこちらにまとめます。"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://k-kaz-git.github.io/images/pair-love_640.webp' />
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+  
+
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="メニューを開く・閉じる">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/images/android-chrome-192x192_hu5450162830773684134.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">k-kaz が Hugo で遊ぶサイト</a></h1>
+            <h2 class="site-description">Hugo関連の記事ですが、初心者なので参考になりませんよ。</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href=''
+                        target="_blank"
+                        
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>ダークモード</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目次</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#aether-のカスタマイズをこちらにまとめます">aether のカスタマイズをこちらにまとめます。</a>
+      <ol>
+        <li><a href="#追記注意事項-20190220-1250">追記：注意事項 ［2019/02/20 12:50］</a></li>
+        <li><a href="#追記今更ですが20190220-1245">追記：今更ですが・・・［2019/02/20 12:45］</a></li>
+      </ol>
+    </li>
+    <li><a href="#標準機能内">標準機能内</a>
+      <ol>
+        <li><a href="#ホームボタンの設定">ホームボタンの設定</a></li>
+        <li><a href="#イメージデータの入れ方">イメージデータの入れ方</a></li>
+        <li><a href="#google-analytics">Google Analytics</a></li>
+      </ol>
+    </li>
+    <li><a href="#標準機能外">標準機能外</a>
+      <ol>
+        <li><a href="#コメント用の外部サービスを外す">コメント用の外部サービスを外す</a></li>
+        <li><a href="#テンプレートに外部リンクを仕込む">テンプレートに外部リンクを仕込む</a></li>
+        <li><a href="#スタイルシートを適用する">スタイルシートを適用する</a>
+          <ol>
+            <li><a href="#カスタマイズファイルを用意">カスタマイズファイルを用意</a></li>
+            <li><a href="#スタイルシートの読み込み">スタイルシートの読み込み</a></li>
+          </ol>
+        </li>
+        <li><a href="#目次を追加する">目次を追加する</a></li>
+        <li><a href="#更新日を追加する">更新日を追加する</a>
+          <ol>
+            <li><a href="#更新日を追加する個別記事">更新日を追加する（個別記事）</a></li>
+            <li><a href="#更新日を追加するトップページ2019-02-25">更新日を追加する（トップページ）［2019-02-25］</a></li>
+          </ol>
+        </li>
+        <li><a href="#更新日がうまく取得できずに悩む--解決したっぽい2019-02-25">更新日がうまく取得できずに悩む → 解決したっぽい［2019-02-25］</a>
+          <ol>
+            <li><a href="#更新日がうまく入らない">更新日がうまく入らない</a></li>
+            <li><a href="#更新日がうまく入らない解決したっぽい">更新日がうまく入らない（解決したっぽい）</a></li>
+            <li><a href="#更新日の件2019-02-28">更新日の件［2019-02-28］</a></li>
+            <li><a href="#更新日の件2019-03-04">更新日の件［2019-03-04］</a></li>
+          </ol>
+        </li>
+        <li><a href="#フォントを指定する2019-02-25">フォントを指定する［2019-02-25］</a>
+          <ol>
+            <li><a href="#webフォントを使う">Webフォントを使う</a></li>
+            <li><a href="#ローカルフォントを指定する">ローカルフォントを指定する</a></li>
+          </ol>
+        </li>
+        <li><a href="#コード表示にサイズ制限を設ける-2019-03-14">コード表示にサイズ制限を設ける ［2019-03-14］</a>
+          <ol>
+            <li><a href="#スタイルシートを修正する">スタイルシートを修正する</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#タグ問題を解決する2019-02-28">タグ問題を解決する［2019-02-28］</a>
+      <ol>
+        <li><a href="#タグを使えるようにする">タグを使えるようにする</a>
+          <ol>
+            <li><a href="#設定ファイルの修正">設定ファイルの修正</a></li>
+            <li><a href="#記事テンプレートの修正">記事テンプレートの修正</a></li>
+          </ol>
+        </li>
+        <li><a href="#タグを表示する">タグを表示する</a>
+          <ol>
+            <li><a href="#トップページ">トップページ</a></li>
+            <li><a href="#個別記事">個別記事</a></li>
+            <li><a href="#次の記事">次の記事</a></li>
+            <li><a href="#メニューボタン">メニューボタン</a></li>
+          </ol>
+        </li>
+        <li><a href="#カテゴリーとタグの表示調整">カテゴリーとタグの表示調整</a>
+          <ol>
+            <li><a href="#その後">その後</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/%E3%83%86%E3%83%BC%E3%83%9E-aether-%E3%81%AE%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA/">
+                
+                    <img src="/images/pair-love_640.webp" loading="lazy" alt="Featured image of post テーマ aether のカスタマイズ" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/homepage/" >
+                Homepage
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/%E3%83%86%E3%83%BC%E3%83%9E-aether-%E3%81%AE%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA/">テーマ aether のカスタマイズ</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            テーマ aether のカスタマイズをこちらにまとめます。
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">2019/02/18</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    読了時間: 14分
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="aether-のカスタマイズをこちらにまとめます">aether のカスタマイズをこちらにまとめます。
+</h2><hr>
+<p><del>念の為、テーマを丸ごとコピーして、そちらを弄ることにします。</del>
+<del>その際、以下の修正が必要です。</del></p>
+<p><del><code>/サイト名/themes/新しいテーマ名/theme.toml</code></del><br>
+<del><code>name = &quot;新しいテーマ名&quot;</code></del></p>
+<p><del><code>/サイト名/config.toml</code></del><br>
+<del><code>theme = &quot;新しいテーマ名&quot;</code></del></p>
+<h3 id="追記注意事項-20190220-1250">追記：注意事項 ［2019/02/20 12:50］
+</h3><p>素人が遊びながら行っているカスタマイズです。<br>
+違っている部分など <strong>多々</strong> あるかもしれません。<br>
+そのあたりは、十分にお気を付けください。</p>
+<h3 id="追記今更ですが20190220-1245">追記：今更ですが・・・［2019/02/20 12:45］
+</h3><p>わざわざテーマ内を弄らずに、root に用意されているフォルダ（static とか layout とか）にファイルを置いて弄れば良いような気がしてきた。<br>
+それが可能なら、テーマの丸ごとコピーも要らないしね。<br>
+なんか、すごく無駄なことをしていたかもしれない。</p>
+<p>ということで、このページも修正しました。</p>
+<h2 id="標準機能内">標準機能内
+</h2><h3 id="ホームボタンの設定">ホームボタンの設定
+</h3><img src="/images/aether-custom-home-btn_400.webp" alt="ホームボタンの設置" style="max-width:400px;">
+<p>個別記事を開いた時に、一番下に真っ白なスペースがあります。<br>
+ここは、ホーム（トップページ）に戻るためのボタンになっており、Home という白文字が入っています。<strong>実際は白同士で見えないんですけど。</strong></p>
+<p><code>homeimg</code> に少し暗めの画像を指定すると、文字がハッキリして見やすいと思います。</p>
+<p><code>/サイト名/config.toml</code></p>
+<script src="https://gist.github.com/k-kaz-git/2df71ae7a4d133f118cf424e6d48476b.js"></script>
+<h3 id="イメージデータの入れ方">イメージデータの入れ方
+</h3><p>テーマの <code>readme</code> にも書いてありますが、普通のコマンドで挿入すると、エリア内いっぱいに広がります。</p>
+<p>普通の入れ方</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-md" data-lang="md"><span class="line"><span class="cl">![<span class="nt">イメージタイトル</span>](<span class="na">/images/hoge.webp</span>)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><script src="https://gist.github.com/k-kaz-git/d27e935f5404952ae5419250516ebe1e.js"></script>
+<h3 id="google-analytics">Google Analytics
+</h3><p>テーマが元々対応してくれているので、設定ファイルにトラッキングコードを記入するだけで、各ページに展開してくれます。</p>
+<p><code>/サイト名/config.toml</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="nx">googleAnalytics</span> <span class="p">=</span> <span class="s2">&#34;トラッキングコード&#34;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><code>&lt;head&gt;&lt;/head&gt;</code> の間に長いタグを入れる必要もありません。楽ちんだ。</p>
+<h2 id="標準機能外">標準機能外
+</h2><h3 id="コメント用の外部サービスを外す">コメント用の外部サービスを外す
+</h3><p>テーマには、個別記事に disqus のサービスが組み込まれていますが、これも使いませんので外します。<br>
+下記フォルダが無い場合は作成し、該当ファイルをテーマから持ってきましょう。</p>
+<p><code>/サイト名/layouts/_default/single.html</code></p>
+<script src="https://gist.github.com/k-kaz-git/6fbc59bd45e57c5086e3d4e7a87ac63b.js"></script>
+<h3 id="テンプレートに外部リンクを仕込む">テンプレートに外部リンクを仕込む
+</h3><img src="/images/aether-custom-link-btn_175.webp" alt="外部リンクボタンの設置" style="width:175px;">
+<p>表示させる場所によって、編集するファイルは変わりますが、今回は最下部（フッター）に入れることにしました。普通に HTML を修正します。<br>
+footer.html は、<code>&lt;footer&gt;&lt;/footer&gt;</code> と、空っぽなので、その間にタグを入れます。</p>
+<p><code>/サイト名/layouts/partials/footer.html</code></p>
+<script src="https://gist.github.com/k-kaz-git/2dd802712a513a5017593a9d77536aa3.js"></script>
+<h3 id="スタイルシートを適用する">スタイルシートを適用する
+</h3><p>テーマ内のスタイルシートではなく、別途カスタマイズ用のファイルを用意します。<br>
+また、そのファイルを読み込むよう、HTML の修正をします。</p>
+<h4 id="カスタマイズファイルを用意">カスタマイズファイルを用意
+</h4><p><code>/サイト名/static/css/hoge.css</code><br>
+css というフォルダも自分で作成し、その中にスタイルシート用のファイルを作ります。</p>
+<h4 id="スタイルシートの読み込み">スタイルシートの読み込み
+</h4><p><code>/サイト名/layouts/partials/head.html</code><br>
+スタイルシートの読み込み行が続いているので、一番下に <code>/css/hoge.css</code> を追加します。</p>
+<script src="https://gist.github.com/k-kaz-git/be3470f0ad5ab3538adcc7df1bb6182e.js"></script>
+<h3 id="目次を追加する">目次を追加する
+</h3><p>手動で目次を作ることもできますが、後から構成が変更になると、追加修正が大変なことになりますので、自動的に目次を生成するようにします。<br>
+これは、Hugo に元々組み込まれている関数 <code>{{.TableOfContents}}</code> を使用することで実現可能です。</p>
+<p>公式ドキュメントでは、<strong>本文が 400文字以上の記事のみ目次を付ける</strong> というものが紹介されていました。</p>
+<script src="https://gist.github.com/k-kaz-git/078e749b2dcf0bf59192c871049ccc98.js"></script>
+<p>しかし、<strong>私の英語力と、Hugo知識ではまだ乗り越えられない壁</strong> のようです。</p>
+<p>結局、一番簡単な、下記方法で妥協しております。</p>
+<p><code>/サイト名/layouts/_default/single.html</code></p>
+<script src="https://gist.github.com/k-kaz-git/cd2030eb11278acb7172621f18a3e7f8.js"></script>
+<p>こうすることで、＜目次＞という文字列の下に、自動で目次を生成してくれます。<br>
+条件としては、<code>H2</code> 以下の <code>Hタグ</code> が目次としての構成要素になるようです。</p>
+<p>但し、このやり方だと、400文字以上とか無視して、<strong>どのページにも出現します</strong> ので注意。</p>
+<h3 id="更新日を追加する">更新日を追加する
+</h3><p>こちらのサイトは、日記的な <a class="link" href="https://k-kaz.net"  title="姉妹サイト（本家）"
+     target="_blank" rel="noopener"
+    >姉妹サイト（本家）</a> とは違って、同じ記事を後から何度も加筆修正します。<br>
+そうなると、投稿日だけではなく、最終更新日もあると嬉しい。</p>
+<p>さぁ、やってみましょう。</p>
+<h4 id="更新日を追加する個別記事">更新日を追加する（個別記事）
+</h4><img src="/images/aether-custom-update_284.webp" style="width:284px;" alt="更新日を追加する">  
+<p>Hugo に用意されている関数 <code>.Lastmod</code> を利用します。<br>
+下準備として、<code>config.toml</code> に関数を有効にするための記述を追加します。</p>
+<p><code>/サイト名/config.toml</code><br>
+<code>enableGitInfo = true</code> ← これで有効化されます。</p>
+<p>続いて、更新日を出力したい場所に <code>.Lastmod</code> を入れます。</p>
+<p><code>/サイト名/layouts/_default/single.html</code></p>
+<p><code>&lt;header&gt;</code> だけ抜き出しました。<br>
+上が元のコードで、下が修正したコードです。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">[single.html 修正前]
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">header</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;post-header&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">   	<span class="p">&lt;</span><span class="nt">h1</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;post-title&#34;</span><span class="p">&gt;</span>{{ .Title }}<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;post-date&#34;</span><span class="p">&gt;</span>Posted <span class="p">&lt;</span><span class="nt">time</span> <span class="na">datetime</span><span class="o">=</span><span class="s">&#34;{{ .Date.Format &#34;</span><span class="na">2006-01-02</span><span class="err">&#34;</span> <span class="err">}}&#34;</span><span class="p">&gt;</span>{{ .Date.Format &#34;Jan 2, 2006&#34; }}<span class="p">&lt;/</span><span class="nt">time</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">header</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">[single.html 修正後]
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">header</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;post-header&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">   	<span class="p">&lt;</span><span class="nt">h1</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;post-title&#34;</span><span class="p">&gt;</span>{{ .Title }}<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;post-date&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        Posted <span class="p">&lt;</span><span class="nt">time</span> <span class="na">datetime</span><span class="o">=</span><span class="s">&#34;{{ .Date.Format &#34;</span><span class="na">2006-01-02</span><span class="err">&#34;</span> <span class="err">}}&#34;</span><span class="p">&gt;</span>{{ .Date.Format &#34;2006-01-02&#34; }}<span class="p">&lt;/</span><span class="nt">time</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">         / Update {{ .Lastmod.Format &#34;2006-01-02&#34; }}<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">header</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><code>.Lastmod</code> だけだと、時間まで表示されて大げさなので、<code>.Format &quot;2006-01-02&quot;</code> で書式を設定しました。
+ついでに初回投稿のほうも、同じ書式に変更しています。</p>
+<h4 id="更新日を追加するトップページ2019-02-25">更新日を追加する（トップページ）［2019-02-25］
+</h4><img src="/images/aether-custom-card-update_640.webp" alt="トップにも更新日を入れる" style="max-width:640px;">
+<p>やり方は個別記事と同じで、編集するファイルが変わるだけです。</p>
+<p><code>/サイト名/layouts/_default/li.html</code><br>
+※theme の中にあるのでコピーして持ってきます。</p>
+<p>ついでに、ポストされた日のフォーマットも合わせておきます。<br>
+<code>&lt;div&gt;</code> のすぐ下にある <code>&lt;p&gt;&lt;/p&gt;</code> の中を修正しています。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">[li.html 修正前]
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card-subtext muted-text&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Posted <span class="p">&lt;</span><span class="nt">time</span> <span class="na">datetime</span><span class="o">=</span><span class="s">&#34;{{ .Date.Format &#34;</span><span class="na">2006-01-02</span><span class="err">&#34;</span> <span class="err">}}&#34;</span><span class="p">&gt;</span>{{ .Date.Format &#34;Jan 2, 2006&#34; }}<span class="p">&lt;/</span><span class="nt">time</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  {{ if (isset .Params &#34;categories&#34;) }}<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>{{ range .Params.categories }}#{{ . }} {{ end }}<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>{{ end }}
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">[li.html 修正後]
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card-subtext muted-text&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Posted <span class="p">&lt;</span><span class="nt">time</span> <span class="na">datetime</span><span class="o">=</span><span class="s">&#34;{{ .Date.Format &#34;</span><span class="na">2006-01-02</span><span class="err">&#34;</span> <span class="err">}}&#34;</span><span class="p">&gt;</span>{{ .Date.Format &#34;2006-01-02&#34; }}<span class="p">&lt;/</span><span class="nt">time</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">     / Update {{ .Lastmod.Format &#34;2006-01-02&#34; }}<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  {{ if (isset .Params &#34;categories&#34;) }}<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>{{ range .Params.categories }}#{{ . }} {{ end }}<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>{{ end }}
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="更新日がうまく取得できずに悩む--解決したっぽい2019-02-25">更新日がうまく取得できずに悩む → 解決したっぽい［2019-02-25］
+</h3><p>手動でコミットしてプッシュするといけるけど、スクリプトでやるとダメっぽいぞ・・・。<br>
+うーん、何が悪いんだ。</p>
+<p><strong>［2019-02-28］</strong><br>
+<strong>サーバー側で反映されるのに、ちょびっとだけ時間がかかるだけだった疑惑発生！！</strong></p>
+<h4 id="更新日がうまく入らない">更新日がうまく入らない
+</h4><p>プッシュするのにコマンドをいくつも入れるのが面倒なので、ネットで調べて下記のスクリプトを組んであります。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="nb">echo</span> -e <span class="s2">&#34;\033[0;33mDeploying updates to GitHub...\033[0m&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Build the project.</span>
+</span></span><span class="line"><span class="cl">hugo
+</span></span><span class="line"><span class="cl"><span class="c1"># Go to public folder</span>
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> public
+</span></span><span class="line"><span class="cl"><span class="c1"># Add changes to git.</span>
+</span></span><span class="line"><span class="cl">git add .
+</span></span><span class="line"><span class="cl"><span class="c1"># Commit changes.</span>
+</span></span><span class="line"><span class="cl"><span class="nv">msg</span><span class="o">=</span><span class="s2">&#34;rebuilding site `date`&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="o">[</span> <span class="nv">$#</span> -eq <span class="m">1</span> <span class="o">]</span>
+</span></span><span class="line"><span class="cl">  <span class="k">then</span> <span class="nv">msg</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$1</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">fi</span>
+</span></span><span class="line"><span class="cl">git commit -m <span class="s2">&#34;</span><span class="nv">$msg</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Push source and build repos.</span>
+</span></span><span class="line"><span class="cl">git push origin master
+</span></span><span class="line"><span class="cl"><span class="c1"># Come back</span>
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> ..
+</span></span><span class="line"><span class="cl"><span class="c1"># Add changes to git.</span>
+</span></span><span class="line"><span class="cl">git add .
+</span></span><span class="line"><span class="cl"><span class="c1"># Commit changes.</span>
+</span></span><span class="line"><span class="cl"><span class="nv">msg</span><span class="o">=</span><span class="s2">&#34;rebuilding site `date`&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="o">[</span> <span class="nv">$#</span> -eq <span class="m">1</span> <span class="o">]</span>
+</span></span><span class="line"><span class="cl">  <span class="k">then</span> <span class="nv">msg</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$1</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">fi</span>
+</span></span><span class="line"><span class="cl">git commit -m <span class="s2">&#34;</span><span class="nv">$msg</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Push source and build repos.</span>
+</span></span><span class="line"><span class="cl">git push origin master
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>手動で同じことをやっていくと反映するんですけど、これを実行したときってうまく反映されないような。<br>
+気のせいかな。</p>
+<p>手動とスクリプトで何か違うのかな。</p>
+<h4 id="更新日がうまく入らない解決したっぽい">更新日がうまく入らない（解決したっぽい）
+</h4><p><code>config.toml</code> に追記することで解決したっぽい。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">frontmatter</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="nx">date</span> <span class="p">=</span> <span class="p">[</span><span class="s2">&#34;date&#34;</span><span class="p">,</span> <span class="s2">&#34;publishDate&#34;</span><span class="p">,</span> <span class="s2">&#34;lastmod&#34;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="nx">lastmod</span> <span class="p">=</span> <span class="p">[</span><span class="s2">&#34;:git&#34;</span><span class="p">,</span> <span class="s2">&#34;lastmod&#34;</span><span class="p">,</span> <span class="s2">&#34;date&#34;</span><span class="p">,</span> <span class="s2">&#34;publishDate&#34;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="nx">publishDate</span> <span class="p">=</span> <span class="p">[</span><span class="s2">&#34;publishDate&#34;</span><span class="p">,</span> <span class="s2">&#34;date&#34;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="nx">expiryDate</span> <span class="p">=</span> <span class="p">[</span><span class="s2">&#34;expiryDate&#34;</span><span class="p">]</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><code>[frontmatter]</code> というセクションを追加し、その下に日付的な設定を追加しました。<br>
+参考にしたのは <a class="link" href="https://gohugo.io/getting-started/configuration/#configure-front-matter"  title="Configure Hugo"
+     target="_blank" rel="noopener"
+    >Configure Hugo</a> です。</p>
+<p>もしかしたら、<code>lastmod</code> の行だけでもいいかもしれない。<br>
+どの段階を最終更新と見るかという設定で、左から優先？みたい。<br>
+デフォルトがこの設定なので、本来は書かなくても良さそうなんだけど・・・。<br>
+まぁ、動いたから良しとする。</p>
+<h4 id="更新日の件2019-02-28">更新日の件［2019-02-28］
+</h4><p>サーバー側で反映されるのに時間がちょびっとかかるだけで、元々出来ていたような気がしてきた。<br>
+そして、カテゴリーとタグを付け直したら、<strong>全ページの最終更新日が 2019-02-27 になってもうた。</strong><br>
+本文中の修正でなくても反映するのね。そりゃそうか。</p>
+<p>どうも気持ち悪いので、ファイルのタイムスタンプから更新日を取得するように変更しました。</p>
+<p>参考にしたのは公式のドキュメント<br>
+<a class="link" href="https://gohugo.io/getting-started/configuration/#configure-dates"  target="_blank" rel="noopener"
+    >Configure Dates</a></p>
+<p><code>:fileModTime</code> というのが、ファイルのタイムスタンプを見てくれるようなので、<code>config.toml</code> を下記のように変更です。</p>
+<p><code>lastmod = [&quot;:fileModTime&quot;, &quot;:git&quot;, &quot;lastmod&quot;, &quot;date&quot;, &quot;publishDate&quot;]</code></p>
+<p><code>lastmod</code> のところで、一番左側に追加しました。</p>
+<p>尚、ファイルはすべて 2019-02-27 のタイムスタンプになっているので、別途アプリで弄っています。</p>
+<h4 id="更新日の件2019-03-04">更新日の件［2019-03-04］
+</h4><p>ファイルのタイムスタンプだと、git-pull で落としてきたときの日付が入っちゃって、やっぱり意図したものと違う。<br>
+結局、元の設定に戻しました（苦笑）</p>
+<p><code>lastmod = [&quot;:git&quot;, &quot;lastmod&quot;, &quot;date&quot;, &quot;publishDate&quot;]</code></p>
+<h3 id="フォントを指定する2019-02-25">フォントを指定する［2019-02-25］
+</h3><p>やっぱり見た目は大事ですよね。<br>
+ということで、フォントを変えてみようと思います。</p>
+<h4 id="webフォントを使う">Webフォントを使う
+</h4><p>フォントが汚いので、Webフォントで有名な <a class="link" href="https://fonts.google.com"  title="Google Fonts"
+     target="_blank" rel="noopener"
+    >Google Fonts</a> を使ってみました。（<a class="link" href="https://k-kaz.net"  title="姉妹サイト（本家）"
+     target="_blank" rel="noopener"
+    >姉妹サイト（本家）</a> でも使っている）<br>
+PageSpeed Insights のモバイルの点数が <strong>15点落ちました</strong> ので、一瞬で戻しました（笑）<br>
+パソコンのほうは相変わらず100点でしたけどね。モバイル、厳しいなぁ。</p>
+<p>Webフォントじゃなくてもきれいに表示することはできるのかしら。調べてみよう。</p>
+<p>尚、使うときは、<code>&lt;head&gt;</code> での読み込みと、<code>css</code> での指定が必要となります。<br>
+以下のファイルを修正します。</p>
+<p><code>/サイト名/layouts/partials/head.html</code><br>
+<code>/サイト名/static/css/hoge.css</code></p>
+<p>尚、この後に書いている内容は、<a class="link" href="https://k-kaz.net"  title="姉妹サイト（本家）"
+     target="_blank" rel="noopener"
+    >姉妹サイト（本家）</a> で使っているものを若干修正したサンプルです。<br>
+使うフォントによってタグの内容も変わりますので、<a class="link" href="https://fonts.google.com"  title="Google Fonts"
+     target="_blank" rel="noopener"
+    >Google Fonts</a> で好きなフォントを選んで、それ用のタグを入手してください。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">［head.html に下記を貼り付ける］
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">&lt;!-- webfontloader --&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">window</span><span class="p">.</span><span class="nx">WebFontConfig</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">google</span><span class="o">:</span> <span class="p">{</span> <span class="nx">families</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;Roboto:400,700&#39;</span><span class="p">,</span> <span class="s1">&#39;Noto+Sans+JP:400,700&#39;</span><span class="p">]</span> <span class="p">},</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">active</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">sessionStorage</span><span class="p">.</span><span class="nx">fonts</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kd">var</span> <span class="nx">wf</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;script&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">wf</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="s1">&#39;https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">wf</span><span class="p">.</span><span class="nx">type</span> <span class="o">=</span> <span class="s1">&#39;text/javascript&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">wf</span><span class="p">.</span><span class="kr">async</span> <span class="o">=</span> <span class="s1">&#39;true&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="kd">var</span> <span class="nx">s</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="s1">&#39;script&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">s</span><span class="p">.</span><span class="nx">parentNode</span><span class="p">.</span><span class="nx">insertBefore</span><span class="p">(</span><span class="nx">wf</span><span class="p">,</span> <span class="nx">s</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">})();</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="c">&lt;!-- webfontloader ここまで--&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="err">［</span><span class="nt">hoge</span><span class="p">.</span><span class="nc">css</span> <span class="nt">に下記を貼り付ける</span><span class="err">］</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nt">body</span> <span class="o">*</span> <span class="p">{</span><span class="k">font-family</span><span class="p">:</span> <span class="s1">&#39;Roboto&#39;</span><span class="p">,</span> <span class="s1">&#39;Noto Sans CJK JP&#39;</span><span class="p">,</span> <span class="s1">&#39;Noto Sans JP&#39;</span><span class="p">,</span> <span class="kc">sans-serif</span> <span class="cp">!important</span><span class="p">;}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>スタイルシートのほうは、かなり乱暴な書き方をしていますけど、テストということで許してください（笑）</p>
+<h4 id="ローカルフォントを指定する">ローカルフォントを指定する
+</h4><p>とりあえず、最近は <strong>游ゴシック体</strong> が良いみたいなので、下記のように指定しました。<br>
+游ゴシックに Medium が入っているのは、<strong>標準の太さだとかすれちゃう問題</strong> が発生するからだそうです。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="nt">font-family</span><span class="o">:</span> <span class="s2">&#34;游ゴシック Medium&#34;</span><span class="o">,</span> <span class="s2">&#34;Yu Gothic Medium&#34;</span><span class="o">,</span> <span class="s2">&#34;游ゴシック体&#34;</span><span class="o">,</span> <span class="s2">&#34;YuGothic&#34;</span><span class="o">,</span> <span class="s2">&#34;ヒラギノ角ゴ ProN W3&#34;</span><span class="o">,</span> <span class="s2">&#34;Hiragino Kaku Gothic ProN&#34;</span><span class="o">,</span> <span class="s2">&#34;メイリオ&#34;</span><span class="o">,</span> <span class="s2">&#34;Meiryo&#34;</span><span class="o">,</span> <span class="s2">&#34;verdana&#34;</span><span class="o">,</span> <span class="nt">sans-serif</span><span class="o">;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="コード表示にサイズ制限を設ける-2019-03-14">コード表示にサイズ制限を設ける ［2019-03-14］
+</h3><p>こちらのサイトでは、よくコードの紹介をしています。（このページもそうですね）<br>
+コードが長くなった場合に記事がえらく間延びしてしまうので、その対策をしたいと思います。<br>
+尚、gist などを使えば自動的にサイズ調整はしてくれますので、ここでは素でコード記述をする場合の内容です。</p>
+<h4 id="スタイルシートを修正する">スタイルシートを修正する
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="nt">code</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">max-width</span><span class="p">:</span> <span class="mi">100</span><span class="kt">vw</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">max-height</span><span class="p">:</span> <span class="mi">20</span><span class="kt">vw</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>最大の幅、高さを設定しました。
+スクロールバーを出すには <code>overflow</code> を入れてあげるのが正しいようですが、それをするとスクロールする必要のないコードまでスクロールバーが表示されて、格好悪かったです。OS やブラウザによるみたいですけど。</p>
+<p>で、それを抜いてあげたら、Hugo か、このテーマ内でうまいこと処理をしてくれましたので、めでたしめでたし。</p>
+<h2 id="タグ問題を解決する2019-02-28">タグ問題を解決する［2019-02-28］
+</h2><p>aether は、カテゴリーのみの運用で、タグの使用は意図されていません。<br>
+タグを使いたい場合は、自力で頑張ることになります。</p>
+<h3 id="タグを使えるようにする">タグを使えるようにする
+</h3><p>2つのファイルを修正してあげます。</p>
+<h4 id="設定ファイルの修正">設定ファイルの修正
+</h4><p>設定ファイル <code>config.toml</code> に <code>tag = &quot;tags&quot;</code> を追加します。<br>
+カテゴリーとまとめて書いておくと見やすいかと思います。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">taxonomies</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="nx">category</span> <span class="p">=</span> <span class="s2">&#34;categories&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">tag</span> <span class="p">=</span> <span class="s2">&#34;tags&#34;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="記事テンプレートの修正">記事テンプレートの修正
+</h4><p>もう1つ。<br>
+記事データに <code>tags: [&quot;&quot;]</code> を追加しますが、毎回手動で入れるのは大変なので、テンプレートの方を直しておきます。<br>
+投稿の仕方によって変わりますが、私は <code>post</code> というフォルダの中に記事を入れているので、下記のファイルを修正します。</p>
+<p><code>サイト名\archetypes\post.md</code></p>
+<p>私のファイルはこんな感じになっています。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-post.md" data-lang="post.md"><span class="line"><span class="cl">---
+</span></span><span class="line"><span class="cl">title: &#34;{{ replace .TranslationBaseName &#34;-&#34; &#34; &#34; | title }}&#34;
+</span></span><span class="line"><span class="cl">date: {{ .Date }}
+</span></span><span class="line"><span class="cl">description: &#34;&#34;
+</span></span><span class="line"><span class="cl">categories: [&#34;&#34;]
+</span></span><span class="line"><span class="cl">tags: [&#34;&#34;]
+</span></span><span class="line"><span class="cl">image: &#34;&#34;
+</span></span><span class="line"><span class="cl">imageDescription: &#34;&#34;
+</span></span><span class="line"><span class="cl">dropCap: false
+</span></span><span class="line"><span class="cl">displayInMenu: false
+</span></span><span class="line"><span class="cl">displayInList: true
+</span></span><span class="line"><span class="cl">draft: true
+</span></span><span class="line"><span class="cl">---
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>こうしておけば、<code>hugo new post/hoge.md</code> としたときに <code>post</code> に属する記事ということで、この <code>post.md</code> をテンプレートとして読み込んでくれ、ちょっとだけ楽になるのと、タグの付け忘れがなくなります。</p>
+<p>尚、記事のほうで <code>tag</code> が複数ある時は <code>tags: [&quot;aaa&quot;,&quot;bbb&quot;,&quot;ccc&quot;]</code> と書いてください。</p>
+<h3 id="タグを表示する">タグを表示する
+</h3><p>ここまでの作業で、記事にタグ付けが出来ています。<br>
+ただ、残念なことにそのタグを表示する術がありません。<br>
+ここから HTML のテンプレートを修正し、好きな場所にタグを表示させるようにします。</p>
+<h4 id="トップページ">トップページ
+</h4><p><code>サイト名\layouts\_default\li.html</code></p>
+<p>一部分だけ抜き出しています。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">article</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card-body&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">h2</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card-title&#34;</span><span class="p">&gt;</span>{{ .Title }}<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card-text&#34;</span><span class="p">&gt;</span>{{ if (isset .Params &#34;description&#34;) }}{{ index .Params &#34;description&#34; }}{{ else }}{{ .Summary }}{{ end }}<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card-subtext muted-text&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Posted <span class="p">&lt;</span><span class="nt">time</span> <span class="na">datetime</span><span class="o">=</span><span class="s">&#34;{{ .Date.Format &#34;</span><span class="na">2006-01-02</span><span class="err">&#34;</span> <span class="err">}}&#34;</span><span class="p">&gt;</span>{{ .Date.Format &#34;2006-01-02&#34; }}<span class="p">&lt;/</span><span class="nt">time</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      / Updated {{ .Lastmod.Format &#34;2006-01-02&#34; }}<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card-subtext muted-text li-line&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      {{ if (isset .Params &#34;categories&#34;) }}{{ range .Params.categories }}<span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;box-gray&#34;</span><span class="p">&gt;</span>{{ . }}<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span> {{ end }}{{ end }}
+</span></span><span class="line"><span class="cl">      {{ if (isset .Params &#34;tags&#34;) }} {{ range .Params.tags }}<span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;box-gray&#34;</span><span class="p">&gt;</span># {{ . }}<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span> {{ end }}{{ end }}
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">article</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>先日、更新日を追加した修正のとき、カテゴリーも同じ <code>&lt;div&gt;&lt;/div&gt;</code> の中に入っていましたが、外側に出しています。<br>
+もう1つ <code>&lt;div&gt;&lt;/div&gt;</code> を用意して、その中にカテゴリーと、今回追加のタグを入れています。</p>
+<p><strong>よく分かっていませんが、<code>categories</code> を <code>tags</code> にしたら動くだろう</strong>と思ってやったら、その通り動きました。<br>
+私が凄いのではなくて、感覚的にできちゃうという分かりやすい設計の Hugo が凄いのでしょう。</p>
+<p>ついでに、カテゴリーに <code>#</code> が付いていましたが、タグのほうに持ってきました。<br>
+あと、<code>class</code> を入れていますが、これは見た目の装飾だけで、動きには影響していません。</p>
+<h4 id="個別記事">個別記事
+</h4><p><code>サイト名\layouts\_default\single.html</code></p>
+<p>一部分だけ抜き出しています。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">header</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;post-header&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"> 	<span class="p">&lt;</span><span class="nt">h1</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;post-title&#34;</span><span class="p">&gt;</span>{{ .Title }}<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;post-date&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      Posted <span class="p">&lt;</span><span class="nt">time</span> <span class="na">datetime</span><span class="o">=</span><span class="s">&#34;{{ .Date.Format &#34;</span><span class="na">2006-01-02</span><span class="err">&#34;</span> <span class="err">}}&#34;</span><span class="p">&gt;</span>{{ .Date.Format &#34;2006-01-02&#34; }}<span class="p">&lt;/</span><span class="nt">time</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      / Update {{ .Lastmod.Format &#34;2006-01-02&#34; }}<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card-subtext muted-text li-line&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      {{ if (isset .Params &#34;categories&#34;) }}{{ range .Params.categories }} <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;cat&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;/categories/{{ . }}&#34;</span><span class="p">&gt;</span>{{ . }}<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>{{ end }}{{ end }}
+</span></span><span class="line"><span class="cl">      {{ if (isset .Params &#34;tags&#34;) }}{{ range .Params.tags }} <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;tag&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;/tags/{{ . }}&#34;</span><span class="p">&gt;</span># {{ . }}<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span> {{ end }}{{ end }}
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">header</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>こちらもトップとほぼ同じですが、リンクの設定をしてあります。<br>
+表示されたカテゴリーやタグをクリックすると、同一グループが一覧表示されるようになります。<br>
+アドレスだけ気を付けてあげれば、一覧表示はテーマ側が自動でやってくれます。</p>
+<p>if文の中で、該当する文字列が見付かれば、リンクに展開するって感じかな。（知らんけど）<br>
+複数見付かれば、その回数分、リンクを展開してくれます。</p>
+<p>カテゴリーのアドレス指定<br>
+<code>&lt;a class=&quot;cat&quot; href=&quot;/categories/{{ . }}&quot;&gt;{{ . }}&lt;/a&gt;</code></p>
+<p>タグのアドレス指定<br>
+<code>&lt;a class=&quot;tag&quot; href=&quot;/tags/{{ . }}&quot;&gt;# {{ . }}&lt;/a&gt;</code></p>
+<p>それぞれ <code>{{ . }}</code> の中に、読み込まれたカテゴリーやタグが自動で入力されます。<br>
+カテゴリーが <code>homepage</code> なら <code>/categories/homepage</code> と展開されます。</p>
+<p>私のサイトでは、このタグを上部と下部の2ヶ所に入れてみました。</p>
+<h4 id="次の記事">次の記事
+</h4><p>個別記事の最下部に次の記事が表示されます。<br>
+そこにも入れておきます。</p>
+<p><code>サイト名\layouts\_default\li-next.html</code></p>
+<p>一部分だけ抜き出しています。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">article</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card-body&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">h2</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card-title&#34;</span><span class="p">&gt;</span>{{ .Title }}<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card-text&#34;</span><span class="p">&gt;</span>{{ if (isset .Params &#34;description&#34;) }}{{ index .Params &#34;description&#34; }}{{ else }}{{ .Summary }}{{ end }}<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card-subtext muted-text&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Posted <span class="p">&lt;</span><span class="nt">time</span> <span class="na">datetime</span><span class="o">=</span><span class="s">&#34;{{ .PublishDate.Format &#34;</span><span class="na">2006-01-02</span><span class="err">&#34;</span> <span class="err">}}&#34;</span><span class="p">&gt;</span>{{ .PublishDate.Format &#34;2006-01-02&#34; }}<span class="p">&lt;/</span><span class="nt">time</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    / Updated {{ .Lastmod.Format &#34;2006-01-02&#34; }}<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card-subtext muted-text li-line&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    {{ if (isset .Params &#34;categories&#34;) }}{{ range .Params.categories }}<span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;box-gray&#34;</span><span class="p">&gt;</span>{{ . }}<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span> {{ end }}{{ end }}
+</span></span><span class="line"><span class="cl">    {{ if (isset .Params &#34;tags&#34;) }}{{ range .Params.tags }}<span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;box-gray&#34;</span><span class="p">&gt;</span># {{ . }}<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span> {{ end }}{{ end }}
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">article</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>トップページと同じかな。</p>
+<h4 id="メニューボタン">メニューボタン
+</h4><p>右上にある 三 みたいなボタンですけど、これを押すとカテゴリーを表示することができます。<br>
+ここはもう趣味なんですけど、この中にタグまで表示したい場合は下記を修正します。</p>
+<p><code>サイト名\layouts\partials\nav-bar.html</code></p>
+<p>一部分だけ抜き出しています。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;hamburger-menu&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&#34;hamburgerMenuPressed.call(this)&#34;</span> <span class="na">aria-haspopup</span><span class="o">=</span><span class="s">&#34;true&#34;</span> <span class="na">aria-expanded</span><span class="o">=</span><span class="s">&#34;false&#34;</span> <span class="na">aria-controls</span><span class="o">=</span><span class="s">&#34;menu&#34;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&#34;Menu&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">ul</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;menu&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;hamburger-menu-overlay&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;{{ .Site.BaseURL }}&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;hamburger-menu-overlay-link&#34;</span><span class="p">&gt;</span>Home<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    {{ range where .Site.Pages &#34;Params.displayinmenu&#34; true -}}
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;{{ .Permalink }}&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;hamburger-menu-overlay-link&#34;</span><span class="p">&gt;</span>{{ .Title }}<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    {{ end -}}
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;navi-menu&#34;</span><span class="p">&gt;</span>- Categories -<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    {{ range $key, $value := .Site.Taxonomies.categories -}}
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">li</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;font-size: 0.7em;&#34;</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;{{ (printf &#34;</span><span class="err">%</span><span class="na">s</span><span class="err">%</span><span class="na">s</span><span class="err">&#34;</span> <span class="err">&#34;</span><span class="na">categories</span><span class="err">/&#34;</span> <span class="err">($</span><span class="na">key</span> <span class="err">|</span> <span class="na">urlize</span><span class="err">))</span> <span class="err">|</span> <span class="na">absURL</span> <span class="err">}}&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;hamburger-menu-overlay-link&#34;</span><span class="p">&gt;</span>{{ $key | humanize }}<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    {{- end }}
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;navi-menu&#34;</span><span class="p">&gt;</span>- Tags -<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    {{ range $key, $value := .Site.Taxonomies.tags -}}
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">li</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;font-size: 0.5em;&#34;</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;{{ (printf &#34;</span><span class="err">%</span><span class="na">s</span><span class="err">%</span><span class="na">s</span><span class="err">&#34;</span> <span class="err">&#34;</span><span class="na">tags</span><span class="err">/&#34;</span> <span class="err">($</span><span class="na">key</span> <span class="err">|</span> <span class="na">urlize</span><span class="err">))</span> <span class="err">|</span> <span class="na">absURL</span> <span class="err">}}&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;hamburger-menu-overlay-link&#34;</span><span class="p">&gt;</span>{{ $key | humanize }}<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    {{- end }}
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>すでにカテゴリーは記載済みですので、そこをコピペしてタグ用の行を追加しています。<br>
+<code>categories</code> = <code>tags</code> で置換してあげれば良いです。</p>
+<p>ついでにカテゴリーとタグの区切りを入れたかったので、<code>&lt;li class=&quot;navi-menu&quot;&gt;- Categories -&lt;/li&gt;</code> と <code>&lt;li class=&quot;navi-menu&quot;&gt;- Tags -&lt;/li&gt;</code> を追加しました。</p>
+<p><code>class</code> は例のごとく見栄えだけです。</p>
+<p>メニューボタンの隣に並べることも考えたんですが、モバイルでレイアウトが崩れたので、メニューに入れてしまうという安易なやり方にしております。数が増えたらえらいことになるんだろうなと思いつつ（笑）</p>
+<p>最近は、ブラウザの検証機能を使って、パソコンとモバイルの両方で表示して確認するというクセがついてきました。（良いことです）</p>
+<h3 id="カテゴリーとタグの表示調整">カテゴリーとタグの表示調整
+</h3><p>カテゴリーやタグの数が増えると表示が崩れます。<br>
+（縦に伸びて文字全てを表示するようになるので、格好悪い）</p>
+<p>ここもとりあえず <code>@media screen</code> で、幅の小さい端末の場合は、フォントサイズを小さくして誤魔化していますが、
+数が増えてレイアウトが崩れるまえに改行表示するように、根本的な修正をしたいんですけどね。それはまた・・・。</p>
+<h4 id="その後">その後
+</h4><p>インライン要素のために改行が出来ていなかったので、モバイルのときはブロック要素に変更するようスタイルシートを調整しました。これでウダウダと書いた上の問題は解消したと思います。</p>
+<hr>
+<p>また何かあれば、随時追加します。<br>
+Markdown 記法も覚えなきゃね。</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/hugo/">Hugo</a>
+        
+            <a href="/tags/theme/">Theme</a>
+        
+            <a href="/tags/aether/">Aether</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">関連するコンテンツ</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/hugo-%E3%81%AE%E3%83%86%E3%83%BC%E3%83%9E%E3%82%92%E4%BD%9C%E3%81%A3%E3%81%9F%E3%82%88/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/images/horse-colorful_640.webp" loading="lazy" data-key="" data-hash="/images/horse-colorful_640.webp"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Hugo のテーマを作ったよ。</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/hugo-warning-.site.social/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/images/hugo-warning-sitesocial.webp" loading="lazy" data-key="" data-hash="/images/hugo-warning-sitesocial.webp"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Hugo Warning .Site.Social</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E3%83%AA%E3%82%B9%E3%83%88%E8%A1%A8%E7%A4%BA%E3%81%A8%E3%82%B7%E3%83%B3%E3%82%B0%E3%83%AB%E8%A1%A8%E7%A4%BA%E3%81%AB%E3%82%BF%E3%82%B0%E3%82%92%E4%BB%98%E3%81%91%E3%82%8B/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/images/tag_720.webp" loading="lazy" data-key="" data-hash="/images/tag_720.webp"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">リスト表示とシングル表示にタグを付ける</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/hugo%E3%81%AB%E3%82%B3%E3%83%A1%E3%83%B3%E3%83%88%E6%A9%9F%E8%83%BD%E3%82%92%E4%BB%98%E3%81%91%E3%82%8Bgiscus%E7%B7%A8/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/images/speech-bubbles_640.webp" loading="lazy" data-key="" data-hash="/images/speech-bubbles_640.webp"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Hugoにコメント機能を付ける（giscus編）</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/hugo-update-v0.122.0/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/images/hugo-logo-wide.svg" loading="lazy" data-key="" data-hash="/images/hugo-logo-wide.svg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Hugo Update V0.122.0</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "hugo-theme-stack" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (typeof DISQUS == 'object') {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2024 k-kaz
+    </section>
+    
+    <section class="powerby">
+        <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> で構築されています。 <br />
+        テーマ <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.26.0">Stack</a></b> は <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> によって設計されています。
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

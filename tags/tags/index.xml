@@ -1,21 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Tags - k-kaz が Hugo で遊ぶサイト</title>
-    <link>https://k-kaz-git.github.io/tags/tags/</link>
-    <description>Recent content in Tags on k-kaz が Hugo で遊ぶサイト</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>ja</language>
-    <lastBuildDate>Thu, 05 Nov 2020 12:57:30 +0900</lastBuildDate>
-    
-        <atom:link href="https://k-kaz-git.github.io/tags/tags/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Hugo のタグとかカテゴリとか</title>
-      <link>https://k-kaz-git.github.io/post/hugo-taxonomy/</link>
-      <pubDate>Thu, 05 Nov 2020 12:57:30 +0900</pubDate>
-      
-      <guid>https://k-kaz-git.github.io/post/hugo-taxonomy/</guid>
-      <description>タグとかカテゴリとかの一覧を表示したい</description>
-    </item>
-  </channel>
+    <channel>
+        <title>Tags on k-kaz が Hugo で遊ぶサイト</title>
+        <link>https://k-kaz-git.github.io/tags/tags/</link>
+        <description>Recent content in Tags on k-kaz が Hugo で遊ぶサイト</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>ja</language>
+        <copyright>k-kaz</copyright>
+        <lastBuildDate>Thu, 05 Nov 2020 12:57:30 +0900</lastBuildDate><atom:link href="https://k-kaz-git.github.io/tags/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Hugo のタグとかカテゴリとか</title>
+        <link>https://k-kaz-git.github.io/p/hugo-%E3%81%AE%E3%82%BF%E3%82%B0%E3%81%A8%E3%81%8B%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA%E3%81%A8%E3%81%8B/</link>
+        <pubDate>Thu, 05 Nov 2020 12:57:30 +0900</pubDate>
+        
+        <guid>https://k-kaz-git.github.io/p/hugo-%E3%81%AE%E3%82%BF%E3%82%B0%E3%81%A8%E3%81%8B%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA%E3%81%A8%E3%81%8B/</guid>
+        <description>&lt;img src="https://k-kaz-git.github.io/images/labels-4924676_800.webp" alt="Featured image of post Hugo のタグとかカテゴリとか" /&gt;&lt;h2 id=&#34;hugo-のタグとかカテゴリとか&#34;&gt;Hugo のタグとかカテゴリとか
+&lt;/h2&gt;&lt;p&gt;この前、&lt;a class=&#34;link&#34; href=&#34;k-kaz-0.netlify.app&#34; &gt;k-kaz が自作テーマで遊ぶサイト&lt;/a&gt; に &lt;a class=&#34;link&#34; href=&#34;https://k-kaz-0.netlify.app/hugo-tag/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;タグとかカテゴリとか&lt;/a&gt; という記事を書きました。&lt;/p&gt;
+&lt;p&gt;タグとかカテゴリのリンクををクリックしたときに、そのグループだけではなく、&lt;strong&gt;全記事が出てきちゃう！&lt;/strong&gt; というものです。&lt;br&gt;
+自作テーマだから、うまく作り込めていないんだと思っていましたが、&lt;strong&gt;このサイトも同じじゃないか。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;以前は正しく動作していたはずなので、Hugo のバージョンを上げたとき、仕様変更によって動作が変わったと思われます。&lt;/p&gt;
+&lt;h2 id=&#34;ちょろっと調べた&#34;&gt;ちょろっと調べた
+&lt;/h2&gt;&lt;p&gt;&lt;code&gt;\layouts\_default&lt;/code&gt; に &lt;code&gt;taxonomy.html&lt;/code&gt; と &lt;code&gt;terms.html&lt;/code&gt; を置くと、良いらしい。&lt;br&gt;
+中身の書き方はいまいち分かっていないので、ここには書きませんが、とりあえず &lt;a class=&#34;link&#34; href=&#34;k-kaz-0.netlify.app&#34; &gt;k-kaz が自作テーマで遊ぶサイト&lt;/a&gt; では、動作しました。&lt;/p&gt;
+&lt;p&gt;ただのリンクが並ぶだけで、味も素っ気もないんですが。&lt;br&gt;
+本当はタグやカテゴリのタイトルを出したり、トップページと同じようなレイアウトにしたいんだけど。&lt;/p&gt;
+&lt;p&gt;また時間のあるときに挑戦しよう。&lt;br&gt;
+あと、このサイトも直さなきゃ。（時間のあるときに）&lt;/p&gt;
+&lt;h2 id=&#34;2023-02-14-追記&#34;&gt;2023-02-14 追記
+&lt;/h2&gt;&lt;p&gt;やっと直した。&lt;br&gt;
+というか、完全に忘れていました・・・。&lt;/p&gt;
+&lt;p&gt;別件でたまたまこちらのサイトを見ていて、タグをクリックしたのに絞り込みが出来ていないことを発見しました。&lt;br&gt;
+しばらく考えたり試したりしているうちに、この記事も発見。&lt;/p&gt;
+&lt;p&gt;以前から出来ていなかったのね。&lt;/p&gt;
+&lt;h3 id=&#34;やったこと&#34;&gt;やったこと
+&lt;/h3&gt;&lt;p&gt;上に書いてある &lt;code&gt;taxonomy.html&lt;/code&gt; や &lt;code&gt;terms.html&lt;/code&gt; を置いてみてもうまく動作せず。&lt;br&gt;
+あちこち見てたら、本テーマ（aether）の場合はこれらファイルは必要ありませんでした。&lt;br&gt;
+&lt;code&gt;list.html&lt;/code&gt; &lt;code&gt;li.html&lt;/code&gt; &lt;code&gt;li-next.html&lt;/code&gt; で動作させているみたい。&lt;/p&gt;
+&lt;p&gt;結果、自分で編集した &lt;code&gt;list.html&lt;/code&gt; がおかしかったという悲しい結末になりました。&lt;/p&gt;
+&lt;p&gt;ということで、もともとThemeに入っていた &lt;code&gt;list.html&lt;/code&gt; を持ってきて、希望する編集を加えたものを置き直しました。&lt;/p&gt;
+&lt;p&gt;分かると、なぁ～んだって感じ。&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
 </rss>

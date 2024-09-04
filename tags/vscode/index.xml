@@ -1,28 +1,322 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Vscode - k-kaz が Hugo で遊ぶサイト</title>
-    <link>https://k-kaz-git.github.io/tags/vscode/</link>
-    <description>Recent content in Vscode on k-kaz が Hugo で遊ぶサイト</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>ja</language>
-    <lastBuildDate>Wed, 15 Feb 2023 12:43:28 +0900</lastBuildDate>
-    
-        <atom:link href="https://k-kaz-git.github.io/tags/vscode/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>VSCode 小ネタ</title>
-      <link>https://k-kaz-git.github.io/post/vscode/</link>
-      <pubDate>Wed, 15 Feb 2023 12:43:28 +0900</pubDate>
-      
-      <guid>https://k-kaz-git.github.io/post/vscode/</guid>
-      <description>Vscodeの小ネタはここにまとめようかな</description>
-    </item><item>
-      <title>VSCode のスニペットを使ってみる</title>
-      <link>https://k-kaz-git.github.io/post/vscode-snippet/</link>
-      <pubDate>Fri, 22 Feb 2019 08:44:41 +0900</pubDate>
-      
-      <guid>https://k-kaz-git.github.io/post/vscode-snippet/</guid>
-      <description>スニペットを使って、入力速度を劇的にアップするのと、覚えきれない Markdown を調べずに使う。</description>
-    </item>
-  </channel>
+    <channel>
+        <title>Vscode on k-kaz が Hugo で遊ぶサイト</title>
+        <link>https://k-kaz-git.github.io/tags/vscode/</link>
+        <description>Recent content in Vscode on k-kaz が Hugo で遊ぶサイト</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>ja</language>
+        <copyright>k-kaz</copyright>
+        <lastBuildDate>Wed, 15 Feb 2023 12:43:28 +0900</lastBuildDate><atom:link href="https://k-kaz-git.github.io/tags/vscode/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>VSCode 小ネタ</title>
+        <link>https://k-kaz-git.github.io/p/vscode-%E5%B0%8F%E3%83%8D%E3%82%BF/</link>
+        <pubDate>Wed, 15 Feb 2023 12:43:28 +0900</pubDate>
+        
+        <guid>https://k-kaz-git.github.io/p/vscode-%E5%B0%8F%E3%83%8D%E3%82%BF/</guid>
+        <description>&lt;img src="https://k-kaz-git.github.io/images/vscode.webp" alt="Featured image of post VSCode 小ネタ" /&gt;&lt;h2 id=&#34;設定の同期&#34;&gt;設定の同期
+&lt;/h2&gt;&lt;p&gt;以前は、Gitを使って別環境の設定を同期していたんですけど、VSCode自体に同期の機能が付きまして楽ちんになりました。&lt;/p&gt;
+&lt;p&gt;ファイル → ユーザー設定 → 設定の同期がオン（にチェック）&lt;br&gt;
+※アカウントアイコンや、設定アイコンからでも良いです。&lt;/p&gt;
+&lt;p&gt;利用にはGitまたはMicrosoftアカウントが必要です。&lt;/p&gt;
+&lt;h2 id=&#34;スニペット&#34;&gt;スニペット
+&lt;/h2&gt;&lt;p&gt;定形文を用意して簡単に呼び出す機能です。&lt;br&gt;
+こちらをご覧ください。&lt;/p&gt;
+&lt;p&gt;:link:&lt;a class=&#34;link&#34; href=&#34;../vscode-snippet&#34; &gt;VSCode のスニペットを使ってみる&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;ワークスペース&#34;&gt;ワークスペース
+&lt;/h2&gt;&lt;p&gt;作業毎にフォルダを用意することが多いかと思いますが、そんなときはワークスペースの機能が便利です。&lt;br&gt;
+私はいくつかHugoで作ったサイトがあるので、サイト毎にワークスペース登録して、触りたいサイトをすぐに呼び出せるようにしています。&lt;/p&gt;
+&lt;h3 id=&#34;作成&#34;&gt;作成
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;「ファイル」 → 「フォルダーを開く」で、該当フォルダーを開く&lt;/li&gt;
+&lt;li&gt;「ファイル」 → 「名前を付けてワークスペースを保存」で、保存する&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;呼び出し&#34;&gt;呼び出し
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;「ファイル」 → 「ファイルでワークスペースを開く」&lt;br&gt;
+「ファイル」 → 「最近使用した項目を開く」でもオッケーです。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;ターミナル&#34;&gt;ターミナル
+&lt;/h2&gt;&lt;p&gt;これ、知ってました？&lt;br&gt;
+私、昨日知ったんですけど・・・。&lt;/p&gt;
+&lt;h3 id=&#34;表示&#34;&gt;表示
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;「表示」 → 「ターミナル」を選択&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;画面下にターミナルウィンドウが出てきます。&lt;/p&gt;
+&lt;p&gt;毎回エクスプローラーから、Power Shell（Windowsの場合ね）を開いて、新しい記事の作成や、Hugoサーバーの起動、デプロイ等をやっていたんですが、VSCの中ですべて出来るんです。&lt;br&gt;
+これ、私にとってめっちゃ画期的です。&lt;/p&gt;
+&lt;h2 id=&#34;markdown&#34;&gt;Markdown
+&lt;/h2&gt;&lt;p&gt;バージョンに依存するものもあります。&lt;br&gt;
+version 1.73 でけっこう強化されました。&lt;/p&gt;
+&lt;h3 id=&#34;ワークスペース内のファイルが移動したらリンクを修正する173&#34;&gt;ワークスペース内のファイルが移動したらリンクを修正する【1.73】
+&lt;/h3&gt;&lt;p&gt;&lt;code&gt;markdown.updateLinksOnFileMove.enabled&lt;/code&gt; を有効にします。&lt;/p&gt;
+&lt;h3 id=&#34;重複未使用のリンクをチェックする173&#34;&gt;重複、未使用のリンクをチェックする【1.73】
+&lt;/h3&gt;&lt;p&gt;&lt;code&gt;markdown.validate&lt;/code&gt; を有効にします。&lt;/p&gt;
+&lt;h3 id=&#34;ドラッグアンドドロップで画像ファイルを追加する173&#34;&gt;ドラッグ・アンド・ドロップで画像ファイルを追加する【1.73】
+&lt;/h3&gt;&lt;p&gt;Shift キーを押しながらドラッグ・アンド・ドロップすると、Markdown記法で記述されます。&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>VSCode のスニペットを使ってみる</title>
+        <link>https://k-kaz-git.github.io/p/vscode-%E3%81%AE%E3%82%B9%E3%83%8B%E3%83%9A%E3%83%83%E3%83%88%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%A6%E3%81%BF%E3%82%8B/</link>
+        <pubDate>Fri, 22 Feb 2019 08:44:41 +0900</pubDate>
+        
+        <guid>https://k-kaz-git.github.io/p/vscode-%E3%81%AE%E3%82%B9%E3%83%8B%E3%83%9A%E3%83%83%E3%83%88%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%A6%E3%81%BF%E3%82%8B/</guid>
+        <description>&lt;img src="https://k-kaz-git.github.io/images/women-jump-happy_640.webp" alt="Featured image of post VSCode のスニペットを使ってみる" /&gt;&lt;h2 id=&#34;スニペットがあるじゃないか&#34;&gt;スニペットがあるじゃないか。
+&lt;/h2&gt;&lt;p&gt;完全に頭から抜け落ちていました。&lt;br&gt;
+今使っているエディタ Visual Studio Code（以下、VSCode）には &lt;strong&gt;スニペット&lt;/strong&gt; が機能として搭載されています。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;スニペット（英語: snippet）とは、「断片」という意味である。情報処理の分野ではよく使う短いプログラムコードを統合開発環境から呼び出す機能の事である。また、呼び出される短いコードの事をスニペットと呼ぶ場合もある。  Wikipediaより。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;こんな感じのものです&#34;&gt;こんな感じのものです。
+&lt;/h2&gt;&lt;img src=&#34;https://k-kaz-git.github.io/images/VSCode-snipet-01.gif&#34; alt=&#34;snipet の例をアニメーションで&#34; style=&#34;max-width:640px;&#34;&gt;
+&lt;h2 id=&#34;markdown-でスニペットを使いたい&#34;&gt;Markdown でスニペットを使いたい
+&lt;/h2&gt;&lt;p&gt;なんか初期状態ではスニペットが有効になっていないんですよね。&lt;br&gt;
+設定の中に沢山項目があって、そのどれかを有効にすれば良いのかもと思いつつ、面倒なので設定ファイル &lt;code&gt;settings.json&lt;/code&gt; に直接書き込んでいます。&lt;/p&gt;
+&lt;h3 id=&#34;settingsjson-に有効化のための記述を追加&#34;&gt;settings.json に有効化のための記述を追加
+&lt;/h3&gt;&lt;p&gt;設定ファイルの保存先が、環境（OS）によって違うので、下記の方法が一番楽チンな気がする。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;ファイル → 基本設定 → 設定 → 拡張機能 → settings.json で編集&lt;/code&gt; を選択。&lt;/p&gt;
+&lt;p&gt;拡張機能のところは選ばなくても良いんですが、これを選ぶとすぐに &lt;code&gt;settings.json&lt;/code&gt; が沢山出てくるのでそうしています。&lt;/p&gt;
+&lt;p&gt;ファイルを開いたら、以下を追加しています。&lt;br&gt;
+元々 &lt;code&gt;｛｝&lt;/code&gt; があるので、その中に入れるようにすると正しく認識してくれます。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;settings.json&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;&amp;#34;[markdown]&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;  &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nt&#34;&gt;&amp;#34;editor.wordWrap&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;on&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nt&#34;&gt;&amp;#34;editor.quickSuggestions&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nt&#34;&gt;&amp;#34;editor.snippetSuggestions&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;top&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;スニペットを登録する&#34;&gt;スニペットを登録する
+&lt;/h3&gt;&lt;p&gt;Markdown用のスニペットを登録します。&lt;/p&gt;
+&lt;h4 id=&#34;設定用ファイル-markdownjson-を開く&#34;&gt;設定用ファイル Markdown.json を開く
+&lt;/h4&gt;&lt;p&gt;&lt;code&gt;Markdown.json&lt;/code&gt; というファイルに追記していきます。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;ファイル → 基本設定 → ユーザースニペット → Markdown.json&lt;/code&gt; を選択。&lt;/p&gt;
+&lt;p&gt;ファイルが開かれるとこんな感じで、サンプルがコメントアウトした状態になっています。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;［Markdown.json］&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// Place your snippets for markdown here. Each snippet is defined under a snippet name and has a prefix, body and 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// same ids are connected.
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// Example:
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// &amp;#34;Print to console&amp;#34;: {
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// 	&amp;#34;prefix&amp;#34;: &amp;#34;log&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// 	&amp;#34;body&amp;#34;: [
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// 		&amp;#34;console.log(&amp;#39;$1&amp;#39;);&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// 		&amp;#34;$2&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// 	],
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// 	&amp;#34;description&amp;#34;: &amp;#34;Log output to console&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// }
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;サンプルは残しても消しても結構ですが、最初と最後の &lt;code&gt;{}&lt;/code&gt; は、残してください。&lt;br&gt;
+尚、ここに書かれているサンプルの意味が理解できなくて、ちょっと迷いました。（英語にとことん弱い人）&lt;/p&gt;
+&lt;h4 id=&#34;標準的なスニペットの登録方法&#34;&gt;標準的なスニペットの登録方法
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;スニペット名&amp;#34;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nt&#34;&gt;&amp;#34;prefix&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;キーになる文字列&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nt&#34;&gt;&amp;#34;body&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:[&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;呼び出される文字列&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;],&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nt&#34;&gt;&amp;#34;description&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;このスニペットの説明文&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;スニペット名&lt;/strong&gt;&lt;br&gt;
+重複しなければ自由に付けて大丈夫です。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;キーになる文字列&lt;/strong&gt;&lt;br&gt;
+この文字列を入力（途中でも）することでスニペットが起動します。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;呼び出される文字列&lt;/strong&gt;&lt;br&gt;
+上記、キーになる文字列をこちらの文字列で置き換えます。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;このスニペットの説明文&lt;/strong&gt;&lt;br&gt;
+スニペットの候補とともにこの説明文が表示されるので、分かりやすいコメントを書いておきましょう。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;例えば、下記のように登録したとします。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;insart image&amp;#34;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nt&#34;&gt;&amp;#34;prefix&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;img&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nt&#34;&gt;&amp;#34;body&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;![hoge のイメージ画像](/images/hoge.webp)&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;],&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nt&#34;&gt;&amp;#34;description: &amp;#34;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;画像を挿入する&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;そうすると、Markdown での記述の際に&lt;br&gt;
+img と打った時点（もしくは i を入れた時点）で、上記のスニペットが画面に登場し、&lt;code&gt;Enter&lt;/code&gt; or &lt;code&gt;TAB&lt;/code&gt; を押すことで置き換わります。&lt;/p&gt;
+&lt;img src=&#34;https://k-kaz-git.github.io/images/VSCode-snipet-01.gif&#34; alt=&#34;snipet の例をアニメーションで&#34; style=&#34;max-width:640px;&#34;&gt;
+&lt;p&gt;候補が複数出て、2行目以降を選択したいときは、カーソルキーで選択してください。&lt;br&gt;
+日本語の変換候補と似た感じです。&lt;/p&gt;
+&lt;h4 id=&#34;一歩進んだスニペットの登録方法&#34;&gt;一歩進んだスニペットの登録方法
+&lt;/h4&gt;&lt;p&gt;先程の登録だと、ベタ打ちというか決め打ちというか、登録したものを呼び出して終わりでした。いつも使うバナーを呼び出すとかなら OK ですね。&lt;/p&gt;
+&lt;p&gt;ただ、実際にコードを書いていくにあたっては、呼び出したものを修正したいという場面が多々あります。&lt;/p&gt;
+&lt;p&gt;そんなときは &lt;code&gt;$1&lt;/code&gt; や &lt;code&gt;$2&lt;/code&gt; を使用します。&lt;br&gt;
+先程と違うのは、&lt;code&gt;&amp;quot;body&amp;quot;&lt;/code&gt; の中だけです。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;insart image&amp;#34;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nt&#34;&gt;&amp;#34;prefix&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;img&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nt&#34;&gt;&amp;#34;body&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;![$1 のイメージ画像](/images/$2.webp)&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;],&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nt&#34;&gt;&amp;#34;description: &amp;#34;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;画像を挿入する&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;こんな感じになります。&lt;/p&gt;
+&lt;img src=&#34;https://k-kaz-git.github.io/images/VSCode-snipet-02.gif&#34; alt=&#34;snipet の例をアニメーションで&#34; style=&#34;max-width:640px;&#34;&gt;
+&lt;p&gt;”のイメージ画像” は固定ですが、その前は毎回違うという場合。&lt;br&gt;
+上記のように &lt;code&gt;$1&lt;/code&gt; を入れてあげると、呼び出し後に &lt;code&gt;$1&lt;/code&gt; の部分にカーソルが挿入されるため、そのまま文字列の入力が可能です。&lt;/p&gt;
+&lt;p&gt;さらに、&lt;code&gt;TAB&lt;/code&gt; を押すことで &lt;code&gt;$2&lt;/code&gt; にカーソルが移動するので、画像のファイル名を入れることができると。&lt;/p&gt;
+&lt;p&gt;便利になってきましたね。&lt;/p&gt;
+&lt;h4 id=&#34;もう一歩進んだスニペットの登録方法&#34;&gt;もう一歩進んだスニペットの登録方法
+&lt;/h4&gt;&lt;p&gt;先程のにちょっと工夫をすると、分かりやすさをプラスすることができます。&lt;br&gt;
+私のように Markdown が頭に入っていない人向け・・・かもしれません。&lt;/p&gt;
+&lt;p&gt;こちらも &lt;code&gt;&amp;quot;body&amp;quot;&lt;/code&gt; の中だけが変わっています。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;insart image&amp;#34;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nt&#34;&gt;&amp;#34;prefix&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;img&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nt&#34;&gt;&amp;#34;body&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;![${1:画像のタイトル} のイメージ画像](/images/${2:ファイル名}.webp)&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;],&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nt&#34;&gt;&amp;#34;description: &amp;#34;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;画像を挿入する&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;はい、少しややこしくなりました（笑）&lt;/p&gt;
+&lt;p&gt;動作そのものは先程と同じですが、表示の仕方が変わります。&lt;br&gt;
+とりあえず、画面をみていただきましょう。&lt;/p&gt;
+&lt;img src=&#34;https://k-kaz-git.github.io/images/VSCode-snipet-03.gif&#34; alt=&#34;snipet の例をアニメーションで&#34; style=&#34;max-width:640px;&#34;&gt;
+&lt;p&gt;お分かりになりましたか。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;${1:hoge}&lt;/code&gt; という書き方をすると、&lt;code&gt;$1&lt;/code&gt; としてカーソルが入る部分に、&lt;code&gt;hoge&lt;/code&gt; という文字列を仮表示してくれます。&lt;/p&gt;
+&lt;p&gt;上記の場合は、&lt;code&gt;${1:画像のタイトル}&lt;/code&gt; ですので、&lt;code&gt;$1&lt;/code&gt; のところに &lt;code&gt;画像のタイトル&lt;/code&gt; という文字列が仮表示されていて、何かしらの文字を入力すると消えてくれます。&lt;/p&gt;
+&lt;p&gt;こうしておけば、そこに何を書けば良いのかが一目瞭然。しかも、勝手に消えてくれるので、自分で削除する手間も要りません。&lt;/p&gt;
+&lt;p&gt;一番最初の標準的なスニペットから、少しだけ手を入れる必要がありますが、それ以上に見返りは大きいので、是非お試しください。&lt;/p&gt;
+&lt;h3 id=&#34;スニペットの使い方&#34;&gt;スニペットの使い方
+&lt;/h3&gt;&lt;p&gt;すでにここまでのところで書いてしまったので、省略（笑）&lt;/p&gt;
+&lt;p&gt;Markdown の形式が選択されている状態（ウィンドウの右下に出ています）で、登録したスニペットのキーとなる文字列を入力して、候補から選択してください。&lt;/p&gt;
+&lt;h3 id=&#34;注意点&#34;&gt;注意点
+&lt;/h3&gt;&lt;p&gt;ちょっとした注意点を書いておきます。&lt;/p&gt;
+&lt;h4 id=&#34;スニペットの複数登録&#34;&gt;スニペットの複数登録
+&lt;/h4&gt;&lt;p&gt;スニペットを複数登録する際は、1スニペット毎に最後の &lt;code&gt;}&lt;/code&gt; を &lt;code&gt;},&lt;/code&gt; としてください。&lt;br&gt;
+1スニペット毎にカンマで区切る必要があります。&lt;/p&gt;
+&lt;h4 id=&#34;ダブルクォーテーション-の使用&#34;&gt;ダブルクォーテーション（ &amp;ldquo;）の使用
+&lt;/h4&gt;&lt;p&gt;HTML で記述する際に、&lt;code&gt;&amp;quot;&lt;/code&gt; を使う場面が多々あります。&lt;br&gt;
+&lt;code&gt;class=&amp;quot;&amp;quot;&lt;/code&gt; とか &lt;code&gt;style=&amp;quot;&amp;quot;&lt;/code&gt; とか。&lt;/p&gt;
+&lt;p&gt;スニペットの &lt;code&gt;body&lt;/code&gt; 部分で &lt;code&gt;&amp;quot;&lt;/code&gt; は、文字列の範囲を決めるという特殊な意味を持ち、そのまま記述すると、そちらの意味に取られちゃって、意図した動作となりません。&lt;/p&gt;
+&lt;p&gt;HTML の中で使いたい場合は &lt;code&gt;&amp;quot;&lt;/code&gt; の前に &lt;code&gt;\&lt;/code&gt; を付けて下さい。そうすることで、特殊な意味を持ったものではないと否定できます。&lt;/p&gt;
+&lt;p&gt;実際に書くと &lt;code&gt;class=\&amp;quot;\&amp;quot;&lt;/code&gt; みたいな感じです。&lt;/p&gt;
+&lt;h4 id=&#34;body-が複数行になる場合--タブを入れたい場合2019-03-04&#34;&gt;body が複数行になる場合 ＆ タブを入れたい場合［2019-03-04］
+&lt;/h4&gt;&lt;p&gt;複数行の場合は、1行ごと最後に &lt;code&gt;,&lt;/code&gt; を入れます。&lt;br&gt;
+但し、最終行は不要で、&lt;code&gt;]&lt;/code&gt; の後に &lt;code&gt;,&lt;/code&gt; を入れます。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;9
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;comment&amp;#34;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;nt&#34;&gt;&amp;#34;prefix&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;comment&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;nt&#34;&gt;&amp;#34;body&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:[&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		&lt;span class=&#34;s2&#34;&gt;&amp;#34;/* ========================================&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		&lt;span class=&#34;s2&#34;&gt;&amp;#34;\t\t${1:comment}&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		&lt;span class=&#34;s2&#34;&gt;&amp;#34;======================================== */&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;nt&#34;&gt;&amp;#34;description&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;コメントアウト タイトル&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;また、タブは &lt;code&gt;\t&lt;/code&gt; で表します。&lt;br&gt;
+上記例の場合は、タブが2つ入る形です。&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
 </rss>

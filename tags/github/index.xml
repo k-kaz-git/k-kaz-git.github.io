@@ -1,28 +1,169 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Github - k-kaz が Hugo で遊ぶサイト</title>
-    <link>https://k-kaz-git.github.io/tags/github/</link>
-    <description>Recent content in Github on k-kaz が Hugo で遊ぶサイト</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>ja</language>
-    <lastBuildDate>Wed, 14 Oct 2020 18:51:11 +0900</lastBuildDate>
-    
-        <atom:link href="https://k-kaz-git.github.io/tags/github/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Deploy でエラーが出たんですけど。</title>
-      <link>https://k-kaz-git.github.io/post/hugo-deploy-error/</link>
-      <pubDate>Wed, 14 Oct 2020 18:51:11 +0900</pubDate>
-      
-      <guid>https://k-kaz-git.github.io/post/hugo-deploy-error/</guid>
-      <description>1年半振りの Deploy で・・・。</description>
-    </item><item>
-      <title>GitとGitHubを使ってみる</title>
-      <link>https://k-kaz-git.github.io/post/github-how-to-use/</link>
-      <pubDate>Fri, 22 Feb 2019 15:49:24 +0900</pubDate>
-      
-      <guid>https://k-kaz-git.github.io/post/github-how-to-use/</guid>
-      <description>GitとGitHubを有効活用しようと思います。</description>
-    </item>
-  </channel>
+    <channel>
+        <title>Github on k-kaz が Hugo で遊ぶサイト</title>
+        <link>https://k-kaz-git.github.io/tags/github/</link>
+        <description>Recent content in Github on k-kaz が Hugo で遊ぶサイト</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>ja</language>
+        <copyright>k-kaz</copyright>
+        <lastBuildDate>Wed, 14 Oct 2020 18:51:11 +0900</lastBuildDate><atom:link href="https://k-kaz-git.github.io/tags/github/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Deploy でエラーが出たんですけど。</title>
+        <link>https://k-kaz-git.github.io/p/deploy-%E3%81%A7%E3%82%A8%E3%83%A9%E3%83%BC%E3%81%8C%E5%87%BA%E3%81%9F%E3%82%93%E3%81%A7%E3%81%99%E3%81%91%E3%81%A9/</link>
+        <pubDate>Wed, 14 Oct 2020 18:51:11 +0900</pubDate>
+        
+        <guid>https://k-kaz-git.github.io/p/deploy-%E3%81%A7%E3%82%A8%E3%83%A9%E3%83%BC%E3%81%8C%E5%87%BA%E3%81%9F%E3%82%93%E3%81%A7%E3%81%99%E3%81%91%E3%81%A9/</guid>
+        <description>&lt;img src="https://k-kaz-git.github.io/images/hugo-deploy-error.webp" alt="Featured image of post Deploy でエラーが出たんですけど。" /&gt;&lt;h2 id=&#34;1年半振りの-deploy-で&#34;&gt;1年半振りの Deploy で・・・
+&lt;/h2&gt;&lt;p&gt;Netlify に記事を上げようと思って、&lt;code&gt;./deploy.sh&lt;/code&gt; （※スクリプトを組んである）とやってみたけど、うまくいかず。&lt;br&gt;
+うっかりやってしまう &lt;code&gt;draft: false&lt;/code&gt; もちゃんとなっているし、なんだろうと思って、ひとつずつチェックしてみました。&lt;/p&gt;
+&lt;p&gt;ひっかかったのが、ssh 認証のところ。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;ssh -T git@github.com&lt;/code&gt; で、ssh が通るか試してみたら、&lt;code&gt;git@github.com: Permission denied (publickey).&lt;/code&gt; って怒られました。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ ssh -T git@github.com     /* ssh が通るか試すコマンド */
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git@github.com: Permission denied (publickey).
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;ネットで調べてみたところ、 &lt;strong&gt;「Github に公開鍵（publickey）を登録しましょう」&lt;/strong&gt; と書いてあったので、1年半振りの Github ログイン。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;お前、本当に k-kaz か？&lt;/strong&gt;&lt;br&gt;
+&lt;strong&gt;メール送ったから、そこに書かれた6桁のコードを入れてみろよ！&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;って、疑われ、言われた通りに6桁のコードを入れてログイン。&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/settings/ssh&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;ssh の項目&lt;/a&gt; を覗くと公開鍵がありません。&lt;br&gt;
+PC に保存していた公開鍵の中身を登録して、再度 &lt;code&gt;ssh -T git@github.com&lt;/code&gt; を実行すると、うまく繋がりました。&lt;/p&gt;
+&lt;p&gt;1年半の間に仕様が変わったのか、削除されちゃったのかよく分かりませんが、再登録した形ですね。覚えていないけど、たぶん。&lt;/p&gt;
+&lt;p&gt;で、Netlify にもログインする必要がありました。
+こちらは疑われることなくできましたが、ここまでやらないと記事の反映ができなかったです。&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>GitとGitHubを使ってみる</title>
+        <link>https://k-kaz-git.github.io/p/git%E3%81%A8github%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%A6%E3%81%BF%E3%82%8B/</link>
+        <pubDate>Fri, 22 Feb 2019 15:49:24 +0900</pubDate>
+        
+        <guid>https://k-kaz-git.github.io/p/git%E3%81%A8github%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%A6%E3%81%BF%E3%82%8B/</guid>
+        <description>&lt;img src="https://k-kaz-git.github.io/images/network-server_640.webp" alt="Featured image of post GitとGitHubを使ってみる" /&gt;&lt;h2 id=&#34;せっかくなので&#34;&gt;せっかくなので
+&lt;/h2&gt;&lt;p&gt;GitHub をもう少し活用できないかなと思いまして、こちらにやってみたことを書いていこうと思います。&lt;/p&gt;
+&lt;p&gt;後日、同じことをやるときに &lt;strong&gt;絶対忘れている&lt;/strong&gt; という自信があるので、備忘録的に。&lt;/p&gt;
+&lt;h2 id=&#34;git-コマンドのチートシート2019-03-06&#34;&gt;Git コマンドのチートシート［2019-03-06］
+&lt;/h2&gt;&lt;p&gt;良いものを発見！！&lt;/p&gt;
+&lt;p&gt;Git コマンドを、イラスト入りで分かりやすく作ってくださった方がいらっしゃいます。&lt;br&gt;
+Git そのものが分かっていない初心者の私には、とてもありがたいです。&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://qiita.com/kozzy/items/b42ba59a8bac190a16ab&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Git でよく使われるコマンドにイラストによる説明を加えて1枚のチートシートにまとめてみた&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;注意書きに「表現上、簡略化している部分がある」、「誤記による損害発生の責任は負いません」とあります。&lt;br&gt;
+その点をご理解の上で、皆さんもご覧ください。&lt;/p&gt;
+&lt;h2 id=&#34;ssh接続github&#34;&gt;ssh接続【GitHub】
+&lt;/h2&gt;&lt;p&gt;ssh接続用に、公開鍵と秘密鍵を作成します。&lt;br&gt;
+出来上がった公開鍵の中身を GitHub に登録しておきます。&lt;/p&gt;
+&lt;p&gt;参考：&lt;a class=&#34;link&#34; href=&#34;https://qiita.com/shizuma/items/2b2f873a0034839e47ce&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;GitHubでssh接続する手順&lt;del&gt;公開鍵・秘密鍵の生成から&lt;/del&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;https-接続からssh-接続に切り替える&#34;&gt;https 接続から、ssh 接続に切り替える
+&lt;/h3&gt;&lt;p&gt;&lt;code&gt;$ git remote -v&lt;/code&gt; で表示されたアドレスが &lt;code&gt;https://github.com/&lt;/code&gt; の場合は、&lt;code&gt;git@github.com:&lt;/code&gt; に変えることで ssh 接続にできます。これで、毎回、ユーザー名とパスワードを聞かれなくなります。&lt;/p&gt;
+&lt;p&gt;切替用コマンド &lt;code&gt;$ git remote set-url origin git@github.com:hogehoge.git&lt;/code&gt;&lt;br&gt;
+確認用コマンド &lt;code&gt;$ ssh -T github&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;各種設定ファイルの共通化&#34;&gt;各種設定ファイルの共通化
+&lt;/h2&gt;&lt;p&gt;Linux と Windows で共通して使うアプリが多く、その設定をそれぞれで行うのも面倒だし、間違えることもあるので、設定ファイルを使い回すようにしたいのです。&lt;/p&gt;
+&lt;p&gt;GoogleDrive、DropBox、OneDrive 等々に、コピーした設定ファイルを保存して、相手先で取り出して上書きするっていうのがこれまでのやり方なんですが、何度も設定変更を行うようなものだと、嫌になります。&lt;/p&gt;
+&lt;h3 id=&#34;そこで-github&#34;&gt;そこで GitHub
+&lt;/h3&gt;&lt;p&gt;GitHub を使えば、push と pull するだけでファイルの行き来ができる。&lt;br&gt;
+さらにバージョン管理まで出来ちゃうじゃないか。&lt;/p&gt;
+&lt;h3 id=&#34;やり方&#34;&gt;やり方
+&lt;/h3&gt;&lt;p&gt;いくつか作業が続きます。&lt;/p&gt;
+&lt;h4 id=&#34;シンボリックリンクの作成&#34;&gt;シンボリックリンクの作成
+&lt;/h4&gt;&lt;p&gt;フォルダ及びファイルの置き場所を、本来ある場所から、GitHub で管理する場所に変更します。&lt;br&gt;
+これを Linux と Windows 両方やっておけば、いつでも最新で同じ内容の設定ファイルが使えます。&lt;br&gt;
+※&lt;code&gt;push&lt;/code&gt; と &lt;code&gt;pull&lt;/code&gt; を忘れないように。&lt;/p&gt;
+&lt;p&gt;Linux なら &lt;code&gt;ln&lt;/code&gt; コマンドで。&lt;br&gt;
+Windows なら &lt;code&gt;mklink&lt;/code&gt; コマンドで。&lt;/p&gt;
+&lt;p&gt;Windows でちょっとハマった。&lt;br&gt;
+Win10 の PowerShell では、直接 &lt;code&gt;mklink&lt;/code&gt; が実行できないんです。&lt;br&gt;
+&lt;code&gt;cmd /c mklink&lt;/code&gt; というようにすると動きます。&lt;br&gt;
+※mklink は、cmd の中にあるコマンドのため&lt;/p&gt;
+&lt;h4 id=&#34;リモートリポジトリの作成&#34;&gt;リモートリポジトリの作成
+&lt;/h4&gt;&lt;p&gt;GitHub でリモートリポジトリを作成します。
+私は web で行い、Private モードとしておきました。（最近、無料ユーザーでも Private を使えるようになった）&lt;/p&gt;
+&lt;h4 id=&#34;ローカルリポジトリの作成&#34;&gt;ローカルリポジトリの作成
+&lt;/h4&gt;&lt;p&gt;ここから先は、私が苦手な（よく分かっていない）ところです。&lt;br&gt;
+まず、リポジトリとするディレクトリに移動しておきます。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;git init&lt;/code&gt;&lt;br&gt;
+&lt;code&gt;git add .&lt;/code&gt;&lt;br&gt;
+&lt;code&gt;git commit -m &amp;quot;コメント&amp;quot;&lt;/code&gt;&lt;/p&gt;
+&lt;h4 id=&#34;リモートリポジトリへプッシュ&#34;&gt;リモートリポジトリへプッシュ
+&lt;/h4&gt;&lt;p&gt;&lt;code&gt;git remote add origin git@github.com:ユーザー名/リモートリポジトリ名.git&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;※最後の &lt;code&gt;.git&lt;/code&gt; を忘れがちなので注意&lt;br&gt;
+※git@github.com にしているのは ssh で接続するため
+&lt;code&gt;git push -u origin master&lt;/code&gt;&lt;/p&gt;
+&lt;h4 id=&#34;相手側でリモートリポジトリからのデータ取得&#34;&gt;相手側で、リモートリポジトリからのデータ取得
+&lt;/h4&gt;&lt;p&gt;初回のみ、クローンで丸々ゲットしてきます。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;git clone git@github.com:ユーザー名/リモートリポジトリ名.git 展開するディレクトリ&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;それ以降は、&lt;code&gt;git pull&lt;/code&gt; でOKです。&lt;/p&gt;
+&lt;p&gt;よし、いろいろなデータをバージョン管理してみようではないか。&lt;/p&gt;
+&lt;h2 id=&#34;hugo-で使っているローカルリポジトリの場所を変更&#34;&gt;Hugo で使っているローカルリポジトリの場所を変更
+&lt;/h2&gt;&lt;p&gt;設定ファイルを1ヶ所にまとめていくうちに、Hugo で作ったサイトのリポジトリも同じところに移動したくなったので、心配もあるけどやってみます。&lt;/p&gt;
+&lt;h3 id=&#34;やり方-1&#34;&gt;やり方
+&lt;/h3&gt;&lt;p&gt;リポジトリを起きたい場所に移動して、&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;git clone git@github.com:ユーザー名/リポジトリ名 変更先ディレクトリ&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;hugo server&lt;/code&gt; を実行したときに元の場所を見に行かないか心配しましたが、&lt;code&gt;変更先ディレクトリ&lt;/code&gt; の中で実行すれば、Hugo はその中を見に行くようです。&lt;/p&gt;
+&lt;p&gt;特に Hugo の設定ファイルを弄るとか必要はありませんでした。&lt;/p&gt;
+&lt;p&gt;結果から見れば、超簡単な作業でした。&lt;/p&gt;
+&lt;h2 id=&#34;ローカルでいろいろ弄ったけど元の状態に戻したい2023-04-19&#34;&gt;ローカルでいろいろ弄ったけど、元の状態に戻したい[2023-04-19]
+&lt;/h2&gt;&lt;p&gt;あれこれ作業をしていたけれど、「これまでやった作業を元に戻したい・・・」と悲観したときの戻し方です。&lt;/p&gt;
+&lt;h3 id=&#34;やり方-2&#34;&gt;やり方
+&lt;/h3&gt;&lt;p&gt;&lt;code&gt;git checkout .&lt;/code&gt; で元通り！&lt;br&gt;
+特定のファイルだけ戻すなら&lt;code&gt;git checkout &amp;lt;filename&amp;gt;&lt;/code&gt;です。&lt;/p&gt;
+&lt;h2 id=&#34;プッシュしたけど1つ前の内容に戻したい2019-02-25&#34;&gt;プッシュしたけど、1つ前の内容に戻したい［2019-02-25］
+&lt;/h2&gt;&lt;p&gt;リモートリポジトリにプッシュしたあと、「あっ、やっぱり前のほうが良かった」と思ったときの手順です。&lt;br&gt;
+ネットで調べたら、間違えたものも履歴として残す方法もありましたが、個人で使う分にはゴミになるだろうと思いまして、シンプルに「先程プッシュしたものは、無かったことにする」という方法を採用します。&lt;/p&gt;
+&lt;h3 id=&#34;やり方-3&#34;&gt;やり方
+&lt;/h3&gt;&lt;p&gt;プッシュしたディレクトリに移動して、&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;git reset --hard HEAD^&lt;/code&gt; をして、&lt;br&gt;
+&lt;code&gt;git push -f origin master&lt;/code&gt; です。&lt;/p&gt;
+&lt;p&gt;上記は、あくまでも個人ユースの場合に使うコマンドのようです。&lt;br&gt;
+&lt;strong&gt;チームで管理しているときは、別の方法をとってください。&lt;/strong&gt;&lt;br&gt;
+（未熟な私にはまだ分からないけど）&lt;/p&gt;
+&lt;h2 id=&#34;リポジトリから除外したいファイルやフォルダがある2019-02-26&#34;&gt;リポジトリから除外したいファイルやフォルダがある［2019-02-26］
+&lt;/h2&gt;&lt;p&gt;VSCode の設定ファイルをリポジトリに入れて共通使用としたんですけど、不要なファイルもあるんですよね。&lt;br&gt;
+タブの状態（何のファイルを開いているか）は要らないし、というか、ファイルの置き場や所有しているファイルも違うし・・・。&lt;/p&gt;
+&lt;h3 id=&#34;やり方-4&#34;&gt;やり方
+&lt;/h3&gt;&lt;h4 id=&#34;gitignore-に除外するものを書きますよ&#34;&gt;.gitignore に除外するものを書きますよ
+&lt;/h4&gt;&lt;p&gt;&lt;code&gt;git&lt;/code&gt; を実行するディレクトリに &lt;code&gt;.gitignore&lt;/code&gt; というテキストファイルを用意します。&lt;br&gt;
+この中にリポジトリから除外するファイルやフォルダを書き込むと、そのあたりを考慮してリポジトリを作成してくれます。&lt;/p&gt;
+&lt;p&gt;VSCode で不要なディレクトリを書き込みました。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[.gitignore]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;VSCode/User/globalStorage/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;VSCode/User/workspaceStorage/
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h4 id=&#34;すでにリポジトリが出来上がっている場合&#34;&gt;すでにリポジトリが出来上がっている場合
+&lt;/h4&gt;&lt;p&gt;git から情報を消し、改めて add → commit → push します。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;git rm -r --cached .&lt;/code&gt;&lt;br&gt;
+&lt;code&gt;git add .&lt;/code&gt;&lt;br&gt;
+&lt;code&gt;git commit -m &amp;quot;コメント&amp;quot;&lt;/code&gt;&lt;br&gt;
+&lt;code&gt;git push origin master&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;相手側はどうすればいいのかな。&lt;/p&gt;
+&lt;p&gt;普通に &lt;code&gt;git pull&lt;/code&gt; でやっても怒られたので、ディレクトリ毎、まっさらにして&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;git clone git@github:ユーザー名/リポジトリ名.git&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;で、解決したことにしちゃった（笑）&lt;/p&gt;
+&lt;h2 id=&#34;vscode-の設定ファイルを共通で使う2019-02-28&#34;&gt;VSCode の設定ファイルを共通で使う［2019-02-28］
+&lt;/h2&gt;&lt;p&gt;上のほうにやり方を長々と書きましたけど、プラグインがあるらしいぞ。&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.karelie.net/vscode-setting-sync/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;VSCode(Visual Studio Code)の設定を同期させる拡張機能「Setting Sync」が便利&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
 </rss>

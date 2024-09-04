@@ -1,21 +1,114 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Markdown - k-kaz が Hugo で遊ぶサイト</title>
-    <link>https://k-kaz-git.github.io/tags/markdown/</link>
-    <description>Recent content in Markdown on k-kaz が Hugo で遊ぶサイト</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>ja</language>
-    <lastBuildDate>Thu, 21 Feb 2019 11:43:14 +0900</lastBuildDate>
-    
-        <atom:link href="https://k-kaz-git.github.io/tags/markdown/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Hugo で使える Markdown の記法</title>
-      <link>https://k-kaz-git.github.io/post/hugo-markdown/</link>
-      <pubDate>Thu, 21 Feb 2019 11:43:14 +0900</pubDate>
-      
-      <guid>https://k-kaz-git.github.io/post/hugo-markdown/</guid>
-      <description>自分用によく使う Markdown をまとめます。</description>
-    </item>
-  </channel>
+    <channel>
+        <title>Markdown on k-kaz が Hugo で遊ぶサイト</title>
+        <link>https://k-kaz-git.github.io/tags/markdown/</link>
+        <description>Recent content in Markdown on k-kaz が Hugo で遊ぶサイト</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>ja</language>
+        <copyright>k-kaz</copyright>
+        <lastBuildDate>Thu, 21 Feb 2019 11:43:14 +0900</lastBuildDate><atom:link href="https://k-kaz-git.github.io/tags/markdown/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Hugo で使える Markdown の記法</title>
+        <link>https://k-kaz-git.github.io/p/hugo-%E3%81%A7%E4%BD%BF%E3%81%88%E3%82%8B-markdown-%E3%81%AE%E8%A8%98%E6%B3%95/</link>
+        <pubDate>Thu, 21 Feb 2019 11:43:14 +0900</pubDate>
+        
+        <guid>https://k-kaz-git.github.io/p/hugo-%E3%81%A7%E4%BD%BF%E3%81%88%E3%82%8B-markdown-%E3%81%AE%E8%A8%98%E6%B3%95/</guid>
+        <description>&lt;img src="https://k-kaz-git.github.io/images/computer-Programming_640.webp" alt="Featured image of post Hugo で使える Markdown の記法" /&gt;&lt;h2 id=&#34;はじめに&#34;&gt;はじめに
+&lt;/h2&gt;&lt;p&gt;Markdown には、基本となるものから、機能拡張されたものまであり、使用する環境によって微妙に使えるコマンド、使えないコマンドがあるようです。&lt;br&gt;
+この前、外部リンクを開くための記述をネットで探して入れてみましたが、残念ながらココでは動かず・・・。&lt;/p&gt;
+&lt;p&gt;ということで、&lt;strong&gt;Hugo で使える Markdown を、自分のためにまとめておきます。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Markdown の中で HTML を書いちゃえばなんとでもなりますが（笑）&lt;/p&gt;
+&lt;h2 id=&#34;hugo-で使える-markdown-記法&#34;&gt;Hugo で使える Markdown 記法
+&lt;/h2&gt;&lt;p&gt;普段、よく使うものだけ。&lt;br&gt;
+正式な記法であったり、もっと辞書的なものをお求めの方は、&lt;a class=&#34;link&#34; href=&#34;https://www.google.co.jp&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Google先生&lt;/a&gt;にお尋ねください。m(_ _)m&lt;/p&gt;
+&lt;h3 id=&#34;見出しh&#34;&gt;見出し（h）
+&lt;/h3&gt;&lt;p&gt;&lt;code&gt;#&lt;/code&gt; の数で &lt;code&gt;h1 ～ h5&lt;/code&gt; を表し、その右に見出しの文字列。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-txt&#34; data-lang=&#34;txt&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 見出し（h1）
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## 見出し（h2）
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;### 見出し（h3）
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#### 見出し（h4）
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;##### 見出し（h5）
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;改行br&#34;&gt;改行（br）
+&lt;/h3&gt;&lt;p&gt;行末にスペースを2つ付けます。&lt;br&gt;
+見えませんけど、想像してください（笑）&lt;br&gt;
+実際に改行していなくても、スペース2つが間に入っていれば、続けて書いていてもそこで改行されます。まぁ、&lt;code&gt;&amp;lt;br&amp;gt;&lt;/code&gt; と同じです。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;改行前の文章  
+改行後の文章
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;強調strong&#34;&gt;強調（strong）
+&lt;/h3&gt;&lt;p&gt;&lt;code&gt;**&lt;/code&gt; で文字列を挟む。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;** hoge **
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;画像挿入img&#34;&gt;画像挿入（img）
+&lt;/h3&gt;&lt;p&gt;タイトルは省略可能。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;![代替えテキスト](/iamges/hoge.webp)
+![代替えテキスト](/iamges/hoge.webp &amp;quot;タイトル&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;リンクa-href&#34;&gt;リンク（a href）
+&lt;/h3&gt;&lt;p&gt;残念ながら、&lt;code&gt;target&lt;/code&gt; は指定できない。&lt;br&gt;
+どうしてもやりたい場合は、HTML で書く。&lt;/p&gt;
+&lt;h4 id=&#34;テキストリンク&#34;&gt;テキストリンク
+&lt;/h4&gt;&lt;p&gt;タイトルは省略可能。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;[hoge](https://hoge.com)
+[hoge](https://hoge.com &amp;quot;タイトル&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;画像リンク&#34;&gt;画像リンク
+&lt;/h4&gt;&lt;p&gt;タイトルは省略可能。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;[![代替えテキスト](/iamges/hoge.webp &amp;quot;タイトル&amp;quot;)](https://hoge.com)
+[![代替えテキスト](/iamges/hoge.webp)](https://hoge.com)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;コードcode&#34;&gt;コード（code）
+&lt;/h3&gt;&lt;p&gt;文中に差し込むコードは ` （バッククォート）で挟む。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;文字列 `コード` 文字列
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;整形済みテキストpre&#34;&gt;整形済みテキスト（pre）
+&lt;/h3&gt;&lt;p&gt;単純にコードを記述する場合は、タブで行頭を開ける。&lt;br&gt;
+コードの前後にあたる行は空行でないとうまく読み取れないことあり。&lt;br&gt;
+また、特定のフォーマットでシンタックスハイライトを付ける場合は、```html とかにする。&lt;br&gt;
+htmlの部分は、php、md・・・いろいろ入れられるので、ケースに合わせて使用する。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;[hoge](https://hoge.com)
+[hoge](https://hoge.com)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;水平線hr&#34;&gt;水平線（hr）
+&lt;/h3&gt;&lt;p&gt;&lt;code&gt;***&lt;/code&gt; もしくは &lt;code&gt;---&lt;/code&gt; で水平線が書けます。&lt;br&gt;
+前後に文字列が入ってはいけません。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;***
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;取り消し線s&#34;&gt;取り消し線（s）
+&lt;/h3&gt;&lt;p&gt;&lt;code&gt;~~&lt;/code&gt; で取り消す文字列を挟みます。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;~~取り消す文字列~~
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;wordpress-でも使えるよ2019-03-06&#34;&gt;WordPress でも使えるよ［2019-03-06］
+&lt;/h2&gt;&lt;p&gt;余談ですが・・・。&lt;br&gt;
+WordPress 5.0 でお目見えしたブロックエディタ（旧呼称 Gutenberg）は、Markdown に対応しています。
+エディタで書いてから、ブロックエディタに貼り付けるとうまい具合に変換してくれました。&lt;/p&gt;
+&lt;h3 id=&#34;注意点&#34;&gt;注意点
+&lt;/h3&gt;&lt;p&gt;VSCode のように、Markdown の書式にあわせて文字色を変えてくれる優秀なエディタの場合、コピーした際にその情報まで持っていってしまい、うまく反映ができません。&lt;br&gt;
+面倒ですが、以下のような方法をとってください。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Markdownモードで作成 → テキストモード or メモ帳 に貼り付け＆コピー → ブロックエディタに貼り付け&lt;/li&gt;
+&lt;li&gt;最初からテキストモード or メモ帳みたいなシンプル機能のエディタを使う&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;またよく使うものが出てきたら追記します。&lt;/p&gt;
+&lt;p&gt;ここに分かりやすく書いてあった。&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet&#34;  title=&#34;Markdown Cheatsheet&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Markdown Cheatsheet&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
 </rss>

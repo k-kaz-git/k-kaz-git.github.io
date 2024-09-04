@@ -1,21 +1,141 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Sass - k-kaz が Hugo で遊ぶサイト</title>
-    <link>https://k-kaz-git.github.io/tags/sass/</link>
-    <description>Recent content in Sass on k-kaz が Hugo で遊ぶサイト</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>ja</language>
-    <lastBuildDate>Mon, 04 Mar 2019 10:05:17 +0900</lastBuildDate>
-    
-        <atom:link href="https://k-kaz-git.github.io/tags/sass/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Hugo で Sass を使ってみる</title>
-      <link>https://k-kaz-git.github.io/post/hugo-stylesheet-sass/</link>
-      <pubDate>Mon, 04 Mar 2019 10:05:17 +0900</pubDate>
-      
-      <guid>https://k-kaz-git.github.io/post/hugo-stylesheet-sass/</guid>
-      <description>Hugo で Sass を利用するのに少し設定が必要ですので、こちらにまとめます。</description>
-    </item>
-  </channel>
+    <channel>
+        <title>Sass on k-kaz が Hugo で遊ぶサイト</title>
+        <link>https://k-kaz-git.github.io/tags/sass/</link>
+        <description>Recent content in Sass on k-kaz が Hugo で遊ぶサイト</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>ja</language>
+        <copyright>k-kaz</copyright>
+        <lastBuildDate>Mon, 04 Mar 2019 10:05:17 +0900</lastBuildDate><atom:link href="https://k-kaz-git.github.io/tags/sass/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Hugo で Sass を使ってみる</title>
+        <link>https://k-kaz-git.github.io/p/hugo-%E3%81%A7-sass-%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%A6%E3%81%BF%E3%82%8B/</link>
+        <pubDate>Mon, 04 Mar 2019 10:05:17 +0900</pubDate>
+        
+        <guid>https://k-kaz-git.github.io/p/hugo-%E3%81%A7-sass-%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%A6%E3%81%BF%E3%82%8B/</guid>
+        <description>&lt;img src="https://k-kaz-git.github.io/images/computer-Programming_640.webp" alt="Featured image of post Hugo で Sass を使ってみる" /&gt;&lt;h2 id=&#34;余談ですがいつもお世話になっているサイト様&#34;&gt;余談ですが、いつもお世話になっているサイト様
+&lt;/h2&gt;&lt;p&gt;スタイルシートの記述で迷ったとき、こちらのサイトを参考にすることが多いです。&lt;br&gt;
+いつもお世話になっております。&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://saruwakakun.com/html-css&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;サルワカ: HTML&amp;amp;CSS&lt;/a&gt;&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://developer.mozilla.org/ja/docs/Web/CSS&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;MDN: CSS リファレンス&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;hugo-で-sass-を使ってみる&#34;&gt;Hugo で Sass を使ってみる。
+&lt;/h2&gt;&lt;p&gt;本題へ。&lt;br&gt;
+昨年、Hugo も Sass に対応したようですが、標準のモジュールでは使えず、extended版 が必要になります。&lt;/p&gt;
+&lt;h3 id=&#34;hugo-のバージョンを確認する&#34;&gt;Hugo のバージョンを確認する。
+&lt;/h3&gt;&lt;p&gt;&lt;code&gt;hugo version&lt;/code&gt; で現在のバージョンが確認できます。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hugo version
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Hugo Static Site Generator v0.54.0/extended hogehoge...
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;code&gt;extended&lt;/code&gt; の文字があった方はおめでとうございます。
+無かった方はダウロードを行ってください。&lt;/p&gt;
+&lt;h3 id=&#34;hugo-の-extended版-をダウンロードする必要あれば&#34;&gt;Hugo の extended版 をダウンロードする。（必要あれば）
+&lt;/h3&gt;&lt;p&gt;extended版 では無かった方。&lt;br&gt;
+こちらから、extended ってファイル名に付与されているものをダウンロードしてください。&lt;br&gt;
+下のほうにあるはず。&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/gohugoio/hugo/releases&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Releases · gohugoio/hugo&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;ダウンロード後、入れ替えをします。&lt;/p&gt;
+&lt;h3 id=&#34;sass-のファイルを用意する&#34;&gt;Sass のファイルを用意する。
+&lt;/h3&gt;&lt;p&gt;現在使っているスタイルシートで良いので、下記に配置します。&lt;br&gt;
+また、この後の作業をスムーズにするため、ファイル名も変更しています。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;サイト名\assets\sass\main.scss&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;assets\sass&lt;/code&gt; がない場合は作っちゃってください。&lt;br&gt;
+また、&lt;code&gt;Sass&lt;/code&gt; には &lt;code&gt;.sass&lt;/code&gt; と &lt;code&gt;.scss&lt;/code&gt; の2種類が存在しますが、元の &lt;code&gt;css&lt;/code&gt; と互換性のある &lt;code&gt;.scss&lt;/code&gt; としています。ここは好きな方にして良いですが、&lt;code&gt;.sass&lt;/code&gt; の場合は、中身の編集もあわせてお願いします。&lt;/p&gt;
+&lt;h3 id=&#34;スタイルシートを読み込む-html-の編集をする&#34;&gt;スタイルシートを読み込む html の編集をする。
+&lt;/h3&gt;&lt;p&gt;テーマによってファイルが異なると思いますが、ここでは aether の場合で書いていきます。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;サイト名\layouts\partials\head.html&lt;/code&gt; を開きます。&lt;br&gt;
+ファイルが無い方は、テーマの中 &lt;code&gt;テーマ名\themes\aether\layouts\partials\head.html&lt;/code&gt; から、コピーして持ってきてください。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;link&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;rel&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;stylesheet&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;href&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;{{ &amp;#34;&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;css&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;min&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;css&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&amp;#34;&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;absURL&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;}}&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{{ $style := resources.Get &amp;#34;sass/main.scss&amp;#34; | toCSS | minify | fingerprint }}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;link&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;rel&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;stylesheet&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;href&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;{{ $style.Permalink }}&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;1行目が元々入っている全体のスタイルシートの読み込み部分です。&lt;br&gt;
+今回は2行目と3行目を追加します。&lt;/p&gt;
+&lt;p&gt;2行目&lt;br&gt;
+先程用意した &lt;code&gt;main.scss&lt;/code&gt; を読み込み、パイプ &lt;code&gt;|&lt;/code&gt; を使って、CSS 形式に変更したり、圧縮したりしています。&lt;br&gt;
+パイプを使うと、どんどん右の作業工程へ材料を渡していけますので、1行だけでいくつかの加工が可能です。&lt;/p&gt;
+&lt;p&gt;3行目&lt;br&gt;
+2行目で加工したスタイルシートが &lt;code&gt;$style&lt;/code&gt; に入っているので、それを通常通りの書式でスタイルシートとして読み込みます。&lt;/p&gt;
+&lt;p&gt;※別途、スタイルシートを用意して読み込んでいた場合、置き換えるのであれば、その行を消してください。&lt;/p&gt;
+&lt;h3 id=&#34;あとはお好きにスタイルシートを弄ってください&#34;&gt;あとはお好きにスタイルシートを弄ってください。
+&lt;/h3&gt;&lt;p&gt;以上で、&lt;code&gt;Sass&lt;/code&gt; を使うための準備は完了です。&lt;br&gt;
+ミスっていると、&lt;code&gt;hugo server&lt;/code&gt; でローカルサーバーを立ち上げたときに怒られます。&lt;br&gt;
+ちなみに私は、事前準備は出来ていましたが、スタイルシートの中身で怒られました。&lt;/p&gt;
+&lt;p&gt;それは次の項で。&lt;/p&gt;
+&lt;h2 id=&#34;怒られたのはmainscss-の中身&#34;&gt;怒られたのは、main.scss の中身
+&lt;/h2&gt;&lt;p&gt;ローカルサーバーを立ち上げたときに、エラーが出て起動しませんでした。&lt;br&gt;
+メッセージには、ご丁寧に&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;スタイルシートの読み込みでエラーがあった&lt;/li&gt;
+&lt;li&gt;何行目の何文字目がおかしい&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;と書かれています。&lt;/p&gt;
+&lt;h3 id=&#34;何か問題でも&#34;&gt;何か問題でも？
+&lt;/h3&gt;&lt;p&gt;該当する箇所の確認をすると、背景色の指定をしているところでした。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-css&#34; data-lang=&#34;css&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;background&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;rgb&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;230&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;90&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;90&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;何か問題でも？&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;しばらく気付かなかったんですけど、落ち着いて見たらようやく答えが分かりました。&lt;br&gt;
+というか、そもそもこの透過処理のことを私がよく分かっていなかったのが問題です。&lt;/p&gt;
+&lt;h3 id=&#34;その前に色の指定について&#34;&gt;その前に、色の指定について
+&lt;/h3&gt;&lt;p&gt;色の指定については、いくつかの方法があります。&lt;br&gt;
+”赤” という色を表す場合、&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;red&lt;/li&gt;
+&lt;li&gt;#ff0000&lt;/li&gt;
+&lt;li&gt;rgb（255,0,0）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;こんな風に、何通りか指定方法があります。（実はまだ他にも・・・）&lt;/p&gt;
+&lt;h3 id=&#34;今回の間違いは&#34;&gt;今回の間違いは・・・
+&lt;/h3&gt;&lt;p&gt;で、今回の件なんですけど、&lt;strong&gt;背景色を透過させたい&lt;/strong&gt;ということで指定をしています。&lt;/p&gt;
+&lt;p&gt;透過させるときは、色指定に &lt;code&gt;rgb&lt;/code&gt; を使ってあげるんです。&lt;br&gt;
+通常は、&lt;code&gt;rgb(red,green,blue)&lt;/code&gt; の三原色で指定するんですが、そのあとに &lt;code&gt;alpha&lt;/code&gt; というチャネルが入り、ここで透過具合を数値で入れると反映されます。&lt;/p&gt;
+&lt;p&gt;私もそこまでは知っていたんですけど、&lt;code&gt;alpha&lt;/code&gt; が入るときに &lt;code&gt;rgb&lt;/code&gt; が &lt;code&gt;rgba&lt;/code&gt; になることを知らなかったんですね。&lt;/p&gt;
+&lt;p&gt;ということで、私の知識不足により、元々の &lt;code&gt;.css&lt;/code&gt; からおかしかったというオチでした。&lt;/p&gt;
+&lt;p&gt;下記のように書き直したところ、きちんとスタイルシートの変換がされ、サーバーが起動しました。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-css&#34; data-lang=&#34;css&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;background&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;rgba&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;230&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;90&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;90&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;同じ-sass-だけど-sass-か-scss-か&#34;&gt;同じ Sass だけど .sass か .scss か
+&lt;/h2&gt;&lt;p&gt;Sass と言っても、記述方式が2通りあり、好きなほうを使えます。&lt;br&gt;
+&lt;code&gt;.sass&lt;/code&gt; は、&lt;code&gt;{}&lt;/code&gt; や &lt;code&gt;;&lt;/code&gt; が不要なので、すっきり、そして少ない文字数でコーディングが可能。&lt;br&gt;
+&lt;code&gt;.css&lt;/code&gt; から拡張されている、いくつかの機能はどちらも同様に使えます。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;.sass&lt;/code&gt; と &lt;code&gt;.scss&lt;/code&gt; のどちらが良いのかというのは、ネット上でも議論されていますが、私の結論としては &lt;strong&gt;「好きな方をどうぞ」&lt;/strong&gt; です。&lt;/p&gt;
+&lt;p&gt;ちなみに私は、&lt;code&gt;.scss&lt;/code&gt; にしました。&lt;/p&gt;
+&lt;p&gt;最初は &lt;code&gt;.sass&lt;/code&gt; のほうが絶対に良いだろうと思って、&lt;code&gt;.css&lt;/code&gt; を書き直していたんですけど、&lt;code&gt;{}&lt;/code&gt; が無いと、どこからどこまでが今書いている範囲なのか、パッと分かりませんでした。&lt;/p&gt;
+&lt;p&gt;ということで、&lt;strong&gt;私の頭の都合で &lt;code&gt;.scss&lt;/code&gt; を選んだ次第です。&lt;/strong&gt;&lt;br&gt;
+そのような制限がなければ &lt;code&gt;.sass&lt;/code&gt; を選んでいたかな。&lt;/p&gt;
+&lt;p&gt;まぁ、最終的にはどちらも &lt;code&gt;.css&lt;/code&gt; に変換されますので、サイトの表示速度に有利なのはこちらだとか無いはず。（私の理解では・・・）&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
 </rss>

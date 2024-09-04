@@ -1,136 +1,238 @@
 <!DOCTYPE html>
-<html lang="ja" dir="ltr">
-  <head>
-  <meta charset="utf-8" />
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Hugo のテーマを作ったよ。 &middot; k-kaz が Hugo で遊ぶサイト</title>
-  
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-K8B8MR2Z');</script>
-  
-  <meta name="description" content="Hugo のテーマを自作してみました。途中で放り投げたけど（笑）" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
-  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-  <link href="https://k-kaz-git.github.io/css/katex.css" rel="stylesheet">
-  
-  
-  
-  
-  <link href="https://k-kaz-git.github.io/css/concated.min.css" rel="stylesheet">
+<html lang="ja-JP" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Hugo のテーマを自作してみました。途中で放り投げたけど（笑）">
+<title>Hugo のテーマを作ったよ。</title>
 
-  
-  <link rel="stylesheet" href="https://k-kaz-git.github.io/sass/main.fcdea0c4becd73f2e3b2312b85bcd7ba626d441c1cde1e1b8046a6afcc4e22b8.css">
+<link rel='canonical' href='http://localhost:1313/post/hugo-k-kaz-theme/'>
 
-  
+<link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="Hugo のテーマを作ったよ。">
+<meta property='og:description' content="Hugo のテーマを自作してみました。途中で放り投げたけど（笑）">
+<meta property='og:url' content='http://localhost:1313/post/hugo-k-kaz-theme/'>
+<meta property='og:site_name' content='k-kaz が Hugo で遊ぶサイト'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='hugo' /><meta property='article:tag' content='theme' /><meta property='article:tag' content='aether' /><meta property='article:tag' content='cupper' /><meta property='article:published_time' content='2019-03-18T12:31:49&#43;09:00'/><meta property='article:modified_time' content='2019-03-18T12:31:49&#43;09:00'/><meta property='og:image' content='http://localhost:1313/images/horse-colorful_640.webp' />
+<meta name="twitter:title" content="Hugo のテーマを作ったよ。">
+<meta name="twitter:description" content="Hugo のテーマを自作してみました。途中で放り投げたけど（笑）"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='http://localhost:1313/images/horse-colorful_640.webp' />
   
 
 
-  
-</head>
-  <body class="single-body">
-      
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8B8MR2Z"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  
-<nav class="nav-bar side-padding">
-  <h1 class="nav-header"><a href="https://k-kaz-git.github.io/" class="nav-text">k-kaz が Hugo で遊ぶサイト</a></h1>
-  <div class="hamburger-menu">
-    <button onclick="hamburgerMenuPressed.call(this)" aria-haspopup="true" aria-expanded="false" aria-controls="menu" aria-label="Menu">
-      <span></span>
-      <span></span>
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column compact"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="メニューを開く・閉じる">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
     </button>
-    <ul id="menu" class="hamburger-menu-overlay">
-      <li><a href="https://k-kaz-git.github.io/" class="hamburger-menu-overlay-link">Home</a></li>
-      <li class="navi-menu">- Categories -</li>
-      <li style="font-size: 0.7em;"><a href="https://k-kaz-git.github.io/categories/coding" class="hamburger-menu-overlay-link">Coding</a></li><li style="font-size: 0.7em;"><a href="https://k-kaz-git.github.io/categories/homepage" class="hamburger-menu-overlay-link">Homepage</a></li><li style="font-size: 0.7em;"><a href="https://k-kaz-git.github.io/categories/linux" class="hamburger-menu-overlay-link">Linux</a></li>
-      <li class="navi-menu">- Tags -</li>
-      <li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/aether" class="hamburger-menu-overlay-link">Aether</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/categories" class="hamburger-menu-overlay-link">Categories</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/css" class="hamburger-menu-overlay-link">Css</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/cupper" class="hamburger-menu-overlay-link">Cupper</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/favicon" class="hamburger-menu-overlay-link">Favicon</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/github" class="hamburger-menu-overlay-link">Github</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/github-pages" class="hamburger-menu-overlay-link">Github pages</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/hugo" class="hamburger-menu-overlay-link">Hugo</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/markdown" class="hamburger-menu-overlay-link">Markdown</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/mermaid" class="hamburger-menu-overlay-link">Mermaid</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/mozc" class="hamburger-menu-overlay-link">Mozc</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/netlify" class="hamburger-menu-overlay-link">Netlify</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/pagermod" class="hamburger-menu-overlay-link">Pagermod</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/saas" class="hamburger-menu-overlay-link">Saas</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/sass" class="hamburger-menu-overlay-link">Sass</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/shortcodes" class="hamburger-menu-overlay-link">Shortcodes</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/snippet" class="hamburger-menu-overlay-link">Snippet</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/stylesheet" class="hamburger-menu-overlay-link">Stylesheet</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/svg" class="hamburger-menu-overlay-link">Svg</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/tableofcontents" class="hamburger-menu-overlay-link">Tableofcontents</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/tags" class="hamburger-menu-overlay-link">Tags</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/theme" class="hamburger-menu-overlay-link">Theme</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/vscode" class="hamburger-menu-overlay-link">Vscode</a></li>
-    </ul>
-  </div>
-</nav>
-    <main class="content side-text-padding">
-      <article class="post ">
-        <header class="post-header">
-        	<h1 class="post-title">Hugo のテーマを作ったよ。</h1>
-          <p class="post-date">
-            Posted <time datetime="2019-03-18">2019-03-18</time>
-             / Update 2019-03-27</p>
-             <div class="card-subtext muted-text li-line">
-               <a class="cat" href="/categories/homepage">homepage</a>
-               <a class="tag" href="/tags/hugo">#hugo</a>  <a class="tag" href="/tags/theme">#theme</a>  <a class="tag" href="/tags/aether">#aether</a>  <a class="tag" href="/tags/cupper">#cupper</a> 
-             </div>
-        </header>
+
+    <header>
         
-        <picture class="post-figure">
-            <source srcset="https://k-kaz-git.github.io/images/horse-colorful_640.webp" type="image/webp">
-            <source srcset="https://k-kaz-git.github.io/images/horse-colorful_640.webp">
-          <img src="https://k-kaz-git.github.io/images/horse-colorful_640.webp" alt="カラフルな馬">
-        </picture>
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu13739649187745961479.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
         
-        <aside>
-          <h2>目次</h2>
-            <nav id="TableOfContents">
-  <ul>
-    <li><a href="#hugo-のテーマを自作する">Hugo のテーマを自作する</a>
-      <ul>
-        <li><a href="#一から作ってこんな感じのところまで出来ました">一から作って、こんな感じのところまで出来ました</a></li>
-      </ul>
-    </li>
-    <li><a href="#覚書を残す">覚書を残す</a>
-      <ul>
-        <li><a href="#ローカルサイトと空テーマの準備">ローカルサイトと空テーマの準備</a></li>
-        <li><a href="#テーマ内で最低限必要なもの">テーマ内で最低限必要なもの</a></li>
-        <li><a href="#簡単に構成を書く">簡単に構成を書く</a></li>
-      </ul>
-    </li>
-    <li><a href="#その後-2019-03-27">その後 ［2019-03-27］</a>
-      <ul>
-        <li><a href="#どうも気に入らなくて再度作成中">どうも気に入らなくて、再度作成中</a></li>
-        <li><a href="#今回気付いたこと">今回気付いたこと</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
-        </aside>
-        <h2 id="hugo-のテーマを自作する">Hugo のテーマを自作する</h2>
-<p><a href="https://k-kaz.net/2019/03/16/%e3%81%82%e3%81%9a%e3%81%952%e5%8f%b7%e3%81%a8-hugo-%e3%81%ae-theme/" target="_blank">本家のほうでも書きました</a>
- けど、Hugo のテーマを弄っていたら、次は自作かなと思って、手を付けてみました。</p>
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">k-kaz が Hugo で遊ぶサイト</a></h1>
+            <h2 class="site-description"></h2>
+        </div>
+    </header><ol class="menu" id="main-menu">
+        
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>ダークモード</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/post/hugo-k-kaz-theme/">
+                
+                    <img src="/images/horse-colorful_640.webp" loading="lazy" alt="Featured image of post Hugo のテーマを作ったよ。" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/homepage/" >
+                Homepage
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/post/hugo-k-kaz-theme/">Hugo のテーマを作ったよ。</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            Hugo のテーマを自作してみました。途中で放り投げたけど（笑）
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Mar 18, 2019</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    読了時間: 2分
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="hugo-のテーマを自作する">Hugo のテーマを自作する
+</h2><p><a class="link" href="https://k-kaz.net/2019/03/16/%e3%81%82%e3%81%9a%e3%81%952%e5%8f%b7%e3%81%a8-hugo-%e3%81%ae-theme/"  target="_blank" rel="noopener"
+    >本家のほうでも書きました</a> けど、Hugo のテーマを弄っていたら、次は自作かなと思って、手を付けてみました。</p>
 <p><strong>結果として、途中でやめました。</strong></p>
 <p>だって、今使っているこのテーマ aether に段々と似てきたんですもの。<br>
 スタイルシートをコピペしたりしてたから、当然だけど。</p>
 <p>まぁ、このテーマを気に入っているということですよ。</p>
-<div class="iframely-embed"><div class="iframely-responsive" style="padding-bottom: 56.25%; padding-top: 120px;"><a href="https://k-kaz.net/2019/03/16/azusa2-hugo-theme/" data-iframely-url="//cdn.iframe.ly/A1E0IvI"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
-<div class="memo">
-    <span class="memo-title">memo</span>
-    <p>
-↑ これ、[iframely](URLhttps://iframely.com) というサービスを使っています。  
-最初、情報取得の際にエラーを起こしていたんですが、URL に日本語が含まれていたからでした。
-使用される方はご注意あれ。
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 <p>あと、超でっかく表示されているので、スタイルシートで調整しました。</p>
-</p>
-</div>
-<h3 id="一から作ってこんな感じのところまで出来ました">一から作って、こんな感じのところまで出来ました</h3>
-<p>素人のわりには、それっぽくなっているでしょ。</p>
-<h4 id="トップ">トップ</h4>
-<p><img src="/images/k-kaz-theme-top.webp" alt="k-kazのテーマ トップページ"></p>
-<h4 id="投稿記事">投稿記事</h4>
-<p><img src="/images/k-kaz-theme-single.webp" alt="k-kazのテーマ シングルページ"></p>
-<h2 id="覚書を残す">覚書を残す</h2>
-<p>テーマ作りは途中でやめましたが、やり方をこちらに残しておきましょう。<br>
+<!-- raw HTML omitted -->
+<h3 id="一から作ってこんな感じのところまで出来ました">一から作って、こんな感じのところまで出来ました
+</h3><p>素人のわりには、それっぽくなっているでしょ。</p>
+<h4 id="トップ">トップ
+</h4><p><img src="/images/k-kaz-theme-top.webp"
+	
+	
+	
+	loading="lazy"
+	
+		alt="k-kazのテーマ トップページ"
+	
+	
+></p>
+<h4 id="投稿記事">投稿記事
+</h4><p><img src="/images/k-kaz-theme-single.webp"
+	
+	
+	
+	loading="lazy"
+	
+		alt="k-kazのテーマ シングルページ"
+	
+	
+></p>
+<h2 id="覚書を残す">覚書を残す
+</h2><p>テーマ作りは途中でやめましたが、やり方をこちらに残しておきましょう。<br>
 またいつか暇な時に続きをしたくなるかもしれないし。</p>
-<h3 id="ローカルサイトと空テーマの準備">ローカルサイトと空テーマの準備</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#f92672">$</span> <span style="color:#f92672">hugo</span> <span style="color:#f92672">new</span> <span style="color:#f92672">site</span> <span style="color:#f92672">hoge</span>            <span style="color:#75715e">/* サイト hoge 作成 */</span>
+<h3 id="ローカルサイトと空テーマの準備">ローカルサイトと空テーマの準備
+</h3><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#f92672">$</span> <span style="color:#f92672">hugo</span> <span style="color:#f92672">new</span> <span style="color:#f92672">site</span> <span style="color:#f92672">hoge</span>            <span style="color:#75715e">/* サイト hoge 作成 */</span>
 </span></span><span style="display:flex;"><span><span style="color:#f92672">$</span> <span style="color:#f92672">cd</span> <span style="color:#f92672">hoge</span>
 </span></span><span style="display:flex;"><span><span style="color:#f92672">$</span> <span style="color:#f92672">hugo</span> <span style="color:#f92672">new</span> <span style="color:#f92672">theme</span> <span style="color:#f92672">hoge-theme</span>     <span style="color:#75715e">/* 空テーマ hoge-theme 作成 */</span>
-</span></span></code></pre></div><h3 id="テーマ内で最低限必要なもの">テーマ内で最低限必要なもの</h3>
-<p>最低限って書くと、ヘッダーもフッターも要らないけど・・・一応書いておく（笑）<br>
+</span></span></code></pre></div><h3 id="テーマ内で最低限必要なもの">テーマ内で最低限必要なもの
+</h3><p>最低限って書くと、ヘッダーもフッターも要らないけど・・・一応書いておく（笑）<br>
 <code>line-hight</code> の関係で、線がブツブツ切れていますが、許してください。</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>hoge-theme  
 </span></span><span style="display:flex;"><span>│  theme.toml  
@@ -144,8 +246,8 @@
 </span></span><span style="display:flex;"><span>│           baseof.html  <span style="color:#75715e">&lt;!-- ページの元で各種パーツを読み込む --&gt;</span>
 </span></span><span style="display:flex;"><span>│           list.html  <span style="color:#75715e">&lt;!-- 記事一覧出力 --&gt;</span>
 </span></span><span style="display:flex;"><span>│           single.html  <span style="color:#75715e">&lt;!-- 投稿記事出力 --&gt;</span>
-</span></span></code></pre></div><h3 id="簡単に構成を書く">簡単に構成を書く</h3>
-<p><code>baseof.html</code> が、すべての <code>html</code> の親玉で、その中身はこんな感じになっています。</p>
+</span></span></code></pre></div><h3 id="簡単に構成を書く">簡単に構成を書く
+</h3><p><code>baseof.html</code> が、すべての <code>html</code> の親玉で、その中身はこんな感じになっています。</p>
 <p>頭 <code>head.html</code><br>
 体 <code>list.html</code> or <code>single.html</code><br>
 足 <code>footer.html</code></p>
@@ -180,22 +282,22 @@
 <p>あとは好きなようにスタイルシートで装飾をしたり、メニューを作ったり。</p>
 <hr>
 <p>とりあえず、今回はここまで。</p>
-<h2 id="その後-2019-03-27">その後 ［2019-03-27］</h2>
-<h3 id="どうも気に入らなくて再度作成中">どうも気に入らなくて、再度作成中</h3>
-<p>細々したところがどうも気に入らなくて、もう一度作っています。</p>
-<h4 id="トップページモバイル系">トップページ（モバイル系）</h4>
-<p>縦並びです。<br>
-<img src="/images/k-kaz-theme-top-mobile-01.webp" alt="k-kaz トップページ モバイル" style="width:auto;"></p>
-<h4 id="トップページpc系">トップページ（PC系）</h4>
-<p>最大で4記事まで横に並び、それを超えたら2行、3行という形で表示します。
-<img src="/images/k-kaz-theme-top-pc-01.webp" alt="k-kaz トップページ PC" style="width:auto;"></p>
-<h4 id="投稿記事-1">投稿記事</h4>
-<p>こんな感じ。
-<img src="/images/k-kaz-theme-post-pc-01.webp" alt="k-kaz 投稿記事 モバイル" style="width:auto;"></p>
-<h3 id="今回気付いたこと">今回気付いたこと</h3>
-<p>新たにテーマを作り直しながら、気付いたことを書いておきます。</p>
-<h4 id="netlify-で-baseofhtml-を使う場合は注意">netlify で baseof.html を使う場合は注意</h4>
-<p>こうやって、<code>{{ define &quot;header&quot; }}</code> を入れた <code>header.html</code> を読み込んだんですけど、</p>
+<h2 id="その後-2019-03-27">その後 ［2019-03-27］
+</h2><h3 id="どうも気に入らなくて再度作成中">どうも気に入らなくて、再度作成中
+</h3><p>細々したところがどうも気に入らなくて、もう一度作っています。</p>
+<h4 id="トップページモバイル系">トップページ（モバイル系）
+</h4><p>縦並びです。<br>
+<!-- raw HTML omitted --></p>
+<h4 id="トップページpc系">トップページ（PC系）
+</h4><p>最大で4記事まで横に並び、それを超えたら2行、3行という形で表示します。
+<!-- raw HTML omitted --></p>
+<h4 id="投稿記事-1">投稿記事
+</h4><p>こんな感じ。
+<!-- raw HTML omitted --></p>
+<h3 id="今回気付いたこと">今回気付いたこと
+</h3><p>新たにテーマを作り直しながら、気付いたことを書いておきます。</p>
+<h4 id="netlify-で-baseofhtml-を使う場合は注意">netlify で baseof.html を使う場合は注意
+</h4><p>こうやって、<code>{{ define &quot;header&quot; }}</code> を入れた <code>header.html</code> を読み込んだんですけど、</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">head</span>&gt;
 </span></span><span style="display:flex;"><span>    {{ block &#34;header&#34; . }}{{ end }}
 </span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">head</span>&gt;
@@ -203,8 +305,8 @@
 <p>具体的には、ファイルを読み込めずに <code>&lt;head&gt;</code> の中身が空になります。
 正確に書くと、netlify で生成した際の Hugo バージョンがメタ情報として載るだけ。</p>
 <p>ということで、<code>header.html</code> の読み込みは諦め、中身をそのまま <code>baseof.html</code> に直書きして対処しました。美しくないけど。</p>
-<h4 id="フォント調整">フォント調整</h4>
-<p>いろんなサイトで調べたんですけど、調べれば調べるほど、どツボにハマる感じ。</p>
+<h4 id="フォント調整">フォント調整
+</h4><p>いろんなサイトで調べたんですけど、調べれば調べるほど、どツボにハマる感じ。</p>
 <p>今の主流は、レスポンシブデザインを意識して、サイト全体でのフォントサイズを指定するみたい。
 それ以下については、基準に対して <code>rem</code> で指定することで調整すると。</p>
 <p>その中で、一番、理想的なのがこれかなと思いました。
@@ -217,8 +319,8 @@ rem で調整するのも当時（昨日だけど）は面倒でした。</p>
 </span></span></code></pre></div><p>基本となるサイズ（1em = 16px だっけ？）に対し、画面の大きさにあわせてプラスをしていく方法。
 こちらのほうが、個人的には微調整がしやすかったです。（<strong>昨日苦労したのが役に立っただけ疑惑あり</strong> ）</p>
 <p>px で直接指定するのが一番楽っていえば楽なんですけど、<strong>レスポンシブデザイン</strong> の呪いが。</p>
-<h4 id="スタイルシートの書き方">スタイルシートの書き方</h4>
-<p>PC用のスタイルを定義して、その後にモバイルの定義かと思っていましたが、逆でありました。
+<h4 id="スタイルシートの書き方">スタイルシートの書き方
+</h4><p>PC用のスタイルを定義して、その後にモバイルの定義かと思っていましたが、逆でありました。
 先にモバイルです。今はモバイル優先で何事も考えたほうが良さそうです。</p>
 <p>モバイルのところは普通にスタイルシートを書いて、一通り終わったら PC の番です。</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#75715e">/* 画面サイズ 481px 以上はこの中で設定 */</span>
@@ -232,60 +334,253 @@ rem で調整するのも当時（昨日だけど）は面倒でした。</p>
 <p>あと、同じ定義をした場合は下のほうが優先されるようです。<br>
 なんで反映されないのかと思ったことが何度もありました（恥）</p>
 
-      </article>
-      <hr>
-      <p class="post-date">
-        Posted <time datetime="2019-03-18">2019-03-18</time>
-         / Update 2019-03-27</p>
-         <div class="card-subtext muted-text li-line">
-           <a class="cat" href="/categories/homepage">homepage</a>
-           <a class="tag" href="/tags/hugo">#hugo</a>  <a class="tag" href="/tags/theme">#theme</a>  <a class="tag" href="/tags/aether">#aether</a>  <a class="tag" href="/tags/cupper">#cupper</a> 
-         </div>
-    </main>
-    <nav class="end-nav side-padding">
-      
-      <a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
-  href="https://k-kaz-git.github.io/post/code-highlight/" class="card blog-card" rel="bookmark" >
+</section>
+
+
+    <footer class="article-footer">
     
-    <div class="card-img-container">
-      <p class="card-img-overlay">Next Article</p>
-      <picture>
-        <source srcset="https://k-kaz-git.github.io/images/colorful-balloons-640.webp" type="image/webp">
-        <source srcset="https://k-kaz-git.github.io/images/colorful-balloons-640.webp">
-        <img src="https://k-kaz-git.github.io/images/colorful-balloons-640.webp" class="card-img" alt="カラフルな風船">
-      </picture>
-    </div>
+    <section class="article-tags">
+        
+            <a href="/tags/hugo/">Hugo</a>
+        
+            <a href="/tags/theme/">Theme</a>
+        
+            <a href="/tags/aether/">Aether</a>
+        
+            <a href="/tags/cupper/">Cupper</a>
+        
+    </section>
+
+
+    </footer>
+
+
     
-  <article class="card-body">
-    <h2 class="card-title">シンタックスハイライトを自分好みの色にする</h2>
-    <p class="card-text">シンタックスハイライトの色をスタイルシートで変更してみます。</p>
-    <div class="card-subtext muted-text">
-      <p>Posted <time datetime="2019-03-14">2019-03-14</time>
-      / Updated 2019-03-16</p>
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">関連するコンテンツ</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/post/hugo-custom-theme-cupper/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/images/cupper-org-logo.png" loading="lazy" data-key="" data-hash="/images/cupper-org-logo.png"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">テーマ Cupper のカスタマイズ</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/post/hugo-custom-theme-aether/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/images/pair-love_640.webp" loading="lazy" data-key="" data-hash="/images/pair-love_640.webp"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">テーマ aether のカスタマイズ</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/post/code-highlight/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/images/colorful-balloons-640.webp" loading="lazy" data-key="" data-hash="/images/colorful-balloons-640.webp"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">シンタックスハイライトを自分好みの色にする</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/post/hugo-shortcodes-make/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/images/shortcodes-vegetables-make_640.webp" loading="lazy" data-key="" data-hash="/images/shortcodes-vegetables-make_640.webp"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">自作の Hugo用 Shortcodes</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/post/hugo-shortcodes/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/images/computer-Programming_640.webp" loading="lazy" data-key="" data-hash="/images/computer-Programming_640.webp"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Hugo の Shortcodes を使ってみる。</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
     </div>
-    <div class="card-subtext muted-text li-line">
-      <span class="box-gray">homepage</span> 
-      <span class="box-gray">#css</span> <span class="box-gray">#saas</span> <span class="box-gray">#aether</span> 
-    </div>
-  </article>
-</a>
-      
-      <a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
-  href="https://k-kaz-git.github.io/" class="card home-card" style="background-image: url( https://k-kaz-git.github.io/img/grey-cloud.jpg )" rel="bookmark" >
-  Home
-</a>
-    </nav>
-    <footer>
-    <p style="text-align: center">姉妹サイト<br><a class="btn-link" href="https://k-kaz.net/" target="_blank">k-kaz ブログ</a></p>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2024 k-kaz が Hugo で遊ぶサイト
+    </section>
+    
+    <section class="powerby">
+        <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> で構築されています。 <br />
+        テーマ <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.26.0">Stack</a></b> は <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> によって設計されています。
+    </section>
 </footer>
+
+
     
-  <script defer src="https://k-kaz-git.github.io/js/katex.js"></script>
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
 
+    
+    <div class="pswp__bg"></div>
 
-  <script defer src="https://k-kaz-git.github.io/js/auto-render.js" onload="renderMathInElement(document.body);"></script>
+    
+    <div class="pswp__scroll-wrap">
 
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
 
-<script src="https://k-kaz-git.github.io/js/core.min.js"></script>
+        
+        <div class="pswp__ui pswp__ui--hidden">
 
-  </body>
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
 </html>

@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Hugo を Netlify で動かしてみたときの記録です。">
+<title>Hugo を Netlify で動かすよ。</title>
+
+<link rel='canonical' href='https://k-kaz-git.github.io/p/hugo-%E3%82%92-netlify-%E3%81%A7%E5%8B%95%E3%81%8B%E3%81%99%E3%82%88/'>
+
+<link rel="stylesheet" href="/scss/style.min.43289f33a995fb4bc83e665a1a22504b7eecefd3dcf3f9ecc83ed51746ad75d3.css"><meta property='og:title' content="Hugo を Netlify で動かすよ。">
+<meta property='og:description' content="Hugo を Netlify で動かしてみたときの記録です。">
+<meta property='og:url' content='https://k-kaz-git.github.io/p/hugo-%E3%82%92-netlify-%E3%81%A7%E5%8B%95%E3%81%8B%E3%81%99%E3%82%88/'>
+<meta property='og:site_name' content='k-kaz が Hugo で遊ぶサイト'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='hugo' /><meta property='article:tag' content='netlify' /><meta property='article:published_time' content='2019-03-07T14:44:55&#43;09:00'/><meta property='article:modified_time' content='2019-03-07T14:44:55&#43;09:00'/><meta property='og:image' content='https://k-kaz-git.github.io/images/hugo-netlify-network_640.webp' />
+<meta name="twitter:title" content="Hugo を Netlify で動かすよ。">
+<meta name="twitter:description" content="Hugo を Netlify で動かしてみたときの記録です。"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://k-kaz-git.github.io/images/hugo-netlify-network_640.webp' />
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+  
+
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="メニューを開く・閉じる">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/images/android-chrome-192x192_hu5450162830773684134.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">k-kaz が Hugo で遊ぶサイト</a></h1>
+            <h2 class="site-description">Hugo関連の記事ですが、初心者なので参考になりませんよ。</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href=''
+                        target="_blank"
+                        
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>ダークモード</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目次</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#追記-2024-02-07">追記 2024-02-07</a></li>
+    <li><a href="#hugo-を-netlify-で動かす">Hugo を Netlify で動かす</a></li>
+    <li><a href="#まずは-hugo-をゲットする">まずは Hugo をゲットする</a>
+      <ol>
+        <li><a href="#ダウンロード">ダウンロード</a></li>
+        <li><a href="#パスを通す">パスを通す</a></li>
+      </ol>
+    </li>
+    <li><a href="#ローカルサイトを用意する">ローカルサイトを用意する</a>
+      <ol>
+        <li><a href="#サイトの雛形を展開する">サイトの雛形を展開する</a></li>
+        <li><a href="#テーマの準備">テーマの準備</a>
+          <ol>
+            <li><a href="#テーマ内の-git-を削除">テーマ内の .git を削除</a></li>
+          </ol>
+        </li>
+        <li><a href="#設定ファイルの修正">設定ファイルの修正</a></li>
+      </ol>
+    </li>
+    <li><a href="#サイトを確認する">サイトを確認する</a>
+      <ol>
+        <li><a href="#まずはローカルで確認する">まずはローカルで確認する</a></li>
+      </ol>
+    </li>
+    <li><a href="#github-の準備">GitHub の準備</a>
+      <ol>
+        <li><a href="#github-でリポジトリを作る">GitHub でリポジトリを作る</a></li>
+        <li><a href="#リモートリポジトリとローカルリポジトリを繋げる">リモートリポジトリとローカルリポジトリを繋げる</a></li>
+      </ol>
+    </li>
+    <li><a href="#netlify">Netlify</a>
+      <ol>
+        <li><a href="#netlify-にログインする">Netlify にログインする</a></li>
+        <li><a href="#設定をするんですが">設定をするんですが・・・</a></li>
+      </ol>
+    </li>
+    <li><a href="#ハマりどころ">ハマりどころ</a>
+      <ol>
+        <li><a href="#deploy-できないよー">Deploy できないよー</a>
+          <ol>
+            <li><a href="#バージョン指定">バージョン指定</a></li>
+            <li><a href="#hugo-の-extended版-には暫定対応">Hugo の extended版 には暫定対応</a></li>
+            <li><a href="#テーマの問題">テーマの問題</a></li>
+          </ol>
+        </li>
+        <li><a href="#その他">その他</a>
+          <ol>
+            <li><a href="#記事が表示されない">記事が表示されない</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/hugo-%E3%82%92-netlify-%E3%81%A7%E5%8B%95%E3%81%8B%E3%81%99%E3%82%88/">
+                
+                    <img src="/images/hugo-netlify-network_640.webp" loading="lazy" alt="Featured image of post Hugo を Netlify で動かすよ。" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/homepage/" >
+                Homepage
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/hugo-%E3%82%92-netlify-%E3%81%A7%E5%8B%95%E3%81%8B%E3%81%99%E3%82%88/">Hugo を Netlify で動かすよ。</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            Hugo を Netlify で動かしてみたときの記録です。
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">2019/03/07</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    読了時間: 6分
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="追記-2024-02-07">追記 2024-02-07
+</h2><p>もう5年も前の記事なんですね。時が経つのは早いです。</p>
+<p>Hugoのバージョンを上げたので、Netlifyで指定しているHugoのバージョンも変えとかなきゃと設定を見たんですが、項目が無くなっていました。<br>
+今ではバージョン指定しなくて良いのかもしれません。（試さず書いちゃうけど）</p>
+<p>今は設定のBuild &amp; deployにあるBuild Settingsが該当項目みたいですが、Build commandを「hugo」、Publish directoryを「public」にすれば良いみたい。<br>
+一応、ドキュメントがありましたので置いておきます。</p>
+<p><a class="link" href="https://docs.netlify.com/integrations/frameworks/#hugo"  target="_blank" rel="noopener"
+    >Framework integrations | Netlify Docs</a></p>
+<p>ということで、以下の記事は古いですよということを言いたかった。</p>
+<h2 id="hugo-を-netlify-で動かす">Hugo を Netlify で動かす
+</h2><p>ネットでは簡単に出来ると書いてありましたけど、けっこうハマったので、そのあたりも書こうと思います。</p>
+<p>結論としては、動きました。<br>
+<a class="link" href="https://k-kaz.netlify.com"  target="_blank" rel="noopener"
+    >k-kaz が好きなことをするサイト</a></p>
+<h2 id="まずは-hugo-をゲットする">まずは Hugo をゲットする
+</h2><h3 id="ダウンロード">ダウンロード
+</h3><p>公式サイトから、OSにあった最新版を落としてきてください。<br>
+Sass を使いたい場合は extended版 が必要になりますが、ここでは普通のタイプで良いです。<br>
+※理由は後ほど・・・</p>
+<p><a class="link" href="https://github.com/gohugoio/hugo/releases"  target="_blank" rel="noopener"
+    >Releases gohugoio/hugo</a></p>
+<h3 id="パスを通す">パスを通す
+</h3><p>解凍したら、どこに居ても、Hugo を実行できるようにするため、パスを通します。<br>
+やり方は・・・簡単なのでネットでご覧ください。<br>
+Windows の場合は、環境変数のところを弄ります。</p>
+<h2 id="ローカルサイトを用意する">ローカルサイトを用意する
+</h2><h3 id="サイトの雛形を展開する">サイトの雛形を展開する
+</h3><p>今後、作業をする場所に移動して、下記コマンドを実行します。</p>
+<p><code>hugo new site hoge-site</code></p>
+<p><code>hoge-site</code> というディレクトリができて、その中に必要なファイルが展開されます。</p>
+<h3 id="テーマの準備">テーマの準備
+</h3><p>テーマサイトから好きなテーマを選択します。<br>
+<a class="link" href="https://themes.gohugo.io"  target="_blank" rel="noopener"
+    >Hugo Themes</a></p>
+<p>テーマを選ぶと、その中にインストール（ダウンロード）の仕方が書かれていますので、それに従います。</p>
+<p>ちなみに私の選んだ <code>aether</code> で説明しますと、</p>
+<p><code>git clone https://github.com/josephhutch/aether.git themes/aether</code></p>
+<p>これを実行することでダウンロードしてくれます。</p>
+<p>テーマのダウンロードは、テーマフォルダに移動してからコマンドを実行するパターンが多いです。<br>
+ただ、このテーマはルートで実行するようにコマンド指定されていますのでご注意ください。<br>
+※<code>themes/aether</code> とダウンロード先を指定しているので、テーマ内で実行すると <code>themes/themes/aether</code> となり、重複してハマります。そして気付きにくい。</p>
+<h4 id="テーマ内の-git-を削除">テーマ内の .git を削除
+</h4><p>テーマの中に .git というフォルダがあります。<br>
+あとで面倒なので、削除します。</p>
+<h5 id="補足2019-03-10">補足［2019-03-10］
+</h5><p>他のテーマを使ったときに気付いたんですが、サブモジュール化すれば削除しなくて良いみたいです。<br>
+というか、そのほうが良いみたいですね。テーマのアップデートできるし。</p>
+<p>別テーマですけど、こんな感じです。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">git submodule add https://github.com/zwbetz-gh/cupper-hugo-theme.git themes/cupper-hugo-theme
+</span></span><span class="line"><span class="cl">git submodule update --remote --merge
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="設定ファイルの修正">設定ファイルの修正
+</h3><p>ルートにある <code>config.toml</code> が設定ファイルです。<br>
+エディタで開いて、最低限これらを書いてください。<br>
+baseURL はあとで、実際の公開アドレスに直せばよいです。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="nx">baseURL</span> <span class="p">=</span> <span class="s2">&#34;https://hoge/&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">languageCode</span> <span class="p">=</span> <span class="s2">&#34;ja&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">title</span> <span class="p">=</span> <span class="s2">&#34;k-kaz&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">theme</span> <span class="p">=</span> <span class="s2">&#34;aether&#34;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="サイトを確認する">サイトを確認する
+</h2><h3 id="まずはローカルで確認する">まずはローカルで確認する
+</h3><p>ローカルサイトのルートで下記を実行します。</p>
+<p><code>hugo server -D</code></p>
+<p>ブラウザで <code>localhost:1313</code> にアクセスすると、テーマと同じ画面（記事無し）が出てきます。<br>
+実行時にエラーになったり、ブラウザで表示しないときは何かが間違っています。</p>
+<h2 id="github-の準備">GitHub の準備
+</h2><h3 id="github-でリポジトリを作る">GitHub でリポジトリを作る
+</h3><p><a class="link" href="https://github.co.jp/"  target="_blank" rel="noopener"
+    >GitHub</a> にログインして、右上にある &ldquo;＋&rdquo; をクリックし、「New repository」を選びます。</p>
+<ul>
+<li>Repository name   ：好きな名前を付けてください。</li>
+<li>Description       ：好きに書いてください。（空欄でも可）</li>
+<li>Public/Private    ：お好きな方に。</li>
+<li>README            ：作らなくて良いです。</li>
+</ul>
+<p>GitHub Pages は、Public しか選べませんが、Netlify は Private も選べます。<br>
+私はせっかくなので、Private としました。</p>
+<h3 id="リモートリポジトリとローカルリポジトリを繋げる">リモートリポジトリとローカルリポジトリを繋げる
+</h3><p>リポジトリ作成後に出てくる画面で、2番目にあるものを実行しますが、ちょっと注意。<br>
+いきなり実行すると、リポジトリが無いですよと怒られます。<br>
+最初にこちらを実行してください。</p>
+<p><code>git init</code></p>
+<p>イニシャライズをします。<br>
+これをすると、.git というフォルダが作成されます。<br>
+※さっき、テーマで消したアレだ！</p>
+<p>その後、画面に出ていたコマンド＋アルファを実行します。</p>
+<p><code>git remote add origin https://github.com/hoge.git</code><br>
+<code>git add .</code><br>
+<code>git commit -m &quot;First Commit&quot;</code><br>
+<code>git push -u origin master</code></p>
+<p>尚、ssh接続が可能になっている場合は、</p>
+<p><code>git remote add origin git@github.com:hoge.git</code></p>
+<p>となります。</p>
+<p>これでリポジトリが繋がり、ローカルにあったファイルがすべて GitHub に反映されたと思います。（空フォルダは反映しないっぽい）</p>
+<h2 id="netlify">Netlify
+</h2><p>いよいよきました。</p>
+<h3 id="netlify-にログインする">Netlify にログインする
+</h3><p>新しくアカウントを作ってもよし、GitHub やその他のサービス経由にしてもよし。</p>
+<h3 id="設定をするんですが">設定をするんですが・・・
+</h3><p>GitHub と連携し、どのリポジトリを使うか設定します。<br>
+先程用意したリポジトリを選択しましょう。</p>
+<p>あとは自動的にビルドして公開できます・・・のはずが、ここから苦難の道のり（笑）</p>
+<p>あまりに苦戦したため、細かい手順は忘れました・・・。<br>
+でも、ローカルサーバーで動いていて、下記のハマりどころだけ注意すれば、大丈夫だと思います。</p>
+<p>私はそのハマりどころに、<strong>長い時間を盗まれました。</strong></p>
+<h2 id="ハマりどころ">ハマりどころ
+</h2><p>いくつかの問題が絡んでいたので、解決するのに苦労しました。<br>
+分かっちゃえばどうってことないんでしょうけどね。</p>
+<h3 id="deploy-できないよー">Deploy できないよー
+</h3><p>GitHub にアップしたのはソースの状態ですので、Netlify の中でビルドをして、ブラウザが認識できる形式にします。<br>
+でも、ここでエラーが何度も出ました。</p>
+<h4 id="バージョン指定">バージョン指定
+</h4><p>Hugo のどのバージョンでビルドするのか指定します。<br>
+流れの中でこの設定画面が出なかったので、未指定のままビルドをして、ずっとハマっていました。</p>
+<p>設定箇所は、上部メニューの「Settings」 → 左メニューの「Build &amp; deploy」 → 「Build environment variables」です。</p>
+<p>Key <code>HUGO_VERSION</code><br>
+Value <code>0.54.0</code></p>
+<p>と入れます。</p>
+<p>尚、普段は extended版 を使っているので、<code>0.54.0/extended</code> と指定しましたが、フリーズしました（笑）</p>
+<h4 id="hugo-の-extended版-には暫定対応">Hugo の extended版 には暫定対応
+</h4><p>ということです。<br>
+もしも、extended版 を使いたい場合は、回避方法が用意されているので、ネットで検索してみてください。<br>
+私は、そこまでして Sass に拘る必要がないので、素直に css でいくことにしました。</p>
+<h4 id="テーマの問題">テーマの問題
+</h4><p>テーマが Sass を使っているケースがあります。<br>
+気分を変えようと思って選択したテーマがそうでした・・・。<br>
+エラーログのところにやたらとテーマの名前が出るので確認したらビンゴ。</p>
+<p>尚、<code>aether</code> は css なので大丈夫です。</p>
+<p>ダウンロード前に分かれば良いんですけど、詳細ページに書かれていなければ落として確認するしかないのかな。<br>
+テーマ内に <code>assets</code> というフォルダがあると、その中に Sass の <code>.sass</code> や <code>.scss</code> があるかと思います。</p>
+<h3 id="その他">その他
+</h3><h4 id="記事が表示されない">記事が表示されない
+</h4><p>ローカルでは表示されているのにアップしたら記事だけ表示されないとアタフタ。<br>
+なんと下書きモードのままアップしていたのでした。<br>
+※ローカルでは、下書きも表示するよう <code>hugo server</code> に <code>-D</code> のオプションを付けていた。</p>
+<p>記事の上部にある <code>draft: true</code> を <code>draft: false</code> にして、もう一度アップしましょう。</p>
+<p>こんな基本的なミスをするなんて。<br>
+そして、基本的過ぎると、そこに気付くのが遅れますね（苦笑）</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/hugo/">Hugo</a>
+        
+            <a href="/tags/netlify/">Netlify</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">関連するコンテンツ</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/hugo-warning-.site.social/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/images/hugo-warning-sitesocial.webp" loading="lazy" data-key="" data-hash="/images/hugo-warning-sitesocial.webp"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Hugo Warning .Site.Social</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E3%83%AA%E3%82%B9%E3%83%88%E8%A1%A8%E7%A4%BA%E3%81%A8%E3%82%B7%E3%83%B3%E3%82%B0%E3%83%AB%E8%A1%A8%E7%A4%BA%E3%81%AB%E3%82%BF%E3%82%B0%E3%82%92%E4%BB%98%E3%81%91%E3%82%8B/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/images/tag_720.webp" loading="lazy" data-key="" data-hash="/images/tag_720.webp"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">リスト表示とシングル表示にタグを付ける</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/hugo%E3%81%AB%E3%82%B3%E3%83%A1%E3%83%B3%E3%83%88%E6%A9%9F%E8%83%BD%E3%82%92%E4%BB%98%E3%81%91%E3%82%8Bgiscus%E7%B7%A8/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/images/speech-bubbles_640.webp" loading="lazy" data-key="" data-hash="/images/speech-bubbles_640.webp"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Hugoにコメント機能を付ける（giscus編）</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/hugo-update-v0.122.0/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/images/hugo-logo-wide.svg" loading="lazy" data-key="" data-hash="/images/hugo-logo-wide.svg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Hugo Update V0.122.0</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E3%81%95%E3%81%8F%E3%82%89%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%8D%E3%83%83%E3%83%88%E3%81%A7hugo%E3%82%92%E4%BD%BF%E3%81%84%E3%81%9F%E3%81%84/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/images/hugo-sakura.webp" loading="lazy" data-key="" data-hash="/images/hugo-sakura.webp"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">さくらインターネットでHugoを使いたい</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "hugo-theme-stack" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (typeof DISQUS == 'object') {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2024 k-kaz
+    </section>
+    
+    <section class="powerby">
+        <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> で構築されています。 <br />
+        テーマ <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.26.0">Stack</a></b> は <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> によって設計されています。
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

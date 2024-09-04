@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="テーマ Cupper のカスタマイズをこちらにまとめます。">
+<title>テーマ Cupper のカスタマイズ</title>
+
+<link rel='canonical' href='https://k-kaz-git.github.io/p/%E3%83%86%E3%83%BC%E3%83%9E-cupper-%E3%81%AE%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA/'>
+
+<link rel="stylesheet" href="/scss/style.min.43289f33a995fb4bc83e665a1a22504b7eecefd3dcf3f9ecc83ed51746ad75d3.css"><meta property='og:title' content="テーマ Cupper のカスタマイズ">
+<meta property='og:description' content="テーマ Cupper のカスタマイズをこちらにまとめます。">
+<meta property='og:url' content='https://k-kaz-git.github.io/p/%E3%83%86%E3%83%BC%E3%83%9E-cupper-%E3%81%AE%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA/'>
+<meta property='og:site_name' content='k-kaz が Hugo で遊ぶサイト'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='hugo' /><meta property='article:tag' content='theme' /><meta property='article:tag' content='cupper' /><meta property='article:published_time' content='2019-03-12T16:02:29&#43;09:00'/><meta property='article:modified_time' content='2019-03-12T16:02:29&#43;09:00'/><meta property='og:image' content='https://k-kaz-git.github.io/images/cupper-org-logo.png' />
+<meta name="twitter:title" content="テーマ Cupper のカスタマイズ">
+<meta name="twitter:description" content="テーマ Cupper のカスタマイズをこちらにまとめます。"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://k-kaz-git.github.io/images/cupper-org-logo.png' />
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+  
+
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="メニューを開く・閉じる">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/images/android-chrome-192x192_hu5450162830773684134.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">k-kaz が Hugo で遊ぶサイト</a></h1>
+            <h2 class="site-description">Hugo関連の記事ですが、初心者なので参考になりませんよ。</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href=''
+                        target="_blank"
+                        
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>ダークモード</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目次</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#cupper-のカスタマイズをこちらにまとめます">Cupper のカスタマイズをこちらにまとめます。</a>
+      <ol>
+        <li><a href="#全然スタイルが適用されないんですけど泣">全然スタイルが適用されないんですけど（泣）</a></li>
+      </ol>
+    </li>
+    <li><a href="#標準機能内">標準機能内</a>
+      <ol>
+        <li><a href="#ロゴ画像を差し替える">ロゴ画像を差し替える</a></li>
+      </ol>
+    </li>
+    <li><a href="#標準機能外">標準機能外</a>
+      <ol>
+        <li><a href="#h2-に付くリンクアイコンを消す">h2 に付くリンクアイコンを消す</a></li>
+        <li><a href="#カテゴリーを追加する">カテゴリーを追加する</a>
+          <ol>
+            <li><a href="#設定ファイルに追加">設定ファイルに追加</a></li>
+            <li><a href="#メニューに追加">メニューに追加</a></li>
+            <li><a href="#記事のタイトル下に追加">記事のタイトル下に追加</a></li>
+          </ol>
+        </li>
+        <li><a href="#更新日を追加する">更新日を追加する</a>
+          <ol>
+            <li><a href="#設定の有効化">設定の有効化</a></li>
+            <li><a href="#記事一覧に追加">記事一覧に追加</a></li>
+            <li><a href="#記事のタイトル下に追加-1">記事のタイトル下に追加</a></li>
+          </ol>
+        </li>
+        <li><a href="#記事の概要を表示する">記事の概要を表示する</a>
+          <ol>
+            <li><a href="#記事に概要を書く下準備">記事に概要を書く（下準備）</a></li>
+            <li><a href="#記事一覧に概要を追加">記事一覧に概要を追加</a></li>
+          </ol>
+        </li>
+        <li><a href="#トップページを記事一覧ページにする2019-03-19">トップページを記事一覧ページにする［2019-03-19］</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/%E3%83%86%E3%83%BC%E3%83%9E-cupper-%E3%81%AE%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA/">
+                
+                    <img src="/images/cupper-org-logo.png" loading="lazy" alt="Featured image of post テーマ Cupper のカスタマイズ" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/homepage/" >
+                Homepage
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/%E3%83%86%E3%83%BC%E3%83%9E-cupper-%E3%81%AE%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA/">テーマ Cupper のカスタマイズ</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            テーマ Cupper のカスタマイズをこちらにまとめます。
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">2019/03/12</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    読了時間: 4分
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="cupper-のカスタマイズをこちらにまとめます">Cupper のカスタマイズをこちらにまとめます。
+</h2><h3 id="全然スタイルが適用されないんですけど泣">全然スタイルが適用されないんですけど（泣）
+</h3><p>aether は、簡単にスタイルの変更が出来たんですけど、Cupper は全然適用されない。<br>
+何でだろうと調べていたら、テーマによっては <code>config.toml</code> に手を入れなければいけないものがあることを知ったおじさんです。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">params</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">customCSS</span> <span class="p">=</span> <span class="p">[</span><span class="s2">&#34;/css/hoge.css&#34;</span><span class="p">]</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>こうすることで、<code>static/css/hoge.css</code> が元のスタイルシートの上に被さるようになるんだって。<br>
+もちろん <code>&lt;head&gt;&lt;/head&gt;</code> に読み込み用の追記が必要です。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text/css&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;/css/hoge.css&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>スタイルを弄る前段階で躓きましたよ・・・。</p>
+<h2 id="標準機能内">標準機能内
+</h2><h3 id="ロゴ画像を差し替える">ロゴ画像を差し替える
+</h3><p>SVG形式のロゴ画像が必要になります。<br>
+私は <a class="link" href="https://inkscape.org/ja/"  target="_blank" rel="noopener"
+    >Inkscape</a> で作りました。</p>
+<img src="/images/cupper-custom-logo.svg" alt="cupper のロゴ画像" style="width:auto;">
+<p>logo.svg というファイル名で保存して、下記に保存すると適用されます。</p>
+<p><code>static/images/logo.svg</code></p>
+<h2 id="標準機能外">標準機能外
+</h2><h3 id="h2-に付くリンクアイコンを消す">h2 に付くリンクアイコンを消す
+</h3><p>before: <img src="/images/cupper-custom-h2-icon-before.webp" alt="h2アイコンにリンクが付いちゃう" style="width:auto;" >
+after: <img src="/images/cupper-custom-h2-icon-after.webp" alt="h2アイコンにリンクが付いちゃう" style="width:auto;" ></p>
+<p>WordPress では、<a class="link" href="https://fontawesome.com"  target="_blank" rel="noopener"
+    >Font Awesome</a>  を使って、スタイルシートで設定していたので、これも同じかと思いきや、完全に外していました（笑）</p>
+<p>画像ファイルで指定していましたので、そのファイルを修正します。</p>
+<p><code>themes\cupper-hugo-theme\layouts\partials\svg.html</code></p>
+<p>↓ にコピーします。</p>
+<p><code>layouts\partials\svg.html</code></p>
+<p>この中にある <code>&lt;symbol id=&quot;link&quot;&gt; ～ &lt;/symbol&gt;</code> というのが、<code>h2</code> のところで使われているリンクアイコンなので、該当行を丸ごと削除すれば、きれいに消えます。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">symbol</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;link&#34;</span> <span class="na">viewBox</span><span class="o">=</span><span class="s">&#34;0 0 50 50&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">g</span> <span class="na">transform</span><span class="o">=</span><span class="s">&#34;translate(0 -1002.4)&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">   <span class="p">&lt;</span><span class="nt">g</span> <span class="na">transform</span><span class="o">=</span><span class="s">&#34;matrix(.095670 0 0 .095670 2.3233 1004.9)&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">g</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">     <span class="p">&lt;</span><span class="nt">path</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;stroke-width:0;fill:currentColor&#34;</span> <span class="na">d</span><span class="o">=</span><span class="s">&#34;m452.84 192.9-128.65 128.65c-35.535 35.54-93.108 35.54-128.65 0l-42.881-42.886 42.881-42.876 42.884 42.876c11.845 11.822 31.064 11.846 42.886 0l128.64-128.64c11.816-11.831 11.816-31.066 0-42.9l-42.881-42.881c-11.822-11.814-31.064-11.814-42.887 0l-45.928 45.936c-21.292-12.531-45.491-17.905-69.449-16.291l72.501-72.526c35.535-35.521 93.136-35.521 128.64 0l42.886 42.881c35.535 35.523 35.535 93.141-.001 128.66zm-254.28 168.51-45.903 45.9c-11.845 11.846-31.064 11.817-42.881 0l-42.884-42.881c-11.845-11.821-11.845-31.041 0-42.886l128.65-128.65c11.819-11.814 31.069-11.814 42.884 0l42.886 42.886 42.876-42.886-42.876-42.881c-35.54-35.521-93.113-35.521-128.65 0l-128.65 128.64c-35.538 35.545-35.538 93.146 0 128.65l42.883 42.882c35.51 35.54 93.11 35.54 128.65 0l72.496-72.499c-23.956 1.597-48.092-3.784-69.474-16.283z&#34;</span><span class="p">/&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">g</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">   <span class="p">&lt;/</span><span class="nt">g</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">g</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">symbol</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="カテゴリーを追加する">カテゴリーを追加する
+</h3><p>本テーマでは、タグは自動で出てきますが、カテゴリーは出てきません。<br>
+必要があれば下記の設定をしていきます。</p>
+<h4 id="設定ファイルに追加">設定ファイルに追加
+</h4><p><code>config.toml</code> に <code>tag</code> の行があるので、その前後に <code>category</code> を入れます。<br>
+右側に入るのは複数形になるので注意！！</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">taxonomies</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">tag</span> <span class="p">=</span> <span class="s2">&#34;tags&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">category</span> <span class="p">=</span> <span class="s2">&#34;categories&#34;</span>   <span class="c"># ここに追加しました</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="メニューに追加">メニューに追加
+</h4><p>before: <img src="/images/cupper-custom-menu-before.webp" alt="メニューにカテゴリーが無い" style="width:auto;" ></p>
+<p>after: <img src="/images/cupper-custom-menu-after.webp" alt="メニューにカテゴリーを追加" style="width:auto;" ></p>
+<p>これも設定ファイル <code>config.toml</code> の中です。<br>
+<code>[menu]</code> というセクションがありますので、表示したい位置に入れてあげます。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">menu</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="err">＜中略＞</span>
+</span></span><span class="line"><span class="cl">  <span class="p">[[</span><span class="nx">menu</span><span class="p">.</span><span class="nx">nav</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;Categories&#34;</span>   <span class="c"># 表示される名称</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">url</span> <span class="p">=</span> <span class="s2">&#34;/categories/&#34;</span>    <span class="c"># 参照するアドレス</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">weight</span> <span class="p">=</span> <span class="mi">3</span>                  <span class="c"># 表示する順番？</span>
+</span></span><span class="line"><span class="cl">  <span class="err">＜中略＞</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>ついでに about も要らないので消しました。</p>
+<h4 id="記事のタイトル下に追加">記事のタイトル下に追加
+</h4><p>before: <img src="/images/cupper-custom-post-title-before.webp" alt="記事にカテゴリーが無い" style="width:auto;" ></p>
+<p>after: <img src="/images/cupper-custom-post-title-after.webp" alt="記事にカテゴリーを追加" style="width:auto;" ></p>
+<p>記事を表示するテンプレートを修正します。</p>
+<p><code>themes\cupper-hugo-theme\layouts\post\single.html</code></p>
+<p>↓ にコピーします。</p>
+<p><code>layouts\post\single.html</code></p>
+<p>ファイルを開くと、<code>{{ with .Params.tags }} ～ {{ end }}</code> という、タグ情報を表示する部分があります。<br>
+丸ごとコピーして、<code>tags</code> を <code>categories</code> に変更して貼り付ければおしまい。<br>
+スタイルは同じで良いかなと思ったので、手を抜いてそのままにしました。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;date&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  {{ $dateFormat := $.Site.Params.dateFormat | default &#34;2006-01-02&#34; }}
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">strong</span> <span class="na">aria-hidden</span><span class="o">=</span><span class="s">&#34;true&#34;</span><span class="p">&gt;</span>Post: <span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span>{{ .PublishDate.Format $dateFormat }}
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">&lt;!-- ここから下を追加 --&gt;</span>
+</span></span><span class="line"><span class="cl">{{ with .Params.categories }}
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;tags&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">strong</span> <span class="na">aria-hidden</span><span class="o">=</span><span class="s">&#34;true&#34;</span><span class="p">&gt;</span>Categories: <span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">ul</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&#34;tags&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    {{ range . }}
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        {{ $href := print (&#34;categories/&#34; | absLangURL) (. | urlize) &#34;/&#34; }}
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;{{ $href }}&#34;</span><span class="p">&gt;</span>{{ . }}<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    {{ end }}
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">{{ end }}
+</span></span><span class="line"><span class="cl"><span class="c">&lt;!-- ここまで --&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="更新日を追加する">更新日を追加する
+</h3><p>このテーマも更新日がないので追加します。</p>
+<h4 id="設定の有効化">設定の有効化
+</h4><p><code>config.toml</code> に以下を追加します。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="nx">enableGitInfo</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="記事一覧に追加">記事一覧に追加
+</h4><p>before: <img src="/images/cupper-custom-list-before.webp" alt="記事一覧にカテゴリーが無い" style="width:auto;" ></p>
+<p>after: <img src="/images/cupper-custom-list-after.webp" alt="記事一覧にカテゴリーを追加" style="width:auto;" ></p>
+<p>記事一覧を表示するテンプレートを修正します。</p>
+<p><code>themes\cupper-hugo-theme\layouts\_default\list.html</code></p>
+<p>↓ にコピーします。</p>
+<p><code>layouts\_default\list.html</code></p>
+<p>公開日の下に <code>/ Up: {{ .Lastmod.Format &quot;2006-01-02&quot; }}</code> を追加します。<br>
+日付のフォーマットも自分好みに変えておきました。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">{{ $dateFormat := $.Site.Params.dateFormat | default &#34;2006-01-02&#34; }}
+</span></span><span class="line"><span class="cl">Post: {{ .PublishDate.Format $dateFormat }}
+</span></span><span class="line"><span class="cl">/ Up: {{ .Lastmod.Format &#34;2006-01-02&#34; }}    <span class="c">&lt;!-- ここに追加 --&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="記事のタイトル下に追加-1">記事のタイトル下に追加
+</h4><p><code>layouts\post\single.html</code> を修正しますが、上とまったく同じなので省略。</p>
+<h3 id="記事の概要を表示する">記事の概要を表示する
+</h3><p>日付の下に書いてある文章が概要です。</p>
+<p>after: <img src="/images/cupper-custom-list-after.webp" alt="記事一覧にカテゴリーを追加" style="width:auto;" ></p>
+<h4 id="記事に概要を書く下準備">記事に概要を書く（下準備）
+</h4><p>記事 <code>hoge.md</code> に以下を追加します。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-md" data-lang="md"><span class="line"><span class="cl">description: &#34;ここに記事の概要を書きます。&#34;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>テンプレート（例えば <code>archetypes\post.md</code> ）に予め <code>description: &quot;&quot;</code> を追加しておくと、毎回書かなくて良いので楽です。</p>
+<h4 id="記事一覧に概要を追加">記事一覧に概要を追加
+</h4><p><code>layouts\_default\list.html</code></p>
+<p>表示したい場所に下記を追加します。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">{{ if (isset .Params &#34;description&#34;) }}{{ index .Params &#34;description&#34; }}{{ else }}{{ .Summary }}{{ end }}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="トップページを記事一覧ページにする2019-03-19">トップページを記事一覧ページにする［2019-03-19］
+</h3><p>テーマ内にある <code>_index.html</code> を削除すると、次に見に行くのが <code>list.html</code> になるので、それで完了・・・のはずが、うまくいかず。<br>
+最終的には <strong>姑息な手段</strong> で、<code>layouts\_default\list.html</code> をコピーして <code>layouts\_index.html</code> としました。<br>
+たぶん、どっか見落としているんだろうけど、とりあえず出来た（笑）</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/hugo/">Hugo</a>
+        
+            <a href="/tags/theme/">Theme</a>
+        
+            <a href="/tags/cupper/">Cupper</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">関連するコンテンツ</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/hugo-%E3%81%AE%E3%83%86%E3%83%BC%E3%83%9E%E3%82%92%E4%BD%9C%E3%81%A3%E3%81%9F%E3%82%88/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/images/horse-colorful_640.webp" loading="lazy" data-key="" data-hash="/images/horse-colorful_640.webp"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Hugo のテーマを作ったよ。</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/hugo-warning-.site.social/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/images/hugo-warning-sitesocial.webp" loading="lazy" data-key="" data-hash="/images/hugo-warning-sitesocial.webp"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Hugo Warning .Site.Social</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E3%83%AA%E3%82%B9%E3%83%88%E8%A1%A8%E7%A4%BA%E3%81%A8%E3%82%B7%E3%83%B3%E3%82%B0%E3%83%AB%E8%A1%A8%E7%A4%BA%E3%81%AB%E3%82%BF%E3%82%B0%E3%82%92%E4%BB%98%E3%81%91%E3%82%8B/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/images/tag_720.webp" loading="lazy" data-key="" data-hash="/images/tag_720.webp"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">リスト表示とシングル表示にタグを付ける</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/hugo%E3%81%AB%E3%82%B3%E3%83%A1%E3%83%B3%E3%83%88%E6%A9%9F%E8%83%BD%E3%82%92%E4%BB%98%E3%81%91%E3%82%8Bgiscus%E7%B7%A8/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/images/speech-bubbles_640.webp" loading="lazy" data-key="" data-hash="/images/speech-bubbles_640.webp"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Hugoにコメント機能を付ける（giscus編）</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/hugo-update-v0.122.0/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/images/hugo-logo-wide.svg" loading="lazy" data-key="" data-hash="/images/hugo-logo-wide.svg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Hugo Update V0.122.0</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "hugo-theme-stack" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (typeof DISQUS == 'object') {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2024 k-kaz
+    </section>
+    
+    <section class="powerby">
+        <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> で構築されています。 <br />
+        テーマ <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.26.0">Stack</a></b> は <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> によって設計されています。
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

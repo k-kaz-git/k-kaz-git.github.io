@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Pages on k-kaz が Hugo で遊ぶサイト</title>
+        <link>https://k-kaz-git.github.io/page/</link>
+        <description>Recent content in Pages on k-kaz が Hugo で遊ぶサイト</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>ja</language>
+        <copyright>k-kaz</copyright>
+        <lastBuildDate>Tue, 03 Sep 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://k-kaz-git.github.io/page/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>About</title>
+        <link>https://k-kaz-git.github.io/about/</link>
+        <pubDate>Tue, 03 Sep 2024 00:00:00 +0000</pubDate>
+        
+        <guid>https://k-kaz-git.github.io/about/</guid>
+        <description>&lt;h2 id=&#34;自分用の備忘録&#34;&gt;自分用の備忘録
+&lt;/h2&gt;&lt;p&gt;歳のせいか、少し前に自身で行ったことをよく忘れます。&lt;br&gt;
+あとで忘れるであろうHugoに関連する内容をメモとして残します。&lt;/p&gt;
+&lt;p&gt;あまり人の役に立つようなものではありません。&lt;br&gt;
+間違った解釈をしていることも多々ありますので、参考にしようかなと訪問された方はご注意ください。&lt;/p&gt;
+&lt;h2 id=&#34;テーマ-stack&#34;&gt;テーマ stack
+&lt;/h2&gt;&lt;p&gt;以前のテーマ「aether」が更新されなくなったため、2024/09/03より利用開始しました。&lt;br&gt;
+まだ移行中なのでサイト内でおかしなところがあるかもしれません。&lt;br&gt;
+ご容赦ください。&lt;/p&gt;
+&lt;h3 id=&#34;hugo-theme-stack&#34;&gt;hugo-theme-stack
+&lt;/h3&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/CaiJimmy/hugo-theme-stack/tree/master&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;CaiJimmy/hugo-theme-stack: Card-style Hugo theme designed for bloggers&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Archives</title>
+        <link>https://k-kaz-git.github.io/archives/</link>
+        <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
+        
+        <guid>https://k-kaz-git.github.io/archives/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Links</title>
+        <link>https://k-kaz-git.github.io/links/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://k-kaz-git.github.io/links/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Search</title>
+        <link>https://k-kaz-git.github.io/search/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://k-kaz-git.github.io/search/</guid>
+        <description></description>
+        </item>
+        
+    </channel>
+</rss>

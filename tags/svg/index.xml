@@ -1,21 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Svg - k-kaz が Hugo で遊ぶサイト</title>
-    <link>https://k-kaz-git.github.io/tags/svg/</link>
-    <description>Recent content in Svg on k-kaz が Hugo で遊ぶサイト</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>ja</language>
-    <lastBuildDate>Tue, 23 Nov 2021 19:07:07 +0900</lastBuildDate>
-    
-        <atom:link href="https://k-kaz-git.github.io/tags/svg/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>SVG、それは魔法の画像形式</title>
-      <link>https://k-kaz-git.github.io/post/svg/</link>
-      <pubDate>Tue, 23 Nov 2021 19:07:07 +0900</pubDate>
-      
-      <guid>https://k-kaz-git.github.io/post/svg/</guid>
-      <description>便利な画像形式です。</description>
-    </item>
-  </channel>
+    <channel>
+        <title>Svg on k-kaz が Hugo で遊ぶサイト</title>
+        <link>https://k-kaz-git.github.io/tags/svg/</link>
+        <description>Recent content in Svg on k-kaz が Hugo で遊ぶサイト</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>ja</language>
+        <copyright>k-kaz</copyright>
+        <lastBuildDate>Tue, 23 Nov 2021 19:07:07 +0900</lastBuildDate><atom:link href="https://k-kaz-git.github.io/tags/svg/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>SVG、それは魔法の画像形式</title>
+        <link>https://k-kaz-git.github.io/p/svg%E3%81%9D%E3%82%8C%E3%81%AF%E9%AD%94%E6%B3%95%E3%81%AE%E7%94%BB%E5%83%8F%E5%BD%A2%E5%BC%8F/</link>
+        <pubDate>Tue, 23 Nov 2021 19:07:07 +0900</pubDate>
+        
+        <guid>https://k-kaz-git.github.io/p/svg%E3%81%9D%E3%82%8C%E3%81%AF%E9%AD%94%E6%B3%95%E3%81%AE%E7%94%BB%E5%83%8F%E5%BD%A2%E5%BC%8F/</guid>
+        <description>&lt;img src="https://k-kaz-git.github.io/images/k-kaz-black-w.svg" alt="Featured image of post SVG、それは魔法の画像形式" /&gt;&lt;h2 id=&#34;こんなに便利な物だったとは&#34;&gt;こんなに便利な物だったとは！
+&lt;/h2&gt;&lt;p&gt;SVGって、昔からある画像形式なんで、存在はもちろん知っていたんですけど、使うことは無かったんですよね。&lt;br&gt;
+写真系ならJPEG使うし、透過させるならPNG使うし。&lt;br&gt;
+ここ数年だと、より高圧縮なWebP（相手が対応していれば）を使ったりしています。&lt;/p&gt;
+&lt;p&gt;ちょっと前に、&lt;a class=&#34;link&#34; href=&#34;https://k-kaz.netlify.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;k-kaz が好きなことを書くサイト&lt;/a&gt;で、Hugoのロゴ画像を使う機会がありました。&lt;br&gt;
+勝手にページの読み込み速度に拘っているので、画像サイズを適切なものにしようと思ったんです。&lt;br&gt;
+そのとき、公式ロゴがsvg形式だったことを知り、なんでsvgなんだろうと思ったわけです。&lt;/p&gt;
+&lt;h2 id=&#34;調べて驚いた&#34;&gt;調べて驚いた！
+&lt;/h2&gt;&lt;p&gt;SVGとは「Scalable Vector Graphics」の略で、「大きさを変えられるベクター画像」ということらしい。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;なんてこった！&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;HTMLの中でサイズ指定すれば、勝手にその大きさに画像を変えてくれるなんて、夢見たいじゃない。&lt;br&gt;
+しかもベクター画像だから、拡大してぼやけるとか、縮小して潰れるみたいなことがなく、美しいままなのよ。&lt;br&gt;
+&lt;strong&gt;興奮して、ちょっとオネエになった。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;JPEGやPNGのラスター画像だと、同じ画像でも、必要に応じて複数のサイズを用意することがあります。&lt;br&gt;
+それこそ、パソコン用だ、モバイル用だという、レスポンシブ対応です。&lt;/p&gt;
+&lt;h2 id=&#34;私は自由だ&#34;&gt;私は自由だ！
+&lt;/h2&gt;&lt;p&gt;ということで、今後は積極的にSVGを活用していこうと思います。&lt;br&gt;
+写真系は弱いようなので、こちらはWebP（またはJPEG)で。&lt;/p&gt;
+&lt;h3 id=&#34;画像形式なんだけどテキスト形式のファイル&#34;&gt;画像形式なんだけど、テキスト形式のファイル
+&lt;/h3&gt;&lt;p&gt;ちょっと補足。&lt;br&gt;
+SVGのファイルは、画像形式でありながらも、メモ帳とかで開けるテキストファイルです。&lt;br&gt;
+座標とか、色とかが文字列で表されているので、メモ帳とかでファイルを開いて、色を書き換えたりできます。&lt;br&gt;
+色を変えるだけなら、専用のアプリを使う必要がありません。楽ちん。&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
 </rss>

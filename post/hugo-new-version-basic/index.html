@@ -1,218 +1,489 @@
 <!DOCTYPE html>
-<html lang="ja" dir="ltr">
-  <head>
-  <meta charset="utf-8" />
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Hugoの最新版を入れてみよう &middot; k-kaz が Hugo で遊ぶサイト</title>
-  
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-K8B8MR2Z');</script>
-  
-  <meta name="description" content="基本編" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
-  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-  <link href="https://k-kaz-git.github.io/css/katex.css" rel="stylesheet">
-  
-  
-  
-  
-  <link href="https://k-kaz-git.github.io/css/concated.min.css" rel="stylesheet">
+<html lang="ja-JP" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="基本編">
+<title>Hugoの最新版を入れてみよう</title>
 
-  
-  <link rel="stylesheet" href="https://k-kaz-git.github.io/sass/main.fcdea0c4becd73f2e3b2312b85bcd7ba626d441c1cde1e1b8046a6afcc4e22b8.css">
+<link rel='canonical' href='http://localhost:1313/post/hugo-new-version-basic/'>
 
-  
+<link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="Hugoの最新版を入れてみよう">
+<meta property='og:description' content="基本編">
+<meta property='og:url' content='http://localhost:1313/post/hugo-new-version-basic/'>
+<meta property='og:site_name' content='k-kaz が Hugo で遊ぶサイト'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='hugo' /><meta property='article:published_time' content='2023-04-17T12:58:50&#43;09:00'/><meta property='article:modified_time' content='2023-04-17T12:58:50&#43;09:00'/><meta property='og:image' content='http://localhost:1313/images/hugo-logo-wide.svg' />
+<meta name="twitter:title" content="Hugoの最新版を入れてみよう">
+<meta name="twitter:description" content="基本編"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='http://localhost:1313/images/hugo-logo-wide.svg' />
   
 
 
-  
-</head>
-  <body class="single-body">
-      
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8B8MR2Z"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  
-<nav class="nav-bar side-padding">
-  <h1 class="nav-header"><a href="https://k-kaz-git.github.io/" class="nav-text">k-kaz が Hugo で遊ぶサイト</a></h1>
-  <div class="hamburger-menu">
-    <button onclick="hamburgerMenuPressed.call(this)" aria-haspopup="true" aria-expanded="false" aria-controls="menu" aria-label="Menu">
-      <span></span>
-      <span></span>
-    </button>
-    <ul id="menu" class="hamburger-menu-overlay">
-      <li><a href="https://k-kaz-git.github.io/" class="hamburger-menu-overlay-link">Home</a></li>
-      <li class="navi-menu">- Categories -</li>
-      <li style="font-size: 0.7em;"><a href="https://k-kaz-git.github.io/categories/coding" class="hamburger-menu-overlay-link">Coding</a></li><li style="font-size: 0.7em;"><a href="https://k-kaz-git.github.io/categories/homepage" class="hamburger-menu-overlay-link">Homepage</a></li><li style="font-size: 0.7em;"><a href="https://k-kaz-git.github.io/categories/linux" class="hamburger-menu-overlay-link">Linux</a></li>
-      <li class="navi-menu">- Tags -</li>
-      <li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/aether" class="hamburger-menu-overlay-link">Aether</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/categories" class="hamburger-menu-overlay-link">Categories</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/css" class="hamburger-menu-overlay-link">Css</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/cupper" class="hamburger-menu-overlay-link">Cupper</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/favicon" class="hamburger-menu-overlay-link">Favicon</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/github" class="hamburger-menu-overlay-link">Github</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/github-pages" class="hamburger-menu-overlay-link">Github pages</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/hugo" class="hamburger-menu-overlay-link">Hugo</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/markdown" class="hamburger-menu-overlay-link">Markdown</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/mermaid" class="hamburger-menu-overlay-link">Mermaid</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/mozc" class="hamburger-menu-overlay-link">Mozc</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/netlify" class="hamburger-menu-overlay-link">Netlify</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/pagermod" class="hamburger-menu-overlay-link">Pagermod</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/saas" class="hamburger-menu-overlay-link">Saas</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/sass" class="hamburger-menu-overlay-link">Sass</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/shortcodes" class="hamburger-menu-overlay-link">Shortcodes</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/snippet" class="hamburger-menu-overlay-link">Snippet</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/stylesheet" class="hamburger-menu-overlay-link">Stylesheet</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/svg" class="hamburger-menu-overlay-link">Svg</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/tableofcontents" class="hamburger-menu-overlay-link">Tableofcontents</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/tags" class="hamburger-menu-overlay-link">Tags</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/theme" class="hamburger-menu-overlay-link">Theme</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/vscode" class="hamburger-menu-overlay-link">Vscode</a></li>
-    </ul>
-  </div>
-</nav>
-    <main class="content side-text-padding">
-      <article class="post ">
-        <header class="post-header">
-        	<h1 class="post-title">Hugoの最新版を入れてみよう</h1>
-          <p class="post-date">
-            Posted <time datetime="2023-04-17">2023-04-17</time>
-             / Update 2023-04-17</p>
-             <div class="card-subtext muted-text li-line">
-               <a class="cat" href="/categories/linux">linux</a>
-               <a class="tag" href="/tags/hugo">#hugo</a> 
-             </div>
-        </header>
-        
-        <picture class="post-figure">
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
             
-            <source srcset="https://k-kaz-git.github.io/images/hugo-logo-wide.svg">
-          <img src="https://k-kaz-git.github.io/images/hugo-logo-wide.svg" alt="Hugoのイメージ画像">
-        </picture>
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column compact"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="メニューを開く・閉じる">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
         
-        <aside>
-          <h2>目次</h2>
-            <nav id="TableOfContents">
-  <ul>
-    <li><a href="#共通">共通</a>
-      <ul>
-        <li><a href="#使用中のバージョンを確認">使用中のバージョンを確認</a></li>
-        <li><a href="#最新版のダウンロード">最新版のダウンロード</a></li>
-      </ul>
-    </li>
-    <li><a href="#windows編">Windows編</a>
-      <ul>
-        <li><a href="#ダウンロードするファイル">ダウンロードするファイル</a></li>
-        <li><a href="#ハッシュ値比較">ハッシュ値比較</a></li>
-        <li><a href="#解凍">解凍</a></li>
-        <li><a href="#インストール">インストール</a></li>
-        <li><a href="#確認1-バージョン">確認1 バージョン</a></li>
-        <li><a href="#確認2-hugo-sever">確認2 Hugo Sever</a></li>
-      </ul>
-    </li>
-    <li><a href="#linux編">Linux編</a></li>
-    <li><a href="#トラブルシューティング">トラブルシューティング</a>
-      <ul>
-        <li><a href="#参考になれば">参考になれば・・・</a></li>
-        <li><a href="#旧バージョンの入手方法">旧バージョンの入手方法</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
-        </aside>
-        <h2 id="共通">共通</h2>
-<h3 id="使用中のバージョンを確認">使用中のバージョンを確認</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>hugo version
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu13739649187745961479.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">k-kaz が Hugo で遊ぶサイト</a></h1>
+            <h2 class="site-description"></h2>
+        </div>
+    </header><ol class="menu" id="main-menu">
+        
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>ダークモード</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/post/hugo-new-version-basic/">
+                
+                    <img src="/images/hugo-logo-wide.svg" loading="lazy" alt="Featured image of post Hugoの最新版を入れてみよう" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/linux/" >
+                Linux
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/post/hugo-new-version-basic/">Hugoの最新版を入れてみよう</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            基本編
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Apr 17, 2023</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    読了時間: 1分
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="共通">共通
+</h2><h3 id="使用中のバージョンを確認">使用中のバージョンを確認
+</h3><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>hugo version
 </span></span></code></pre></div><p>これを実行すると、現在使用しているバージョンが表示されます。<br>
 ちなみに先程実行したところ、</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>hugo v0.80.0
 </span></span></code></pre></div><p>と出ました。</p>
-<h3 id="最新版のダウンロード">最新版のダウンロード</h3>
-<p>Hugoのリリース一覧はこちら。<br>
-<a href="https://github.com/gohugoio/hugo/releases" target="_blank">Releases · gohugoio/hugo</a>
-</p>
+<h3 id="最新版のダウンロード">最新版のダウンロード
+</h3><p>Hugoのリリース一覧はこちら。<br>
+<a class="link" href="https://github.com/gohugoio/hugo/releases"  target="_blank" rel="noopener"
+    >Releases · gohugoio/hugo</a></p>
 <p>1番上に最新版が出ていますので、この中の「Assets」から欲しいものをダウンロードします。<br>
 表示されていない場合は「Show all &hellip;」を選択すると、隠れているものが出てきます。</p>
-<h2 id="windows編">Windows編</h2>
-<h3 id="ダウンロードするファイル">ダウンロードするファイル</h3>
-<p>私は拡張版を使っているので<code>hugo_extended_バージョン_windows-amd64.zip</code>を落とします。<br>
+<h2 id="windows編">Windows編
+</h2><h3 id="ダウンロードするファイル">ダウンロードするファイル
+</h3><p>私は拡張版を使っているので<code>hugo_extended_バージョン_windows-amd64.zip</code>を落とします。<br>
 通常版の場合は、「extended」が付かないものを落としてください。</p>
-<h3 id="ハッシュ値比較">ハッシュ値比較</h3>
-<p>「Assets」の中に<code>hugo_0.111.3_checksums.txt</code>というファイルがあり、この中にハッシュ値が記載されています。<br>
+<h3 id="ハッシュ値比較">ハッシュ値比較
+</h3><p>「Assets」の中に<code>hugo_0.111.3_checksums.txt</code>というファイルがあり、この中にハッシュ値が記載されています。<br>
 ダウンロードしたファイルと、上記ファイル内のハッシュ値が同一か確認しましょう。</p>
-<h3 id="解凍">解凍</h3>
-<p>zipファイルを解凍すると、3つのファイルが出来上がります。</p>
+<h3 id="解凍">解凍
+</h3><p>zipファイルを解凍すると、3つのファイルが出来上がります。</p>
 <ol>
 <li>hugo.exe</li>
 <li>LICENSE</li>
 <li>README.md</li>
 </ol>
-<h3 id="インストール">インストール</h3>
-<p>Windowsの場合は、<code>hugo.exe</code>を置き換える（上書き）だけで完了します。<br>
+<h3 id="インストール">インストール
+</h3><p>Windowsの場合は、<code>hugo.exe</code>を置き換える（上書き）だけで完了します。<br>
 先程解凍した3つのファイルを既存の<code>hugo.exe</code>を置いてある場所に上書きで入れて終わりです。</p>
-<h3 id="確認1-バージョン">確認1 バージョン</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>hugo version
+<h3 id="確認1-バージョン">確認1 バージョン
+</h3><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>hugo version
 </span></span></code></pre></div><p>最新版のバージョンが表示されていればオッケーです。</p>
-<h3 id="確認2-hugo-sever">確認2 Hugo Sever</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>hugo server
+<h3 id="確認2-hugo-sever">確認2 Hugo Sever
+</h3><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>hugo server
 </span></span></code></pre></div><p>これを実行して、エラーが出ないことを確認します。<br>
 何かしらのエラーが出たときはネットで調べて対応します。<br>
 意味不明の場合は、いったん元のバージョンに戻す（古いのを上書き）でも良いです。</p>
-<h2 id="linux編">Linux編</h2>
-<p>また後で書きます。</p>
-<h2 id="トラブルシューティング">トラブルシューティング</h2>
-<h3 id="参考になれば">参考になれば・・・</h3>
-<p>以前、一気にバージョンを上げたときに問題が出て、四苦八苦した記事がこちら。<br>
-<a href="../hugo-new-version">そうだ Hugo の最新版を使おう！ · k-kaz が Hugo で遊ぶサイト</a>
-</p>
+<h2 id="linux編">Linux編
+</h2><p>また後で書きます。</p>
+<h2 id="トラブルシューティング">トラブルシューティング
+</h2><h3 id="参考になれば">参考になれば・・・
+</h3><p>以前、一気にバージョンを上げたときに問題が出て、四苦八苦した記事がこちら。<br>
+<a class="link" href="../hugo-new-version" >そうだ Hugo の最新版を使おう！ · k-kaz が Hugo で遊ぶサイト</a></p>
 <p>最新版では古い機能が使えなくなっていたので、その対応をしました。</p>
-<h3 id="旧バージョンの入手方法">旧バージョンの入手方法</h3>
-<p>リリースのページに移動します。<br>
-<a href="https://github.com/gohugoio/hugo/releases" target="_blank">Releases · gohugoio/hugo</a>
-</p>
+<h3 id="旧バージョンの入手方法">旧バージョンの入手方法
+</h3><p>リリースのページに移動します。<br>
+<a class="link" href="https://github.com/gohugoio/hugo/releases"  target="_blank" rel="noopener"
+    >Releases · gohugoio/hugo</a></p>
 <p>上部メニュー（Code、Issues &hellip;）のすぐ下で、「Releases」が青くなっていると思います。
 その横にある「Tags」を選択してください。</p>
 <p>リリース一覧が簡易表示されます。<br>
 希望するリリースの「Downloads」を選択することでゲットできます。</p>
 
-      </article>
-      <hr>
-      <p class="post-date">
-        Posted <time datetime="2023-04-17">2023-04-17</time>
-         / Update 2023-04-17</p>
-         <div class="card-subtext muted-text li-line">
-           <a class="cat" href="/categories/linux">linux</a>
-           <a class="tag" href="/tags/hugo">#hugo</a> 
-         </div>
-    </main>
-    <nav class="end-nav side-padding">
-      
-      <a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
-  href="https://k-kaz-git.github.io/post/hugo-mermaid/" class="card blog-card" rel="bookmark" >
+</section>
+
+
+    <footer class="article-footer">
     
-    <div class="card-img-container">
-      <p class="card-img-overlay">Next Article</p>
-      <picture>
-        <source srcset="https://k-kaz-git.github.io/images/mermaid.webp" type="image/webp">
-        <source srcset="https://k-kaz-git.github.io/images/mermaid.webp">
-        <img src="https://k-kaz-git.github.io/images/mermaid.webp" class="card-img" alt="">
-      </picture>
-    </div>
+    <section class="article-tags">
+        
+            <a href="/tags/hugo/">Hugo</a>
+        
+    </section>
+
+
+    </footer>
+
+
     
-  <article class="card-body">
-    <h2 class="card-title">HugoでMermaid記法を利用する</h2>
-    <p class="card-text">少しの設定で利用可能です。</p>
-    <div class="card-subtext muted-text">
-      <p>Posted <time datetime="2023-04-17">2023-04-17</time>
-      / Updated 2023-04-17</p>
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">関連するコンテンツ</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/post/hugo-mermaid/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/images/mermaid.webp" loading="lazy" data-key="" data-hash="/images/mermaid.webp"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">HugoでMermaid記法を利用する</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/post/hugo-related/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/images/hugo-related.webp" loading="lazy" data-key="" data-hash="/images/hugo-related.webp"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Hugoで関連記事を表示する</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/post/hugo-emoji/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/images/hugo-emoji.webp" loading="lazy" data-key="" data-hash="/images/hugo-emoji.webp"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Hugoで絵文字を使えるようにする</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/post/hugo-comment/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/images/speech-bubbles_640.webp" loading="lazy" data-key="" data-hash="/images/speech-bubbles_640.webp"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Hugoにコメント機能を付ける</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/post/hugo-section/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/images/divider-800.webp" loading="lazy" data-key="" data-hash="/images/divider-800.webp"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Hugo Section</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
     </div>
-    <div class="card-subtext muted-text li-line">
-      <span class="box-gray">homepage</span> 
-      <span class="box-gray">#hugo</span> <span class="box-gray">#theme</span> <span class="box-gray">#mermaid</span> 
-    </div>
-  </article>
-</a>
-      
-      <a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
-  href="https://k-kaz-git.github.io/" class="card home-card" style="background-image: url( https://k-kaz-git.github.io/img/grey-cloud.jpg )" rel="bookmark" >
-  Home
-</a>
-    </nav>
-    <footer>
-    <p style="text-align: center">姉妹サイト<br><a class="btn-link" href="https://k-kaz.net/" target="_blank">k-kaz ブログ</a></p>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2024 k-kaz が Hugo で遊ぶサイト
+    </section>
+    
+    <section class="powerby">
+        <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> で構築されています。 <br />
+        テーマ <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.26.0">Stack</a></b> は <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> によって設計されています。
+    </section>
 </footer>
+
+
     
-  <script defer src="https://k-kaz-git.github.io/js/katex.js"></script>
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
 
+    
+    <div class="pswp__bg"></div>
 
-  <script defer src="https://k-kaz-git.github.io/js/auto-render.js" onload="renderMathInElement(document.body);"></script>
+    
+    <div class="pswp__scroll-wrap">
 
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
 
-<script src="https://k-kaz-git.github.io/js/core.min.js"></script>
+        
+        <div class="pswp__ui pswp__ui--hidden">
 
-  </body>
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
 </html>

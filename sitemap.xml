@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://k-kaz-git.github.io/about/</loc>
+    <lastmod>2024-09-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://k-kaz-git.github.io/</loc>
+    <lastmod>2024-09-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://k-kaz-git.github.io/page/</loc>
+    <lastmod>2024-09-03T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://k-kaz-git.github.io/categories/</loc>
     <lastmod>2024-08-07T08:44:45+09:00</lastmod>
   </url><url>
@@ -11,10 +20,7 @@
     <loc>https://k-kaz-git.github.io/tags/hugo/</loc>
     <lastmod>2024-08-07T08:44:45+09:00</lastmod>
   </url><url>
-    <loc>https://k-kaz-git.github.io/post/hugo-warning-sitesocial/</loc>
-    <lastmod>2024-08-07T08:44:45+09:00</lastmod>
-  </url><url>
-    <loc>https://k-kaz-git.github.io/</loc>
+    <loc>https://k-kaz-git.github.io/p/hugo-warning-.site.social/</loc>
     <lastmod>2024-08-07T08:44:45+09:00</lastmod>
   </url><url>
     <loc>https://k-kaz-git.github.io/post/</loc>
@@ -26,196 +32,203 @@
     <loc>https://k-kaz-git.github.io/tags/theme/</loc>
     <lastmod>2024-08-07T08:44:45+09:00</lastmod>
   </url><url>
-    <loc>https://k-kaz-git.github.io/post/hugo-tags/</loc>
-    <lastmod>2024-06-11T11:47:46+09:00</lastmod>
+    <loc>https://k-kaz-git.github.io/p/%E3%83%AA%E3%82%B9%E3%83%88%E8%A1%A8%E7%A4%BA%E3%81%A8%E3%82%B7%E3%83%B3%E3%82%B0%E3%83%AB%E8%A1%A8%E7%A4%BA%E3%81%AB%E3%82%BF%E3%82%B0%E3%82%92%E4%BB%98%E3%81%91%E3%82%8B/</loc>
+    <lastmod>2024-06-10T21:05:42+09:00</lastmod>
   </url><url>
     <loc>https://k-kaz-git.github.io/categories/coding/</loc>
-    <lastmod>2024-02-20T10:44:12+09:00</lastmod>
+    <lastmod>2024-02-20T08:43:46+09:00</lastmod>
   </url><url>
-    <loc>https://k-kaz-git.github.io/post/hugo-comment-giscus/</loc>
-    <lastmod>2024-02-20T10:44:12+09:00</lastmod>
+    <loc>https://k-kaz-git.github.io/p/hugo%E3%81%AB%E3%82%B3%E3%83%A1%E3%83%B3%E3%83%88%E6%A9%9F%E8%83%BD%E3%82%92%E4%BB%98%E3%81%91%E3%82%8Bgiscus%E7%B7%A8/</loc>
+    <lastmod>2024-02-20T08:43:46+09:00</lastmod>
   </url><url>
-    <loc>https://k-kaz-git.github.io/post/hugo-new-version-v0.122.0/</loc>
-    <lastmod>2024-02-13T11:28:40+09:00</lastmod>
+    <loc>https://k-kaz-git.github.io/p/hugo-update-v0.122.0/</loc>
+    <lastmod>2024-02-09T21:22:29+09:00</lastmod>
   </url><url>
     <loc>https://k-kaz-git.github.io/tags/pagermod/</loc>
-    <lastmod>2024-02-13T11:28:40+09:00</lastmod>
+    <lastmod>2024-02-09T21:22:29+09:00</lastmod>
   </url><url>
-    <loc>https://k-kaz-git.github.io/post/hugo-sakura/</loc>
-    <lastmod>2023-10-27T15:46:26+09:00</lastmod>
+    <loc>https://k-kaz-git.github.io/p/%E3%81%95%E3%81%8F%E3%82%89%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%8D%E3%83%83%E3%83%88%E3%81%A7hugo%E3%82%92%E4%BD%BF%E3%81%84%E3%81%9F%E3%81%84/</loc>
+    <lastmod>2023-10-27T12:44:27+09:00</lastmod>
   </url><url>
-    <loc>https://k-kaz-git.github.io/post/hugo-new-version-basic/</loc>
-    <lastmod>2023-04-17T16:33:55+09:00</lastmod>
+    <loc>https://k-kaz-git.github.io/p/hugo%E3%81%AE%E6%9C%80%E6%96%B0%E7%89%88%E3%82%92%E5%85%A5%E3%82%8C%E3%81%A6%E3%81%BF%E3%82%88%E3%81%86/</loc>
+    <lastmod>2023-04-17T12:58:50+09:00</lastmod>
   </url><url>
     <loc>https://k-kaz-git.github.io/categories/linux/</loc>
-    <lastmod>2023-04-17T16:33:55+09:00</lastmod>
+    <lastmod>2023-04-17T12:58:50+09:00</lastmod>
   </url><url>
-    <loc>https://k-kaz-git.github.io/post/hugo-mermaid/</loc>
-    <lastmod>2023-04-17T13:38:38+09:00</lastmod>
+    <loc>https://k-kaz-git.github.io/p/hugo%E3%81%A7mermaid%E8%A8%98%E6%B3%95%E3%82%92%E5%88%A9%E7%94%A8%E3%81%99%E3%82%8B/</loc>
+    <lastmod>2023-04-17T12:55:42+09:00</lastmod>
   </url><url>
     <loc>https://k-kaz-git.github.io/tags/mermaid/</loc>
-    <lastmod>2023-04-17T13:38:38+09:00</lastmod>
+    <lastmod>2023-04-17T12:55:42+09:00</lastmod>
   </url><url>
-    <loc>https://k-kaz-git.github.io/post/hugo-related/</loc>
-    <lastmod>2023-03-08T15:34:04+09:00</lastmod>
+    <loc>https://k-kaz-git.github.io/p/hugo%E3%81%A7%E9%96%A2%E9%80%A3%E8%A8%98%E4%BA%8B%E3%82%92%E8%A1%A8%E7%A4%BA%E3%81%99%E3%82%8B/</loc>
+    <lastmod>2023-03-08T12:54:23+09:00</lastmod>
   </url><url>
     <loc>https://k-kaz-git.github.io/tags/vscode/</loc>
-    <lastmod>2023-02-23T15:14:00+09:00</lastmod>
+    <lastmod>2023-02-15T12:43:28+09:00</lastmod>
   </url><url>
-    <loc>https://k-kaz-git.github.io/post/vscode/</loc>
-    <lastmod>2023-02-23T15:14:00+09:00</lastmod>
+    <loc>https://k-kaz-git.github.io/p/vscode-%E5%B0%8F%E3%83%8D%E3%82%BF/</loc>
+    <lastmod>2023-02-15T12:43:28+09:00</lastmod>
   </url><url>
-    <loc>https://k-kaz-git.github.io/post/hugo-emoji/</loc>
-    <lastmod>2023-02-09T07:35:29+09:00</lastmod>
+    <loc>https://k-kaz-git.github.io/p/hugo%E3%81%A7%E7%B5%B5%E6%96%87%E5%AD%97%E3%82%92%E4%BD%BF%E3%81%88%E3%82%8B%E3%82%88%E3%81%86%E3%81%AB%E3%81%99%E3%82%8B/</loc>
+    <lastmod>2023-02-09T08:40:05+09:00</lastmod>
   </url><url>
-    <loc>https://k-kaz-git.github.io/post/hugo-comment/</loc>
-    <lastmod>2024-02-20T10:44:12+09:00</lastmod>
+    <loc>https://k-kaz-git.github.io/p/hugo%E3%81%AB%E3%82%B3%E3%83%A1%E3%83%B3%E3%83%88%E6%A9%9F%E8%83%BD%E3%82%92%E4%BB%98%E3%81%91%E3%82%8B/</loc>
+    <lastmod>2023-02-07T12:49:20+09:00</lastmod>
   </url><url>
     <loc>https://k-kaz-git.github.io/tags/github-pages/</loc>
-    <lastmod>2023-01-30T13:43:03+09:00</lastmod>
+    <lastmod>2023-01-30T12:43:46+09:00</lastmod>
   </url><url>
-    <loc>https://k-kaz-git.github.io/post/githubpages/</loc>
-    <lastmod>2023-01-30T13:43:03+09:00</lastmod>
+    <loc>https://k-kaz-git.github.io/p/github-pages-%E7%92%B0%E5%A2%83%E3%81%AE%E5%BE%A9%E6%97%A7%E3%83%AD%E3%83%BC%E3%82%AB%E3%83%AB/</loc>
+    <lastmod>2023-01-30T12:43:46+09:00</lastmod>
   </url><url>
     <loc>https://k-kaz-git.github.io/tags/svg/</loc>
-    <lastmod>2021-11-24T14:59:14+09:00</lastmod>
+    <lastmod>2021-11-23T19:07:07+09:00</lastmod>
   </url><url>
-    <loc>https://k-kaz-git.github.io/post/svg/</loc>
-    <lastmod>2021-11-24T14:59:14+09:00</lastmod>
+    <loc>https://k-kaz-git.github.io/p/svg%E3%81%9D%E3%82%8C%E3%81%AF%E9%AD%94%E6%B3%95%E3%81%AE%E7%94%BB%E5%83%8F%E5%BD%A2%E5%BC%8F/</loc>
+    <lastmod>2021-11-23T19:07:07+09:00</lastmod>
   </url><url>
-    <loc>https://k-kaz-git.github.io/post/hugo-section/</loc>
-    <lastmod>2020-11-11T10:57:08+09:00</lastmod>
+    <loc>https://k-kaz-git.github.io/p/hugo-section/</loc>
+    <lastmod>2020-11-11T09:12:59+09:00</lastmod>
   </url><url>
     <loc>https://k-kaz-git.github.io/tags/categories/</loc>
-    <lastmod>2023-02-16T08:20:34+09:00</lastmod>
+    <lastmod>2020-11-05T12:57:30+09:00</lastmod>
   </url><url>
-    <loc>https://k-kaz-git.github.io/post/hugo-taxonomy/</loc>
-    <lastmod>2023-02-16T08:20:34+09:00</lastmod>
+    <loc>https://k-kaz-git.github.io/p/hugo-%E3%81%AE%E3%82%BF%E3%82%B0%E3%81%A8%E3%81%8B%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA%E3%81%A8%E3%81%8B/</loc>
+    <lastmod>2020-11-05T12:57:30+09:00</lastmod>
   </url><url>
     <loc>https://k-kaz-git.github.io/tags/tags/</loc>
-    <lastmod>2023-02-16T08:20:34+09:00</lastmod>
+    <lastmod>2020-11-05T12:57:30+09:00</lastmod>
   </url><url>
-    <loc>https://k-kaz-git.github.io/post/hugo-custom-theme-pagermod/</loc>
-    <lastmod>2020-11-02T16:21:26+09:00</lastmod>
+    <loc>https://k-kaz-git.github.io/p/%E3%83%86%E3%83%BC%E3%83%9E-pagermod-%E3%81%AE%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA/</loc>
+    <lastmod>2020-10-28T12:32:55+09:00</lastmod>
   </url><url>
-    <loc>https://k-kaz-git.github.io/post/hugo-contents/</loc>
-    <lastmod>2020-10-21T12:58:35+09:00</lastmod>
+    <loc>https://k-kaz-git.github.io/p/%E3%82%B3%E3%83%B3%E3%83%86%E3%83%B3%E3%83%84%E7%94%BB%E5%83%8F%E3%81%A8%E3%81%8B%E3%82%92%E5%90%8C%E4%B8%80%E3%83%95%E3%82%A9%E3%83%AB%E3%83%80%E3%81%AB%E3%81%99%E3%82%8B%E5%A0%B4%E5%90%88/</loc>
+    <lastmod>2020-10-21T12:45:27+09:00</lastmod>
   </url><url>
-    <loc>https://k-kaz-git.github.io/post/hugo-alink/</loc>
-    <lastmod>2020-10-19T11:53:07+09:00</lastmod>
+    <loc>https://k-kaz-git.github.io/p/hugo-%E3%81%A7%E5%A4%96%E9%83%A8%E3%82%B5%E3%82%A4%E3%83%88%E3%82%92%E6%96%B0%E3%81%97%E3%81%84%E3%82%BF%E3%83%96%E3%81%A7%E9%96%8B%E3%81%8D%E3%81%9F%E3%81%84/</loc>
+    <lastmod>2020-10-19T12:28:18+09:00</lastmod>
   </url><url>
-    <loc>https://k-kaz-git.github.io/post/hugo-new-version/</loc>
-    <lastmod>2020-10-28T19:26:16+09:00</lastmod>
+    <loc>https://k-kaz-git.github.io/p/%E3%81%9D%E3%81%86%E3%81%A0-hugo-%E3%81%AE%E6%9C%80%E6%96%B0%E7%89%88%E3%82%92%E4%BD%BF%E3%81%8A%E3%81%86/</loc>
+    <lastmod>2020-10-18T20:00:29+09:00</lastmod>
   </url><url>
-    <loc>https://k-kaz-git.github.io/post/hugo-deploy-error/</loc>
-    <lastmod>2020-10-19T11:12:23+09:00</lastmod>
+    <loc>https://k-kaz-git.github.io/p/deploy-%E3%81%A7%E3%82%A8%E3%83%A9%E3%83%BC%E3%81%8C%E5%87%BA%E3%81%9F%E3%82%93%E3%81%A7%E3%81%99%E3%81%91%E3%81%A9/</loc>
+    <lastmod>2020-10-14T18:51:11+09:00</lastmod>
   </url><url>
     <loc>https://k-kaz-git.github.io/tags/github/</loc>
-    <lastmod>2023-04-20T15:36:33+09:00</lastmod>
+    <lastmod>2020-10-14T18:51:11+09:00</lastmod>
   </url><url>
     <loc>https://k-kaz-git.github.io/tags/netlify/</loc>
-    <lastmod>2024-02-07T14:10:19+09:00</lastmod>
+    <lastmod>2020-10-14T18:51:11+09:00</lastmod>
   </url><url>
-    <loc>https://k-kaz-git.github.io/post/hugo-custom-tableofcontents/</loc>
-    <lastmod>2019-04-03T07:34:18+09:00</lastmod>
+    <loc>https://k-kaz-git.github.io/archives/</loc>
+    <lastmod>2019-05-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://k-kaz-git.github.io/p/hugo-%E3%81%AE%E7%9B%AE%E6%AC%A1%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E8%80%83%E3%81%88%E3%82%8B/</loc>
+    <lastmod>2019-04-02T19:26:27+09:00</lastmod>
   </url><url>
     <loc>https://k-kaz-git.github.io/tags/tableofcontents/</loc>
-    <lastmod>2019-04-03T07:34:18+09:00</lastmod>
+    <lastmod>2019-04-02T19:26:27+09:00</lastmod>
   </url><url>
     <loc>https://k-kaz-git.github.io/tags/mozc/</loc>
-    <lastmod>2019-03-31T20:38:46+09:00</lastmod>
+    <lastmod>2019-03-31T17:45:32+09:00</lastmod>
   </url><url>
-    <loc>https://k-kaz-git.github.io/post/mozc-ut2-install/</loc>
-    <lastmod>2019-03-31T20:38:46+09:00</lastmod>
+    <loc>https://k-kaz-git.github.io/p/mozc-ut2-%E3%82%92-install-%E3%81%97%E3%81%9F%E3%82%88/</loc>
+    <lastmod>2019-03-31T17:45:32+09:00</lastmod>
   </url><url>
     <loc>https://k-kaz-git.github.io/tags/aether/</loc>
-    <lastmod>2019-03-27T15:30:27+09:00</lastmod>
+    <lastmod>2019-03-18T12:31:49+09:00</lastmod>
   </url><url>
     <loc>https://k-kaz-git.github.io/tags/cupper/</loc>
-    <lastmod>2019-03-27T15:30:27+09:00</lastmod>
+    <lastmod>2019-03-18T12:31:49+09:00</lastmod>
   </url><url>
-    <loc>https://k-kaz-git.github.io/post/hugo-k-kaz-theme/</loc>
-    <lastmod>2019-03-27T15:30:27+09:00</lastmod>
+    <loc>https://k-kaz-git.github.io/p/hugo-%E3%81%AE%E3%83%86%E3%83%BC%E3%83%9E%E3%82%92%E4%BD%9C%E3%81%A3%E3%81%9F%E3%82%88/</loc>
+    <lastmod>2019-03-18T12:31:49+09:00</lastmod>
   </url><url>
     <loc>https://k-kaz-git.github.io/tags/css/</loc>
-    <lastmod>2019-03-16T06:43:27+09:00</lastmod>
+    <lastmod>2019-03-14T17:44:58+09:00</lastmod>
   </url><url>
     <loc>https://k-kaz-git.github.io/tags/saas/</loc>
-    <lastmod>2019-03-16T06:43:27+09:00</lastmod>
+    <lastmod>2019-03-14T17:44:58+09:00</lastmod>
   </url><url>
-    <loc>https://k-kaz-git.github.io/post/code-highlight/</loc>
-    <lastmod>2019-03-16T06:43:27+09:00</lastmod>
+    <loc>https://k-kaz-git.github.io/p/%E3%82%B7%E3%83%B3%E3%82%BF%E3%83%83%E3%82%AF%E3%82%B9%E3%83%8F%E3%82%A4%E3%83%A9%E3%82%A4%E3%83%88%E3%82%92%E8%87%AA%E5%88%86%E5%A5%BD%E3%81%BF%E3%81%AE%E8%89%B2%E3%81%AB%E3%81%99%E3%82%8B/</loc>
+    <lastmod>2019-03-14T17:44:58+09:00</lastmod>
   </url><url>
     <loc>https://k-kaz-git.github.io/tags/shortcodes/</loc>
-    <lastmod>2023-01-30T10:46:36+09:00</lastmod>
+    <lastmod>2019-03-14T12:42:21+09:00</lastmod>
   </url><url>
-    <loc>https://k-kaz-git.github.io/post/hugo-shortcodes-make/</loc>
-    <lastmod>2019-03-15T15:59:37+09:00</lastmod>
+    <loc>https://k-kaz-git.github.io/p/%E8%87%AA%E4%BD%9C%E3%81%AE-hugo%E7%94%A8-shortcodes/</loc>
+    <lastmod>2019-03-14T12:42:21+09:00</lastmod>
   </url><url>
-    <loc>https://k-kaz-git.github.io/post/hugo-custom-theme-cupper/</loc>
-    <lastmod>2019-03-21T06:07:11+09:00</lastmod>
+    <loc>https://k-kaz-git.github.io/p/%E3%83%86%E3%83%BC%E3%83%9E-cupper-%E3%81%AE%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA/</loc>
+    <lastmod>2019-03-12T16:02:29+09:00</lastmod>
   </url><url>
-    <loc>https://k-kaz-git.github.io/post/hugo-shortcodes/</loc>
-    <lastmod>2023-01-30T10:46:36+09:00</lastmod>
+    <loc>https://k-kaz-git.github.io/p/hugo-%E3%81%AE-shortcodes-%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%A6%E3%81%BF%E3%82%8B/</loc>
+    <lastmod>2019-03-11T17:40:19+09:00</lastmod>
   </url><url>
     <loc>https://k-kaz-git.github.io/tags/favicon/</loc>
-    <lastmod>2019-03-10T15:47:03+09:00</lastmod>
+    <lastmod>2019-03-10T06:37:26+09:00</lastmod>
   </url><url>
-    <loc>https://k-kaz-git.github.io/post/favicon-generator/</loc>
-    <lastmod>2019-03-10T15:47:03+09:00</lastmod>
+    <loc>https://k-kaz-git.github.io/p/%E3%83%95%E3%82%A1%E3%83%93%E3%82%B3%E3%83%B3%E3%82%92%E4%BD%9C%E3%82%8B%E3%82%88/</loc>
+    <lastmod>2019-03-10T06:37:26+09:00</lastmod>
   </url><url>
-    <loc>https://k-kaz-git.github.io/post/hugo-netlify/</loc>
-    <lastmod>2024-02-07T14:10:19+09:00</lastmod>
+    <loc>https://k-kaz-git.github.io/p/hugo-%E3%82%92-netlify-%E3%81%A7%E5%8B%95%E3%81%8B%E3%81%99%E3%82%88/</loc>
+    <lastmod>2019-03-07T14:44:55+09:00</lastmod>
   </url><url>
-    <loc>https://k-kaz-git.github.io/post/hugo-stylesheet-sass/</loc>
-    <lastmod>2019-03-04T12:50:33+09:00</lastmod>
+    <loc>https://k-kaz-git.github.io/p/hugo-%E3%81%A7-sass-%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%A6%E3%81%BF%E3%82%8B/</loc>
+    <lastmod>2019-03-04T10:05:17+09:00</lastmod>
   </url><url>
     <loc>https://k-kaz-git.github.io/tags/sass/</loc>
-    <lastmod>2019-03-04T12:50:33+09:00</lastmod>
+    <lastmod>2019-03-04T10:05:17+09:00</lastmod>
   </url><url>
     <loc>https://k-kaz-git.github.io/tags/stylesheet/</loc>
-    <lastmod>2019-03-04T12:50:33+09:00</lastmod>
+    <lastmod>2019-03-04T10:05:17+09:00</lastmod>
   </url><url>
-    <loc>https://k-kaz-git.github.io/post/github-how-to-use/</loc>
-    <lastmod>2023-04-20T15:36:33+09:00</lastmod>
+    <loc>https://k-kaz-git.github.io/p/git%E3%81%A8github%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%A6%E3%81%BF%E3%82%8B/</loc>
+    <lastmod>2019-02-22T15:49:24+09:00</lastmod>
   </url><url>
     <loc>https://k-kaz-git.github.io/tags/snippet/</loc>
-    <lastmod>2019-03-04T17:46:54+09:00</lastmod>
+    <lastmod>2019-02-22T08:44:41+09:00</lastmod>
   </url><url>
-    <loc>https://k-kaz-git.github.io/post/vscode-snippet/</loc>
-    <lastmod>2019-03-04T17:46:54+09:00</lastmod>
+    <loc>https://k-kaz-git.github.io/p/vscode-%E3%81%AE%E3%82%B9%E3%83%8B%E3%83%9A%E3%83%83%E3%83%88%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%A6%E3%81%BF%E3%82%8B/</loc>
+    <lastmod>2019-02-22T08:44:41+09:00</lastmod>
   </url><url>
-    <loc>https://k-kaz-git.github.io/post/hugo-markdown/</loc>
-    <lastmod>2019-03-06T14:17:39+09:00</lastmod>
+    <loc>https://k-kaz-git.github.io/p/hugo-%E3%81%A7%E4%BD%BF%E3%81%88%E3%82%8B-markdown-%E3%81%AE%E8%A8%98%E6%B3%95/</loc>
+    <lastmod>2019-02-21T11:43:14+09:00</lastmod>
   </url><url>
     <loc>https://k-kaz-git.github.io/tags/markdown/</loc>
-    <lastmod>2019-03-06T14:17:39+09:00</lastmod>
+    <lastmod>2019-02-21T11:43:14+09:00</lastmod>
   </url><url>
-    <loc>https://k-kaz-git.github.io/post/hugo-how-to-use/</loc>
-    <lastmod>2019-03-02T16:13:22+09:00</lastmod>
+    <loc>https://k-kaz-git.github.io/p/hugo-%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9/</loc>
+    <lastmod>2019-02-20T16:15:13+09:00</lastmod>
   </url><url>
-    <loc>https://k-kaz-git.github.io/post/hugo-custom-theme-aether/</loc>
-    <lastmod>2019-03-14T16:23:05+09:00</lastmod>
+    <loc>https://k-kaz-git.github.io/p/%E3%83%86%E3%83%BC%E3%83%9E-aether-%E3%81%AE%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA/</loc>
+    <lastmod>2019-02-18T21:30:02+09:00</lastmod>
   </url><url>
-    <loc>https://k-kaz-git.github.io/post/hugo-custom-comment/</loc>
-    <lastmod>2019-02-27T17:30:34+09:00</lastmod>
+    <loc>https://k-kaz-git.github.io/p/%E3%82%B3%E3%83%A1%E3%83%B3%E3%83%88%E6%AC%84%E3%82%92%E5%89%8A%E9%99%A4/</loc>
+    <lastmod>2019-02-18T12:23:37+09:00</lastmod>
   </url><url>
-    <loc>https://k-kaz-git.github.io/post/hugo-custom/</loc>
-    <lastmod>2019-02-27T17:30:34+09:00</lastmod>
+    <loc>https://k-kaz-git.github.io/p/%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F%E3%81%84%E3%81%AA/</loc>
+    <lastmod>2019-02-17T20:14:15+09:00</lastmod>
   </url><url>
-    <loc>https://k-kaz-git.github.io/post/hugo-stable/</loc>
-    <lastmod>2019-02-27T17:30:34+09:00</lastmod>
+    <loc>https://k-kaz-git.github.io/p/hugo-%E5%AE%89%E5%AE%9A%E3%81%97%E3%81%A6%E3%81%8D%E3%81%9F%E3%81%8B%E3%81%AA/</loc>
+    <lastmod>2019-02-17T04:50:58+09:00</lastmod>
   </url><url>
-    <loc>https://k-kaz-git.github.io/post/hello4/</loc>
-    <lastmod>2019-02-27T17:30:34+09:00</lastmod>
+    <loc>https://k-kaz-git.github.io/p/hello4/</loc>
+    <lastmod>2019-02-16T19:41:01+09:00</lastmod>
   </url><url>
-    <loc>https://k-kaz-git.github.io/post/hello3/</loc>
-    <lastmod>2019-02-27T17:30:34+09:00</lastmod>
+    <loc>https://k-kaz-git.github.io/p/%E3%82%BF%E3%82%A4%E3%83%88%E3%83%AB%E3%81%AB%E6%97%A5%E6%9C%AC%E8%AA%9E%E3%82%92%E5%85%A5%E3%82%8C%E3%81%A6%E3%81%BF%E3%82%8B/</loc>
+    <lastmod>2019-02-16T17:46:34+09:00</lastmod>
   </url><url>
-    <loc>https://k-kaz-git.github.io/post/hello2/</loc>
-    <lastmod>2019-02-27T17:30:34+09:00</lastmod>
+    <loc>https://k-kaz-git.github.io/p/oh/</loc>
+    <lastmod>2019-02-16T17:31:37+09:00</lastmod>
   </url><url>
-    <loc>https://k-kaz-git.github.io/post/hello/</loc>
-    <lastmod>2019-02-27T17:30:34+09:00</lastmod>
+    <loc>https://k-kaz-git.github.io/p/hello/</loc>
+    <lastmod>2019-02-16T16:52:50+09:00</lastmod>
+  </url><url>
+    <loc>https://k-kaz-git.github.io/links/</loc>
+  </url><url>
+    <loc>https://k-kaz-git.github.io/search/</loc>
   </url>
 </urlset>

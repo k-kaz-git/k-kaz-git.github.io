@@ -1,28 +1,189 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Linux - k-kaz が Hugo で遊ぶサイト</title>
-    <link>https://k-kaz-git.github.io/categories/linux/</link>
-    <description>Recent content in Linux on k-kaz が Hugo で遊ぶサイト</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>ja</language>
-    <lastBuildDate>Mon, 17 Apr 2023 12:58:50 +0900</lastBuildDate>
-    
-        <atom:link href="https://k-kaz-git.github.io/categories/linux/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Hugoの最新版を入れてみよう</title>
-      <link>https://k-kaz-git.github.io/post/hugo-new-version-basic/</link>
-      <pubDate>Mon, 17 Apr 2023 12:58:50 +0900</pubDate>
-      
-      <guid>https://k-kaz-git.github.io/post/hugo-new-version-basic/</guid>
-      <description>基本編</description>
-    </item><item>
-      <title>Mozc Ut2 を Install したよ。</title>
-      <link>https://k-kaz-git.github.io/post/mozc-ut2-install/</link>
-      <pubDate>Sun, 31 Mar 2019 17:45:32 +0900</pubDate>
-      
-      <guid>https://k-kaz-git.github.io/post/mozc-ut2-install/</guid>
-      <description>Linux Mint に Mozc Ut2 をインストールしました。</description>
-    </item>
-  </channel>
+    <channel>
+        <title>Linux on k-kaz が Hugo で遊ぶサイト</title>
+        <link>https://k-kaz-git.github.io/categories/linux/</link>
+        <description>Recent content in Linux on k-kaz が Hugo で遊ぶサイト</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>ja</language>
+        <copyright>k-kaz</copyright>
+        <lastBuildDate>Mon, 17 Apr 2023 12:58:50 +0900</lastBuildDate><atom:link href="https://k-kaz-git.github.io/categories/linux/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Hugoの最新版を入れてみよう</title>
+        <link>https://k-kaz-git.github.io/p/hugo%E3%81%AE%E6%9C%80%E6%96%B0%E7%89%88%E3%82%92%E5%85%A5%E3%82%8C%E3%81%A6%E3%81%BF%E3%82%88%E3%81%86/</link>
+        <pubDate>Mon, 17 Apr 2023 12:58:50 +0900</pubDate>
+        
+        <guid>https://k-kaz-git.github.io/p/hugo%E3%81%AE%E6%9C%80%E6%96%B0%E7%89%88%E3%82%92%E5%85%A5%E3%82%8C%E3%81%A6%E3%81%BF%E3%82%88%E3%81%86/</guid>
+        <description>&lt;img src="https://k-kaz-git.github.io/images/hugo-logo-wide.svg" alt="Featured image of post Hugoの最新版を入れてみよう" /&gt;&lt;h2 id=&#34;共通&#34;&gt;共通
+&lt;/h2&gt;&lt;h3 id=&#34;使用中のバージョンを確認&#34;&gt;使用中のバージョンを確認
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hugo version
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;これを実行すると、現在使用しているバージョンが表示されます。&lt;br&gt;
+ちなみに先程実行したところ、&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hugo v0.80.0
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;と出ました。&lt;/p&gt;
+&lt;h3 id=&#34;最新版のダウンロード&#34;&gt;最新版のダウンロード
+&lt;/h3&gt;&lt;p&gt;Hugoのリリース一覧はこちら。&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://github.com/gohugoio/hugo/releases&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Releases · gohugoio/hugo&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;1番上に最新版が出ていますので、この中の「Assets」から欲しいものをダウンロードします。&lt;br&gt;
+表示されていない場合は「Show all &amp;hellip;」を選択すると、隠れているものが出てきます。&lt;/p&gt;
+&lt;h2 id=&#34;windows編&#34;&gt;Windows編
+&lt;/h2&gt;&lt;h3 id=&#34;ダウンロードするファイル&#34;&gt;ダウンロードするファイル
+&lt;/h3&gt;&lt;p&gt;私は拡張版を使っているので&lt;code&gt;hugo_extended_バージョン_windows-amd64.zip&lt;/code&gt;を落とします。&lt;br&gt;
+通常版の場合は、「extended」が付かないものを落としてください。&lt;/p&gt;
+&lt;h3 id=&#34;ハッシュ値比較&#34;&gt;ハッシュ値比較
+&lt;/h3&gt;&lt;p&gt;「Assets」の中に&lt;code&gt;hugo_0.111.3_checksums.txt&lt;/code&gt;というファイルがあり、この中にハッシュ値が記載されています。&lt;br&gt;
+ダウンロードしたファイルと、上記ファイル内のハッシュ値が同一か確認しましょう。&lt;/p&gt;
+&lt;h3 id=&#34;解凍&#34;&gt;解凍
+&lt;/h3&gt;&lt;p&gt;zipファイルを解凍すると、3つのファイルが出来上がります。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;hugo.exe&lt;/li&gt;
+&lt;li&gt;LICENSE&lt;/li&gt;
+&lt;li&gt;README.md&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;インストール&#34;&gt;インストール
+&lt;/h3&gt;&lt;p&gt;Windowsの場合は、&lt;code&gt;hugo.exe&lt;/code&gt;を置き換える（上書き）だけで完了します。&lt;br&gt;
+先程解凍した3つのファイルを既存の&lt;code&gt;hugo.exe&lt;/code&gt;を置いてある場所に上書きで入れて終わりです。&lt;/p&gt;
+&lt;h3 id=&#34;確認1-バージョン&#34;&gt;確認1 バージョン
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hugo version
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;最新版のバージョンが表示されていればオッケーです。&lt;/p&gt;
+&lt;h3 id=&#34;確認2-hugo-sever&#34;&gt;確認2 Hugo Sever
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hugo server
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;これを実行して、エラーが出ないことを確認します。&lt;br&gt;
+何かしらのエラーが出たときはネットで調べて対応します。&lt;br&gt;
+意味不明の場合は、いったん元のバージョンに戻す（古いのを上書き）でも良いです。&lt;/p&gt;
+&lt;h2 id=&#34;linux編&#34;&gt;Linux編
+&lt;/h2&gt;&lt;p&gt;また後で書きます。&lt;/p&gt;
+&lt;h2 id=&#34;トラブルシューティング&#34;&gt;トラブルシューティング
+&lt;/h2&gt;&lt;h3 id=&#34;参考になれば&#34;&gt;参考になれば・・・
+&lt;/h3&gt;&lt;p&gt;以前、一気にバージョンを上げたときに問題が出て、四苦八苦した記事がこちら。&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;../hugo-new-version&#34; &gt;そうだ Hugo の最新版を使おう！ · k-kaz が Hugo で遊ぶサイト&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;最新版では古い機能が使えなくなっていたので、その対応をしました。&lt;/p&gt;
+&lt;h3 id=&#34;旧バージョンの入手方法&#34;&gt;旧バージョンの入手方法
+&lt;/h3&gt;&lt;p&gt;リリースのページに移動します。&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://github.com/gohugoio/hugo/releases&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Releases · gohugoio/hugo&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;上部メニュー（Code、Issues &amp;hellip;）のすぐ下で、「Releases」が青くなっていると思います。
+その横にある「Tags」を選択してください。&lt;/p&gt;
+&lt;p&gt;リリース一覧が簡易表示されます。&lt;br&gt;
+希望するリリースの「Downloads」を選択することでゲットできます。&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Mozc Ut2 を Install したよ。</title>
+        <link>https://k-kaz-git.github.io/p/mozc-ut2-%E3%82%92-install-%E3%81%97%E3%81%9F%E3%82%88/</link>
+        <pubDate>Sun, 31 Mar 2019 17:45:32 +0900</pubDate>
+        
+        <guid>https://k-kaz-git.github.io/p/mozc-ut2-%E3%82%92-install-%E3%81%97%E3%81%9F%E3%82%88/</guid>
+        <description>&lt;img src="https://k-kaz-git.github.io/images/origami-japan_640.webp" alt="Featured image of post Mozc Ut2 を Install したよ。" /&gt;&lt;h2 id=&#34;これまでと急に内容変わりますが&#34;&gt;これまでと急に内容変わりますが・・・
+&lt;/h2&gt;&lt;p&gt;Hugo に関連しませんけど、技術的な話ということでこちらに書いていきます。&lt;/p&gt;
+&lt;h3 id=&#34;そもそも-mozc-って何&#34;&gt;そもそも Mozc って何？
+&lt;/h3&gt;&lt;blockquote&gt;
+    &lt;p&gt;
+Mozcとは、Google 日本語入力のオープンソース版である。これは2010年5月11日にGoogle日本語入力をGoogle Chrome OSに移植するために必要な部分をオープンソースしたものである。
+&lt;/p&gt;&lt;br&gt;
+    &lt;cite&gt;&lt;a class=&#34;author&#34; href=&#34;https://ja.wikipedia.org/wiki/Google_%e6%97%a5%e6%9c%ac%e8%aa%9e%e5%85%a5%e5%8a%9b&#34;&gt;Wikipedia&lt;/a&gt;&lt;/cite&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;まぁ、簡単に言うと Linux で使える Google 日本語入力 です。&lt;br&gt;
+この便利な Mozc ですが、Linux で普通にインストールされるものって、バージョンが古かったり、カタカナ辞書が付いていなかったりするんですよ。&lt;/p&gt;
+&lt;p&gt;元々インストールされていたのは、Ver.2.20 で、新たに入れるのは Ver.2.23 です。そして、追加辞書も付いています。&lt;/p&gt;
+&lt;p&gt;自分で、カタカナ辞書を用意してユーザー辞書に追加もしていましたが、変換時はユーザー辞書が優先されるので、普通にカタカナを入れたいのに、いちいち英語になったりして、面倒だったりね。&lt;/p&gt;
+&lt;p&gt;なんか、Windows に比べて変換効率も悪いので、なんとかならないかとネットで調べていたところ、最新の Mozc を Linux にインストールする方法が見付かったので、やってみました。&lt;/p&gt;
+&lt;p&gt;ちなみに、昔は KAKASI（KAnji KAna Simple Inverter）とか使っていましたよ。&lt;/p&gt;
+&lt;h3 id=&#34;最新版-mozc-のインストール&#34;&gt;最新版 Mozc のインストール
+&lt;/h3&gt;&lt;p&gt;先程書きました通り、普通にインストールするとバージョンが古いので、「ソフトウェアの管理」（Linux Mint）は使いません。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;ソースを持ってきまして、それをビルドして使えるようにします。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;いきなり難しそうだ（笑）&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;ソースをゲット&#34;&gt;ソースをゲット
+&lt;/h4&gt;&lt;p&gt;ソースはこちらにありますよ。&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://ja.osdn.net/users/sicklylife/pf/mozc_ut_for_ubuntu/wiki/FrontPage&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;mozc ut for ubuntu&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;今回は &lt;code&gt;mozc-2.23.2815.102+dfsg~ut2-20171008d+20181201.tar.xz&lt;/code&gt; を利用しました。&lt;/p&gt;
+&lt;p&gt;ダウンロード後、解凍しておきます。&lt;/p&gt;
+&lt;h4 id=&#34;ビルド&#34;&gt;ビルド
+&lt;/h4&gt;&lt;p&gt;解凍したところに &lt;code&gt;build_mozc_plus_utdict&lt;/code&gt; というファイルができますので、これを実行します。&lt;br&gt;
+でも、足りないパッケージなどがあるので、事前に入れておきます。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cmd&#34; data-lang=&#34;cmd&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ sudo apt update
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ sudo apt upgrade -y
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ sudo apt install -y devscripts debhelper libibus-1.0-dev pkg-config libxcb-xfixes0-dev libgtk2.0-dev python-dev gyp protobuf-compiler libprotobuf-dev qtbase5-dev libqwt-qt5-dev libgwengui-qt5-dev libuim-dev libzinnia-dev fcitx-libs-dev gettext desktop-file-utils ninja-build
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;入れ終わったら、ビルドします。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cmd&#34; data-lang=&#34;cmd&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ sudo ./build_mozc_plus_utdict
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;しばらく、ハードディスクがカリカリと頑張ってくれます。&lt;/p&gt;
+&lt;p&gt;運悪くビルドに失敗したら、ログに理由が書いてあると思いますので、&lt;strong&gt;ネットで頑張って調べます（笑）&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;事後処理&#34;&gt;事後処理
+&lt;/h4&gt;&lt;p&gt;無事にビルドが終了したら、インストール済みのパッケージを削除します。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cmd&#34; data-lang=&#34;cmd&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ sudo apt-get remove mozc-server mozc-utils-gui
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;fcitx-mozc を使っているので、関連ファイルをインストール。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cmd&#34; data-lang=&#34;cmd&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ sudo dpkg -i mozc*.deb fcitx-mozc*.deb
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;結果、こうなります。
+&lt;img src=&#34;https://k-kaz-git.github.io/images/mozc-ver223.webp&#34; alt=&#34;Mozc について&#34; style=&#34;width:auto;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;以上です。&lt;/p&gt;
+&lt;h4 id=&#34;参考サイト&#34;&gt;参考サイト
+&lt;/h4&gt;&lt;p&gt;今回の作業は、下記、2サイト様を参考にさせていただきました。&lt;br&gt;
+ありがとうございます。&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;http://baker-street.jugem.jp/?day=20170407&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Linux Mint 18 : 「Mozc UT2 Dictionary」「郵便番号」「ニコニコ大百科」「顔文字」で辞書を強化する&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://sicklylife.jp/ubuntu/1804/mozc_ut2.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Mozc UT2をインストールする - Ubuntu 18.04編&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
 </rss>

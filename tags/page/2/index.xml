@@ -1,83 +1,83 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags - k-kaz が Hugo で遊ぶサイト</title>
-    <link>https://k-kaz-git.github.io/tags/</link>
+    <link>http://localhost:1313/tags/</link>
     <description>Recent content in Tags on k-kaz が Hugo で遊ぶサイト</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <lastBuildDate>Wed, 07 Aug 2024 08:44:45 +0900</lastBuildDate>
     
-        <atom:link href="https://k-kaz-git.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Netlify</title>
-      <link>https://k-kaz-git.github.io/tags/netlify/</link>
+      <link>http://localhost:1313/tags/netlify/</link>
       <pubDate>Wed, 14 Oct 2020 18:51:11 +0900</pubDate>
       
-      <guid>https://k-kaz-git.github.io/tags/netlify/</guid>
+      <guid>http://localhost:1313/tags/netlify/</guid>
       <description></description>
     </item><item>
       <title>Tableofcontents</title>
-      <link>https://k-kaz-git.github.io/tags/tableofcontents/</link>
+      <link>http://localhost:1313/tags/tableofcontents/</link>
       <pubDate>Tue, 02 Apr 2019 19:26:27 +0900</pubDate>
       
-      <guid>https://k-kaz-git.github.io/tags/tableofcontents/</guid>
+      <guid>http://localhost:1313/tags/tableofcontents/</guid>
       <description></description>
     </item><item>
       <title>Mozc</title>
-      <link>https://k-kaz-git.github.io/tags/mozc/</link>
+      <link>http://localhost:1313/tags/mozc/</link>
       <pubDate>Sun, 31 Mar 2019 17:45:32 +0900</pubDate>
       
-      <guid>https://k-kaz-git.github.io/tags/mozc/</guid>
+      <guid>http://localhost:1313/tags/mozc/</guid>
       <description></description>
     </item><item>
       <title>Aether</title>
-      <link>https://k-kaz-git.github.io/tags/aether/</link>
+      <link>http://localhost:1313/tags/aether/</link>
       <pubDate>Mon, 18 Mar 2019 12:31:49 +0900</pubDate>
       
-      <guid>https://k-kaz-git.github.io/tags/aether/</guid>
+      <guid>http://localhost:1313/tags/aether/</guid>
       <description></description>
     </item><item>
       <title>Cupper</title>
-      <link>https://k-kaz-git.github.io/tags/cupper/</link>
+      <link>http://localhost:1313/tags/cupper/</link>
       <pubDate>Mon, 18 Mar 2019 12:31:49 +0900</pubDate>
       
-      <guid>https://k-kaz-git.github.io/tags/cupper/</guid>
+      <guid>http://localhost:1313/tags/cupper/</guid>
       <description></description>
     </item><item>
       <title>Css</title>
-      <link>https://k-kaz-git.github.io/tags/css/</link>
+      <link>http://localhost:1313/tags/css/</link>
       <pubDate>Thu, 14 Mar 2019 17:44:58 +0900</pubDate>
       
-      <guid>https://k-kaz-git.github.io/tags/css/</guid>
+      <guid>http://localhost:1313/tags/css/</guid>
       <description></description>
     </item><item>
       <title>Saas</title>
-      <link>https://k-kaz-git.github.io/tags/saas/</link>
+      <link>http://localhost:1313/tags/saas/</link>
       <pubDate>Thu, 14 Mar 2019 17:44:58 +0900</pubDate>
       
-      <guid>https://k-kaz-git.github.io/tags/saas/</guid>
+      <guid>http://localhost:1313/tags/saas/</guid>
       <description></description>
     </item><item>
       <title>Shortcodes</title>
-      <link>https://k-kaz-git.github.io/tags/shortcodes/</link>
+      <link>http://localhost:1313/tags/shortcodes/</link>
       <pubDate>Thu, 14 Mar 2019 12:42:21 +0900</pubDate>
       
-      <guid>https://k-kaz-git.github.io/tags/shortcodes/</guid>
+      <guid>http://localhost:1313/tags/shortcodes/</guid>
       <description></description>
     </item><item>
       <title>Favicon</title>
-      <link>https://k-kaz-git.github.io/tags/favicon/</link>
+      <link>http://localhost:1313/tags/favicon/</link>
       <pubDate>Sun, 10 Mar 2019 06:37:26 +0900</pubDate>
       
-      <guid>https://k-kaz-git.github.io/tags/favicon/</guid>
+      <guid>http://localhost:1313/tags/favicon/</guid>
       <description></description>
     </item><item>
       <title>Sass</title>
-      <link>https://k-kaz-git.github.io/tags/sass/</link>
+      <link>http://localhost:1313/tags/sass/</link>
       <pubDate>Mon, 04 Mar 2019 10:05:17 +0900</pubDate>
       
-      <guid>https://k-kaz-git.github.io/tags/sass/</guid>
+      <guid>http://localhost:1313/tags/sass/</guid>
       <description></description>
     </item>
   </channel>

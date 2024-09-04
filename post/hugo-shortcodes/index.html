@@ -1,106 +1,199 @@
 <!DOCTYPE html>
-<html lang="ja" dir="ltr">
-  <head>
-  <meta charset="utf-8" />
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Hugo の Shortcodes を使ってみる。 &middot; k-kaz が Hugo で遊ぶサイト</title>
-  
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-K8B8MR2Z');</script>
-  
-  <meta name="description" content="Shortcodes を使うと便利そうなので、ちょっと勉強します。" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
-  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-  <link href="https://k-kaz-git.github.io/css/katex.css" rel="stylesheet">
-  
-  
-  
-  
-  <link href="https://k-kaz-git.github.io/css/concated.min.css" rel="stylesheet">
+<html lang="ja-JP" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Shortcodes を使うと便利そうなので、ちょっと勉強します。">
+<title>Hugo の Shortcodes を使ってみる。</title>
 
-  
-  <link rel="stylesheet" href="https://k-kaz-git.github.io/sass/main.fcdea0c4becd73f2e3b2312b85bcd7ba626d441c1cde1e1b8046a6afcc4e22b8.css">
+<link rel='canonical' href='http://localhost:1313/post/hugo-shortcodes/'>
 
-  
+<link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="Hugo の Shortcodes を使ってみる。">
+<meta property='og:description' content="Shortcodes を使うと便利そうなので、ちょっと勉強します。">
+<meta property='og:url' content='http://localhost:1313/post/hugo-shortcodes/'>
+<meta property='og:site_name' content='k-kaz が Hugo で遊ぶサイト'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='hugo' /><meta property='article:tag' content='Shortcodes' /><meta property='article:published_time' content='2019-03-11T17:40:19&#43;09:00'/><meta property='article:modified_time' content='2019-03-11T17:40:19&#43;09:00'/><meta property='og:image' content='http://localhost:1313/images/computer-Programming_640.webp' />
+<meta name="twitter:title" content="Hugo の Shortcodes を使ってみる。">
+<meta name="twitter:description" content="Shortcodes を使うと便利そうなので、ちょっと勉強します。"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='http://localhost:1313/images/computer-Programming_640.webp' />
   
 
 
-  
-</head>
-  <body class="single-body">
-      
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8B8MR2Z"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  
-<nav class="nav-bar side-padding">
-  <h1 class="nav-header"><a href="https://k-kaz-git.github.io/" class="nav-text">k-kaz が Hugo で遊ぶサイト</a></h1>
-  <div class="hamburger-menu">
-    <button onclick="hamburgerMenuPressed.call(this)" aria-haspopup="true" aria-expanded="false" aria-controls="menu" aria-label="Menu">
-      <span></span>
-      <span></span>
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column compact"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="メニューを開く・閉じる">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
     </button>
-    <ul id="menu" class="hamburger-menu-overlay">
-      <li><a href="https://k-kaz-git.github.io/" class="hamburger-menu-overlay-link">Home</a></li>
-      <li class="navi-menu">- Categories -</li>
-      <li style="font-size: 0.7em;"><a href="https://k-kaz-git.github.io/categories/coding" class="hamburger-menu-overlay-link">Coding</a></li><li style="font-size: 0.7em;"><a href="https://k-kaz-git.github.io/categories/homepage" class="hamburger-menu-overlay-link">Homepage</a></li><li style="font-size: 0.7em;"><a href="https://k-kaz-git.github.io/categories/linux" class="hamburger-menu-overlay-link">Linux</a></li>
-      <li class="navi-menu">- Tags -</li>
-      <li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/aether" class="hamburger-menu-overlay-link">Aether</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/categories" class="hamburger-menu-overlay-link">Categories</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/css" class="hamburger-menu-overlay-link">Css</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/cupper" class="hamburger-menu-overlay-link">Cupper</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/favicon" class="hamburger-menu-overlay-link">Favicon</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/github" class="hamburger-menu-overlay-link">Github</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/github-pages" class="hamburger-menu-overlay-link">Github pages</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/hugo" class="hamburger-menu-overlay-link">Hugo</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/markdown" class="hamburger-menu-overlay-link">Markdown</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/mermaid" class="hamburger-menu-overlay-link">Mermaid</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/mozc" class="hamburger-menu-overlay-link">Mozc</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/netlify" class="hamburger-menu-overlay-link">Netlify</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/pagermod" class="hamburger-menu-overlay-link">Pagermod</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/saas" class="hamburger-menu-overlay-link">Saas</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/sass" class="hamburger-menu-overlay-link">Sass</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/shortcodes" class="hamburger-menu-overlay-link">Shortcodes</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/snippet" class="hamburger-menu-overlay-link">Snippet</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/stylesheet" class="hamburger-menu-overlay-link">Stylesheet</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/svg" class="hamburger-menu-overlay-link">Svg</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/tableofcontents" class="hamburger-menu-overlay-link">Tableofcontents</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/tags" class="hamburger-menu-overlay-link">Tags</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/theme" class="hamburger-menu-overlay-link">Theme</a></li><li style="font-size: 0.5em;"><a href="https://k-kaz-git.github.io/tags/vscode" class="hamburger-menu-overlay-link">Vscode</a></li>
-    </ul>
-  </div>
-</nav>
-    <main class="content side-text-padding">
-      <article class="post ">
-        <header class="post-header">
-        	<h1 class="post-title">Hugo の Shortcodes を使ってみる。</h1>
-          <p class="post-date">
-            Posted <time datetime="2019-03-11">2019-03-11</time>
-             / Update 2023-01-30</p>
-             <div class="card-subtext muted-text li-line">
-               <a class="cat" href="/categories/homepage">homepage</a>
-               <a class="tag" href="/tags/hugo">#hugo</a>  <a class="tag" href="/tags/Shortcodes">#Shortcodes</a> 
-             </div>
-        </header>
+
+    <header>
         
-        <picture class="post-figure">
-            <source srcset="https://k-kaz-git.github.io/images/computer-Programming_640.webp" type="image/webp">
-            <source srcset="https://k-kaz-git.github.io/images/computer-Programming_640.webp">
-          <img src="https://k-kaz-git.github.io/images/computer-Programming_640.webp" alt="Shortcodes を覚えよう。">
-        </picture>
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu13739649187745961479.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
         
-        <aside>
-          <h2>目次</h2>
-            <nav id="TableOfContents">
-  <ul>
-    <li><a href="#shortcodes-って何">Shortcodes って何？</a></li>
-    <li><a href="#使い方">使い方</a>
-      <ul>
-        <li><a href="#基本形">基本形</a></li>
-        <li><a href="#変数を使う">変数を使う</a></li>
-        <li><a href="#変数を分かりやすく文字にする">変数を分かりやすく文字にする</a></li>
-        <li><a href="#開始タグと終了タグを入れる">開始タグと終了タグを入れる</a></li>
-        <li><a href="#特定の文字列を置換する">特定の文字列を置換する</a></li>
-      </ul>
-    </li>
-    <li><a href="#shortcodes用のhtmlについて">Shortcodes用のHTMlについて</a>
-      <ul>
-        <li><a href="#if文条件分岐">if文（条件分岐）</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
-        </aside>
-        <h2 id="shortcodes-って何">Shortcodes って何？</h2>
-<p>Hugo では、簡潔に Markdown が書けるように、Shortcodes というものが用意されています。<br>
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">k-kaz が Hugo で遊ぶサイト</a></h1>
+            <h2 class="site-description"></h2>
+        </div>
+    </header><ol class="menu" id="main-menu">
+        
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>ダークモード</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/post/hugo-shortcodes/">
+                
+                    <img src="/images/computer-Programming_640.webp" loading="lazy" alt="Featured image of post Hugo の Shortcodes を使ってみる。" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/homepage/" >
+                Homepage
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/post/hugo-shortcodes/">Hugo の Shortcodes を使ってみる。</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            Shortcodes を使うと便利そうなので、ちょっと勉強します。
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Mar 11, 2019</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    読了時間: 2分
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="shortcodes-って何">Shortcodes って何？
+</h2><p>Hugo では、簡潔に Markdown が書けるように、Shortcodes というものが用意されています。<br>
 記事中でよく使う表現なんかを、別ファイルとして HTML で用意しておき、必要に応じて呼び出す感じ。</p>
-<p><a href="https://gohugo.io/content-management/shortcodes/" target="_blank">Hugo 本体で用意されているもの</a>
-、各テーマの中に用意されているもの、自分で用意するもの（自作）の3つがあります。</p>
+<p><a class="link" href="https://gohugo.io/content-management/shortcodes/"  target="_blank" rel="noopener"
+    >Hugo 本体で用意されているもの</a>、各テーマの中に用意されているもの、自分で用意するもの（自作）の3つがあります。</p>
 <p>他のテーマで気に入った Shortcodes があれば、それを別テーマに移植するのも手。<br>
 スタイルシートが絡みますので、ちょっとした編集は必要になります。<br>
 たまに、画像も使っていたりするので、それも見落とさずに必要があれば持っていきましょう。</p>
@@ -110,52 +203,52 @@
 <code>/theme/hoge-theme/layouts/shortcodes/</code></p>
 <p>自作の Shortcodes<br>
 <code>/layouts/shortcodes</code></p>
-<h2 id="使い方">使い方</h2>
-<h3 id="基本形">基本形</h3>
-<p>ごく標準的な書き方。</p>
-<script src="https://gist.github.com/k-kaz-git/83aa5e9919d9bab4fd3d83ee6532af6b.js"></script>
+<h2 id="使い方">使い方
+</h2><h3 id="基本形">基本形
+</h3><p>ごく標準的な書き方。</p>
+<!-- raw HTML omitted -->
 <p>※Markdown でショートコードを書くと、バッククォートで囲んでも実行しちゃう・・・。ということで、gist を利用。この gist 読み込みも Shortcodes で行っています。<br>
 ※<code>%</code> のところは、前を <code>&lt;</code> で、後ろを <code>&gt;</code> でも良いみたいです。</p>
 <p>ショートコード名は、別途用意している HTML のファイル名（拡張子の <code>.html</code> を除いたもの）になり、これを読み込み、実行します。</p>
 <p>例えば、red.html というファイルに下記が記述されていたとします。</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">span</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;color:red;&#34;</span>&gt;赤い字ですよ。&lt;/<span style="color:#f92672">span</span>&gt;
 </span></span></code></pre></div><p>Markdown の記事で、</p>
-<script src="https://gist.github.com/k-kaz-git/57c9a781cf43625d44270dd2e0c42494.js"></script>
+<!-- raw HTML omitted -->
 <p>と書きますと、</p>
-<p><span style="color:red;">赤い字ですよ。</span></p>
+<p><!-- raw HTML omitted -->赤い字ですよ。<!-- raw HTML omitted --></p>
 <p>が出力されます。</p>
-<h3 id="変数を使う">変数を使う</h3>
-<p>また、<code>{{.Get 0}}</code> という変数を使って、値の代入も可能です。</p>
+<h3 id="変数を使う">変数を使う
+</h3><p>また、<code>{{.Get 0}}</code> という変数を使って、値の代入も可能です。</p>
 <p>color.html というファイルに下記が記述されていた場合、</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">span</span> <span style="color:#a6e22e">sytle</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;color:{{.Get 0}};&#34;</span>&gt;文字の色を変えます。&lt;/<span style="color:#f92672">span</span>&gt;
 </span></span></code></pre></div><p>Markdown の記事で、</p>
-<script src="https://gist.github.com/k-kaz-git/b2afd861241a83822fed711f581bcc9e.js"></script>
+<!-- raw HTML omitted -->
 <p>と書けば、<code>{{.Get 0}}</code> に <code>blue</code> が代入されて</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">span</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;color:blue;&#34;</span>&gt;文字の色を変えます。&lt;/<span style="color:#f92672">span</span>&gt;
-</span></span></code></pre></div><p><span style="color:blue;">文字の色を変えます。</span></p>
+</span></span></code></pre></div><p><!-- raw HTML omitted -->文字の色を変えます。<!-- raw HTML omitted --></p>
 <p>というように。</p>
 <p>パラメーターは複数指定できますので、<code>{{.Get 0}}</code> <code>{{.Get 1}}</code> というように、数字を増やしていけばいくつでも対応できます。</p>
-<h3 id="変数を分かりやすく文字にする">変数を分かりやすく文字にする</h3>
-<p>数字だけだと数が増えた時にゴチャゴチャとしますので、分かりやすいように文字指定にするほうが良いかもしれません。</p>
-<script src="https://gist.github.com/k-kaz-git/61b0ee861abfe4fc7973975bbc3bc4aa.js"></script>
+<h3 id="変数を分かりやすく文字にする">変数を分かりやすく文字にする
+</h3><p>数字だけだと数が増えた時にゴチャゴチャとしますので、分かりやすいように文字指定にするほうが良いかもしれません。</p>
+<!-- raw HTML omitted -->
 <p><code>{{.Get &quot;src&quot;}}</code> <code>{{.Get &quot;title&quot;}}</code> で、それぞれの値を取得することができます。</p>
-<h3 id="開始タグと終了タグを入れる">開始タグと終了タグを入れる</h3>
-<p>元となる文章「何かしらの文字列」の前後に開始タグと終了タグを入れる場合はこのようにします。</p>
-<script src="https://gist.github.com/k-kaz-git/59f1832bfd28998120c2935d5f5dc88a.js"></script>
+<h3 id="開始タグと終了タグを入れる">開始タグと終了タグを入れる
+</h3><p>元となる文章「何かしらの文字列」の前後に開始タグと終了タグを入れる場合はこのようにします。</p>
+<!-- raw HTML omitted -->
 <p>html側では、「何かしらの文字列」を取得するため <code>{{.Inner}}</code> を使い、下記のように記述します。</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">span</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;color:red&#34;</span>&gt;{{.Inner}}&lt;/<span style="color:#f92672">span</span>&gt;
-</span></span></code></pre></div><h3 id="特定の文字列を置換する">特定の文字列を置換する</h3>
-<p>Netlify のほうで使っているテーマ Cupper の中に、特定の文字列を置換する Shortcodes がありました。<br>
+</span></span></code></pre></div><h3 id="特定の文字列を置換する">特定の文字列を置換する
+</h3><p>Netlify のほうで使っているテーマ Cupper の中に、特定の文字列を置換する Shortcodes がありました。<br>
 使う機会もありそうなので、こちらに書いておきます。</p>
-<h4 id="概要">概要</h4>
-<p><code>[[[</code> と <code>]]]</code> で挟まれた文字列に対して、ハイライトを付けるという Shortcodes です。</p>
+<h4 id="概要">概要
+</h4><p><code>[[[</code> と <code>]]]</code> で挟まれた文字列に対して、ハイライトを付けるという Shortcodes です。</p>
 <p><code>[[[</code> という文字列を <code>&lt;span class='highlight'&gt;</code> に置換し、<br>
 <code>]]]</code> という文字列を <code>&lt;/span&gt;</code> に置換します。</p>
-<h4 id="html-の書き方">html の書き方</h4>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>{{ $code := .Inner | htmlEscape }}
+<h4 id="html-の書き方">html の書き方
+</h4><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>{{ $code := .Inner | htmlEscape }}
 </span></span><span style="display:flex;"><span>{{ $code := replace $code &#34;[[[&#34; &#34;&lt;<span style="color:#f92672">span</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;highlight&#39;</span>&gt;&#34; }}
 </span></span><span style="display:flex;"><span>{{ $code := replace $code &#34;]]]&#34; &#34;&lt;/<span style="color:#f92672">span</span>&gt;&#34; }}
-</span></span></code></pre></div><table>
+</span></span></code></pre></div><div class="table-wrapper"><table>
 <thead>
 <tr>
 <th style="text-align:center">行数</th>
@@ -176,20 +269,20 @@
 <td><code>$code</code> を読み込み、<code>]]]</code> という文字列があれば <code>&lt;/span&gt;</code> に置換し、再度 <code>$code</code> に代入します。</td>
 </tr>
 </tbody>
-</table>
-<h4 id="記事の書き方">記事の書き方</h4>
-<p>こんな感じで。</p>
-<script src="https://gist.github.com/k-kaz-git/469318917a46ba32a810e5cac8c96817.js"></script>
-<h4 id="結果">結果</h4>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>何かしらの&lt;<span style="color:#f92672">span</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;highlight&#39;</span>&gt;文字列&lt;/<span style="color:#f92672">span</span>&gt;です。
+</table></div>
+<h4 id="記事の書き方">記事の書き方
+</h4><p>こんな感じで。</p>
+<!-- raw HTML omitted -->
+<h4 id="結果">結果
+</h4><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>何かしらの&lt;<span style="color:#f92672">span</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;highlight&#39;</span>&gt;文字列&lt;/<span style="color:#f92672">span</span>&gt;です。
 </span></span></code></pre></div><hr>
 <p>これくらい覚えておけば、ある程度自作も出来そうですね。<br>
 また何かあれば追記します。</p>
 <p>ちなみに、Youtube や Instagram の埋め込みについても、Hugo 標準の Shortcodes で、出来るようになっています。</p>
-<h2 id="shortcodes用のhtmlについて">Shortcodes用のHTMlについて</h2>
-<p>Shortcodes で利用する html の記述方法は紹介しましたが、ちょっとアレンジしたものを紹介します。</p>
-<h3 id="if文条件分岐">if文（条件分岐）</h3>
-<p>本文から受け取った値によって、1つの html 内で出力方法を変化させる方法です。</p>
+<h2 id="shortcodes用のhtmlについて">Shortcodes用のHTMlについて
+</h2><p>Shortcodes で利用する html の記述方法は紹介しましたが、ちょっとアレンジしたものを紹介します。</p>
+<h3 id="if文条件分岐">if文（条件分岐）
+</h3><p>本文から受け取った値によって、1つの html 内で出力方法を変化させる方法です。</p>
 <p>実際に行ったケース。<br>
 テキストの文字色を変化させる Shortcodes で、内容によって改行するものと、改行しないものを用意したくなりました。</p>
 <ul>
@@ -197,7 +290,7 @@
 <li>改行しないもの → 行内コンテナ（span）</li>
 </ul>
 <p>Shortcodes での記述はこちら。</p>
-<script src="https://gist.github.com/k-kaz-git/4bcefb1b31bf0e94de53a361846a887b.js"></script>
+<!-- raw HTML omitted -->
 <p>上の type=&ldquo;p&rdquo; が段落で、下の type=&ldquo;s&rdquo; が行内となります。</p>
 <p>fr という html ファイルを読み込んでいます。その中身はこちらです。</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>{{- $han := .Get &#34;type&#34; -}}
@@ -218,60 +311,249 @@
 $han の中身が &ldquo;s&rdquo; だったら、<code>&lt;span ...</code> の行を実行します。</p>
 <p><code>eq</code> というのは比較したものが <code>同じ</code> という意味です。</p>
 
-      </article>
-      <hr>
-      <p class="post-date">
-        Posted <time datetime="2019-03-11">2019-03-11</time>
-         / Update 2023-01-30</p>
-         <div class="card-subtext muted-text li-line">
-           <a class="cat" href="/categories/homepage">homepage</a>
-           <a class="tag" href="/tags/hugo">#hugo</a>  <a class="tag" href="/tags/Shortcodes">#Shortcodes</a> 
-         </div>
-    </main>
-    <nav class="end-nav side-padding">
-      
-      <a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
-  href="https://k-kaz-git.github.io/post/favicon-generator/" class="card blog-card" rel="bookmark" >
+</section>
+
+
+    <footer class="article-footer">
     
-    <div class="card-img-container">
-      <p class="card-img-overlay">Next Article</p>
-      <picture>
-        <source srcset="https://k-kaz-git.github.io/images/icon-sns_640.webp" type="image/webp">
-        <source srcset="https://k-kaz-git.github.io/images/icon-sns_640.webp">
-        <img src="https://k-kaz-git.github.io/images/icon-sns_640.webp" class="card-img" alt="ファビコンを作ります。">
-      </picture>
-    </div>
+    <section class="article-tags">
+        
+            <a href="/tags/hugo/">Hugo</a>
+        
+            <a href="/tags/shortcodes/">Shortcodes</a>
+        
+    </section>
+
+
+    </footer>
+
+
     
-  <article class="card-body">
-    <h2 class="card-title">ファビコンを作るよ。</h2>
-    <p class="card-text">Favicon Generator を使って、ファビコンを作りましょう。</p>
-    <div class="card-subtext muted-text">
-      <p>Posted <time datetime="2019-03-10">2019-03-10</time>
-      / Updated 2019-03-10</p>
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">関連するコンテンツ</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/post/hugo-netlify/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/images/hugo-netlify-network_640.webp" loading="lazy" data-key="" data-hash="/images/hugo-netlify-network_640.webp"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Hugo を Netlify で動かすよ。</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/post/hugo-markdown/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/images/computer-Programming_640.webp" loading="lazy" data-key="" data-hash="/images/computer-Programming_640.webp"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Hugo で使える Markdown の記法</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/post/hugo-how-to-use/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/images/writing-memo-note-pen_640.webp" loading="lazy" data-key="" data-hash="/images/writing-memo-note-pen_640.webp"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Hugo の使い方</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/post/hugo-custom-theme-aether/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/images/pair-love_640.webp" loading="lazy" data-key="" data-hash="/images/pair-love_640.webp"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">テーマ aether のカスタマイズ</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/post/hugo-custom-comment/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/images/speech-bubbles_640.webp" loading="lazy" data-key="" data-hash="/images/speech-bubbles_640.webp"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">コメント欄を削除</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
     </div>
-    <div class="card-subtext muted-text li-line">
-      <span class="box-gray">homepage</span> 
-      <span class="box-gray">#favicon</span> 
-    </div>
-  </article>
-</a>
-      
-      <a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
-  href="https://k-kaz-git.github.io/" class="card home-card" style="background-image: url( https://k-kaz-git.github.io/img/grey-cloud.jpg )" rel="bookmark" >
-  Home
-</a>
-    </nav>
-    <footer>
-    <p style="text-align: center">姉妹サイト<br><a class="btn-link" href="https://k-kaz.net/" target="_blank">k-kaz ブログ</a></p>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2024 k-kaz が Hugo で遊ぶサイト
+    </section>
+    
+    <section class="powerby">
+        <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> で構築されています。 <br />
+        テーマ <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.26.0">Stack</a></b> は <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> によって設計されています。
+    </section>
 </footer>
+
+
     
-  <script defer src="https://k-kaz-git.github.io/js/katex.js"></script>
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
 
+    
+    <div class="pswp__bg"></div>
 
-  <script defer src="https://k-kaz-git.github.io/js/auto-render.js" onload="renderMathInElement(document.body);"></script>
+    
+    <div class="pswp__scroll-wrap">
 
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
 
-<script src="https://k-kaz-git.github.io/js/core.min.js"></script>
+        
+        <div class="pswp__ui pswp__ui--hidden">
 
-  </body>
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
 </html>

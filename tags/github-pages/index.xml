@@ -1,21 +1,116 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Github Pages - k-kaz が Hugo で遊ぶサイト</title>
-    <link>https://k-kaz-git.github.io/tags/github-pages/</link>
-    <description>Recent content in Github Pages on k-kaz が Hugo で遊ぶサイト</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>ja</language>
-    <lastBuildDate>Mon, 30 Jan 2023 12:43:46 +0900</lastBuildDate>
-    
-        <atom:link href="https://k-kaz-git.github.io/tags/github-pages/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Github Pages 環境の復旧（ローカル）</title>
-      <link>https://k-kaz-git.github.io/post/githubpages/</link>
-      <pubDate>Mon, 30 Jan 2023 12:43:46 +0900</pubDate>
-      
-      <guid>https://k-kaz-git.github.io/post/githubpages/</guid>
-      <description>自分用の備忘録として</description>
-    </item>
-  </channel>
+    <channel>
+        <title>Github Pages on k-kaz が Hugo で遊ぶサイト</title>
+        <link>https://k-kaz-git.github.io/tags/github-pages/</link>
+        <description>Recent content in Github Pages on k-kaz が Hugo で遊ぶサイト</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>ja</language>
+        <copyright>k-kaz</copyright>
+        <lastBuildDate>Mon, 30 Jan 2023 12:43:46 +0900</lastBuildDate><atom:link href="https://k-kaz-git.github.io/tags/github-pages/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Github Pages 環境の復旧（ローカル）</title>
+        <link>https://k-kaz-git.github.io/p/github-pages-%E7%92%B0%E5%A2%83%E3%81%AE%E5%BE%A9%E6%97%A7%E3%83%AD%E3%83%BC%E3%82%AB%E3%83%AB/</link>
+        <pubDate>Mon, 30 Jan 2023 12:43:46 +0900</pubDate>
+        
+        <guid>https://k-kaz-git.github.io/p/github-pages-%E7%92%B0%E5%A2%83%E3%81%AE%E5%BE%A9%E6%97%A7%E3%83%AD%E3%83%BC%E3%82%AB%E3%83%AB/</guid>
+        <description>&lt;img src="https://k-kaz-git.github.io/images/k-kaz-black-w.svg" alt="Featured image of post Github Pages 環境の復旧（ローカル）" /&gt;&lt;h2 id=&#34;おことわり&#34;&gt;おことわり
+&lt;/h2&gt;&lt;p&gt;こちらのページは、完全に自分向けの備忘録として書いています。&lt;br&gt;
+何かを期待されて訪問された方、ごめんなさい。&lt;br&gt;
+まったく役に立たないかと思われます・・・。&lt;/p&gt;
+&lt;h2 id=&#34;前提&#34;&gt;前提
+&lt;/h2&gt;&lt;p&gt;前提として、&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Github Pages の環境を構築済み（サイト公開済み）&lt;/li&gt;
+&lt;li&gt;ローカル環境をまっさらにした&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;という感じになります。&lt;/p&gt;
+&lt;p&gt;これを書いているのも、自分のパソコンを新しくしたときに2時間ほどハマったからで、未来の自分に向けてという感じです。&lt;/p&gt;
+&lt;h2 id=&#34;環境構築の簡単な流れ&#34;&gt;環境構築の簡単な流れ
+&lt;/h2&gt;&lt;h3 id=&#34;基本編&#34;&gt;基本編
+&lt;/h3&gt;&lt;p&gt;Github に Hugo で作ったデータを入れる手順はこんな感じ。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;ローカル
+&lt;ol&gt;
+&lt;li&gt;Hugo をインストールする&lt;/li&gt;
+&lt;li&gt;テーマを決めて所定の場所に置く&lt;/li&gt;
+&lt;li&gt;設定ファイル &lt;code&gt;config.toml&lt;/code&gt; を適宜修正する&lt;/li&gt;
+&lt;li&gt;記事を書く&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;Github
+&lt;ol&gt;
+&lt;li&gt;空のリポジトリ（全）を作る&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;ローカル
+&lt;ol&gt;
+&lt;li&gt;空のリポジトリ（全）にプッシュする&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;github-pages-編&#34;&gt;Github Pages 編
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;Github
+&lt;ol&gt;
+&lt;li&gt;空のリポジトリ（公開用）を作る ※Github Pages 用&lt;/li&gt;
+&lt;li&gt;リポジトリの設定画面から、page の設定をする
+&lt;ol&gt;
+&lt;li&gt;ソースの場所を選んだりします。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;ローカル
+&lt;ol&gt;
+&lt;li&gt;public フォルダをサブモジュール化する
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;git submodule add git@github.com:ユーザー名/空のリポジトリ（公開用）.git public&lt;/code&gt;&lt;br&gt;
+たぶん、public は空にしておかないとダメ。&lt;br&gt;
+空にする場合は &lt;code&gt;git rm -r public&lt;/code&gt; で。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;いつも通りプッシュする&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;ちょっと解説&#34;&gt;ちょっと解説
+&lt;/h3&gt;&lt;h4 id=&#34;ファイル関係&#34;&gt;ファイル関係
+&lt;/h4&gt;&lt;p&gt;Hugo で作成する記事は、基本的に &lt;code&gt;content/post&lt;/code&gt; の中に、Markdown 形式で保存していきます。&lt;br&gt;
+&lt;code&gt;hugo&lt;/code&gt; というコマンドを実行すると &lt;code&gt;public&lt;/code&gt; の中に、html などサイト公開用のファイル群が生成されます。&lt;/p&gt;
+&lt;p&gt;Github Pages で使うのは &lt;code&gt;public&lt;/code&gt; の中にあるファイルで、それ以外のファイルは不要です。&lt;/p&gt;
+&lt;h4 id=&#34;連携&#34;&gt;連携
+&lt;/h4&gt;&lt;p&gt;生成されたファイル群を毎回手作業で公開用リポジトリにコピーするのは面倒です。&lt;br&gt;
+そこで、サブモジュール化という手段をとっています。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;git submodule add git@github.com:ユーザー名/空のリポジトリ（公開用）.git public&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;これをすることで、自動的に &lt;code&gt;public&lt;/code&gt; の中身が、公開用リポジトリに入っていきます。&lt;br&gt;
+なんて便利なんだ。&lt;/p&gt;
+&lt;h2 id=&#34;ローカル環境をまっさらにしたとき&#34;&gt;ローカル環境をまっさらにしたとき
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;ローカル
+&lt;ol&gt;
+&lt;li&gt;リポジトリ（全）を持ってくる
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Git clone&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;サブモジュール化をする
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;git submodule add git@github.com:ユーザー名/空のリポジトリ（公開用）.git public&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;以上。&lt;/p&gt;
+&lt;h3 id=&#34;少し悩んだ&#34;&gt;少し悩んだ
+&lt;/h3&gt;&lt;p&gt;リポジトリ（全）がそのまま公開されると勘違いして、プッシュしてデータも更新されたのに、なんでサイトの表示が更新されないのか悩んでいました。&lt;br&gt;
+Github Pages 用にリポジトリが分かれていたのをすっかり忘れていたのです。&lt;/p&gt;
+&lt;p&gt;あとで気付いたんですが、どうやってそちらのリポジトリにデータを送っていたのか忘れていて、四苦八苦しました。&lt;br&gt;
+これはサブモジュールを使っていたんですね。&lt;/p&gt;
+&lt;p&gt;まぁ、4年ほど前の環境ですし、環境って1回作ったらなかなか触ることもないので、忘れるのも仕方ないですね。年齢的なアレもあるし。&lt;/p&gt;
+&lt;p&gt;そんなときにここの記事を思い出せれば良しということで。&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
 </rss>
