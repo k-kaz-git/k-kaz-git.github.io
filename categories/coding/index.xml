@@ -47,6 +47,7 @@ giscusは、GitHubのDiscussions機能を使います。&lt;/p&gt;
 &lt;li&gt;Issuesに入っているコメントをDiscussionsへ移行する方法もあります。&lt;br&gt;
 &lt;a class=&#34;link&#34; href=&#34;https://docs.github.com/en/discussions/managing-discussions-for-your-community/moderating-discussions#converting-an-issue-to-a-discussion&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Moderating discussions - GitHub Docs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;設置するサイトが複数ある場合は、リポジトリも同じ数だけ用意します。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h4 id=&#34;discussionsを有効にする&#34;&gt;Discussionsを有効にする
 &lt;/h4&gt;&lt;p&gt;コメント格納用リポジトリで、Discussionsの機能を有効にします。&lt;/p&gt;
@@ -55,7 +56,8 @@ giscusは、GitHubのDiscussions機能を使います。&lt;/p&gt;
 &lt;li&gt;General内のFeaturesにあるDiscussionsを有効&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h3 id=&#34;giscusアプリ&#34;&gt;giscusアプリ
-&lt;/h3&gt;&lt;h4 id=&#34;インストール&#34;&gt;インストール
+&lt;/h3&gt;&lt;p&gt;リポジトリ毎にインストールする必要がありますので、複数設置する場合はご注意を。&lt;/p&gt;
+&lt;h4 id=&#34;インストール&#34;&gt;インストール
 &lt;/h4&gt;&lt;ol&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/apps/giscus&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;GitHub Apps - giscus&lt;/a&gt; へ移動&lt;/li&gt;
