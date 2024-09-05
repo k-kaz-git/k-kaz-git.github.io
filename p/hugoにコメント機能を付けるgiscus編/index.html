@@ -224,9 +224,10 @@
             <li><a href="#設定コード取得">設定（コード取得）</a></li>
           </ol>
         </li>
-        <li><a href="#hugo">Hugo</a>
+        <li><a href="#hugoテーマ">Hugo（テーマ）</a>
           <ol>
-            <li><a href="#コード挿入">コード挿入</a></li>
+            <li><a href="#papermod-の場合">PaperMod の場合</a></li>
+            <li><a href="#stack-の場合">Stack の場合</a></li>
           </ol>
         </li>
       </ol>
@@ -388,8 +389,8 @@ giscusは、GitHubのDiscussions機能を使います。</p>
 <li>自分好みに設定</li>
 <li>出来上がったコードを控える</li>
 </ol>
-<h3 id="hugo">Hugo
-</h3><h4 id="コード挿入">コード挿入
+<h3 id="hugoテーマ">Hugo（テーマ）
+</h3><h4 id="papermod-の場合">PaperMod の場合
 </h4><ol>
 <li>コメント機能を表示したい場所へ先程のコードを挿入</li>
 </ol>
@@ -439,13 +440,65 @@ giscusは、GitHubのDiscussions機能を使います。</p>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>コメントで説明を入れてみましたが、違っていたらすいません。</p>
-<p>先程取得したコードをそのまま使っています。<br>
+<p>先ほど取得したコードをそのまま使っています。<br>
 修正など不要で利用できています。ありがたや。</p>
-<h2 id="所感">所感
+<h4 id="stack-の場合">Stack の場合
+</h4><p>コメント機能は標準で付いているので、configを触るだけで大丈夫でした。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">// config.yml
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">params</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">comments</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">enabled</span><span class="o">:</span> <span class="kc">true</span>     <span class="c1">// コメント機能を有効に
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nx">provider</span><span class="o">:</span> <span class="nx">giscus</span>  <span class="c1">// どのコメント機能を使うか選択
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nx">giscus</span><span class="o">:</span>           <span class="c1">// providerで選択する機能名
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="nx">repo</span><span class="o">:</span> <span class="nx">hoge</span><span class="o">/</span><span class="nx">hoge</span><span class="o">-</span><span class="nx">repo</span>                <span class="c1">// ユーザー名と保管用リポジトリ名
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="nx">repoID</span><span class="o">:</span> <span class="nx">hoge</span><span class="o">-</span><span class="nx">repo</span><span class="o">-</span><span class="nx">ID</span>                <span class="c1">// 自動発行されるリポジトリのID
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="nx">category</span><span class="o">:</span> <span class="nx">General</span>                   <span class="c1">// Discussions内でどのカテゴリに保管するか
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="nx">categoryID</span><span class="o">:</span> <span class="nx">hoge</span><span class="o">-</span><span class="nx">cat</span><span class="o">-</span><span class="nx">ID</span>             <span class="c1">// カテゴリのID
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="nx">mapping</span><span class="o">:</span> <span class="nx">title</span>                      <span class="c1">// 保管時の表題となるもの（タイトル、URL等）
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="nx">lightTheme</span><span class="o">:</span> <span class="nx">preferred_color_scheme</span>  <span class="c1">// ライトモードのときのテーマカラー（ここではモードで自動調整？）
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="nx">darkTheme</span><span class="o">:</span> <span class="nx">preferred_color_scheme</span>   <span class="c1">// ダークモードのときのテーマカラー（ここではモードで自動調整？）
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="nx">lang</span><span class="o">:</span> <span class="nx">ja</span>                            <span class="c1">// 項目がなかったので自分で追加し、メッセージ等を日本語に
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="nx">reactionsEnabled</span><span class="o">:</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">emitMetadata</span><span class="o">:</span> <span class="mi">0</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="所感">所感
 </h2><p>難しいことは何もなく、簡単にコメント機能の設置ができました。</p>
-<p>今回設置したのは下記サイトになります。<br>
-<a class="link" href="https://k-kaz.net/blog2/"  target="_blank" rel="noopener"
-    >k-kaz が好きなことを書く</a></p>
+<p>今回設置したのは下記サイトになります。</p>
+<ul>
+<li>PagerMod
+<ul>
+<li><a class="link" href="https://k-kaz.net/blog2/"  target="_blank" rel="noopener"
+    >k-kaz が好きなことを書く</a></li>
+</ul>
+</li>
+<li>Stack
+<ul>
+<li><a class="link" href="https://k-kaz-git.github.io/"  target="_blank" rel="noopener"
+    >k-kaz が Hugo で遊ぶサイト</a></li>
+</ul>
+</li>
+</ul>
 
 </section>
 
@@ -602,7 +655,7 @@ giscusは、GitHubのDiscussions機能を使います。</p>
     data-emit-metadata="0"
     data-input-position="top"
     data-theme="preferred_color_scheme"
-    data-lang="en"
+    data-lang="ja"
     crossorigin="anonymous"
     async
 ></script>
