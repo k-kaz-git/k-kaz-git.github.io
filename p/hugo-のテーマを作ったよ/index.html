@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://k-kaz-git.github.io/p/hugo-%E3%81%AE%E3%83%86%E3%83%BC%E3%83%9E%E3%82%92%E4%BD%9C%E3%81%A3%E3%81%9F%E3%82%88/'>
 
-<link rel="stylesheet" href="/scss/style.min.43289f33a995fb4bc83e665a1a22504b7eecefd3dcf3f9ecc83ed51746ad75d3.css"><meta property='og:title' content="Hugo のテーマを作ったよ。">
+<link rel="stylesheet" href="/scss/style.min.59f6914fefaa7fd6a3ceb1acf06074a3b888638c4a561a88453fcb5504879eaa.css"><meta property='og:title' content="Hugo のテーマを作ったよ。">
 <meta property='og:description' content="Hugo のテーマを自作してみました。途中で放り投げたけど（笑）">
 <meta property='og:url' content='https://k-kaz-git.github.io/p/hugo-%E3%81%AE%E3%83%86%E3%83%BC%E3%83%9E%E3%82%92%E4%BD%9C%E3%81%A3%E3%81%9F%E3%82%88/'>
 <meta property='og:site_name' content='k-kaz が Hugo で遊ぶサイト'>
@@ -16,8 +16,6 @@
     <meta name="twitter:image" content='https://k-kaz-git.github.io/images/horse-colorful_640.webp' />
     <link rel="shortcut icon" href="/favicon.ico" />
 
-  
-    
       <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-K8B8MR2Z"></script>
       <script>
         var doNotTrack = false;
@@ -32,10 +30,6 @@
           gtag('config', 'GTM-K8B8MR2Z');
         }
       </script>
-    
-  
-
-
     </head>
     <body class="
     article-page
@@ -395,7 +389,8 @@
 </h2><p>テーマ作りは途中でやめましたが、やり方をこちらに残しておきましょう。<br>
 またいつか暇な時に続きをしたくなるかもしれないし。</p>
 <h3 id="ローカルサイトと空テーマの準備">ローカルサイトと空テーマの準備
-</h3><div class="highlight"><div class="chroma">
+</h3><div>
+    <div class="code-block-content"><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
@@ -404,13 +399,15 @@
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="o">$</span> <span class="nt">hugo</span> <span class="nt">new</span> <span class="nt">site</span> <span class="nt">hoge</span>            <span class="c">/* サイト hoge 作成 */</span>
 </span></span><span class="line"><span class="cl"><span class="o">$</span> <span class="nt">cd</span> <span class="nt">hoge</span>
-</span></span><span class="line"><span class="cl"><span class="o">$</span> <span class="nt">hugo</span> <span class="nt">new</span> <span class="nt">theme</span> <span class="nt">hoge-theme</span>     <span class="c">/* 空テーマ hoge-theme 作成 */</span>
-</span></span></code></pre></td></tr></table>
+</span></span><span class="line"><span class="cl"><span class="o">$</span> <span class="nt">hugo</span> <span class="nt">new</span> <span class="nt">theme</span> <span class="nt">hoge-theme</span>     <span class="c">/* 空テーマ hoge-theme 作成 */</span></span></span></code></pre></td></tr></table>
 </div>
+</div>
+    </div>
 </div><h3 id="テーマ内で最低限必要なもの">テーマ内で最低限必要なもの
 </h3><p>最低限って書くと、ヘッダーもフッターも要らないけど・・・一応書いておく（笑）<br>
 <code>line-hight</code> の関係で、線がブツブツ切れていますが、許してください。</p>
-<div class="highlight"><div class="chroma">
+<div>
+    <div class="code-block-content"><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
@@ -437,9 +434,10 @@
 </span></span><span class="line"><span class="cl">│   └──_default  
 </span></span><span class="line"><span class="cl">│           baseof.html  <span class="c">&lt;!-- ページの元で各種パーツを読み込む --&gt;</span>
 </span></span><span class="line"><span class="cl">│           list.html  <span class="c">&lt;!-- 記事一覧出力 --&gt;</span>
-</span></span><span class="line"><span class="cl">│           single.html  <span class="c">&lt;!-- 投稿記事出力 --&gt;</span>
-</span></span></code></pre></td></tr></table>
+</span></span><span class="line"><span class="cl">│           single.html  <span class="c">&lt;!-- 投稿記事出力 --&gt;</span></span></span></code></pre></td></tr></table>
 </div>
+</div>
+    </div>
 </div><h3 id="簡単に構成を書く">簡単に構成を書く
 </h3><p><code>baseof.html</code> が、すべての <code>html</code> の親玉で、その中身はこんな感じになっています。</p>
 <p>頭 <code>head.html</code><br>
@@ -447,7 +445,8 @@
 足 <code>footer.html</code></p>
 <p>バラバラで作ってあるパーツを、必要なときに、必要な場所で読み込むことで、1枚のページを作り上げています。</p>
 <p><code>baseof.html</code> の例</p>
-<div class="highlight"><div class="chroma">
+<div>
+    <div class="code-block-content"><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
@@ -490,9 +489,10 @@
 </span></span><span class="line"><span class="cl">  {{ end }}
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
-</span></span></code></pre></td></tr></table>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span></span></span></code></pre></td></tr></table>
 </div>
+</div>
+    </div>
 </div><p>各パーツに機能を持たせて、それを呼び出しているため、非常にシンプルな構成となります。</p>
 <p>各パーツに書いておくコマンド → <code>{{ define &quot;hoge&quot; }}...{{ end }}</code></p>
 <p>呼び出し用コマンド → <code>{{ block &quot;hoge&quot; . }}{{ end }}</code></p>
@@ -518,7 +518,8 @@
 </h3><p>新たにテーマを作り直しながら、気付いたことを書いておきます。</p>
 <h4 id="netlify-で-baseofhtml-を使う場合は注意">netlify で baseof.html を使う場合は注意
 </h4><p>こうやって、<code>{{ define &quot;header&quot; }}</code> を入れた <code>header.html</code> を読み込んだんですけど、</p>
-<div class="highlight"><div class="chroma">
+<div>
+    <div class="code-block-content"><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
@@ -527,9 +528,10 @@
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    {{ block &#34;header&#34; . }}{{ end }}
-</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
-</span></span></code></pre></td></tr></table>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span></span></span></code></pre></td></tr></table>
 </div>
+</div>
+    </div>
 </div><p>ローカルサーバーではうまく表示されるのに、<strong>netlify だとうまく表示されない。</strong></p>
 <p>具体的には、ファイルを読み込めずに <code>&lt;head&gt;</code> の中身が空になります。
 正確に書くと、netlify で生成した際の Hugo バージョンがメタ情報として載るだけ。</p>
@@ -540,25 +542,29 @@
 それ以下については、基準に対して <code>rem</code> で指定することで調整すると。</p>
 <p>その中で、一番、理想的なのがこれかなと思いました。
 横幅全体を 32 で割ったサイズ。</p>
-<div class="highlight"><div class="chroma">
+<div>
+    <div class="code-block-content"><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="nt">font-size</span><span class="o">:</span> <span class="nt">calc</span><span class="o">(</span><span class="nt">100vw</span> <span class="o">/</span> <span class="nt">32</span><span class="o">);</span>
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="nt">font-size</span><span class="o">:</span> <span class="nt">calc</span><span class="o">(</span><span class="nt">100vw</span> <span class="o">/</span> <span class="nt">32</span><span class="o">);</span></span></span></code></pre></td></tr></table>
 </div>
+</div>
+    </div>
 </div><p>試したところ、モバイル系は良かったんですが、PC の大画面で見ると、フォントが大きくなり過ぎて困る。
 rem で調整するのも当時（昨日だけど）は面倒でした。</p>
 <p>その後、cupper でも使われていた下記にしました。</p>
-<div class="highlight"><div class="chroma">
+<div>
+    <div class="code-block-content"><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="nt">font-size</span><span class="o">:</span> <span class="nt">calc</span><span class="o">(</span><span class="nt">1em</span> <span class="o">+</span> <span class="nt">0</span><span class="p">.</span><span class="nc">33vw</span><span class="o">);</span>
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="nt">font-size</span><span class="o">:</span> <span class="nt">calc</span><span class="o">(</span><span class="nt">1em</span> <span class="o">+</span> <span class="nt">0</span><span class="p">.</span><span class="nc">33vw</span><span class="o">);</span></span></span></code></pre></td></tr></table>
 </div>
+</div>
+    </div>
 </div><p>基本となるサイズ（1em = 16px だっけ？）に対し、画面の大きさにあわせてプラスをしていく方法。
 こちらのほうが、個人的には微調整がしやすかったです。（<strong>昨日苦労したのが役に立っただけ疑惑あり</strong> ）</p>
 <p>px で直接指定するのが一番楽っていえば楽なんですけど、<strong>レスポンシブデザイン</strong> の呪いが。</p>
@@ -566,7 +572,8 @@ rem で調整するのも当時（昨日だけど）は面倒でした。</p>
 </h4><p>PC用のスタイルを定義して、その後にモバイルの定義かと思っていましたが、逆でありました。
 先にモバイルです。今はモバイル優先で何事も考えたほうが良さそうです。</p>
 <p>モバイルのところは普通にスタイルシートを書いて、一通り終わったら PC の番です。</p>
-<div class="highlight"><div class="chroma">
+<div>
+    <div class="code-block-content"><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
@@ -581,9 +588,10 @@ rem で調整するのも当時（昨日だけど）は面倒でした。</p>
 </span></span><span class="line"><span class="cl">  <span class="nt">body</span> <span class="p">{}</span>
 </span></span><span class="line"><span class="cl">  <span class="nt">h1</span> <span class="p">{}</span>
 </span></span><span class="line"><span class="cl">  <span class="nt">h2</span> <span class="p">{}</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></td></tr></table>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></td></tr></table>
 </div>
+</div>
+    </div>
 </div><p>面倒なので中身は空にしましたけど、モバイルの指定と変えたい部分（特にフォントサイズ）だけをここで定義していきます。
 同じようなことをスタイルシートの上部と下部で書いていきます。だらだらと長くなります（笑）</p>
 <p>あと、同じ定義をした場合は下のほうが優先されるようです。<br>

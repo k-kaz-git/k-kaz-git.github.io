@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://k-kaz-git.github.io/p/hugo-%E3%81%AE%E7%9B%AE%E6%AC%A1%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E8%80%83%E3%81%88%E3%82%8B/'>
 
-<link rel="stylesheet" href="/scss/style.min.43289f33a995fb4bc83e665a1a22504b7eecefd3dcf3f9ecc83ed51746ad75d3.css"><meta property='og:title' content="Hugo の目次について考える">
+<link rel="stylesheet" href="/scss/style.min.59f6914fefaa7fd6a3ceb1acf06074a3b888638c4a561a88453fcb5504879eaa.css"><meta property='og:title' content="Hugo の目次について考える">
 <meta property='og:description' content="Hugo に目次を入れようと思ったのです。">
 <meta property='og:url' content='https://k-kaz-git.github.io/p/hugo-%E3%81%AE%E7%9B%AE%E6%AC%A1%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E8%80%83%E3%81%88%E3%82%8B/'>
 <meta property='og:site_name' content='k-kaz が Hugo で遊ぶサイト'>
@@ -16,8 +16,6 @@
     <meta name="twitter:image" content='https://k-kaz-git.github.io/images/hugo-tableofcontents-menu.webp' />
     <link rel="shortcut icon" href="/favicon.ico" />
 
-  
-    
       <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-K8B8MR2Z"></script>
       <script>
         var doNotTrack = false;
@@ -32,10 +30,6 @@
           gtag('config', 'GTM-K8B8MR2Z');
         }
       </script>
-    
-  
-
-
     </head>
     <body class="
     article-page
@@ -335,17 +329,20 @@
 <p><strong>それすなわち、目次ですね。</strong></p>
 <h3 id="使い方">使い方
 </h3><p><code>single.html</code> なんかの表示したい部分にこれを追記します。</p>
-<div class="highlight"><div class="chroma">
+<div>
+    <div class="code-block-content"><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">{{ .TableOfContents }}
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">{{ .TableOfContents }}</span></span></code></pre></td></tr></table>
 </div>
+</div>
+    </div>
 </div><p>たったこれだけです。</p>
 <h3 id="出力サンプル">出力サンプル
-</h3><div class="highlight"><div class="chroma">
+</h3><div>
+    <div class="code-block-content"><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
@@ -392,9 +389,10 @@
 </span></span><span class="line"><span class="cl">      <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">nav</span><span class="p">&gt;</span>
-</span></span></code></pre></td></tr></table>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">nav</span><span class="p">&gt;</span></span></span></code></pre></td></tr></table>
 </div>
+</div>
+    </div>
 </div><p><code>&lt;nav id=&quot;TableOfContents&quot;&gt;</code> というタグで囲まれたリストが出来上がります。<br>
 あとはお好みのスタイルを適用してあげるだけ。</p>
 <h3 id="考慮すべき点">考慮すべき点
@@ -406,7 +404,8 @@
     >公式サイト</a> に記述があります。<br>
 短い記事であれば目次は要らんでしょうという考え方かな。</p>
 <p>if文で文字数の判断をして、出す出さないを決めています。</p>
-<div class="highlight"><div class="chroma">
+<div>
+    <div class="code-block-content"><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
@@ -425,14 +424,16 @@
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">header</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    {{.TableOfContents}}
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">aside</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">{{ end }}
-</span></span></code></pre></td></tr></table>
+</span></span><span class="line"><span class="cl">{{ end }}</span></span></code></pre></td></tr></table>
 </div>
+</div>
+    </div>
 </div><h4 id="記事毎にフラグを立てる">記事毎にフラグを立てる
 </h4><p>自作テーマで立ち上げている Nerlify のほう <a class="link" href="https://k-kaz.netlify.com"  target="_blank" rel="noopener"
     >k-kaz が好きなことを書くサイト</a> はコレを採用しています。</p>
 <p><code>single.html</code> にはこのように記述。</p>
-<div class="highlight"><div class="chroma">
+<div>
+    <div class="code-block-content"><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
@@ -445,18 +446,21 @@
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">aside</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  {{ .TableOfContents }}
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">aside</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">{{ end }}
-</span></span></code></pre></td></tr></table>
+</span></span><span class="line"><span class="cl">{{ end }}</span></span></code></pre></td></tr></table>
 </div>
+</div>
+    </div>
 </div><p>記事 <code>hoge.md</code> のパラメータ部分に追加。</p>
-<div class="highlight"><div class="chroma">
+<div>
+    <div class="code-block-content"><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-md" data-lang="md"><span class="line"><span class="cl">toc: true
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-md" data-lang="md"><span class="line"><span class="cl">toc: true</span></span></code></pre></td></tr></table>
 </div>
+</div>
+    </div>
 </div><p>この2つをセットにして、記事の <code>toc</code> というパラメータが <code>true</code> なら、<code>{{ .TableOfContents }}</code> を実行するようにしています。実行したくなければ <code>false</code> としておきます。</p>
 <p>また、毎回書くのも面倒なので、<code>archetypes/post.md</code> という記事のテンプレートファイルに予め入れました。</p>
 <h4 id="ちなみにこのサイトでは">ちなみにこのサイトでは・・・
@@ -466,7 +470,8 @@
 </h4><p>これまで html に直接書いていたんですが、<code>toc: false</code> にしても、”目次” だけ出てきちゃうんですよね。<br>
 <code>{{ .TableOfContents }}</code> のところを <code>{{ partial &quot;toc.html&quot; . }}</code> として、別途用意した <code>toc.html</code> の中で ”目次” と書いておけば、不要なときに呼びされずに済んでスマートです。</p>
 <p>私は別ファイルを用意するのが面倒だったので、スタイルシートの中で ”目次” を呼び出すようにして、良しとしました。（横着）</p>
-<div class="highlight"><div class="chroma">
+<div>
+    <div class="code-block-content"><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
@@ -475,9 +480,10 @@
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="nt">aside</span><span class="p">::</span><span class="nd">before</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="k">content</span><span class="p">:</span> <span class="s2">&#34;目次&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></td></tr></table>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></td></tr></table>
 </div>
+</div>
+    </div>
 </div>
 </section>
 

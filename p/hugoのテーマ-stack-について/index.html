@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="触り始めたのでまとめていく">
+<title>Hugoのテーマ Stack について</title>
+
+<link rel='canonical' href='http://localhost:1313/p/hugo%E3%81%AE%E3%83%86%E3%83%BC%E3%83%9E-stack-%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/'>
+
+<link rel="stylesheet" href="/scss/style.min.59f6914fefaa7fd6a3ceb1acf06074a3b888638c4a561a88453fcb5504879eaa.css"><meta property='og:title' content="Hugoのテーマ Stack について">
+<meta property='og:description' content="触り始めたのでまとめていく">
+<meta property='og:url' content='http://localhost:1313/p/hugo%E3%81%AE%E3%83%86%E3%83%BC%E3%83%9E-stack-%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/'>
+<meta property='og:site_name' content='k-kaz が Hugo で遊ぶサイト'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2024-09-05T12:48:18&#43;09:00'/><meta property='article:modified_time' content='2024-09-05T12:48:18&#43;09:00'/><meta property='og:image' content='http://localhost:1313/images/hugo-theme-stack.avif' />
+<meta name="twitter:title" content="Hugoのテーマ Stack について">
+<meta name="twitter:description" content="触り始めたのでまとめていく"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='http://localhost:1313/images/hugo-theme-stack.avif' />
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-K8B8MR2Z"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'GTM-K8B8MR2Z');
+        }
+      </script>
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="メニューを開く・閉じる">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/images/android-chrome-192x192_hu5450162830773684134.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">k-kaz が Hugo で遊ぶサイト</a></h1>
+            <h2 class="site-description">Hugo関連の記事ですが、初心者なので参考になりませんよ。</h2>
+        </div>
+    </header><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>ダークモード</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目次</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#はじめに">はじめに</a>
+      <ol>
+        <li><a href="#追記-2024-09-06">追記 2024-09-06</a></li>
+        <li><a href="#カスタマイズの基本">カスタマイズの基本</a>
+          <ol>
+            <li><a href="#サイト全体の基本設定">サイト全体の基本設定</a></li>
+            <li><a href="#レイアウトやスタイルの設定">レイアウトやスタイルの設定</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#全体設定-configyaml">全体設定 config.yaml</a>
+      <ol>
+        <li><a href="#パーマリンク">パーマリンク</a></li>
+        <li><a href="#ページタイトル">ページタイトル</a></li>
+        <li><a href="#1ページに表示する記事数を設定">1ページに表示する記事数を設定</a></li>
+        <li><a href="#日付のスタイル">日付のスタイル</a></li>
+        <li><a href="#コメント機能">コメント機能</a></li>
+      </ol>
+    </li>
+    <li><a href="#ウィジェットページ">ウィジェット（ページ）</a></li>
+    <li><a href="#スタイルシート">スタイルシート</a>
+      <ol>
+        <li><a href="#フォントを変える">フォントを変える</a></li>
+      </ol>
+    </li>
+    <li><a href="#レイアウト">レイアウト</a></li>
+    <li><a href="#不具合修正">不具合修正</a>
+      <ol>
+        <li><a href="#resourcestocss--csssass">resources.ToCSS → css.Sass</a>
+          <ol>
+            <li><a href="#stylehtml">style.html</a></li>
+            <li><a href="#disqusjshtml">disqusjs.html</a></li>
+          </ol>
+        </li>
+        <li><a href="#paginate--paginationpagersize">paginate → pagination.pagerSize</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/hugo%E3%81%AE%E3%83%86%E3%83%BC%E3%83%9E-stack-%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/">
+                
+                    <img src="/images/hugo-theme-stack.avif" loading="lazy" alt="Featured image of post Hugoのテーマ Stack について" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/hugo%E3%81%AE%E3%83%86%E3%83%BC%E3%83%9E-stack-%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/">Hugoのテーマ Stack について</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            触り始めたのでまとめていく
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">2024/09/05</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    読了時間: 5分
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="はじめに">はじめに
+</h2><p>当サイトで新しいテーマを採用したので、動作させるために行った内容をメモします。<br>
+正しい内容かどうか定かではないため、ご覧になる方はご注意ください。</p>
+<h3 id="追記-2024-09-06">追記 2024-09-06
+</h3><p>ほぼ書き終わったかなというタイミングで、同じ趣旨の内容を書かれているサイトを発見。<br>
+めっちゃ真似したみたいになってしまった。ごめんなさい・・・。</p>
+<p>&#x1f517; <a class="link" href="https://notes.nakurei.com/post/customize-stack-theme/#%E3%82%B5%E3%82%A4%E3%83%88%E3%81%AE%E3%83%AA%E3%83%B3%E3%82%AF%E3%81%AE%E5%A4%89%E6%9B%B4"  target="_blank" rel="noopener"
+    >Hugo Stackテーマのカスタマイズ</a></p>
+<p>↑ まずはこちらのサイトをご覧いただくほうがよろしいかと。</p>
+<p>コードブロックにファイル名を表示させる方法、参考にさせていただきました 🙇‍♂️</p>
+<h3 id="カスタマイズの基本">カスタマイズの基本
+</h3><p>テーマフォルダー内でファイルの変更を行うと、テーマの更新があったときに上書きされてしまうため、変更したいファイルを専用の場所にコピーして編集します。</p>
+<p>Hugoが動作するとき、テーマフォルダーの中身を読み込んで表示をしてくれますが、専用の場所に置いたファイルが優先される仕様になっています。</p>
+<h4 id="サイト全体の基本設定">サイト全体の基本設定
+</h4><p>ルートフォルダーにある <code>config.yaml</code> を触ります。<br>
+テーマフォルダーのルートや、exampleSiteにあるものを持ってきて修正するのが楽です。<br>
+今回はexampleSiteにある <code>hugo.yaml</code> を使いました。<br>
+ファイル名は「config」じゃなくて「hugo」でも良いみたいですね。</p>
+<p>尚、ファイル形式は、yaml、toml、jsonが使えるため、お好みのもので。</p>
+<h4 id="レイアウトやスタイルの設定">レイアウトやスタイルの設定
+</h4><p><code>/assets</code> ← スタイルシートの保存先<br>
+<code>/layouts</code> ← レイアウト用ファイルの保存先</p>
+<p>こちらもテーマフォルダーから変更したいものを持ってきて修正します。</p>
+<h2 id="全体設定-configyaml">全体設定 config.yaml
+</h2><p>全部書くと大変なので、引っかかりやすいものとか。<br>
+ここに未掲載のもので重要なのは、サイトのURLとか言語設定とか。</p>
+<h3 id="パーマリンク">パーマリンク
+</h3><p>初期値のままですが変えるかも。</p>
+<div>
+    <div class="code-block-filename">config.yaml</div>
+    
+    <div class="code-block-content"><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">permalinks</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">post</span><span class="p">:</span><span class="w"> </span><span class="l">/p/:slug/    </span><span class="w"> </span><span class="c"># 投稿した記事のURL（/p/タイトル）</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">page</span><span class="p">:</span><span class="w"> </span><span class="l">/:slug/      </span><span class="w"> </span><span class="c"># ページ（Aboutとか）のURL</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+    </div>
+</div><h3 id="ページタイトル">ページタイトル
+</h3><p><code>languages:</code> セクションの中には、英語、中国語、アラビア語があり、訪問者が切り替えできるようになっていました。<br>
+このサイトは日本人向けなので、元の言語はすべて削除して、日本語を追加しています。</p>
+<div>
+    <div class="code-block-filename">config.yaml</div>
+    
+    <div class="code-block-content"><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">languages</span><span class="p">:</span><span class="w">  </span><span class="c"># 切り替えないのでセクション不要と思いつつ残している。</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">ja</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">languageName</span><span class="p">:</span><span class="w"> </span><span class="l">日本語</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l">k-kaz が Hugo で遊ぶサイト  </span><span class="w"> </span><span class="c"># これだけあれば問題ないはず。</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="m">1</span><span class="w">                           </span><span class="c"># 複数言語を用意したときに有効。</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">params</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+    </div>
+</div><h3 id="1ページに表示する記事数を設定">1ページに表示する記事数を設定
+</h3><p>元々1行で <code>paginate: 3</code> となっていました。<br>
+動作はしますが最新のHugoでは非推奨のようで、Warningが出ていました。<br>
+下記のように変更しています。</p>
+<div>
+    <div class="code-block-filename">config.yaml</div>
+    
+    <div class="code-block-content"><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">pagination</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">disableAliases</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">pagerSize</span><span class="p">:</span><span class="w"> </span><span class="m">3</span><span class="w">              </span><span class="c"># 3つ表示させる</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l">page</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+    </div>
+</div><h3 id="日付のスタイル">日付のスタイル
+</h3><p><code>Params:</code> の中で設定。</p>
+<div>
+    <div class="code-block-filename">config.yaml</div>
+    
+    <div class="code-block-content"><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">Params</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">dateFormat</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">published</span><span class="p">:</span><span class="w"> </span><span class="m">2006</span><span class="l">/01/02              </span><span class="w"> </span><span class="c"># 投稿日、年月日がわかりやすいので。</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">lastUpdated</span><span class="p">:</span><span class="w"> </span><span class="m">2006</span><span class="l">/01/02/15:04 JST  </span><span class="w"> </span><span class="c"># 更新日、同上。</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+    </div>
+</div><h3 id="コメント機能">コメント機能
+</h3><p><code>Params:</code> の中で設定。<br>
+機能が用意されているので楽ちんです。<br>
+私はgiscusを利用しました。 &gt; &#x1f517; <a class="link" href="/p/hugo%e3%81%ab%e3%82%b3%e3%83%a1%e3%83%b3%e3%83%88%e6%a9%9f%e8%83%bd%e3%82%92%e4%bb%98%e3%81%91%e3%82%8bgiscus%e7%b7%a8" >Hugoにコメント機能を付ける（giscus編）</a></p>
+<div>
+    <div class="code-block-filename">config.yaml</div>
+    
+    <div class="code-block-content"><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">params</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">comments</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">     </span><span class="l">// コメント機能を有効に</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l">giscus  // どのコメント機能を使うか選択</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">giscus</span><span class="p">:</span><span class="w">           </span><span class="l">// providerで選択する機能名</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="nt">repo</span><span class="p">:</span><span class="w"> </span><span class="l">hoge/hoge-repo                // ユーザー名と保管用リポジトリ名</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="nt">repoID</span><span class="p">:</span><span class="w"> </span><span class="l">hoge-repo-ID                // 自動発行されるリポジトリのID</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="nt">category</span><span class="p">:</span><span class="w"> </span><span class="l">General                   // Discussions内でどのカテゴリに保管するか</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="nt">categoryID</span><span class="p">:</span><span class="w"> </span><span class="l">hoge-cat-ID             // カテゴリのID</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="nt">mapping</span><span class="p">:</span><span class="w"> </span><span class="l">title                      // 保管時の表題となるもの（タイトル、URL等）</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="nt">lightTheme</span><span class="p">:</span><span class="w"> </span><span class="l">preferred_color_scheme  // ライトモードのときのテーマカラー（ここではモードで自動調整？）</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="nt">darkTheme</span><span class="p">:</span><span class="w"> </span><span class="l">preferred_color_scheme   // ダークモードのときのテーマカラー（ここではモードで自動調整？）</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="nt">lang</span><span class="p">:</span><span class="w"> </span><span class="l">ja                            // 項目がなかったので自分で追加し、メッセージ等を日本語に</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="nt">reactionsEnabled</span><span class="p">:</span><span class="w"> </span><span class="m">1</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="nt">emitMetadata</span><span class="p">:</span><span class="w"> </span><span class="m">0</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+    </div>
+</div><h2 id="ウィジェットページ">ウィジェット（ページ）
+</h2><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th style="text-align: left">オリジナル</th>
+          <th style="text-align: left">複写先</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">/themes/stack/exampleSite/content/page</td>
+          <td style="text-align: left">/content/page</td>
+      </tr>
+  </tbody>
+</table></div>
+<p>検索とかアーカイブとかの機能です。<br>
+<code>config.yaml</code> の中で設定がありますが、そこで有効にしてもページがないと画面に出てきません。<br>
+/themes/stack/exampleSite/content/page 内にあるものを、/content/pageへコピーすることで画面に表示できます。<br>
+最初、機能を有効にしても出ない理由が不明で途方に暮れました。</p>
+<h2 id="スタイルシート">スタイルシート
+</h2><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th style="text-align: left">オリジナル</th>
+          <th style="text-align: left">複写先</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">/themes/stack/assets/scss</td>
+          <td style="text-align: left">/assets/scss</td>
+      </tr>
+  </tbody>
+</table></div>
+<h3 id="フォントを変える">フォントを変える
+</h3><p>中国製のためか、フォントに違和感があるので変えました。</p>
+<p>/themes/stack/assets/scss/variables.scss → /assets/scss/ へコピー。<br>
+4行目にある <code>--base-font-family</code> の行を変更しています。</p>
+<p>3行目は中国系かな？
+いらないと思いますが今は残してあります。</p>
+<div>
+    <div class="code-block-filename">/assets/scss/variables.scss</div>
+    
+    <div class="code-block-content"><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nd">:root</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="na">--sys-font-family</span><span class="o">:</span> <span class="o">-</span><span class="n">apple-system</span><span class="o">,</span> <span class="n">BlinkMacSystemFont</span><span class="o">,</span> <span class="s2">&#34;Segoe UI&#34;</span><span class="o">,</span> <span class="s2">&#34;Droid Sans&#34;</span><span class="o">,</span> <span class="s2">&#34;Helvetica Neue&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="na">--zh-font-family</span><span class="o">:</span> <span class="s2">&#34;PingFang SC&#34;</span><span class="o">,</span> <span class="s2">&#34;Hiragino Sans GB&#34;</span><span class="o">,</span> <span class="s2">&#34;Droid Sans Fallback&#34;</span><span class="o">,</span> <span class="s2">&#34;Microsoft YaHei&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="na">--base-font-family</span><span class="o">:</span> <span class="o">-</span><span class="n">apple-system</span><span class="o">,</span><span class="n">BlinkMacSystemFont</span><span class="o">,</span><span class="n">segoe</span> <span class="n">ui</span><span class="o">,</span><span class="n">Roboto</span><span class="o">,</span><span class="n">Oxygen</span><span class="o">,</span><span class="n">Ubuntu</span><span class="o">,</span><span class="n">Cantarell</span><span class="o">,</span><span class="ni">open</span> <span class="n">sans</span><span class="o">,</span><span class="n">helvetica</span> <span class="n">neue</span><span class="o">,</span><span class="ni">sans-serif</span><span class="o">,</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">sys-font-family</span><span class="p">)</span><span class="o">,</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">zh-font-family</span><span class="p">)</span><span class="o">,</span> <span class="ni">sans-serif</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="na">--code-font-family</span><span class="o">:</span> <span class="n">Menlo</span><span class="o">,</span> <span class="n">Monaco</span><span class="o">,</span> <span class="n">Consolas</span><span class="o">,</span> <span class="s2">&#34;Courier New&#34;</span><span class="o">,</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">zh-font-family</span><span class="p">)</span><span class="o">,</span> <span class="ni">monospace</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+    </div>
+</div><h2 id="レイアウト">レイアウト
+</h2><h2 id="不具合修正">不具合修正
+</h2><h3 id="resourcestocss--csssass">resources.ToCSS → css.Sass
+</h3><p>Hugo Serverを起動すると下記のWarningが出ます。</p>
+<p><em>WARN  deprecated: resources.ToCSS was deprecated in Hugo v0.128.0 and will be removed in a future release. Use css.Sass instead.</em></p>
+<p><code>resources.ToCSS</code> じゃなくて、 <code>css.Sass</code> を使えと言っています。<br>
+SassをCSSにするための機能らしい。</p>
+<ul>
+<li><a class="link" href="https://gohugo.io/hugo-pipes/transpile-sass-to-css/"  target="_blank" rel="noopener"
+    >ToCSS | Hugo</a> ← 古い</li>
+<li><a class="link" href="https://gohugo.io/functions/css/sass/"  target="_blank" rel="noopener"
+    >css.Sass | Hugo</a> ← 新しい</li>
+</ul>
+<p>フォルダー内を検索して2つのファイルで発見しましたので修正。</p>
+<h4 id="stylehtml">style.html
+</h4><p>/themes/stack/layouts/partials/head/style.html → /layouts/partials/head/ へコピー。</p>
+<p>オリジナル</p>
+<div>
+    <div class="code-block-filename">/themes/stack/layouts/partials/head/style.html</div>
+    
+    <div class="code-block-content"><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">{{ $sass := resources.Get &#34;scss/style.scss&#34; }}
+</span></span><span class="line"><span class="cl">{{ $style := $sass | resources.ToCSS | minify | resources.Fingerprint &#34;sha256&#34; }}
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;{{ $style.RelPermalink }}&#34;</span><span class="p">&gt;</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+    </div>
+</div><p>修正（2行目の <code>resources.ToCSS</code> を <code>css.Sass</code> に修正しました。）</p>
+<div>
+    <div class="code-block-filename">/layouts/partials/head/style.html</div>
+    
+    <div class="code-block-content"><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">{{ $sass := resources.Get &#34;scss/style.scss&#34; }}
+</span></span><span class="line"><span class="cl">{{ $style := $sass | css.Sass | minify | resources.Fingerprint &#34;sha256&#34; }}
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;{{ $style.RelPermalink }}&#34;</span><span class="p">&gt;</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+    </div>
+</div><h4 id="disqusjshtml">disqusjs.html
+</h4><p>/themes/stack/layouts/partials/comments/provider/disqusjs.html → /layouts/partials/comments/provider/ へコピー。</p>
+<p>オリジナル</p>
+<div>
+    <div class="code-block-filename">/themes/stack/layouts/partials/comments/provider/disqusjs.html</div>
+    
+    <div class="code-block-content"><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">{{- $pc := .Site.Config.Privacy.Disqus -}}
+</span></span><span class="line"><span class="cl">{{- $disqusjs := .Site.Params.Comments.disqusjs -}}
+</span></span><span class="line"><span class="cl">{{- if and (not $pc.Disable) (and $disqusjs.Shortname $disqusjs.ApiKey) -}}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">{{- $style := resources.Get &#34;scss/partials/comments/disqusjs.scss&#34; | resources.ToCSS | minify -}}</span></span></code></pre></td></tr></table>
+</div>
+</div>
+    </div>
+</div><p>修正（5行目の <code>resources.ToCSS</code> を <code>css.Sass</code> に修正しました。）</p>
+<div>
+    <div class="code-block-filename">/layouts/partials/comments/provider/disqusjs.html</div>
+    
+    <div class="code-block-content"><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">{{- $pc := .Site.Config.Privacy.Disqus -}}
+</span></span><span class="line"><span class="cl">{{- $disqusjs := .Site.Params.Comments.disqusjs -}}
+</span></span><span class="line"><span class="cl">{{- if and (not $pc.Disable) (and $disqusjs.Shortname $disqusjs.ApiKey) -}}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">{{- $style := resources.Get &#34;scss/partials/comments/disqusjs.scss&#34; | css.Scss | minify -}}</span></span></code></pre></td></tr></table>
+</div>
+</div>
+    </div>
+</div><h3 id="paginate--paginationpagersize">paginate → pagination.pagerSize
+</h3><p>Hugo Serverを起動すると下記のWarningが出ます。</p>
+<p><em>WARN  deprecated: site config key paginate was deprecated in Hugo v0.128.0 and will be removed in a future release. Use pagination.pagerSize instead.</em></p>
+<p>1画面に表示する記事の数を指定する機能です。<br>
+<code>paginate</code> は古いので <code>pagination.pagerSize</code> に変えなさいというものです。</p>
+<p><code>config.yamal</code> の中で設定します。<br>
+元は <code>paginate: 3</code> の1行ですが、下記のようにします。</p>
+<div>
+    <div class="code-block-filename">config.yaml</div>
+    
+    <div class="code-block-content"><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">pagination</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">disableAliases</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">pagerSize</span><span class="p">:</span><span class="w"> </span><span class="m">3</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l">page</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+    </div>
+</div>
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    <script
+    src="https://giscus.app/client.js"
+    data-repo="k-kaz-git/cmt-blog"
+    data-repo-id="R_kgDOMtD8bg"
+    data-category="General"
+    data-category-id="DIC_kwDOMtD8bs4CiNkp"
+    data-mapping="title"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="top"
+    data-theme="preferred_color_scheme"
+    data-lang="ja"
+    crossorigin="anonymous"
+    async
+></script>
+<script>
+    function setGiscusTheme(theme) {
+        let giscus = document.querySelector("iframe.giscus-frame");
+        if (giscus) {
+            giscus.contentWindow.postMessage(
+                {
+                    giscus: {
+                        setConfig: {
+                            theme: theme,
+                        },
+                    },
+                },
+                "https://giscus.app"
+            );
+        }
+    }
+
+    (function () {
+        addEventListener("message", (e) => {
+            if (event.origin !== "https://giscus.app") return;
+            handler();
+        });
+        window.addEventListener("onColorSchemeChange", handler);
+
+        function handler() {
+            if (document.documentElement.dataset.scheme === "light") {
+                setGiscusTheme('preferred_color_scheme');
+            } else {
+                setGiscusTheme('preferred_color_scheme');
+            }
+        }
+    })();
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2024 k-kaz
+    </section>
+    
+    <section class="powerby">
+        <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> で構築されています。 <br />
+        テーマ <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.26.0">Stack</a></b> は <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> によって設計されています。
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

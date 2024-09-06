@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://k-kaz-git.github.io/p/hugo%E3%81%A7%E7%B5%B5%E6%96%87%E5%AD%97%E3%82%92%E4%BD%BF%E3%81%88%E3%82%8B%E3%82%88%E3%81%86%E3%81%AB%E3%81%99%E3%82%8B/'>
 
-<link rel="stylesheet" href="/scss/style.min.43289f33a995fb4bc83e665a1a22504b7eecefd3dcf3f9ecc83ed51746ad75d3.css"><meta property='og:title' content="Hugoで絵文字を使えるようにする">
+<link rel="stylesheet" href="/scss/style.min.59f6914fefaa7fd6a3ceb1acf06074a3b888638c4a561a88453fcb5504879eaa.css"><meta property='og:title' content="Hugoで絵文字を使えるようにする">
 <meta property='og:description' content="絵文字で雰囲気を柔らかく">
 <meta property='og:url' content='https://k-kaz-git.github.io/p/hugo%E3%81%A7%E7%B5%B5%E6%96%87%E5%AD%97%E3%82%92%E4%BD%BF%E3%81%88%E3%82%8B%E3%82%88%E3%81%86%E3%81%AB%E3%81%99%E3%82%8B/'>
 <meta property='og:site_name' content='k-kaz が Hugo で遊ぶサイト'>
@@ -16,8 +16,6 @@
     <meta name="twitter:image" content='https://k-kaz-git.github.io/images/hugo-emoji.webp' />
     <link rel="shortcut icon" href="/favicon.ico" />
 
-  
-    
       <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-K8B8MR2Z"></script>
       <script>
         var doNotTrack = false;
@@ -32,10 +30,6 @@
           gtag('config', 'GTM-K8B8MR2Z');
         }
       </script>
-    
-  
-
-
     </head>
     <body class="
     article-page
@@ -330,31 +324,35 @@
 </h2><p>テーマの設定を変更することで利用できるようになります。（たぶん）</p>
 <h3 id="configファイルで設定追加">Configファイルで設定追加
 </h3><p>設定ファイルの <code>config.toml</code> に下記を追加します。</p>
-<div class="highlight"><div class="chroma">
+<div>
+    <div class="code-block-content"><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="nx">enableEmoji</span> <span class="p">=</span> <span class="s2">&#34;true&#34;</span>
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="nx">enableEmoji</span> <span class="p">=</span> <span class="s2">&#34;true&#34;</span></span></span></code></pre></td></tr></table>
 </div>
+</div>
+    </div>
 </div><p>これだけです。</p>
 <p><code>config.yml</code> の場合はこちら。</p>
-<div class="highlight"><div class="chroma">
+<div>
+    <div class="code-block-content"><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="line"><span class="cl"><span class="nt">enableEmoji</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
-</span></span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="line"><span class="cl"><span class="nt">enableEmoji</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span></span></span></code></pre></td></tr></table>
 </div>
+</div>
+    </div>
 </div><p>参考<br>
 <a class="link" href="https://gohugo.io/getting-started/configuration/#enableemoji"  target="_blank" rel="noopener"
     >Configure Hugo | Hugo</a></p>
 <h3 id="使い方">使い方
 </h3><p>記事に <code>：smile：</code> という感じのコードを入れるだけです。<br>
 展開しないように全角のコロンで書きましたが、実際は半角で書きますよ。</p>
-<p>半角コロンを使って書くと → :smile:</p>
+<p>半角コロンを使って書くと → &#x1f604;</p>
 <h3 id="チートシート">チートシート
 </h3><p>絵文字コード一覧をありがたく使わせていただきましょう。</p>
 <p><a class="link" href="https://www.webfx.com/tools/emoji-cheat-sheet/"  target="_blank" rel="noopener"

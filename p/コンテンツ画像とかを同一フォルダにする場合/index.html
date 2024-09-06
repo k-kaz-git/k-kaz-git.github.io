@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://k-kaz-git.github.io/p/%E3%82%B3%E3%83%B3%E3%83%86%E3%83%B3%E3%83%84%E7%94%BB%E5%83%8F%E3%81%A8%E3%81%8B%E3%82%92%E5%90%8C%E4%B8%80%E3%83%95%E3%82%A9%E3%83%AB%E3%83%80%E3%81%AB%E3%81%99%E3%82%8B%E5%A0%B4%E5%90%88/'>
 
-<link rel="stylesheet" href="/scss/style.min.43289f33a995fb4bc83e665a1a22504b7eecefd3dcf3f9ecc83ed51746ad75d3.css"><meta property='og:title' content="コンテンツ（画像とか）を同一フォルダにする場合">
+<link rel="stylesheet" href="/scss/style.min.59f6914fefaa7fd6a3ceb1acf06074a3b888638c4a561a88453fcb5504879eaa.css"><meta property='og:title' content="コンテンツ（画像とか）を同一フォルダにする場合">
 <meta property='og:description' content="それ用のルールがあるのね。">
 <meta property='og:url' content='https://k-kaz-git.github.io/p/%E3%82%B3%E3%83%B3%E3%83%86%E3%83%B3%E3%83%84%E7%94%BB%E5%83%8F%E3%81%A8%E3%81%8B%E3%82%92%E5%90%8C%E4%B8%80%E3%83%95%E3%82%A9%E3%83%AB%E3%83%80%E3%81%AB%E3%81%99%E3%82%8B%E5%A0%B4%E5%90%88/'>
 <meta property='og:site_name' content='k-kaz が Hugo で遊ぶサイト'>
@@ -16,8 +16,6 @@
     <meta name="twitter:image" content='https://k-kaz-git.github.io/images/hugo-contents.webp' />
     <link rel="shortcut icon" href="/favicon.ico" />
 
-  
-    
       <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-K8B8MR2Z"></script>
       <script>
         var doNotTrack = false;
@@ -32,10 +30,6 @@
           gtag('config', 'GTM-K8B8MR2Z');
         }
       </script>
-    
-  
-
-
     </head>
     <body class="
     article-page
@@ -350,14 +344,16 @@ Hugo で同一フォルダに記事と画像等のファイルを置ける <stro
 <h3 id="url-を指定する">URL を指定する。
 </h3><p>これまでファイル名が URL になってくれていましたので、同じようにしましょう。<br>
 index.md の上部（各種設定内容を記述するところ）に1行追加します。</p>
-<div class="highlight"><div class="chroma">
+<div>
+    <div class="code-block-content"><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="nx">url</span><span class="err">:</span> <span class="s2">&#34;hoge&#34;</span>
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="nx">url</span><span class="err">:</span> <span class="s2">&#34;hoge&#34;</span></span></span></code></pre></td></tr></table>
 </div>
+</div>
+    </div>
 </div><p>これで意図した通りの URL になりました。</p>
 <h3 id="ついでにもうひと踏ん張り">ついでにもうひと踏ん張り。
 </h3><p>この URL を指定する記述を毎回入れるのは面倒ですし、そもそもこちらのサイトでは使わないので忘れそうです。<br>
@@ -365,7 +361,8 @@ index.md の上部（各種設定内容を記述するところ）に1行追加�
 <p>私の場合、下記ファイルが新規作成時に使われるものになりますので、開いて追記します。</p>
 <p><code>\archetypes\post.md</code></p>
 <p>こんな感じにしました。</p>
-<div class="highlight"><div class="chroma">
+<div>
+    <div class="code-block-content"><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
@@ -392,9 +389,10 @@ index.md の上部（各種設定内容を記述するところ）に1行追加�
 </span></span><span class="line"><span class="cl"><span class="nx">tags</span><span class="err">:</span> <span class="p">[</span><span class="s2">&#34;&#34;</span><span class="p">]</span>
 </span></span><span class="line"><span class="cl"><span class="nx">toc</span><span class="err">:</span> <span class="kc">true</span>
 </span></span><span class="line"><span class="cl"><span class="nx">draft</span><span class="err">:</span> <span class="kc">true</span>
-</span></span><span class="line"><span class="cl"><span class="nx">---</span>
-</span></span></code></pre></td></tr></table>
+</span></span><span class="line"><span class="cl"><span class="nx">---</span></span></span></code></pre></td></tr></table>
 </div>
+</div>
+    </div>
 </div><p>これで良しと。</p>
 
 </section>

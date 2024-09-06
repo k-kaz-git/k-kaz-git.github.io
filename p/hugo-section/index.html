@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://k-kaz-git.github.io/p/hugo-section/'>
 
-<link rel="stylesheet" href="/scss/style.min.43289f33a995fb4bc83e665a1a22504b7eecefd3dcf3f9ecc83ed51746ad75d3.css"><meta property='og:title' content="Hugo Section">
+<link rel="stylesheet" href="/scss/style.min.59f6914fefaa7fd6a3ceb1acf06074a3b888638c4a561a88453fcb5504879eaa.css"><meta property='og:title' content="Hugo Section">
 <meta property='og:description' content="いまいち分からんセクションの話">
 <meta property='og:url' content='https://k-kaz-git.github.io/p/hugo-section/'>
 <meta property='og:site_name' content='k-kaz が Hugo で遊ぶサイト'>
@@ -16,8 +16,6 @@
     <meta name="twitter:image" content='https://k-kaz-git.github.io/images/divider-800.webp' />
     <link rel="shortcut icon" href="/favicon.ico" />
 
-  
-    
       <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-K8B8MR2Z"></script>
       <script>
         var doNotTrack = false;
@@ -32,10 +30,6 @@
           gtag('config', 'GTM-K8B8MR2Z');
         }
       </script>
-    
-  
-
-
     </head>
     <body class="
     article-page
@@ -328,7 +322,8 @@
 さらにその下の階層でサブディレクトリを作って、カテゴリ毎に記事を管理することも可能です。</p>
 <h3 id="k-kaz-が好きなことを書くサイト-の場合">k-kaz が好きなことを書くサイト の場合。
 </h3><p>元々は、<code>content</code> 直下の2ファイルと、<code>post</code> というサブディレクトリで運用していました。</p>
-<div class="highlight"><div class="chroma">
+<div>
+    <div class="code-block-content"><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
@@ -359,13 +354,15 @@
 </span></span><span class="line"><span class="cl">        └─2020-10-25-02
 </span></span><span class="line"><span class="cl">                coffee-5498486_300.webp
 </span></span><span class="line"><span class="cl">                coffee-5498486_720.webp
-</span></span><span class="line"><span class="cl">                index.md
-</span></span></code></pre></td></tr></table>
+</span></span><span class="line"><span class="cl">                index.md</span></span></code></pre></td></tr></table>
 </div>
+</div>
+    </div>
 </div><p>この場合、トップページにリスト表示されるのは <code>post</code> 内の記事のみ。<br>
 <code>archives.md</code> <code>links.md</code> は上部メニューに割り当ててあります。</p>
 <p>今回、新たに <code>aaaaa</code> を加え、トップページに <code>post</code> と <code>aaaaa</code> の下にある記事を表示させようという考えです。</p>
-<div class="highlight"><div class="chroma">
+<div>
+    <div class="code-block-content"><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
@@ -408,13 +405,15 @@
 </span></span><span class="line"><span class="cl">        └─2020-10-25-02
 </span></span><span class="line"><span class="cl">                coffee-5498486_300.webp
 </span></span><span class="line"><span class="cl">                coffee-5498486_720.webp
-</span></span><span class="line"><span class="cl">                index.md
-</span></span></code></pre></td></tr></table>
+</span></span><span class="line"><span class="cl">                index.md</span></span></code></pre></td></tr></table>
 </div>
+</div>
+    </div>
 </div><h3 id="post-しか表示されんのだけど">post しか表示されんのだけど。
 </h3><p><code>aaaaa</code> を配置したのになぜか無視されて、今まで通りリスト表示されるのは <code>post</code> 内の記事だけ。</p>
 <p>リスト表示のテンプレートファイル（<code>list.html</code>）を開いてみましたら、気になるところが。</p>
-<div class="highlight"><div class="chroma">
+<div>
+    <div class="code-block-content"><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
@@ -423,24 +422,27 @@
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">{{- if .IsHome }}
 </span></span><span class="line"><span class="cl">{{- $pages = where site.RegularPages &#34;Type&#34; &#34;in&#34; site.Params.mainSections }}
-</span></span><span class="line"><span class="cl">{{- end}}
-</span></span></code></pre></td></tr></table>
+</span></span><span class="line"><span class="cl">{{- end}}</span></span></code></pre></td></tr></table>
 </div>
+</div>
+    </div>
 </div><p><code>site.Params.mainSections</code> これが呼ばれているっぽい。<br>
 ということは、<code>post</code> は該当するけど <code>aaaaa</code> はこれに該当しないということか。</p>
 <h3 id="解決した">解決した。
 </h3><p>メインセクションについて調べていたら、<code>config.yml</code> で設定できるみたい。
 ということで、下記を追加しました。</p>
-<div class="highlight"><div class="chroma">
+<div>
+    <div class="code-block-content"><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="line"><span class="cl"><span class="nt">params</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">mainSections</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&#34;post&#34;</span><span class="p">,</span><span class="w"> </span><span class="s2">&#34;aaaaa&#34;</span><span class="p">]</span><span class="w">
-</span></span></span></code></pre></td></tr></table>
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">mainSections</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&#34;post&#34;</span><span class="p">,</span><span class="w"> </span><span class="s2">&#34;aaaaa&#34;</span><span class="p">]</span></span></span></code></pre></td></tr></table>
 </div>
+</div>
+    </div>
 </div><p>toml の場合は <code>:</code> が <code>=</code> ですね。</p>
 <p>これで狙い通りの表示がされるようになりました。</p>
 <h2 id="_indexmd-について">_index.md について。

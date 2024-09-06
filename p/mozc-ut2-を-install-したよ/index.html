@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://k-kaz-git.github.io/p/mozc-ut2-%E3%82%92-install-%E3%81%97%E3%81%9F%E3%82%88/'>
 
-<link rel="stylesheet" href="/scss/style.min.43289f33a995fb4bc83e665a1a22504b7eecefd3dcf3f9ecc83ed51746ad75d3.css"><meta property='og:title' content="Mozc Ut2 を Install したよ。">
+<link rel="stylesheet" href="/scss/style.min.59f6914fefaa7fd6a3ceb1acf06074a3b888638c4a561a88453fcb5504879eaa.css"><meta property='og:title' content="Mozc Ut2 を Install したよ。">
 <meta property='og:description' content="Linux Mint に Mozc Ut2 をインストールしました。">
 <meta property='og:url' content='https://k-kaz-git.github.io/p/mozc-ut2-%E3%82%92-install-%E3%81%97%E3%81%9F%E3%82%88/'>
 <meta property='og:site_name' content='k-kaz が Hugo で遊ぶサイト'>
@@ -16,8 +16,6 @@
     <meta name="twitter:image" content='https://k-kaz-git.github.io/images/origami-japan_640.webp' />
     <link rel="shortcut icon" href="/favicon.ico" />
 
-  
-    
       <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-K8B8MR2Z"></script>
       <script>
         var doNotTrack = false;
@@ -32,10 +30,6 @@
           gtag('config', 'GTM-K8B8MR2Z');
         }
       </script>
-    
-  
-
-
     </head>
     <body class="
     article-page
@@ -356,7 +350,8 @@ Mozcとは、Google 日本語入力のオープンソース版である。これ
 <h4 id="ビルド">ビルド
 </h4><p>解凍したところに <code>build_mozc_plus_utdict</code> というファイルができますので、これを実行します。<br>
 でも、足りないパッケージなどがあるので、事前に入れておきます。</p>
-<div class="highlight"><div class="chroma">
+<div>
+    <div class="code-block-content"><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
@@ -365,39 +360,46 @@ Mozcとは、Google 日本語入力のオープンソース版である。これ
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">$ sudo apt update
 </span></span><span class="line"><span class="cl">$ sudo apt upgrade -y
-</span></span><span class="line"><span class="cl">$ sudo apt install -y devscripts debhelper libibus-1.0-dev pkg-config libxcb-xfixes0-dev libgtk2.0-dev python-dev gyp protobuf-compiler libprotobuf-dev qtbase5-dev libqwt-qt5-dev libgwengui-qt5-dev libuim-dev libzinnia-dev fcitx-libs-dev gettext desktop-file-utils ninja-build
-</span></span></code></pre></td></tr></table>
+</span></span><span class="line"><span class="cl">$ sudo apt install -y devscripts debhelper libibus-1.0-dev pkg-config libxcb-xfixes0-dev libgtk2.0-dev python-dev gyp protobuf-compiler libprotobuf-dev qtbase5-dev libqwt-qt5-dev libgwengui-qt5-dev libuim-dev libzinnia-dev fcitx-libs-dev gettext desktop-file-utils ninja-build</span></span></code></pre></td></tr></table>
 </div>
+</div>
+    </div>
 </div><p>入れ終わったら、ビルドします。</p>
-<div class="highlight"><div class="chroma">
+<div>
+    <div class="code-block-content"><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">$ sudo ./build_mozc_plus_utdict
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">$ sudo ./build_mozc_plus_utdict</span></span></code></pre></td></tr></table>
 </div>
+</div>
+    </div>
 </div><p>しばらく、ハードディスクがカリカリと頑張ってくれます。</p>
 <p>運悪くビルドに失敗したら、ログに理由が書いてあると思いますので、<strong>ネットで頑張って調べます（笑）</strong></p>
 <h4 id="事後処理">事後処理
 </h4><p>無事にビルドが終了したら、インストール済みのパッケージを削除します。</p>
-<div class="highlight"><div class="chroma">
+<div>
+    <div class="code-block-content"><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">$ sudo apt-get remove mozc-server mozc-utils-gui
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">$ sudo apt-get remove mozc-server mozc-utils-gui</span></span></code></pre></td></tr></table>
 </div>
+</div>
+    </div>
 </div><p>fcitx-mozc を使っているので、関連ファイルをインストール。</p>
-<div class="highlight"><div class="chroma">
+<div>
+    <div class="code-block-content"><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">$ sudo dpkg -i mozc*.deb fcitx-mozc*.deb
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">$ sudo dpkg -i mozc*.deb fcitx-mozc*.deb</span></span></code></pre></td></tr></table>
 </div>
+</div>
+    </div>
 </div><p>結果、こうなります。
 <img src="/images/mozc-ver223.webp" alt="Mozc について" style="width:auto;"></p>
 <p>以上です。</p>

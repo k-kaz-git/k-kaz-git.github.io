@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://k-kaz-git.github.io/p/deploy-%E3%81%A7%E3%82%A8%E3%83%A9%E3%83%BC%E3%81%8C%E5%87%BA%E3%81%9F%E3%82%93%E3%81%A7%E3%81%99%E3%81%91%E3%81%A9/'>
 
-<link rel="stylesheet" href="/scss/style.min.43289f33a995fb4bc83e665a1a22504b7eecefd3dcf3f9ecc83ed51746ad75d3.css"><meta property='og:title' content="Deploy でエラーが出たんですけど。">
+<link rel="stylesheet" href="/scss/style.min.59f6914fefaa7fd6a3ceb1acf06074a3b888638c4a561a88453fcb5504879eaa.css"><meta property='og:title' content="Deploy でエラーが出たんですけど。">
 <meta property='og:description' content="1年半振りの Deploy で・・・。">
 <meta property='og:url' content='https://k-kaz-git.github.io/p/deploy-%E3%81%A7%E3%82%A8%E3%83%A9%E3%83%BC%E3%81%8C%E5%87%BA%E3%81%9F%E3%82%93%E3%81%A7%E3%81%99%E3%81%91%E3%81%A9/'>
 <meta property='og:site_name' content='k-kaz が Hugo で遊ぶサイト'>
@@ -16,8 +16,6 @@
     <meta name="twitter:image" content='https://k-kaz-git.github.io/images/hugo-deploy-error.webp' />
     <link rel="shortcut icon" href="/favicon.ico" />
 
-  
-    
       <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-K8B8MR2Z"></script>
       <script>
         var doNotTrack = false;
@@ -32,10 +30,6 @@
           gtag('config', 'GTM-K8B8MR2Z');
         }
       </script>
-    
-  
-
-
     </head>
     <body class="
     article-page
@@ -321,16 +315,18 @@
 うっかりやってしまう <code>draft: false</code> もちゃんとなっているし、なんだろうと思って、ひとつずつチェックしてみました。</p>
 <p>ひっかかったのが、ssh 認証のところ。</p>
 <p><code>ssh -T git@github.com</code> で、ssh が通るか試してみたら、<code>git@github.com: Permission denied (publickey).</code> って怒られました。</p>
-<div class="highlight"><div class="chroma">
+<div>
+    <div class="code-block-content"><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">$ ssh -T git@github.com     /* ssh が通るか試すコマンド */
-</span></span><span class="line"><span class="cl">$ git@github.com: Permission denied (publickey).
-</span></span></code></pre></td></tr></table>
+</span></span><span class="line"><span class="cl">$ git@github.com: Permission denied (publickey).</span></span></code></pre></td></tr></table>
 </div>
+</div>
+    </div>
 </div><p>ネットで調べてみたところ、 <strong>「Github に公開鍵（publickey）を登録しましょう」</strong> と書いてあったので、1年半振りの Github ログイン。</p>
 <p><strong>お前、本当に k-kaz か？</strong><br>
 <strong>メール送ったから、そこに書かれた6桁のコードを入れてみろよ！</strong></p>

@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://k-kaz-git.github.io/p/hugo%E3%81%A7%E9%96%A2%E9%80%A3%E8%A8%98%E4%BA%8B%E3%82%92%E8%A1%A8%E7%A4%BA%E3%81%99%E3%82%8B/'>
 
-<link rel="stylesheet" href="/scss/style.min.43289f33a995fb4bc83e665a1a22504b7eecefd3dcf3f9ecc83ed51746ad75d3.css"><meta property='og:title' content="Hugoで関連記事を表示する">
+<link rel="stylesheet" href="/scss/style.min.59f6914fefaa7fd6a3ceb1acf06074a3b888638c4a561a88453fcb5504879eaa.css"><meta property='og:title' content="Hugoで関連記事を表示する">
 <meta property='og:description' content="Relatedって機能です">
 <meta property='og:url' content='https://k-kaz-git.github.io/p/hugo%E3%81%A7%E9%96%A2%E9%80%A3%E8%A8%98%E4%BA%8B%E3%82%92%E8%A1%A8%E7%A4%BA%E3%81%99%E3%82%8B/'>
 <meta property='og:site_name' content='k-kaz が Hugo で遊ぶサイト'>
@@ -16,8 +16,6 @@
     <meta name="twitter:image" content='https://k-kaz-git.github.io/images/hugo-related.webp' />
     <link rel="shortcut icon" href="/favicon.ico" />
 
-  
-    
       <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-K8B8MR2Z"></script>
       <script>
         var doNotTrack = false;
@@ -32,10 +30,6 @@
           gtag('config', 'GTM-K8B8MR2Z');
         }
       </script>
-    
-  
-
-
     </head>
     <body class="
     article-page
@@ -336,7 +330,8 @@
 </h3><p>関連記事を表示させるためのhtml（ここではrelated.html）を用意します。</p>
 <p>ファイルの場所<br>
 layouts/partials/related.html</p>
-<div class="highlight"><div class="chroma">
+<div>
+    <div class="code-block-content"><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
@@ -357,9 +352,10 @@ layouts/partials/related.html</p>
 </span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;{{ .RelPermalink }}&#34;</span><span class="p">&gt;</span>{{ .Title }}<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"> {{ end }}
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">{{ end }}
-</span></span></code></pre></td></tr></table>
+</span></span><span class="line"><span class="cl">{{ end }}</span></span></code></pre></td></tr></table>
 </div>
+</div>
+    </div>
 </div><p>1行目が関連記事の機能を使うための魔法。<br>
 たぶん、最初の5つを取得していると思います。</p>
 <p>それ以下は、実際に表示させるためのhtmlです。<br>
@@ -371,7 +367,8 @@ layouts/partials/related.html</p>
 </h3><p>表示させたい場所にrelated.htmlを呼び出すコードを追記します。</p>
 <p>ファイル<br>
 layouts/default/single.html</p>
-<div class="highlight"><div class="chroma">
+<div>
+    <div class="code-block-content"><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
@@ -380,23 +377,27 @@ layouts/default/single.html</p>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">{{- if (.Param &#34;ShowRelated&#34;) }}
 </span></span><span class="line"><span class="cl">{{ partial &#34;related.html&#34; . }}
-</span></span><span class="line"><span class="cl">{{- end }}
-</span></span></code></pre></td></tr></table>
+</span></span><span class="line"><span class="cl">{{- end }}</span></span></code></pre></td></tr></table>
 </div>
+</div>
+    </div>
 </div><p>2行目だけで成立しますが、設定ファイル（config.yml）内でShowRelatedがTrueのときに表示するというようにしておきました。</p>
-<div class="highlight"><div class="chroma">
+<div>
+    <div class="code-block-content"><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="line"><span class="cl"><span class="nt">params</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">ShowRelated</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
-</span></span></span></code></pre></td></tr></table>
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">ShowRelated</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span></span></span></code></pre></td></tr></table>
 </div>
+</div>
+    </div>
 </div><h3 id="重み付けをする">重み付けをする
 </h3><p>設定ファイル（config.yml）内で、関連度の重み付けをします。</p>
-<div class="highlight"><div class="chroma">
+<div>
+    <div class="code-block-content"><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
@@ -425,9 +426,10 @@ layouts/default/single.html</p>
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">categories</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="m">40</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">date</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="m">10</span><span class="w">
-</span></span></span></code></pre></td></tr></table>
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="m">10</span></span></span></code></pre></td></tr></table>
 </div>
+</div>
+    </div>
 </div><p>数字が重みですね。<br>
 詳細は公式サイトをご覧ください。</p>
 <p><a class="link" href="https://gohugo.io/content-management/related/#default-configuration"  target="_blank" rel="noopener"

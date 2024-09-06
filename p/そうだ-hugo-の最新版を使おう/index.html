@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://k-kaz-git.github.io/p/%E3%81%9D%E3%81%86%E3%81%A0-hugo-%E3%81%AE%E6%9C%80%E6%96%B0%E7%89%88%E3%82%92%E4%BD%BF%E3%81%8A%E3%81%86/'>
 
-<link rel="stylesheet" href="/scss/style.min.43289f33a995fb4bc83e665a1a22504b7eecefd3dcf3f9ecc83ed51746ad75d3.css"><meta property='og:title' content="そうだ Hugo の最新版を使おう！">
+<link rel="stylesheet" href="/scss/style.min.59f6914fefaa7fd6a3ceb1acf06074a3b888638c4a561a88453fcb5504879eaa.css"><meta property='og:title' content="そうだ Hugo の最新版を使おう！">
 <meta property='og:description' content="そんなときは大体ハマる。">
 <meta property='og:url' content='https://k-kaz-git.github.io/p/%E3%81%9D%E3%81%86%E3%81%A0-hugo-%E3%81%AE%E6%9C%80%E6%96%B0%E7%89%88%E3%82%92%E4%BD%BF%E3%81%8A%E3%81%86/'>
 <meta property='og:site_name' content='k-kaz が Hugo で遊ぶサイト'>
@@ -16,8 +16,6 @@
     <meta name="twitter:image" content='https://k-kaz-git.github.io/images/man-1394395_1920.webp' />
     <link rel="shortcut icon" href="/favicon.ico" />
 
-  
-    
       <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-K8B8MR2Z"></script>
       <script>
         var doNotTrack = false;
@@ -32,10 +30,6 @@
           gtag('config', 'GTM-K8B8MR2Z');
         }
       </script>
-    
-  
-
-
     </head>
     <body class="
     article-page
@@ -329,16 +323,18 @@
     
     <h2 id="hugo-ってバージョンアップしてるの">Hugo ってバージョンアップしてるの？
 </h2><p>まずは、私が使っている現在のバージョンを確認。</p>
-<div class="highlight"><div class="chroma">
+<div>
+    <div class="code-block-content"><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">$ hugo version
-</span></span><span class="line"><span class="cl">$ Hugo Static Site Generator v0.54.0/extended windows/amd64 BuildDate: unknown
-</span></span></code></pre></td></tr></table>
+</span></span><span class="line"><span class="cl">$ Hugo Static Site Generator v0.54.0/extended windows/amd64 BuildDate: unknown</span></span></code></pre></td></tr></table>
 </div>
+</div>
+    </div>
 </div><p>ふむ、0.54 を使っているらしい。</p>
 <p>公式サイトに行ってみると、0.76.5 が最新の様子。<br>
 <strong>すっかり時代に取り残されていました。</strong></p>
@@ -346,7 +342,8 @@
 </h2><p>Windows の場合は、GitHub から Zip を落としてきて、実行ファイルを入れ替えるだけで完了です。</p>
 <h2 id="チェックしましょう">チェックしましょう。
 </h2><p>とりあえず今までの記事が正常に見られるかチェック。</p>
-<div class="highlight"><div class="chroma">
+<div>
+    <div class="code-block-content"><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
@@ -357,34 +354,39 @@
 <pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">$ hugo server -D
 </span></span><span class="line"><span class="cl">Start building sites …
 </span></span><span class="line"><span class="cl">WARN 2020/10/16 15:08:48 Page.RSSLink is deprecated and will be removed in a future release. Use the Output Format&#39;s link, e.g. something like:
-</span></span><span class="line"><span class="cl">    {{ with .OutputFormats.Get &#34;RSS&#34; }}{{ .RelPermalink }}{{ end }}
-</span></span></code></pre></td></tr></table>
+</span></span><span class="line"><span class="cl">    {{ with .OutputFormats.Get &#34;RSS&#34; }}{{ .RelPermalink }}{{ end }}</span></span></code></pre></td></tr></table>
 </div>
+</div>
+    </div>
 </div><p>なんか怒られた。</p>
 <h2 id="修正します">修正します。
 </h2><p>調べてみたら、<code>.RSSLink</code> っていうのが最新版では使えないっていうことらしい。</p>
 <p><code>head.html</code> で使っていたので修正しました。</p>
-<div class="highlight"><div class="chroma">
+<div>
+    <div class="code-block-content"><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">{{ if .RSSLink }}
-</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;{{ .RSSLink }}&#34;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;alternate&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;application/rss+xml&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;{{ .Title }}&#34;</span> <span class="p">/&gt;</span>{{ end }}
-</span></span></code></pre></td></tr></table>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;{{ .RSSLink }}&#34;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;alternate&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;application/rss+xml&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;{{ .Title }}&#34;</span> <span class="p">/&gt;</span>{{ end }}</span></span></code></pre></td></tr></table>
 </div>
+</div>
+    </div>
 </div><p>↓ こんな風に。</p>
-<div class="highlight"><div class="chroma">
+<div>
+    <div class="code-block-content"><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">{{ with .OutputFormats.Get &#34;RSS&#34; }}
-</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;{{ .RelPermalink }}&#34;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;alternate&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;application/rss+xml&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;{{ $.Site.Title }}&#34;</span> <span class="p">/&gt;</span>{{ end }}
-</span></span></code></pre></td></tr></table>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;{{ .RelPermalink }}&#34;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;alternate&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;application/rss+xml&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;{{ $.Site.Title }}&#34;</span> <span class="p">/&gt;</span>{{ end }}</span></span></code></pre></td></tr></table>
 </div>
+</div>
+    </div>
 </div><p>これでエラーは出なくなった。</p>
 <h2 id="あれ-レイアウトが">あれ？ レイアウトが・・・
 </h2><p>トップページのレイアウトがおかしい。<br>
@@ -435,28 +437,32 @@ home.Pagesはトップレベルセクションのページのみを返すよう�
 <h3 id="あれ引用がごっそり消えている">あれ、引用がごっそり消えている
 </h3><p>たまたま気付いたんですが、引用した部分がごっそり消えていたんですよ。</p>
 <p>html のソースを見ると、その部分が</p>
-<div class="highlight"><div class="chroma">
+<div>
+    <div class="code-block-content"><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="c">&lt;!-- raw HTML omitted --&gt;</span>
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="c">&lt;!-- raw HTML omitted --&gt;</span></span></span></code></pre></td></tr></table>
 </div>
+</div>
+    </div>
 </div><p>となっていました。</p>
 <p>これは Google ですぐに見付けました。</p>
 <p>v0.60.0 から、記事ファイル（hoge.md）に書かれた html が表示されなくなったとのこと。（なんで？）</p>
 <p>解決策は <code>config.toml</code> にオプションを追加すればオッケー。</p>
-<div class="highlight"><div class="chroma">
+<div>
+    <div class="code-block-content"><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">markup</span><span class="p">.</span><span class="nx">goldmark</span><span class="p">.</span><span class="nx">renderer</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl"><span class="nx">unsafe</span><span class="p">=</span> <span class="kc">true</span>
-</span></span></code></pre></td></tr></table>
+</span></span><span class="line"><span class="cl"><span class="nx">unsafe</span><span class="p">=</span> <span class="kc">true</span></span></span></code></pre></td></tr></table>
 </div>
+</div>
+    </div>
 </div><p>すぐ直って良かった。</p>
 <p>ということで、今回から最新版の Hugo を使っていきます。</p>
 

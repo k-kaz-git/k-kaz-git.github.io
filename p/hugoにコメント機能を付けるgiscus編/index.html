@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://k-kaz-git.github.io/p/hugo%E3%81%AB%E3%82%B3%E3%83%A1%E3%83%B3%E3%83%88%E6%A9%9F%E8%83%BD%E3%82%92%E4%BB%98%E3%81%91%E3%82%8Bgiscus%E7%B7%A8/'>
 
-<link rel="stylesheet" href="/scss/style.min.43289f33a995fb4bc83e665a1a22504b7eecefd3dcf3f9ecc83ed51746ad75d3.css"><meta property='og:title' content="Hugoにコメント機能を付ける（giscus編）">
+<link rel="stylesheet" href="/scss/style.min.59f6914fefaa7fd6a3ceb1acf06074a3b888638c4a561a88453fcb5504879eaa.css"><meta property='og:title' content="Hugoにコメント機能を付ける（giscus編）">
 <meta property='og:description' content="giscusにしてみました。">
 <meta property='og:url' content='https://k-kaz-git.github.io/p/hugo%E3%81%AB%E3%82%B3%E3%83%A1%E3%83%B3%E3%83%88%E6%A9%9F%E8%83%BD%E3%82%92%E4%BB%98%E3%81%91%E3%82%8Bgiscus%E7%B7%A8/'>
 <meta property='og:site_name' content='k-kaz が Hugo で遊ぶサイト'>
@@ -16,8 +16,6 @@
     <meta name="twitter:image" content='https://k-kaz-git.github.io/images/speech-bubbles_640.webp' />
     <link rel="shortcut icon" href="/favicon.ico" />
 
-  
-    
       <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-K8B8MR2Z"></script>
       <script>
         var doNotTrack = false;
@@ -32,10 +30,6 @@
           gtag('config', 'GTM-K8B8MR2Z');
         }
       </script>
-    
-  
-
-
     </head>
     <body class="
     article-page
@@ -412,7 +406,8 @@ giscusは、GitHubのDiscussions機能を使います。</p>
 <li>コメント機能を表示したい場所へ先程のコードを挿入</li>
 </ol>
 <p>私の場合は、記事の下に入れるため <code>single.html</code> の最後に入れました。</p>
-<div class="highlight"><div class="chroma">
+<div>
+    <div class="code-block-content"><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
@@ -453,15 +448,17 @@ giscusは、GitHubのDiscussions機能を使います。</p>
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">crossorigin</span><span class="o">=</span><span class="s2">&#34;anonymous&#34;</span>
 </span></span><span class="line"><span class="cl">    <span class="kr">async</span><span class="o">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="o">&lt;</span><span class="err">/script&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">{{</span><span class="o">-</span> <span class="nx">end</span> <span class="p">}}</span>
-</span></span></code></pre></td></tr></table>
+</span></span><span class="line"><span class="cl"><span class="p">{{</span><span class="o">-</span> <span class="nx">end</span> <span class="p">}}</span></span></span></code></pre></td></tr></table>
 </div>
+</div>
+    </div>
 </div><p>コメントで説明を入れてみましたが、違っていたらすいません。</p>
 <p>先ほど取得したコードをそのまま使っています。<br>
 修正など不要で利用できています。ありがたや。</p>
 <h4 id="stack-の場合">Stack の場合
 </h4><p>コメント機能は標準で付いているので、configを触るだけで大丈夫でした。</p>
-<div class="highlight"><div class="chroma">
+<div>
+    <div class="code-block-content"><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
@@ -496,9 +493,10 @@ giscusは、GitHubのDiscussions機能を使います。</p>
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="nx">darkTheme</span><span class="o">:</span> <span class="nx">preferred_color_scheme</span>   <span class="c1">// ダークモードのときのテーマカラー（ここではモードで自動調整？）
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="nx">lang</span><span class="o">:</span> <span class="nx">ja</span>                            <span class="c1">// 項目がなかったので自分で追加し、メッセージ等を日本語に
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="nx">reactionsEnabled</span><span class="o">:</span> <span class="mi">1</span>
-</span></span><span class="line"><span class="cl">            <span class="nx">emitMetadata</span><span class="o">:</span> <span class="mi">0</span>
-</span></span></code></pre></td></tr></table>
+</span></span><span class="line"><span class="cl">            <span class="nx">emitMetadata</span><span class="o">:</span> <span class="mi">0</span></span></span></code></pre></td></tr></table>
 </div>
+</div>
+    </div>
 </div><h2 id="所感">所感
 </h2><p>難しいことは何もなく、簡単にコメント機能の設置ができました。</p>
 <p>今回設置したのは下記サイトになります。</p>

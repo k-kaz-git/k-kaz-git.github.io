@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://k-kaz-git.github.io/p/hugo-%E3%81%AE-shortcodes-%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%A6%E3%81%BF%E3%82%8B/'>
 
-<link rel="stylesheet" href="/scss/style.min.43289f33a995fb4bc83e665a1a22504b7eecefd3dcf3f9ecc83ed51746ad75d3.css"><meta property='og:title' content="Hugo の Shortcodes を使ってみる。">
+<link rel="stylesheet" href="/scss/style.min.59f6914fefaa7fd6a3ceb1acf06074a3b888638c4a561a88453fcb5504879eaa.css"><meta property='og:title' content="Hugo の Shortcodes を使ってみる。">
 <meta property='og:description' content="Shortcodes を使うと便利そうなので、ちょっと勉強します。">
 <meta property='og:url' content='https://k-kaz-git.github.io/p/hugo-%E3%81%AE-shortcodes-%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%A6%E3%81%BF%E3%82%8B/'>
 <meta property='og:site_name' content='k-kaz が Hugo で遊ぶサイト'>
@@ -16,8 +16,6 @@
     <meta name="twitter:image" content='https://k-kaz-git.github.io/images/computer-Programming_640.webp' />
     <link rel="shortcut icon" href="/favicon.ico" />
 
-  
-    
       <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-K8B8MR2Z"></script>
       <script>
         var doNotTrack = false;
@@ -32,10 +30,6 @@
           gtag('config', 'GTM-K8B8MR2Z');
         }
       </script>
-    
-  
-
-
     </head>
     <body class="
     article-page
@@ -359,14 +353,16 @@
 ※<code>%</code> のところは、前を <code>&lt;</code> で、後ろを <code>&gt;</code> でも良いみたいです。</p>
 <p>ショートコード名は、別途用意している HTML のファイル名（拡張子の <code>.html</code> を除いたもの）になり、これを読み込み、実行します。</p>
 <p>例えば、red.html というファイルに下記が記述されていたとします。</p>
-<div class="highlight"><div class="chroma">
+<div>
+    <div class="code-block-content"><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">span</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;color:red;&#34;</span><span class="p">&gt;</span>赤い字ですよ。<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">span</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;color:red;&#34;</span><span class="p">&gt;</span>赤い字ですよ。<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span></span></span></code></pre></td></tr></table>
 </div>
+</div>
+    </div>
 </div><p>Markdown の記事で、</p>
 <script src="https://gist.github.com/k-kaz-git/57c9a781cf43625d44270dd2e0c42494.js"></script>
 <p>と書きますと、</p>
@@ -375,25 +371,29 @@
 <h3 id="変数を使う">変数を使う
 </h3><p>また、<code>{{.Get 0}}</code> という変数を使って、値の代入も可能です。</p>
 <p>color.html というファイルに下記が記述されていた場合、</p>
-<div class="highlight"><div class="chroma">
+<div>
+    <div class="code-block-content"><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">span</span> <span class="na">sytle</span><span class="o">=</span><span class="s">&#34;color:{{.Get 0}};&#34;</span><span class="p">&gt;</span>文字の色を変えます。<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">span</span> <span class="na">sytle</span><span class="o">=</span><span class="s">&#34;color:{{.Get 0}};&#34;</span><span class="p">&gt;</span>文字の色を変えます。<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span></span></span></code></pre></td></tr></table>
 </div>
+</div>
+    </div>
 </div><p>Markdown の記事で、</p>
 <script src="https://gist.github.com/k-kaz-git/b2afd861241a83822fed711f581bcc9e.js"></script>
 <p>と書けば、<code>{{.Get 0}}</code> に <code>blue</code> が代入されて</p>
-<div class="highlight"><div class="chroma">
+<div>
+    <div class="code-block-content"><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">span</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;color:blue;&#34;</span><span class="p">&gt;</span>文字の色を変えます。<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">span</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;color:blue;&#34;</span><span class="p">&gt;</span>文字の色を変えます。<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span></span></span></code></pre></td></tr></table>
 </div>
+</div>
+    </div>
 </div><p><span style="color:blue;">文字の色を変えます。</span></p>
 <p>というように。</p>
 <p>パラメーターは複数指定できますので、<code>{{.Get 0}}</code> <code>{{.Get 1}}</code> というように、数字を増やしていけばいくつでも対応できます。</p>
@@ -405,14 +405,16 @@
 </h3><p>元となる文章「何かしらの文字列」の前後に開始タグと終了タグを入れる場合はこのようにします。</p>
 <script src="https://gist.github.com/k-kaz-git/59f1832bfd28998120c2935d5f5dc88a.js"></script>
 <p>html側では、「何かしらの文字列」を取得するため <code>{{.Inner}}</code> を使い、下記のように記述します。</p>
-<div class="highlight"><div class="chroma">
+<div>
+    <div class="code-block-content"><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">span</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;color:red&#34;</span><span class="p">&gt;</span>{{.Inner}}<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">span</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;color:red&#34;</span><span class="p">&gt;</span>{{.Inner}}<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span></span></span></code></pre></td></tr></table>
 </div>
+</div>
+    </div>
 </div><h3 id="特定の文字列を置換する">特定の文字列を置換する
 </h3><p>Netlify のほうで使っているテーマ Cupper の中に、特定の文字列を置換する Shortcodes がありました。<br>
 使う機会もありそうなので、こちらに書いておきます。</p>
@@ -421,7 +423,8 @@
 <p><code>[[[</code> という文字列を <code>&lt;span class='highlight'&gt;</code> に置換し、<br>
 <code>]]]</code> という文字列を <code>&lt;/span&gt;</code> に置換します。</p>
 <h4 id="html-の書き方">html の書き方
-</h4><div class="highlight"><div class="chroma">
+</h4><div>
+    <div class="code-block-content"><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
@@ -430,43 +433,46 @@
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">{{ $code := .Inner | htmlEscape }}
 </span></span><span class="line"><span class="cl">{{ $code := replace $code &#34;[[[&#34; &#34;<span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#39;highlight&#39;</span><span class="p">&gt;</span>&#34; }}
-</span></span><span class="line"><span class="cl">{{ $code := replace $code &#34;]]]&#34; &#34;<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>&#34; }}
-</span></span></code></pre></td></tr></table>
+</span></span><span class="line"><span class="cl">{{ $code := replace $code &#34;]]]&#34; &#34;<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>&#34; }}</span></span></code></pre></td></tr></table>
 </div>
+</div>
+    </div>
 </div><div class="table-wrapper"><table>
-<thead>
-<tr>
-<th style="text-align:center">行数</th>
-<th>内容</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">1行目</td>
-<td><code>{{.Inner}}</code> で範囲指定した文字列を読み込んで、<code>$code</code> に代入します。</td>
-</tr>
-<tr>
-<td style="text-align:center">2行目</td>
-<td><code>$code</code> を読み込み、<code>[[[</code> という文字列があれば <code>&lt;span class='highlight'&gt;</code> に置換し、再度 <code>$code</code> に代入します。</td>
-</tr>
-<tr>
-<td style="text-align:center">3行目</td>
-<td><code>$code</code> を読み込み、<code>]]]</code> という文字列があれば <code>&lt;/span&gt;</code> に置換し、再度 <code>$code</code> に代入します。</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: center">行数</th>
+          <th style="text-align: left">内容</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center">1行目</td>
+          <td style="text-align: left"><code>{{.Inner}}</code> で範囲指定した文字列を読み込んで、<code>$code</code> に代入します。</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">2行目</td>
+          <td style="text-align: left"><code>$code</code> を読み込み、<code>[[[</code> という文字列があれば <code>&lt;span class='highlight'&gt;</code> に置換し、再度 <code>$code</code> に代入します。</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">3行目</td>
+          <td style="text-align: left"><code>$code</code> を読み込み、<code>]]]</code> という文字列があれば <code>&lt;/span&gt;</code> に置換し、再度 <code>$code</code> に代入します。</td>
+      </tr>
+  </tbody>
 </table></div>
 <h4 id="記事の書き方">記事の書き方
 </h4><p>こんな感じで。</p>
 <script src="https://gist.github.com/k-kaz-git/469318917a46ba32a810e5cac8c96817.js"></script>
 <h4 id="結果">結果
-</h4><div class="highlight"><div class="chroma">
+</h4><div>
+    <div class="code-block-content"><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">何かしらの<span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#39;highlight&#39;</span><span class="p">&gt;</span>文字列<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>です。
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">何かしらの<span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#39;highlight&#39;</span><span class="p">&gt;</span>文字列<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>です。</span></span></code></pre></td></tr></table>
 </div>
+</div>
+    </div>
 </div><hr>
 <p>これくらい覚えておけば、ある程度自作も出来そうですね。<br>
 また何かあれば追記します。</p>
@@ -485,7 +491,8 @@
 <script src="https://gist.github.com/k-kaz-git/4bcefb1b31bf0e94de53a361846a887b.js"></script>
 <p>上の type=&ldquo;p&rdquo; が段落で、下の type=&ldquo;s&rdquo; が行内となります。</p>
 <p>fr という html ファイルを読み込んでいます。その中身はこちらです。</p>
-<div class="highlight"><div class="chroma">
+<div>
+    <div class="code-block-content"><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
@@ -500,20 +507,24 @@
 </span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fr&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;font-size: {{.Get &#34;</span><span class="na">size</span><span class="err">&#34;}}%;&#34;</span><span class="p">&gt;</span>{{.Get &#34;text&#34;}}<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">{{ else if $han | eq &#34;s&#34;}}
 </span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fr&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;font-size: {{.Get &#34;</span><span class="na">size</span><span class="err">&#34;}}%;&#34;</span><span class="p">&gt;</span>{{.Get &#34;text&#34;}}<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">{{ end }}
-</span></span></code></pre></td></tr></table>
+</span></span><span class="line"><span class="cl">{{ end }}</span></span></code></pre></td></tr></table>
 </div>
+</div>
+    </div>
 </div><p>ちょっと解説。</p>
-<div class="highlight"><div class="chroma">
+<div>
+    <div class="code-block-content"><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">{{- $han := .Get &#34;type&#34; -}}
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">{{- $han := .Get &#34;type&#34; -}}</span></span></code></pre></td></tr></table>
 </div>
+</div>
+    </div>
 </div><p>$han という変数に本文中から引っ張ってきた <code>type</code> の中身を代入します。</p>
-<div class="highlight"><div class="chroma">
+<div>
+    <div class="code-block-content"><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
@@ -526,9 +537,10 @@
 </span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fr&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;font-size: {{.Get &#34;</span><span class="na">size</span><span class="err">&#34;}}%;&#34;</span><span class="p">&gt;</span>{{.Get &#34;text&#34;}}<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">{{ else if $han | eq &#34;s&#34;}}
 </span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fr&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;font-size: {{.Get &#34;</span><span class="na">size</span><span class="err">&#34;}}%;&#34;</span><span class="p">&gt;</span>{{.Get &#34;text&#34;}}<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">{{ end }}
-</span></span></code></pre></td></tr></table>
+</span></span><span class="line"><span class="cl">{{ end }}</span></span></code></pre></td></tr></table>
 </div>
+</div>
+    </div>
 </div><p>$han の中身が &ldquo;p&rdquo; だったら、<code>&lt;p class ...</code> の行を実行します。<br>
 $han の中身が &ldquo;s&rdquo; だったら、<code>&lt;span ...</code> の行を実行します。</p>
 <p><code>eq</code> というのは比較したものが <code>同じ</code> という意味です。</p>

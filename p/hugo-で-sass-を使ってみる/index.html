@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://k-kaz-git.github.io/p/hugo-%E3%81%A7-sass-%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%A6%E3%81%BF%E3%82%8B/'>
 
-<link rel="stylesheet" href="/scss/style.min.43289f33a995fb4bc83e665a1a22504b7eecefd3dcf3f9ecc83ed51746ad75d3.css"><meta property='og:title' content="Hugo で Sass を使ってみる">
+<link rel="stylesheet" href="/scss/style.min.59f6914fefaa7fd6a3ceb1acf06074a3b888638c4a561a88453fcb5504879eaa.css"><meta property='og:title' content="Hugo で Sass を使ってみる">
 <meta property='og:description' content="Hugo で Sass を利用するのに少し設定が必要ですので、こちらにまとめます。">
 <meta property='og:url' content='https://k-kaz-git.github.io/p/hugo-%E3%81%A7-sass-%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%A6%E3%81%BF%E3%82%8B/'>
 <meta property='og:site_name' content='k-kaz が Hugo で遊ぶサイト'>
@@ -16,8 +16,6 @@
     <meta name="twitter:image" content='https://k-kaz-git.github.io/images/computer-Programming_640.webp' />
     <link rel="shortcut icon" href="/favicon.ico" />
 
-  
-    
       <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-K8B8MR2Z"></script>
       <script>
         var doNotTrack = false;
@@ -32,10 +30,6 @@
           gtag('config', 'GTM-K8B8MR2Z');
         }
       </script>
-    
-  
-
-
     </head>
     <body class="
     article-page
@@ -345,16 +339,18 @@
 昨年、Hugo も Sass に対応したようですが、標準のモジュールでは使えず、extended版 が必要になります。</p>
 <h3 id="hugo-のバージョンを確認する">Hugo のバージョンを確認する。
 </h3><p><code>hugo version</code> で現在のバージョンが確認できます。</p>
-<div class="highlight"><div class="chroma">
+<div>
+    <div class="code-block-content"><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">hugo version
-</span></span><span class="line"><span class="cl">Hugo Static Site Generator v0.54.0/extended hogehoge...
-</span></span></code></pre></td></tr></table>
+</span></span><span class="line"><span class="cl">Hugo Static Site Generator v0.54.0/extended hogehoge...</span></span></code></pre></td></tr></table>
 </div>
+</div>
+    </div>
 </div><p><code>extended</code> の文字があった方はおめでとうございます。
 無かった方はダウロードを行ってください。</p>
 <h3 id="hugo-の-extended版-をダウンロードする必要あれば">Hugo の extended版 をダウンロードする。（必要あれば）
@@ -374,7 +370,8 @@
 </h3><p>テーマによってファイルが異なると思いますが、ここでは aether の場合で書いていきます。</p>
 <p><code>サイト名\layouts\partials\head.html</code> を開きます。<br>
 ファイルが無い方は、テーマの中 <code>テーマ名\themes\aether\layouts\partials\head.html</code> から、コピーして持ってきてください。</p>
-<div class="highlight"><div class="chroma">
+<div>
+    <div class="code-block-content"><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
@@ -383,9 +380,10 @@
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;{{ &#34;</span><span class="na">css</span><span class="err">/</span><span class="na">main</span><span class="err">.</span><span class="na">min</span><span class="err">.</span><span class="na">css</span><span class="err">&#34;</span> <span class="err">|</span> <span class="na">absURL</span><span class="err">}}&#34;</span> <span class="p">/&gt;</span>
 </span></span><span class="line"><span class="cl">{{ $style := resources.Get &#34;sass/main.scss&#34; | toCSS | minify | fingerprint }}
-</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;{{ $style.Permalink }}&#34;</span><span class="p">&gt;</span>
-</span></span></code></pre></td></tr></table>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;{{ $style.Permalink }}&#34;</span><span class="p">&gt;</span></span></span></code></pre></td></tr></table>
 </div>
+</div>
+    </div>
 </div><p>1行目が元々入っている全体のスタイルシートの読み込み部分です。<br>
 今回は2行目と3行目を追加します。</p>
 <p>2行目<br>
@@ -409,14 +407,16 @@
 <p>と書かれています。</p>
 <h3 id="何か問題でも">何か問題でも？
 </h3><p>該当する箇所の確認をすると、背景色の指定をしているところでした。</p>
-<div class="highlight"><div class="chroma">
+<div>
+    <div class="code-block-content"><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="nt">background</span><span class="o">:</span> <span class="nt">rgb</span><span class="o">(</span><span class="nt">230</span><span class="o">,</span> <span class="nt">90</span><span class="o">,</span> <span class="nt">90</span><span class="o">,</span> <span class="nt">0</span><span class="p">.</span><span class="nc">2</span><span class="o">);</span>
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="nt">background</span><span class="o">:</span> <span class="nt">rgb</span><span class="o">(</span><span class="nt">230</span><span class="o">,</span> <span class="nt">90</span><span class="o">,</span> <span class="nt">90</span><span class="o">,</span> <span class="nt">0</span><span class="p">.</span><span class="nc">2</span><span class="o">);</span></span></span></code></pre></td></tr></table>
 </div>
+</div>
+    </div>
 </div><p><strong>何か問題でも？</strong></p>
 <p>しばらく気付かなかったんですけど、落ち着いて見たらようやく答えが分かりました。<br>
 というか、そもそもこの透過処理のことを私がよく分かっていなかったのが問題です。</p>
@@ -436,14 +436,16 @@
 <p>私もそこまでは知っていたんですけど、<code>alpha</code> が入るときに <code>rgb</code> が <code>rgba</code> になることを知らなかったんですね。</p>
 <p>ということで、私の知識不足により、元々の <code>.css</code> からおかしかったというオチでした。</p>
 <p>下記のように書き直したところ、きちんとスタイルシートの変換がされ、サーバーが起動しました。</p>
-<div class="highlight"><div class="chroma">
+<div>
+    <div class="code-block-content"><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="nt">background</span><span class="o">:</span> <span class="nt">rgba</span><span class="o">(</span><span class="nt">230</span><span class="o">,</span> <span class="nt">90</span><span class="o">,</span> <span class="nt">90</span><span class="o">,</span> <span class="nt">0</span><span class="p">.</span><span class="nc">2</span><span class="o">);</span>
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="nt">background</span><span class="o">:</span> <span class="nt">rgba</span><span class="o">(</span><span class="nt">230</span><span class="o">,</span> <span class="nt">90</span><span class="o">,</span> <span class="nt">90</span><span class="o">,</span> <span class="nt">0</span><span class="p">.</span><span class="nc">2</span><span class="o">);</span></span></span></code></pre></td></tr></table>
 </div>
+</div>
+    </div>
 </div><h2 id="同じ-sass-だけど-sass-か-scss-か">同じ Sass だけど .sass か .scss か
 </h2><p>Sass と言っても、記述方式が2通りあり、好きなほうを使えます。<br>
 <code>.sass</code> は、<code>{}</code> や <code>;</code> が不要なので、すっきり、そして少ない文字数でコーディングが可能。<br>

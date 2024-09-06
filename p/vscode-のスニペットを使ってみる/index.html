@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://k-kaz-git.github.io/p/vscode-%E3%81%AE%E3%82%B9%E3%83%8B%E3%83%9A%E3%83%83%E3%83%88%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%A6%E3%81%BF%E3%82%8B/'>
 
-<link rel="stylesheet" href="/scss/style.min.43289f33a995fb4bc83e665a1a22504b7eecefd3dcf3f9ecc83ed51746ad75d3.css"><meta property='og:title' content="VSCode のスニペットを使ってみる">
+<link rel="stylesheet" href="/scss/style.min.59f6914fefaa7fd6a3ceb1acf06074a3b888638c4a561a88453fcb5504879eaa.css"><meta property='og:title' content="VSCode のスニペットを使ってみる">
 <meta property='og:description' content="スニペットを使って、入力速度を劇的にアップするのと、覚えきれない Markdown を調べずに使う。">
 <meta property='og:url' content='https://k-kaz-git.github.io/p/vscode-%E3%81%AE%E3%82%B9%E3%83%8B%E3%83%9A%E3%83%83%E3%83%88%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%A6%E3%81%BF%E3%82%8B/'>
 <meta property='og:site_name' content='k-kaz が Hugo で遊ぶサイト'>
@@ -16,8 +16,6 @@
     <meta name="twitter:image" content='https://k-kaz-git.github.io/images/women-jump-happy_640.webp' />
     <link rel="shortcut icon" href="/favicon.ico" />
 
-  
-    
       <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-K8B8MR2Z"></script>
       <script>
         var doNotTrack = false;
@@ -32,10 +30,6 @@
           gtag('config', 'GTM-K8B8MR2Z');
         }
       </script>
-    
-  
-
-
     </head>
     <body class="
     article-page
@@ -355,7 +349,8 @@
 <p>拡張機能のところは選ばなくても良いんですが、これを選ぶとすぐに <code>settings.json</code> が沢山出てくるのでそうしています。</p>
 <p>ファイルを開いたら、以下を追加しています。<br>
 元々 <code>｛｝</code> があるので、その中に入れるようにすると正しく認識してくれます。</p>
-<div class="highlight"><div class="chroma">
+<div>
+    <div class="code-block-content"><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
@@ -380,16 +375,18 @@
 </span></span><span class="line"><span class="cl">    <span class="nt">&#34;editor.snippetSuggestions&#34;</span><span class="p">:</span> <span class="s2">&#34;top&#34;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></td></tr></table>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></td></tr></table>
 </div>
+</div>
+    </div>
 </div><h3 id="スニペットを登録する">スニペットを登録する
 </h3><p>Markdown用のスニペットを登録します。</p>
 <h4 id="設定用ファイル-markdownjson-を開く">設定用ファイル Markdown.json を開く
 </h4><p><code>Markdown.json</code> というファイルに追記していきます。</p>
 <p><code>ファイル → 基本設定 → ユーザースニペット → Markdown.json</code> を選択。</p>
 <p>ファイルが開かれるとこんな感じで、サンプルがコメントアウトした状態になっています。</p>
-<div class="highlight"><div class="chroma">
+<div>
+    <div class="code-block-content"><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
@@ -430,13 +427,15 @@
 </span></span></span><span class="line"><span class="cl"><span class="c1">// 	&#34;description&#34;: &#34;Log output to console&#34;
 </span></span></span><span class="line"><span class="cl"><span class="c1">// }
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></td></tr></table>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></td></tr></table>
 </div>
+</div>
+    </div>
 </div><p>サンプルは残しても消しても結構ですが、最初と最後の <code>{}</code> は、残してください。<br>
 尚、ここに書かれているサンプルの意味が理解できなくて、ちょっと迷いました。（英語にとことん弱い人）</p>
 <h4 id="標準的なスニペットの登録方法">標準的なスニペットの登録方法
-</h4><div class="highlight"><div class="chroma">
+</h4><div>
+    <div class="code-block-content"><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
@@ -449,9 +448,10 @@
 </span></span><span class="line"><span class="cl">    <span class="nt">&#34;prefix&#34;</span><span class="p">:</span> <span class="s2">&#34;キーになる文字列&#34;</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">    <span class="nt">&#34;body&#34;</span><span class="p">:[</span> <span class="s2">&#34;呼び出される文字列&#34;</span> <span class="p">],</span>
 </span></span><span class="line"><span class="cl">    <span class="nt">&#34;description&#34;</span><span class="p">:</span> <span class="s2">&#34;このスニペットの説明文&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span></code></pre></td></tr></table>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span></span></span></code></pre></td></tr></table>
 </div>
+</div>
+    </div>
 </div><ul>
 <li>
 <p><strong>スニペット名</strong><br>
@@ -471,7 +471,8 @@
 </li>
 </ul>
 <p>例えば、下記のように登録したとします。</p>
-<div class="highlight"><div class="chroma">
+<div>
+    <div class="code-block-content"><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
@@ -484,9 +485,10 @@
 </span></span><span class="line"><span class="cl">    <span class="nt">&#34;prefix&#34;</span><span class="p">:</span> <span class="s2">&#34;img&#34;</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">    <span class="nt">&#34;body&#34;</span><span class="p">:</span> <span class="p">[</span> <span class="s2">&#34;![hoge のイメージ画像](/images/hoge.webp)&#34;</span> <span class="p">],</span>
 </span></span><span class="line"><span class="cl">    <span class="nt">&#34;description: &#34;</span><span class="err">画像を挿入する&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span></code></pre></td></tr></table>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span></span></span></code></pre></td></tr></table>
 </div>
+</div>
+    </div>
 </div><p>そうすると、Markdown での記述の際に<br>
 img と打った時点（もしくは i を入れた時点）で、上記のスニペットが画面に登場し、<code>Enter</code> or <code>TAB</code> を押すことで置き換わります。</p>
 <img src="/images/VSCode-snipet-01.gif" alt="snipet の例をアニメーションで" style="max-width:640px;">
@@ -497,7 +499,8 @@ img と打った時点（もしくは i を入れた時点）で、上記のス�
 <p>ただ、実際にコードを書いていくにあたっては、呼び出したものを修正したいという場面が多々あります。</p>
 <p>そんなときは <code>$1</code> や <code>$2</code> を使用します。<br>
 先程と違うのは、<code>&quot;body&quot;</code> の中だけです。</p>
-<div class="highlight"><div class="chroma">
+<div>
+    <div class="code-block-content"><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
@@ -510,9 +513,10 @@ img と打った時点（もしくは i を入れた時点）で、上記のス�
 </span></span><span class="line"><span class="cl">    <span class="nt">&#34;prefix&#34;</span><span class="p">:</span> <span class="s2">&#34;img&#34;</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">    <span class="nt">&#34;body&#34;</span><span class="p">:</span> <span class="p">[</span> <span class="s2">&#34;![$1 のイメージ画像](/images/$2.webp)&#34;</span> <span class="p">],</span>
 </span></span><span class="line"><span class="cl">    <span class="nt">&#34;description: &#34;</span><span class="err">画像を挿入する&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span></code></pre></td></tr></table>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span></span></span></code></pre></td></tr></table>
 </div>
+</div>
+    </div>
 </div><p>こんな感じになります。</p>
 <img src="/images/VSCode-snipet-02.gif" alt="snipet の例をアニメーションで" style="max-width:640px;">
 <p>”のイメージ画像” は固定ですが、その前は毎回違うという場合。<br>
@@ -523,7 +527,8 @@ img と打った時点（もしくは i を入れた時点）で、上記のス�
 </h4><p>先程のにちょっと工夫をすると、分かりやすさをプラスすることができます。<br>
 私のように Markdown が頭に入っていない人向け・・・かもしれません。</p>
 <p>こちらも <code>&quot;body&quot;</code> の中だけが変わっています。</p>
-<div class="highlight"><div class="chroma">
+<div>
+    <div class="code-block-content"><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
@@ -536,9 +541,10 @@ img と打った時点（もしくは i を入れた時点）で、上記のス�
 </span></span><span class="line"><span class="cl">    <span class="nt">&#34;prefix&#34;</span><span class="p">:</span> <span class="s2">&#34;img&#34;</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">    <span class="nt">&#34;body&#34;</span><span class="p">:</span> <span class="p">[</span> <span class="s2">&#34;![${1:画像のタイトル} のイメージ画像](/images/${2:ファイル名}.webp)&#34;</span> <span class="p">],</span>
 </span></span><span class="line"><span class="cl">    <span class="nt">&#34;description: &#34;</span><span class="err">画像を挿入する&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span></code></pre></td></tr></table>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span></span></span></code></pre></td></tr></table>
 </div>
+</div>
+    </div>
 </div><p>はい、少しややこしくなりました（笑）</p>
 <p>動作そのものは先程と同じですが、表示の仕方が変わります。<br>
 とりあえず、画面をみていただきましょう。</p>
@@ -565,7 +571,8 @@ img と打った時点（もしくは i を入れた時点）で、上記のス�
 <h4 id="body-が複数行になる場合--タブを入れたい場合2019-03-04">body が複数行になる場合 ＆ タブを入れたい場合［2019-03-04］
 </h4><p>複数行の場合は、1行ごと最後に <code>,</code> を入れます。<br>
 但し、最終行は不要で、<code>]</code> の後に <code>,</code> を入れます。</p>
-<div class="highlight"><div class="chroma">
+<div>
+    <div class="code-block-content"><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
@@ -586,9 +593,10 @@ img と打った時点（もしくは i を入れた時点）で、上記のス�
 </span></span><span class="line"><span class="cl">		<span class="s2">&#34;======================================== */&#34;</span>
 </span></span><span class="line"><span class="cl">	<span class="p">],</span>
 </span></span><span class="line"><span class="cl">	<span class="nt">&#34;description&#34;</span><span class="p">:</span> <span class="s2">&#34;コメントアウト タイトル&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></td></tr></table>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></td></tr></table>
 </div>
+</div>
+    </div>
 </div><p>また、タブは <code>\t</code> で表します。<br>
 上記例の場合は、タブが2つ入る形です。</p>
 

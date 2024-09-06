@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://k-kaz-git.github.io/p/hugo-%E3%81%A7%E5%A4%96%E9%83%A8%E3%82%B5%E3%82%A4%E3%83%88%E3%82%92%E6%96%B0%E3%81%97%E3%81%84%E3%82%BF%E3%83%96%E3%81%A7%E9%96%8B%E3%81%8D%E3%81%9F%E3%81%84/'>
 
-<link rel="stylesheet" href="/scss/style.min.43289f33a995fb4bc83e665a1a22504b7eecefd3dcf3f9ecc83ed51746ad75d3.css"><meta property='og:title' content="Hugo で外部サイトを新しいタブで開きたい。">
+<link rel="stylesheet" href="/scss/style.min.59f6914fefaa7fd6a3ceb1acf06074a3b888638c4a561a88453fcb5504879eaa.css"><meta property='og:title' content="Hugo で外部サイトを新しいタブで開きたい。">
 <meta property='og:description' content="さっと出来ちゃうよ。">
 <meta property='og:url' content='https://k-kaz-git.github.io/p/hugo-%E3%81%A7%E5%A4%96%E9%83%A8%E3%82%B5%E3%82%A4%E3%83%88%E3%82%92%E6%96%B0%E3%81%97%E3%81%84%E3%82%BF%E3%83%96%E3%81%A7%E9%96%8B%E3%81%8D%E3%81%9F%E3%81%84/'>
 <meta property='og:site_name' content='k-kaz が Hugo で遊ぶサイト'>
@@ -16,8 +16,6 @@
     <meta name="twitter:image" content='https://k-kaz-git.github.io/images/eagle-1753002_1280.webp' />
     <link rel="shortcut icon" href="/favicon.ico" />
 
-  
-    
       <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-K8B8MR2Z"></script>
       <script>
         var doNotTrack = false;
@@ -32,10 +30,6 @@
           gtag('config', 'GTM-K8B8MR2Z');
         }
       </script>
-    
-  
-
-
     </head>
     <body class="
     article-page
@@ -334,14 +328,16 @@
 <h3 id="リンクを開くときの挙動を指定">リンクを開くときの挙動を指定
 </h3><p><code>/layouts/_default/_markup/render-link.html</code> というファイルを用意。</p>
 <p>中身は下記だけあれば良し。</p>
-<div class="highlight"><div class="chroma">
+<div>
+    <div class="code-block-content"><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;{{ .Destination | safeURL }}&#34;</span><span class="err">{{</span> <span class="na">with</span> <span class="err">.</span><span class="na">Title</span><span class="err">}}</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;{{ . }}&#34;</span><span class="err">{{</span> <span class="na">end</span> <span class="err">}}{{</span> <span class="na">if</span> <span class="na">strings</span><span class="err">.</span><span class="na">HasPrefix</span> <span class="err">.</span><span class="na">Destination</span> <span class="err">&#34;</span><span class="na">http</span><span class="err">&#34;</span> <span class="err">}}</span> <span class="na">target</span><span class="o">=</span><span class="s">&#34;_blank&#34;</span><span class="err">{{</span> <span class="na">end</span> <span class="err">}}</span><span class="p">&gt;</span>{{ .Text }}<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;{{ .Destination | safeURL }}&#34;</span><span class="err">{{</span> <span class="na">with</span> <span class="err">.</span><span class="na">Title</span><span class="err">}}</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;{{ . }}&#34;</span><span class="err">{{</span> <span class="na">end</span> <span class="err">}}{{</span> <span class="na">if</span> <span class="na">strings</span><span class="err">.</span><span class="na">HasPrefix</span> <span class="err">.</span><span class="na">Destination</span> <span class="err">&#34;</span><span class="na">http</span><span class="err">&#34;</span> <span class="err">}}</span> <span class="na">target</span><span class="o">=</span><span class="s">&#34;_blank&#34;</span><span class="err">{{</span> <span class="na">end</span> <span class="err">}}</span><span class="p">&gt;</span>{{ .Text }}<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span></span></span></code></pre></td></tr></table>
 </div>
+</div>
+    </div>
 </div><h4 id="詳しくは公式サイトにて">詳しくは公式サイトにて
 </h4><p><a class="link" href="https://gohugo.io/getting-started/configuration-markup/#markdown-render-hooks"  target="_blank" rel="noopener"
     >Markdown Render Hooks</a></p>

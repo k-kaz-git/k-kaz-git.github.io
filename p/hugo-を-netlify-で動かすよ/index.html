@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://k-kaz-git.github.io/p/hugo-%E3%82%92-netlify-%E3%81%A7%E5%8B%95%E3%81%8B%E3%81%99%E3%82%88/'>
 
-<link rel="stylesheet" href="/scss/style.min.43289f33a995fb4bc83e665a1a22504b7eecefd3dcf3f9ecc83ed51746ad75d3.css"><meta property='og:title' content="Hugo を Netlify で動かすよ。">
+<link rel="stylesheet" href="/scss/style.min.59f6914fefaa7fd6a3ceb1acf06074a3b888638c4a561a88453fcb5504879eaa.css"><meta property='og:title' content="Hugo を Netlify で動かすよ。">
 <meta property='og:description' content="Hugo を Netlify で動かしてみたときの記録です。">
 <meta property='og:url' content='https://k-kaz-git.github.io/p/hugo-%E3%82%92-netlify-%E3%81%A7%E5%8B%95%E3%81%8B%E3%81%99%E3%82%88/'>
 <meta property='og:site_name' content='k-kaz が Hugo で遊ぶサイト'>
@@ -16,8 +16,6 @@
     <meta name="twitter:image" content='https://k-kaz-git.github.io/images/hugo-netlify-network_640.webp' />
     <link rel="shortcut icon" href="/favicon.ico" />
 
-  
-    
       <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-K8B8MR2Z"></script>
       <script>
         var doNotTrack = false;
@@ -32,10 +30,6 @@
           gtag('config', 'GTM-K8B8MR2Z');
         }
       </script>
-    
-  
-
-
     </head>
     <body class="
     article-page
@@ -415,21 +409,24 @@ Windows の場合は、環境変数のところを弄ります。</p>
 </h5><p>他のテーマを使ったときに気付いたんですが、サブモジュール化すれば削除しなくて良いみたいです。<br>
 というか、そのほうが良いみたいですね。テーマのアップデートできるし。</p>
 <p>別テーマですけど、こんな感じです。</p>
-<div class="highlight"><div class="chroma">
+<div>
+    <div class="code-block-content"><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">git submodule add https://github.com/zwbetz-gh/cupper-hugo-theme.git themes/cupper-hugo-theme
-</span></span><span class="line"><span class="cl">git submodule update --remote --merge
-</span></span></code></pre></td></tr></table>
+</span></span><span class="line"><span class="cl">git submodule update --remote --merge</span></span></code></pre></td></tr></table>
 </div>
+</div>
+    </div>
 </div><h3 id="設定ファイルの修正">設定ファイルの修正
 </h3><p>ルートにある <code>config.toml</code> が設定ファイルです。<br>
 エディタで開いて、最低限これらを書いてください。<br>
 baseURL はあとで、実際の公開アドレスに直せばよいです。</p>
-<div class="highlight"><div class="chroma">
+<div>
+    <div class="code-block-content"><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
@@ -440,9 +437,10 @@ baseURL はあとで、実際の公開アドレスに直せばよいです。</p
 <pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="nx">baseURL</span> <span class="p">=</span> <span class="s2">&#34;https://hoge/&#34;</span>
 </span></span><span class="line"><span class="cl"><span class="nx">languageCode</span> <span class="p">=</span> <span class="s2">&#34;ja&#34;</span>
 </span></span><span class="line"><span class="cl"><span class="nx">title</span> <span class="p">=</span> <span class="s2">&#34;k-kaz&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="nx">theme</span> <span class="p">=</span> <span class="s2">&#34;aether&#34;</span>
-</span></span></code></pre></td></tr></table>
+</span></span><span class="line"><span class="cl"><span class="nx">theme</span> <span class="p">=</span> <span class="s2">&#34;aether&#34;</span></span></span></code></pre></td></tr></table>
 </div>
+</div>
+    </div>
 </div><h2 id="サイトを確認する">サイトを確認する
 </h2><h3 id="まずはローカルで確認する">まずはローカルで確認する
 </h3><p>ローカルサイトのルートで下記を実行します。</p>

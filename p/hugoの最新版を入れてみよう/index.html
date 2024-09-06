@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://k-kaz-git.github.io/p/hugo%E3%81%AE%E6%9C%80%E6%96%B0%E7%89%88%E3%82%92%E5%85%A5%E3%82%8C%E3%81%A6%E3%81%BF%E3%82%88%E3%81%86/'>
 
-<link rel="stylesheet" href="/scss/style.min.43289f33a995fb4bc83e665a1a22504b7eecefd3dcf3f9ecc83ed51746ad75d3.css"><meta property='og:title' content="Hugoの最新版を入れてみよう">
+<link rel="stylesheet" href="/scss/style.min.59f6914fefaa7fd6a3ceb1acf06074a3b888638c4a561a88453fcb5504879eaa.css"><meta property='og:title' content="Hugoの最新版を入れてみよう">
 <meta property='og:description' content="基本編">
 <meta property='og:url' content='https://k-kaz-git.github.io/p/hugo%E3%81%AE%E6%9C%80%E6%96%B0%E7%89%88%E3%82%92%E5%85%A5%E3%82%8C%E3%81%A6%E3%81%BF%E3%82%88%E3%81%86/'>
 <meta property='og:site_name' content='k-kaz が Hugo で遊ぶサイト'>
@@ -16,8 +16,6 @@
     <meta name="twitter:image" content='https://k-kaz-git.github.io/images/hugo-logo-wide.svg' />
     <link rel="shortcut icon" href="/favicon.ico" />
 
-  
-    
       <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-K8B8MR2Z"></script>
       <script>
         var doNotTrack = false;
@@ -32,10 +30,6 @@
           gtag('config', 'GTM-K8B8MR2Z');
         }
       </script>
-    
-  
-
-
     </head>
     <body class="
     article-page
@@ -340,24 +334,28 @@
     
     <h2 id="共通">共通
 </h2><h3 id="使用中のバージョンを確認">使用中のバージョンを確認
-</h3><div class="highlight"><div class="chroma">
+</h3><div>
+    <div class="code-block-content"><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">hugo version
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">hugo version</span></span></code></pre></td></tr></table>
 </div>
+</div>
+    </div>
 </div><p>これを実行すると、現在使用しているバージョンが表示されます。<br>
 ちなみに先程実行したところ、</p>
-<div class="highlight"><div class="chroma">
+<div>
+    <div class="code-block-content"><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">hugo v0.80.0
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">hugo v0.80.0</span></span></code></pre></td></tr></table>
 </div>
+</div>
+    </div>
 </div><p>と出ました。</p>
 <h3 id="最新版のダウンロード">最新版のダウンロード
 </h3><p>Hugoのリリース一覧はこちら。<br>
@@ -383,24 +381,28 @@
 </h3><p>Windowsの場合は、<code>hugo.exe</code>を置き換える（上書き）だけで完了します。<br>
 先程解凍した3つのファイルを既存の<code>hugo.exe</code>を置いてある場所に上書きで入れて終わりです。</p>
 <h3 id="確認1-バージョン">確認1 バージョン
-</h3><div class="highlight"><div class="chroma">
+</h3><div>
+    <div class="code-block-content"><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">hugo version
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">hugo version</span></span></code></pre></td></tr></table>
 </div>
+</div>
+    </div>
 </div><p>最新版のバージョンが表示されていればオッケーです。</p>
 <h3 id="確認2-hugo-sever">確認2 Hugo Sever
-</h3><div class="highlight"><div class="chroma">
+</h3><div>
+    <div class="code-block-content"><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">hugo server
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">hugo server</span></span></code></pre></td></tr></table>
 </div>
+</div>
+    </div>
 </div><p>これを実行して、エラーが出ないことを確認します。<br>
 何かしらのエラーが出たときはネットで調べて対応します。<br>
 意味不明の場合は、いったん元のバージョンに戻す（古いのを上書き）でも良いです。</p>

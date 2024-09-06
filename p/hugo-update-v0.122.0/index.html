@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://k-kaz-git.github.io/p/hugo-update-v0.122.0/'>
 
-<link rel="stylesheet" href="/scss/style.min.43289f33a995fb4bc83e665a1a22504b7eecefd3dcf3f9ecc83ed51746ad75d3.css"><meta property='og:title' content="Hugo Update V0.122.0">
+<link rel="stylesheet" href="/scss/style.min.59f6914fefaa7fd6a3ceb1acf06074a3b888638c4a561a88453fcb5504879eaa.css"><meta property='og:title' content="Hugo Update V0.122.0">
 <meta property='og:description' content="Update後の修正">
 <meta property='og:url' content='https://k-kaz-git.github.io/p/hugo-update-v0.122.0/'>
 <meta property='og:site_name' content='k-kaz が Hugo で遊ぶサイト'>
@@ -16,8 +16,6 @@
     <meta name="twitter:image" content='https://k-kaz-git.github.io/images/hugo-logo-wide.svg' />
     <link rel="shortcut icon" href="/favicon.ico" />
 
-  
-    
       <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-K8B8MR2Z"></script>
       <script>
         var doNotTrack = false;
@@ -32,10 +30,6 @@
           gtag('config', 'GTM-K8B8MR2Z');
         }
       </script>
-    
-  
-
-
     </head>
     <body class="
     article-page
@@ -333,7 +327,8 @@
 <p>記事タイトルの下に更新日、読むのにかかる時間等を入れていますが、ここで使っていたHTMLタグ <code>span</code> や、スペースを表示する <code>&amp;nbsp;</code> なんかがそのままページに表示されていました。<br>
 たぶん、この1年間の間に記述方法が変わったのでしょう。修正しました。</p>
 <h3 id="post_metahtml">post_meta.html
-</h3><div class="highlight"><div class="chroma">
+</h3><div>
+    <div class="code-block-content"><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
@@ -352,10 +347,12 @@
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">{{- with ($scratch.Get &#34;meta&#34;) }}
 </span></span><span class="line"><span class="cl">{{- delimit . &#34;<span class="ni">&amp;nbsp;</span>·<span class="ni">&amp;nbsp;</span>&#34; -}}
-</span></span><span class="line"><span class="cl">{{- end -}}
-</span></span></code></pre></td></tr></table>
+</span></span><span class="line"><span class="cl">{{- end -}}</span></span></code></pre></td></tr></table>
 </div>
-</div><div class="highlight"><div class="chroma">
+</div>
+    </div>
+</div><div>
+    <div class="code-block-content"><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
@@ -374,9 +371,10 @@
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">{{- with ($scratch.Get &#34;meta&#34;) }}
 </span></span><span class="line"><span class="cl">{{- delimit . &#34; &#34; -}}
-</span></span><span class="line"><span class="cl">{{- end -}}
-</span></span></code></pre></td></tr></table>
+</span></span><span class="line"><span class="cl">{{- end -}}</span></span></code></pre></td></tr></table>
 </div>
+</div>
+    </div>
 </div><p>これで大丈夫そうです。</p>
 
 </section>
