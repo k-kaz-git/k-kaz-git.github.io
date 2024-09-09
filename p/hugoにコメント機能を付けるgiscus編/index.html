@@ -407,30 +407,7 @@ giscusは、GitHubのDiscussions機能を使います。</p>
 </ol>
 <p>私の場合は、記事の下に入れるため <code>single.html</code> の最後に入れました。</p>
 <div>
-    <div class="code-block-content"><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">// single.html
+    <div class="code-block-content"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">// single.html
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">{{</span><span class="o">-</span> <span class="k">if</span> <span class="p">(.</span><span class="nx">Param</span> <span class="s2">&#34;comments&#34;</span><span class="p">)</span> <span class="p">}}</span>
 </span></span><span class="line"><span class="cl">  <span class="o">&lt;</span><span class="nx">script</span> <span class="nx">src</span><span class="o">=</span><span class="s2">&#34;https://giscus.app/client.js&#34;</span>
 </span></span><span class="line"><span class="cl">    <span class="nx">data</span><span class="o">-</span><span class="nx">repo</span><span class="o">=</span><span class="s2">&#34;hoge/hoge-repo&#34;</span> <span class="c1">//ユーザー名と保管用リポジトリ名
@@ -448,9 +425,7 @@ giscusは、GitHubのDiscussions機能を使います。</p>
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">crossorigin</span><span class="o">=</span><span class="s2">&#34;anonymous&#34;</span>
 </span></span><span class="line"><span class="cl">    <span class="kr">async</span><span class="o">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="o">&lt;</span><span class="err">/script&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">{{</span><span class="o">-</span> <span class="nx">end</span> <span class="p">}}</span></span></span></code></pre></td></tr></table>
-</div>
-</div>
+</span></span><span class="line"><span class="cl"><span class="p">{{</span><span class="o">-</span> <span class="nx">end</span> <span class="p">}}</span></span></span></code></pre></div>
     </div>
 </div><p>コメントで説明を入れてみましたが、違っていたらすいません。</p>
 <p>先ほど取得したコードをそのまま使っています。<br>
@@ -458,27 +433,7 @@ giscusは、GitHubのDiscussions機能を使います。</p>
 <h4 id="stack-の場合">Stack の場合
 </h4><p>コメント機能は標準で付いているので、configを触るだけで大丈夫でした。</p>
 <div>
-    <div class="code-block-content"><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">// config.yml
+    <div class="code-block-content"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">// config.yml
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">params</span><span class="o">:</span>
 </span></span><span class="line"><span class="cl">    <span class="nx">comments</span><span class="o">:</span>
 </span></span><span class="line"><span class="cl">        <span class="nx">enabled</span><span class="o">:</span> <span class="kc">true</span>     <span class="c1">// コメント機能を有効に
@@ -493,9 +448,7 @@ giscusは、GitHubのDiscussions機能を使います。</p>
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="nx">darkTheme</span><span class="o">:</span> <span class="nx">preferred_color_scheme</span>   <span class="c1">// ダークモードのときのテーマカラー（ここではモードで自動調整？）
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="nx">lang</span><span class="o">:</span> <span class="nx">ja</span>                            <span class="c1">// 項目がなかったので自分で追加し、メッセージ等を日本語に
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="nx">reactionsEnabled</span><span class="o">:</span> <span class="mi">1</span>
-</span></span><span class="line"><span class="cl">            <span class="nx">emitMetadata</span><span class="o">:</span> <span class="mi">0</span></span></span></code></pre></td></tr></table>
-</div>
-</div>
+</span></span><span class="line"><span class="cl">            <span class="nx">emitMetadata</span><span class="o">:</span> <span class="mi">0</span></span></span></code></pre></div>
     </div>
 </div><h2 id="所感">所感
 </h2><p>難しいことは何もなく、簡単にコメント機能の設置ができました。</p>

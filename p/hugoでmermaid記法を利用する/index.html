@@ -357,24 +357,12 @@ Markdownの中に書いてあげればオッケーです。</p>
 </ol>
 <p>※1 追記するコード</p>
 <div>
-    <div class="code-block-content"><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-Markdown" data-lang="Markdown"><span class="line"><span class="cl">{{ if .Page.Store.Get &#34;hasMermaid&#34; }}
+    <div class="code-block-content"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Markdown" data-lang="Markdown"><span class="line"><span class="cl">{{ if .Page.Store.Get &#34;hasMermaid&#34; }}
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;module&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="kr">import</span> <span class="nx">mermaid</span> <span class="nx">from</span> <span class="s1">&#39;https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs&#39;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="nx">mermaid</span><span class="p">.</span><span class="nx">initialize</span><span class="p">({</span> <span class="nx">startOnLoad</span><span class="o">:</span> <span class="kc">true</span> <span class="p">});</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">{{ end }}</span></span></code></pre></td></tr></table>
-</div>
-</div>
+</span></span><span class="line"><span class="cl">{{ end }}</span></span></code></pre></div>
     </div>
 </div><h3 id="使えるようになりました">使えるようになりました
 </h3><p>たったこれだけで使えるようになるんですね。<br>

@@ -350,32 +350,15 @@
 </h3><p>aether は、簡単にスタイルの変更が出来たんですけど、Cupper は全然適用されない。<br>
 何でだろうと調べていたら、テーマによっては <code>config.toml</code> に手を入れなければいけないものがあることを知ったおじさんです。</p>
 <div>
-    <div class="code-block-content"><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">params</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">customCSS</span> <span class="p">=</span> <span class="p">[</span><span class="s2">&#34;/css/hoge.css&#34;</span><span class="p">]</span></span></span></code></pre></td></tr></table>
-</div>
-</div>
+    <div class="code-block-content"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">params</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">customCSS</span> <span class="p">=</span> <span class="p">[</span><span class="s2">&#34;/css/hoge.css&#34;</span><span class="p">]</span></span></span></code></pre></div>
     </div>
 </div><p>こうすることで、<code>static/css/hoge.css</code> が元のスタイルシートの上に被さるようになるんだって。<br>
 もちろん <code>&lt;head&gt;&lt;/head&gt;</code> に読み込み用の追記が必要です。</p>
 <div>
-    <div class="code-block-content"><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <div class="code-block-content"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text/css&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;/css/hoge.css&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span></span></span></code></pre></td></tr></table>
-</div>
-</div>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span></span></span></code></pre></div>
     </div>
 </div><p>スタイルを弄る前段階で躓きましたよ・・・。</p>
 <h2 id="標準機能内">標準機能内
@@ -398,20 +381,7 @@ after: <img src="/images/cupper-custom-h2-icon-after.webp" alt="h2アイコン�
 <p><code>layouts\partials\svg.html</code></p>
 <p>この中にある <code>&lt;symbol id=&quot;link&quot;&gt; ～ &lt;/symbol&gt;</code> というのが、<code>h2</code> のところで使われているリンクアイコンなので、該当行を丸ごと削除すれば、きれいに消えます。</p>
 <div>
-    <div class="code-block-content"><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span><span class="lnt">9
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">symbol</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;link&#34;</span> <span class="na">viewBox</span><span class="o">=</span><span class="s">&#34;0 0 50 50&#34;</span><span class="p">&gt;</span>
+    <div class="code-block-content"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">symbol</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;link&#34;</span> <span class="na">viewBox</span><span class="o">=</span><span class="s">&#34;0 0 50 50&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">g</span> <span class="na">transform</span><span class="o">=</span><span class="s">&#34;translate(0 -1002.4)&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">   <span class="p">&lt;</span><span class="nt">g</span> <span class="na">transform</span><span class="o">=</span><span class="s">&#34;matrix(.095670 0 0 .095670 2.3233 1004.9)&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">g</span><span class="p">&gt;</span>
@@ -419,9 +389,7 @@ after: <img src="/images/cupper-custom-h2-icon-after.webp" alt="h2アイコン�
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">g</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">   <span class="p">&lt;/</span><span class="nt">g</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">g</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">symbol</span><span class="p">&gt;</span></span></span></code></pre></td></tr></table>
-</div>
-</div>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">symbol</span><span class="p">&gt;</span></span></span></code></pre></div>
     </div>
 </div><h3 id="カテゴリーを追加する">カテゴリーを追加する
 </h3><p>本テーマでは、タグは自動で出てきますが、カテゴリーは出てきません。<br>
@@ -430,18 +398,9 @@ after: <img src="/images/cupper-custom-h2-icon-after.webp" alt="h2アイコン�
 </h4><p><code>config.toml</code> に <code>tag</code> の行があるので、その前後に <code>category</code> を入れます。<br>
 右側に入るのは複数形になるので注意！！</p>
 <div>
-    <div class="code-block-content"><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">taxonomies</span><span class="p">]</span>
+    <div class="code-block-content"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">taxonomies</span><span class="p">]</span>
 </span></span><span class="line"><span class="cl">  <span class="nx">tag</span> <span class="p">=</span> <span class="s2">&#34;tags&#34;</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">category</span> <span class="p">=</span> <span class="s2">&#34;categories&#34;</span>   <span class="c"># ここに追加しました</span></span></span></code></pre></td></tr></table>
-</div>
-</div>
+</span></span><span class="line"><span class="cl">  <span class="nx">category</span> <span class="p">=</span> <span class="s2">&#34;categories&#34;</span>   <span class="c"># ここに追加しました</span></span></span></code></pre></div>
     </div>
 </div><h4 id="メニューに追加">メニューに追加
 </h4><p>before: <img src="/images/cupper-custom-menu-before.webp" alt="メニューにカテゴリーが無い" style="width:auto;" ></p>
@@ -449,26 +408,13 @@ after: <img src="/images/cupper-custom-h2-icon-after.webp" alt="h2アイコン�
 <p>これも設定ファイル <code>config.toml</code> の中です。<br>
 <code>[menu]</code> というセクションがありますので、表示したい位置に入れてあげます。</p>
 <div>
-    <div class="code-block-content"><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">menu</span><span class="p">]</span>
+    <div class="code-block-content"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">menu</span><span class="p">]</span>
 </span></span><span class="line"><span class="cl">  <span class="err">＜中略＞</span>
 </span></span><span class="line"><span class="cl">  <span class="p">[[</span><span class="nx">menu</span><span class="p">.</span><span class="nx">nav</span><span class="p">]]</span>
 </span></span><span class="line"><span class="cl">    <span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;Categories&#34;</span>   <span class="c"># 表示される名称</span>
 </span></span><span class="line"><span class="cl">    <span class="nx">url</span> <span class="p">=</span> <span class="s2">&#34;/categories/&#34;</span>    <span class="c"># 参照するアドレス</span>
 </span></span><span class="line"><span class="cl">    <span class="nx">weight</span> <span class="p">=</span> <span class="mi">3</span>                  <span class="c"># 表示する順番？</span>
-</span></span><span class="line"><span class="cl">  <span class="err">＜中略＞</span></span></span></code></pre></td></tr></table>
-</div>
-</div>
+</span></span><span class="line"><span class="cl">  <span class="err">＜中略＞</span></span></span></code></pre></div>
     </div>
 </div><p>ついでに about も要らないので消しました。</p>
 <h4 id="記事のタイトル下に追加">記事のタイトル下に追加
@@ -482,31 +428,7 @@ after: <img src="/images/cupper-custom-h2-icon-after.webp" alt="h2アイコン�
 丸ごとコピーして、<code>tags</code> を <code>categories</code> に変更して貼り付ければおしまい。<br>
 スタイルは同じで良いかなと思ったので、手を抜いてそのままにしました。</p>
 <div>
-    <div class="code-block-content"><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;date&#34;</span><span class="p">&gt;</span>
+    <div class="code-block-content"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;date&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  {{ $dateFormat := $.Site.Params.dateFormat | default &#34;2006-01-02&#34; }}
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">strong</span> <span class="na">aria-hidden</span><span class="o">=</span><span class="s">&#34;true&#34;</span><span class="p">&gt;</span>Post: <span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span>{{ .PublishDate.Format $dateFormat }}
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
@@ -525,23 +447,14 @@ after: <img src="/images/cupper-custom-h2-icon-after.webp" alt="h2アイコン�
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">{{ end }}
-</span></span><span class="line"><span class="cl"><span class="c">&lt;!-- ここまで --&gt;</span></span></span></code></pre></td></tr></table>
-</div>
-</div>
+</span></span><span class="line"><span class="cl"><span class="c">&lt;!-- ここまで --&gt;</span></span></span></code></pre></div>
     </div>
 </div><h3 id="更新日を追加する">更新日を追加する
 </h3><p>このテーマも更新日がないので追加します。</p>
 <h4 id="設定の有効化">設定の有効化
 </h4><p><code>config.toml</code> に以下を追加します。</p>
 <div>
-    <div class="code-block-content"><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="nx">enableGitInfo</span> <span class="p">=</span> <span class="kc">true</span></span></span></code></pre></td></tr></table>
-</div>
-</div>
+    <div class="code-block-content"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="nx">enableGitInfo</span> <span class="p">=</span> <span class="kc">true</span></span></span></code></pre></div>
     </div>
 </div><h4 id="記事一覧に追加">記事一覧に追加
 </h4><p>before: <img src="/images/cupper-custom-list-before.webp" alt="記事一覧にカテゴリーが無い" style="width:auto;" ></p>
@@ -553,18 +466,9 @@ after: <img src="/images/cupper-custom-h2-icon-after.webp" alt="h2アイコン�
 <p>公開日の下に <code>/ Up: {{ .Lastmod.Format &quot;2006-01-02&quot; }}</code> を追加します。<br>
 日付のフォーマットも自分好みに変えておきました。</p>
 <div>
-    <div class="code-block-content"><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">{{ $dateFormat := $.Site.Params.dateFormat | default &#34;2006-01-02&#34; }}
+    <div class="code-block-content"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">{{ $dateFormat := $.Site.Params.dateFormat | default &#34;2006-01-02&#34; }}
 </span></span><span class="line"><span class="cl">Post: {{ .PublishDate.Format $dateFormat }}
-</span></span><span class="line"><span class="cl">/ Up: {{ .Lastmod.Format &#34;2006-01-02&#34; }}    <span class="c">&lt;!-- ここに追加 --&gt;</span></span></span></code></pre></td></tr></table>
-</div>
-</div>
+</span></span><span class="line"><span class="cl">/ Up: {{ .Lastmod.Format &#34;2006-01-02&#34; }}    <span class="c">&lt;!-- ここに追加 --&gt;</span></span></span></code></pre></div>
     </div>
 </div><h4 id="記事のタイトル下に追加-1">記事のタイトル下に追加
 </h4><p><code>layouts\post\single.html</code> を修正しますが、上とまったく同じなので省略。</p>
@@ -574,28 +478,14 @@ after: <img src="/images/cupper-custom-h2-icon-after.webp" alt="h2アイコン�
 <h4 id="記事に概要を書く下準備">記事に概要を書く（下準備）
 </h4><p>記事 <code>hoge.md</code> に以下を追加します。</p>
 <div>
-    <div class="code-block-content"><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-md" data-lang="md"><span class="line"><span class="cl">description: &#34;ここに記事の概要を書きます。&#34;</span></span></code></pre></td></tr></table>
-</div>
-</div>
+    <div class="code-block-content"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-md" data-lang="md"><span class="line"><span class="cl">description: &#34;ここに記事の概要を書きます。&#34;</span></span></code></pre></div>
     </div>
 </div><p>テンプレート（例えば <code>archetypes\post.md</code> ）に予め <code>description: &quot;&quot;</code> を追加しておくと、毎回書かなくて良いので楽です。</p>
 <h4 id="記事一覧に概要を追加">記事一覧に概要を追加
 </h4><p><code>layouts\_default\list.html</code></p>
 <p>表示したい場所に下記を追加します。</p>
 <div>
-    <div class="code-block-content"><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">{{ if (isset .Params &#34;description&#34;) }}{{ index .Params &#34;description&#34; }}{{ else }}{{ .Summary }}{{ end }}</span></span></code></pre></td></tr></table>
-</div>
-</div>
+    <div class="code-block-content"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">{{ if (isset .Params &#34;description&#34;) }}{{ index .Params &#34;description&#34; }}{{ else }}{{ .Summary }}{{ end }}</span></span></code></pre></div>
     </div>
 </div><h3 id="トップページを記事一覧ページにする2019-03-19">トップページを記事一覧ページにする［2019-03-19］
 </h3><p>テーマ内にある <code>_index.html</code> を削除すると、次に見に行くのが <code>list.html</code> になるので、それで完了・・・のはずが、うまくいかず。<br>

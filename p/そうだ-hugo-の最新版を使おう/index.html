@@ -324,16 +324,8 @@
     <h2 id="hugo-ってバージョンアップしてるの">Hugo ってバージョンアップしてるの？
 </h2><p>まずは、私が使っている現在のバージョンを確認。</p>
 <div>
-    <div class="code-block-content"><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">$ hugo version
-</span></span><span class="line"><span class="cl">$ Hugo Static Site Generator v0.54.0/extended windows/amd64 BuildDate: unknown</span></span></code></pre></td></tr></table>
-</div>
-</div>
+    <div class="code-block-content"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">$ hugo version
+</span></span><span class="line"><span class="cl">$ Hugo Static Site Generator v0.54.0/extended windows/amd64 BuildDate: unknown</span></span></code></pre></div>
     </div>
 </div><p>ふむ、0.54 を使っているらしい。</p>
 <p>公式サイトに行ってみると、0.76.5 が最新の様子。<br>
@@ -343,49 +335,23 @@
 <h2 id="チェックしましょう">チェックしましょう。
 </h2><p>とりあえず今までの記事が正常に見られるかチェック。</p>
 <div>
-    <div class="code-block-content"><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">$ hugo server -D
+    <div class="code-block-content"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">$ hugo server -D
 </span></span><span class="line"><span class="cl">Start building sites …
 </span></span><span class="line"><span class="cl">WARN 2020/10/16 15:08:48 Page.RSSLink is deprecated and will be removed in a future release. Use the Output Format&#39;s link, e.g. something like:
-</span></span><span class="line"><span class="cl">    {{ with .OutputFormats.Get &#34;RSS&#34; }}{{ .RelPermalink }}{{ end }}</span></span></code></pre></td></tr></table>
-</div>
-</div>
+</span></span><span class="line"><span class="cl">    {{ with .OutputFormats.Get &#34;RSS&#34; }}{{ .RelPermalink }}{{ end }}</span></span></code></pre></div>
     </div>
 </div><p>なんか怒られた。</p>
 <h2 id="修正します">修正します。
 </h2><p>調べてみたら、<code>.RSSLink</code> っていうのが最新版では使えないっていうことらしい。</p>
 <p><code>head.html</code> で使っていたので修正しました。</p>
 <div>
-    <div class="code-block-content"><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">{{ if .RSSLink }}
-</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;{{ .RSSLink }}&#34;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;alternate&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;application/rss+xml&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;{{ .Title }}&#34;</span> <span class="p">/&gt;</span>{{ end }}</span></span></code></pre></td></tr></table>
-</div>
-</div>
+    <div class="code-block-content"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">{{ if .RSSLink }}
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;{{ .RSSLink }}&#34;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;alternate&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;application/rss+xml&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;{{ .Title }}&#34;</span> <span class="p">/&gt;</span>{{ end }}</span></span></code></pre></div>
     </div>
 </div><p>↓ こんな風に。</p>
 <div>
-    <div class="code-block-content"><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">{{ with .OutputFormats.Get &#34;RSS&#34; }}
-</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;{{ .RelPermalink }}&#34;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;alternate&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;application/rss+xml&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;{{ $.Site.Title }}&#34;</span> <span class="p">/&gt;</span>{{ end }}</span></span></code></pre></td></tr></table>
-</div>
-</div>
+    <div class="code-block-content"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">{{ with .OutputFormats.Get &#34;RSS&#34; }}
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;{{ .RelPermalink }}&#34;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;alternate&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;application/rss+xml&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;{{ $.Site.Title }}&#34;</span> <span class="p">/&gt;</span>{{ end }}</span></span></code></pre></div>
     </div>
 </div><p>これでエラーは出なくなった。</p>
 <h2 id="あれ-レイアウトが">あれ？ レイアウトが・・・
@@ -438,30 +404,15 @@ home.Pagesはトップレベルセクションのページのみを返すよう�
 </h3><p>たまたま気付いたんですが、引用した部分がごっそり消えていたんですよ。</p>
 <p>html のソースを見ると、その部分が</p>
 <div>
-    <div class="code-block-content"><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="c">&lt;!-- raw HTML omitted --&gt;</span></span></span></code></pre></td></tr></table>
-</div>
-</div>
+    <div class="code-block-content"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="c">&lt;!-- raw HTML omitted --&gt;</span></span></span></code></pre></div>
     </div>
 </div><p>となっていました。</p>
 <p>これは Google ですぐに見付けました。</p>
 <p>v0.60.0 から、記事ファイル（hoge.md）に書かれた html が表示されなくなったとのこと。（なんで？）</p>
 <p>解決策は <code>config.toml</code> にオプションを追加すればオッケー。</p>
 <div>
-    <div class="code-block-content"><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">markup</span><span class="p">.</span><span class="nx">goldmark</span><span class="p">.</span><span class="nx">renderer</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl"><span class="nx">unsafe</span><span class="p">=</span> <span class="kc">true</span></span></span></code></pre></td></tr></table>
-</div>
-</div>
+    <div class="code-block-content"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">markup</span><span class="p">.</span><span class="nx">goldmark</span><span class="p">.</span><span class="nx">renderer</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="nx">unsafe</span><span class="p">=</span> <span class="kc">true</span></span></span></code></pre></div>
     </div>
 </div><p>すぐ直って良かった。</p>
 <p>ということで、今回から最新版の Hugo を使っていきます。</p>

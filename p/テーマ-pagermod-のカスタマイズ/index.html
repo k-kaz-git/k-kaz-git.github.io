@@ -386,27 +386,7 @@
 中身が呼び出すことで変わるので <strong>CSS変数</strong> と呼んだりもするそう。</p>
 <p>Pagermod の場合、<code>theme-vars.css</code> の中で、ライトモードが <code>.root</code> ダークモードが <code>.dark</code> で定義されています。</p>
 <div>
-    <div class="code-block-content"><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="p">:</span><span class="nd">root</span> <span class="p">{</span>
+    <div class="code-block-content"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="p">:</span><span class="nd">root</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="nv">--theme</span><span class="p">:</span> <span class="mh">#fff</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="nv">--entry</span><span class="p">:</span> <span class="mh">#fff</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="nv">--primary</span><span class="p">:</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.88</span><span class="p">);</span>
@@ -421,25 +401,14 @@
 </span></span><span class="line"><span class="cl">    <span class="nv">--secondary</span><span class="p">:</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mf">0.56</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">    <span class="nv">--tertiary</span><span class="p">:</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mf">0.16</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">    <span class="nv">--content</span><span class="p">:</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mf">0.64</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></td></tr></table>
-</div>
-</div>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div>
     </div>
 </div><p>長くなるので途中の行とか割愛しましたが、こんな感じです。</p>
 <p>定義したものを使うには、</p>
 <div>
-    <div class="code-block-content"><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="nt">a</span> <span class="p">{</span>
+    <div class="code-block-content"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="nt">a</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="k">color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">entry</span><span class="p">);</span>    <span class="c">/* リンクの色を定義 */</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></td></tr></table>
-</div>
-</div>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div>
     </div>
 </div><p>とします。<br>
 すると、ライトモードのときは <code>#fff</code> が、ダークモードのときは <code>#2e2e33</code> が入るというわけ。
@@ -461,14 +430,7 @@
 サイト全体の構成を司る <code>config.yml</code> or <code>config.toml</code> の記述を1箇所変えるだけ。</p>
 <p>ちなみにこのテーマの初期値は <code>config.yml</code> なので、以下こちらで統一します。</p>
 <div>
-    <div class="code-block-content"><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="line"><span class="cl"><span class="w">  </span><span class="nt">ShowShareButtons</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">     </span><span class="c"># True にすれば表示するよ。</span></span></span></code></pre></td></tr></table>
-</div>
-</div>
+    <div class="code-block-content"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="line"><span class="cl"><span class="w">  </span><span class="nt">ShowShareButtons</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">     </span><span class="c"># True にすれば表示するよ。</span></span></span></code></pre></div>
     </div>
 </div><h4 id="トップページのソーシャル系アイコンを消す">トップページのソーシャル系アイコンを消す。
 </h4><p>これも簡単ですが、ファイルを持ってくる必要があります。</p>
@@ -479,24 +441,7 @@
 コメントアウトか、削除はお好みで。（私は削除）</p>
 <p>元ファイル（<code>サイト名\themes\hugo-PaperMod\layouts\partials\home_info.html</code> ）</p>
 <div>
-    <div class="code-block-content"><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">{{- with $.Site.Params.homeInfoParams }}
+    <div class="code-block-content"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">{{- with $.Site.Params.homeInfoParams }}
 </span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">article</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;first-entry home-info&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">header</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;entry-header&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>{{- .Title | markdownify }}<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
@@ -508,32 +453,11 @@
 </span></span><span class="line"><span class="cl">        {{- partial &#34;social_icons.html&#34; $.Site.Params.socialIcons -}}
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">footer</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">article</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">{{- end}}</span></span></code></pre></td></tr></table>
-</div>
-</div>
+</span></span><span class="line"><span class="cl">{{- end}}</span></span></code></pre></div>
     </div>
 </div><p>コピペしたファイル（<code>サイト名\layouts\partials\home_info.html</code>）</p>
 <div>
-    <div class="code-block-content"><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">{{- with $.Site.Params.homeInfoParams }}
+    <div class="code-block-content"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">{{- with $.Site.Params.homeInfoParams }}
 </span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">article</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;first-entry home-info&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">header</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;entry-header&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>{{- .Title | markdownify }}<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
@@ -547,9 +471,7 @@
 </span></span></span><span class="line"><span class="cl"><span class="c">    &lt;/footer&gt;
 </span></span></span><span class="line"><span class="cl"><span class="c">--&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">article</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">{{- end}}</span></span></code></pre></td></tr></table>
-</div>
-</div>
+</span></span><span class="line"><span class="cl">{{- end}}</span></span></code></pre></div>
     </div>
 </div><h3 id="右上のメニューをカスタマイズしたい">右上のメニューをカスタマイズしたい。
 </h3><p>2段階の修正が必要です。<br>
@@ -558,22 +480,7 @@
 <h4 id="メニューの文字列を表示する">メニューの文字列を表示する。
 </h4><p><code>config.yml</code> を開いて、表示したい文字列、優先順位等を記述します。</p>
 <div>
-    <div class="code-block-content"><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="line"><span class="cl"><span class="nt">menu</span><span class="p">:</span><span class="w">
+    <div class="code-block-content"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="line"><span class="cl"><span class="nt">menu</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">main</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Archives   </span><span class="w"> </span><span class="c"># 表示される文字列</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l">/archives/  </span><span class="w"> </span><span class="c"># url</span><span class="w">
@@ -583,60 +490,31 @@
 </span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="m">10</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Link       </span><span class="w"> </span><span class="c"># 今回追加</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l">/links/     </span><span class="w"> </span><span class="c"># 今回追加</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="m">12</span><span class="w">        </span><span class="c"># 今回追加</span></span></span></code></pre></td></tr></table>
-</div>
-</div>
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="m">12</span><span class="w">        </span><span class="c"># 今回追加</span></span></span></code></pre></div>
     </div>
 </div><p>今回は <code>Link</code> というメニューを追加してみました。</p>
 <h4 id="link-の中身を作ります">Link の中身を作ります。
 </h4><p>下記の場所に <code>links.md</code> を設置します。<br>
 <code>サイト名\content\links.md</code></p>
 <div>
-    <div class="code-block-content"><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ hugo new links.md</span></span></code></pre></td></tr></table>
-</div>
-</div>
+    <div class="code-block-content"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ hugo new links.md</span></span></code></pre></div>
     </div>
 </div><p>ファイルを作ったら、その中身を編集します。</p>
 <div>
-    <div class="code-block-content"><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-md" data-lang="md"><span class="line"><span class="cl">---
+    <div class="code-block-content"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-md" data-lang="md"><span class="line"><span class="cl">---
 </span></span><span class="line"><span class="cl">title: &#34;Link&#34;
 </span></span><span class="line"><span class="cl">url: &#34;/links&#34;
 </span></span><span class="line"><span class="cl">summary: &#34;links&#34;
 </span></span><span class="line"><span class="cl">---
 </span></span><span class="line"><span class="cl">[<span class="nt">k-kaz ブログ</span>](<span class="na">https://k-kaz.net</span>)  
-</span></span><span class="line"><span class="cl">[<span class="nt">k-kaz が Hugo で遊ぶサイト</span>](<span class="na">https://k-kaz-git.github.io</span>)</span></span></code></pre></td></tr></table>
-</div>
-</div>
+</span></span><span class="line"><span class="cl">[<span class="nt">k-kaz が Hugo で遊ぶサイト</span>](<span class="na">https://k-kaz-git.github.io</span>)</span></span></code></pre></div>
     </div>
 </div><p>これで画面右上に <code>Archives</code> <code>Tags</code> <code>Link</code> が並び、クリックするとその中身が表示されます。</p>
 <h3 id="トップページに記事のサマリーを表示する">トップページに記事のサマリーを表示する。
 </h3><p>何も設定しない場合は、記事本文の先頭から何文字かがサマリーとして表示されます。
 意図的に表示したい文言があるときは記事上部の設定部分に <code>summary</code> を入れます。</p>
 <div>
-    <div class="code-block-content"><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-md" data-lang="md"><span class="line"><span class="cl">summary: &#34;意図的に表示したい文言を書く。&#34;</span></span></code></pre></td></tr></table>
-</div>
-</div>
+    <div class="code-block-content"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-md" data-lang="md"><span class="line"><span class="cl">summary: &#34;意図的に表示したい文言を書く。&#34;</span></span></code></pre></div>
     </div>
 </div><h2 id="hugo-のカスタマイズをします他テーマでも共通">Hugo のカスタマイズをします。（他テーマでも共通）
 </h2><p>この記事に載せなくても良いのですが、せっかくなので一緒に書いておきましょう。</p>
@@ -648,33 +526,15 @@
 ちなみに表示されない部分は <code>&lt;!-- raw HTML omitted --&gt;</code> と置き換わっています。</p>
 <h4 id="configtoml">config.toml
 </h4><div>
-    <div class="code-block-content"><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">markup</span><span class="p">.</span><span class="nx">goldmark</span><span class="p">.</span><span class="nx">renderer</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl"><span class="nx">unsafe</span><span class="p">=</span> <span class="kc">true</span></span></span></code></pre></td></tr></table>
-</div>
-</div>
+    <div class="code-block-content"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">markup</span><span class="p">.</span><span class="nx">goldmark</span><span class="p">.</span><span class="nx">renderer</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="nx">unsafe</span><span class="p">=</span> <span class="kc">true</span></span></span></code></pre></div>
     </div>
 </div><h4 id="configyml">config.yml
 </h4><div>
-    <div class="code-block-content"><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="line"><span class="cl"><span class="nt">markup</span><span class="p">:</span><span class="w">
+    <div class="code-block-content"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="line"><span class="cl"><span class="nt">markup</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">goldmark</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">renderer</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">unsafe</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span></span></span></code></pre></td></tr></table>
-</div>
-</div>
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">unsafe</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span></span></span></code></pre></div>
     </div>
 </div><p>参考 → <a class="link" href="https://gohugo.io/getting-started/configuration-markup/"  target="_blank" rel="noopener"
     >Link WordsConfigure Markup | Hugo</a><br>
@@ -687,46 +547,15 @@
 <p>今回、日本語用のファイルを直したかったので、<code>ja.yaml</code> というものをコピペしました。</p>
 <p>元のファイル（こんだけしか無い)</p>
 <div>
-    <div class="code-block-content"><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="line"><span class="cl">- <span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l">prev_page</span><span class="w">
+    <div class="code-block-content"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="line"><span class="cl">- <span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l">prev_page</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">translation</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;前のページ&#34;</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w"></span>- <span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l">next_page</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">translation</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;次のページ&#34;</span></span></span></code></pre></td></tr></table>
-</div>
-</div>
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">translation</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;次のページ&#34;</span></span></span></code></pre></div>
     </div>
 </div><p>こう直しました。</p>
 <div>
-    <div class="code-block-content"><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="line"><span class="cl">- <span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l">prev_page</span><span class="w">
+    <div class="code-block-content"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="line"><span class="cl">- <span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l">prev_page</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">translation</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;前のページ&#34;</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w"></span>- <span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l">next_page</span><span class="w">
@@ -741,22 +570,13 @@
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">translation</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;目次&#34;</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w"></span>- <span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l">translations</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">translation</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;Translations&#34;</span></span></span></code></pre></td></tr></table>
-</div>
-</div>
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">translation</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;Translations&#34;</span></span></span></code></pre></div>
     </div>
 </div><p>参考にしたのは、<code>en.yaml</code> のファイルです。</p>
 <p>実際に言語切り替えするときは、<a class="link" href="https://adityatelange.github.io/hugo-PaperMod/"  target="_blank" rel="noopener"
     >exampleSite</a> のようにサイト上にスイッチを付けるのが良いのでしょうが、<strong>うちのサイトに日本語を読めない人は来ない</strong> という決め付けで、横着して <code>config.yml</code> で日本語を直指定しました。</p>
 <div>
-    <div class="code-block-content"><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="line"><span class="cl"><span class="nt">defaultContentLanguage </span><span class="p">:</span><span class="w"> </span><span class="l">ja  </span><span class="w"> </span><span class="c"># この行を追加です。</span></span></span></code></pre></td></tr></table>
-</div>
-</div>
+    <div class="code-block-content"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="line"><span class="cl"><span class="nt">defaultContentLanguage </span><span class="p">:</span><span class="w"> </span><span class="l">ja  </span><span class="w"> </span><span class="c"># この行を追加です。</span></span></span></code></pre></div>
     </div>
 </div><h3 id="投稿日と更新日を表示したい">投稿日と更新日を表示したい。
 </h3><p>初期状態だと投稿日のみが表示されています。<br>
@@ -766,33 +586,15 @@
 <p><code>サイト名\themes\hugo-PaperMod\layouts\partials\post_meta.html</code> → <code>&quot;サイト名\layouts\partials\post_meta.html</code></p>
 <p>元のファイル（該当部分だけ抜き出し）</p>
 <div>
-    <div class="code-block-content"><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">{{- if not .Date.IsZero -}}
+    <div class="code-block-content"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">{{- if not .Date.IsZero -}}
 </span></span><span class="line"><span class="cl">{{- $scratch.Add &#34;meta&#34; (slice (.Date.Format (default &#34;January 2, 2006&#34; .Site.Params.DateFormat))) }}
-</span></span><span class="line"><span class="cl">{{- end -}}</span></span></code></pre></td></tr></table>
-</div>
-</div>
+</span></span><span class="line"><span class="cl">{{- end -}}</span></span></code></pre></div>
     </div>
 </div><p>修正後のファイル（2行目を修正しています）</p>
 <div>
-    <div class="code-block-content"><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">{{- if not .Date.IsZero -}}
+    <div class="code-block-content"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">{{- if not .Date.IsZero -}}
 </span></span><span class="line"><span class="cl">{{- $scratch.Add &#34;meta&#34; (slice &#34;Posted&#34; (.Date.Format (default &#34;2006-01-02&#34; .Site.Params.DateFormat)) &#34;Updated&#34; (.Lastmod.Format (default &#34;2006-01-02&#34;))) }}
-</span></span><span class="line"><span class="cl">{{- end -}}</span></span></code></pre></td></tr></table>
-</div>
-</div>
+</span></span><span class="line"><span class="cl">{{- end -}}</span></span></code></pre></div>
     </div>
 </div><p>2行目のところで、日付の表示方法 <code>default &quot;2006-01-02&quot;</code> を決めてあげ、さらに最終更新日を取得する <code>.Lastmod.Format</code> を追加しました。</p>
 <p>日時の前に書く言葉はお好みでどうぞ。<br>
@@ -803,14 +605,7 @@
 <h4 id="configyml-も直します">config.yml も直します。
 </h4><p>最終更新日時を Git の履歴から自動取得するには、<code>config.yml</code> に、1行追記が必要です。</p>
 <div>
-    <div class="code-block-content"><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="line"><span class="cl"><span class="nt">enableGitInfo</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span></span></span></code></pre></td></tr></table>
-</div>
-</div>
+    <div class="code-block-content"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="line"><span class="cl"><span class="nt">enableGitInfo</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span></span></span></code></pre></div>
     </div>
 </div><p>これで更新日時が正しく反映されるようになります。</p>
 <h3 id="現在の-pagespeed-insights-はこんな感じ">現在の PageSpeed Insights はこんな感じ。

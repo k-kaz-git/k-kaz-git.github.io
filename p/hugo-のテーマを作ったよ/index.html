@@ -390,40 +390,15 @@
 またいつか暇な時に続きをしたくなるかもしれないし。</p>
 <h3 id="ローカルサイトと空テーマの準備">ローカルサイトと空テーマの準備
 </h3><div>
-    <div class="code-block-content"><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="o">$</span> <span class="nt">hugo</span> <span class="nt">new</span> <span class="nt">site</span> <span class="nt">hoge</span>            <span class="c">/* サイト hoge 作成 */</span>
+    <div class="code-block-content"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="o">$</span> <span class="nt">hugo</span> <span class="nt">new</span> <span class="nt">site</span> <span class="nt">hoge</span>            <span class="c">/* サイト hoge 作成 */</span>
 </span></span><span class="line"><span class="cl"><span class="o">$</span> <span class="nt">cd</span> <span class="nt">hoge</span>
-</span></span><span class="line"><span class="cl"><span class="o">$</span> <span class="nt">hugo</span> <span class="nt">new</span> <span class="nt">theme</span> <span class="nt">hoge-theme</span>     <span class="c">/* 空テーマ hoge-theme 作成 */</span></span></span></code></pre></td></tr></table>
-</div>
-</div>
+</span></span><span class="line"><span class="cl"><span class="o">$</span> <span class="nt">hugo</span> <span class="nt">new</span> <span class="nt">theme</span> <span class="nt">hoge-theme</span>     <span class="c">/* 空テーマ hoge-theme 作成 */</span></span></span></code></pre></div>
     </div>
 </div><h3 id="テーマ内で最低限必要なもの">テーマ内で最低限必要なもの
 </h3><p>最低限って書くと、ヘッダーもフッターも要らないけど・・・一応書いておく（笑）<br>
 <code>line-hight</code> の関係で、線がブツブツ切れていますが、許してください。</p>
 <div>
-    <div class="code-block-content"><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">hoge-theme  
+    <div class="code-block-content"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">hoge-theme  
 </span></span><span class="line"><span class="cl">│  theme.toml  
 </span></span><span class="line"><span class="cl">├──layouts  
 </span></span><span class="line"><span class="cl">│   │  
@@ -434,9 +409,7 @@
 </span></span><span class="line"><span class="cl">│   └──_default  
 </span></span><span class="line"><span class="cl">│           baseof.html  <span class="c">&lt;!-- ページの元で各種パーツを読み込む --&gt;</span>
 </span></span><span class="line"><span class="cl">│           list.html  <span class="c">&lt;!-- 記事一覧出力 --&gt;</span>
-</span></span><span class="line"><span class="cl">│           single.html  <span class="c">&lt;!-- 投稿記事出力 --&gt;</span></span></span></code></pre></td></tr></table>
-</div>
-</div>
+</span></span><span class="line"><span class="cl">│           single.html  <span class="c">&lt;!-- 投稿記事出力 --&gt;</span></span></span></code></pre></div>
     </div>
 </div><h3 id="簡単に構成を書く">簡単に構成を書く
 </h3><p><code>baseof.html</code> が、すべての <code>html</code> の親玉で、その中身はこんな感じになっています。</p>
@@ -446,31 +419,7 @@
 <p>バラバラで作ってあるパーツを、必要なときに、必要な場所で読み込むことで、1枚のページを作り上げています。</p>
 <p><code>baseof.html</code> の例</p>
 <div>
-    <div class="code-block-content"><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+    <div class="code-block-content"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="cp">&lt;!DOCTYPE html&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
@@ -489,9 +438,7 @@
 </span></span><span class="line"><span class="cl">  {{ end }}
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span></span></span></code></pre></td></tr></table>
-</div>
-</div>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span></span></span></code></pre></div>
     </div>
 </div><p>各パーツに機能を持たせて、それを呼び出しているため、非常にシンプルな構成となります。</p>
 <p>各パーツに書いておくコマンド → <code>{{ define &quot;hoge&quot; }}...{{ end }}</code></p>
@@ -519,18 +466,9 @@
 <h4 id="netlify-で-baseofhtml-を使う場合は注意">netlify で baseof.html を使う場合は注意
 </h4><p>こうやって、<code>{{ define &quot;header&quot; }}</code> を入れた <code>header.html</code> を読み込んだんですけど、</p>
 <div>
-    <div class="code-block-content"><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <div class="code-block-content"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    {{ block &#34;header&#34; . }}{{ end }}
-</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span></span></span></code></pre></td></tr></table>
-</div>
-</div>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span></span></span></code></pre></div>
     </div>
 </div><p>ローカルサーバーではうまく表示されるのに、<strong>netlify だとうまく表示されない。</strong></p>
 <p>具体的には、ファイルを読み込めずに <code>&lt;head&gt;</code> の中身が空になります。
@@ -543,27 +481,13 @@
 <p>その中で、一番、理想的なのがこれかなと思いました。
 横幅全体を 32 で割ったサイズ。</p>
 <div>
-    <div class="code-block-content"><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="nt">font-size</span><span class="o">:</span> <span class="nt">calc</span><span class="o">(</span><span class="nt">100vw</span> <span class="o">/</span> <span class="nt">32</span><span class="o">);</span></span></span></code></pre></td></tr></table>
-</div>
-</div>
+    <div class="code-block-content"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="nt">font-size</span><span class="o">:</span> <span class="nt">calc</span><span class="o">(</span><span class="nt">100vw</span> <span class="o">/</span> <span class="nt">32</span><span class="o">);</span></span></span></code></pre></div>
     </div>
 </div><p>試したところ、モバイル系は良かったんですが、PC の大画面で見ると、フォントが大きくなり過ぎて困る。
 rem で調整するのも当時（昨日だけど）は面倒でした。</p>
 <p>その後、cupper でも使われていた下記にしました。</p>
 <div>
-    <div class="code-block-content"><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="nt">font-size</span><span class="o">:</span> <span class="nt">calc</span><span class="o">(</span><span class="nt">1em</span> <span class="o">+</span> <span class="nt">0</span><span class="p">.</span><span class="nc">33vw</span><span class="o">);</span></span></span></code></pre></td></tr></table>
-</div>
-</div>
+    <div class="code-block-content"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="nt">font-size</span><span class="o">:</span> <span class="nt">calc</span><span class="o">(</span><span class="nt">1em</span> <span class="o">+</span> <span class="nt">0</span><span class="p">.</span><span class="nc">33vw</span><span class="o">);</span></span></span></code></pre></div>
     </div>
 </div><p>基本となるサイズ（1em = 16px だっけ？）に対し、画面の大きさにあわせてプラスをしていく方法。
 こちらのほうが、個人的には微調整がしやすかったです。（<strong>昨日苦労したのが役に立っただけ疑惑あり</strong> ）</p>
@@ -573,24 +497,12 @@ rem で調整するのも当時（昨日だけど）は面倒でした。</p>
 先にモバイルです。今はモバイル優先で何事も考えたほうが良さそうです。</p>
 <p>モバイルのところは普通にスタイルシートを書いて、一通り終わったら PC の番です。</p>
 <div>
-    <div class="code-block-content"><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="c">/* 画面サイズ 481px 以上はこの中で設定 */</span>
+    <div class="code-block-content"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="c">/* 画面サイズ 481px 以上はこの中で設定 */</span>
 </span></span><span class="line"><span class="cl"><span class="p">@</span><span class="k">media</span> <span class="nt">only</span> <span class="nt">screen</span> <span class="nt">and</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="nt">481px</span><span class="o">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="nt">body</span> <span class="p">{}</span>
 </span></span><span class="line"><span class="cl">  <span class="nt">h1</span> <span class="p">{}</span>
 </span></span><span class="line"><span class="cl">  <span class="nt">h2</span> <span class="p">{}</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></td></tr></table>
-</div>
-</div>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div>
     </div>
 </div><p>面倒なので中身は空にしましたけど、モバイルの指定と変えたい部分（特にフォントサイズ）だけをここで定義していきます。
 同じようなことをスタイルシートの上部と下部で書いていきます。だらだらと長くなります（笑）</p>

@@ -351,54 +351,24 @@ Mozcとは、Google 日本語入力のオープンソース版である。これ
 </h4><p>解凍したところに <code>build_mozc_plus_utdict</code> というファイルができますので、これを実行します。<br>
 でも、足りないパッケージなどがあるので、事前に入れておきます。</p>
 <div>
-    <div class="code-block-content"><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">$ sudo apt update
+    <div class="code-block-content"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">$ sudo apt update
 </span></span><span class="line"><span class="cl">$ sudo apt upgrade -y
-</span></span><span class="line"><span class="cl">$ sudo apt install -y devscripts debhelper libibus-1.0-dev pkg-config libxcb-xfixes0-dev libgtk2.0-dev python-dev gyp protobuf-compiler libprotobuf-dev qtbase5-dev libqwt-qt5-dev libgwengui-qt5-dev libuim-dev libzinnia-dev fcitx-libs-dev gettext desktop-file-utils ninja-build</span></span></code></pre></td></tr></table>
-</div>
-</div>
+</span></span><span class="line"><span class="cl">$ sudo apt install -y devscripts debhelper libibus-1.0-dev pkg-config libxcb-xfixes0-dev libgtk2.0-dev python-dev gyp protobuf-compiler libprotobuf-dev qtbase5-dev libqwt-qt5-dev libgwengui-qt5-dev libuim-dev libzinnia-dev fcitx-libs-dev gettext desktop-file-utils ninja-build</span></span></code></pre></div>
     </div>
 </div><p>入れ終わったら、ビルドします。</p>
 <div>
-    <div class="code-block-content"><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">$ sudo ./build_mozc_plus_utdict</span></span></code></pre></td></tr></table>
-</div>
-</div>
+    <div class="code-block-content"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">$ sudo ./build_mozc_plus_utdict</span></span></code></pre></div>
     </div>
 </div><p>しばらく、ハードディスクがカリカリと頑張ってくれます。</p>
 <p>運悪くビルドに失敗したら、ログに理由が書いてあると思いますので、<strong>ネットで頑張って調べます（笑）</strong></p>
 <h4 id="事後処理">事後処理
 </h4><p>無事にビルドが終了したら、インストール済みのパッケージを削除します。</p>
 <div>
-    <div class="code-block-content"><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">$ sudo apt-get remove mozc-server mozc-utils-gui</span></span></code></pre></td></tr></table>
-</div>
-</div>
+    <div class="code-block-content"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">$ sudo apt-get remove mozc-server mozc-utils-gui</span></span></code></pre></div>
     </div>
 </div><p>fcitx-mozc を使っているので、関連ファイルをインストール。</p>
 <div>
-    <div class="code-block-content"><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">$ sudo dpkg -i mozc*.deb fcitx-mozc*.deb</span></span></code></pre></td></tr></table>
-</div>
-</div>
+    <div class="code-block-content"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">$ sudo dpkg -i mozc*.deb fcitx-mozc*.deb</span></span></code></pre></div>
     </div>
 </div><p>結果、こうなります。
 <img src="/images/mozc-ver223.webp" alt="Mozc について" style="width:auto;"></p>

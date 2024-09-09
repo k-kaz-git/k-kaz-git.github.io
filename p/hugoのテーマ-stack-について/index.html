@@ -387,38 +387,19 @@
 <div>
     <div class="code-block-filename">config.yaml</div>
     
-    <div class="code-block-content"><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">services</span><span class="p">:</span><span class="w">
+    <div class="code-block-content"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">services</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c"># GA Tracking ID</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">googleAnalytics</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l">hoge-ID    </span><span class="w"> </span><span class="c"># 自身のタグ</span></span></span></code></pre></td></tr></table>
-</div>
-</div>
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l">hoge-ID    </span><span class="w"> </span><span class="c"># 自身のタグ</span></span></span></code></pre></div>
     </div>
 </div><h3 id="パーマリンク">パーマリンク
 </h3><p>初期値のままですが、あとで変えるかも。</p>
 <div>
     <div class="code-block-filename">config.yaml</div>
     
-    <div class="code-block-content"><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">permalinks</span><span class="p">:</span><span class="w">
+    <div class="code-block-content"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">permalinks</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">post</span><span class="p">:</span><span class="w"> </span><span class="l">/p/:slug/    </span><span class="w"> </span><span class="c"># 投稿した記事のURL（/p/タイトル）</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">page</span><span class="p">:</span><span class="w"> </span><span class="l">/:slug/      </span><span class="w"> </span><span class="c"># ページ（Aboutとか）のURL</span></span></span></code></pre></td></tr></table>
-</div>
-</div>
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">page</span><span class="p">:</span><span class="w"> </span><span class="l">/:slug/      </span><span class="w"> </span><span class="c"># ページ（Aboutとか）のURL</span></span></span></code></pre></div>
     </div>
 </div><h3 id="ページタイトル">ページタイトル
 </h3><p><code>languages:</code> セクションの中には、英語、中国語、アラビア語？があり、訪問者が切り替えできるようになっていました。<br>
@@ -426,26 +407,13 @@
 <div>
     <div class="code-block-filename">config.yaml</div>
     
-    <div class="code-block-content"><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">languages</span><span class="p">:</span><span class="w">  </span><span class="c"># 切り替えないのでセクション不要と思いつつ残している。</span><span class="w">
+    <div class="code-block-content"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">languages</span><span class="p">:</span><span class="w">  </span><span class="c"># 切り替えないのでセクション不要と思いつつ残している。</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">ja</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">languageName</span><span class="p">:</span><span class="w"> </span><span class="l">日本語</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l">k-kaz が Hugo で遊ぶサイト  </span><span class="w"> </span><span class="c"># これだけあれば問題ないはず。</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="m">1</span><span class="w">                           </span><span class="c"># 複数言語を用意したときに有効。</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">params</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span></span></span></code></pre></td></tr></table>
-</div>
-</div>
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span></span></span></code></pre></div>
     </div>
 </div><h3 id="1ページに表示する記事数を設定">1ページに表示する記事数を設定
 </h3><p>元々1行で <code>paginate: 3</code> となっていました。<br>
@@ -454,40 +422,20 @@
 <div>
     <div class="code-block-filename">config.yaml</div>
     
-    <div class="code-block-content"><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">pagination</span><span class="p">:</span><span class="w">
+    <div class="code-block-content"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">pagination</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">disableAliases</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">pagerSize</span><span class="p">:</span><span class="w"> </span><span class="m">3</span><span class="w">              </span><span class="c"># 3つ表示させる</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l">page</span></span></span></code></pre></td></tr></table>
-</div>
-</div>
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l">page</span></span></span></code></pre></div>
     </div>
 </div><h3 id="日付のスタイル">日付のスタイル
 </h3><p><code>Params:</code> の中で設定。</p>
 <div>
     <div class="code-block-filename">config.yaml</div>
     
-    <div class="code-block-content"><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">Params</span><span class="p">:</span><span class="w">
+    <div class="code-block-content"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">Params</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">dateFormat</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">published</span><span class="p">:</span><span class="w"> </span><span class="m">2006</span><span class="l">/01/02              </span><span class="w"> </span><span class="c"># 投稿日、年月日がわかりやすいので。</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">lastUpdated</span><span class="p">:</span><span class="w"> </span><span class="m">2006</span><span class="l">/01/02/15:04 JST  </span><span class="w"> </span><span class="c"># 更新日、同上。</span></span></span></code></pre></td></tr></table>
-</div>
-</div>
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">lastUpdated</span><span class="p">:</span><span class="w"> </span><span class="m">2006</span><span class="l">/01/02/15:04 JST  </span><span class="w"> </span><span class="c"># 更新日、同上。</span></span></span></code></pre></div>
     </div>
 </div><h3 id="コメント機能">コメント機能
 </h3><p><code>Params:</code> の中で設定。<br>
@@ -496,26 +444,7 @@
 <div>
     <div class="code-block-filename">config.yaml</div>
     
-    <div class="code-block-content"><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">params</span><span class="p">:</span><span class="w">
+    <div class="code-block-content"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">params</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">comments</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">     </span><span class="l">// コメント機能を有効に</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l">giscus  // どのコメント機能を使うか選択</span><span class="w">
@@ -529,9 +458,7 @@
 </span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="nt">darkTheme</span><span class="p">:</span><span class="w"> </span><span class="l">preferred_color_scheme   // ダークモードのときのテーマカラー（ここではモードで自動調整？）</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="nt">lang</span><span class="p">:</span><span class="w"> </span><span class="l">ja                            // 項目がなかったので自分で追加し、メッセージ等を日本語に</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="nt">reactionsEnabled</span><span class="p">:</span><span class="w"> </span><span class="m">1</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="nt">emitMetadata</span><span class="p">:</span><span class="w"> </span><span class="m">0</span></span></span></code></pre></td></tr></table>
-</div>
-</div>
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="nt">emitMetadata</span><span class="p">:</span><span class="w"> </span><span class="m">0</span></span></span></code></pre></div>
     </div>
 </div><h2 id="ウィジェットページ">ウィジェット（ページ）
 </h2><div class="table-wrapper"><table>
@@ -576,24 +503,12 @@
 <div>
     <div class="code-block-filename">/assets/scss/variables.scss</div>
     
-    <div class="code-block-content"><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nd">:root</span> <span class="p">{</span>
+    <div class="code-block-content"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nd">:root</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="na">--sys-font-family</span><span class="o">:</span> <span class="o">-</span><span class="n">apple-system</span><span class="o">,</span> <span class="n">BlinkMacSystemFont</span><span class="o">,</span> <span class="s2">&#34;Segoe UI&#34;</span><span class="o">,</span> <span class="s2">&#34;Droid Sans&#34;</span><span class="o">,</span> <span class="s2">&#34;Helvetica Neue&#34;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="na">--zh-font-family</span><span class="o">:</span> <span class="s2">&#34;PingFang SC&#34;</span><span class="o">,</span> <span class="s2">&#34;Hiragino Sans GB&#34;</span><span class="o">,</span> <span class="s2">&#34;Droid Sans Fallback&#34;</span><span class="o">,</span> <span class="s2">&#34;Microsoft YaHei&#34;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="na">--base-font-family</span><span class="o">:</span> <span class="o">-</span><span class="n">apple-system</span><span class="o">,</span><span class="n">BlinkMacSystemFont</span><span class="o">,</span><span class="n">segoe</span> <span class="n">ui</span><span class="o">,</span><span class="n">Roboto</span><span class="o">,</span><span class="n">Oxygen</span><span class="o">,</span><span class="n">Ubuntu</span><span class="o">,</span><span class="n">Cantarell</span><span class="o">,</span><span class="ni">open</span> <span class="n">sans</span><span class="o">,</span><span class="n">helvetica</span> <span class="n">neue</span><span class="o">,</span><span class="ni">sans-serif</span><span class="o">,</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">sys-font-family</span><span class="p">)</span><span class="o">,</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">zh-font-family</span><span class="p">)</span><span class="o">,</span> <span class="ni">sans-serif</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="na">--code-font-family</span><span class="o">:</span> <span class="n">Menlo</span><span class="o">,</span> <span class="n">Monaco</span><span class="o">,</span> <span class="n">Consolas</span><span class="o">,</span> <span class="s2">&#34;Courier New&#34;</span><span class="o">,</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">zh-font-family</span><span class="p">)</span><span class="o">,</span> <span class="ni">monospace</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></td></tr></table>
-</div>
-</div>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div>
     </div>
 </div><h2 id="レイアウト">レイアウト
 </h2><p>未着手。</p>
@@ -724,20 +639,10 @@ SassをCSSにするための機能らしい。</p>
 <div>
     <div class="code-block-filename">config.yaml</div>
     
-    <div class="code-block-content"><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">pagination</span><span class="p">:</span><span class="w">
+    <div class="code-block-content"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">pagination</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">disableAliases</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">pagerSize</span><span class="p">:</span><span class="w"> </span><span class="m">3</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l">page</span></span></span></code></pre></td></tr></table>
-</div>
-</div>
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l">page</span></span></span></code></pre></div>
     </div>
 </div>
 </section>

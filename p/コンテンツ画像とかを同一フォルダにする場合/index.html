@@ -345,14 +345,7 @@ Hugo で同一フォルダに記事と画像等のファイルを置ける <stro
 </h3><p>これまでファイル名が URL になってくれていましたので、同じようにしましょう。<br>
 index.md の上部（各種設定内容を記述するところ）に1行追加します。</p>
 <div>
-    <div class="code-block-content"><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="nx">url</span><span class="err">:</span> <span class="s2">&#34;hoge&#34;</span></span></span></code></pre></td></tr></table>
-</div>
-</div>
+    <div class="code-block-content"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="nx">url</span><span class="err">:</span> <span class="s2">&#34;hoge&#34;</span></span></span></code></pre></div>
     </div>
 </div><p>これで意図した通りの URL になりました。</p>
 <h3 id="ついでにもうひと踏ん張り">ついでにもうひと踏ん張り。
@@ -362,23 +355,7 @@ index.md の上部（各種設定内容を記述するところ）に1行追加�
 <p><code>\archetypes\post.md</code></p>
 <p>こんな感じにしました。</p>
 <div>
-    <div class="code-block-content"><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="nx">---</span>
+    <div class="code-block-content"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="nx">---</span>
 </span></span><span class="line"><span class="cl"><span class="nx">title</span><span class="err">:</span> <span class="s2">&#34;{{ replace .Name &#34;</span><span class="nx">-</span><span class="s2">&#34; &#34;</span> <span class="s2">&#34; | title }}&#34;</span>
 </span></span><span class="line"><span class="cl"><span class="nx">date</span><span class="err">:</span> <span class="p">{{</span> <span class="p">.</span><span class="nx">Date</span> <span class="p">}}</span>
 </span></span><span class="line"><span class="cl"><span class="nx">description</span><span class="err">:</span> <span class="s2">&#34;&#34;</span>
@@ -389,9 +366,7 @@ index.md の上部（各種設定内容を記述するところ）に1行追加�
 </span></span><span class="line"><span class="cl"><span class="nx">tags</span><span class="err">:</span> <span class="p">[</span><span class="s2">&#34;&#34;</span><span class="p">]</span>
 </span></span><span class="line"><span class="cl"><span class="nx">toc</span><span class="err">:</span> <span class="kc">true</span>
 </span></span><span class="line"><span class="cl"><span class="nx">draft</span><span class="err">:</span> <span class="kc">true</span>
-</span></span><span class="line"><span class="cl"><span class="nx">---</span></span></span></code></pre></td></tr></table>
-</div>
-</div>
+</span></span><span class="line"><span class="cl"><span class="nx">---</span></span></span></code></pre></div>
     </div>
 </div><p>これで良しと。</p>
 

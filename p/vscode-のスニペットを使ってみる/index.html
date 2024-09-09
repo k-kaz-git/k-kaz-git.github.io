@@ -350,22 +350,7 @@
 <p>ファイルを開いたら、以下を追加しています。<br>
 元々 <code>｛｝</code> があるので、その中に入れるようにすると正しく認識してくれます。</p>
 <div>
-    <div class="code-block-content"><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">[</span><span class="err">settings.json</span><span class="p">]</span>
+    <div class="code-block-content"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">[</span><span class="err">settings.json</span><span class="p">]</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
 </span></span><span class="line"><span class="cl">
@@ -375,9 +360,7 @@
 </span></span><span class="line"><span class="cl">    <span class="nt">&#34;editor.snippetSuggestions&#34;</span><span class="p">:</span> <span class="s2">&#34;top&#34;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></td></tr></table>
-</div>
-</div>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div>
     </div>
 </div><h3 id="スニペットを登録する">スニペットを登録する
 </h3><p>Markdown用のスニペットを登録します。</p>
@@ -386,30 +369,7 @@
 <p><code>ファイル → 基本設定 → ユーザースニペット → Markdown.json</code> を選択。</p>
 <p>ファイルが開かれるとこんな感じで、サンプルがコメントアウトした状態になっています。</p>
 <div>
-    <div class="code-block-content"><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="err">［Markdown.json］</span>
+    <div class="code-block-content"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="err">［Markdown.json］</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
 </span></span><span class="line"><span class="cl">
@@ -427,30 +387,17 @@
 </span></span></span><span class="line"><span class="cl"><span class="c1">// 	&#34;description&#34;: &#34;Log output to console&#34;
 </span></span></span><span class="line"><span class="cl"><span class="c1">// }
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></td></tr></table>
-</div>
-</div>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div>
     </div>
 </div><p>サンプルは残しても消しても結構ですが、最初と最後の <code>{}</code> は、残してください。<br>
 尚、ここに書かれているサンプルの意味が理解できなくて、ちょっと迷いました。（英語にとことん弱い人）</p>
 <h4 id="標準的なスニペットの登録方法">標準的なスニペットの登録方法
 </h4><div>
-    <div class="code-block-content"><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="s2">&#34;スニペット名&#34;</span><span class="err">:</span> <span class="p">{</span>
+    <div class="code-block-content"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="s2">&#34;スニペット名&#34;</span><span class="err">:</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="nt">&#34;prefix&#34;</span><span class="p">:</span> <span class="s2">&#34;キーになる文字列&#34;</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">    <span class="nt">&#34;body&#34;</span><span class="p">:[</span> <span class="s2">&#34;呼び出される文字列&#34;</span> <span class="p">],</span>
 </span></span><span class="line"><span class="cl">    <span class="nt">&#34;description&#34;</span><span class="p">:</span> <span class="s2">&#34;このスニペットの説明文&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span></span></span></code></pre></td></tr></table>
-</div>
-</div>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span></span></span></code></pre></div>
     </div>
 </div><ul>
 <li>
@@ -472,22 +419,11 @@
 </ul>
 <p>例えば、下記のように登録したとします。</p>
 <div>
-    <div class="code-block-content"><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="s2">&#34;insart image&#34;</span><span class="err">:</span><span class="p">{</span>
+    <div class="code-block-content"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="s2">&#34;insart image&#34;</span><span class="err">:</span><span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="nt">&#34;prefix&#34;</span><span class="p">:</span> <span class="s2">&#34;img&#34;</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">    <span class="nt">&#34;body&#34;</span><span class="p">:</span> <span class="p">[</span> <span class="s2">&#34;![hoge のイメージ画像](/images/hoge.webp)&#34;</span> <span class="p">],</span>
 </span></span><span class="line"><span class="cl">    <span class="nt">&#34;description: &#34;</span><span class="err">画像を挿入する&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span></span></span></code></pre></td></tr></table>
-</div>
-</div>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span></span></span></code></pre></div>
     </div>
 </div><p>そうすると、Markdown での記述の際に<br>
 img と打った時点（もしくは i を入れた時点）で、上記のスニペットが画面に登場し、<code>Enter</code> or <code>TAB</code> を押すことで置き換わります。</p>
@@ -500,22 +436,11 @@ img と打った時点（もしくは i を入れた時点）で、上記のス�
 <p>そんなときは <code>$1</code> や <code>$2</code> を使用します。<br>
 先程と違うのは、<code>&quot;body&quot;</code> の中だけです。</p>
 <div>
-    <div class="code-block-content"><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="s2">&#34;insart image&#34;</span><span class="err">:</span><span class="p">{</span>
+    <div class="code-block-content"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="s2">&#34;insart image&#34;</span><span class="err">:</span><span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="nt">&#34;prefix&#34;</span><span class="p">:</span> <span class="s2">&#34;img&#34;</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">    <span class="nt">&#34;body&#34;</span><span class="p">:</span> <span class="p">[</span> <span class="s2">&#34;![$1 のイメージ画像](/images/$2.webp)&#34;</span> <span class="p">],</span>
 </span></span><span class="line"><span class="cl">    <span class="nt">&#34;description: &#34;</span><span class="err">画像を挿入する&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span></span></span></code></pre></td></tr></table>
-</div>
-</div>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span></span></span></code></pre></div>
     </div>
 </div><p>こんな感じになります。</p>
 <img src="/images/VSCode-snipet-02.gif" alt="snipet の例をアニメーションで" style="max-width:640px;">
@@ -528,22 +453,11 @@ img と打った時点（もしくは i を入れた時点）で、上記のス�
 私のように Markdown が頭に入っていない人向け・・・かもしれません。</p>
 <p>こちらも <code>&quot;body&quot;</code> の中だけが変わっています。</p>
 <div>
-    <div class="code-block-content"><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="s2">&#34;insart image&#34;</span><span class="err">:</span><span class="p">{</span>
+    <div class="code-block-content"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="s2">&#34;insart image&#34;</span><span class="err">:</span><span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="nt">&#34;prefix&#34;</span><span class="p">:</span> <span class="s2">&#34;img&#34;</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">    <span class="nt">&#34;body&#34;</span><span class="p">:</span> <span class="p">[</span> <span class="s2">&#34;![${1:画像のタイトル} のイメージ画像](/images/${2:ファイル名}.webp)&#34;</span> <span class="p">],</span>
 </span></span><span class="line"><span class="cl">    <span class="nt">&#34;description: &#34;</span><span class="err">画像を挿入する&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span></span></span></code></pre></td></tr></table>
-</div>
-</div>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span></span></span></code></pre></div>
     </div>
 </div><p>はい、少しややこしくなりました（笑）</p>
 <p>動作そのものは先程と同じですが、表示の仕方が変わります。<br>
@@ -572,20 +486,7 @@ img と打った時点（もしくは i を入れた時点）で、上記のス�
 </h4><p>複数行の場合は、1行ごと最後に <code>,</code> を入れます。<br>
 但し、最終行は不要で、<code>]</code> の後に <code>,</code> を入れます。</p>
 <div>
-    <div class="code-block-content"><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span><span class="lnt">9
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="s2">&#34;comment&#34;</span><span class="err">:</span><span class="p">{</span>
+    <div class="code-block-content"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="s2">&#34;comment&#34;</span><span class="err">:</span><span class="p">{</span>
 </span></span><span class="line"><span class="cl">	<span class="nt">&#34;prefix&#34;</span><span class="p">:</span> <span class="s2">&#34;comment&#34;</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">	<span class="nt">&#34;body&#34;</span><span class="p">:[</span>
 </span></span><span class="line"><span class="cl">		<span class="s2">&#34;/* ========================================&#34;</span><span class="p">,</span>
@@ -593,9 +494,7 @@ img と打った時点（もしくは i を入れた時点）で、上記のス�
 </span></span><span class="line"><span class="cl">		<span class="s2">&#34;======================================== */&#34;</span>
 </span></span><span class="line"><span class="cl">	<span class="p">],</span>
 </span></span><span class="line"><span class="cl">	<span class="nt">&#34;description&#34;</span><span class="p">:</span> <span class="s2">&#34;コメントアウト タイトル&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></td></tr></table>
-</div>
-</div>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div>
     </div>
 </div><p>また、タブは <code>\t</code> で表します。<br>
 上記例の場合は、タブが2つ入る形です。</p>

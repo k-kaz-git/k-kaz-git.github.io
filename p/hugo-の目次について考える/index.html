@@ -330,45 +330,12 @@
 <h3 id="使い方">使い方
 </h3><p><code>single.html</code> なんかの表示したい部分にこれを追記します。</p>
 <div>
-    <div class="code-block-content"><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">{{ .TableOfContents }}</span></span></code></pre></td></tr></table>
-</div>
-</div>
+    <div class="code-block-content"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">{{ .TableOfContents }}</span></span></code></pre></div>
     </div>
 </div><p>たったこれだけです。</p>
 <h3 id="出力サンプル">出力サンプル
 </h3><div>
-    <div class="code-block-content"><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">nav</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;TableOfContents&#34;</span><span class="p">&gt;</span>
+    <div class="code-block-content"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">nav</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;TableOfContents&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
@@ -389,9 +356,7 @@
 </span></span><span class="line"><span class="cl">      <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">nav</span><span class="p">&gt;</span></span></span></code></pre></td></tr></table>
-</div>
-</div>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">nav</span><span class="p">&gt;</span></span></span></code></pre></div>
     </div>
 </div><p><code>&lt;nav id=&quot;TableOfContents&quot;&gt;</code> というタグで囲まれたリストが出来上がります。<br>
 あとはお好みのスタイルを適用してあげるだけ。</p>
@@ -405,61 +370,29 @@
 短い記事であれば目次は要らんでしょうという考え方かな。</p>
 <p>if文で文字数の判断をして、出す出さないを決めています。</p>
 <div>
-    <div class="code-block-content"><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">{{ if and (gt .WordCount 400 ) (.Params.toc) }}
+    <div class="code-block-content"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">{{ if and (gt .WordCount 400 ) (.Params.toc) }}
 </span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">aside</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">header</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>{{.Title}}<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">header</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    {{.TableOfContents}}
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">aside</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">{{ end }}</span></span></code></pre></td></tr></table>
-</div>
-</div>
+</span></span><span class="line"><span class="cl">{{ end }}</span></span></code></pre></div>
     </div>
 </div><h4 id="記事毎にフラグを立てる">記事毎にフラグを立てる
 </h4><p>自作テーマで立ち上げている Nerlify のほう <a class="link" href="https://k-kaz.netlify.com"  target="_blank" rel="noopener"
     >k-kaz が好きなことを書くサイト</a> はコレを採用しています。</p>
 <p><code>single.html</code> にはこのように記述。</p>
 <div>
-    <div class="code-block-content"><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">{{ if eq .Params.toc true }}
+    <div class="code-block-content"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">{{ if eq .Params.toc true }}
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">aside</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  {{ .TableOfContents }}
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">aside</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">{{ end }}</span></span></code></pre></td></tr></table>
-</div>
-</div>
+</span></span><span class="line"><span class="cl">{{ end }}</span></span></code></pre></div>
     </div>
 </div><p>記事 <code>hoge.md</code> のパラメータ部分に追加。</p>
 <div>
-    <div class="code-block-content"><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-md" data-lang="md"><span class="line"><span class="cl">toc: true</span></span></code></pre></td></tr></table>
-</div>
-</div>
+    <div class="code-block-content"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-md" data-lang="md"><span class="line"><span class="cl">toc: true</span></span></code></pre></div>
     </div>
 </div><p>この2つをセットにして、記事の <code>toc</code> というパラメータが <code>true</code> なら、<code>{{ .TableOfContents }}</code> を実行するようにしています。実行したくなければ <code>false</code> としておきます。</p>
 <p>また、毎回書くのも面倒なので、<code>archetypes/post.md</code> という記事のテンプレートファイルに予め入れました。</p>
@@ -471,18 +404,9 @@
 <code>{{ .TableOfContents }}</code> のところを <code>{{ partial &quot;toc.html&quot; . }}</code> として、別途用意した <code>toc.html</code> の中で ”目次” と書いておけば、不要なときに呼びされずに済んでスマートです。</p>
 <p>私は別ファイルを用意するのが面倒だったので、スタイルシートの中で ”目次” を呼び出すようにして、良しとしました。（横着）</p>
 <div>
-    <div class="code-block-content"><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="nt">aside</span><span class="p">::</span><span class="nd">before</span> <span class="p">{</span>
+    <div class="code-block-content"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="nt">aside</span><span class="p">::</span><span class="nd">before</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="k">content</span><span class="p">:</span> <span class="s2">&#34;目次&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></td></tr></table>
-</div>
-</div>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div>
     </div>
 </div>
 </section>

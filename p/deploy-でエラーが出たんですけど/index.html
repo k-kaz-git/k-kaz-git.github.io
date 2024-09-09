@@ -316,16 +316,8 @@
 <p>ひっかかったのが、ssh 認証のところ。</p>
 <p><code>ssh -T git@github.com</code> で、ssh が通るか試してみたら、<code>git@github.com: Permission denied (publickey).</code> って怒られました。</p>
 <div>
-    <div class="code-block-content"><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">$ ssh -T git@github.com     /* ssh が通るか試すコマンド */
-</span></span><span class="line"><span class="cl">$ git@github.com: Permission denied (publickey).</span></span></code></pre></td></tr></table>
-</div>
-</div>
+    <div class="code-block-content"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">$ ssh -T git@github.com     /* ssh が通るか試すコマンド */
+</span></span><span class="line"><span class="cl">$ git@github.com: Permission denied (publickey).</span></span></code></pre></div>
     </div>
 </div><p>ネットで調べてみたところ、 <strong>「Github に公開鍵（publickey）を登録しましょう」</strong> と書いてあったので、1年半振りの Github ログイン。</p>
 <p><strong>お前、本当に k-kaz か？</strong><br>

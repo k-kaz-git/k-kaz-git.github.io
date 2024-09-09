@@ -412,28 +412,14 @@
 </h3><p>テーマの <code>readme</code> にも書いてありますが、普通のコマンドで挿入すると、エリア内いっぱいに広がります。</p>
 <p>普通の入れ方</p>
 <div>
-    <div class="code-block-content"><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-md" data-lang="md"><span class="line"><span class="cl">![<span class="nt">イメージタイトル</span>](<span class="na">/images/hoge.webp</span>)</span></span></code></pre></td></tr></table>
-</div>
-</div>
+    <div class="code-block-content"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-md" data-lang="md"><span class="line"><span class="cl">![<span class="nt">イメージタイトル</span>](<span class="na">/images/hoge.webp</span>)</span></span></code></pre></div>
     </div>
 </div><script src="https://gist.github.com/k-kaz-git/d27e935f5404952ae5419250516ebe1e.js"></script>
 <h3 id="google-analytics">Google Analytics
 </h3><p>テーマが元々対応してくれているので、設定ファイルにトラッキングコードを記入するだけで、各ページに展開してくれます。</p>
 <p><code>/サイト名/config.toml</code></p>
 <div>
-    <div class="code-block-content"><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="nx">googleAnalytics</span> <span class="p">=</span> <span class="s2">&#34;トラッキングコード&#34;</span></span></span></code></pre></td></tr></table>
-</div>
-</div>
+    <div class="code-block-content"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="nx">googleAnalytics</span> <span class="p">=</span> <span class="s2">&#34;トラッキングコード&#34;</span></span></span></code></pre></div>
     </div>
 </div><p><code>&lt;head&gt;&lt;/head&gt;</code> の間に長いタグを入れる必要もありません。楽ちんだ。</p>
 <h2 id="標準機能外">標準機能外
@@ -487,48 +473,22 @@ css というフォルダも自分で作成し、その中にスタイルシー�
 <p><code>&lt;header&gt;</code> だけ抜き出しました。<br>
 上が元のコードで、下が修正したコードです。</p>
 <div>
-    <div class="code-block-content"><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">[single.html 修正前]
+    <div class="code-block-content"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">[single.html 修正前]
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">header</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;post-header&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">   	<span class="p">&lt;</span><span class="nt">h1</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;post-title&#34;</span><span class="p">&gt;</span>{{ .Title }}<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;post-date&#34;</span><span class="p">&gt;</span>Posted <span class="p">&lt;</span><span class="nt">time</span> <span class="na">datetime</span><span class="o">=</span><span class="s">&#34;{{ .Date.Format &#34;</span><span class="na">2006-01-02</span><span class="err">&#34;</span> <span class="err">}}&#34;</span><span class="p">&gt;</span>{{ .Date.Format &#34;Jan 2, 2006&#34; }}<span class="p">&lt;/</span><span class="nt">time</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">header</span><span class="p">&gt;</span></span></span></code></pre></td></tr></table>
-</div>
-</div>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">header</span><span class="p">&gt;</span></span></span></code></pre></div>
     </div>
 </div><div>
-    <div class="code-block-content"><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">[single.html 修正後]
+    <div class="code-block-content"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">[single.html 修正後]
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">header</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;post-header&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">   	<span class="p">&lt;</span><span class="nt">h1</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;post-title&#34;</span><span class="p">&gt;</span>{{ .Title }}<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;post-date&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">        Posted <span class="p">&lt;</span><span class="nt">time</span> <span class="na">datetime</span><span class="o">=</span><span class="s">&#34;{{ .Date.Format &#34;</span><span class="na">2006-01-02</span><span class="err">&#34;</span> <span class="err">}}&#34;</span><span class="p">&gt;</span>{{ .Date.Format &#34;2006-01-02&#34; }}<span class="p">&lt;/</span><span class="nt">time</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">         / Update {{ .Lastmod.Format &#34;2006-01-02&#34; }}<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">header</span><span class="p">&gt;</span></span></span></code></pre></td></tr></table>
-</div>
-</div>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">header</span><span class="p">&gt;</span></span></span></code></pre></div>
     </div>
 </div><p><code>.Lastmod</code> だけだと、時間まで表示されて大げさなので、<code>.Format &quot;2006-01-02&quot;</code> で書式を設定しました。
 ついでに初回投稿のほうも、同じ書式に変更しています。</p>
@@ -540,46 +500,21 @@ css というフォルダも自分で作成し、その中にスタイルシー�
 <p>ついでに、ポストされた日のフォーマットも合わせておきます。<br>
 <code>&lt;div&gt;</code> のすぐ下にある <code>&lt;p&gt;&lt;/p&gt;</code> の中を修正しています。</p>
 <div>
-    <div class="code-block-content"><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">[li.html 修正前]
+    <div class="code-block-content"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">[li.html 修正前]
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card-subtext muted-text&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Posted <span class="p">&lt;</span><span class="nt">time</span> <span class="na">datetime</span><span class="o">=</span><span class="s">&#34;{{ .Date.Format &#34;</span><span class="na">2006-01-02</span><span class="err">&#34;</span> <span class="err">}}&#34;</span><span class="p">&gt;</span>{{ .Date.Format &#34;Jan 2, 2006&#34; }}<span class="p">&lt;/</span><span class="nt">time</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  {{ if (isset .Params &#34;categories&#34;) }}<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>{{ range .Params.categories }}#{{ . }} {{ end }}<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>{{ end }}
-</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></td></tr></table>
-</div>
-</div>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div>
     </div>
 </div><div>
-    <div class="code-block-content"><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">[li.html 修正後]
+    <div class="code-block-content"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">[li.html 修正後]
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card-subtext muted-text&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Posted <span class="p">&lt;</span><span class="nt">time</span> <span class="na">datetime</span><span class="o">=</span><span class="s">&#34;{{ .Date.Format &#34;</span><span class="na">2006-01-02</span><span class="err">&#34;</span> <span class="err">}}&#34;</span><span class="p">&gt;</span>{{ .Date.Format &#34;2006-01-02&#34; }}<span class="p">&lt;/</span><span class="nt">time</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">     / Update {{ .Lastmod.Format &#34;2006-01-02&#34; }}<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  {{ if (isset .Params &#34;categories&#34;) }}<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>{{ range .Params.categories }}#{{ . }} {{ end }}<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>{{ end }}
-</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></td></tr></table>
-</div>
-</div>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div>
     </div>
 </div><h3 id="更新日がうまく取得できずに悩む--解決したっぽい2019-02-25">更新日がうまく取得できずに悩む → 解決したっぽい［2019-02-25］
 </h3><p>手動でコミットしてプッシュするといけるけど、スクリプトでやるとダメっぽいぞ・・・。<br>
@@ -589,39 +524,7 @@ css というフォルダも自分で作成し、その中にスタイルシー�
 <h4 id="更新日がうまく入らない">更新日がうまく入らない
 </h4><p>プッシュするのにコマンドをいくつも入れるのが面倒なので、ネットで調べて下記のスクリプトを組んであります。</p>
 <div>
-    <div class="code-block-content"><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+    <div class="code-block-content"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
 </span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="nb">echo</span> -e <span class="s2">&#34;\033[0;33mDeploying updates to GitHub...\033[0m&#34;</span>
 </span></span><span class="line"><span class="cl"><span class="c1"># Build the project.</span>
 </span></span><span class="line"><span class="cl">hugo
@@ -648,9 +551,7 @@ css というフォルダも自分で作成し、その中にスタイルシー�
 </span></span><span class="line"><span class="cl"><span class="k">fi</span>
 </span></span><span class="line"><span class="cl">git commit -m <span class="s2">&#34;</span><span class="nv">$msg</span><span class="s2">&#34;</span>
 </span></span><span class="line"><span class="cl"><span class="c1"># Push source and build repos.</span>
-</span></span><span class="line"><span class="cl">git push origin master</span></span></code></pre></td></tr></table>
-</div>
-</div>
+</span></span><span class="line"><span class="cl">git push origin master</span></span></code></pre></div>
     </div>
 </div><p>手動で同じことをやっていくと反映するんですけど、これを実行したときってうまく反映されないような。<br>
 気のせいかな。</p>
@@ -658,22 +559,11 @@ css というフォルダも自分で作成し、その中にスタイルシー�
 <h4 id="更新日がうまく入らない解決したっぽい">更新日がうまく入らない（解決したっぽい）
 </h4><p><code>config.toml</code> に追記することで解決したっぽい。</p>
 <div>
-    <div class="code-block-content"><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">frontmatter</span><span class="p">]</span>
+    <div class="code-block-content"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">frontmatter</span><span class="p">]</span>
 </span></span><span class="line"><span class="cl"><span class="nx">date</span> <span class="p">=</span> <span class="p">[</span><span class="s2">&#34;date&#34;</span><span class="p">,</span> <span class="s2">&#34;publishDate&#34;</span><span class="p">,</span> <span class="s2">&#34;lastmod&#34;</span><span class="p">]</span>
 </span></span><span class="line"><span class="cl"><span class="nx">lastmod</span> <span class="p">=</span> <span class="p">[</span><span class="s2">&#34;:git&#34;</span><span class="p">,</span> <span class="s2">&#34;lastmod&#34;</span><span class="p">,</span> <span class="s2">&#34;date&#34;</span><span class="p">,</span> <span class="s2">&#34;publishDate&#34;</span><span class="p">]</span>
 </span></span><span class="line"><span class="cl"><span class="nx">publishDate</span> <span class="p">=</span> <span class="p">[</span><span class="s2">&#34;publishDate&#34;</span><span class="p">,</span> <span class="s2">&#34;date&#34;</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl"><span class="nx">expiryDate</span> <span class="p">=</span> <span class="p">[</span><span class="s2">&#34;expiryDate&#34;</span><span class="p">]</span></span></span></code></pre></td></tr></table>
-</div>
-</div>
+</span></span><span class="line"><span class="cl"><span class="nx">expiryDate</span> <span class="p">=</span> <span class="p">[</span><span class="s2">&#34;expiryDate&#34;</span><span class="p">]</span></span></span></code></pre></div>
     </div>
 </div><p><code>[frontmatter]</code> というセクションを追加し、その下に日付的な設定を追加しました。<br>
 参考にしたのは <a class="link" href="https://gohugo.io/getting-started/configuration/#configure-front-matter"  title="Configure Hugo"
@@ -722,31 +612,7 @@ PageSpeed Insights のモバイルの点数が <strong>15点落ちました</str
      target="_blank" rel="noopener"
     >Google Fonts</a> で好きなフォントを選んで、それ用のタグを入手してください。</p>
 <div>
-    <div class="code-block-content"><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">［head.html に下記を貼り付ける］
+    <div class="code-block-content"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">［head.html に下記を貼り付ける］
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c">&lt;!-- webfontloader --&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
@@ -765,37 +631,19 @@ PageSpeed Insights のモバイルの点数が <strong>15点落ちました</str
 </span></span><span class="line"><span class="cl">  <span class="nx">s</span><span class="p">.</span><span class="nx">parentNode</span><span class="p">.</span><span class="nx">insertBefore</span><span class="p">(</span><span class="nx">wf</span><span class="p">,</span> <span class="nx">s</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="p">})();</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="c">&lt;!-- webfontloader ここまで--&gt;</span></span></span></code></pre></td></tr></table>
-</div>
-</div>
+</span></span><span class="line"><span class="cl"><span class="c">&lt;!-- webfontloader ここまで--&gt;</span></span></span></code></pre></div>
     </div>
 </div><div>
-    <div class="code-block-content"><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="err">［</span><span class="nt">hoge</span><span class="p">.</span><span class="nc">css</span> <span class="nt">に下記を貼り付ける</span><span class="err">］</span>
+    <div class="code-block-content"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="err">［</span><span class="nt">hoge</span><span class="p">.</span><span class="nc">css</span> <span class="nt">に下記を貼り付ける</span><span class="err">］</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nt">body</span> <span class="o">*</span> <span class="p">{</span><span class="k">font-family</span><span class="p">:</span> <span class="s1">&#39;Roboto&#39;</span><span class="p">,</span> <span class="s1">&#39;Noto Sans CJK JP&#39;</span><span class="p">,</span> <span class="s1">&#39;Noto Sans JP&#39;</span><span class="p">,</span> <span class="kc">sans-serif</span> <span class="cp">!important</span><span class="p">;}</span></span></span></code></pre></td></tr></table>
-</div>
-</div>
+</span></span><span class="line"><span class="cl"><span class="nt">body</span> <span class="o">*</span> <span class="p">{</span><span class="k">font-family</span><span class="p">:</span> <span class="s1">&#39;Roboto&#39;</span><span class="p">,</span> <span class="s1">&#39;Noto Sans CJK JP&#39;</span><span class="p">,</span> <span class="s1">&#39;Noto Sans JP&#39;</span><span class="p">,</span> <span class="kc">sans-serif</span> <span class="cp">!important</span><span class="p">;}</span></span></span></code></pre></div>
     </div>
 </div><p>スタイルシートのほうは、かなり乱暴な書き方をしていますけど、テストということで許してください（笑）</p>
 <h4 id="ローカルフォントを指定する">ローカルフォントを指定する
 </h4><p>とりあえず、最近は <strong>游ゴシック体</strong> が良いみたいなので、下記のように指定しました。<br>
 游ゴシックに Medium が入っているのは、<strong>標準の太さだとかすれちゃう問題</strong> が発生するからだそうです。</p>
 <div>
-    <div class="code-block-content"><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="nt">font-family</span><span class="o">:</span> <span class="s2">&#34;游ゴシック Medium&#34;</span><span class="o">,</span> <span class="s2">&#34;Yu Gothic Medium&#34;</span><span class="o">,</span> <span class="s2">&#34;游ゴシック体&#34;</span><span class="o">,</span> <span class="s2">&#34;YuGothic&#34;</span><span class="o">,</span> <span class="s2">&#34;ヒラギノ角ゴ ProN W3&#34;</span><span class="o">,</span> <span class="s2">&#34;Hiragino Kaku Gothic ProN&#34;</span><span class="o">,</span> <span class="s2">&#34;メイリオ&#34;</span><span class="o">,</span> <span class="s2">&#34;Meiryo&#34;</span><span class="o">,</span> <span class="s2">&#34;verdana&#34;</span><span class="o">,</span> <span class="nt">sans-serif</span><span class="o">;</span></span></span></code></pre></td></tr></table>
-</div>
-</div>
+    <div class="code-block-content"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="nt">font-family</span><span class="o">:</span> <span class="s2">&#34;游ゴシック Medium&#34;</span><span class="o">,</span> <span class="s2">&#34;Yu Gothic Medium&#34;</span><span class="o">,</span> <span class="s2">&#34;游ゴシック体&#34;</span><span class="o">,</span> <span class="s2">&#34;YuGothic&#34;</span><span class="o">,</span> <span class="s2">&#34;ヒラギノ角ゴ ProN W3&#34;</span><span class="o">,</span> <span class="s2">&#34;Hiragino Kaku Gothic ProN&#34;</span><span class="o">,</span> <span class="s2">&#34;メイリオ&#34;</span><span class="o">,</span> <span class="s2">&#34;Meiryo&#34;</span><span class="o">,</span> <span class="s2">&#34;verdana&#34;</span><span class="o">,</span> <span class="nt">sans-serif</span><span class="o">;</span></span></span></code></pre></div>
     </div>
 </div><h3 id="コード表示にサイズ制限を設ける-2019-03-14">コード表示にサイズ制限を設ける ［2019-03-14］
 </h3><p>こちらのサイトでは、よくコードの紹介をしています。（このページもそうですね）<br>
@@ -803,20 +651,10 @@ PageSpeed Insights のモバイルの点数が <strong>15点落ちました</str
 尚、gist などを使えば自動的にサイズ調整はしてくれますので、ここでは素でコード記述をする場合の内容です。</p>
 <h4 id="スタイルシートを修正する">スタイルシートを修正する
 </h4><div>
-    <div class="code-block-content"><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="nt">code</span> <span class="p">{</span>
+    <div class="code-block-content"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="nt">code</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="k">max-width</span><span class="p">:</span> <span class="mi">100</span><span class="kt">vw</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">  <span class="k">max-height</span><span class="p">:</span> <span class="mi">20</span><span class="kt">vw</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></td></tr></table>
-</div>
-</div>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div>
     </div>
 </div><p>最大の幅、高さを設定しました。
 スクロールバーを出すには <code>overflow</code> を入れてあげるのが正しいようですが、それをするとスクロールする必要のないコードまでスクロールバーが表示されて、格好悪かったです。OS やブラウザによるみたいですけど。</p>
@@ -830,18 +668,9 @@ PageSpeed Insights のモバイルの点数が <strong>15点落ちました</str
 </h4><p>設定ファイル <code>config.toml</code> に <code>tag = &quot;tags&quot;</code> を追加します。<br>
 カテゴリーとまとめて書いておくと見やすいかと思います。</p>
 <div>
-    <div class="code-block-content"><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">taxonomies</span><span class="p">]</span>
+    <div class="code-block-content"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">taxonomies</span><span class="p">]</span>
 </span></span><span class="line"><span class="cl"><span class="nx">category</span> <span class="p">=</span> <span class="s2">&#34;categories&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="nx">tag</span> <span class="p">=</span> <span class="s2">&#34;tags&#34;</span></span></span></code></pre></td></tr></table>
-</div>
-</div>
+</span></span><span class="line"><span class="cl"><span class="nx">tag</span> <span class="p">=</span> <span class="s2">&#34;tags&#34;</span></span></span></code></pre></div>
     </div>
 </div><h4 id="記事テンプレートの修正">記事テンプレートの修正
 </h4><p>もう1つ。<br>
@@ -850,24 +679,7 @@ PageSpeed Insights のモバイルの点数が <strong>15点落ちました</str
 <p><code>サイト名\archetypes\post.md</code></p>
 <p>私のファイルはこんな感じになっています。</p>
 <div>
-    <div class="code-block-content"><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-post.md" data-lang="post.md"><span class="line"><span class="cl">---
+    <div class="code-block-content"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-post.md" data-lang="post.md"><span class="line"><span class="cl">---
 </span></span><span class="line"><span class="cl">title: &#34;{{ replace .TranslationBaseName &#34;-&#34; &#34; &#34; | title }}&#34;
 </span></span><span class="line"><span class="cl">date: {{ .Date }}
 </span></span><span class="line"><span class="cl">description: &#34;&#34;
@@ -879,9 +691,7 @@ PageSpeed Insights のモバイルの点数が <strong>15点落ちました</str
 </span></span><span class="line"><span class="cl">displayInMenu: false
 </span></span><span class="line"><span class="cl">displayInList: true
 </span></span><span class="line"><span class="cl">draft: true
-</span></span><span class="line"><span class="cl">---</span></span></code></pre></td></tr></table>
-</div>
-</div>
+</span></span><span class="line"><span class="cl">---</span></span></code></pre></div>
     </div>
 </div><p>こうしておけば、<code>hugo new post/hoge.md</code> としたときに <code>post</code> に属する記事ということで、この <code>post.md</code> をテンプレートとして読み込んでくれ、ちょっとだけ楽になるのと、タグの付け忘れがなくなります。</p>
 <p>尚、記事のほうで <code>tag</code> が複数ある時は <code>tags: [&quot;aaa&quot;,&quot;bbb&quot;,&quot;ccc&quot;]</code> と書いてください。</p>
@@ -893,23 +703,7 @@ PageSpeed Insights のモバイルの点数が <strong>15点落ちました</str
 </h4><p><code>サイト名\layouts\_default\li.html</code></p>
 <p>一部分だけ抜き出しています。</p>
 <div>
-    <div class="code-block-content"><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">article</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card-body&#34;</span><span class="p">&gt;</span>
+    <div class="code-block-content"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">article</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card-body&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">h2</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card-title&#34;</span><span class="p">&gt;</span>{{ .Title }}<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card-text&#34;</span><span class="p">&gt;</span>{{ if (isset .Params &#34;description&#34;) }}{{ index .Params &#34;description&#34; }}{{ else }}{{ .Summary }}{{ end }}<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card-subtext muted-text&#34;</span><span class="p">&gt;</span>
@@ -920,9 +714,7 @@ PageSpeed Insights のモバイルの点数が <strong>15点落ちました</str
 </span></span><span class="line"><span class="cl">      {{ if (isset .Params &#34;categories&#34;) }}{{ range .Params.categories }}<span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;box-gray&#34;</span><span class="p">&gt;</span>{{ . }}<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span> {{ end }}{{ end }}
 </span></span><span class="line"><span class="cl">      {{ if (isset .Params &#34;tags&#34;) }} {{ range .Params.tags }}<span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;box-gray&#34;</span><span class="p">&gt;</span># {{ . }}<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span> {{ end }}{{ end }}
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">article</span><span class="p">&gt;</span></span></span></code></pre></td></tr></table>
-</div>
-</div>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">article</span><span class="p">&gt;</span></span></span></code></pre></div>
     </div>
 </div><p>先日、更新日を追加した修正のとき、カテゴリーも同じ <code>&lt;div&gt;&lt;/div&gt;</code> の中に入っていましたが、外側に出しています。<br>
 もう1つ <code>&lt;div&gt;&lt;/div&gt;</code> を用意して、その中にカテゴリーと、今回追加のタグを入れています。</p>
@@ -934,21 +726,7 @@ PageSpeed Insights のモバイルの点数が <strong>15点落ちました</str
 </h4><p><code>サイト名\layouts\_default\single.html</code></p>
 <p>一部分だけ抜き出しています。</p>
 <div>
-    <div class="code-block-content"><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">header</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;post-header&#34;</span><span class="p">&gt;</span>
+    <div class="code-block-content"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">header</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;post-header&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"> 	<span class="p">&lt;</span><span class="nt">h1</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;post-title&#34;</span><span class="p">&gt;</span>{{ .Title }}<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;post-date&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">      Posted <span class="p">&lt;</span><span class="nt">time</span> <span class="na">datetime</span><span class="o">=</span><span class="s">&#34;{{ .Date.Format &#34;</span><span class="na">2006-01-02</span><span class="err">&#34;</span> <span class="err">}}&#34;</span><span class="p">&gt;</span>{{ .Date.Format &#34;2006-01-02&#34; }}<span class="p">&lt;/</span><span class="nt">time</span><span class="p">&gt;</span>
@@ -957,9 +735,7 @@ PageSpeed Insights のモバイルの点数が <strong>15点落ちました</str
 </span></span><span class="line"><span class="cl">      {{ if (isset .Params &#34;categories&#34;) }}{{ range .Params.categories }} <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;cat&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;/categories/{{ . }}&#34;</span><span class="p">&gt;</span>{{ . }}<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>{{ end }}{{ end }}
 </span></span><span class="line"><span class="cl">      {{ if (isset .Params &#34;tags&#34;) }}{{ range .Params.tags }} <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;tag&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;/tags/{{ . }}&#34;</span><span class="p">&gt;</span># {{ . }}<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span> {{ end }}{{ end }}
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">header</span><span class="p">&gt;</span></span></span></code></pre></td></tr></table>
-</div>
-</div>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">header</span><span class="p">&gt;</span></span></span></code></pre></div>
     </div>
 </div><p>こちらもトップとほぼ同じですが、リンクの設定をしてあります。<br>
 表示されたカテゴリーやタグをクリックすると、同一グループが一覧表示されるようになります。<br>
@@ -979,23 +755,7 @@ PageSpeed Insights のモバイルの点数が <strong>15点落ちました</str
 <p><code>サイト名\layouts\_default\li-next.html</code></p>
 <p>一部分だけ抜き出しています。</p>
 <div>
-    <div class="code-block-content"><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">article</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card-body&#34;</span><span class="p">&gt;</span>
+    <div class="code-block-content"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">article</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card-body&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">h2</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card-title&#34;</span><span class="p">&gt;</span>{{ .Title }}<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card-text&#34;</span><span class="p">&gt;</span>{{ if (isset .Params &#34;description&#34;) }}{{ index .Params &#34;description&#34; }}{{ else }}{{ .Summary }}{{ end }}<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card-subtext muted-text&#34;</span><span class="p">&gt;</span>
@@ -1006,9 +766,7 @@ PageSpeed Insights のモバイルの点数が <strong>15点落ちました</str
 </span></span><span class="line"><span class="cl">    {{ if (isset .Params &#34;categories&#34;) }}{{ range .Params.categories }}<span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;box-gray&#34;</span><span class="p">&gt;</span>{{ . }}<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span> {{ end }}{{ end }}
 </span></span><span class="line"><span class="cl">    {{ if (isset .Params &#34;tags&#34;) }}{{ range .Params.tags }}<span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;box-gray&#34;</span><span class="p">&gt;</span># {{ . }}<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span> {{ end }}{{ end }}
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">article</span><span class="p">&gt;</span></span></span></code></pre></td></tr></table>
-</div>
-</div>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">article</span><span class="p">&gt;</span></span></span></code></pre></div>
     </div>
 </div><p>トップページと同じかな。</p>
 <h4 id="メニューボタン">メニューボタン
@@ -1017,31 +775,7 @@ PageSpeed Insights のモバイルの点数が <strong>15点落ちました</str
 <p><code>サイト名\layouts\partials\nav-bar.html</code></p>
 <p>一部分だけ抜き出しています。</p>
 <div>
-    <div class="code-block-content"><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;hamburger-menu&#34;</span><span class="p">&gt;</span>
+    <div class="code-block-content"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;hamburger-menu&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&#34;hamburgerMenuPressed.call(this)&#34;</span> <span class="na">aria-haspopup</span><span class="o">=</span><span class="s">&#34;true&#34;</span> <span class="na">aria-expanded</span><span class="o">=</span><span class="s">&#34;false&#34;</span> <span class="na">aria-controls</span><span class="o">=</span><span class="s">&#34;menu&#34;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&#34;Menu&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
@@ -1060,9 +794,7 @@ PageSpeed Insights のモバイルの点数が <strong>15点落ちました</str
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">li</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;font-size: 0.5em;&#34;</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;{{ (printf &#34;</span><span class="err">%</span><span class="na">s</span><span class="err">%</span><span class="na">s</span><span class="err">&#34;</span> <span class="err">&#34;</span><span class="na">tags</span><span class="err">/&#34;</span> <span class="err">($</span><span class="na">key</span> <span class="err">|</span> <span class="na">urlize</span><span class="err">))</span> <span class="err">|</span> <span class="na">absURL</span> <span class="err">}}&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;hamburger-menu-overlay-link&#34;</span><span class="p">&gt;</span>{{ $key | humanize }}<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    {{- end }}
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></td></tr></table>
-</div>
-</div>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div>
     </div>
 </div><p>すでにカテゴリーは記載済みですので、そこをコピペしてタグ用の行を追加しています。<br>
 <code>categories</code> = <code>tags</code> で置換してあげれば良いです。</p>
