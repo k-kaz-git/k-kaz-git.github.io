@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="ja" dir="ltr">
-    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+    <head><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="触り始めたのでまとめていく">
 <title>Hugoのテーマ Stack について</title>
 
-<link rel='canonical' href='http://localhost:1313/p/hugo%E3%81%AE%E3%83%86%E3%83%BC%E3%83%9E-stack-%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/'>
+<link rel='canonical' href='https://k-kaz-git.github.io/p/hugo%E3%81%AE%E3%83%86%E3%83%BC%E3%83%9E-stack-%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/'>
 
 <link rel="stylesheet" href="/scss/style.min.59f6914fefaa7fd6a3ceb1acf06074a3b888638c4a561a88453fcb5504879eaa.css"><meta property='og:title' content="Hugoのテーマ Stack について">
 <meta property='og:description' content="触り始めたのでまとめていく">
-<meta property='og:url' content='http://localhost:1313/p/hugo%E3%81%AE%E3%83%86%E3%83%BC%E3%83%9E-stack-%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/'>
+<meta property='og:url' content='https://k-kaz-git.github.io/p/hugo%E3%81%AE%E3%83%86%E3%83%BC%E3%83%9E-stack-%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/'>
 <meta property='og:site_name' content='k-kaz が Hugo で遊ぶサイト'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2024-09-05T12:48:18&#43;09:00'/><meta property='article:modified_time' content='2024-09-05T12:48:18&#43;09:00'/><meta property='og:image' content='http://localhost:1313/images/hugo-theme-stack.avif' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Hugo' /><meta property='article:tag' content='Theme' /><meta property='article:published_time' content='2024-09-05T12:48:18&#43;09:00'/><meta property='article:modified_time' content='2024-09-05T12:48:18&#43;09:00'/><meta property='og:image' content='https://k-kaz-git.github.io/images/hugo-theme-stack.avif' />
 <meta name="twitter:title" content="Hugoのテーマ Stack について">
 <meta name="twitter:description" content="触り始めたのでまとめていく"><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='http://localhost:1313/images/hugo-theme-stack.avif' />
+    <meta name="twitter:image" content='https://k-kaz-git.github.io/images/hugo-theme-stack.avif' />
     <link rel="shortcut icon" href="/favicon.ico" />
 
       <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-K8B8MR2Z"></script>
@@ -220,6 +220,7 @@
   <ol>
     <li><a href="#はじめに">はじめに</a>
       <ol>
+        <li><a href="#採用したテーマ">採用したテーマ</a></li>
         <li><a href="#追記-2024-09-06">追記 2024-09-06</a></li>
         <li><a href="#カスタマイズの基本">カスタマイズの基本</a>
           <ol>
@@ -231,6 +232,7 @@
     </li>
     <li><a href="#全体設定-configyaml">全体設定 config.yaml</a>
       <ol>
+        <li><a href="#google-analytics">Google Analytics</a></li>
         <li><a href="#パーマリンク">パーマリンク</a></li>
         <li><a href="#ページタイトル">ページタイトル</a></li>
         <li><a href="#1ページに表示する記事数を設定">1ページに表示する記事数を設定</a></li>
@@ -247,13 +249,13 @@
     <li><a href="#レイアウト">レイアウト</a></li>
     <li><a href="#不具合修正">不具合修正</a>
       <ol>
-        <li><a href="#resourcestocss--csssass">resources.ToCSS → css.Sass</a>
+        <li><a href="#resourcestocss-はもう古い">resources.ToCSS はもう古い</a>
           <ol>
             <li><a href="#stylehtml">style.html</a></li>
             <li><a href="#disqusjshtml">disqusjs.html</a></li>
           </ol>
         </li>
-        <li><a href="#paginate--paginationpagersize">paginate → pagination.pagerSize</a></li>
+        <li><a href="#paginate-はもう古い">paginate はもう古い</a></li>
       </ol>
     </li>
   </ol>
@@ -279,6 +281,14 @@
     
 
     <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/homepage/" >
+                Homepage
+            </a>
+        
+    </header>
     
 
     <div class="article-title-wrapper">
@@ -340,15 +350,22 @@
     
     
     <h2 id="はじめに">はじめに
-</h2><p>当サイトで新しいテーマを採用したので、動作させるために行った内容をメモします。<br>
-正しい内容かどうか定かではないため、ご覧になる方はご注意ください。</p>
+</h2><p>当サイトで新しいテーマを採用しました。<br>
+時間が経つときれいに忘れ去るため、修正した内容を自分用にメモしておこうと思います。</p>
+<p>正しい内容かどうか定かではないため、ご覧になる方はご注意ください。</p>
+<h3 id="採用したテーマ">採用したテーマ
+</h3><p>&#x1f517; <a class="link" href="https://themes.gohugo.io/themes/hugo-theme-stack/"  target="_blank" rel="noopener"
+    >Stack | Hugo Themes</a><br>
+&#x1f517; <a class="link" href="https://github.com/CaiJimmy/hugo-theme-stack"  target="_blank" rel="noopener"
+    >CaiJimmy/hugo-theme-stack: Card-style Hugo theme designed for bloggers</a></p>
 <h3 id="追記-2024-09-06">追記 2024-09-06
-</h3><p>ほぼ書き終わったかなというタイミングで、同じ趣旨の内容を書かれているサイトを発見。<br>
+</h3><p>初期設定で行った内容を書き終わったタイミングで、同じ趣旨の内容を書かれているサイトを発見。<br>
 めっちゃ真似したみたいになってしまった。ごめんなさい・・・。</p>
 <p>&#x1f517; <a class="link" href="https://notes.nakurei.com/post/customize-stack-theme/#%E3%82%B5%E3%82%A4%E3%83%88%E3%81%AE%E3%83%AA%E3%83%B3%E3%82%AF%E3%81%AE%E5%A4%89%E6%9B%B4"  target="_blank" rel="noopener"
     >Hugo Stackテーマのカスタマイズ</a></p>
 <p>↑ まずはこちらのサイトをご覧いただくほうがよろしいかと。</p>
-<p>コードブロックにファイル名を表示させる方法、参考にさせていただきました 🙇‍♂️</p>
+<p>良いもの見付けた！<br>
+と思って、コードブロックにファイル名を表示させる方法、参考にさせていただきました 🙇‍♂️</p>
 <h3 id="カスタマイズの基本">カスタマイズの基本
 </h3><p>テーマフォルダー内でファイルの変更を行うと、テーマの更新があったときに上書きされてしまうため、変更したいファイルを専用の場所にコピーして編集します。</p>
 <p>Hugoが動作するとき、テーマフォルダーの中身を読み込んで表示をしてくれますが、専用の場所に置いたファイルが優先される仕様になっています。</p>
@@ -365,8 +382,28 @@
 <h2 id="全体設定-configyaml">全体設定 config.yaml
 </h2><p>全部書くと大変なので、引っかかりやすいものとか。<br>
 ここに未掲載のもので重要なのは、サイトのURLとか言語設定とか。</p>
-<h3 id="パーマリンク">パーマリンク
-</h3><p>初期値のままですが変えるかも。</p>
+<h3 id="google-analytics">Google Analytics
+</h3><p>Analyticsのコードを貼り付けます。</p>
+<div>
+    <div class="code-block-filename">config.yaml</div>
+    
+    <div class="code-block-content"><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">services</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c"># GA Tracking ID</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">googleAnalytics</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l">hoge-ID    </span><span class="w"> </span><span class="c"># 自身のタグ</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+    </div>
+</div><h3 id="パーマリンク">パーマリンク
+</h3><p>初期値のままですが、あとで変えるかも。</p>
 <div>
     <div class="code-block-filename">config.yaml</div>
     
@@ -384,7 +421,7 @@
 </div>
     </div>
 </div><h3 id="ページタイトル">ページタイトル
-</h3><p><code>languages:</code> セクションの中には、英語、中国語、アラビア語があり、訪問者が切り替えできるようになっていました。<br>
+</h3><p><code>languages:</code> セクションの中には、英語、中国語、アラビア語？があり、訪問者が切り替えできるようになっていました。<br>
 このサイトは日本人向けなので、元の言語はすべて削除して、日本語を追加しています。</p>
 <div>
     <div class="code-block-filename">config.yaml</div>
@@ -559,10 +596,11 @@
 </div>
     </div>
 </div><h2 id="レイアウト">レイアウト
-</h2><h2 id="不具合修正">不具合修正
-</h2><h3 id="resourcestocss--csssass">resources.ToCSS → css.Sass
+</h2><p>未着手。</p>
+<h2 id="不具合修正">不具合修正
+</h2><h3 id="resourcestocss-はもう古い">resources.ToCSS はもう古い
 </h3><p>Hugo Serverを起動すると下記のWarningが出ます。</p>
-<p><em>WARN  deprecated: resources.ToCSS was deprecated in Hugo v0.128.0 and will be removed in a future release. Use css.Sass instead.</em></p>
+<p><em><strong>WARN  deprecated: resources.ToCSS was deprecated in Hugo v0.128.0 and will be removed in a future release. Use css.Sass instead.</strong></em></p>
 <p><code>resources.ToCSS</code> じゃなくて、 <code>css.Sass</code> を使えと言っています。<br>
 SassをCSSにするための機能らしい。</p>
 <ul>
@@ -571,10 +609,22 @@ SassをCSSにするための機能らしい。</p>
 <li><a class="link" href="https://gohugo.io/functions/css/sass/"  target="_blank" rel="noopener"
     >css.Sass | Hugo</a> ← 新しい</li>
 </ul>
-<p>フォルダー内を検索して2つのファイルで発見しましたので修正。</p>
+<p>フォルダー内を検索して2つのファイル <code>style.html</code>、<code>disqusjs.html</code> で該当箇所を発見しましたので修正。</p>
 <h4 id="stylehtml">style.html
-</h4><p>/themes/stack/layouts/partials/head/style.html → /layouts/partials/head/ へコピー。</p>
-<p>オリジナル</p>
+</h4><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th style="text-align: left">オリジナル</th>
+          <th style="text-align: left">複写先</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">/themes/stack/layouts/partials/head/style.html</td>
+          <td style="text-align: left">/layouts/partials/head</td>
+      </tr>
+  </tbody>
+</table></div>
 <div>
     <div class="code-block-filename">/themes/stack/layouts/partials/head/style.html</div>
     
@@ -591,7 +641,7 @@ SassをCSSにするための機能らしい。</p>
 </div>
 </div>
     </div>
-</div><p>修正（2行目の <code>resources.ToCSS</code> を <code>css.Sass</code> に修正しました。）</p>
+</div><p>2行目の <code>resources.ToCSS</code> を <code>css.Sass</code> に修正しました。</p>
 <div>
     <div class="code-block-filename">/layouts/partials/head/style.html</div>
     
@@ -609,8 +659,20 @@ SassをCSSにするための機能らしい。</p>
 </div>
     </div>
 </div><h4 id="disqusjshtml">disqusjs.html
-</h4><p>/themes/stack/layouts/partials/comments/provider/disqusjs.html → /layouts/partials/comments/provider/ へコピー。</p>
-<p>オリジナル</p>
+</h4><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th style="text-align: left">オリジナル</th>
+          <th style="text-align: left">複写先</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">/themes/stack/layouts/partials/comments/provider/disqusjs.html</td>
+          <td style="text-align: left">/layouts/partials/comments/provider</td>
+      </tr>
+  </tbody>
+</table></div>
 <div>
     <div class="code-block-filename">/themes/stack/layouts/partials/comments/provider/disqusjs.html</div>
     
@@ -631,7 +693,7 @@ SassをCSSにするための機能らしい。</p>
 </div>
 </div>
     </div>
-</div><p>修正（5行目の <code>resources.ToCSS</code> を <code>css.Sass</code> に修正しました。）</p>
+</div><p>5行目の <code>resources.ToCSS</code> を <code>css.Sass</code> に修正しました。</p>
 <div>
     <div class="code-block-filename">/layouts/partials/comments/provider/disqusjs.html</div>
     
@@ -652,9 +714,9 @@ SassをCSSにするための機能らしい。</p>
 </div>
 </div>
     </div>
-</div><h3 id="paginate--paginationpagersize">paginate → pagination.pagerSize
+</div><h3 id="paginate-はもう古い">paginate はもう古い
 </h3><p>Hugo Serverを起動すると下記のWarningが出ます。</p>
-<p><em>WARN  deprecated: site config key paginate was deprecated in Hugo v0.128.0 and will be removed in a future release. Use pagination.pagerSize instead.</em></p>
+<p><em><strong>WARN  deprecated: site config key paginate was deprecated in Hugo v0.128.0 and will be removed in a future release. Use pagination.pagerSize instead.</strong></em></p>
 <p>1画面に表示する記事の数を指定する機能です。<br>
 <code>paginate</code> は古いので <code>pagination.pagerSize</code> に変えなさいというものです。</p>
 <p><code>config.yamal</code> の中で設定します。<br>
@@ -683,6 +745,14 @@ SassをCSSにするための機能らしい。</p>
 
     <footer class="article-footer">
     
+    <section class="article-tags">
+        
+            <a href="/tags/hugo/">Hugo</a>
+        
+            <a href="/tags/theme/">Theme</a>
+        
+    </section>
+
 
     
     <section class="article-copyright">
@@ -705,6 +775,110 @@ SassをCSSにするための機能らしい。</p>
     
 
     
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">関連するコンテンツ</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/hugo-warning-.site.social/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/images/hugo-warning-sitesocial.webp" loading="lazy" data-key="" data-hash="/images/hugo-warning-sitesocial.webp"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Hugo Warning .Site.Social</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E3%83%AA%E3%82%B9%E3%83%88%E8%A1%A8%E7%A4%BA%E3%81%A8%E3%82%B7%E3%83%B3%E3%82%B0%E3%83%AB%E8%A1%A8%E7%A4%BA%E3%81%AB%E3%82%BF%E3%82%B0%E3%82%92%E4%BB%98%E3%81%91%E3%82%8B/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/images/tag_720.webp" loading="lazy" data-key="" data-hash="/images/tag_720.webp"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">リスト表示とシングル表示にタグを付ける</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/hugo%E3%81%AB%E3%82%B3%E3%83%A1%E3%83%B3%E3%83%88%E6%A9%9F%E8%83%BD%E3%82%92%E4%BB%98%E3%81%91%E3%82%8Bgiscus%E7%B7%A8/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/images/speech-bubbles_640.webp" loading="lazy" data-key="" data-hash="/images/speech-bubbles_640.webp"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Hugoにコメント機能を付ける（giscus編）</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/hugo-update-v0.122.0/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/images/hugo-logo-wide.svg" loading="lazy" data-key="" data-hash="/images/hugo-logo-wide.svg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Hugo Update V0.122.0</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/hugo%E3%81%A7mermaid%E8%A8%98%E6%B3%95%E3%82%92%E5%88%A9%E7%94%A8%E3%81%99%E3%82%8B/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/images/mermaid.webp" loading="lazy" data-key="" data-hash="/images/mermaid.webp"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">HugoでMermaid記法を利用する</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
 
      
     
