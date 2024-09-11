@@ -144,7 +144,9 @@
 /themes/stack/exampleSite/content/page 内にあるものを、/content/pageへコピーすることで画面に表示できます。&lt;br&gt;
 最初、機能を有効にしても出ない理由が不明で途方に暮れました。&lt;/p&gt;
 &lt;h2 id=&#34;スタイルシート&#34;&gt;スタイルシート
-&lt;/h2&gt;&lt;table&gt;
+&lt;/h2&gt;&lt;p&gt;スタイルシートは各ファイルを持ってくるのではなく、カスタム用のファイルにまとめて記述するようです。&lt;br&gt;
+1ファイルにまとまっているとあとで直したところを確認したくなったときに楽ですね。&lt;/p&gt;
+&lt;table&gt;
   &lt;thead&gt;
       &lt;tr&gt;
           &lt;th style=&#34;text-align: left&#34;&gt;オリジナル&lt;/th&gt;
@@ -153,19 +155,25 @@
   &lt;/thead&gt;
   &lt;tbody&gt;
       &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;/themes/stack/assets/scss&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;/assets/scss&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;/themes/stack/assets/scss/custom.scss&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;/assets/scss/custom.scss&lt;/td&gt;
       &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
+&lt;p&gt;&lt;code&gt;custom.scss&lt;/code&gt;にはこのコメントのみ記述されていました。&lt;/p&gt;
+&lt;div&gt;
+    &lt;div class=&#34;code-block-filename&#34;&gt;custom.scss&lt;/div&gt;
+    
+    &lt;div class=&#34;code-block-content&#34;&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-css&#34; data-lang=&#34;css&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c&#34;&gt;/* Place your custom SCSS in HUGO_SITE_FOLDER/assets/scss/custom.scss */&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;スタイルシートの修正後、Hugo Serverを再起動しないと反映されない&lt;/strong&gt;ので注意です。&lt;br&gt;
+これでちょっとハマってた・・・。&lt;/p&gt;
 &lt;h3 id=&#34;フォントを変える&#34;&gt;フォントを変える
 &lt;/h3&gt;&lt;p&gt;中国製のためか、フォントに違和感があるので変えました。&lt;/p&gt;
-&lt;p&gt;/themes/stack/assets/scss/variables.scss → /assets/scss/ へコピー。&lt;br&gt;
+&lt;p&gt;/themes/stack/assets/scss/variables.scss の該当部分を&lt;code&gt;custom.scss&lt;/code&gt;にコピペして編集します。&lt;br&gt;
 4行目にある &lt;code&gt;--base-font-family&lt;/code&gt; の行を変更しています。&lt;/p&gt;
-&lt;p&gt;3行目は中国系かな？
-いらないと思いますが今は残してあります。&lt;/p&gt;
 &lt;div&gt;
-    &lt;div class=&#34;code-block-filename&#34;&gt;/assets/scss/variables.scss&lt;/div&gt;
+    &lt;div class=&#34;code-block-filename&#34;&gt;/assets/scss/custom.scss&lt;/div&gt;
     
     &lt;div class=&#34;code-block-content&#34;&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-scss&#34; data-lang=&#34;scss&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nd&#34;&gt;:root&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;na&#34;&gt;--sys-font-family&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;apple-system&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;BlinkMacSystemFont&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Segoe UI&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Droid Sans&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Helvetica Neue&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
