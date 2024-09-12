@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://k-kaz-git.github.io/p/hugo%E3%81%AE%E3%83%86%E3%83%BC%E3%83%9E-stack-%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/'>
 
-<link rel="stylesheet" href="/scss/style.min.e29e3eb73a7a1c8c2e88b86bb745d20697d317aa339d6acdb0e1c21ead51f3e7.css"><meta property='og:title' content="Hugoのテーマ Stack について">
+<link rel="stylesheet" href="/scss/style.min.d0c776311df45d3ebdbeeb3d99c7c5b3db1997f1989268d64edd6c79d36598ce.css"><meta property='og:title' content="Hugoのテーマ Stack について">
 <meta property='og:description' content="触り始めたのでまとめていく">
 <meta property='og:url' content='https://k-kaz-git.github.io/p/hugo%E3%81%AE%E3%83%86%E3%83%BC%E3%83%9E-stack-%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/'>
 <meta property='og:site_name' content='k-kaz が Hugo で遊ぶサイト'>
@@ -21,13 +21,13 @@
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-K8B8MR2Z');</script>
-    
+
     </head>
     <body class="
     article-page
     ">
-        
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8B8MR2Z"
+    
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8B8MR2Z"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     
     <script>
@@ -228,7 +228,11 @@
     </li>
     <li><a href="#全体設定-configyaml">全体設定 config.yaml</a>
       <ol>
-        <li><a href="#google-analytics">Google Analytics</a></li>
+        <li><a href="#google-analytics">Google Analytics</a>
+          <ol>
+            <li><a href="#google-analytics-後日変更">Google Analytics 後日変更</a></li>
+          </ol>
+        </li>
         <li><a href="#パーマリンク">パーマリンク</a></li>
         <li><a href="#ページタイトル">ページタイトル</a></li>
         <li><a href="#1ページに表示する記事数を設定">1ページに表示する記事数を設定</a></li>
@@ -330,7 +334,7 @@
 
 
                 <time class="article-time--reading">
-                    読了時間: 5分
+                    読了時間: 6分
                 </time>
             </div>
         
@@ -387,6 +391,46 @@
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c"># GA Tracking ID</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">googleAnalytics</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l">hoge-ID    </span><span class="w"> </span><span class="c"># 自身のタグ</span></span></span></code></pre></div>
+    </div>
+</div><h4 id="google-analytics-後日変更">Google Analytics 後日変更
+</h4><p>Googleタグマネージャーを使っているのでそちらのIDを貼り付けていたんですが、動作しているのかしていないのか微妙な感じ。<br>
+Googleタグマネージャーのプレビュー画面でも黄色マーク（要注意）が出ているので、ここを使うのはやめました。<br>
+そもそもAnalytics用のIDっぽいしね。</p>
+<p><code>config.yaml</code>は空にして、<code>/layouts/partials/head/custom.html</code>と<code>/layouts/_default/baseof.html</code>にタグマネージャーで指示されたものを貼り付けました。</p>
+<div>
+    <div class="code-block-filename">config.yaml</div>
+    
+    <div class="code-block-content"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">services</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c"># GA Tracking ID</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">googleAnalytics</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">id</span><span class="p">:</span><span class="w">          </span><span class="c"># 空にしました</span></span></span></code></pre></div>
+    </div>
+</div><div>
+    <div class="code-block-filename">/layouts/partials/head/custom.html</div>
+    
+    <div class="code-block-content"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="c">&lt;!-- Google Tag Manager --&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;(</span><span class="kd">function</span><span class="p">(</span><span class="nx">w</span><span class="p">,</span><span class="nx">d</span><span class="p">,</span><span class="nx">s</span><span class="p">,</span><span class="nx">l</span><span class="p">,</span><span class="nx">i</span><span class="p">){</span><span class="nx">w</span><span class="p">[</span><span class="nx">l</span><span class="p">]</span><span class="o">=</span><span class="nx">w</span><span class="p">[</span><span class="nx">l</span><span class="p">]</span><span class="o">||</span><span class="p">[];</span><span class="nx">w</span><span class="p">[</span><span class="nx">l</span><span class="p">].</span><span class="nx">push</span><span class="p">({</span><span class="s1">&#39;gtm.start&#39;</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">new</span> <span class="nb">Date</span><span class="p">().</span><span class="nx">getTime</span><span class="p">(),</span><span class="nx">event</span><span class="o">:</span><span class="s1">&#39;gtm.js&#39;</span><span class="p">});</span><span class="kd">var</span> <span class="nx">f</span><span class="o">=</span><span class="nx">d</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="nx">s</span><span class="p">)[</span><span class="mi">0</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">j</span><span class="o">=</span><span class="nx">d</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="nx">s</span><span class="p">),</span><span class="nx">dl</span><span class="o">=</span><span class="nx">l</span><span class="o">!=</span><span class="s1">&#39;dataLayer&#39;</span><span class="o">?</span><span class="s1">&#39;&amp;l=&#39;</span><span class="o">+</span><span class="nx">l</span><span class="o">:</span><span class="s1">&#39;&#39;</span><span class="p">;</span><span class="nx">j</span><span class="p">.</span><span class="kr">async</span><span class="o">=</span><span class="kc">true</span><span class="p">;</span><span class="nx">j</span><span class="p">.</span><span class="nx">src</span><span class="o">=</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;https://www.googletagmanager.com/gtm.js?id=&#39;</span><span class="o">+</span><span class="nx">i</span><span class="o">+</span><span class="nx">dl</span><span class="p">;</span><span class="nx">f</span><span class="p">.</span><span class="nx">parentNode</span><span class="p">.</span><span class="nx">insertBefore</span><span class="p">(</span><span class="nx">j</span><span class="p">,</span><span class="nx">f</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">})(</span><span class="nb">window</span><span class="p">,</span><span class="nb">document</span><span class="p">,</span><span class="s1">&#39;script&#39;</span><span class="p">,</span><span class="s1">&#39;dataLayer&#39;</span><span class="p">,</span><span class="s1">&#39;hoge-ID&#39;</span><span class="p">);&lt;/</span><span class="nt">script</span><span class="p">&gt;</span> <span class="c">&lt;!-- hoge-IDは自分のもので --&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="c">&lt;!-- End Google Tag Manager --&gt;</span></span></span></code></pre></div>
+    </div>
+</div><div>
+    <div class="code-block-filename">/layouts/_default/baseof.html</div>
+    
+    <div class="code-block-content"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&#34;{{ .Site.LanguageCode }}&#34;</span> <span class="na">dir</span><span class="o">=</span><span class="s">&#34;{{ default `ltr` .Language.LanguageDirection }}&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        {{- partial &#34;head/head.html&#34; . -}}
+</span></span><span class="line"><span class="cl">        {{- block &#34;head&#34; . -}}{{ end }}
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">body</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;{{ block `body-class` . }}{{ end }}&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="c">&lt;!-- Google Tag Manager (noscript) --&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">noscript</span><span class="p">&gt;&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://www.googletagmanager.com/ns.html?id=hoge-ID&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="na">height</span><span class="o">=</span><span class="s">&#34;0&#34;</span> <span class="na">width</span><span class="o">=</span><span class="s">&#34;0&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;display:none;visibility:hidden&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;&lt;/</span><span class="nt">noscript</span><span class="p">&gt;</span> <span class="c">&lt;!-- hoge-IDは自分のもので --&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="c">&lt;!-- End Google Tag Manager (noscript) --&gt;</span>
+</span></span><span class="line"><span class="cl">        {{- partial &#34;head/colorScheme&#34; . -}}</span></span></code></pre></div>
     </div>
 </div><h3 id="パーマリンク">パーマリンク
 </h3><p>初期値のままですが、あとで変えるかも。</p>
@@ -457,7 +501,8 @@
 </span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="nt">emitMetadata</span><span class="p">:</span><span class="w"> </span><span class="m">0</span></span></span></code></pre></div>
     </div>
 </div><h2 id="ウィジェットページ">ウィジェット（ページ）
-</h2><div class="table-wrapper"><table>
+</h2><p>検索とかアーカイブとかの機能です。</p>
+<div class="table-wrapper"><table>
   <thead>
       <tr>
           <th style="text-align: left">オリジナル</th>
@@ -471,8 +516,7 @@
       </tr>
   </tbody>
 </table></div>
-<p>検索とかアーカイブとかの機能です。<br>
-<code>config.yaml</code> の中で設定がありますが、そこで有効にしてもページがないと画面に出てきません。<br>
+<p><code>config.yaml</code> の中で設定がありますが、そこで有効にしてもページがないと画面に出てきません。<br>
 /themes/stack/exampleSite/content/page 内にあるものを、/content/pageへコピーすることで画面に表示できます。<br>
 最初、機能を有効にしても出ない理由が不明で途方に暮れました。</p>
 <h2 id="スタイルシート">スタイルシート
@@ -498,8 +542,9 @@
     
     <div class="code-block-content"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="c">/* Place your custom SCSS in HUGO_SITE_FOLDER/assets/scss/custom.scss */</span></span></span></code></pre></div>
     </div>
-</div><p><strong>スタイルシートの修正後、Hugo Serverを再起動しないと反映されない</strong>ので注意です。<br>
-これでちょっとハマってた・・・。</p>
+</div><p><strong>スタイルシートの修正後、Hugo Serverを再起動しないと反映されないことがある</strong>ので注意です。<br>
+ページの再読み込みでいけるものもありますが、違いがよくわかっておらず。</p>
+<p>これでちょっとハマったので、意図した通りに変更されない場合は再起動を試してみましょう。</p>
 <h3 id="フォントを変える">フォントを変える
 </h3><p>中国製のためか、フォントに違和感があるので変えました。</p>
 <p>/themes/stack/assets/scss/variables.scss の該当部分を<code>custom.scss</code>にコピペして編集します。<br>
