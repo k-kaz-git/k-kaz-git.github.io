@@ -79,9 +79,11 @@ giscusは、GitHubのDiscussions機能を使います。&lt;/p&gt;
 &lt;/h4&gt;&lt;ol&gt;
 &lt;li&gt;コメント機能を表示したい場所へ先程のコードを挿入&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;私の場合は、記事の下に入れるため &lt;code&gt;single.html&lt;/code&gt; の最後に入れました。&lt;/p&gt;
+&lt;p&gt;私の場合は、記事の下に入れるため &lt;del&gt;&lt;code&gt;single.html&lt;/code&gt;&lt;/del&gt; の最後に入れました。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2024/11/13 追記&lt;/strong&gt;&lt;br&gt;
+PagerMod v8.0から、コメント用のパーツ&lt;code&gt;/layout/partials/comments.html&lt;/code&gt;ができたので、そちらに入れるほうがスマートですね。&lt;/p&gt;
 &lt;div&gt;
-    &lt;div class=&#34;code-block-content&#34;&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// single.html
+    &lt;div class=&#34;code-block-content&#34;&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// domments.html
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{{&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Param&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;comments&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;script&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;src&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;https://giscus.app/client.js&amp;#34;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nx&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;repo&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;hoge/hoge-repo&amp;#34;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;//ユーザー名と保管用リポジトリ名

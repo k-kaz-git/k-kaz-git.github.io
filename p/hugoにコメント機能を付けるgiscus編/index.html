@@ -401,9 +401,11 @@ giscusは、GitHubのDiscussions機能を使います。</p>
 </h4><ol>
 <li>コメント機能を表示したい場所へ先程のコードを挿入</li>
 </ol>
-<p>私の場合は、記事の下に入れるため <code>single.html</code> の最後に入れました。</p>
+<p>私の場合は、記事の下に入れるため <del><code>single.html</code></del> の最後に入れました。</p>
+<p><strong>2024/11/13 追記</strong><br>
+PagerMod v8.0から、コメント用のパーツ<code>/layout/partials/comments.html</code>ができたので、そちらに入れるほうがスマートですね。</p>
 <div>
-    <div class="code-block-content"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">// single.html
+    <div class="code-block-content"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">// domments.html
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">{{</span><span class="o">-</span> <span class="k">if</span> <span class="p">(.</span><span class="nx">Param</span> <span class="s2">&#34;comments&#34;</span><span class="p">)</span> <span class="p">}}</span>
 </span></span><span class="line"><span class="cl">  <span class="o">&lt;</span><span class="nx">script</span> <span class="nx">src</span><span class="o">=</span><span class="s2">&#34;https://giscus.app/client.js&#34;</span>
 </span></span><span class="line"><span class="cl">    <span class="nx">data</span><span class="o">-</span><span class="nx">repo</span><span class="o">=</span><span class="s2">&#34;hoge/hoge-repo&#34;</span> <span class="c1">//ユーザー名と保管用リポジトリ名
