@@ -592,12 +592,12 @@ giscusは、GitHubのDiscussions機能を使います。&lt;/p&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://giscus.app/ja&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;giscus&lt;/a&gt; へ移動&lt;/li&gt;
 &lt;li&gt;自分好みに設定&lt;/li&gt;
-&lt;li&gt;出来上がったコードを控える&lt;/li&gt;
+&lt;li&gt;でき上がったコードを控える&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h3 id=&#34;hugoテーマ&#34;&gt;Hugo（テーマ）
 &lt;/h3&gt;&lt;h4 id=&#34;papermod-の場合&#34;&gt;PaperMod の場合
 &lt;/h4&gt;&lt;ol&gt;
-&lt;li&gt;コメント機能を表示したい場所へ先程のコードを挿入&lt;/li&gt;
+&lt;li&gt;コメント機能を表示したい場所へさきほどのコードを挿入&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;私の場合は、記事の下に入れるため &lt;del&gt;&lt;code&gt;single.html&lt;/code&gt;&lt;/del&gt; の最後に入れました。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;2024/11/13 追記&lt;/strong&gt;&lt;br&gt;
