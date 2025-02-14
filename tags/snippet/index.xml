@@ -17,8 +17,7 @@
 &lt;/h2&gt;&lt;p&gt;完全に頭から抜け落ちていました。&lt;br&gt;
 今使っているエディタ Visual Studio Code（以下、VSCode）には &lt;strong&gt;スニペット&lt;/strong&gt; が機能として搭載されています。&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;スニペット（英語: snippet）とは、「断片」という意味である。情報処理の分野ではよく使う短いプログラムコードを統合開発環境から呼び出す機能の事である。また、呼び出される短いコードの事をスニペットと呼ぶ場合もある。  Wikipediaより。&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;スニペット（英語: snippet）とは、「断片」という意味である。情報処理の分野ではよく使う短いプログラムコードを統合開発環境から呼び出す機能の事である。また、呼び出される短いコードの事をスニペットと呼ぶ場合もある。  Wikipediaより。&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h2 id=&#34;こんな感じのものです&#34;&gt;こんな感じのものです。
 &lt;/h2&gt;&lt;img src=&#34;https://k-kaz-git.github.io/images/VSCode-snipet-01.gif&#34; alt=&#34;snipet の例をアニメーションで&#34; style=&#34;max-width:640px;&#34;&gt;
 &lt;h2 id=&#34;markdown-でスニペットを使いたい&#34;&gt;Markdown でスニペットを使いたい
