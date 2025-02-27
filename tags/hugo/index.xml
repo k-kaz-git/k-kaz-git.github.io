@@ -7,7 +7,45 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>ja</language>
         <copyright>k-kaz</copyright>
-        <lastBuildDate>Thu, 05 Sep 2024 12:48:18 +0900</lastBuildDate><atom:link href="https://k-kaz-git.github.io/tags/hugo/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 09 Feb 2025 21:44:45 +0900</lastBuildDate><atom:link href="https://k-kaz-git.github.io/tags/hugo/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Hugo Warning gist</title>
+        <link>https://k-kaz-git.github.io/p/hugo-warning-gist/</link>
+        <pubDate>Sun, 09 Feb 2025 21:44:45 +0900</pubDate>
+        
+        <guid>https://k-kaz-git.github.io/p/hugo-warning-gist/</guid>
+        <description>&lt;img src="https://k-kaz-git.github.io/images/hugo-warning-sitesocial.webp" alt="Featured image of post Hugo Warning gist" /&gt;&lt;h2 id=&#34;気付くのが遅い&#34;&gt;気付くのが遅い
+&lt;/h2&gt;&lt;p&gt;Hugo Serverを立ち上げるときにワーニングが出ていることに気付きました。&lt;br&gt;
+v0.143.0から出ていたようなので、2週間くらい気付いていなかったわ。&lt;/p&gt;
+&lt;div&gt;
+    &lt;div class=&#34;code-block-filename&#34;&gt;ワーニング&lt;/div&gt;
+    
+    &lt;div class=&#34;code-block-content&#34;&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cmd&#34; data-lang=&#34;cmd&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;WARN  The &lt;span class=&#34;s2&#34;&gt;&amp;#34;gist&amp;#34;&lt;/span&gt; shortcode was deprecated in v0.143.0 and will be removed in a future release.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;See https://gohugo.io/shortcodes/gist for instructions to create a replacement.&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;内容確認&#34;&gt;内容確認
+&lt;/h2&gt;&lt;p&gt;ワーニングの中にある&lt;a class=&#34;link&#34; href=&#34;https://gohugo.io/shortcodes/gist/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;リンク&lt;/a&gt;で内容を確認しました。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Hugoであらかじめ用意されていたgist表示のショートコードがv0.143.0から非推奨になりました。&lt;br&gt;
+いずれ機能が削除されて動かなくなるから、自分のテーマ内に gist.html というファイルを用意してね。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;とのことです。&lt;/p&gt;
+&lt;h2 id=&#34;対応&#34;&gt;対応
+&lt;/h2&gt;&lt;h3 id=&#34;gisthtmlを作る&#34;&gt;gist.htmlを作る
+&lt;/h3&gt;&lt;p&gt;リンク先のソースコードは2行あるんですが、うしろの1行だけ使えば大丈夫です。&lt;br&gt;
+こんな感じ。&lt;/p&gt;
+&lt;div&gt;
+    &lt;div class=&#34;code-block-filename&#34;&gt;layouts/shortcodes/gist.html&lt;/div&gt;
+    
+    &lt;div class=&#34;code-block-content&#34;&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;script&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;src&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;https://gist.github.com/{{ index .Params 0 }}/{{ index .Params 1 }}.js{{if len .Params | eq 3 }}?file={{ index .Params 2 }}{{end}}&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;script&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;以上です。&lt;/p&gt;
+&lt;p&gt;もともと使っているコードがそのまま利用できるようになっていますので、gistのショートコードがある各ページを触る必要はありません。&lt;/p&gt;
+&lt;h3 id=&#34;ちょっとだけ補足&#34;&gt;ちょっとだけ補足
+&lt;/h3&gt;&lt;p&gt;もともとのコード → &lt;code&gt;｛｛＜ gist user number ＞｝｝&lt;/code&gt;&lt;br&gt;
+これの &lt;code&gt;user&lt;/code&gt; 部分が &lt;code&gt;｛｛ index .Params 0 ｝｝&lt;/code&gt; に代入され、&lt;code&gt;number&lt;/code&gt; 部分が &lt;code&gt;｛｛ index .Params 1 ｝｝&lt;/code&gt; に代入されますので、結果として正しいURLができあがるという感じです。&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>Hugoのテーマ Stack について</title>
         <link>https://k-kaz-git.github.io/p/hugo%E3%81%AE%E3%83%86%E3%83%BC%E3%83%9E-stack-%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/</link>
         <pubDate>Thu, 05 Sep 2024 12:48:18 +0900</pubDate>
