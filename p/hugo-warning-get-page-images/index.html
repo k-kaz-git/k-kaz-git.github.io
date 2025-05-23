@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="ja" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="さっと出来ちゃうよ。">
-<title>Hugo で外部サイトを新しいタブで開きたい。</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="アップデートしてみたら（v0.145.0 → v0.147.3） 注意 テーマ PagerModでのお話。 しばらく忙しくてアップデートを放置していたんですよね。\nやっと時間が少しできたので、3カ月ぶりのアップデートを行ってみました。\n">
+<title>Hugo Warning Get Page Images</title>
 
-<link rel='canonical' href='https://k-kaz-git.github.io/p/hugo-%E3%81%A7%E5%A4%96%E9%83%A8%E3%82%B5%E3%82%A4%E3%83%88%E3%82%92%E6%96%B0%E3%81%97%E3%81%84%E3%82%BF%E3%83%96%E3%81%A7%E9%96%8B%E3%81%8D%E3%81%9F%E3%81%84/'>
+<link rel='canonical' href='https://k-kaz-git.github.io/p/hugo-warning-get-page-images/'>
 
-<link rel="stylesheet" href="/scss/style.min.33214f7527aca118a8fa314f57b68a7a452643cae0ecf43ece7314849a786efe.css"><meta property='og:title' content="Hugo で外部サイトを新しいタブで開きたい。">
-<meta property='og:description' content="さっと出来ちゃうよ。">
-<meta property='og:url' content='https://k-kaz-git.github.io/p/hugo-%E3%81%A7%E5%A4%96%E9%83%A8%E3%82%B5%E3%82%A4%E3%83%88%E3%82%92%E6%96%B0%E3%81%97%E3%81%84%E3%82%BF%E3%83%96%E3%81%A7%E9%96%8B%E3%81%8D%E3%81%9F%E3%81%84/'>
+<link rel="stylesheet" href="/scss/style.min.33214f7527aca118a8fa314f57b68a7a452643cae0ecf43ece7314849a786efe.css"><meta property='og:title' content="Hugo Warning Get Page Images">
+<meta property='og:description' content="アップデートしてみたら（v0.145.0 → v0.147.3） 注意 テーマ PagerModでのお話。 しばらく忙しくてアップデートを放置していたんですよね。\nやっと時間が少しできたので、3カ月ぶりのアップデートを行ってみました。\n">
+<meta property='og:url' content='https://k-kaz-git.github.io/p/hugo-warning-get-page-images/'>
 <meta property='og:site_name' content='k-kaz が Hugo で遊ぶサイト'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Hugo' /><meta property='article:published_time' content='2020-10-19T12:28:18&#43;09:00'/><meta property='article:modified_time' content='2020-10-19T12:28:18&#43;09:00'/><meta property='og:image' content='https://k-kaz-git.github.io/images/eagle-1753002_1280.webp' />
-<meta name="twitter:title" content="Hugo で外部サイトを新しいタブで開きたい。">
-<meta name="twitter:description" content="さっと出来ちゃうよ。"><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='https://k-kaz-git.github.io/images/eagle-1753002_1280.webp' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Hugo' /><meta property='article:tag' content='Theme' /><meta property='article:published_time' content='2025-05-22T21:12:01&#43;09:00'/><meta property='article:modified_time' content='2025-05-22T21:12:01&#43;09:00'/><meta property='og:image' content='https://k-kaz-git.github.io/images/hugo-warning-sitesocial.webp' />
+<meta name="twitter:title" content="Hugo Warning Get Page Images">
+<meta name="twitter:description" content="アップデートしてみたら（v0.145.0 → v0.147.3） 注意 テーマ PagerModでのお話。 しばらく忙しくてアップデートを放置していたんですよね。\nやっと時間が少しできたので、3カ月ぶりのアップデートを行ってみました。\n"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://k-kaz-git.github.io/images/hugo-warning-sitesocial.webp' />
     <link rel="shortcut icon" href="/favicon.ico" />
 
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -214,14 +214,20 @@
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ol>
-    <li><a href="#hugo-の外部リンク">Hugo の外部リンク</a></li>
-    <li><a href="#hugo-v062-以降">Hugo v0.62 以降</a>
+    <li><a href="#アップデートしてみたらv01450--v01473">アップデートしてみたら（v0.145.0 → v0.147.3）</a>
       <ol>
-        <li><a href="#リンクを開くときの挙動を指定">リンクを開くときの挙動を指定</a>
-          <ol>
-            <li><a href="#詳しくは公式サイトにて">詳しくは公式サイトにて</a></li>
-          </ol>
-        </li>
+        <li><a href="#hugo-リリースノート">Hugo リリースノート</a></li>
+      </ol>
+    </li>
+    <li><a href="#情報収集">情報収集</a>
+      <ol>
+        <li><a href="#hugo-issues">Hugo Issues</a></li>
+        <li><a href="#pagermod-issues">PagerMod Issues</a></li>
+      </ol>
+    </li>
+    <li><a href="#解決">解決</a>
+      <ol>
+        <li><a href="#最新のテンプレート">最新のテンプレート</a></li>
       </ol>
     </li>
   </ol>
@@ -238,9 +244,9 @@
     <article class="has-image main-article">
     <header class="article-header">
         <div class="article-image">
-            <a href="/p/hugo-%E3%81%A7%E5%A4%96%E9%83%A8%E3%82%B5%E3%82%A4%E3%83%88%E3%82%92%E6%96%B0%E3%81%97%E3%81%84%E3%82%BF%E3%83%96%E3%81%A7%E9%96%8B%E3%81%8D%E3%81%9F%E3%81%84/">
+            <a href="/p/hugo-warning-get-page-images/">
                 
-                    <img src="/images/eagle-1753002_1280.webp" loading="lazy" alt="Featured image of post Hugo で外部サイトを新しいタブで開きたい。" />
+                    <img src="/images/hugo-warning-sitesocial.webp" loading="lazy" alt="Featured image of post Hugo Warning Get Page Images" />
                 
             </a>
         </div>
@@ -250,8 +256,8 @@
     
     <header class="article-category">
         
-            <a href="/categories/coding/" >
-                Coding
+            <a href="/categories/homepage/" >
+                Homepage
             </a>
         
     </header>
@@ -259,13 +265,9 @@
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/p/hugo-%E3%81%A7%E5%A4%96%E9%83%A8%E3%82%B5%E3%82%A4%E3%83%88%E3%82%92%E6%96%B0%E3%81%97%E3%81%84%E3%82%BF%E3%83%96%E3%81%A7%E9%96%8B%E3%81%8D%E3%81%9F%E3%81%84/">Hugo で外部サイトを新しいタブで開きたい。</a>
+            <a href="/p/hugo-warning-get-page-images/">Hugo Warning Get Page Images</a>
         </h2>
     
-        
-        <h3 class="article-subtitle">
-            さっと出来ちゃうよ。
-        </h3>
         
     </div>
 
@@ -285,7 +287,7 @@
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">2020/10/19</time>
+                <time class="article-time--published">2025/05/22</time>
             </div>
         
 
@@ -300,7 +302,7 @@
 
 
                 <time class="article-time--reading">
-                    読了時間: 1分
+                    読了時間: 4分
                 </time>
             </div>
         
@@ -315,21 +317,83 @@
     <section class="article-content">
     
     
-    <h2 id="hugo-の外部リンク">Hugo の外部リンク
-</h2><p>Hugo って、html の a タグ（リンクを開くときに使います）をすべて同一タブで開きます。<br>
-ということは、今見ているページが、リンクをクリックした瞬間に、リンク先のページで上書きされるということ。</p>
-<p>自ドメイン内であればそのような挙動で全然良いのですが、外部サイトを開くときは、やっぱり新しいタブで開いてもらいたい。</p>
-<h2 id="hugo-v062-以降">Hugo v0.62 以降
-</h2><p>直接 html を書いちゃうとか、方法はいくつかあるみたいですけど、現状は下記のやり方を公式で推奨している様子。</p>
-<h3 id="リンクを開くときの挙動を指定">リンクを開くときの挙動を指定
-</h3><p><code>/layouts/_default/_markup/render-link.html</code> というファイルを用意。</p>
-<p>中身は下記だけあれば良し。</p>
+    <h2 id="アップデートしてみたらv01450--v01473">アップデートしてみたら（v0.145.0 → v0.147.3）
+</h2><div class="memo">
+    <span class="memo-title">注意</span>
+    <p>
+テーマ PagerModでのお話。  
+</p>
+</div>
+<p>しばらく忙しくてアップデートを放置していたんですよね。<br>
+やっと時間が少しできたので、3カ月ぶりのアップデートを行ってみました。</p>
+<p>Warningが1つにErrorが5つ出ました。<br>
+まあ、出るだろうとは思っていたけどね。</p>
 <div>
-    <div class="code-block-content"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;{{ .Destination | safeURL }}&#34;</span><span class="err">{{</span> <span class="na">with</span> <span class="err">.</span><span class="na">Title</span><span class="err">}}</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;{{ . }}&#34;</span><span class="err">{{</span> <span class="na">end</span> <span class="err">}}{{</span> <span class="na">if</span> <span class="na">strings</span><span class="err">.</span><span class="na">HasPrefix</span> <span class="err">.</span><span class="na">Destination</span> <span class="err">&#34;</span><span class="na">http</span><span class="err">&#34;</span> <span class="err">}}</span> <span class="na">target</span><span class="o">=</span><span class="s">&#34;_blank&#34;</span><span class="err">{{</span> <span class="na">end</span> <span class="err">}}</span><span class="p">&gt;</span>{{ .Text }}<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span></span></span></code></pre></div>
+    <div class="code-block-content"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">WARN  Partial name &#34;partials/templates/_funcs/get-page-images&#34; starting with &#39;partials/&#39; (as in {{ partial &#34;partials/templates/_funcs/get-page-images&#34;}}) is most likely not what you want. Before 0.146.0 we did a double lookup in this situation.
+</span></span><span class="line"><span class="cl">You can suppress this warning by adding the following to your site configuration:
+</span></span><span class="line"><span class="cl">ignoreLogs = [&#39;warning-partial-superfluous-prefix&#39;]
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">ERROR render of &#34;/archives/2020/11&#34; failed: &#34;hoge\layouts\_default\baseof.html:8:8&#34;: execute of template failed: template: list.html:8:8: executing &#34;list.html&#34; at &lt;partial &#34;head.html&#34; .&gt;: error calling partial: &#34;hoge\themes\PaperMod\layouts\partials\head.html:9:15&#34;: execute of template failed: template: _partials/templates/twitter_cards.html:9:15: executing &#34;partials/templates/twitter_cards.html&#34; at &lt;partial &#34;partials/templates/_funcs/get-page-images&#34; .&gt;: error calling partial: partial &#34;partials/templates/_funcs/get-page-images&#34; not found
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">ERROR render of &#34;/archives/2022/06&#34; failed: &#34;hoge\layouts\_default\baseof.html:8:8&#34;: execute of template failed: template: list.html:8:8: executing &#34;list.html&#34; at &lt;partial &#34;head.html&#34; .&gt;: error calling partial: &#34;hoge\themes\PaperMod\layouts\partials\head.html:9:15&#34;: execute of template failed: template: _partials/templates/twitter_cards.html:9:15: executing &#34;partials/templates/twitter_cards.html&#34; at &lt;partial &#34;partials/templates/_funcs/get-page-images&#34; .&gt;: error calling partial: partial &#34;partials/templates/_funcs/get-page-images&#34; not found
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">ERROR render of &#34;/archives/2020/10&#34; failed: &#34;hoge\layouts\_default\baseof.html:8:8&#34;: execute of template failed: template: list.html:8:8: executing &#34;list.html&#34; at &lt;partial &#34;head.html&#34; .&gt;: error calling partial: &#34;hoge\themes\PaperMod\layouts\partials\head.html:9:15&#34;: execute of template failed: template: _partials/templates/twitter_cards.html:9:15: executing &#34;partials/templates/twitter_cards.html&#34; at &lt;partial &#34;partials/templates/_funcs/get-page-images&#34; .&gt;: error calling partial: partial &#34;partials/templates/_funcs/get-page-images&#34; not found
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">ERROR render of &#34;/404&#34; failed: &#34;hoge\layouts\_default\baseof.html:8:8&#34;: execute of template failed: template: 404.html:8:8: executing &#34;404.html&#34; at &lt;partial &#34;head.html&#34; .&gt;: error calling partial: &#34;hoge\themes\PaperMod\layouts\partials\head.html:9:15&#34;: execute of template failed: template: _partials/templates/twitter_cards.html:9:15: executing &#34;partials/templates/twitter_cards.html&#34; at &lt;partial &#34;partials/templates/_funcs/get-page-images&#34; .&gt;: error calling partial: partial &#34;partials/templates/_funcs/get-page-images&#34; not found
+</span></span><span class="line"><span class="cl">Built in 3668 ms
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Error: error building site: render: failed to render pages: render of &#34;/archives/2021/11&#34; failed: &#34;hoge\layouts\_default\baseof.html:8:8&#34;: execute of template failed: template: list.html:8:8: executing &#34;list.html&#34; at &lt;partial &#34;head.html&#34; .&gt;: error calling partial: &#34;hoge\themes\PaperMod\layouts\partials\head.html:9:15&#34;: execute of template failed: template: _partials/templates/twitter_cards.html:9:15: executing &#34;partials/templates/twitter_cards.html&#34; at &lt;partial &#34;partials/templates/_funcs/get-page-images&#34; .&gt;: error calling partial: partial &#34;partials/templates/_funcs/get-page-images&#34; not found</span></span></code></pre></div>
     </div>
-</div><h4 id="詳しくは公式サイトにて">詳しくは公式サイトにて
-</h4><p><a class="link" href="https://gohugo.io/getting-started/configuration-markup/#markdown-render-hooks"  target="_blank" rel="noopener"
-    >Markdown Render Hooks</a></p>
+</div><p>v0.146.0でテンプレートの仕組みが変わったと更新履歴にあったので、Errorするだろうなと思っていました。</p>
+<h3 id="hugo-リリースノート">Hugo リリースノート
+</h3><p>&#x1f517; <a class="link" href="https://github.com/gohugoio/hugo/releases/tag/v0.146.0"  target="_blank" rel="noopener"
+    >Release v0.146.0 · gohugoio/hugo</a></p>
+<blockquote>
+<p>The big new thing in this release is a fully refreshed template system – simpler and much better. We&rsquo;re working on the updated documentation for this, but see this issue for some more information. We have gone to great lengths to make this as backwards compatible as possible, but make sure you test your site before going live with this new version. This version also comes with a full dependency refresh and some useful new template funcs:</p>
+<ul>
+<li><a class="link" href="https://gohugo.io/functions/templates/current/"  target="_blank" rel="noopener"
+    >templates.Current</a>: Info about the current executing template and its call stack. Very useful for debugging.</li>
+<li><a class="link" href="http://time.in/"  target="_blank" rel="noopener"
+    >time.In</a>: Returns the given date/time as represented in the specified IANA time zone.</li>
+</ul>
+<p>このリリースの目玉は、テンプレートシステムの全面的な刷新です - よりシンプルで、はるかに優れたものになりました。現在、更新されたドキュメントを作成中ですが、詳細についてはこの課題をご確認ください。可能な限り下位互換性を維持するよう努めましたが、この新バージョンを本番環境に適用する前に、必ずサイトのテストを行ってください。このバージョンでは、依存関係の完全な更新と、いくつかの便利な新しいテンプレート関数も提供されています：</p>
+<ul>
+<li>templates.Current: 現在実行中のテンプレートとそのコールスタックに関する情報。デバッグに非常に便利です。</li>
+<li><a class="link" href="http://time.in/"  target="_blank" rel="noopener"
+    >time.In</a>: 指定されたIANAタイムゾーンにおける日付/時刻を返します。</li>
+</ul></blockquote>
+<h2 id="情報収集">情報収集
+</h2><p>あれこれ直さないといけないのかしら・・・。</p>
+<p>とりあえず情報収集です。</p>
+<h3 id="hugo-issues">Hugo Issues
+</h3><p>&#x1f517; <a class="link" href="https://github.com/gohugoio/hugo/issues/13592"  target="_blank" rel="noopener"
+    >no such template &ldquo;partials/templates/schema_json.html&rdquo; in PaperMod, but partial appears to exist · Issue #13592 · gohugoio/hugo</a></p>
+<p>読んでみると、私が使っているテーマPagerMod特有の現象っぽい。</p>
+<p>ということで、PagerModのほうも見てみます。</p>
+<h3 id="pagermod-issues">PagerMod Issues
+</h3><p>&#x1f517; <a class="link" href="https://github.com/adityatelange/hugo-PaperMod/issues/1719"  target="_blank" rel="noopener"
+    >Missing template definitions breaks production builds in Hugo v0.146.0+ · Issue #1719 · adityatelange/hugo-PaperMod</a></p>
+<p>皆さん四苦八苦しながら、PagerMod側に手を入れる回避方法を構築されています。</p>
+<p>ただ、最後にはHugoのv0.146.6で修正されたよーとのこと。</p>
+<p>もしかして私のErrorって、ここで書かれていたことと別なのか・・・。</p>
+<h2 id="解決">解決
+</h2><p>Errorの文章に出てくるいくつかのファイルを眺めます。</p>
+<p>1個だけあるWarningに<code>get-page-images</code>とありまして、これがあるのは<code>twitter_cards.html</code>なんですよね。</p>
+<p>Errorにもすべてこの<code>twitter_cards.html</code>が出てきますので、やっぱりこれが怪しいのかなと、ファイルを開いてみましたが、よくわかりません。</p>
+<p>再びPagerModのソース（リリースはされていないけど、日々メンテされているところ）をチェックすると、その<code>twitter_cards.html</code>のコミットメッセージに <strong>Implement fixes for refreshed template system for Hugo v0.146.0+</strong> とあるじゃないですか。</p>
+<p>同じ階層にある<code>schema_json.html</code>にも同じメッセージが。</p>
+<p>早速、自分のテンプレートを差し替えてみましたら、一発で動きました。<br>
+わかりやすいコミットメッセージありがとうございます。</p>
+<h3 id="最新のテンプレート">最新のテンプレート
+</h3><p>&#x1f517; <a class="link" href="https://github.com/adityatelange/hugo-PaperMod/tree/master/layouts/partials/templates"  target="_blank" rel="noopener"
+    >hugo-PaperMod/layouts/partials/templates/</a></p>
+<ul>
+<li>&#x1f517; <a class="link" href="https://github.com/adityatelange/hugo-PaperMod/blob/master/layouts/partials/templates/twitter_cards.html"  target="_blank" rel="noopener"
+    >twitter_cards.html</a></li>
+<li>&#x1f517; <a class="link" href="https://github.com/adityatelange/hugo-PaperMod/blob/master/layouts/partials/templates/twitter_cards.html"  target="_blank" rel="noopener"
+    >schema_json.html</a></li>
+</ul>
+<p>これをテーマフォルダーじゃなくて、自分のフォルダー <code>layouts/partials/templates/</code> に持ってきたらオッケーです。</p>
 
 </section>
 
@@ -339,6 +403,8 @@
     <section class="article-tags">
         
             <a href="/tags/hugo/">Hugo</a>
+        
+            <a href="/tags/theme/">Theme</a>
         
     </section>
 
@@ -372,18 +438,18 @@
             
                 
 <article class="has-image">
-    <a href="/p/hugo%E3%81%AB%E3%82%B3%E3%83%A1%E3%83%B3%E3%83%88%E6%A9%9F%E8%83%BD%E3%82%92%E4%BB%98%E3%81%91%E3%82%8Bgiscus%E7%B7%A8/">
+    <a href="/p/hugo-warning-twitter/">
         
         
             <div class="article-image">
                 
-                    <img src="/images/speech-bubbles_640.webp" loading="lazy" data-key="" data-hash="/images/speech-bubbles_640.webp"/>
+                    <img src="/images/hugo-warning-sitesocial.webp" loading="lazy" data-key="" data-hash="/images/hugo-warning-sitesocial.webp"/>
                 
             </div>
         
 
         <div class="article-details">
-            <h2 class="article-title">Hugoにコメント機能を付ける（giscus編）</h2>
+            <h2 class="article-title">Hugo Warning Twitter</h2>
         </div>
     </a>
 </article>
@@ -391,18 +457,18 @@
             
                 
 <article class="has-image">
-    <a href="/p/hugo%E3%81%A7%E7%B5%B5%E6%96%87%E5%AD%97%E3%82%92%E4%BD%BF%E3%81%88%E3%82%8B%E3%82%88%E3%81%86%E3%81%AB%E3%81%99%E3%82%8B/">
+    <a href="/p/hugo-warning-gist/">
         
         
             <div class="article-image">
                 
-                    <img src="/images/hugo-emoji.webp" loading="lazy" data-key="" data-hash="/images/hugo-emoji.webp"/>
+                    <img src="/images/hugo-warning-sitesocial.webp" loading="lazy" data-key="" data-hash="/images/hugo-warning-sitesocial.webp"/>
                 
             </div>
         
 
         <div class="article-details">
-            <h2 class="article-title">Hugoで絵文字を使えるようにする</h2>
+            <h2 class="article-title">Hugo Warning gist</h2>
         </div>
     </a>
 </article>
@@ -410,18 +476,18 @@
             
                 
 <article class="has-image">
-    <a href="/p/hugo%E3%81%AB%E3%82%B3%E3%83%A1%E3%83%B3%E3%83%88%E6%A9%9F%E8%83%BD%E3%82%92%E4%BB%98%E3%81%91%E3%82%8B/">
+    <a href="/p/hugo%E3%81%AE%E3%83%86%E3%83%BC%E3%83%9E-stack-%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/">
         
         
             <div class="article-image">
                 
-                    <img src="/images/speech-bubbles_640.webp" loading="lazy" data-key="" data-hash="/images/speech-bubbles_640.webp"/>
+                    <img src="/images/hugo-theme-stack.avif" loading="lazy" data-key="" data-hash="/images/hugo-theme-stack.avif"/>
                 
             </div>
         
 
         <div class="article-details">
-            <h2 class="article-title">Hugoにコメント機能を付ける</h2>
+            <h2 class="article-title">Hugoのテーマ Stack について</h2>
         </div>
     </a>
 </article>
@@ -429,18 +495,18 @@
             
                 
 <article class="has-image">
-    <a href="/p/%E3%82%B3%E3%83%B3%E3%83%86%E3%83%B3%E3%83%84%E7%94%BB%E5%83%8F%E3%81%A8%E3%81%8B%E3%82%92%E5%90%8C%E4%B8%80%E3%83%95%E3%82%A9%E3%83%AB%E3%83%80%E3%81%AB%E3%81%99%E3%82%8B%E5%A0%B4%E5%90%88/">
+    <a href="/p/hugo-warning-.site.social/">
         
         
             <div class="article-image">
                 
-                    <img src="/images/hugo-contents.webp" loading="lazy" data-key="" data-hash="/images/hugo-contents.webp"/>
+                    <img src="/images/hugo-warning-sitesocial.webp" loading="lazy" data-key="" data-hash="/images/hugo-warning-sitesocial.webp"/>
                 
             </div>
         
 
         <div class="article-details">
-            <h2 class="article-title">コンテンツ（画像とか）を同一フォルダにする場合</h2>
+            <h2 class="article-title">Hugo Warning .Site.Social</h2>
         </div>
     </a>
 </article>
@@ -448,18 +514,18 @@
             
                 
 <article class="has-image">
-    <a href="/p/%E3%81%9D%E3%81%86%E3%81%A0-hugo-%E3%81%AE%E6%9C%80%E6%96%B0%E7%89%88%E3%82%92%E4%BD%BF%E3%81%8A%E3%81%86/">
+    <a href="/p/%E3%83%AA%E3%82%B9%E3%83%88%E8%A1%A8%E7%A4%BA%E3%81%A8%E3%82%B7%E3%83%B3%E3%82%B0%E3%83%AB%E8%A1%A8%E7%A4%BA%E3%81%AB%E3%82%BF%E3%82%B0%E3%82%92%E4%BB%98%E3%81%91%E3%82%8B/">
         
         
             <div class="article-image">
                 
-                    <img src="/images/man-1394395_1920.webp" loading="lazy" data-key="" data-hash="/images/man-1394395_1920.webp"/>
+                    <img src="/images/tag_720.webp" loading="lazy" data-key="" data-hash="/images/tag_720.webp"/>
                 
             </div>
         
 
         <div class="article-details">
-            <h2 class="article-title">そうだ Hugo の最新版を使おう！</h2>
+            <h2 class="article-title">リスト表示とシングル表示にタグを付ける</h2>
         </div>
     </a>
 </article>

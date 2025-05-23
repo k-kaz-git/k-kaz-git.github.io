@@ -7,7 +7,92 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>ja</language>
         <copyright>k-kaz</copyright>
-        <lastBuildDate>Mon, 10 Mar 2025 21:49:08 +0900</lastBuildDate><atom:link href="https://k-kaz-git.github.io/categories/homepage/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 22 May 2025 21:12:01 +0900</lastBuildDate><atom:link href="https://k-kaz-git.github.io/categories/homepage/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Hugo Warning Get Page Images</title>
+        <link>https://k-kaz-git.github.io/p/hugo-warning-get-page-images/</link>
+        <pubDate>Thu, 22 May 2025 21:12:01 +0900</pubDate>
+        
+        <guid>https://k-kaz-git.github.io/p/hugo-warning-get-page-images/</guid>
+        <description>&lt;img src="https://k-kaz-git.github.io/images/hugo-warning-sitesocial.webp" alt="Featured image of post Hugo Warning Get Page Images" /&gt;&lt;h2 id=&#34;アップデートしてみたらv01450--v01473&#34;&gt;アップデートしてみたら（v0.145.0 → v0.147.3）
+&lt;/h2&gt;&lt;div class=&#34;memo&#34;&gt;
+    &lt;span class=&#34;memo-title&#34;&gt;注意&lt;/span&gt;
+    &lt;p&gt;
+テーマ PagerModでのお話。  
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;しばらく忙しくてアップデートを放置していたんですよね。&lt;br&gt;
+やっと時間が少しできたので、3カ月ぶりのアップデートを行ってみました。&lt;/p&gt;
+&lt;p&gt;Warningが1つにErrorが5つ出ました。&lt;br&gt;
+まあ、出るだろうとは思っていたけどね。&lt;/p&gt;
+&lt;div&gt;
+    &lt;div class=&#34;code-block-content&#34;&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;WARN  Partial name &amp;#34;partials/templates/_funcs/get-page-images&amp;#34; starting with &amp;#39;partials/&amp;#39; (as in {{ partial &amp;#34;partials/templates/_funcs/get-page-images&amp;#34;}}) is most likely not what you want. Before 0.146.0 we did a double lookup in this situation.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;You can suppress this warning by adding the following to your site configuration:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ignoreLogs = [&amp;#39;warning-partial-superfluous-prefix&amp;#39;]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ERROR render of &amp;#34;/archives/2020/11&amp;#34; failed: &amp;#34;hoge\layouts\_default\baseof.html:8:8&amp;#34;: execute of template failed: template: list.html:8:8: executing &amp;#34;list.html&amp;#34; at &amp;lt;partial &amp;#34;head.html&amp;#34; .&amp;gt;: error calling partial: &amp;#34;hoge\themes\PaperMod\layouts\partials\head.html:9:15&amp;#34;: execute of template failed: template: _partials/templates/twitter_cards.html:9:15: executing &amp;#34;partials/templates/twitter_cards.html&amp;#34; at &amp;lt;partial &amp;#34;partials/templates/_funcs/get-page-images&amp;#34; .&amp;gt;: error calling partial: partial &amp;#34;partials/templates/_funcs/get-page-images&amp;#34; not found
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ERROR render of &amp;#34;/archives/2022/06&amp;#34; failed: &amp;#34;hoge\layouts\_default\baseof.html:8:8&amp;#34;: execute of template failed: template: list.html:8:8: executing &amp;#34;list.html&amp;#34; at &amp;lt;partial &amp;#34;head.html&amp;#34; .&amp;gt;: error calling partial: &amp;#34;hoge\themes\PaperMod\layouts\partials\head.html:9:15&amp;#34;: execute of template failed: template: _partials/templates/twitter_cards.html:9:15: executing &amp;#34;partials/templates/twitter_cards.html&amp;#34; at &amp;lt;partial &amp;#34;partials/templates/_funcs/get-page-images&amp;#34; .&amp;gt;: error calling partial: partial &amp;#34;partials/templates/_funcs/get-page-images&amp;#34; not found
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ERROR render of &amp;#34;/archives/2020/10&amp;#34; failed: &amp;#34;hoge\layouts\_default\baseof.html:8:8&amp;#34;: execute of template failed: template: list.html:8:8: executing &amp;#34;list.html&amp;#34; at &amp;lt;partial &amp;#34;head.html&amp;#34; .&amp;gt;: error calling partial: &amp;#34;hoge\themes\PaperMod\layouts\partials\head.html:9:15&amp;#34;: execute of template failed: template: _partials/templates/twitter_cards.html:9:15: executing &amp;#34;partials/templates/twitter_cards.html&amp;#34; at &amp;lt;partial &amp;#34;partials/templates/_funcs/get-page-images&amp;#34; .&amp;gt;: error calling partial: partial &amp;#34;partials/templates/_funcs/get-page-images&amp;#34; not found
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ERROR render of &amp;#34;/404&amp;#34; failed: &amp;#34;hoge\layouts\_default\baseof.html:8:8&amp;#34;: execute of template failed: template: 404.html:8:8: executing &amp;#34;404.html&amp;#34; at &amp;lt;partial &amp;#34;head.html&amp;#34; .&amp;gt;: error calling partial: &amp;#34;hoge\themes\PaperMod\layouts\partials\head.html:9:15&amp;#34;: execute of template failed: template: _partials/templates/twitter_cards.html:9:15: executing &amp;#34;partials/templates/twitter_cards.html&amp;#34; at &amp;lt;partial &amp;#34;partials/templates/_funcs/get-page-images&amp;#34; .&amp;gt;: error calling partial: partial &amp;#34;partials/templates/_funcs/get-page-images&amp;#34; not found
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Built in 3668 ms
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Error: error building site: render: failed to render pages: render of &amp;#34;/archives/2021/11&amp;#34; failed: &amp;#34;hoge\layouts\_default\baseof.html:8:8&amp;#34;: execute of template failed: template: list.html:8:8: executing &amp;#34;list.html&amp;#34; at &amp;lt;partial &amp;#34;head.html&amp;#34; .&amp;gt;: error calling partial: &amp;#34;hoge\themes\PaperMod\layouts\partials\head.html:9:15&amp;#34;: execute of template failed: template: _partials/templates/twitter_cards.html:9:15: executing &amp;#34;partials/templates/twitter_cards.html&amp;#34; at &amp;lt;partial &amp;#34;partials/templates/_funcs/get-page-images&amp;#34; .&amp;gt;: error calling partial: partial &amp;#34;partials/templates/_funcs/get-page-images&amp;#34; not found&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;v0.146.0でテンプレートの仕組みが変わったと更新履歴にあったので、Errorするだろうなと思っていました。&lt;/p&gt;
+&lt;h3 id=&#34;hugo-リリースノート&#34;&gt;Hugo リリースノート
+&lt;/h3&gt;&lt;p&gt;&amp;#x1f517; &lt;a class=&#34;link&#34; href=&#34;https://github.com/gohugoio/hugo/releases/tag/v0.146.0&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Release v0.146.0 · gohugoio/hugo&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The big new thing in this release is a fully refreshed template system – simpler and much better. We&amp;rsquo;re working on the updated documentation for this, but see this issue for some more information. We have gone to great lengths to make this as backwards compatible as possible, but make sure you test your site before going live with this new version. This version also comes with a full dependency refresh and some useful new template funcs:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://gohugo.io/functions/templates/current/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;templates.Current&lt;/a&gt;: Info about the current executing template and its call stack. Very useful for debugging.&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;http://time.in/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;time.In&lt;/a&gt;: Returns the given date/time as represented in the specified IANA time zone.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;このリリースの目玉は、テンプレートシステムの全面的な刷新です - よりシンプルで、はるかに優れたものになりました。現在、更新されたドキュメントを作成中ですが、詳細についてはこの課題をご確認ください。可能な限り下位互換性を維持するよう努めましたが、この新バージョンを本番環境に適用する前に、必ずサイトのテストを行ってください。このバージョンでは、依存関係の完全な更新と、いくつかの便利な新しいテンプレート関数も提供されています：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;templates.Current: 現在実行中のテンプレートとそのコールスタックに関する情報。デバッグに非常に便利です。&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;http://time.in/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;time.In&lt;/a&gt;: 指定されたIANAタイムゾーンにおける日付/時刻を返します。&lt;/li&gt;
+&lt;/ul&gt;&lt;/blockquote&gt;
+&lt;h2 id=&#34;情報収集&#34;&gt;情報収集
+&lt;/h2&gt;&lt;p&gt;あれこれ直さないといけないのかしら・・・。&lt;/p&gt;
+&lt;p&gt;とりあえず情報収集です。&lt;/p&gt;
+&lt;h3 id=&#34;hugo-issues&#34;&gt;Hugo Issues
+&lt;/h3&gt;&lt;p&gt;&amp;#x1f517; &lt;a class=&#34;link&#34; href=&#34;https://github.com/gohugoio/hugo/issues/13592&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;no such template &amp;ldquo;partials/templates/schema_json.html&amp;rdquo; in PaperMod, but partial appears to exist · Issue #13592 · gohugoio/hugo&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;読んでみると、私が使っているテーマPagerMod特有の現象っぽい。&lt;/p&gt;
+&lt;p&gt;ということで、PagerModのほうも見てみます。&lt;/p&gt;
+&lt;h3 id=&#34;pagermod-issues&#34;&gt;PagerMod Issues
+&lt;/h3&gt;&lt;p&gt;&amp;#x1f517; &lt;a class=&#34;link&#34; href=&#34;https://github.com/adityatelange/hugo-PaperMod/issues/1719&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Missing template definitions breaks production builds in Hugo v0.146.0+ · Issue #1719 · adityatelange/hugo-PaperMod&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;皆さん四苦八苦しながら、PagerMod側に手を入れる回避方法を構築されています。&lt;/p&gt;
+&lt;p&gt;ただ、最後にはHugoのv0.146.6で修正されたよーとのこと。&lt;/p&gt;
+&lt;p&gt;もしかして私のErrorって、ここで書かれていたことと別なのか・・・。&lt;/p&gt;
+&lt;h2 id=&#34;解決&#34;&gt;解決
+&lt;/h2&gt;&lt;p&gt;Errorの文章に出てくるいくつかのファイルを眺めます。&lt;/p&gt;
+&lt;p&gt;1個だけあるWarningに&lt;code&gt;get-page-images&lt;/code&gt;とありまして、これがあるのは&lt;code&gt;twitter_cards.html&lt;/code&gt;なんですよね。&lt;/p&gt;
+&lt;p&gt;Errorにもすべてこの&lt;code&gt;twitter_cards.html&lt;/code&gt;が出てきますので、やっぱりこれが怪しいのかなと、ファイルを開いてみましたが、よくわかりません。&lt;/p&gt;
+&lt;p&gt;再びPagerModのソース（リリースはされていないけど、日々メンテされているところ）をチェックすると、その&lt;code&gt;twitter_cards.html&lt;/code&gt;のコミットメッセージに &lt;strong&gt;Implement fixes for refreshed template system for Hugo v0.146.0+&lt;/strong&gt; とあるじゃないですか。&lt;/p&gt;
+&lt;p&gt;同じ階層にある&lt;code&gt;schema_json.html&lt;/code&gt;にも同じメッセージが。&lt;/p&gt;
+&lt;p&gt;早速、自分のテンプレートを差し替えてみましたら、一発で動きました。&lt;br&gt;
+わかりやすいコミットメッセージありがとうございます。&lt;/p&gt;
+&lt;h3 id=&#34;最新のテンプレート&#34;&gt;最新のテンプレート
+&lt;/h3&gt;&lt;p&gt;&amp;#x1f517; &lt;a class=&#34;link&#34; href=&#34;https://github.com/adityatelange/hugo-PaperMod/tree/master/layouts/partials/templates&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;hugo-PaperMod/layouts/partials/templates/&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&amp;#x1f517; &lt;a class=&#34;link&#34; href=&#34;https://github.com/adityatelange/hugo-PaperMod/blob/master/layouts/partials/templates/twitter_cards.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;twitter_cards.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&amp;#x1f517; &lt;a class=&#34;link&#34; href=&#34;https://github.com/adityatelange/hugo-PaperMod/blob/master/layouts/partials/templates/twitter_cards.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;schema_json.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;これをテーマフォルダーじゃなくて、自分のフォルダー &lt;code&gt;layouts/partials/templates/&lt;/code&gt; に持ってきたらオッケーです。&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>Hugo Warning Twitter</title>
         <link>https://k-kaz-git.github.io/p/hugo-warning-twitter/</link>
         <pubDate>Mon, 10 Mar 2025 21:49:08 +0900</pubDate>
